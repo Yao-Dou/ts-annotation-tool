@@ -33,14 +33,30 @@
     border-bottom: 3px solid #ee2a2a;
 }
 
+.border-deletion-all {
+    border: 2px solid #ee2a2a;
+}
+
+.bg-deletion {
+    background-color: #ee2a2a;
+}
+
+.txt-deletion {
+    color: #ee2a2a;
+}
+
 .border-paraphrase {
     border-bottom: 3px solid #2186eb;
 }
 
+.border-paraphrase-all {
+    border: 2px solid #2186eb;
+}
 
+.bg-paraphrase {
+    background-color: #2186eb;
+}
 
-
-
-/* #task {
-    display: none;
-} */
+.txt-paraphrase {
+    color: #2186eb;
+}
