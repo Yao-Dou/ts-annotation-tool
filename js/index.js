@@ -6,10 +6,11 @@ const app = Vue.createApp({
             hits_data: null,
             original_html: '',
             simplified_html: '',
+            edits_html: '',
         }
     },
     methods: {
-        process_original_sentence() {
+        process_original_html() {
             let prev_idx = 0
             let sentence_html = ''
             let original_sentence = this.hits_data[this.current_hit - 1].original
@@ -29,7 +30,7 @@ const app = Vue.createApp({
             sentence_html += original_sentence.substring(prev_idx);
             this.original_html = sentence_html;
         },
-        process_simplified_sentence() {
+        process_simplified_html() {
             let prev_idx = 0
             let sentence_html = ''
             let simplified_sentence = this.hits_data[this.current_hit - 1].simplified
@@ -54,14 +55,16 @@ const app = Vue.createApp({
             if (this.current_hit > this.total_hits) {
                 this.current_hit = this.total_hits
             }
-            this.process_original_sentence()
+            this.process_original_html()
+            this.process_simplified_html()
         },
         prev_hit() {
             this.current_hit = this.current_hit - 1
             if (this.current_hit < 1) {
                 this.current_hit = 1
             }
-            this.process_original_sentence()
+            this.process_original_html()
+            this.process_simplified_html()
         }
     },
     created: function () {
@@ -70,13 +73,12 @@ const app = Vue.createApp({
           .then(json => {
             this.hits_data=json;
             this.total_hits = json.length;
-            this.process_original_sentence();
-            this.process_simplified_sentence();
+            this.process_original_html();
+            this.process_simplified_html();
           });
         
     },
     mounted() {
-        $(".language-button").on("click", this.language_button_click)
     },
 })
 
