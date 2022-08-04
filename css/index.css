@@ -29,26 +29,17 @@
     margin-right: auto!important;
 }
 
-.w-23 {
-    width: 23%;
+.border-deletion {
+    border-bottom: 3px solid #ee2a2a;
 }
 
-.w-48 {
-    width: 48%;
+.border-paraphrase {
+    border-bottom: 3px solid #2186eb;
 }
 
-.language-button:hover {
-    color: rgb(241, 49, 49);
-}
 
-.select-lang {
-    border-color: rgb(241, 49, 49);
-    color:rgb(241, 49, 49)
-}
 
-.confirm-language {
-    visibility: hidden;
-}
+
 
 /* #task {
     display: none;

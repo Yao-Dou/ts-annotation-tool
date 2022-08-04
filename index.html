@@ -25,16 +25,14 @@
             </div>
             <div>
                 <div class="ba b--black-80 br3 pa2">
-                    <p class="f3 mt1">
+                    <p class="f3 mt1 mb1">
                         <span class="f5 ">Original Sentence (Human Written):</span>
-                        <br>
-                        <span class="f4">{{original_sentence}}</span>
                     </p>
-                    <p class="f3">
+                    <div class="f4 lh-copy" v-html="original_html"></div>
+                    <p class="f3 mb1">
                         <span class="f5">Simplified Sentence (Human or AI Model Written):</span>
-                        <br>
-                        <span class="f4">{{simplified_sentence}}</span>
                     </p>
+                    <div class="f4 mb2 lh-copy" v-html="simplified_html"></div>
                 </div>
             </div>
             <div class="mt1">
