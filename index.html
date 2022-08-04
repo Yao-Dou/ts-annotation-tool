@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Annotation</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/index.css"> 
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  </head>
+  <body class="sans-serif">
+    <div id="app" class="container card mb-3 card-body">
+        <section id="hit">
+            <div class="w-100 mb3 tc f3">
+                <button @click="prev_hit" class="black dim br-100 ba pa1 bg-white pointer">&nbsp;&#8249;&nbsp;</button>
+                Hit <span>{{current_hit}}</span> / <span>{{total_hits}}&nbsp;</span>
+                <button @click="next_hit" class="black dim br-100 ba pa1 bg-white pointer">&nbsp;&#8250;&nbsp;</button>
+            </div>
+            <div>
+                <div class="ba b--black-80 br3 pa2">
+                    <p class="f3 mt1">
+                        <span class="f5 ">Original Sentence (Human Written):</span>
+                        <br>
+                        <span class="f4">{{original_sentence}}</span>
+                    </p>
+                    <p class="f3">
+                        <span class="f5">Simplified Sentence (Human or AI Model Written):</span>
+                        <br>
+                        <span class="f4">{{simplified_sentence}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mt1">
+                <p class="f4 courier ttu">Edits Annotations:</p>
+            </div>
+        </section>
+      </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
