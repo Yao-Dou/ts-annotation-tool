@@ -45,6 +45,23 @@
     color: #ee2a2a;
 }
 
+.border-insertion {
+    border-bottom: 3px solid #64c466;
+}
+
+.border-insertion-all {
+    border: 2px solid #64c466;
+}
+
+.bg-insertion {
+    background-color: #64c466;
+}
+
+.txt-insertion {
+    color: #64c466;
+}
+
+
 .border-paraphrase {
     border-bottom: 3px solid #2186eb;
 }
@@ -59,4 +76,41 @@
 
 .txt-paraphrase {
     color: #2186eb;
+}
+
+.border-split {
+    border-bottom: 3px solid #F7CE46;
+}
+
+.border-split-all {
+    border: 2px solid #F7CE46;
+}
+
+.bg-split {
+    background-color: #F7CE46;
+}
+
+.txt-split {
+    color: #F7CE46;
+}
+
+.bg-paraphrase-light {
+    background-color: #ADC5FA;
+}
+
+.bg-insertion-light {
+    background-color: #D2E7BA;
+}
+
+.bg-deletion-light {
+    background-color: #F4B8B1;
+}
+
+.bg-split-light {
+    background-color: #FAE5AF;
+}
+
+
+.w-15 {
+    width: 15%;
 }

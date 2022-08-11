@@ -2,14 +2,20 @@
   
   .quality-selection {
     display         : none;
-    position        : absolute;
-    background-color: white;
+    /* position        : absolute; */
+    position: relative;
+    background-color: rgb(248, 248, 248);;
     padding         : 10px;
     /* text-align   : center; */
-    width           : 640px;
+    /* width           : 640px; */
     /* max-width    : 400px; */
-    margin          : 20px;
+    margin-left: auto;
+    margin-right: auto;
     z-index         : 100;
+  }
+
+  .active {
+    display: block;
   }
   
   /* #dropdown-button-container {
@@ -92,3 +98,20 @@
   #selection_antecedent {
     margin-bottom: 0;
   }
+
+  .tracked-light {
+    letter-spacing: .05em;
+  }
+
+.confirm-button {
+  background-color: #3e6ae1;
+  color: #FFFFFF;
+}
+
+.cancel-button {
+  background-color: white;
+}
+
+.span-selection-div {
+  display: none;
+}
