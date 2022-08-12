@@ -797,8 +797,13 @@
     top: 2px;
   }
 
-.add_button:hover .icon-default {
-  transform: rotate(180deg);
+/* .add_button:hover .icon-default {
+  transform: rotate(90deg);
+} */
+
+.icon-default.open{
+  transform: rotate(45deg);
+  /* transition: transform 1s linear; */
 }
 
 .icon-default {
