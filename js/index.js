@@ -196,6 +196,8 @@ const app = Vue.createApp({
                     key_short = 'delete'
                 } else if (key == 'insertion') {
                     key_short = 'insert'
+                } else {
+                    key_short = 'split'
                 }
                 for (let i in this.edits_dict[key]) {
                     new_html += `<div class='cf'>`
@@ -211,16 +213,42 @@ const app = Vue.createApp({
                     
                     new_html += `</span>`;
                     new_html += ` : `;
-                    console.log(this.hits_data[this.current_hit - 1].annotations)
+                    // console.log(this.hits_data[this.current_hit - 1].annotations)
                     if (!(i in this.hits_data[this.current_hit - 1].annotations[key])) {
                         new_html += `<span class="f4 i">this edit is not annotated yet, click <i class="fa-solid fa-pencil"></i> to start!</span>`;
                     } else {
                         let annotation = this.hits_data[this.current_hit - 1].annotations[key][i];
-                        let annotation_text = annotation[0]
-                        if (annotation[1] == "no") {
-                            annotation_text += " ,no frequency error";
-                        } else {
-                            annotation_text += " ,introduce frequency error";
+                        let annotation_text = ""
+                        if (key == 'deletion') {
+                            annotation_text = annotation[0]
+                            if (annotation[1] == "no") {
+                                annotation_text += " ,no frequency error";
+                            } else {
+                                annotation_text += " ,introduce frequency error";
+                            }
+                            
+                        } else if (key == 'insertion') {
+                            if (annotation[0] == "add example" || annotation[0] == "elaboration") {
+                                annotation_text += "good insertion";
+                                if (annotation[1] == "yes") {
+                                    annotation_text += ", and simplify the sentence";
+                                } else {
+                                    annotation_text += ", but doesn't simplify the sentence";
+                                }
+                            } else {
+                                annotation_text += "bad insertion,";
+                                annotation_text += "with " + annotation[0] + " error";
+                            }
+                        } else if (key == 'split') {
+                            console.log(annotation)
+                            if (annotation[0] == "yes") {
+                                annotation_text += "introduce grammar / influency error, ";
+                            }
+                            if (annotation[1] == "yes") {
+                                annotation_text += "simplify the sentence";
+                            } else {
+                                annotation_text += "doesn't simplify the sentence";
+                            }
                         }
                         new_html += `<span class="f4 i">${annotation_text}</span>`;
                     }
@@ -248,11 +276,27 @@ const app = Vue.createApp({
                 new_html += ` : `;
                 if (!(paraphrase_id in this.hits_data[this.current_hit - 1].annotations["paraphrase"])) {
                     new_html += `<span class="f4 i">this edit is not annotated yet, click <i class="fa-solid fa-pencil"></i> to start!</span>`;
+                } else {
+                    let annotation = this.hits_data[this.current_hit - 1].annotations["paraphrase"][paraphrase_id];
+                    let annotation_text = "";
+                    let success_or_failure = annotation[0]
+                    if (success_or_failure == "yes") {
+                        annotation_text += "good paraphrase";
+                        if (annotation[1] == "yes") {
+                            annotation_text += ", and simplify the sentence";
+                        } else {
+                            annotation_text += ", but doesn't simplify the sentence";
+                        }
+                    } else {
+                        annotation_text += "bad paraphrase, ";
+                        annotation_text += "with " + annotation[2] + " error";
+                    }
+                    new_html += `<span class="f4 i">${annotation_text}</span>`;
                 }
                 new_html += '</span>'
                 new_html += `</div>`;
                 new_html += `<div class="fl w-20 mb4 operation tc">`;
-                new_html += `<i class="fa-solid fa-pencil mr3 pointer dim" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase"></i>`;
+                new_html += `<i @click="annotate_edit" class="fa-solid fa-pencil mr3 pointer dim" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase"></i>`;
                 new_html += `<i @click="trash_edit" class="fa-solid fa-trash-can ml4 pointer dim" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase"></i>`;
                 new_html += `</div>`;
                 new_html += `</div>`;
@@ -310,8 +354,8 @@ const app = Vue.createApp({
                 simplified_spans.push(new_paraphrase[1])
             } else if (selected_category == "split") {
                 let category_edits = this.edits_dict[selected_category]
-                let new_deletion = [2, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]
-                simplified_spans.push(new_deletion)
+                let new_split = [2, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]
+                simplified_spans.push(new_split)
             } else if (selected_category == "insertion") {
                 let category_edits = this.edits_dict[selected_category]
                 let new_insertion = [3, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]
@@ -321,13 +365,63 @@ const app = Vue.createApp({
             this.refresh_edit();
         },
         save_deletion_anntotation_click() {
-            let annotation_category = $("input[name=severity]:checked").val();
             let edit_id = this.annotating_edit_span_category_id
             let edit_category = this.annotating_edit_span_category
+
+            let annotation_category = $("input[name=severity]:checked").val();
             let yes_or_no = $("input[name=deletion-yes-no]:checked").val();
+
             this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [annotation_category, yes_or_no]
             this.process_everything();
             this.refresh_edit();
+        },
+        save_paraphrase_anntotation_click() {
+            let edit_id = this.annotating_edit_span_category_id
+            let edit_category = this.annotating_edit_span_category
+
+            let success_or_failure = $("input[name=paraphrase-yes-no]:checked").val();
+            let simplify_yes_or_no = $("input[name=paraphrase-simplify-yes-no]:checked").val();
+            let error_type = $("input[name=paraphrase-error]:checked").val();
+
+            this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [success_or_failure, simplify_yes_or_no, error_type]
+            this.process_everything();
+            this.refresh_edit();
+        },
+        save_split_anntotation_click() {
+            let edit_id = this.annotating_edit_span_category_id
+            let edit_category = this.annotating_edit_span_category
+
+            let grammar_yes_or_no = $("input[name=split-yes-no]:checked").val();
+            let simplify_yes_or_no = $("input[name=split-simplify-yes-no]:checked").val();
+
+            this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [grammar_yes_or_no, simplify_yes_or_no]
+            this.process_everything();
+            this.refresh_edit();
+        },
+        save_insertion_anntotation_click() {
+            let edit_id = this.annotating_edit_span_category_id
+            let edit_category = this.annotating_edit_span_category
+
+            let insertion_type = $("input[name=insertion-type]:checked").val();
+            let simplify_yes_or_no = $("input[name=insertion-simplify-yes-no]:checked").val();
+
+            this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [insertion_type, simplify_yes_or_no]
+            this.process_everything();
+            this.refresh_edit();
+        },
+        paraphrase_yes_click() {
+            $('.bad').slideUp(400);
+            $('.good').slideDown(400);
+        },
+        paraphrase_no_click() {
+            $('.good').slideUp(400);
+            $('.bad').slideDown(400);
+        },
+        insertion_yes_click() {
+            $('.good').slideDown(400);
+        },
+        insertion_no_click() {
+            $('.good').slideUp(400);
         },
         refresh_edit(event) {
             this.selected_span_in_original = '',
@@ -368,7 +462,7 @@ const app = Vue.createApp({
 
     },
     mounted: function () {
-        $(".quality-selection").draggable();
+        // $(".quality-selection").draggable();
 
         $("#close-icon").on("click", function () {
             $(".quality-selection").fadeOut(0.2);
@@ -584,6 +678,7 @@ const app = Vue.createApp({
                     annotate_edit(event) {
                         let target = event.target
                         let category = target.dataset.category
+                        $(`.quality-selection`).slideUp(400)
                         $(`.quality-selection[data-category=${category}]`).slideDown(400);
                         let id = target.dataset.id
                         let edit_dict = this.$parent.edits_dict
@@ -592,13 +687,22 @@ const app = Vue.createApp({
                         let simplified_sentence = this.$parent.hits_data[this.$parent.current_hit - 1].simplified
                         // parse the read_id to int
                         real_id = parseInt(real_id)
-                        let annotating_span = edit_dict[category][real_id]
-                        console.log(annotating_span)
-                        if (real_id in [0, 1]) {
-                            this.$parent.annotating_edit_span_in_original = original_sentence.substring(annotating_span[1], annotating_span[2])
-                        }
-                        if (real_id in [1, 2, 3]) {
-                            this.$parent.annotating_edit_span_in_simplified = simplified_sentence.substring(annotating_span[1], annotating_span[2])
+                        if (category == "paraphrase") {
+                            let annotating_span_orginal = edit_dict[category][real_id][0]
+                            let annotating_span_simplified = edit_dict[category][real_id][1]
+                            console.log(annotating_span_orginal)
+                            console.log(annotating_span_simplified)
+                            this.$parent.annotating_edit_span_in_original = original_sentence.substring(annotating_span_orginal[1], annotating_span_orginal[2])
+                            this.$parent.annotating_edit_span_in_simplified = simplified_sentence.substring(annotating_span_simplified[1], annotating_span_simplified[2])
+                        } else {
+                            let annotating_span = edit_dict[category][real_id]
+                            console.log(annotating_span)
+                            if (real_id in [0]) {
+                                this.$parent.annotating_edit_span_in_original = original_sentence.substring(annotating_span[1], annotating_span[2])
+                            }
+                            if (real_id in [2, 3]) {
+                                this.$parent.annotating_edit_span_in_simplified = simplified_sentence.substring(annotating_span[1], annotating_span[2])
+                            }
                         }
                         this.$parent.annotating_edit_span_category = category
                         this.$parent.annotating_edit_span_category_id = real_id
@@ -638,6 +742,18 @@ const app = Vue.createApp({
                     }
                 }
             }
+        },
+        total_edits () {
+            // if (this.hits_data == null) {
+            //     return 0
+            // } else {
+            //     console.log(this.edits_dict)
+            //     let total_num
+            // }
+            return 3
+        },
+        annotated_edits () {
+            return 0
         },
     },
 })

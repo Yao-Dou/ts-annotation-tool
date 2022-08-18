@@ -53,7 +53,7 @@
                             <div class="row">
                                 <p class="mb2 b tracked-light">Select the Edit Category.</i>
                                 </p>
-                                <div class="tc">
+                                <div class="tc mb3">
                                     <div class="w-20 mr4 dib">
                                         <input @click="show_span_selection" class="checkbox-tools-edit-category checkbox-tools" type="radio" name="edit_cotegory"
                                             id="edit_cotegory-deletion" value="deletion">
@@ -88,19 +88,19 @@
                                     </div>
                                 </div>
                                 <div class="span-selection-div" data-category="deletion">
-                                    <p class="mb2 b tracked-light">Select the deleted text span from the <i>Original Sentence</i>.
+                                    <p class="mt0 mb2 b tracked-light">Select the deleted text span from the <i>Original Sentence</i>.
                                     </p>
                                     <p class="tracked-light">Selected span: <span class="bg-deletion-light">{{selected_span_in_original}}</span></p>
                                 </div>
                                
                                 <div class="span-selection-div" data-category="insertion">
-                                    <p class="mb2 b tracked-light">Select the newly inserted text span from the <i>Simplified Sentence</i>.
+                                    <p class="mt0 mb2 b tracked-light">Select the newly inserted text span from the <i>Simplified Sentence</i>.
                                     </p>
                                     <p class="tracked-light">Selected span: <span class="bg-insertion-light">{{selected_span_in_simplified}}</span></p>
                                 </div>
 
                                 <div class="span-selection-div" data-category="paraphrase">
-                                    <p class="mb2 b tracked-light">Select the text span from the <i>Original Sentence</i>.
+                                    <p class="mt0 mb2 b tracked-light">Select the text span from the <i>Original Sentence</i>.
                                     </p>
                                     <p class="tracked-light">Selected span: <span class="bg-paraphrase-light">{{selected_span_in_original}}</span></p>
                                     <div class="">
@@ -111,7 +111,7 @@
                                 </div>  
 
                                 <div class="span-selection-div" data-category="split">
-                                    <p class="mb2 b tracked-light">Select the punctuation that ending the sentence from <i>Simplified Sentence</i>.
+                                    <p class="mt0 mb2 b tracked-light">Select the punctuation that ending the sentence from <i>Simplified Sentence</i>.
                                     </p>
                                     <p class="tracked-light">Selected span: <span class="bg-split-light">{{selected_span_in_simplified}}</span></p>
                                 </div>
@@ -149,32 +149,32 @@
                                     <div class="column-severity">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-1" value="good">
-                                        <label class="b for-checkbox-tools-severity" for="severity-1" id="severity-1-label">
+                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-1" id="severity-1-label">
                                             1 - Very little
                                         </label>
                                     </div>
                                     <div class="column-severity">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-2" value="somewhat">
-                                        <label class="b for-checkbox-tools-severity" for="severity-2" id="severity-2-label">
+                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-2" id="severity-2-label">
                                             2 - Some information
                                         </label>
                                     </div>
                                     <div class="column-severity">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-3" value="bad">
-                                        <label class="b for-checkbox-tools-severity" for="severity-3" id="severity-3-label">
-                                            3 - A lot and the main idea is changed
+                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-3" id="severity-3-label">
+                                            3 - A lot of information, and the main idea is changed
                                         </label>
                                     </div>
                                 </div>
-                                <p class="mb2 b tracked-light">Does this deletion introduce any fluency / grammar error?
+                                <p class="mb3 b tracked-light">Does this deletion introduce any fluency / grammar error?
                                     <input class="checkbox-tools-yes-no" type="radio" name="deletion-yes-no"
                                         id="deletion-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no" for="deletion-yes">yes</label>
+                                    <label class="b for-checkbox-tools-yes-no question-deletion" for="deletion-yes">yes</label>
                                     <input class="checkbox-tools-yes-no" type="radio" name="deletion-yes-no"
                                         id="deletion-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no" for="deletion-no">
+                                    <label class="b for-checkbox-tools-yes-no question-deletion" for="deletion-no">
                                         no
                                     </label>
                                 </p>
@@ -193,158 +193,217 @@
                     </div>
                 </div>
 
-                <div class="quality-selection ba br3 bw1">
-                    <i class="fa fa-close" id="close-icon"></i>
-                    <p id="selection_text" class="selection_text"></p>
+                <div class="quality-selection w-100" data-category="paraphrase">
+                    <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
+                    <div class="f4 mt0 mb2 tc">
+                        Edit:
+                        <span class="edit-type txt-paraphrase f3">paraphrase </span>
+                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase"
+                            data-id="paraphrase-0" data-category="paraphrase">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
+                        <span class="edit-type txt-paraphrase f3"> to </span>
+                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase"
+                        data-id="paraphrase-0" data-category="paraphrase">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                    </div>
+        
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
                     <div id="dropdown-button-container">
-                        <!-- <input class="checkbox" type="checkbox" name="general" id="general">
-                        <label class="for-checkbox" for="general"></label> -->
-                        <div class="single_part section over-hide z-bigger">
-                            <p class="b mb2">Select the error.</p>
-                            <div class="quality_selection_container">
-                                <div class="f6 mb2 float-l">Reader</div>
-                                <div class="f6 mb2 float-l">Factual</div>
-                                <div class="row">
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-5" value="Needs_Google">
-                                        <label class="b for-checkbox-tools" for="error-5" id="error-5-label">
-                                            Needs Google
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-1" value="Technical_Jargon">
-                                        <label class="b for-checkbox-tools" for="error-1" id="error-1-label">
-                                            Technical Jargon
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-2" value="Bad_Math">
-                                        <label class="b for-checkbox-tools" for="error-2" id="error-2-label">
-                                            Bad Math
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-3" value="Encyclopedic">
-                                        <label class="b for-checkbox-tools" for="error-3" id="error-3-label">
-                                            Wrong: Encyclopedic
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-4" value="Commonsense">
-                                        <label class="b for-checkbox-tools" for="error-4" id="error-4-label">
-                                            Wrong: Commonsense
-                                        </label>
-                                    </div>
-                                </div>
-                                <p class="f6 mb2">Language</p>
-                                <div class="row">
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-6" value="Grammar_Usage">
-                                        <label class="b for-checkbox-tools" for="error-6" id="error-6-label">
-                                            Grammar / Usage
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-7" value="Off-prompt">
-                                        <label class="b for-checkbox-tools" for="error-7" id="error-7-label">
-                                            Off-prompt
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_able" type="radio" name="error_type"
-                                            id="error-8" value="Redundant">
-                                        <label class="b for-checkbox-tools" for="error-8" id="error-8-label">
-                                            Redundant
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_able" type="radio" name="error_type"
-                                            id="error-9" value="Self-contradiction">
-                                        <label class="b for-checkbox-tools" for="error-9" id="error-9-label">
-                                            Self-contradiction
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input class="checkbox-tools antecedent_no_able" type="radio" name="error_type"
-                                            id="error-10" value="Incoherent">
-                                        <label class="b for-checkbox-tools" for="error-10" id="error-10-label">
-                                            Incoherent
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="single_part" id="antecedent_selection" style="display:none;">
-                            <p id="antecedent_select_text" class="b mb2">Select the antecedent.</p>
-                            <p id="selection_antecedent" class="selection_text">Selected antecedents: </p>
-                        </div>
-                        <!-- <div class="form__group field">
-                        <input type="text" class="form__field" placeholder="Explanation" name="explanation" id='explanation'/>
-                        <label for="explanation" class="form__label">Explanation *</label>
-                    </div> -->
-                        <div class="disable single_part" id="explanation_div">
-                            <p class="b mb2">Explain your selection.</p>
-                            <textarea id="explanation" name="explanation"
-                                placeholder="Please write down your explanation!" rows="4"
-                                style="width: 100%; resize: none; overflow-y: hidden;"></textarea>
-                        </div>
-
-
-                        <div class="disable single_part section over-hide z-bigger" id="severity_div">
-                            <div>
-                                <p class="radio-instruction mb2 b">Select the severity <i>(how severe is this
-                                        error?).</i>
+                        <div class="single_part over-hide z-bigger mt3" id="severity_div">
+                            <div class="row">
+                                <p class="mb4 b tracked-light">Does this paraphrase edit preserve the meaning of the original phrase?
+                                    <input @click="paraphrase_yes_click" class="checkbox-tools-yes-no" type="radio" name="paraphrase-yes-no"
+                                        id="paraphrase-yes" value="yes">
+                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-yes">yes</label>
+                                    <input @click="paraphrase_no_click" class="checkbox-tools-yes-no" type="radio" name="paraphrase-yes-no"
+                                        id="paraphrase-no" value="no">
+                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-no">
+                                        no
+                                    </label>
                                 </p>
-                                <div>
+                                <div class="good dn">
+                                    <p class="mt0 mb3 b tracked-light">Does this edit <span class="i">simplify</span> the sentence (make the sentence easier to read)?
+                                    <input class="checkbox-tools-yes-no" type="radio" name="paraphrase-simplify-yes-no"
+                                    id="paraphrase-simplify-yes" value="yes">
+                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-simplify-yes">yes</label>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="paraphrase-simplify-yes-no"
+                                        id="paraphrase-simplify-no" value="no">
+                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-simplify-no">
+                                        no
+                                    </label>
+                                    </p>
+                                </div>
+                                
+                                <div class="bad dn mb1">
+                                    <p class="mt0 mb2 b tracked-light">Select the error.</p>
                                     <div class="column-severity">
-                                        <input class="checkbox-tools-severity checkbox-tools" type="radio"
-                                            name="severity" id="severity-1" value="1">
-                                        <label class="b for-checkbox-tools-severity" for="severity-1"
-                                            id="severity-1-label">
-                                            1 - Almost no impact
+                                        <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
+                                            id="paraphrase-error-hallu" value="hallucination">
+                                        <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-hallu">
+                                            Hallucination (introduce new information)
                                         </label>
                                     </div>
                                     <div class="column-severity">
-                                        <input class="checkbox-tools-severity checkbox-tools" type="radio"
-                                            name="severity" id="severity-2" value="2">
-                                        <label class="b for-checkbox-tools-severity" for="severity-2"
-                                            id="severity-2-label">
-                                            2 - Understandable, but difficult
+                                        <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
+                                            id="paraphrase-error-incorrect" value="incorrect">
+                                        <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-incorrect">
+                                            Incorrect (not accurately represent the meaning)
                                         </label>
                                     </div>
                                     <div class="column-severity">
-                                        <input class="checkbox-tools-severity checkbox-tools" type="radio"
-                                            name="severity" id="severity-3" value="3">
-                                        <label class="b for-checkbox-tools-severity" for="severity-3"
-                                            id="severity-3-label">
-                                            3 - Very hard to understand
+                                        <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
+                                            id="paraphrase-error-grammar" value="grammar error">
+                                        <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-grammar">
+                                            Grammar/Fluency Error
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="disable buttons" id="button_div">
-                            <!-- <input type="button" id="clear_button" class="clear quality_button" value="Clear"> -->
-                            <button id="confirm_button" class="b confirm quality_button btn"
-                                type="button">Confirm</button>
+                        <!-- <div class="single_part" id="explanation_div">
+                        <p class="b mb2">Explain your selection.</p>
+                        <textarea id="explanation" name="explanation" placeholder="Please write down your explanation!"
+                            rows="4" style="width: 100%; resize: none; overflow-y: hidden;"></textarea>
+                      </div> -->
+                        <!-- disable  -->
+                        <div class="buttons tc mt2">
+                            <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
+                            <button @click="save_paraphrase_anntotation_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
                         </div>
                     </div>
                 </div>
 
 
+                <div class="quality-selection w-100" data-category="insertion">
+                    <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
+                    <div class="f4 mt0 mb2 tc">
+                        Edit:
+                        <span class="edit-type txt-insertion f3">insert </span>
+                        <span class="pa1 edit-text br-pill-ns border-insertion-all insertion_below txt-insertion"
+                            data-id="insertion-0" data-category="insertion">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                    </div>
+        
+                    <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
+                    <div id="dropdown-button-container">
+                        <div class="single_part over-hide z-bigger mt3">
+                            <p class="b mb2">Select the type.</p>
+                            <div class="quality_selection_container">
+                                <div class="f5 mb2 fl w-40 orange">Good</div>
+                                <div class="f5 mb2 fl purple">Bad</div>
+                                <div class="row mb3">
+                                    <div class="column">
+                                        <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-success-ela" value="elaboration">
+                                        <label class="b question-insertion orange" for="insertion-success-ela">
+                                            Elaboration
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-success-example" value="add example">
+                                        <label class="b question-insertion orange" for="insertion-success-example">
+                                            Add Example
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-error-hallu" value="hallucination">
+                                        <label class="b question-insertion purple" for="insertion-error-hallu">
+                                            Hallucination
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-error-grammar" value="grammar error">
+                                        <label class="b question-insertion purple" for="insertion-error-grammar">
+                                            Grammar/fluency Error
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-error-factual" value="factual error">
+                                        <label class="b question-insertion purple" for="insertion-error-factual">
+                                            Factual Error
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="good mt2 dn">
+                                    <p class="mt0 mb3 b tracked-light">Does this edit <span class="i">simplify</span> the sentence (make the sentence easier to read)?
+                                    <input class="checkbox-tools-yes-no" type="radio" name="insertion-simplify-yes-no"
+                                    id="insertion-simplify-yes" value="yes">
+                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-simplify-yes">yes</label>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="insertion-simplify-yes-no"
+                                        id="insertion-simplify-no" value="no">
+                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-simplify-no">
+                                        no
+                                    </label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="single_part" id="explanation_div">
+                        <p class="b mb2">Explain your selection.</p>
+                        <textarea id="explanation" name="explanation" placeholder="Please write down your explanation!"
+                            rows="4" style="width: 100%; resize: none; overflow-y: hidden;"></textarea>
+                      </div> -->
+                        <!-- disable  -->
+                        <div class="buttons tc">
+                            <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
+                            <button @click="save_insertion_anntotation_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quality-selection w-100" data-category="split">
+                    <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
+                    <div class="f4 mt0 mb2 tc">
+                        Edit:
+                        <span class="edit-type txt-split f3">split </span>
+                        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split"
+                            data-id="split-0" data-category="split">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                    </div>
+        
+                    <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
+                    <div id="dropdown-button-container">
+                        <div class="single_part over-hide z-bigger mt3" id="severity_div">
+                            <div class="row">
+                                <p class="mb4 b tracked-light">Does this split edit introduce any grammar / fluency error?
+                                    <input class="checkbox-tools-yes-no" type="radio" name="split-yes-no"
+                                        id="split-yes" value="yes">
+                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-yes">yes</label>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="split-yes-no"
+                                        id="split-no" value="no">
+                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-no">
+                                        no
+                                    </label>
+                                </p>
+                                <p class="mb3 b tracked-light">Does this split edit <span class="i">simplify</span> the sentence (make the sentence easier to read)?</i>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="split-simplify-yes-no"
+                                        id="split-simplify-yes" value="yes">
+                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-simplify-yes">yes</label>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="split-simplify-yes-no"
+                                        id="split-simplify-no" value="no">
+                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-simplify-no">
+                                        no
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div class="single_part" id="explanation_div">
+                        <p class="b mb2">Explain your selection.</p>
+                        <textarea id="explanation" name="explanation" placeholder="Please write down your explanation!"
+                            rows="4" style="width: 100%; resize: none; overflow-y: hidden;"></textarea>
+                      </div> -->
+                        <!-- disable  -->
+                        <div class="buttons tc mt2">
+                            <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
+                            <button @click="save_split_anntotation_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="mt1 cf">
                 <div class="fl w-80">
-                    <p class="f3 courier ttu">Edits Annotations (<span>0/3</span>)</p>
+                    <p class="f3 courier ttu">Edits Annotations (<span>{{annotated_edits}}/{{total_edits}}</span>)</p>
                 </div>
                 <div class="fl w-20 tc">
                     <!-- <p class="f3 courier ttu">Operations</p> -->
