@@ -744,16 +744,35 @@ const app = Vue.createApp({
             }
         },
         total_edits () {
-            // if (this.hits_data == null) {
-            //     return 0
-            // } else {
-            //     console.log(this.edits_dict)
-            //     let total_num
-            // }
-            return 3
+            if (this.hits_data == null) {
+                return 0
+            } else {
+                // console.log(this.edits_dict)
+                // iterate through the edits_dict and count the number of edits
+                let total_num = 0
+                for (let category in this.edits_dict) {
+                    let category_dict = this.edits_dict[category]
+                    for (let id in category_dict) {
+                        total_num += 1
+                    }
+                }
+                return total_num
+            }
         },
         annotated_edits () {
-            return 0
+            if (this.hits_data == null) {
+                return 0
+            } else {
+                console.log(this.hits_data[[this.current_hit - 1]].annotations)
+                let total_num = 0
+                for (let category in this.hits_data[[this.current_hit - 1]].annotations) {
+                    let category_dict = this.hits_data[[this.current_hit - 1]].annotations[category]
+                    for (let id in category_dict) {
+                        total_num += 1
+                    }
+                }
+                return total_num
+            }
         },
     },
 })
