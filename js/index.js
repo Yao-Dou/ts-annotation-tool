@@ -15,9 +15,18 @@ const app = Vue.createApp({
             selected_span_in_simplified: '',
             selected_span_in_original_indexs: [],
             selected_span_in_simplified_indexs: [],
+            lines: {},
+            insertion_deletion_lines: {},
+            current_insertion_deletion_pair: null,
             open : false,
+            open_annotation : false,
             category_to_id: {'deletion': 0, 'paraphrase': 1, 'split': 2, 'insertion': 3},
+            id_to_category: {0: 'deletion', 1: 'paraphrase', 2: 'split', 3:'insertion'},
 
+            current_insertion_edit_id : null,
+
+            connect_delete_click : false,
+            clicked_deletion: "",
 
             annotating_edit_span_in_original: '',
             annotating_edit_span_in_simplified: '',
@@ -37,10 +46,15 @@ const app = Vue.createApp({
             // iterate original_spans list
             for (let i = 0; i < original_spans.length; i++) {
                 sentence_html += original_sentence.substring(prev_idx, original_spans[i][1]);
+                let light = "-light"
+                let original_span_id = original_spans[i][3]
+                if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[original_spans[i][0]]])) {
+                    light = ""
+                }
                 if (original_spans[i][0] == 0) {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="deletion border-deletion pointer span" data-category="deletion" data-id="deletion-` + original_spans[i][3] + `">`;
+                    sentence_html += `<span @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="deletion border-deletion${light} pointer span original_span" data-category="deletion" data-id="deletion-` + original_span_id + `">`;
                 } else if (original_spans[i][0] == 1) {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase pointer span" data-category="paraphrase" data-id="paraphrase-` + original_spans[i][3] + `">`;
+                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase${light} pointer span original_span" data-category="paraphrase" data-id="paraphrase-` + original_span_id + `">`;
                 }
                 sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i][2]);
                 sentence_html += `</span>`;
@@ -55,12 +69,7 @@ const app = Vue.createApp({
             let sentence_html = ''
             let original_sentence = this.hits_data[this.current_hit - 1].original
             let original_spans = JSON.parse(JSON.stringify(this.hits_data[this.current_hit - 1].original_spans))
-            let category_id = -1;
-            if (category == 'deletion') {
-                category_id = 0;
-            } else if (category == 'paraphrase') {
-                category_id = 1;
-            }
+            let category_id = this.category_to_id[category]
             original_spans.push([category_id, start, end]);
             console.log(original_spans)
             // rank original_spans list by [1]
@@ -74,13 +83,23 @@ const app = Vue.createApp({
                     if (original_spans[i][1] == start && original_spans[i][2] == end) {
                         sentence_html += `<span class="bg-deletion-light span">`;
                     } else {
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="deletion border-deletion pointer span" data-category="deletion" data-id="deletion-` + original_spans[i][3] + `">`;
+                        let light = "-light"
+                        let original_span_id = original_spans[i][3]
+                        if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[original_spans[i][0]]])) {
+                            light = ""
+                        }
+                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="deletion border-deletion${light} pointer span original_span" data-category="deletion" data-id="deletion-` + original_span_id + `">`;
                     }
                 } else if (original_spans[i][0] == 1) {
                     if (original_spans[i][1] == start && original_spans[i][2] == end) {
                         sentence_html += `<span class="bg-paraphrase-light span">`;
                     } else {
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase pointer span" data-category="paraphrase" data-id="paraphrase-` + original_spans[i][3] + `">`;
+                        let light = "-light"
+                        let original_span_id = original_spans[i][3]
+                        if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[original_spans[i][0]]])) {
+                            light = ""
+                        }
+                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase${light} pointer span original_span" data-category="paraphrase" data-id="paraphrase-` + original_span_id + `">`;
                     }
                 }
                 sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i][2]);
@@ -101,13 +120,13 @@ const app = Vue.createApp({
             // iterate simplified_spans list
             for (let i = 0; i < simplified_spans.length; i++) {
                 sentence_html += simplified_sentence.substring(prev_idx, simplified_spans[i][1]);
-                if (simplified_spans[i][0] == 1) {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase pointer span" data-category="paraphrase" data-id="paraphrase-` + simplified_spans[i][3] + `">`;
-                } else if (simplified_spans[i][0] == 2) {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="split border-split pointer span" data-category="split" data-id="split-` + simplified_spans[i][3] + `">`;
-                } else if (simplified_spans[i][0] == 3) {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="insertion border-insertion pointer span" data-category="insertion" data-id="insertion-` + simplified_spans[i][3] + `">`;
+                let category = this.id_to_category[simplified_spans[i][0]]
+                let light = "-light"
+                let simplified_span_id = simplified_spans[i][3]
+                if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (simplified_span_id in this.hits_data[[this.current_hit - 1]].annotations[category])) {
+                    light = ""
                 }
+                sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category}${light} pointer span simplified_span" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
                 sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
                 sentence_html += `</span>`;
                 prev_idx = simplified_spans[i][2];
@@ -137,24 +156,11 @@ const app = Vue.createApp({
             // iterate simplified_spans list
             for (let i = 0; i < simplified_spans.length; i++) {
                 sentence_html += simplified_sentence.substring(prev_idx, simplified_spans[i][1]);
-                if (simplified_spans[i][0] == 1) {
-                    if (simplified_spans[i][1] == start && simplified_spans[i][2] == end) {
-                        sentence_html += `<span class="bg-paraphrase-light span">`;
-                    } else {
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase pointer span" data-category="paraphrase" data-id="paraphrase-` + simplified_spans[i][3] + `">`;
-                    }
-                } else if (simplified_spans[i][0] == 2) {
-                    if (simplified_spans[i][1] == start && simplified_spans[i][2] == end) {
-                        sentence_html += `<span class="bg-split-light span">`;
-                    } else {
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="split border-split pointer span" data-category="split" data-id="split-` + simplified_spans[i][3] + `">`;
-                    }
-                } else if (simplified_spans[i][0] == 3) {
-                    if (simplified_spans[i][1] == start && simplified_spans[i][2] == end) {
-                        sentence_html += `<span class="bg-insertion-light span">`;
-                    } else {
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="insertion border-insertion pointer span" data-category="insertion" data-id="insertion-` + simplified_spans[i][3] + `">`;
-                    }
+                let category = this.id_to_category[simplified_spans[i][0]]
+                if (simplified_spans[i][1] == start && simplified_spans[i][2] == end) {
+                    sentence_html += `<span class="bg-${category}-light span">`;
+                } else {
+                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category} pointer span simplified_span" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
                 }
                 sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
                 sentence_html += `</span>`;
@@ -170,6 +176,10 @@ const app = Vue.createApp({
             if (!("annotations" in this.hits_data[this.current_hit - 1])) {
                 this.hits_data[this.current_hit - 1]["annotations"] = {'deletion': {}, 'paraphrase': {}, 'insertion': {}, 'split':{}}
             }
+
+            let paraphrase_map = {}
+
+            let spans_for_sort = [...original_spans]
             let new_html = ''
             for (let i = 0; i < original_spans.length; i++) {
                 if (original_spans[i][0] == 0) {
@@ -181,123 +191,117 @@ const app = Vue.createApp({
             for (let i = 0; i < simplified_spans.length; i++) {
                 if (simplified_spans[i][0] == 2) {
                     this.edits_dict['split'][simplified_spans[i][3]] = simplified_spans[i];
+                    spans_for_sort.push(simplified_spans[i]);
                 } else if (simplified_spans[i][0] == 3) {
                     this.edits_dict['insertion'][simplified_spans[i][3]] = simplified_spans[i];
+                    spans_for_sort.push(simplified_spans[i]);
                 } else if (simplified_spans[i][0] == 1) {
                     this.edits_dict['paraphrase'][simplified_spans[i][3]].push(simplified_spans[i]);
+                    paraphrase_map[simplified_spans[i][3]] = simplified_spans[i];
                 }
             }
-            for (let key in this.edits_dict) {
-                if (key == 'paraphrase') {
-                    continue;
-                }
+
+            spans_for_sort.sort(function(a, b) {
+                return a[1] - b[1];
+            });
+
+            for (let span of spans_for_sort) {
+                let i = span[3]
+                let key_id = span[0];
+                let key = this.id_to_category[key_id];
                 let key_short = ""
                 if (key == 'deletion') {
                     key_short = 'delete'
+                } else if (key == 'paraphrase') {
+                    key_short = 'paraphrase'
                 } else if (key == 'insertion') {
                     key_short = 'insert'
                 } else {
                     key_short = 'split'
                 }
-                for (let i in this.edits_dict[key]) {
-                    new_html += `<div class='cf'>`
-                    new_html += `<div class="fl w-80 mb4 edit">`;
-                    new_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" data-id="${key}-${i}" data-category="${key}">`
-                    new_html += `<span class="edit-type txt-${key} f3">${key_short} </span>`;
-                    new_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
-                    if (key == 'deletion') {
-                        new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(this.edits_dict[key][i][1], this.edits_dict[key][i][2])}&nbsp`;
-                    } else {
-                        new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(this.edits_dict[key][i][1], this.edits_dict[key][i][2])}&nbsp`;
-                    }
-                    
-                    new_html += `</span>`;
-                    new_html += ` : `;
-                    // console.log(this.hits_data[this.current_hit - 1].annotations)
-                    if (!(i in this.hits_data[this.current_hit - 1].annotations[key])) {
-                        new_html += `<span class="f4 i">this edit is not annotated yet, click <i class="fa-solid fa-pencil"></i> to start!</span>`;
-                    } else {
-                        let annotation = this.hits_data[this.current_hit - 1].annotations[key][i];
-                        let annotation_text = ""
-                        if (key == 'deletion') {
-                            annotation_text = annotation[0]
-                            if (annotation[1] == "no") {
-                                annotation_text += " ,no frequency error";
-                            } else {
-                                annotation_text += " ,introduce frequency error";
-                            }
-                            
-                        } else if (key == 'insertion') {
-                            if (annotation[0] == "add example" || annotation[0] == "elaboration") {
-                                annotation_text += "good insertion";
-                                if (annotation[1] == "yes") {
-                                    annotation_text += ", and simplify the sentence";
-                                } else {
-                                    annotation_text += ", but doesn't simplify the sentence";
-                                }
-                            } else {
-                                annotation_text += "bad insertion,";
-                                annotation_text += "with " + annotation[0] + " error";
-                            }
-                        } else if (key == 'split') {
-                            console.log(annotation)
-                            if (annotation[0] == "yes") {
-                                annotation_text += "introduce grammar / influency error, ";
-                            }
-                            if (annotation[1] == "yes") {
-                                annotation_text += "simplify the sentence";
-                            } else {
-                                annotation_text += "doesn't simplify the sentence";
-                            }
-                        }
-                        new_html += `<span class="f4 i">${annotation_text}</span>`;
-                    }
-                    new_html += '</span>'
-                    new_html += `</div>`;
-                    new_html += `<div class="fl w-20 mb4 operation tc">`;
-                    new_html += `<i @click="annotate_edit" class="fa-solid fa-pencil mr3 pointer dim" data-id="${key}-${i}" data-category="${key}"></i>`;
-                    new_html += `<i @click="trash_edit" class="fa-solid fa-trash-can ml4 pointer dim" data-id="${key}-${i}" data-category="${key}"></i>`;
-                    new_html += `</div>`;
-                    new_html += `</div>`;
+                let light = "-light"
+                if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (i in this.hits_data[[this.current_hit - 1]].annotations[key])) {
+                    light = ""
                 }
-            }
-            for (let paraphrase_id in this.edits_dict['paraphrase']) {
                 new_html += `<div class='cf'>`
                 new_html += `<div class="fl w-80 mb4 edit">`;
-                new_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase">`
-                new_html += `<span class="edit-type txt-paraphrase f3">paraphrase </span>`;
-                new_html += `<span class="pa1 edit-text br-pill-ns txt-paraphrase border-paraphrase-all paraphrase_below" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase">`;
-                new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(this.edits_dict['paraphrase'][paraphrase_id][0][1], this.edits_dict['paraphrase'][paraphrase_id][0][2])}&nbsp`;
-                new_html += `</span>`;
-                new_html += `<span class="edit-type txt-paraphrase f3"> to </span>`;
-                new_html += `<span class="pa1 edit-text br-pill-ns txt-paraphrase border-paraphrase-all paraphrase_below" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase">`;
-                new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(this.edits_dict['paraphrase'][paraphrase_id][1][1], this.edits_dict['paraphrase'][paraphrase_id][1][2])}&nbsp`;
+                new_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" data-id="${key}-${i}" data-category="${key}" class="default_cursor">`
+                new_html += `<span class="edit-type txt-${key}${light} f3">${key_short} </span>`;
+                new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                if (key == 'deletion') {
+                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(span[1],span[2])}&nbsp`;
+                } else if (key == "paraphrase") {
+                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(span[1], span[2])}&nbsp`;
+                    new_html += `</span>`;
+                    new_html += `<span class="edit-type txt-${key}${light} f3"> to </span>`;
+                    new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(paraphrase_map[i][1], paraphrase_map[i][2])}&nbsp`;
+                } else {
+                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(span[1], span[2])}&nbsp`;
+                }
+                
                 new_html += `</span>`;
                 new_html += ` : `;
-                if (!(paraphrase_id in this.hits_data[this.current_hit - 1].annotations["paraphrase"])) {
-                    new_html += `<span class="f4 i">this edit is not annotated yet, click <i class="fa-solid fa-pencil"></i> to start!</span>`;
+                // console.log(this.hits_data[this.current_hit - 1].annotations)
+                if (!(i in this.hits_data[this.current_hit - 1].annotations[key])) {
+                    new_html += `<span class="f4 i black-60">this edit is not annotated yet, click <i class="fa-solid fa-pencil"></i> to start!</span>`;
                 } else {
-                    let annotation = this.hits_data[this.current_hit - 1].annotations["paraphrase"][paraphrase_id];
-                    let annotation_text = "";
-                    let success_or_failure = annotation[0]
-                    if (success_or_failure == "yes") {
-                        annotation_text += "good paraphrase";
-                        if (annotation[1] == "yes") {
-                            annotation_text += ", and simplify the sentence";
+                    let annotation = this.hits_data[this.current_hit - 1].annotations[key][i];
+                    let annotation_text = ""
+                    if (key == 'deletion') {
+                        let how_much_significant = annotation[0]
+                        if (how_much_significant == "perfect" || how_much_significant == "good") {
+                            annotation_text = `<span class="light-orange ba bw1 pa1">${how_much_significant} deletion</span>`
                         } else {
-                            annotation_text += ", but doesn't simplify the sentence";
+                            annotation_text = `<span class="light-purple ba bw1 pa1">${how_much_significant} deletion</span>`;
                         }
-                    } else {
-                        annotation_text += "bad paraphrase, ";
-                        annotation_text += "with " + annotation[2] + " error";
+                        if (annotation[1] == "yes") {
+                            annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                        }
+                        
+                    } else if (key == 'paraphrase') {
+                        let success_or_failure = annotation[0]
+                        if (success_or_failure == "yes") {
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good paraphrase</span>`;
+                            if (annotation[1] == "yes") {
+                                annotation_text += ` <span class="light-purple ba bw1 pa1">simplifying</span>`;
+                            } else {
+                                annotation_text += ` <span class="light-purple ba bw1 pa1">not simplifying</span>`;
+                            }
+                        } else {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad paraphrase</span> `;
+                            annotation_text += `<span class="light-purple ba bw1 pa1">${annotation[2]} error</span>`;
+                        }
+                    } else if (key == 'insertion') {
+                        if (annotation[0] == "add example" || annotation[0] == "elaboration") {
+                            annotation_text += "good insertion";
+                            if (annotation[1] == "yes") {
+                                annotation_text += ", and simplify the sentence";
+                            } else {
+                                annotation_text += ", but doesn't simplify the sentence";
+                            }
+                        } else {
+                            annotation_text += "bad insertion,";
+                            annotation_text += "with " + annotation[0] + " error";
+                        }
+                    } else if (key == 'split') {
+                        console.log(annotation)
+                        if (annotation[0] == "yes") {
+                            annotation_text += "introduce grammar / influency error, ";
+                        }
+                        if (annotation[1] == "yes") {
+                            annotation_text += "simplify the sentence";
+                        } else {
+                            annotation_text += "doesn't simplify the sentence";
+                        }
                     }
                     new_html += `<span class="f4 i">${annotation_text}</span>`;
                 }
                 new_html += '</span>'
                 new_html += `</div>`;
                 new_html += `<div class="fl w-20 mb4 operation tc">`;
-                new_html += `<i @click="annotate_edit" class="fa-solid fa-pencil mr3 pointer dim" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase"></i>`;
-                new_html += `<i @click="trash_edit" class="fa-solid fa-trash-can ml4 pointer dim" data-id="paraphrase-${paraphrase_id}" data-category="paraphrase"></i>`;
+                new_html += `<i @click="annotate_edit" class="annotation-icon fa-solid fa-pencil mr3 pointer dim" data-id="${key}-${i}" data-category="${key}"></i>`;
+                new_html += `<i @click="trash_edit" class="fa-solid fa-trash-can ml4 pointer dim" data-id="${key}-${i}" data-category="${key}"></i>`;
                 new_html += `</div>`;
                 new_html += `</div>`;
             }
@@ -407,6 +411,23 @@ const app = Vue.createApp({
 
             this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [insertion_type, simplify_yes_or_no]
             this.process_everything();
+            if (this.connect_delete_click) {
+                let insertion_id = this.current_insertion_deletion_pair[0]
+                let deletion_id = this.current_insertion_deletion_pair[1]
+
+                this.insertion_deletion_lines[insertion_id] = deletion_id
+                
+                let line = new LeaderLine(
+                    $(`.insertion.simplified_span[data-id='insertion-${insertion_id}']`)[0],
+                    $(`.deletion.original_span[data-id='deletion-${deletion_id}']`)[0],
+                    {endPlug: "arrow3",
+                    size: 3,
+                    path: "straight",
+                    color: "rgba(100,196,102, 0.4)",
+                    hide: true}
+                )
+                line.show("draw", {animOptions: {duration: 3000}})
+            }
             this.refresh_edit();
         },
         paraphrase_yes_click() {
@@ -417,13 +438,24 @@ const app = Vue.createApp({
             $('.good').slideUp(400);
             $('.bad').slideDown(400);
         },
+        insertion_corresponding_yes_click() {
+            this.connect_delete_click = true;
+            $('.connect-delete').slideDown(400);
+        },
+        insertion_corresponding_no_click() {
+            this.connect_delete_click = false;
+            $('.connect-delete').slideUp(400);
+        },
         insertion_yes_click() {
+            $('.bad').slideUp(400);
             $('.good').slideDown(400);
         },
         insertion_no_click() {
             $('.good').slideUp(400);
+            $('.bad').slideDown(400);
         },
         refresh_edit(event) {
+            this.connect_delete_click = false;
             this.selected_span_in_original = '',
             this.selected_span_in_simplified = '',
             this.selected_span_in_original_indexs = [],
@@ -452,14 +484,13 @@ const app = Vue.createApp({
         }
     },
     created: function () {
-        fetch("https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/test.json")
+        fetch("https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/part1.json")
             .then(r => r.json())
             .then(json => {
                 this.hits_data = json;
                 this.total_hits = json.length;
                 this.process_everything();
             });
-
     },
     mounted: function () {
         // $(".quality-selection").draggable();
@@ -473,45 +504,69 @@ const app = Vue.createApp({
             return {
                 template: `<div @mousedown='deselect_original_html' @mouseup='select_original_html' id="original-sentence" class="f4 lh-copy">${this.original_html}</div>`,
                 methods: {
+                    click_span(event) {
+                        console.log(this.$parent.connect_delete_click);
+                        if (this.$parent.connect_delete_click) {
+                            console.log(event.target);
+                            let text = event.target.innerText;
+                            this.$parent.clicked_deletion = text;
+                            let id = event.target.dataset.id
+                            let real_id = id.split('-')[1]
+                            this.$parent.current_insertion_deletion_pair = [this.$parent.current_insertion_edit_id, real_id]
+                        }
+                    },
                     hover_span(event) {
                         let category = event.target.dataset.category
-                        if (category == 'paraphrase') {
-                            let paraphrase_spans = $(`.paraphrase[data-id=${event.target.dataset.id}]`)
-                            paraphrase_spans.addClass("white")
-                            paraphrase_spans.addClass("bg-paraphrase")
-                            let paraphrase_below_spans = $(`.paraphrase_below[data-id=${event.target.dataset.id}]`)
-                            paraphrase_below_spans.addClass("white")
-                            paraphrase_below_spans.addClass("bg-paraphrase")
-                            paraphrase_below_spans.removeClass("txt-paraphrase")
-                        } else if (category == 'deletion') {
-                            let deletion_spans = $(event.target)
-                            deletion_spans.addClass("white")
-                            deletion_spans.addClass("bg-deletion")
-                            let deletion_below_spans = $(`.deletion_below[data-id=${event.target.dataset.id}]`)
-                            deletion_below_spans.addClass("white")
-                            deletion_below_spans.addClass("bg-deletion")
-                            deletion_below_spans.removeClass("txt-deletion")
+                        let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
+                        spans.addClass("white")
+                        let below_spans= $(`.${category}_below[data-id=${event.target.dataset.id}]`)
+                        below_spans.addClass("white")
+                        below_spans.removeClass(`txt-${category}`)
+                        below_spans.removeClass(`txt-${category}-light`)
+
+                        let id = event.target.dataset.id
+                        let real_id = id.split("-")[1]
+
+                        // check if bd-{category}-light is already in the class list
+                        if (event.target.classList.contains(`border-${category}-light`)) {
+                            spans.addClass(`bg-${category}-light`)
+                            below_spans.addClass(`bg-${category}-light`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(173, 197, 250, 1.0)"
+                            }
+                        } else {
+                            spans.addClass(`bg-${category}`)
+                            below_spans.addClass(`bg-${category}`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(33, 134, 235, 1.0)"
+                            }
                         }
                     },
                     un_hover_span(event) {
                         let category = event.target.dataset.category
-                        if (category == 'paraphrase') {
-                            let paraphrase_spans = $(`.paraphrase[data-id=${event.target.dataset.id}]`)
-                            paraphrase_spans.removeClass("white")
-                            paraphrase_spans.removeClass("bg-paraphrase")
-                            let paraphrase_below_spans = $(`.paraphrase_below[data-id=${event.target.dataset.id}]`)
-                            paraphrase_below_spans.removeClass("white")
-                            paraphrase_below_spans.removeClass("bg-paraphrase")
-                            paraphrase_below_spans.addClass("txt-paraphrase")
-                        } else if (category == 'deletion') {
-                            let deletion_spans = $(event.target)
-                            deletion_spans.removeClass("white")
-                            deletion_spans.removeClass("bg-deletion")
-                            let deletion_below_spans = $(`.deletion_below[data-id=${event.target.dataset.id}]`)
-                            deletion_below_spans.removeClass("white")
-                            deletion_below_spans.removeClass("bg-deletion")
-                            deletion_below_spans.addClass("txt-deletion")
+                        let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
+                        spans.removeClass("white")
+                        let below_spans= $(`.${category}_below[data-id=${event.target.dataset.id}]`)
+                        below_spans.removeClass("white")
+
+                        let id = event.target.dataset.id
+                        let real_id = id.split("-")[1]
+
+                        if (event.target.classList.contains(`border-${category}-light`)) {
+                            below_spans.addClass(`txt-${category}-light`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(173, 197, 250, 0.4)"
+                            }
+                        } else {
+                            below_spans.addClass(`txt-${category}`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(33, 134, 235, 0.46)"
+                            }
                         }
+                        spans.removeClass(`bg-${category}`)
+                        spans.removeClass(`bg-${category}-light`)
+                        below_spans.removeClass(`bg-${category}`)
+                        below_spans.removeClass(`bg-${category}-light`)
                     },
                     select_original_html(event) {
                         if (!this.$parent.enable_select_original_sentence) {
@@ -561,7 +616,7 @@ const app = Vue.createApp({
                         document.getElementById("original-sentence").innerHTML = this.$parent.hits_data[this.$parent.current_hit - 1].original
                         this.$parent.original_html = this.$parent.hits_data[this.$parent.current_hit - 1].original
                     }
-                }
+                },
             }
         },
         compiled_simplified_html() {
@@ -572,21 +627,54 @@ const app = Vue.createApp({
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.addClass("white")
-                        spans.addClass(`bg-${category}`)
-                        let below_spans = $(`.${category}_below[data-id=${event.target.dataset.id}]`)
+                        let below_spans= $(`.${category}_below[data-id=${event.target.dataset.id}]`)
                         below_spans.addClass("white")
-                        below_spans.addClass(`bg-${category}`)
                         below_spans.removeClass(`txt-${category}`)
+                        below_spans.removeClass(`txt-${category}-light`)
+
+                        let id = event.target.dataset.id
+                        let real_id = id.split("-")[1]
+
+                        // check if bd-{category}-light is already in the class list
+                        if (event.target.classList.contains(`border-${category}-light`)) {
+                            spans.addClass(`bg-${category}-light`)
+                            below_spans.addClass(`bg-${category}-light`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(173, 197, 250, 1.0)"
+                            }
+                        } else {
+                            spans.addClass(`bg-${category}`)
+                            below_spans.addClass(`bg-${category}`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(33, 134, 235, 1.0)"
+                            }
+                        }
                     },
                     un_hover_span(event) {
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.removeClass("white")
-                        spans.removeClass(`bg-${category}`)
-                        let below_spans = $(`.${category}_below[data-id=${event.target.dataset.id}]`)
+                        let below_spans= $(`.${category}_below[data-id=${event.target.dataset.id}]`)
                         below_spans.removeClass("white")
+
+                        let id = event.target.dataset.id
+                        let real_id = id.split("-")[1]
+
+                        if (event.target.classList.contains(`border-${category}-light`)) {
+                            below_spans.addClass(`txt-${category}-light`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(173, 197, 250, 0.4)"
+                            }
+                        } else {
+                            below_spans.addClass(`txt-${category}`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(33, 134, 235, 0.46)"
+                            }
+                        }
+                        spans.removeClass(`bg-${category}`)
+                        spans.removeClass(`bg-${category}-light`)
                         below_spans.removeClass(`bg-${category}`)
-                        below_spans.addClass(`txt-${category}`)
+                        below_spans.removeClass(`bg-${category}-light`)
                     },
                     select_simplified_html(event) {
                         if (!this.$parent.enable_select_simplified_sentence) {
@@ -647,60 +735,120 @@ const app = Vue.createApp({
                         // console.log(this.$parent.hits_data)
                         // if the target is a span, go to the parent div
                         let target = event.target
-                        if (target.tagName == 'SPAN') {
+                        if (target.tagName == 'SPAN' && target.parentElement.tagName != 'DIV') {
                             target = target.parentElement
+                        } else if (target.tagName == 'I') {
+                            target = target.parentElement.parentElement
                         }
                         let category = target.dataset.category
-                        // console.log(event.target.dataset.id)
                         let spans = $(`.${category}[data-id=${target.dataset.id}]`)
                         spans.addClass("white")
-                        spans.addClass(`bg-${category}`)
-                        let below_spans = $(`.${category}_below[data-id=${target.dataset.id}]`)
+                        let below_spans= $(`.${category}_below[data-id=${target.dataset.id}]`)
                         below_spans.addClass("white")
-                        below_spans.addClass(`bg-${category}`)
                         below_spans.removeClass(`txt-${category}`)
+                        below_spans.removeClass(`txt-${category}-light`)
+
+                        
+                        let classList = below_spans.attr("class").split(/\s+/);
+
+                        let real_id = target.dataset.id.split("-")[1]
+
+                        // check if bd-{category}-light is already in the class list
+                        if (classList.includes(`border-${category}-light-all`)) {
+                            spans.addClass(`bg-${category}-light`)
+                            below_spans.addClass(`bg-${category}-light`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(173, 197, 250, 1.0)"
+                            }
+                        } else {
+                            spans.addClass(`bg-${category}`)
+                            below_spans.addClass(`bg-${category}`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(33, 134, 235, 1.0)"
+                            }
+                        }
                     },
                     un_hover_span(event) {
                         // if the target is a span, go to the parent div
                         let target = event.target
-                        if (target.tagName == 'SPAN') {
+                        if (target.tagName == 'SPAN' && target.parentElement.tagName != 'DIV') {
                             target = target.parentElement
+                        } else if (target.tagName == 'I') {
+                            target = target.parentElement.parentElement
                         }
                         let category = target.dataset.category
                         let spans = $(`.${category}[data-id=${target.dataset.id}]`)
                         spans.removeClass("white")
-                        spans.removeClass(`bg-${category}`)
-                        let below_spans = $(`.${category}_below[data-id=${target.dataset.id}]`)
+                        let below_spans= $(`.${category}_below[data-id=${target.dataset.id}]`)
                         below_spans.removeClass("white")
+
+                        let classList = below_spans.attr("class").split(/\s+/);
+
+                        let real_id = target.dataset.id.split("-")[1]
+
+                        if (classList.includes(`border-${category}-light-all`)) {
+                            below_spans.addClass(`txt-${category}-light`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(173, 197, 250, 0.4)"
+                            }
+                        } else {
+                            below_spans.addClass(`txt-${category}`)
+                            if (category == 'paraphrase') {
+                                this.$parent.lines[real_id].color = "rgba(33, 134, 235, 0.46)"
+                            }
+                        }
+                        spans.removeClass(`bg-${category}`)
+                        spans.removeClass(`bg-${category}-light`)
                         below_spans.removeClass(`bg-${category}`)
-                        below_spans.addClass(`txt-${category}`)
+                        below_spans.removeClass(`bg-${category}-light`)
                     },
                     annotate_edit(event) {
                         let target = event.target
                         let category = target.dataset.category
-                        $(`.quality-selection`).slideUp(400)
-                        $(`.quality-selection[data-category=${category}]`).slideDown(400);
+
+                        if(this.$parent.open){
+                            $(`.quality-selection[data-category=${category}]`).slideUp(400);
+                            $(event.target).removeClass(`txt-${category}`)
+                        } else{
+                            $(`.quality-selection`).slideUp(400)
+                            $(`.quality-selection[data-category=${category}]`).slideDown(400);
+                            $(event.target).addClass(`txt-${category}`)
+                        }
+                        this.$parent.open = !this.$parent.open;
+                        
                         let id = target.dataset.id
+                        
                         let edit_dict = this.$parent.edits_dict
                         let real_id = id.split("-")[1]
+
+                        if (category == "insertion") {
+                            this.$parent.current_insertion_edit_id = real_id
+                        }
+
+                        let spans = $(`.${category}[data-id=${id}]`)
+                        spans.addClass("white")
+                        spans.removeClass(`border-${category}-light`)
+                        spans.addClass(`border-${category}`)
+                        spans.addClass(`bg-${category}`)
+
+                        // below_spans.addClass(`bg-${category}`)
+                        
                         let original_sentence = this.$parent.hits_data[this.$parent.current_hit - 1].original
                         let simplified_sentence = this.$parent.hits_data[this.$parent.current_hit - 1].simplified
                         // parse the read_id to int
                         real_id = parseInt(real_id)
+
                         if (category == "paraphrase") {
                             let annotating_span_orginal = edit_dict[category][real_id][0]
                             let annotating_span_simplified = edit_dict[category][real_id][1]
-                            console.log(annotating_span_orginal)
-                            console.log(annotating_span_simplified)
                             this.$parent.annotating_edit_span_in_original = original_sentence.substring(annotating_span_orginal[1], annotating_span_orginal[2])
                             this.$parent.annotating_edit_span_in_simplified = simplified_sentence.substring(annotating_span_simplified[1], annotating_span_simplified[2])
                         } else {
                             let annotating_span = edit_dict[category][real_id]
-                            console.log(annotating_span)
-                            if (real_id in [0]) {
+
+                            if (annotating_span[0] == 0) {
                                 this.$parent.annotating_edit_span_in_original = original_sentence.substring(annotating_span[1], annotating_span[2])
-                            }
-                            if (real_id in [2, 3]) {
+                            } else {
                                 this.$parent.annotating_edit_span_in_simplified = simplified_sentence.substring(annotating_span[1], annotating_span[2])
                             }
                         }
@@ -740,6 +888,29 @@ const app = Vue.createApp({
                         delete this.$parent.hits_data[this.$parent.current_hit - 1]["annotations"][category][real_id]
                         this.$parent.process_everything();
                     }
+                },
+                mounted: function () {
+                    for (let i in this.$parent.lines) {
+                        this.$parent.lines[i].remove()
+                    }
+                    this.$parent.lines = {}
+                    let paraphrase_edits_dict = this.$parent.edits_dict["paraphrase"]
+                    if ($('.paraphrase.original_span')[0] != null) {
+                        for (let id in paraphrase_edits_dict) {
+                            let color = "rgba(173, 197, 250, 0.4)"
+                            if (("annotations" in this.$parent.hits_data[[this.$parent.current_hit - 1]]) && (id in this.$parent.hits_data[[this.$parent.current_hit - 1]].annotations["paraphrase"])) {
+                                color = "rgba(33, 134, 235, 0.46)"
+                            }
+                            this.$parent.lines[id] = new LeaderLine(
+                                $(`.paraphrase.original_span[data-id='paraphrase-${id}']`)[0],
+                                $(`.paraphrase.simplified_span[data-id='paraphrase-${id}']`)[0],
+                                {endPlug: "behind",
+                                size: 3,
+                                path: "straight",
+                                color: color,}
+                            )
+                        }
+                    }
                 }
             }
         },
@@ -763,7 +934,6 @@ const app = Vue.createApp({
             if (this.hits_data == null) {
                 return 0
             } else {
-                console.log(this.hits_data[[this.current_hit - 1]].annotations)
                 let total_num = 0
                 for (let category in this.hits_data[[this.current_hit - 1]].annotations) {
                     let category_dict = this.hits_data[[this.current_hit - 1]].annotations[category]

@@ -810,6 +810,15 @@
   transition: opacity 0.3s, transform 0.3s;
 }
 
+.annotation-icon {
+  /* color */
+  transition: color 5s ease;
+}
+
+/* .annotation-icon:hover {
+  color: red;
+} */
+
 .add_button {
   position: relative;
   display: inline-flex;

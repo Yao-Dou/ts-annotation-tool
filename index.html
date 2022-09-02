@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://kit.fontawesome.com/c3b36ffc0c.js" crossorigin="anonymous"></script>
+    <script src="js/leader-line.min.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,6 +24,9 @@
 
 <body class="sans-serif">
     <div id="app" class="container card mb-3 card-body">
+        <!-- <svg id="lines">
+            <line x1="50" y1="50" x2="1000" y2="1000" stroke="black" stroke-width="1" />
+        </svg> -->
         <section id="hit">
             <div class="w-100 mb3 tc f3">
                 <button @click="prev_hit" class="black dim br-100 ba pa1 bg-white pointer">&nbsp;&#8249;&nbsp;</button>
@@ -32,7 +36,7 @@
             <div>
                 <div class="ba b--black-80 br2 pa2">
                     <p class="f3 mt1 mb1">
-                        <span class="f5 ">Original Sentence (Human Written):</span>
+                        <span class="f5">Original Sentence (Human Written):</span>
                     </p>
                     <component :is="compiled_original_html"></component>
                     <!-- <div class="f4 lh-copy" v-html="original_html"></div> -->
@@ -135,36 +139,42 @@
                     <div class="f4 mt0 mb2 tc">
                         Edit:
                         <span class="edit-type txt-deletion f3">delete </span>
-                        <span class="pa1 edit-text br-pill-ns border-deletion-all deletion_below txt-deletion"
-                            data-id="deletion-0" data-category="deletion">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
+                        <span class="pa1 edit-text br-pill-ns border-deletion-all deletion_below txt-deletion">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
                     </div>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
                     <div id="dropdown-button-container">
                         <div class="single_part over-hide z-bigger mt3" id="severity_div">
                             <div class="row">
-                                <p class="mb2 b tracked-light">How much information is removed?</i>
+                                <p class="mb2 b tracked-light">Is this information significant to the main idea of the original sentence?</i>
                                 </p>
                                 <div class="tc">
-                                    <div class="column-severity">
+                                    <div class="column-severity w-25">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
-                                            id="severity-1" value="good">
+                                            id="severity-1" value="perfect">
                                         <label class="b for-checkbox-tools-severity question-deletion" for="severity-1" id="severity-1-label">
-                                            1 - Very little
+                                            1 - Not at all
                                         </label>
                                     </div>
-                                    <div class="column-severity">
+                                    <div class="column-severity w-25">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
-                                            id="severity-2" value="somewhat">
+                                            id="severity-2" value="good">
                                         <label class="b for-checkbox-tools-severity question-deletion" for="severity-2" id="severity-2-label">
-                                            2 - Some information
+                                            2 - Minor
                                         </label>
                                     </div>
-                                    <div class="column-severity">
+                                    <div class="column-severity w-25">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-3" value="bad">
                                         <label class="b for-checkbox-tools-severity question-deletion" for="severity-3" id="severity-3-label">
-                                            3 - A lot of information, and the main idea is changed
+                                            3 - Somewhat, about Half of the main idea
+                                        </label>
+                                    </div>
+                                    <div class="column-severity w-25">
+                                        <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
+                                            id="severity-4" value="very bad">
+                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-4" id="severity-4-label">
+                                            4 - Very, about the main idea
                                         </label>
                                     </div>
                                 </div>
@@ -198,11 +208,9 @@
                     <div class="f4 mt0 mb2 tc">
                         Edit:
                         <span class="edit-type txt-paraphrase f3">paraphrase </span>
-                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase"
-                            data-id="paraphrase-0" data-category="paraphrase">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
+                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
                         <span class="edit-type txt-paraphrase f3"> to </span>
-                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase"
-                        data-id="paraphrase-0" data-category="paraphrase">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
                     </div>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
@@ -234,21 +242,21 @@
                                 
                                 <div class="bad dn mb1">
                                     <p class="mt0 mb2 b tracked-light">Select the error.</p>
-                                    <div class="column-severity">
+                                    <div class="column-severity w-33">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
                                             id="paraphrase-error-hallu" value="hallucination">
                                         <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-hallu">
                                             Hallucination (introduce new information)
                                         </label>
                                     </div>
-                                    <div class="column-severity">
+                                    <div class="column-severity w-33">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
                                             id="paraphrase-error-incorrect" value="incorrect">
                                         <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-incorrect">
                                             Incorrect (not accurately represent the meaning)
                                         </label>
                                     </div>
-                                    <div class="column-severity">
+                                    <div class="column-severity w-33">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
                                             id="paraphrase-error-grammar" value="grammar error">
                                         <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-grammar">
@@ -272,71 +280,120 @@
                 </div>
 
 
-                <div class="quality-selection w-100" data-category="insertion">
+                <div class="quality-selection w-100 active" data-category="insertion">
                     <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
                     <div class="f4 mt0 mb2 tc">
                         Edit:
                         <span class="edit-type txt-insertion f3">insert </span>
-                        <span class="pa1 edit-text br-pill-ns border-insertion-all insertion_below txt-insertion"
-                            data-id="insertion-0" data-category="insertion">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                        <span class="pa1 edit-text br-pill-ns border-insertion-all insertion_below txt-insertion">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
                     </div>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
                     <div id="dropdown-button-container">
                         <div class="single_part over-hide z-bigger mt3">
-                            <p class="b mb2">Select the type.</p>
-                            <div class="quality_selection_container">
-                                <div class="f5 mb2 fl w-40 orange">Good</div>
-                                <div class="f5 mb2 fl purple">Bad</div>
-                                <div class="row mb3">
-                                    <div class="column">
-                                        <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
-                                            id="insertion-success-ela" value="elaboration">
-                                        <label class="b question-insertion orange" for="insertion-success-ela">
-                                            Elaboration
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
-                                            id="insertion-success-example" value="add example">
-                                        <label class="b question-insertion orange" for="insertion-success-example">
-                                            Add Example
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
-                                            id="insertion-error-hallu" value="hallucination">
-                                        <label class="b question-insertion purple" for="insertion-error-hallu">
-                                            Hallucination
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
-                                            id="insertion-error-grammar" value="grammar error">
-                                        <label class="b question-insertion purple" for="insertion-error-grammar">
-                                            Grammar/fluency Error
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
-                                            id="insertion-error-factual" value="factual error">
-                                        <label class="b question-insertion purple" for="insertion-error-factual">
-                                            Factual Error
-                                        </label>
+                            <div class="row">
+
+                                <p class="mt3-5 mb3 b tracked-light">Does this insertion correspond to any deletion edit?
+                                    <input @click="insertion_corresponding_yes_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
+                                        id="insertion-corresponding-yes" value="yes">
+                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-yes">yes</label>
+                                    <input @click="insertion_corresponding_no_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
+                                        id="insertion-corresponding-no" value="no">
+                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-no">no</label>
+                                </p>
+
+                                <div class="connect-delete dn" id="connect-delete">
+                                    <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking.
+                                    </p>
+                                    Selected edit:&nbsp;&nbsp; <span class="pa1 br-pill-ns border-deletion-all txt-deletion"> {{clicked_deletion}} </span>
+                                </div>
+
+                                <div>
+                                    <p class="mb2 mt3-5 b tracked-light">Does it <i>elaborate</i> on the original main idea, <i>hallucinate</i> extra ideas, or just add very trivial information?</i>
+                                    </p>
+                                    <div class="tc mt3">
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-type-elaboration" value="elaboration">
+                                            <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-type-elaboration">Elaboration</label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-type-hallucination" value="hallucination">
+                                            <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-type-hallucination">Hallucination</label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                                id="insertion-type-trivial" value="trivial">
+                                            <label class="b for-checkbox-tools-severity question-insertion" for="insertion-type-trivial">Trivial Insertion (a, the)</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="good mt2 dn">
-                                    <p class="mt0 mb3 b tracked-light">Does this edit <span class="i">simplify</span> the sentence (make the sentence easier to read)?
-                                    <input class="checkbox-tools-yes-no" type="radio" name="insertion-simplify-yes-no"
-                                    id="insertion-simplify-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-simplify-yes">yes</label>
-                                    <input class="checkbox-tools-yes-no" type="radio" name="insertion-simplify-yes-no"
-                                        id="insertion-simplify-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-simplify-no">
+
+                                <div class="good mt3 dn">
+                                    <p class="mt0 mb2 b tracked-light">How much it helps you to read and understand the sentence?</i>
+                                    </p>
+                                    <div class="tc">
+                                        <div class="column-severity w-33">
+                                            <input class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-elaboration-severity"
+                                                id="inerstion-elaboration-severity-1" value="minor">
+                                            <label class="b for-checkbox-tools-severity question-insertion" for="inerstion-elaboration-severity-1">
+                                                1 - Minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-elaboration-severity"
+                                                id="inerstion-elaboration-severity-2" value="somewhat">
+                                            <label class="b for-checkbox-tools-severity question-insertion" for="inerstion-elaboration-severity-2">
+                                                2 - Somewhat
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-elaboration-severity"
+                                                id="inerstion-elaboration-severity-3" value="a lot">
+                                            <label class="b for-checkbox-tools-severity question-insertion" for="inerstion-elaboration-severity-3">
+                                                3 - A lot
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bad mt3 dn">
+                                    <p class="mt0 mb3 b tracked-light">How much it affects the main idea of the original sentence?</p>
+                                    <div class="tc">
+                                        <div class="column-severity w-33">
+                                            <input class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-hallucination-severity"
+                                                id="inerstion-hallucination-severity-1" value="minor">
+                                            <label class="b for-checkbox-tools-severity question-insertion" for="inerstion-hallucination-severity-1">
+                                                1 - Minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-hallucination-severity"
+                                                id="inerstion-hallucination-severity-2" value="somewhat">
+                                            <label class="b for-checkbox-tools-severity question-insertion" for="inerstion-hallucination-severity-2">
+                                                2 - Somewhat
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-hallucination-severity"
+                                                id="inerstion-hallucination-severity-3" value="a lot">
+                                            <label class="b for-checkbox-tools-severity question-insertion" for="inerstion-hallucination-severity-3">
+                                                3 - A lot
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="mt3-5 mb3 b tracked-light">Does it introduce any fluency / grammar error?
+                                    <input class="checkbox-tools-yes-no" type="radio" name="insertion-yes-no"
+                                        id="insertion-yes" value="yes">
+                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-yes">yes</label>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="insertion-yes-no"
+                                        id="insertion-no" value="no">
+                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-no">
                                         no
                                     </label>
-                                    </p>
-                                </div>
+                                </p>
                             </div>
                         </div>
                         <!-- <div class="single_part" id="explanation_div">
@@ -357,8 +414,7 @@
                     <div class="f4 mt0 mb2 tc">
                         Edit:
                         <span class="edit-type txt-split f3">split </span>
-                        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split"
-                            data-id="split-0" data-category="split">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
                     </div>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
@@ -419,9 +475,50 @@
             <div class="mt1">
             </div>
         </section>
-
     </div>
+
     <script src="./js/index.js"></script>
 </body>
 
 </html>
+
+
+<!-- <div class="f5 mb2 fl w-40 light-orange">Good</div>
+<div class="f5 mb2 fl light-purple">Bad</div>
+<div class="row mb3">
+    <div class="column">
+        <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+            id="insertion-success-ela" value="elaboration">
+        <label class="b question-insertion light-orange" for="insertion-success-ela">
+            Elaboration
+        </label>
+    </div>
+    <div class="column">
+        <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+            id="insertion-success-example" value="add example">
+        <label class="b question-insertion light-orange" for="insertion-success-example">
+            Add Example
+        </label>
+    </div>
+    <div class="column">
+        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+            id="insertion-error-hallu" value="hallucination">
+        <label class="b question-insertion light-purple" for="insertion-error-hallu">
+            Hallucination
+        </label>
+    </div>
+    <div class="column">
+        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+            id="insertion-error-grammar" value="grammar error">
+        <label class="b question-insertion light-purple" for="insertion-error-grammar">
+            Grammar/fluency Error
+        </label>
+    </div>
+    <div class="column">
+        <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+            id="insertion-error-factual" value="factual error">
+        <label class="b question-insertion light-purple" for="insertion-error-factual">
+            Factual Error
+        </label>
+    </div>
+</div> -->
