@@ -417,6 +417,7 @@ const app = Vue.createApp({
 
                 this.insertion_deletion_lines[insertion_id] = deletion_id
                 
+                console.log($(`.deletion.original_span[data-id='deletion-${deletion_id}']`)[0])
                 let line = new LeaderLine(
                     $(`.insertion.simplified_span[data-id='insertion-${insertion_id}']`)[0],
                     $(`.deletion.original_span[data-id='deletion-${deletion_id}']`)[0],
@@ -426,7 +427,7 @@ const app = Vue.createApp({
                     color: "rgba(100,196,102, 0.4)",
                     hide: true}
                 )
-                line.show("draw", {animOptions: {duration: 3000}})
+                line.show("draw")
             }
             this.refresh_edit();
         },
@@ -440,11 +441,11 @@ const app = Vue.createApp({
         },
         insertion_corresponding_yes_click() {
             this.connect_delete_click = true;
-            $('.connect-delete').slideDown(400);
+            $('#connect-delete').slideDown(400);
         },
         insertion_corresponding_no_click() {
             this.connect_delete_click = false;
-            $('.connect-delete').slideUp(400);
+            $('#connect-delete').slideUp(400);
         },
         insertion_yes_click() {
             $('.bad').slideUp(400);

@@ -280,7 +280,7 @@
                 </div>
 
 
-                <div class="quality-selection w-100" data-category="insertion">
+                <div class="quality-selection w-100 active" data-category="insertion">
                     <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
                     <div class="f4 mt0 mb2 tc">
                         Edit:
@@ -302,7 +302,13 @@
                                     <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-no">no</label>
                                 </p>
 
-                                <div class="connect-delete dn" id="connect-delete">
+                                <div id="connect-delete">
+                                    <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking.
+                                    </p>
+                                    Selected edit:&nbsp;&nbsp; <span class="pa1 br-pill-ns border-deletion-all txt-deletion"> {{clicked_deletion}} </span>
+                                </div>
+
+                                <div id="connect-delete">
                                     <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking.
                                     </p>
                                     Selected edit:&nbsp;&nbsp; <span class="pa1 br-pill-ns border-deletion-all txt-deletion"> {{clicked_deletion}} </span>
