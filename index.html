@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="quality-selection-divs">
-                <div class="quality-selection w-100" id="add_an_edit">
+                <div class="quality-selection w-100 active" id="add_an_edit">
                     <p class="f3 courier ttu mv1">Adding an Edit <i class="fa-solid fa-plus"></i></p>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
@@ -101,6 +101,21 @@
                                     <p class="mt0 mb2 b tracked-light">Select the newly inserted text span from the <i>Simplified Sentence</i>.
                                     </p>
                                     <p class="tracked-light">Selected span: <span class="bg-insertion-light">{{selected_span_in_simplified}}</span></p>
+
+                                    <p class="mt3-5 mb3 b tracked-light">Does this insertion correspond to any deletion edit?
+                                        <input @click="insertion_corresponding_yes_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
+                                            id="insertion-corresponding-yes" value="yes">
+                                        <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-yes">yes</label>
+                                        <input @click="insertion_corresponding_no_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
+                                            id="insertion-corresponding-no" value="no">
+                                        <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-no">no</label>
+                                    </p>
+    
+                                    <div class="mb3" id="connect-delete">
+                                        <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking or selecting span.
+                                        </p>
+                                        <p class="tracked-light">Selected edit:&nbsp;&nbsp; <span class="pa1 br-pill-ns border-deletion-all txt-deletion"> {{clicked_deletion}} </span></p>
+                                    </div>
                                 </div>
 
                                 <div class="span-selection-div" data-category="paraphrase">
@@ -280,7 +295,7 @@
                 </div>
 
 
-                <div class="quality-selection w-100 active" data-category="insertion">
+                <div class="quality-selection w-100" data-category="insertion">
                     <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
                     <div class="f4 mt0 mb2 tc">
                         Edit:
@@ -301,12 +316,6 @@
                                         id="insertion-corresponding-no" value="no">
                                     <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-no">no</label>
                                 </p>
-
-                                <div id="connect-delete">
-                                    <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking.
-                                    </p>
-                                    Selected edit:&nbsp;&nbsp; <span class="pa1 br-pill-ns border-deletion-all txt-deletion"> {{clicked_deletion}} </span>
-                                </div>
 
                                 <div id="connect-delete">
                                     <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking.
