@@ -2,12 +2,12 @@ const app = Vue.createApp({
     data() {
         return {
             total_hits: 0,
-            current_hit: 1,
+            current_hit: 3,
             hits_data: null,
             original_html: '',
             simplified_html: '',
             edits_html: '',
-            edits_dict: { 'deletion': {}, 'paraphrase': {}, 'insertion': {}, 'split':{}},
+            edits_dict: { 'deletion': {}, 'substitution': {}, 'insertion': {}, 'split':{}},
             single_edit_html: '',
             enable_select_original_sentence: false,
             enable_select_simplified_sentence: false,
@@ -20,12 +20,12 @@ const app = Vue.createApp({
             current_insertion_deletion_pair: null,
             open : false,
             open_annotation : false,
-            category_to_id: {'deletion': 0, 'paraphrase': 1, 'split': 2, 'insertion': 3},
-            id_to_category: {0: 'deletion', 1: 'paraphrase', 2: 'split', 3:'insertion'},
+            category_to_id: {'deletion': 0, 'substitution': 1, 'split': 2, 'insertion': 3},
+            id_to_category: {0: 'deletion', 1: 'substitution', 2: 'split', 3:'insertion'},
 
             current_insertion_edit_id : null,
 
-            connect_delete_click : false,
+            // connect_delete_click : false,
             clicked_deletion: "",
 
             annotating_edit_span_in_original: '',
@@ -54,7 +54,7 @@ const app = Vue.createApp({
                 if (original_spans[i][0] == 0) {
                     sentence_html += `<span @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="deletion border-deletion${light} pointer span original_span" data-category="deletion" data-id="deletion-` + original_span_id + `">`;
                 } else if (original_spans[i][0] == 1) {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase${light} pointer span original_span" data-category="paraphrase" data-id="paraphrase-` + original_span_id + `">`;
+                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="substitution border-substitution${light} pointer span original_span" data-category="substitution" data-id="substitution-` + original_span_id + `">`;
                 }
                 sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i][2]);
                 sentence_html += `</span>`;
@@ -92,14 +92,14 @@ const app = Vue.createApp({
                     }
                 } else if (original_spans[i][0] == 1) {
                     if (original_spans[i][1] == start && original_spans[i][2] == end) {
-                        sentence_html += `<span class="bg-paraphrase-light span">`;
+                        sentence_html += `<span class="bg-substitution-light span">`;
                     } else {
                         let light = "-light"
                         let original_span_id = original_spans[i][3]
                         if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[original_spans[i][0]]])) {
                             light = ""
                         }
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="paraphrase border-paraphrase${light} pointer span original_span" data-category="paraphrase" data-id="paraphrase-` + original_span_id + `">`;
+                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="substitution border-substitution${light} pointer span original_span" data-category="substitution" data-id="substitution-` + original_span_id + `">`;
                     }
                 }
                 sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i][2]);
@@ -141,7 +141,7 @@ const app = Vue.createApp({
             let simplified_sentence = this.hits_data[this.current_hit - 1].simplified
             let simplified_spans = JSON.parse(JSON.stringify(this.hits_data[this.current_hit - 1].simplified_spans))
             let category_id = -1;
-            if (category == 'paraphrase') {
+            if (category == 'substitution') {
                 category_id = 1;
             } else if (category == 'split') {
                 category_id = 2;
@@ -170,14 +170,14 @@ const app = Vue.createApp({
             this.simplified_html = sentence_html;
         },
         process_edits_html() {
-            this.edits_dict = { 'deletion': {}, 'paraphrase': {}, 'insertion': {}, 'split':{}}
+            this.edits_dict = { 'deletion': {}, 'substitution': {}, 'insertion': {}, 'split':{}}
             let original_spans = this.hits_data[this.current_hit - 1].original_spans
             let simplified_spans = this.hits_data[this.current_hit - 1].simplified_spans
             if (!("annotations" in this.hits_data[this.current_hit - 1])) {
-                this.hits_data[this.current_hit - 1]["annotations"] = {'deletion': {}, 'paraphrase': {}, 'insertion': {}, 'split':{}}
+                this.hits_data[this.current_hit - 1]["annotations"] = {'deletion': {}, 'substitution': {}, 'insertion': {}, 'split':{}}
             }
 
-            let paraphrase_map = {}
+            let substitution_map = {}
 
             let spans_for_sort = [...original_spans]
             let new_html = ''
@@ -185,7 +185,7 @@ const app = Vue.createApp({
                 if (original_spans[i][0] == 0) {
                     this.edits_dict['deletion'][original_spans[i][3]] = original_spans[i];
                 } else if (original_spans[i][0] == 1) {
-                    this.edits_dict['paraphrase'][original_spans[i][3]] = [original_spans[i]];
+                    this.edits_dict['substitution'][original_spans[i][3]] = [original_spans[i]];
                 }
             }
             for (let i = 0; i < simplified_spans.length; i++) {
@@ -196,8 +196,8 @@ const app = Vue.createApp({
                     this.edits_dict['insertion'][simplified_spans[i][3]] = simplified_spans[i];
                     spans_for_sort.push(simplified_spans[i]);
                 } else if (simplified_spans[i][0] == 1) {
-                    this.edits_dict['paraphrase'][simplified_spans[i][3]].push(simplified_spans[i]);
-                    paraphrase_map[simplified_spans[i][3]] = simplified_spans[i];
+                    this.edits_dict['substitution'][simplified_spans[i][3]].push(simplified_spans[i]);
+                    substitution_map[simplified_spans[i][3]] = simplified_spans[i];
                 }
             }
 
@@ -212,8 +212,8 @@ const app = Vue.createApp({
                 let key_short = ""
                 if (key == 'deletion') {
                     key_short = 'delete'
-                } else if (key == 'paraphrase') {
-                    key_short = 'paraphrase'
+                } else if (key == 'substitution') {
+                    key_short = 'substitute'
                 } else if (key == 'insertion') {
                     key_short = 'insert'
                 } else {
@@ -230,12 +230,12 @@ const app = Vue.createApp({
                 new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
                 if (key == 'deletion') {
                     new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(span[1],span[2])}&nbsp`;
-                } else if (key == "paraphrase") {
+                } else if (key == "substitution") {
                     new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(span[1], span[2])}&nbsp`;
                     new_html += `</span>`;
                     new_html += `<span class="edit-type txt-${key}${light} f3"> to </span>`;
                     new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
-                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(paraphrase_map[i][1], paraphrase_map[i][2])}&nbsp`;
+                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(substitution_map[i][1], substitution_map[i][2])}&nbsp`;
                 } else {
                     new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(span[1], span[2])}&nbsp`;
                 }
@@ -259,17 +259,17 @@ const app = Vue.createApp({
                             annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                         }
                         
-                    } else if (key == 'paraphrase') {
+                    } else if (key == 'substitution') {
                         let success_or_failure = annotation[0]
                         if (success_or_failure == "yes") {
-                            annotation_text += `<span class="light-orange ba bw1 pa1">good paraphrase</span>`;
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good substitution</span>`;
                             if (annotation[1] == "yes") {
                                 annotation_text += ` <span class="light-purple ba bw1 pa1">simplifying</span>`;
                             } else {
                                 annotation_text += ` <span class="light-purple ba bw1 pa1">not simplifying</span>`;
                             }
                         } else {
-                            annotation_text += `<span class="light-purple ba bw1 pa1">bad paraphrase</span> `;
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution</span> `;
                             annotation_text += `<span class="light-purple ba bw1 pa1">${annotation[2]} error</span>`;
                         }
                     } else if (key == 'insertion') {
@@ -338,7 +338,6 @@ const app = Vue.createApp({
         },
         cancel_click() {
             $(".icon-default").removeClass("open")
-            this.open = !this.open;
             this.refresh_edit();
         },
         save_click() {
@@ -351,11 +350,11 @@ const app = Vue.createApp({
                 let category_edits = this.edits_dict[selected_category]
                 let new_deletion = [0, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], Object.keys(category_edits).length]
                 original_spans.push(new_deletion)
-            } else if (selected_category == "paraphrase") {
+            } else if (selected_category == "substitution") {
                 let category_edits = this.edits_dict[selected_category]
-                let new_paraphrase = [[1, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], Object.keys(category_edits).length], [1, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]]
-                original_spans.push(new_paraphrase[0])
-                simplified_spans.push(new_paraphrase[1])
+                let new_substitution = [[1, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], Object.keys(category_edits).length], [1, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]]
+                original_spans.push(new_substitution[0])
+                simplified_spans.push(new_substitution[1])
             } else if (selected_category == "split") {
                 let category_edits = this.edits_dict[selected_category]
                 let new_split = [2, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]
@@ -368,83 +367,52 @@ const app = Vue.createApp({
             this.process_everything();
             this.refresh_edit();
         },
-        save_deletion_anntotation_click() {
+        save_anntotation_click(operation, event) {
             let edit_id = this.annotating_edit_span_category_id
             let edit_category = this.annotating_edit_span_category
 
-            let annotation_category = $("input[name=severity]:checked").val();
-            let yes_or_no = $("input[name=deletion-yes-no]:checked").val();
-
-            this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [annotation_category, yes_or_no]
-            this.process_everything();
-            this.refresh_edit();
-        },
-        save_paraphrase_anntotation_click() {
-            let edit_id = this.annotating_edit_span_category_id
-            let edit_category = this.annotating_edit_span_category
-
-            let success_or_failure = $("input[name=paraphrase-yes-no]:checked").val();
-            let simplify_yes_or_no = $("input[name=paraphrase-simplify-yes-no]:checked").val();
-            let error_type = $("input[name=paraphrase-error]:checked").val();
+            let success_or_failure = $("input[name=substitution-yes-no]:checked").val();
+            let simplify_yes_or_no = $("input[name=substitution-simplify-yes-no]:checked").val();
+            let error_type = $("input[name=substitution-error]:checked").val();
 
             this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [success_or_failure, simplify_yes_or_no, error_type]
             this.process_everything();
             this.refresh_edit();
         },
-        save_split_anntotation_click() {
-            let edit_id = this.annotating_edit_span_category_id
-            let edit_category = this.annotating_edit_span_category
-
-            let grammar_yes_or_no = $("input[name=split-yes-no]:checked").val();
-            let simplify_yes_or_no = $("input[name=split-simplify-yes-no]:checked").val();
-
-            this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [grammar_yes_or_no, simplify_yes_or_no]
-            this.process_everything();
-            this.refresh_edit();
-        },
-        save_insertion_anntotation_click() {
-            let edit_id = this.annotating_edit_span_category_id
-            let edit_category = this.annotating_edit_span_category
-
-            let insertion_type = $("input[name=insertion-type]:checked").val();
-            let simplify_yes_or_no = $("input[name=insertion-simplify-yes-no]:checked").val();
-
-            this.hits_data[this.current_hit - 1].annotations[edit_category][edit_id] = [insertion_type, simplify_yes_or_no]
-            this.process_everything();
-            if (this.connect_delete_click) {
-                let insertion_id = this.current_insertion_deletion_pair[0]
-                let deletion_id = this.current_insertion_deletion_pair[1]
-
-                this.insertion_deletion_lines[insertion_id] = deletion_id
-                
-                console.log($(`.deletion.original_span[data-id='deletion-${deletion_id}']`)[0])
-                let line = new LeaderLine(
-                    $(`.insertion.simplified_span[data-id='insertion-${insertion_id}']`)[0],
-                    $(`.deletion.original_span[data-id='deletion-${deletion_id}']`)[0],
-                    {endPlug: "arrow3",
-                    size: 3,
-                    path: "straight",
-                    color: "rgba(100,196,102, 0.4)",
-                    hide: true}
-                )
-                line.show("draw")
+        substitution_type_click(event) {
+            // get the value of the clicked button
+            let value = event.target.value;
+            // if $(`.substitution-${value}`) is not visible, show it
+            if (!$(`.substitution-${value}`).is(":visible")) {
+                $(`.substitution-type-div`).hide();
+                $(`.substitution-${value}`).slideDown(400);
+                if (value != "more") {
+                    $(`.substitution-more-div`).hide();
+                } else {
+                    if ($(`input[name='substitution-more-type']:checked`).val() != undefined) {
+                        $(`.substitution-more-${$(`input[name='substitution-more-type']:checked`).val()}`).slideDown(400);
+                    }
+                }
             }
-            this.refresh_edit();
         },
-        paraphrase_yes_click() {
-            $('.bad').slideUp(400);
-            $('.good').slideDown(400);
+        substitution_more_click(event) {
+            // get the value of the clicked button
+            let value = event.target.value;
+            // if $(`.substitution-${value}`) is not visible, show it
+            if (!$(`.substitution-more-${value}`).is(":visible")) {
+                $(`.substitution-more-div`).hide();
+                $(`.substitution-more-${value}`).slideDown(400);
+            }
         },
-        paraphrase_no_click() {
-            $('.good').slideUp(400);
-            $('.bad').slideDown(400);
+        substitution_show_grammar(event) {
+            if (!$(`substitution-grammar-div`).is(":visible")) {
+                $('.substitution-grammar-div').slideDown(400);
+            }
         },
         insertion_corresponding_yes_click() {
-            this.connect_delete_click = true;
             $('#connect-delete').slideDown(400);
         },
         insertion_corresponding_no_click() {
-            this.connect_delete_click = false;
             $('#connect-delete').slideUp(400);
         },
         insertion_yes_click() {
@@ -455,8 +423,8 @@ const app = Vue.createApp({
             $('.good').slideUp(400);
             $('.bad').slideDown(400);
         },
-        refresh_edit(event) {
-            this.connect_delete_click = false;
+        refresh_edit() {
+            this.open = false;
             this.selected_span_in_original = '',
             this.selected_span_in_simplified = '',
             this.selected_span_in_original_indexs = [],
@@ -464,6 +432,12 @@ const app = Vue.createApp({
             this.enable_select_original_sentence = false;
             this.enable_select_simplified_sentence = false;
             $("input[name=edit_cotegory]").prop("checked", false);
+            $(".checkbox-tools").prop("checked", false);
+            $(".checkbox-tools-yes-no").prop("checked", false);
+            $(".annotation-icon").removeClass('txt-substitution');
+            $(".annotation-icon").removeClass('txt-insertion')
+            $(".annotation-icon").removeClass('txt-deletion')
+            $(".annotation-icon").removeClass('txt-split')
             $('.quality-selection').slideUp(400);
             $(".span-selection-div").hide();
         },
@@ -475,7 +449,7 @@ const app = Vue.createApp({
             if (event.target.value == 'deletion') {
                 this.enable_select_original_sentence = true;
                 this.enable_select_simplified_sentence = false;
-            }  else if (event.target.value == 'paraphrase') {
+            }  else if (event.target.value == 'substitution') {
                 this.enable_select_original_sentence = true;
                 this.enable_select_simplified_sentence = true;
             } else {
@@ -506,15 +480,6 @@ const app = Vue.createApp({
                 template: `<div @mousedown='deselect_original_html' @mouseup='select_original_html' id="original-sentence" class="f4 lh-copy">${this.original_html}</div>`,
                 methods: {
                     click_span(event) {
-                        console.log(this.$parent.connect_delete_click);
-                        if (this.$parent.connect_delete_click) {
-                            console.log(event.target);
-                            let text = event.target.innerText;
-                            this.$parent.clicked_deletion = text;
-                            let id = event.target.dataset.id
-                            let real_id = id.split('-')[1]
-                            this.$parent.current_insertion_deletion_pair = [this.$parent.current_insertion_edit_id, real_id]
-                        }
                     },
                     hover_span(event) {
                         let category = event.target.dataset.category
@@ -532,13 +497,13 @@ const app = Vue.createApp({
                         if (event.target.classList.contains(`border-${category}-light`)) {
                             spans.addClass(`bg-${category}-light`)
                             below_spans.addClass(`bg-${category}-light`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(173, 197, 250, 1.0)"
                             }
                         } else {
                             spans.addClass(`bg-${category}`)
                             below_spans.addClass(`bg-${category}`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(33, 134, 235, 1.0)"
                             }
                         }
@@ -555,12 +520,12 @@ const app = Vue.createApp({
 
                         if (event.target.classList.contains(`border-${category}-light`)) {
                             below_spans.addClass(`txt-${category}-light`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(173, 197, 250, 0.4)"
                             }
                         } else {
                             below_spans.addClass(`txt-${category}`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(33, 134, 235, 0.46)"
                             }
                         }
@@ -640,13 +605,13 @@ const app = Vue.createApp({
                         if (event.target.classList.contains(`border-${category}-light`)) {
                             spans.addClass(`bg-${category}-light`)
                             below_spans.addClass(`bg-${category}-light`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(173, 197, 250, 1.0)"
                             }
                         } else {
                             spans.addClass(`bg-${category}`)
                             below_spans.addClass(`bg-${category}`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(33, 134, 235, 1.0)"
                             }
                         }
@@ -663,12 +628,12 @@ const app = Vue.createApp({
 
                         if (event.target.classList.contains(`border-${category}-light`)) {
                             below_spans.addClass(`txt-${category}-light`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(173, 197, 250, 0.4)"
                             }
                         } else {
                             below_spans.addClass(`txt-${category}`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(33, 134, 235, 0.46)"
                             }
                         }
@@ -758,13 +723,13 @@ const app = Vue.createApp({
                         if (classList.includes(`border-${category}-light-all`)) {
                             spans.addClass(`bg-${category}-light`)
                             below_spans.addClass(`bg-${category}-light`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(173, 197, 250, 1.0)"
                             }
                         } else {
                             spans.addClass(`bg-${category}`)
                             below_spans.addClass(`bg-${category}`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(33, 134, 235, 1.0)"
                             }
                         }
@@ -789,12 +754,12 @@ const app = Vue.createApp({
 
                         if (classList.includes(`border-${category}-light-all`)) {
                             below_spans.addClass(`txt-${category}-light`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(173, 197, 250, 0.4)"
                             }
                         } else {
                             below_spans.addClass(`txt-${category}`)
-                            if (category == 'paraphrase') {
+                            if (category == 'substitution') {
                                 this.$parent.lines[real_id].color = "rgba(33, 134, 235, 0.46)"
                             }
                         }
@@ -809,14 +774,15 @@ const app = Vue.createApp({
 
                         if(this.$parent.open){
                             $(`.quality-selection[data-category=${category}]`).slideUp(400);
-                            $(event.target).removeClass(`txt-${category}`)
+                            this.$parent.refresh_edit();
+                            return;
                         } else{
                             $(`.quality-selection`).slideUp(400)
                             $(`.quality-selection[data-category=${category}]`).slideDown(400);
                             $(event.target).addClass(`txt-${category}`)
+                            this.$parent.open = !this.$parent.open;
                         }
-                        this.$parent.open = !this.$parent.open;
-                        
+
                         let id = target.dataset.id
                         
                         let edit_dict = this.$parent.edits_dict
@@ -839,7 +805,7 @@ const app = Vue.createApp({
                         // parse the read_id to int
                         real_id = parseInt(real_id)
 
-                        if (category == "paraphrase") {
+                        if (category == "substitution") {
                             let annotating_span_orginal = edit_dict[category][real_id][0]
                             let annotating_span_simplified = edit_dict[category][real_id][1]
                             this.$parent.annotating_edit_span_in_original = original_sentence.substring(annotating_span_orginal[1], annotating_span_orginal[2])
@@ -895,16 +861,16 @@ const app = Vue.createApp({
                         this.$parent.lines[i].remove()
                     }
                     this.$parent.lines = {}
-                    let paraphrase_edits_dict = this.$parent.edits_dict["paraphrase"]
-                    if ($('.paraphrase.original_span')[0] != null) {
-                        for (let id in paraphrase_edits_dict) {
+                    let substitution_edits_dict = this.$parent.edits_dict["substitution"]
+                    if ($('.substitution.original_span')[0] != null) {
+                        for (let id in substitution_edits_dict) {
                             let color = "rgba(173, 197, 250, 0.4)"
-                            if (("annotations" in this.$parent.hits_data[[this.$parent.current_hit - 1]]) && (id in this.$parent.hits_data[[this.$parent.current_hit - 1]].annotations["paraphrase"])) {
+                            if (("annotations" in this.$parent.hits_data[[this.$parent.current_hit - 1]]) && (id in this.$parent.hits_data[[this.$parent.current_hit - 1]].annotations["substitution"])) {
                                 color = "rgba(33, 134, 235, 0.46)"
                             }
                             this.$parent.lines[id] = new LeaderLine(
-                                $(`.paraphrase.original_span[data-id='paraphrase-${id}']`)[0],
-                                $(`.paraphrase.simplified_span[data-id='paraphrase-${id}']`)[0],
+                                $(`.substitution.original_span[data-id='substitution-${id}']`)[0],
+                                $(`.substitution.simplified_span[data-id='substitution-${id}']`)[0],
                                 {endPlug: "behind",
                                 size: 3,
                                 path: "straight",

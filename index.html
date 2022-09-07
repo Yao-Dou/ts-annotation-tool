@@ -28,10 +28,12 @@
             <line x1="50" y1="50" x2="1000" y2="1000" stroke="black" stroke-width="1" />
         </svg> -->
         <section id="hit">
-            <div class="w-100 mb3 tc f3">
-                <button @click="prev_hit" class="black dim br-100 ba pa1 bg-white pointer">&nbsp;&#8249;&nbsp;</button>
-                Hit <span>{{current_hit}}</span> / <span>{{total_hits}}&nbsp;</span>
-                <button @click="next_hit" class="black dim br-100 ba pa1 bg-white pointer">&nbsp;&#8250;&nbsp;</button>
+            <div class="w-20 cf">
+                <div class="fl mb3 tc f3 ">
+                    <button @click="prev_hit" class="mid-gray br-100 pa1 bw0 bg-near-white pointer prev-next-btns">&nbsp;&lt;&nbsp;</button>
+                    Hit <span>{{current_hit}}</span> / <span>{{total_hits}}&nbsp;</span>
+                    <button @click="next_hit" class="mid-gray br-100 pa1 bw0 bg-near-white pointer prev-next-btns">&nbsp;&gt;&nbsp;</button>
+                </div>
             </div>
             <div>
                 <div class="ba b--black-80 br2 pa2">
@@ -48,7 +50,7 @@
                 </div>
             </div>
             <div class="quality-selection-divs">
-                <div class="quality-selection w-100 active" id="add_an_edit">
+                <div class="quality-selection w-100" id="add_an_edit">
                     <p class="f3 courier ttu mv1">Adding an Edit <i class="fa-solid fa-plus"></i></p>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
@@ -76,10 +78,10 @@
                                     </div>
                                     <div class="w-20 mr4 dib">
                                         <input @click="show_span_selection" class="checkbox-tools-edit-category checkbox-tools" type="radio" name="edit_cotegory"
-                                            id="edit_cotegory-paraphrase" value="paraphrase">
-                                        <label class="txt-paraphrase" for="edit_cotegory-paraphrase">
+                                            id="edit_cotegory-substitution" value="substitution">
+                                        <label class="txt-substitution" for="edit_cotegory-substitution">
                                             <i class="fa-solid fa-arrows-left-right fa-1-5x mb1"></i>
-                                            Paraphrase
+                                            Substitution
                                         </label>
                                     </div>
                                     <div class="w-20 dib">
@@ -101,31 +103,16 @@
                                     <p class="mt0 mb2 b tracked-light">Select the newly inserted text span from the <i>Simplified Sentence</i>.
                                     </p>
                                     <p class="tracked-light">Selected span: <span class="bg-insertion-light">{{selected_span_in_simplified}}</span></p>
-
-                                    <p class="mt3-5 mb3 b tracked-light">Does this insertion correspond to any deletion edit?
-                                        <input @click="insertion_corresponding_yes_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
-                                            id="insertion-corresponding-yes" value="yes">
-                                        <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-yes">yes</label>
-                                        <input @click="insertion_corresponding_no_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
-                                            id="insertion-corresponding-no" value="no">
-                                        <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-no">no</label>
-                                    </p>
-    
-                                    <div class="mb3" id="connect-delete">
-                                        <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking or selecting span.
-                                        </p>
-                                        <p class="tracked-light">Selected edit:&nbsp;&nbsp; <span class="pa1 br-pill-ns border-deletion-all txt-deletion"> {{clicked_deletion}} </span></p>
-                                    </div>
                                 </div>
 
-                                <div class="span-selection-div" data-category="paraphrase">
+                                <div class="span-selection-div" data-category="substitution">
                                     <p class="mt0 mb2 b tracked-light">Select the text span from the <i>Original Sentence</i>.
                                     </p>
-                                    <p class="tracked-light">Selected span: <span class="bg-paraphrase-light">{{selected_span_in_original}}</span></p>
+                                    <p class="tracked-light">Selected span: <span class="bg-substitution-light">{{selected_span_in_original}}</span></p>
                                     <div class="">
-                                        <p class="mb2 b tracked-light">Select the paraphrase span from the <i>Simplified Sentence</i>.
+                                        <p class="mb2 b tracked-light">Select the substitution span from the <i>Simplified Sentence</i>.
                                         </p>
-                                        <p class="tracked-light">Selected span: <span class="bg-paraphrase-light">{{selected_span_in_simplified}}</span></p>
+                                        <p class="tracked-light">Selected span: <span class="bg-substitution-light">{{selected_span_in_simplified}}</span></p>
                                     </div>
                                 </div>  
 
@@ -144,7 +131,7 @@
                         <!-- disable  -->
                         <div class="buttons tc mt2">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
-                            <button @click="save_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                            <button @click="save_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns o-40" type="button" disabled>Save <i class="fa-solid fa-check"></i></button>
                         </div>
                     </div>
                 </div>
@@ -161,45 +148,45 @@
                     <div id="dropdown-button-container">
                         <div class="single_part over-hide z-bigger mt3" id="severity_div">
                             <div class="row">
-                                <p class="mb2 b tracked-light">Is this information significant to the main idea of the original sentence?</i>
+                                <p class="mb2 b tracked-light">Is the deleted span significant to the main idea of the original sentence?</i>
                                 </p>
                                 <div class="tc">
                                     <div class="column-severity w-25">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-1" value="perfect">
-                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-1" id="severity-1-label">
+                                        <label class="for-checkbox-tools-severity question-deletion" for="severity-1" id="severity-1-label">
                                             1 - Not at all
                                         </label>
                                     </div>
                                     <div class="column-severity w-25">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-2" value="good">
-                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-2" id="severity-2-label">
+                                        <label class="for-checkbox-tools-severity question-deletion" for="severity-2" id="severity-2-label">
                                             2 - Minor
                                         </label>
                                     </div>
                                     <div class="column-severity w-25">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-3" value="bad">
-                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-3" id="severity-3-label">
+                                        <label class="for-checkbox-tools-severity question-deletion" for="severity-3" id="severity-3-label">
                                             3 - Somewhat, about Half of the main idea
                                         </label>
                                     </div>
                                     <div class="column-severity w-25">
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-4" value="very bad">
-                                        <label class="b for-checkbox-tools-severity question-deletion" for="severity-4" id="severity-4-label">
+                                        <label class="for-checkbox-tools-severity question-deletion" for="severity-4" id="severity-4-label">
                                             4 - Very, about the main idea
                                         </label>
                                     </div>
                                 </div>
-                                <p class="mb3 b tracked-light">Does this deletion introduce any fluency / grammar error?
+                                <p class="mb3 b tracked-light">Does this deletion edit introduce any fluency / grammar error?
                                     <input class="checkbox-tools-yes-no" type="radio" name="deletion-yes-no"
                                         id="deletion-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no question-deletion" for="deletion-yes">yes</label>
+                                    <label class="normal for-checkbox-tools-yes-no question-deletion" for="deletion-yes">yes</label>
                                     <input class="checkbox-tools-yes-no" type="radio" name="deletion-yes-no"
                                         id="deletion-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no question-deletion" for="deletion-no">
+                                    <label class="normal for-checkbox-tools-yes-no question-deletion" for="deletion-no">
                                         no
                                     </label>
                                 </p>
@@ -213,71 +200,204 @@
                         <!-- disable  -->
                         <div class="buttons tc mt2">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
-                            <button @click="save_deletion_anntotation_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                            <button @click="save_anntotation_click('deletion', $event)" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns o-40" type="button" disabled>Save <i class="fa-solid fa-check"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="quality-selection w-100" data-category="paraphrase">
+                <div class="quality-selection w-100" data-category="substitution">
                     <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
                     <div class="f4 mt0 mb2 tc">
                         Edit:
-                        <span class="edit-type txt-paraphrase f3">paraphrase </span>
-                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
-                        <span class="edit-type txt-paraphrase f3"> to </span>
-                        <span class="pa1 edit-text br-pill-ns border-paraphrase-all paraphrase_below txt-paraphrase">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                        <span class="edit-type txt-substitution f3">substitute </span>
+                        <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
+                        <span class="edit-type txt-substitution f3"> to </span>
+                        <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
                     </div>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
                     <div id="dropdown-button-container">
                         <div class="single_part over-hide z-bigger mt3" id="severity_div">
                             <div class="row">
-                                <p class="mb4 b tracked-light">Does this paraphrase edit preserve the meaning of the original phrase?
-                                    <input @click="paraphrase_yes_click" class="checkbox-tools-yes-no" type="radio" name="paraphrase-yes-no"
-                                        id="paraphrase-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-yes">yes</label>
-                                    <input @click="paraphrase_no_click" class="checkbox-tools-yes-no" type="radio" name="paraphrase-yes-no"
-                                        id="paraphrase-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-no">
-                                        no
-                                    </label>
-                                </p>
-                                <div class="good dn">
-                                    <p class="mt0 mb3 b tracked-light">Does this edit <span class="i">simplify</span> the sentence (make the sentence easier to read)?
-                                    <input class="checkbox-tools-yes-no" type="radio" name="paraphrase-simplify-yes-no"
-                                    id="paraphrase-simplify-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-simplify-yes">yes</label>
-                                    <input class="checkbox-tools-yes-no" type="radio" name="paraphrase-simplify-yes-no"
-                                        id="paraphrase-simplify-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no question-paraphrase" for="paraphrase-simplify-no">
-                                        no
-                                    </label>
+                                <div>
+                                    <p class="mb3 b tracked-light">Compared to the original phrase, the new phrase expresses:</p>
+                                    <div class="tc mt3">
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="substitution-type"
+                                            id="substitution-type-same" value="same">
+                                            <label class="for-checkbox-tools-yes-no question-substitution" for="substitution-type-same">the same meaning</label>
+                                        </div>
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="substitution-type"
+                                            id="substitution-type-less" value="less">
+                                            <label class="for-checkbox-tools-yes-no question-substitution" for="substitution-type-less">less information</label>
+                                        </div>
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="substitution-type"
+                                                id="substitution-type-more" value="more">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-type-more">more information</label>
+                                        </div>
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="substitution-type"
+                                                id="substitution-type-different" value="different">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-type-different">totally different meaning</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="substitution-same substitution-type-div dn">
+                                    <p class="mb3 b tracked-light">Does the new phrase <span class="i">simplify</span> the original phrase?
+                                    <input @click="substitution_show_grammar" class="checkbox-tools-yes-no" type="radio" name="substitution-simplify-yes-no"
+                                    id="substitution-simplify-yes" value="yes">
+                                    <label class="normal for-checkbox-tools-yes-no question-substitution" for="substitution-simplify-yes">yes</label>
+                                    <input @click="substitution_show_grammar" class="checkbox-tools-yes-no" type="radio" name="substitution-simplify-yes-no"
+                                        id="substitution-simplify-no" value="no">
+                                    <label class="normal for-checkbox-tools-yes-no question-substitution" for="substitution-simplify-no">no</label>
                                     </p>
                                 </div>
+
+                                <div class="substitution-less substitution-type-div dn">
+                                    <p class="mb2 b tracked-light">Is the deleted information significant to the main idea of the original sentence?</i>
+                                    </p>
+                                    <div class="tc">
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-less-severity"
+                                                id="substitution-less-severity-1" value="perfect">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-less-severity-1">
+                                                1 - not at all
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-less-severity"
+                                                id="substitution-less-severity-2" value="good">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-less-severity-2">
+                                                2 - minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-less-severity"
+                                                id="substitution-less-severity-3" value="bad">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-less-severity-3">
+                                                3 - somewhat, about Half of the main idea
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-25">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-less-severity"
+                                                id="substitution-less-severity-4" value="very bad">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-less-severity-4">
+                                                4 - very, about the main idea
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                                              
+                                <div class="substitution-more substitution-type-div dn">
+                                    <p class="mb2 b tracked-light">Select the type:
+                                        <input @click="substitution_more_click" class="checkbox-tools-yes-no " type="radio" name="substitution-more-type"
+                                            id="substitution-more-type-elabo" value="elaboration">
+                                        <label class="normal for-checkbox-tools-yes-no question-substitution" for="substitution-more-type-elabo">
+                                            elaboration
+                                        </label>
+                                        <input @click="substitution_more_click" class="checkbox-tools-yes-no " type="radio" name="substitution-more-type"
+                                            id="substitution-more-type-hallu" value="hallucination">
+                                        <label class=" normal for-checkbox-tools-yes-no question-substitution" for="substitution-more-type-hallu">
+                                            hallucination
+                                        </label>
+                                    </p>
+                                </div>
+
+                                <div class="substitution-more-elaboration substitution-more-div dn">
+                                    <p class="mt0 pt3 mb2 b tracked-light">How much the new information helps you to read and understand the sentence?</i>
+                                    </p>
+                                    <div class="tc">
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-elaboration-severity"
+                                                id="substitution-elaboration-severity-1" value="minor">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-elaboration-severity-1">
+                                                1 - minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-elaboration-severity"
+                                                id="substitution-elaboration-severity-2" value="somewhat">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-elaboration-severity-2">
+                                                2 - somewhat
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-elaboration-severity"
+                                                id="substitution-elaboration-severity-3" value="a lot">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-elaboration-severity-3">
+                                                3 - a lot
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="substitution-more-hallucination substitution-more-div dn">
+                                    <p class="mt0 pt3 mb3 b tracked-light">How much the new information affects the main idea of the original sentence?</p>
+                                    <div class="tc">
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-hallucination-severity"
+                                                id="substitution-hallucination-severity-1" value="minor">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-hallucination-severity-1">
+                                                1 - minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-hallucination-severity"
+                                                id="substitution-hallucination-severity-2" value="somewhat">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-hallucination-severity-2">
+                                                2 - somewhat
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-hallucination-severity"
+                                                id="substitution-hallucination-severity-3" value="a lot">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-hallucination-severity-3">
+                                                3 - a lot
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                                 
-                                <div class="bad dn mb1">
-                                    <p class="mt0 mb2 b tracked-light">Select the error.</p>
-                                    <div class="column-severity w-33">
-                                        <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
-                                            id="paraphrase-error-hallu" value="hallucination">
-                                        <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-hallu">
-                                            Hallucination (introduce new information)
-                                        </label>
+                                <div class="substitution-different substitution-type-div dn">
+                                    <p class="mt1 mb2 b tracked-light">How severe is this error?</i>
+                                    </p>
+                                    <div class="tc">
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-different-severity"
+                                                id="substitution-different-severity-1" value="minor">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-different-severity-1">
+                                                1 - minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-different-severity"
+                                                id="substitution-different-severity-2" value="somewhat">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-different-severity-2">
+                                                2 - somewhat
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="substitution_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="substitution-different-severity"
+                                                id="substitution-different-severity-3" value="a lot">
+                                            <label class="for-checkbox-tools-severity question-substitution" for="substitution-different-severity-3">
+                                                3 - a lot
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="column-severity w-33">
-                                        <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
-                                            id="paraphrase-error-incorrect" value="incorrect">
-                                        <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-incorrect">
-                                            Incorrect (not accurately represent the meaning)
-                                        </label>
-                                    </div>
-                                    <div class="column-severity w-33">
-                                        <input class="checkbox-tools checkbox-tools-severity " type="radio" name="paraphrase-error"
-                                            id="paraphrase-error-grammar" value="grammar error">
-                                        <label class="b for-checkbox-tools-severity question-paraphrase" for="paraphrase-error-grammar">
-                                            Grammar/Fluency Error
-                                        </label>
-                                    </div>
+                                </div>
+
+                                <div class="substitution-grammar-div dn">
+                                    <p class="mt0 pt3 b tracked-light">Does this substitution introduce any fluency / grammar error?
+                                        <input class="checkbox-tools-yes-no" type="radio" name="substitution-grammar-yes-no"
+                                            id="substitution-grammar-yes" value="yes">
+                                        <label class="normal for-checkbox-tools-yes-no question-substitution" for="substitution-grammar-yes">yes</label>
+                                        <input class="checkbox-tools-yes-no" type="radio" name="substitution-grammar-yes-no"
+                                            id="substitution-grammar-no" value="no">
+                                        <label class="normal for-checkbox-tools-yes-no question-substitution" for="substitution-grammar-no">no</label>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -289,7 +409,7 @@
                         <!-- disable  -->
                         <div class="buttons tc mt2">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
-                            <button @click="save_paraphrase_anntotation_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                            <button @click="save_anntotation_click('substitution', $event)" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns o-40" type="button" disabled>Save <i class="fa-solid fa-check"></i></button>
                         </div>
                     </div>
                 </div>
@@ -307,40 +427,24 @@
                     <div id="dropdown-button-container">
                         <div class="single_part over-hide z-bigger mt3">
                             <div class="row">
-
-                                <p class="mt3-5 mb3 b tracked-light">Does this insertion correspond to any deletion edit?
-                                    <input @click="insertion_corresponding_yes_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
-                                        id="insertion-corresponding-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-yes">yes</label>
-                                    <input @click="insertion_corresponding_no_click" class="checkbox-tools-yes-no" type="radio" name="insertion-corresponding-yes-no"
-                                        id="insertion-corresponding-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-corresponding-no">no</label>
-                                </p>
-
-                                <div id="connect-delete">
-                                    <p class="mt0 mb3 b tracked-light">Select the corresponding deletion edit by clicking.
-                                    </p>
-                                    Selected edit:&nbsp;&nbsp; <span class="pa1 br-pill-ns border-deletion-all txt-deletion"> {{clicked_deletion}} </span>
-                                </div>
-
                                 <div>
-                                    <p class="mb2 mt3-5 b tracked-light">Does it <i>elaborate</i> on the original main idea, <i>hallucinate</i> extra ideas, or just add very trivial information?</i>
+                                    <p class="mb2 mt3-5 b tracked-light">Does this insertion edit <i>elaborate</i> on the original main idea, <i>hallucinate</i> extra ideas, or just add very trivial information?</i>
                                     </p>
                                     <div class="tc mt3">
                                         <div class="column-severity w-33">
                                             <input @click="insertion_yes_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
                                             id="insertion-type-elaboration" value="elaboration">
-                                            <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-type-elaboration">Elaboration</label>
+                                            <label class="for-checkbox-tools-yes-no question-insertion" for="insertion-type-elaboration">Elaboration</label>
                                         </div>
                                         <div class="column-severity w-33">
                                             <input @click="insertion_no_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
                                             id="insertion-type-hallucination" value="hallucination">
-                                            <label class="b for-checkbox-tools-yes-no question-insertion" for="insertion-type-hallucination">Hallucination</label>
+                                            <label class="for-checkbox-tools-yes-no question-insertion" for="insertion-type-hallucination">Hallucination</label>
                                         </div>
                                         <div class="column-severity w-33">
                                             <input class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
                                                 id="insertion-type-trivial" value="trivial">
-                                            <label class="b for-checkbox-tools-severity question-insertion" for="insertion-type-trivial">Trivial Insertion (a, the)</label>
+                                            <label class="for-checkbox-tools-severity question-insertion" for="insertion-type-trivial">Trivial Insertion (a, the)</label>
                                         </div>
                                     </div>
                                 </div>
@@ -419,12 +523,12 @@
                         <!-- disable  -->
                         <div class="buttons tc">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
-                            <button @click="save_insertion_anntotation_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                            <button @click="save_anntotation_click('insertion', $event)" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns o-40" type="button" disabled>Save <i class="fa-solid fa-check"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="quality-selection w-100" data-category="split">
+                <div class="quality-selection w-100 active" data-category="split">
                     <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
                     <div class="f4 mt0 mb2 tc">
                         Edit:
@@ -436,23 +540,24 @@
                     <div id="dropdown-button-container">
                         <div class="single_part over-hide z-bigger mt3" id="severity_div">
                             <div class="row">
-                                <p class="mb4 b tracked-light">Does this split edit introduce any grammar / fluency error?
-                                    <input class="checkbox-tools-yes-no" type="radio" name="split-yes-no"
-                                        id="split-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-yes">yes</label>
-                                    <input class="checkbox-tools-yes-no" type="radio" name="split-yes-no"
-                                        id="split-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-no">
-                                        no
-                                    </label>
-                                </p>
                                 <p class="mb3 b tracked-light">Does this split edit <span class="i">simplify</span> the sentence (make the sentence easier to read)?</i>
                                     <input class="checkbox-tools-yes-no" type="radio" name="split-simplify-yes-no"
                                         id="split-simplify-yes" value="yes">
-                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-simplify-yes">yes</label>
+                                    <label class="normal for-checkbox-tools-yes-no question-split" for="split-simplify-yes">yes</label>
                                     <input class="checkbox-tools-yes-no" type="radio" name="split-simplify-yes-no"
                                         id="split-simplify-no" value="no">
-                                    <label class="b for-checkbox-tools-yes-no question-split" for="split-simplify-no">
+                                    <label class="normal for-checkbox-tools-yes-no question-split" for="split-simplify-no">
+                                        no
+                                    </label>
+                                </p>
+
+                                <p class="pt2 b tracked-light">Does this split edit introduce any grammar / fluency error?
+                                    <input class="checkbox-tools-yes-no" type="radio" name="split-yes-no"
+                                        id="split-yes" value="yes">
+                                    <label class="normal for-checkbox-tools-yes-no question-split" for="split-yes">yes</label>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="split-yes-no"
+                                        id="split-no" value="no">
+                                    <label class="normal for-checkbox-tools-yes-no question-split" for="split-no">
                                         no
                                     </label>
                                 </p>
@@ -466,7 +571,7 @@
                         <!-- disable  -->
                         <div class="buttons tc mt2">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
-                            <button @click="save_split_anntotation_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                            <button @click="save_anntotation_click('split', $event)" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns o-40" type="button" disabled>Save <i class="fa-solid fa-check"></i></button>
                         </div>
                     </div>
                 </div>

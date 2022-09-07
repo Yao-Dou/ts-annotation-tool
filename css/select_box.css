@@ -9,7 +9,7 @@
 	--red: #da2c4d;
 	--yellow: #f8ab37;
 	--grey: #ecedf3;
-	--paraphrase: #2186eb;
+	--substitution: #2186eb;
 	--insertion: #64c466;
 	--deletion: #ee2a2a;
 	--split: #F7CE46;
@@ -105,7 +105,7 @@ p{
 	padding: 10px;
 	/* width: 115px; */
 	height: 70px;
-	font-size: 16px;
+	font-size: 17px;
 	line-height: 20px;
 	letter-spacing: 1px;
 	/* margin: 0; */
@@ -126,9 +126,12 @@ p{
     align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 6px;
+	padding-bottom: 6px;
 	height: 20px;
-	font-size: 15px;
+	font-size: 17px;
 	line-height: 20px;
 	letter-spacing: 1px;
 	/* margin: 0; */
@@ -152,8 +155,8 @@ p{
 	justify-content: center;
 	flex-direction: column;
 	padding: 10px;
-	height: 50px;
-	font-size: 15px;
+	height: 40px;
+	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 1px;
 	/* margin: 0; */
@@ -177,7 +180,7 @@ p{
 	flex-direction: column;
 	padding: 10px;
 	/* width: 198px; */
-	height: 50px;
+	height: 40px;
 	font-size: 17px;
 	line-height: 20px;
 	letter-spacing: 1px;
@@ -216,10 +219,10 @@ p{
 	border: 2px solid var(--deletion);
 }
 
-.checkbox-tools-yes-no:checked + label.question-paraphrase,
-.checkbox-tools:checked + label.question-paraphrase,
-.checkbox-tools:checked + label.txt-paraphrase{
-	border: 2px solid var(--paraphrase);
+.checkbox-tools-yes-no:checked + label.question-substitution,
+.checkbox-tools:checked + label.question-substitution,
+.checkbox-tools:checked + label.txt-substitution{
+	border: 2px solid var(--substitution);
 }
 
 .checkbox-tools-yes-no:checked + label.question-insertion,

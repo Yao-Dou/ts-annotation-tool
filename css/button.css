@@ -812,7 +812,7 @@
 
 .annotation-icon {
   /* color */
-  transition: color 5s ease;
+  transition: color 0.3s;
 }
 
 /* .annotation-icon:hover {
