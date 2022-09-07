@@ -126,7 +126,11 @@ const app = Vue.createApp({
                 if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (simplified_span_id in this.hits_data[[this.current_hit - 1]].annotations[category])) {
                     light = ""
                 }
-                sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category}${light} pointer span simplified_span" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                if (category == "split" && (simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]) =="||")) {
+                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} pointer span simplified_span txt-split" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                } else {
+                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category}${light} pointer span simplified_span" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                }
                 sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
                 sentence_html += `</span>`;
                 prev_idx = simplified_spans[i][2];
