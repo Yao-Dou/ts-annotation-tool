@@ -15,6 +15,9 @@ const app = Vue.createApp({
             selected_span_in_simplified: '',
             selected_span_in_original_indexs: [],
             selected_span_in_simplified_indexs: [],
+            selected_split: '',
+            selected_split_id: null,
+
             lines: {},
             insertion_deletion_lines: {},
             current_insertion_deletion_pair: null,
@@ -79,28 +82,16 @@ const app = Vue.createApp({
             // iterate original_spans list
             for (let i = 0; i < original_spans.length; i++) {
                 sentence_html += original_sentence.substring(prev_idx, original_spans[i][1]);
-                if (original_spans[i][0] == 0) {
-                    if (original_spans[i][1] == start && original_spans[i][2] == end) {
-                        sentence_html += `<span class="bg-deletion-light span">`;
-                    } else {
-                        let light = "-light"
-                        let original_span_id = original_spans[i][3]
-                        if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[original_spans[i][0]]])) {
-                            light = ""
-                        }
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="deletion border-deletion${light} pointer span original_span" data-category="deletion" data-id="deletion-` + original_span_id + `">`;
+                let span_category = this.id_to_category[original_spans[i][0]]
+                if (original_spans[i][1] == start && original_spans[i][2] == end) {
+                    sentence_html += `<span class="bg-${span_category}-light span">`;
+                } else {
+                    let light = "-light"
+                    let original_span_id = original_spans[i][3]
+                    if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[span_category])) {
+                        light = ""
                     }
-                } else if (original_spans[i][0] == 1) {
-                    if (original_spans[i][1] == start && original_spans[i][2] == end) {
-                        sentence_html += `<span class="bg-substitution-light span">`;
-                    } else {
-                        let light = "-light"
-                        let original_span_id = original_spans[i][3]
-                        if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[original_spans[i][0]]])) {
-                            light = ""
-                        }
-                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="substitution border-substitution${light} pointer span original_span" data-category="substitution" data-id="substitution-` + original_span_id + `">`;
-                    }
+                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${span_category} border-${span_category}${light} pointer span original_span" data-category="${span_category}" data-id="${span_category}-` + original_span_id + `">`;
                 }
                 sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i][2]);
                 sentence_html += `</span>`;
@@ -127,7 +118,7 @@ const app = Vue.createApp({
                     light = ""
                 }
                 if (category == "split" && (simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]) =="||")) {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} pointer span simplified_span txt-split" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                    sentence_html += `<span @mousedown.stop @mouseup.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${category} pointer span simplified_span txt-split" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
                 } else {
                     sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category}${light} pointer span simplified_span" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
                 }
@@ -164,7 +155,11 @@ const app = Vue.createApp({
                 if (simplified_spans[i][1] == start && simplified_spans[i][2] == end) {
                     sentence_html += `<span class="bg-${category}-light span">`;
                 } else {
-                    sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category} pointer span simplified_span" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                    if (category == "split" && (simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]) =="||")) {
+                        sentence_html += `<span @mousedown.stop @mouseup.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${category} pointer span simplified_span txt-split" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                    } else {
+                        sentence_html += `<span @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category} pointer span simplified_span" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                    }
                 }
                 sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
                 sentence_html += `</span>`;
@@ -180,8 +175,11 @@ const app = Vue.createApp({
             if (!("annotations" in this.hits_data[this.current_hit - 1])) {
                 this.hits_data[this.current_hit - 1]["annotations"] = {'deletion': {}, 'substitution': {}, 'insertion': {}, 'split':{}}
             }
-
+            // map for substituion that mapping to simplified span
             let substitution_map = {}
+
+            // map for split that mapping to original span
+            let split_map = {}
 
             let spans_for_sort = [...original_spans]
             let new_html = ''
@@ -190,18 +188,30 @@ const app = Vue.createApp({
                     this.edits_dict['deletion'][original_spans[i][3]] = original_spans[i];
                 } else if (original_spans[i][0] == 1) {
                     this.edits_dict['substitution'][original_spans[i][3]] = [original_spans[i]];
+                } else if (original_spans[i][0] == 2) {
+                    // this.edits_dict['split'][original_spans[i][3]] = [original_spans[i]];
+                    split_map[original_spans[i][3]] = original_spans[i];
                 }
             }
             for (let i = 0; i < simplified_spans.length; i++) {
                 if (simplified_spans[i][0] == 2) {
-                    this.edits_dict['split'][simplified_spans[i][3]] = simplified_spans[i];
-                    spans_for_sort.push(simplified_spans[i]);
+                    if (!(simplified_spans[i][3] in this.edits_dict['split'])) {
+                        this.edits_dict['split'][simplified_spans[i][3]] = [];
+                    }
+                    if (this.hits_data[this.current_hit - 1].simplified.substring(simplified_spans[i][1], simplified_spans[i][2]) == "||") {
+                        // push at the front
+                        this.edits_dict['split'][simplified_spans[i][3]].unshift(simplified_spans[i]);
+                        spans_for_sort.push(simplified_spans[i]);
+                    } else {
+                        this.edits_dict['split'][simplified_spans[i][3]].push(simplified_spans[i]);
+                    }
                 } else if (simplified_spans[i][0] == 3) {
                     this.edits_dict['insertion'][simplified_spans[i][3]] = simplified_spans[i];
                     spans_for_sort.push(simplified_spans[i]);
                 } else if (simplified_spans[i][0] == 1) {
                     this.edits_dict['substitution'][simplified_spans[i][3]].push(simplified_spans[i]);
                     substitution_map[simplified_spans[i][3]] = simplified_spans[i];
+                    // spans_for_sort.push(simplified_spans[i]);
                 }
             }
 
@@ -240,6 +250,37 @@ const app = Vue.createApp({
                     new_html += `<span class="edit-type txt-${key}${light} f3"> to </span>`;
                     new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
                     new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(substitution_map[i][1], substitution_map[i][2])}&nbsp`;
+                } else if (key == "split") {
+                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(span[1], span[2])}&nbsp`;
+                    console.log(split_map)
+                    if ((i in split_map)) {
+                        new_html += `</span>`;
+                        if (this.edits_dict[key][i].length > 1) {
+                            new_html += `<span class="edit-type txt-${key}${light} f3"> (substitute </span>`;
+                            new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                            new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(split_map[i][1], split_map[i][2])}&nbsp`;
+                            new_html += `</span>`;
+                            new_html += `<span class="edit-type txt-${key}${light} f3"> to </span>`;
+                            new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                            new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(this.edits_dict[key][i][1][1], this.edits_dict[key][i][1][2])}&nbsp`;
+                            new_html += `</span>`;
+                            new_html += `<span class="edit-type txt-${key}${light} f3"> ) `;
+                        } else {
+                            new_html += `<span class="edit-type txt-${key}${light} f3"> (delete </span>`;
+                            new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                            new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(split_map[i][1], split_map[i][2])}&nbsp`;
+                            new_html += `</span>`;
+                            new_html += `<span class="edit-type txt-${key}${light} f3"> ) `;
+                        }
+                    } else if (this.edits_dict[key][i].length > 1) {
+                        new_html += `</span>`;
+                        new_html += `<span class="edit-type txt-${key}${light} f3"> (insert </span>`;
+                        new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                        new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(this.edits_dict[key][i][1][1], this.edits_dict[key][i][1][2])}&nbsp`;
+                        new_html += `</span>`;
+                        new_html += `<span class="edit-type txt-${key}${light} f3"> ) `;
+                    }
+                    // 
                 } else {
                     new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(span[1], span[2])}&nbsp`;
                 }
@@ -315,19 +356,26 @@ const app = Vue.createApp({
             this.process_original_html();
             this.process_simplified_html();
             this.process_edits_html();
+            $(`.circle`).removeClass('circle-active');
+            $(`#circle-${this.current_hit}`).addClass('circle-active');
         },
-        next_hit() {
-            this.current_hit = this.current_hit + 1
-            if (this.current_hit > this.total_hits) {
-                this.current_hit = this.total_hits
+        go_to_hit(hit_num) {
+            if (hit_num > this.total_hits) {
+                hit_num = this.total_hits;
+            } else if (hit_num < 1) {
+                hit_num = 1;
             }
+            this.current_hit = hit_num;
             this.process_everything();
         },
-        prev_hit() {
-            this.current_hit = this.current_hit - 1
-            if (this.current_hit < 1) {
-                this.current_hit = 1
+        go_to_hit_circle(hit_num, event) {
+            if (hit_num > this.total_hits) {
+                hit_num = this.total_hits;
+            } else if (hit_num < 1) {
+                hit_num = 1;
             }
+            this.current_hit = hit_num;
+
             this.process_everything();
         },
         add_an_edit(event) {
@@ -350,21 +398,25 @@ const app = Vue.createApp({
             let original_spans = this.hits_data[this.current_hit - 1].original_spans
             let simplified_spans = this.hits_data[this.current_hit - 1].simplified_spans
             let selected_category = $("input[name=edit_cotegory]:checked").val();
+            let category_edits = this.edits_dict[selected_category]
             if (selected_category == "deletion") {
-                let category_edits = this.edits_dict[selected_category]
                 let new_deletion = [0, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], Object.keys(category_edits).length]
                 original_spans.push(new_deletion)
             } else if (selected_category == "substitution") {
-                let category_edits = this.edits_dict[selected_category]
                 let new_substitution = [[1, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], Object.keys(category_edits).length], [1, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]]
                 original_spans.push(new_substitution[0])
                 simplified_spans.push(new_substitution[1])
             } else if (selected_category == "split") {
-                let category_edits = this.edits_dict[selected_category]
-                let new_split = [2, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]
-                simplified_spans.push(new_split)
+                // console.log(category_edits)
+                let new_split_simplified = [2, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], this.selected_split_id]
+                let new_split_original = [2, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], this.selected_split_id]
+                if (this.selected_span_in_original_indexs[0] != undefined) {
+                    original_spans.push(new_split_original)
+                }
+                if (this.selected_span_in_simplified_indexs[0] != undefined) {
+                    simplified_spans.push(new_split_simplified)
+                }
             } else if (selected_category == "insertion") {
-                let category_edits = this.edits_dict[selected_category]
                 let new_insertion = [3, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], Object.keys(category_edits).length]
                 simplified_spans.push(new_insertion)
             }
@@ -387,7 +439,7 @@ const app = Vue.createApp({
             // get the value of the clicked button
             let value = event.target.value;
             // if $(`.substitution-${value}`) is not visible, show it
-            if (!$(`.substitution-${value}`).is(":visible")) {
+            if (!($(`.substitution-${value}`).is(":visible"))) {
                 $(`.substitution-type-div`).hide();
                 $(`.substitution-${value}`).slideDown(400);
                 if (value != "more") {
@@ -453,7 +505,7 @@ const app = Vue.createApp({
             if (event.target.value == 'deletion') {
                 this.enable_select_original_sentence = true;
                 this.enable_select_simplified_sentence = false;
-            }  else if (event.target.value == 'substitution') {
+            }  else if (event.target.value == 'substitution' || event.target.value == 'split') {
                 this.enable_select_original_sentence = true;
                 this.enable_select_simplified_sentence = true;
             } else {
@@ -593,6 +645,24 @@ const app = Vue.createApp({
             return {
                 template: `<div @mousedown='deselect_simplified_html' @mouseup='select_simplified_html' id="simplified-sentence" class="f4 lh-copy">${this.simplified_html}</div>`,
                 methods: {
+                    click_span(event) {
+                        console.log("fuck me")
+                        console.log(event.target.dataset.category)
+                        console.log(event.target.dataset.id)
+                        let id = event.target.dataset.id
+                        let real_id = id.split("-")[1]
+                        let normal_id = parseInt(real_id) + 1
+                        if (normal_id == 1) {
+                            this.$parent.selected_split = `the 1st split`
+                        } else if (normal_id == 2) {
+                            this.$parent.selected_split = `the 2nd split`
+                        } else if (normal_id == 3) {
+                            this.$parent.selected_split = `the 3rd split`
+                        } else {
+                            this.$parent.selected_split = `the ${normal_id}th split`
+                        }
+                        this.$parent.selected_split_id = parseInt(real_id)
+                    },
                     hover_span(event) {
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
@@ -806,7 +876,7 @@ const app = Vue.createApp({
                         
                         let original_sentence = this.$parent.hits_data[this.$parent.current_hit - 1].original
                         let simplified_sentence = this.$parent.hits_data[this.$parent.current_hit - 1].simplified
-                        // parse the read_id to int
+                        // parse the real_id to int
                         real_id = parseInt(real_id)
 
                         if (category == "substitution") {
@@ -835,7 +905,7 @@ const app = Vue.createApp({
                         let category_id = this.$parent.category_to_id[category]
                         //  real_id is the numebr after "-" in id
                         let real_id = id.split("-")[1]
-                        // parse the read_id to int
+                        // parse the real_id to int
                         real_id = parseInt(real_id)
 
                         let newspans = []
@@ -861,6 +931,8 @@ const app = Vue.createApp({
                     }
                 },
                 mounted: function () {
+                    $(`#circle-${this.$parent.current_hit}`).addClass('circle-active');
+                    
                     for (let i in this.$parent.lines) {
                         this.$parent.lines[i].remove()
                     }
