@@ -267,3 +267,12 @@
 .tooltiptext-finished {
     color:rgb(31, 227, 41)
 }
+
+.bookmark {
+    transition: all 0.2s ease-in-out;
+}
+
+.bookmark-active {
+    color:rgb(255, 82, 82);
+    background-color: rgb(255, 82, 82)
+}

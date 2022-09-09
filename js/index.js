@@ -404,6 +404,11 @@ const app = Vue.createApp({
             this.process_edits_html();
             $(`.circle`).removeClass('circle-active');
             $(`#circle-${this.current_hit}`).addClass('circle-active');
+            if ($(`#circle-${this.current_hit}`).hasClass("circle-bookmark")) {
+                $(`.bookmark`).addClass('bookmark-active');
+            } else {
+                $(`.bookmark`).removeClass('bookmark-active');
+            }
         },
         go_to_hit(hit_num) {
             if (hit_num > this.total_hits) {
@@ -545,6 +550,17 @@ const app = Vue.createApp({
         insertion_show_grammar(event) {
             if (!$(`.insertion-grammar-div`).is(":visible")) {
                 $('.insertion-grammar-div').slideDown(400);
+            }
+        },
+        bookmark_this_hit() {
+            // if "bookmark-active" is in classlist of ".bookmark"
+            if ($(".bookmark").hasClass("bookmark-active")) {
+                // remove "bookmark-active" from classlist of ".bookmark"
+                $(".bookmark").removeClass("bookmark-active");
+                $(`#circle-${this.current_hit}`).removeClass('circle-bookmark');
+            } else {
+                $(".bookmark").addClass("bookmark-active")
+                $(`#circle-${this.current_hit}`).addClass('circle-bookmark');
             }
         },
         refresh_edit() {
