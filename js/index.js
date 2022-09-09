@@ -360,7 +360,22 @@ const app = Vue.createApp({
                             }
                         }
                     } else if (key == 'insertion') {
-                        annotation_text += `${annotation[0]} insertion (unfinished) TO-DO`;
+                        if (annotation[0] == "elaboration") {
+                            annotation_text += `<span class="light-orange ba bw1 pa1">elaboration</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">simplify ${annotation[1]}</span>`;
+                        } else if (annotation[0] == "hallucination") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">hallucination</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">hallucinate ${annotation[1]}</span>`;
+                        } else {
+                            if (annotation[1] == "yes") {
+                                annotation_text += `<span class="light-orange ba bw1 pa1">good trivial insertion</span>`;
+                            } else {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad trivial insertion</span>`;
+                            }
+                        }
+                        if (annotation[2] == "yes") {
+                            annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                        }
                     } else if (key == 'split') {
                         if (annotation[0] == "yes") {
                             annotation_text = `<span class="light-orange ba bw1 pa1">good split</span>`
