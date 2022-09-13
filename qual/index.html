@@ -30,6 +30,7 @@
     <div id="app">
         <form-wizard 
             @on-complete="onComplete" 
+            @on-change="onChange" 
             next-button-text="Next" 
             back-button-text="Back" 
             finish-button-text="Finish"
@@ -51,7 +52,6 @@
 
                 <todo>ANNOTATE SCREENSHOT</todo>
                 <br />
-                <todo>When pressing "next", it should push the user to the top of the page</todo>
                 <img src="./img/overview.png" alt="Big picture of the task" width="500">
             </tab-content>
             <tab-content title="Selecting Alignments">
@@ -73,7 +73,8 @@
                         </li>
                     </ul>
                 </p>
-                <todo>Add GIF of edit selection</todo>
+                <p>Here's an example of what selecting alignments looks like for one sentence:</p>
+                <img src="./img/span-selection.gif" alt="Big picture of the task" width="600">
                 <br />
                 <h2>Examples</h2>
                 <example-sent 
@@ -147,6 +148,25 @@
                     explanation="The phrase “The earliest available history shows that” contains information situating the sentence within its historical context. Also, “entire” and “only” contain information emthasizing the rarity of the Hecksherville valley only having two villages. While the main idea of the sentence is retained, key information was lost.">
                     <template #complex-sent><ed>The earliest available history shows that</ed> in 1831 the <ed>entire</ed> Heckscherville valley contained <ed>only</ed> two villages.</template>
                     <template #simple-sent>In 1831 the Heckscherville valley contained two villages.</template>
+                    <template #edit>
+                        <template>
+                            <edit
+                                type="deletion"
+                                span="The earliest available history shows that"
+                                answer="1"
+                            />
+                            <edit
+                                type="deletion"
+                                span="entire"
+                                answer="1"
+                            />
+                            <edit
+                                type="deletion"
+                                span="only"
+                                answer="1"
+                            />
+                        </template>
+                    </template>
                 </example-sent>
 
                 <todo>Add more examples</todo>
@@ -157,49 +177,77 @@
                 </p>
                 <h2>Examples</h2>
                 <p>Observe this sentence:</p>
-                <div class="ex-sent" style="margin-bottom: 0px">
+                <div class="ex-sent bt-sent-cont">
                     <p class="sent-desc">Original Sentence (Human Written):</p>
                     <div class="sent">
-                        <p style="margin-bottom: 6px">Born into slavery in Virginia in 1856, Booker T. Washington became an influential African American leader at the outset of the Progressive Era.</p>
+                        <p class="bt-sent" id="bt-sent">Born into slavery in Virginia in 1856, Booker T. Washington became an influential African American leader at the outset of the Progressive Era.</p>
+                    </div>
+                    <p class="sent-desc">Simplified Sentence (Human or AI Model Written):</p>
+                    <div class="sent">
+                        <p id="bt-sent-out"></p>
                     </div>
                 </div>
                 <p>This sentence communicates many different facts. Here are just a few:</p>
                 <ul>
-                    <li>Booker T. Washington was born in Virginia</li>
-                    <li>Booker T. Washington was born in 1856</li>
-                    <li>Booker T. Washington was born into slavery</li>
-                    <li>Booker T. Washington was an influential leader</li>
-                    <li>Booker T. Washington was a African American leader</li>
-                    <li>Booker T. Washington was a influential African American leader as a result of being born into slavery</li>
-                    <li>Booker T. Washington was a leader at the beginning of the Progressive Era</li>
+                    <li id="bt-1">Booker T. Washington was born in Virginia</li>
+                    <li id="bt-2">Booker T. Washington was born in 1856</li>
+                    <li id="bt-3">Booker T. Washington was born into slavery</li>
+                    <li id="bt-4">Booker T. Washington was an influential leader</li>
+                    <li id="bt-5">Booker T. Washington was a African American leader</li>
+                    <li id="bt-6">Booker T. Washington was a influential African American leader as a result of being born into slavery</li>
+                    <li id="bt-7">Booker T. Washington was a leader at the beginning of the Progressive Era</li>
                 </ul>
                 <p>Hover over each fact to see which part of the sentence could be deleted to remove the fact from the sentence. As you can see, sentences which communicate many ideas may be hard to narrow down whether a span is <i>significant</i>.</p>
-                <todo>Implement interactivity</todo>
                 <p>In this case, the <i>main idea</i> of the sentence is <i>Booker T. Washington is an influential African American leader</i>. Deletions are necessary for text simplification, we just want to ensure this <i>main idea</i> is still being communicated.</p>
-                <br />
                 <todo>Add other booker t washington examples</todo>
-                <todo>Need a screenshot of the interface, or something to communicate which choice I picked.</todo>
                 <p>Let’s put it together with a few other sentences:</p>
                 <example-sent 
-                    explanation="1. The introductory clause “Like so many hyped books before it,” situates the sentence within the context of “hyped books.” However, it doesn’t relate to the main idea of the sentence: the author’s opinion on The Midnight Library.">
+                    explanation="The introductory clause “Like so many hyped books before it,” situates the sentence within the context of “hyped books.” However, it doesn’t relate to the main idea of the sentence: the author’s opinion on The Midnight Library.">
                     <template #complex-sent><ed>Like so many hyped books before it,</ed> <i>The Midnight Library</i> excited me and gave me pause.</template>
                     <template #simple-sent><i>The Midnight Library</i> excited me and gave me pause.</template>
-                    
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="Like so many hyped books before it,"
+                            answer="1"
+                        />
+                    </template>
                 </example-sent>
                 <example-sent 
-                    explanation="2. Although the sentence retains its core meaning without the span “on 18 June 2002”, the specific reference of when Donaldson enlisted in the army is lost.">
+                    explanation="Although the sentence retains its core meaning without the span “on 18 June 2002”, the specific reference of when Donaldson enlisted in the army is lost.">
                     <template #complex-sent>Military career Donaldson enlisted in the Australian Army on <ed>18 June 2002</ed>.</template>
                     <template #simple-sent>Military career Donaldson enlisted in the Australian Army.</template>
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="18 June 2002"
+                            answer="2"
+                        />
+                    </template>
                 </example-sent>
                 <example-sent 
-                    explanation="3. The main idea of the sentence is that Creech Barrow stands out from the rest of Purbeck Hills. While “Creech Barrow stands out” is part of the main idea of the sentence, it’s relationship to Purbeck Hills is still key to the the sentence. However, because part of the main idea is retained, this does not recieve a 4 rating.">
+                    explanation="The main idea of the sentence is that Creech Barrow stands out from the rest of Purbeck Hills. While “Creech Barrow stands out” is part of the main idea of the sentence, it’s relationship to Purbeck Hills is still key to the the sentence. However, because part of the main idea is retained, this does not recieve a 4 rating.">
                     <template #complex-sent><ed>Though part of the Purbeck Hills, </ed>Creech Barrow stands out, detached.</template>
                     <template #simple-sent>Creech Barrow stands out.</template>
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="Though part of the Purbeck Hills, "
+                            answer="3"
+                        />
+                    </template>
                 </example-sent>
                 <example-sent 
-                    explanation="4. Because glycolysis has been removed from the sentence, we no longer know what “it” is referring to and the main idea of the sentence is lost.">
+                    explanation="Because glycolysis has been removed from the sentence, we no longer know what “it” is referring to and the main idea of the sentence is lost.">
                     <template #complex-sent><ed>If glycolysis evolved relatively late, </ed>it likely would not be as universal in organisms as it is.</template>
                     <template #simple-sent>It likely would not be as universal in organisms as it is.</template>
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="If glycolysis evolved relatively late, "
+                            answer="4"
+                        />
+                    </template>
                 </example-sent>
                 <h2>Grammar & Fluency Errors</h2>
                 <p>Deletions may also introuduce errors in <i>fluency</i> or <i>grammar</i>. <i>Fluency</i> refers to the quality or flow of a sentence and <i>grammar</i> refers to the basic conventions.</p>
@@ -207,11 +255,25 @@
                     explanation="Although convicted is a complex word, the sentence becomes a dependenct clause.">
                     <template #complex-sent>In January, the Watergate burglars <ed>were convicted,</ed> along with Hunt and Liddy.</template>
                     <template #simple-sent>In January, the Watergate burglars along with Hunt and Liddy.</template>
+                    <template #edit>
+                        <edit
+                            type="grammar"
+                            span="were convicted,"
+                            answer="0"
+                        />
+                    </template> 
                 </example-sent>
                 <example-sent 
                     explanation="Sometimes you will see minor deletions which may also effect meaning.">
                     <template #complex-sent>Let’s eat<ed>,</ed> grandpa!</template>
                     <template #simple-sent>Let’s eat grandpa!</template>
+                    <template #edit>
+                        <edit
+                            type="grammar"
+                            span=","
+                            answer="1"
+                        />
+                    </template>
                 </example-sent>
                 <p><b>NOTE:</b> Sometimes you will see <u>spacing errors</u>. These are typically a formatting problems with our data and you do not need to annotate these errors.</p>
                 <h2>Quiz</h2>
@@ -231,7 +293,88 @@
                 <br />
                 <todo>Need a high quality trivial insertion.</todo>
                 <h2>Rating by Severity</h2>
-                <p>Insertions also have a <i>severity</i>, meaning you will rate them on a scale of 1-3 by how helpful or harmful the insertion is.</p>
+                <p>Insertions also have a <i>severity</i>, meaning you will rate them on a scale of 1-3 by how helpful or harmful the insertion is. Here's some examples of different severity elaboration edits:</p>
+                <example-sent 
+                    explanation="This insertion gives us context as to why “volitile organic compounds” are importnant in the sentence. The adds helpful information.">
+                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals<ei>, which harm our environment,</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span=", which harm our environment,"
+                            answer="3"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="This insertion adds information, but it is only moderately helpful.">
+                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals<ei>, which harm our environment,</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span=", which are bad,"
+                            answer="2"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="This insertion is correct, but simply restates what is already in the sentence.">
+                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals<ei>, which are chemicals,</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span=", which are chemicals,"
+                            answer="1"
+                        />
+                    </template>
+                </example-sent>
+                <p>Here's some examples of different severity hallucination edits:</p>
+                <example-sent 
+                    explanation="">
+                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals <ei>of varying size</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="hallucination"
+                            span="of varying size"
+                            answer="1"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="">
+                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals<ei>, which are decreasing,</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="hallucination"
+                            span=", which are decreasing,"
+                            answer="2"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="This insertion clearly is simply repeating the phrase “organic chemicals”.">
+                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals <ei>organic chemicals organic chemicals</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="hallucination"
+                            span="organic chemicals organic chemicals"
+                            answer="3"
+                        />
+                    </template>
+                </example-sent>
+                <h2>Quiz</h2>
+                <p>Now it’s your turn! Take a look at these sentences and rate the insertions for type and quality.</p>
             </tab-content>
             <tab-content title="Annotating Substitutions">
                 <p>Step2</p>

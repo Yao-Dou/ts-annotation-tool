@@ -13,7 +13,6 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
 }
 .ex-sent {
     margin-left:  15%;
@@ -49,4 +48,31 @@ img {
 .sent p {
     font-size: 20px;
     margin-top: 6px;
+}
+.edit {
+    background-color: rgb(248, 248, 248);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.edit label {
+    font-size: 14px !important;
+}
+.edit p {
+    font-size: 12px !important;
+}
+.edit .edit-type, .edit .edit-text, .edit .edit-label {
+    font-size: 16px !important;
+}
+.column-severity {
+    display: table-cell;
+}
+.bt-sent {
+    margin-bottom: 6px
+}
+.bt-sent-cont {
+    margin-bottom: 0px;
+    height:235px;
+}
+.tc {
+    text-align: -webkit-center;
 }
