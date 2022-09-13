@@ -96,7 +96,7 @@
 
                 <h2>How much do we select?</h2>
                 <p>
-                    Generally, you want to select the <b><i>smallest amount of text</i></b> which contains the edit as possible. Sometimes there can be two different types of edits next to each other. If a edit seems too large, try highlight multiple edits instead.
+                    Generally, you want to select the <b><i>smallest amount of text</i></b> which contains the edit as possible. Sometimes there can be two different types of edits next to each other. If a edit seems too large, try to highlight multiple edits instead.
                 </p>
                 <h2>Examples</h2>
                 <example-sent 
@@ -130,7 +130,7 @@
                 </ul>
 
                 <p>
-                    In the real HIT, we have trained another AI to provide the alignment for you. However, this AI is frequently wrong (it will be wrong for almost every HIT), so please simply fix its alignments. Go ahead and try it!
+                    In the real HIT, we have trained another AI to provide the alignment for you. However, this AI is frequently wrong (it will be wrong for almost every HIT), so please also fix its alignments. Go ahead and try it!
                 </p>
 
                 <ul>
@@ -139,6 +139,7 @@
             </tab-content>
             <tab-content title="Annotating Deletions">
                 <h1>Annotating Deletions</h1>
+                <p>Now we've selected the alignments, let's look at how to annotate them. We'll look at each edit type, starting with deletions.</p>
                 <p>A deletion is an attempt to <b>simplify by deleting</b> unnecessary, irrelevant or complicated information or concepts.</p>
                 <h2>Examples</h2>
 
@@ -174,7 +175,7 @@
                 </ul>
                 <p>Hover over each fact to see which part of the sentence could be deleted to remove the fact from the sentence. As you can see, sentences which communicate many ideas may be hard to narrow down whether a span is <i>significant</i>.</p>
                 <todo>Implement interactivity</todo>
-                <p>In this case, the <i>main idea</i> of the sentence is <i>Booker T. Washington is an influential African American leader</i>. Deletions are necessary for text simplification, we want to ensure this <i>main idea</i> is still being communicated.</p>
+                <p>In this case, the <i>main idea</i> of the sentence is <i>Booker T. Washington is an influential African American leader</i>. Deletions are necessary for text simplification, we just want to ensure this <i>main idea</i> is still being communicated.</p>
                 <br />
                 <todo>Add other booker t washington examples</todo>
                 <todo>Need a screenshot of the interface, or something to communicate which choice I picked.</todo>
@@ -201,7 +202,7 @@
                     <template #simple-sent>It likely would not be as universal in organisms as it is.</template>
                 </example-sent>
                 <h2>Grammar & Fluency Errors</h2>
-                <p>Deletions may also introuduce errors in <i>fluency</i> or <i>grammar</i>. Fluency is the quality or flow of a sentence, while grammar is the basic conventions.</p>
+                <p>Deletions may also introuduce errors in <i>fluency</i> or <i>grammar</i>. <i>Fluency</i> refers to the quality or flow of a sentence and <i>grammar</i> refers to the basic conventions.</p>
                 <example-sent 
                     explanation="Although convicted is a complex word, the sentence becomes a dependenct clause.">
                     <template #complex-sent>In January, the Watergate burglars <ed>were convicted,</ed> along with Hunt and Liddy.</template>
