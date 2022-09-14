@@ -90,7 +90,7 @@
                 </example-sent>
 
                 <example-sent 
-                    explanation="This is an insertion. The span or it's information didn't at all exist in the sentence.">
+                    explanation="This is an insertion. The span or its information didn't at all exist in the sentence.">
                     <template #complex-sent>The S&P 500 closed after heavy trading.</template>
                     <template #simple-sent>The S&P 500, <ei>an index fund of the largest 500 companies,</ei> closed after heavy trading.</template>
                 </example-sent>
@@ -289,7 +289,72 @@
                     <li><b>Trivial Insertion</b> - Added minor wording (the, a, etc.)</li>
                 </ul>
                 <h2>Examples</h2>
-                <todo>Need to add examples of each type of change. Need to add an ambiguous example of possibly hallucination and possibly insertion</todo>
+                <example-sent 
+                    explanation="“Protein” is giving extra and correct information which didn’t previously exist.">
+                    <template #complex-sent>The FZD1 transcript is expressed in various tissues.</template>
+                    <template #simple-sent>The FZD1 <ei>protein</ei> transcript is expressed in <ei>the</ei> various tissues.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span="protein"
+                        />
+                        <edit
+                            type="insertion"
+                            subtype="trivial"
+                            span="protein"
+                            explanation="“The” does not change the meaning of the sentence at all, although it does introduce a fluency error since it now implies the sentence is referencing some specific “various tissues”"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="This statement is clearly meaningless to the rest of the sentence.">
+                    <template #complex-sent>Only certain organisms, called photoautotrophs, can perform photosynthesis.</template>
+                    <template #simple-sent>Only certain organisms, called photoautotrophs, can perform photosynthesis <ei>when they decide to</ei>.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="hallucination"
+                            span="when they decide to"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="This is a low quality elaboration. This is NOT a halluncaiton because it would have needed to be (1) irrelevant, (2) incorrect or (3) incoherent.">
+                    <template #complex-sent>Only certain organisms, called photoautotrophs, can perform photosynthesis.</template>
+                    <template #simple-sent>Only certain organisms <ei>can perform photosynthesis</ei>, called photoautotrophs, can perform photosynthesis.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span="can perform photosynthesis"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="Be careful about minor changes which still may heavily impact the meaning of the sentence.">
+                    <template #complex-sent>In January, the Watergate burglars were convicted, along with Hunt and Liddy.</template>
+                    <template #simple-sent>In January, the Watergate burglars were <ei>not</ei> convicted, along with Hunt and Liddy.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="hallucination"
+                            span="not"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="The trivial insertion makes the sentence gramatically correct after another edit changed the tense of the sentence.">
+                    <template #complex-sent>???</template>
+                    <template #simple-sent>???</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="trivial"
+                            span="???"
+                        />
+                    </template>
+                </example-sent>
                 <br />
                 <todo>Need a high quality trivial insertion.</todo>
                 <h2>Rating by Severity</h2>
@@ -335,20 +400,7 @@
                 </example-sent>
                 <p>Here's some examples of different severity hallucination edits:</p>
                 <example-sent 
-                    explanation="">
-                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
-                    <template #simple-sent>Many volitile organic chemicals <ei>of varying size</ei> are increasing in abundance in the lower troposphere.</template>
-                    <template #edit>
-                        <edit
-                            type="insertion"
-                            subtype="hallucination"
-                            span="of varying size"
-                            answer="1"
-                        />
-                    </template>
-                </example-sent>
-                <example-sent 
-                    explanation="">
+                    explanation="While the edit is coherent, the content of the edit clearly contradicts the meaning of the sentence.">
                     <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
                     <template #simple-sent>Many volitile organic chemicals<ei>, which are decreasing,</ei> are increasing in abundance in the lower troposphere.</template>
                     <template #edit>
@@ -356,12 +408,25 @@
                             type="insertion"
                             subtype="hallucination"
                             span=", which are decreasing,"
+                            answer="3"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="“of varying size” doesn’t necessarily make the sentence false, but it moderately impacts the meaning of the setence. However, the main idea that “volitile organic chemicals” are “increasing” is still retained.">
+                    <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals <ei>of varying size</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="hallucination"
+                            span="of varying size"
                             answer="2"
                         />
                     </template>
                 </example-sent>
                 <example-sent 
-                    explanation="This insertion clearly is simply repeating the phrase “organic chemicals”.">
+                    explanation="This insertion clearly is simply repeating the phrase “organic chemicals”. This is an incoherent repetition, so it’s a hallucination. However, it doesn’t impact the main idea of the sentence.">
                     <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
                     <template #simple-sent>Many volitile organic chemicals <ei>organic chemicals organic chemicals</ei> are increasing in abundance in the lower troposphere.</template>
                     <template #edit>
@@ -369,12 +434,72 @@
                             type="insertion"
                             subtype="hallucination"
                             span="organic chemicals organic chemicals"
-                            answer="3"
+                            answer="1"
                         />
                     </template>
                 </example-sent>
+                <h2>Putting it Together</h2>
+                <p>Similar to deletions, insertions can introduce <i>fluency</i> and <i>grammar</i> errors. Remember! <i>Grammar</i> and <i>fluency</i> errors are independent of your other rating. You could have a helpful elaboration insertion which introduces an error or a high impact hallucination which does not introduce a error. Take a look a these examples with many insertions:</p>
+                <example-sent 
+                    explanation="">
+                    <template #complex-sent>Atmospheric nitrogen is the largest pool of available nitrogen in terrestrial ecosystems.</template>
+                    <template #simple-sent>Atmospheric nitrogen<ei>, in our air on earth,</ei> is the largest pool of <ei>an</ei> available nitrogen in terrestrial ecosystems <ei>our scientists had access to</ei>.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span=", in our air on earth,"
+                            answer="1"
+                            explanation="This defines the complicated word “atmospheric”."
+                        />
+                        <edit
+                            type="insertion"
+                            subtype="trivial"
+                            span="an"
+                            answer="1"
+                            explanation="“Available nitrogen” is a direct object, adding “an” modifies the phrase to become an indirect object."
+                        />
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span="our scientists had access to"
+                            answer="2"
+                            explanation="The phrase is irrelevant to the rest of the sentence, and it also changes the tense of the sentence."
+                        />
+                    </template>
+                </example-sent>
+                <example-sent 
+                    explanation="">
+                    <template #complex-sent>Éric Gauthier is also a novella author specialising in science fiction and fantasy.</template>
+                    <template #simple-sent>Éric Gauthier<ei>, famous for his soloist dancing career,</ei> is also a novella author specialising in <ei>the</ei> science fiction and fantasy <ei>genres</ei>.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span=", famous for his soloist dancing career,"
+                            answer="1"
+                            explanation="Although the insertion is high quality and correct, it is irrelevant to the rest of the sentence and doesn’t help the reader understand the main meaning of the sentence."
+                        />
+                        <edit
+                            type="insertion"
+                            subtype="trivial"
+                            span="the"
+                            answer="2"
+                            explanation="“the” doesn’t introduce an error, but it doesn’t have an impact on the sentence."
+                        />
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span="genres"
+                            answer="2"
+                            explanation=""
+                        />
+                    </template>
+                </example-sent>
+                <todo>Need an example of a trivial insertion which helps simplify.</todo>
                 <h2>Quiz</h2>
                 <p>Now it’s your turn! Take a look at these sentences and rate the insertions for type and quality.</p>
+                <todo>It would be nice to have deletions in the quiz as well.</todo>
             </tab-content>
             <tab-content title="Annotating Substitutions">
                 <p>Step2</p>
