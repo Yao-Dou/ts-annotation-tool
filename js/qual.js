@@ -12,7 +12,7 @@ const ExampleSent = Vue.component('example-sent', {
           <p><slot name="simple-sent"></slot></p>
       </div>
       <slot name="edit"></slot>
-      <template v-if="this.explanation != ''">
+      <template v-if="this.explanation != undefined">
         <div class="explain">
           {{ explanation }}
         </div>
@@ -54,9 +54,16 @@ const AnswerBox = Vue.component('answer-box', {
   template: `
     <template v-if="this.type == 'deletion'">
       <div class="column-severity w-25">
-        <template v-if="isAnswer"><input class="checkbox-tools checkbox-tools-severity" type="radio" disabled checked></template>
-        <template v-else><input class="checkbox-tools checkbox-tools-severity" type="radio" disabled></template>
-        <label class="for-checkbox-tools-severity question-deletion"> <slot></slot> </label>
+        <template v-if="interactive">
+          <input class="checkbox-tools checkbox-tools-severity" type="radio" v-bind:id="editId*id" v-bind:name="editId">
+        </template>
+        <template v-else-if="isAnswer">
+          <input class="checkbox-tools checkbox-tools-severity" type="radio" disabled checked>
+        </template>
+        <template v-else>
+          <input class="checkbox-tools checkbox-tools-severity" type="radio" disabled>
+        </template>
+        <label class="for-checkbox-tools-severity question-deletion" v-bind:for="editId*id"> <slot></slot> </label>
       </div>
     </template>
     <template v-else-if="this.type == 'grammar'">
@@ -74,10 +81,15 @@ const AnswerBox = Vue.component('answer-box', {
       </div>
     </template>
   `,
-  props: ['isAnswer', 'type'],
+  props: ['isAnswer', 'type', 'interactive', 'id', 'editId', 'update'],
   created: function() {
     this.type = this.$props.type;
     this.isAnswer = this.$props.isAnswer;
+    this.$props.interactive = this.$props.interactive ? this.$props.interactive=='true' ? true : false : false;
+
+    if (this.$props.update) {
+      this.$props.update(true);
+    }
   }
 });
 
@@ -87,7 +99,9 @@ const Edit = Vue.component('edit', {
       answer: 0,
       question: '',
       explanation: '',
-      subtypeQuestion: ''
+      subtypeQuestion: '',
+      editId: 0,
+      interactiveMessage: 'Please select an answer...'
     }
   },
   template: `
@@ -113,10 +127,10 @@ const Edit = Vue.component('edit', {
 
           <template v-if="this.type == 'deletion'">
             <div class="tc">
-              <answer-box :isAnswer="this.answer==1" :type=type>1 - not at all</answer-box>
-              <answer-box :isAnswer="this.answer==2" :type=type>2 - minor</answer-box>
-              <answer-box :isAnswer="this.answer==3" :type=type>3 - somewhat</answer-box>
-              <answer-box :isAnswer="this.answer==4" :type=type>4 - very much</answer-box>
+              <answer-box :isAnswer="this.answer==1" :type=type :interactive=interactive :id=1 :editId=editId :update=updateInteractiveMessage>1 - not at all</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type :interactive=interactive :id=2 :editId=editId :update=updateInteractiveMessage>2 - minor</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type :interactive=interactive :id=3 :editId=editId :update=updateInteractiveMessage>3 - somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==4" :type=type :interactive=interactive :id=4 :editId=editId :update=updateInteractiveMessage>4 - very much</answer-box>
             </div>
           </template>
           <template v-if="this.type == 'insertion'">
@@ -143,9 +157,12 @@ const Edit = Vue.component('edit', {
           {{ explanation }}
         </div>
       </template>
+      <template v-if="this.interactive == 'true'">
+        {{ interactiveMessage }}
+      </template>
     </div>
     `,
-    props: ['type', 'subtype', 'span', 'answer', 'explanation', 'grammar'],
+    props: ['type', 'subtype', 'span', 'answer', 'explanation', 'grammar', 'interactive', 'incorrectMessage', 'correctMessage'],
     methods: {          
       getQuestion: function() {
         switch (this.$props.type) {
@@ -153,6 +170,8 @@ const Edit = Vue.component('edit', {
             return 'Is the deleted span significant to the main idea of the original sentence?';
           case 'insertion':
             return 'Is this insertion edit an elaboration, hallucination or adding trivial words?';
+          default:
+            return;
         }
       },
       getSubtypeQuestion: function() {
@@ -164,6 +183,10 @@ const Edit = Vue.component('edit', {
           default:
             return '';
         }
+      },
+      updateInteractiveMessage: function(isCorrect) {
+        console.log(this.$props.correctMessage);
+        this.interactiveMessage = isCorrect ? this.$props.correctMessage : this.$props.incorrectMessage;
       }
     },
     created: function() {
@@ -173,6 +196,8 @@ const Edit = Vue.component('edit', {
       this.explanation = this.$props.explanation ? this.$props.explanation : ``;
       this.$props.subtype = this.$props.subtype ? this.$props.subtype : ``;
       this.$props.grammar = this.$props.grammar ? this.$props.grammar : ``;
+      this.$props.interactive = this.$props.interactive ? this.$props.interactive : ``;
+      this.editId = Math.floor(Math.random() * 100);
     }
 });
 

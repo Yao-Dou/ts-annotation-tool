@@ -282,7 +282,42 @@
                 <p><b>NOTE:</b> Sometimes you will see <u>spacing errors</u>. These are typically a formatting problems with our data and you do not need to annotate these errors.</p>
                 <h2>Quiz</h2>
                 <p>Now it’s your turn! Take a look at these sentences and try to identify and categorize the deletions.</p>
-                <todo>Create quiz</todo>
+                <todo>Implement interactivity and more examples</todo>
+                <example-sent>
+                    <template #complex-sent>SIMSREE was named after the <ed>then-</ed>governor of Bombay, <ed>Lord Sydenham of Combe,</ed> who was an early proponent in the spread of <ed>commerce-based vocational</ed> courses in India.</template>
+                    <template #simple-sent>SIMSREE was named after the governor of Bombay, who was an proponent in the spread of courses in India.</template>
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="then-"
+                            answer=1
+                            interactive=true
+                            incorrectMessage="incorrect message"
+                            correctMessage="correct message"
+                        ></edit>
+                        <br />
+                        <edit
+                            type="deletion"
+                            span="Lord Sydenham of Combe,"
+                            answer=1
+                            interactive=true
+                        ></edit>
+                        <br />
+                        <edit
+                            type="deletion"
+                            span="early"
+                            answer=1
+                            interactive=true
+                        ></edit>
+                        <br />
+                        <edit
+                            type="deletion"
+                            span="commerce-based vocational"
+                            answer=1
+                            interactive=true
+                        ></edit>
+                    </template>
+                </example-sent>
             </tab-content>
             <tab-content title="Annotating Insertions">
                 <h1>Annotating Insertions</h1>
