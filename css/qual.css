@@ -76,3 +76,13 @@ img {
 .tc {
     text-align: -webkit-center;
 }
+.grammar-answer div label {
+    padding: 0 !important;
+    height: 30px !important;
+}
+iframe {
+    border: none;
+}
+.stepTitle {
+    margin-top: 8px;
+}

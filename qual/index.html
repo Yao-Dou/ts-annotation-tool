@@ -8,7 +8,6 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/vue-form-wizard/dist/vue-form-wizard.js"></script>
-    <!-- <script src="https://unpkg.com/vue@3"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
     <script src="https://kit.fontawesome.com/c3b36ffc0c.js" crossorigin="anonymous"></script>
 
@@ -53,6 +52,7 @@
                 <todo>ANNOTATE SCREENSHOT</todo>
                 <br />
                 <img src="./img/overview.png" alt="Big picture of the task" width="500">
+                <todo>One other idea I had is to add interactives throughout the tutorial. Like selecting whether a span is a hallucination or insertion, selecting the severity of a deletion, etc.</todo>
             </tab-content>
             <tab-content title="Selecting Alignments">
                 <h1>Selecting Alignments</h1>
@@ -144,8 +144,7 @@
                 <p>A deletion is an attempt to <b>simplify by deleting</b> unnecessary, irrelevant or complicated information or concepts.</p>
                 <h2>Examples</h2>
 
-                <example-sent 
-                    explanation="The phrase “The earliest available history shows that” contains information situating the sentence within its historical context. Also, “entire” and “only” contain information emthasizing the rarity of the Hecksherville valley only having two villages. While the main idea of the sentence is retained, key information was lost.">
+                <example-sent>
                     <template #complex-sent><ed>The earliest available history shows that</ed> in 1831 the <ed>entire</ed> Heckscherville valley contained <ed>only</ed> two villages.</template>
                     <template #simple-sent>In 1831 the Heckscherville valley contained two villages.</template>
                     <template #edit>
@@ -154,17 +153,22 @@
                                 type="deletion"
                                 span="The earliest available history shows that"
                                 answer="1"
-                            />
+                                explanation="The phrase “The earliest available history shows that” contains information situating the sentence within its historical context."
+                            ></edit>
+                            <br />
                             <edit
                                 type="deletion"
                                 span="entire"
                                 answer="1"
-                            />
+                                explanation=""
+                            ></edit>
+                            <br />
                             <edit
                                 type="deletion"
                                 span="only"
                                 answer="1"
-                            />
+                                explanation="“entire” and “only” contain information emthasizing the rarity of the Hecksherville valley only having two villages. While the main idea of the sentence is retained, key information was lost."
+                            ></edit>
                         </template>
                     </template>
                 </example-sent>
@@ -257,9 +261,9 @@
                     <template #simple-sent>In January, the Watergate burglars along with Hunt and Liddy.</template>
                     <template #edit>
                         <edit
-                            type="grammar"
+                            type="deletion"
                             span="were convicted,"
-                            answer="0"
+                            grammar=true
                         />
                     </template> 
                 </example-sent>
@@ -269,9 +273,9 @@
                     <template #simple-sent>Let’s eat grandpa!</template>
                     <template #edit>
                         <edit
-                            type="grammar"
+                            type="deletion"
                             span=","
-                            answer="1"
+                            grammar=false
                         />
                     </template>
                 </example-sent>
@@ -290,21 +294,23 @@
                 </ul>
                 <h2>Examples</h2>
                 <example-sent 
-                    explanation="“Protein” is giving extra and correct information which didn’t previously exist.">
+                    explanation="">
                     <template #complex-sent>The FZD1 transcript is expressed in various tissues.</template>
                     <template #simple-sent>The FZD1 <ei>protein</ei> transcript is expressed in <ei>the</ei> various tissues.</template>
                     <template #edit>
-                        <edit
-                            type="insertion"
-                            subtype="elaboration"
-                            span="protein"
-                        />
-                        <edit
-                            type="insertion"
-                            subtype="trivial"
-                            span="protein"
-                            explanation="“The” does not change the meaning of the sentence at all, although it does introduce a fluency error since it now implies the sentence is referencing some specific “various tissues”"
-                        />
+                            <edit
+                                type="insertion"
+                                subtype="elaboration"
+                                span="protein"
+                                explanation="“Protein” is giving extra and correct information which didn’t previously exist."
+                            ></edit>
+                            <br />                            
+                            <edit
+                                type="insertion"
+                                subtype="trivial"
+                                span="the"
+                                explanation="“The” does not change the meaning of the sentence at all, although it does introduce a fluency error since it now implies the sentence is referencing some specific “various tissues”"
+                            ></edit>
                     </template>
                 </example-sent>
                 <example-sent 
@@ -451,21 +457,23 @@
                             span=", in our air on earth,"
                             answer="1"
                             explanation="This defines the complicated word “atmospheric”."
-                        />
+                            ></edit>
+                            <br />
                         <edit
                             type="insertion"
                             subtype="trivial"
                             span="an"
                             answer="1"
                             explanation="“Available nitrogen” is a direct object, adding “an” modifies the phrase to become an indirect object."
-                        />
+                            ></edit>
+                            <br />
                         <edit
                             type="insertion"
                             subtype="elaboration"
                             span="our scientists had access to"
                             answer="2"
                             explanation="The phrase is irrelevant to the rest of the sentence, and it also changes the tense of the sentence."
-                        />
+                            ></edit>
                     </template>
                 </example-sent>
                 <example-sent 
@@ -479,21 +487,23 @@
                             span=", famous for his soloist dancing career,"
                             answer="1"
                             explanation="Although the insertion is high quality and correct, it is irrelevant to the rest of the sentence and doesn’t help the reader understand the main meaning of the sentence."
-                        />
+                            ></edit>
+                            <br />
                         <edit
                             type="insertion"
                             subtype="trivial"
                             span="the"
                             answer="2"
                             explanation="“the” doesn’t introduce an error, but it doesn’t have an impact on the sentence."
-                        />
+                            ></edit>
+                            <br />
                         <edit
                             type="insertion"
                             subtype="elaboration"
                             span="genres"
                             answer="2"
-                            explanation=""
-                        />
+                            explanation="??"
+                            ></edit>
                     </template>
                 </example-sent>
                 <todo>Need an example of a trivial insertion which helps simplify.</todo>
@@ -502,10 +512,13 @@
                 <todo>It would be nice to have deletions in the quiz as well.</todo>
             </tab-content>
             <tab-content title="Annotating Substitutions">
-                <p>Step2</p>
+                <todo>Implement this</todo>
             </tab-content>
             <tab-content title="Annotating Splits">
-                <p>Step2</p>
+                <todo>Implement this</todo>
+            </tab-content>
+            <tab-content title="Quiz">
+                <iframe src="../index.html" width="100%" height="900"></iframe>
             </tab-content>
         </form-wizard>
     </div>

@@ -12,9 +12,11 @@ const ExampleSent = Vue.component('example-sent', {
           <p><slot name="simple-sent"></slot></p>
       </div>
       <slot name="edit"></slot>
-      <div class="explain">
+      <template v-if="this.explanation != ''">
+        <div class="explain">
           {{ explanation }}
-      </div>
+        </div>
+      </template>
     </div>
     `,
     props: ['explanation']
@@ -83,57 +85,94 @@ const Edit = Vue.component('edit', {
   data (){
     return {
       answer: 0,
-      question: ''
+      question: '',
+      explanation: '',
+      subtypeQuestion: ''
     }
   },
   template: `
-    <div class="edit">
-      <edit-header :type=type>{{ span }}</edit-header>
-      <p class="mb2 b tracked-light">
-        {{question}}
-        <template v-if="this.type == 'grammar'">
-          <answer-box :isAnswer="this.answer==1" :type=type>yes</answer-box>
-          <answer-box :isAnswer="this.answer==2" :type=type>no</answer-box>
+    <div>
+      <div class="edit">
+        <edit-header :type=type>{{ span }}</edit-header>
+
+        <template v-if="this.subtype != ''">
+          <p class="mb2 b tracked-light">
+            {{question}}
+          </p>
+          <div class="tc">
+            <answer-box :isAnswer="this.subtype=='elaboration'" :type=type>Elaboration</answer-box>
+            <answer-box :isAnswer="this.subtype=='hallucination'" :type=type>Hallucination</answer-box>
+            <answer-box :isAnswer="this.subtype=='trivial'" :type=type>Trivial Insertion</answer-box>
+          </div>
         </template>
-      </p>
-      <template v-if="this.type == 'deletion'">
-        <div class="tc">
-          <answer-box :isAnswer="this.answer==1" :type=type>1 - not at all</answer-box>
-          <answer-box :isAnswer="this.answer==2" :type=type>2 - minor</answer-box>
-          <answer-box :isAnswer="this.answer==3" :type=type>3 - somewhat</answer-box>
-          <answer-box :isAnswer="this.answer==4" :type=type>4 - very much</answer-box>
-        </div>
-      </template>
-      <template v-if="this.type == 'insertion'">
-        <div class="tc">
-          <answer-box :isAnswer="this.answer==1" :type=type>1 - Minor</answer-box>
-          <answer-box :isAnswer="this.answer==2" :type=type>2 - Somewhat</answer-box>
-          <answer-box :isAnswer="this.answer==3" :type=type>3 - A lot</answer-box>
+
+        <template v-if="this.answer > 0">
+          <p class="mb2 b tracked-light">
+            {{question}}
+          </p>
+
+          <template v-if="this.type == 'deletion'">
+            <div class="tc">
+              <answer-box :isAnswer="this.answer==1" :type=type>1 - not at all</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type>2 - minor</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type>3 - somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==4" :type=type>4 - very much</answer-box>
+            </div>
+          </template>
+          <template v-if="this.type == 'insertion'">
+            <div class="tc">
+              <answer-box :isAnswer="this.answer==1" :type=type>1 - Minor</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type>2 - Somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type>3 - A lot</answer-box>
+            </div>
+          </template>
+        </template>
+
+        <template v-if="this.grammar != ''">
+          <p class="mb2 b tracked-light">
+            Does this deletion edit introduce any fluency / grammar error?
+          </p>
+          <div class="tc grammar-answer">
+            <answer-box :isAnswer="this.grammar=='true'" :type=type>yes</answer-box>
+            <answer-box :isAnswer="this.grammar=='false'" :type=type>no</answer-box>
+          </div>
+        </template>
+      </div>
+      <template v-if="this.explanation != ''">
+        <div class="explain">
+          {{ explanation }}
         </div>
       </template>
     </div>
     `,
-    props: ['type', 'subtype', 'span', 'answer'],
+    props: ['type', 'subtype', 'span', 'answer', 'explanation', 'grammar'],
     methods: {          
       getQuestion: function() {
         switch (this.$props.type) {
           case 'deletion':
             return 'Is the deleted span significant to the main idea of the original sentence?';
-          case 'grammar':
-            return 'Does this deletion edit introduce any fluency / grammar error?';
           case 'insertion':
-            switch (this.$props.subtype) {
-              case 'elaboration':
-                return 'How much it helps you to read and understand the sentence?';
-              case 'hallucination':
-                return 'How much it affects the main idea of the original sentence?';
-            }
+            return 'Is this insertion edit an elaboration, hallucination or adding trivial words?';
+        }
+      },
+      getSubtypeQuestion: function() {
+        switch (this.$props.subtype) {
+          case 'elaboration':
+            return 'How much it helps you to read and understand the sentence?';
+          case 'hallucination':
+            return 'How much it affects the main idea of the original sentence?';
+          default:
+            return '';
         }
       }
     },
     created: function() {
       this.question = this.getQuestion();
+      this.subtypeQuestion = this.getSubtypeQuestion();
       this.answer = parseInt(this.$props.answer);
+      this.explanation = this.$props.explanation ? this.$props.explanation : ``;
+      this.$props.subtype = this.$props.subtype ? this.$props.subtype : ``;
+      this.$props.grammar = this.$props.grammar ? this.$props.grammar : ``;
     }
 });
 
