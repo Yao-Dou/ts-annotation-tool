@@ -193,9 +193,6 @@ const app = Vue.createApp({
             this.edits_dict = { 'deletion': {}, 'substitution': {}, 'insertion': {}, 'split':{}}
             let original_spans = this.hits_data[this.current_hit - 1].original_spans
             let simplified_spans = this.hits_data[this.current_hit - 1].simplified_spans
-            if (!("annotations" in this.hits_data[this.current_hit - 1])) {
-                this.hits_data[this.current_hit - 1]["annotations"] = {'deletion': {}, 'substitution': {}, 'insertion': {}, 'split':{}}
-            }
             // map for substituion that mapping to simplified span
             let substitution_map = {}
 
@@ -439,6 +436,10 @@ const app = Vue.createApp({
             }
             this.open = !this.open;
         },
+        leave_comment(event) {
+            // if #comment_area_div is not displayed, display it
+            $("#comment_area_div").show();
+        },
         cancel_click() {
             $(".icon-default").removeClass("open")
             this.refresh_edit();
@@ -596,13 +597,49 @@ const app = Vue.createApp({
                 this.enable_select_simplified_sentence = true;
                 this.enable_select_original_sentence = false;
             }
-        }
+        },
+        async parseJsonFile(file) {
+            return new Promise((resolve, reject) => {
+                const fileReader = new FileReader()
+                fileReader.onload = event => resolve(JSON.parse(event.target.result))
+                fileReader.onerror = error => reject(error)
+                fileReader.readAsText(file)
+            })
+        },
+        async handle_file_upload(event) {
+            let file = event.target.files[0];
+            let new_json = await this.parseJsonFile(file)
+            this.hits_data = new_json;
+            this.current_hit = 1;
+            for (let i = 0; i < this.hits_data.length; i++) {
+                if (this.hits_data[i].annotations == undefined) {
+                    this.hits_data[i].annotations = {
+                        'deletion': [],
+                        'substitution': [],
+                        'insertion': [],
+                        'split': []
+                    }
+                }
+            }
+            this.total_hits = new_json.length;
+            this.process_everything();
+        },
     },
     created: function () {
         fetch("https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/human_references_58.json")
             .then(r => r.json())
             .then(json => {
                 this.hits_data = json;
+                for (let i = 0; i < this.hits_data.length; i++) {
+                    if (this.hits_data[i].annotations == undefined) {
+                        this.hits_data[i].annotations = {
+                            'deletion': [],
+                            'substitution': [],
+                            'insertion': [],
+                            'split': []
+                        }
+                    }
+                }
                 this.total_hits = json.length;
                 this.process_everything();
             });

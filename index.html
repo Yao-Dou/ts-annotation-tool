@@ -19,14 +19,25 @@
     <link rel="stylesheet" href="css/selection.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/select_box.css">
+    <link rel="stylesheet" href="css/download_upload.css">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
 
 <body class="sans-serif">
-    <div id="app" class="container card mb-3 card-body">
+    <div id="app" class="container w-60 mv3 mb-3 card-body">
         <!-- <svg id="lines">
             <line x1="50" y1="50" x2="1000" y2="1000" stroke="black" stroke-width="1" />
         </svg> -->
+        <section id="response_box">
+            <p @click="leave_comment" class="comment_button mv0 pa2 br-pill-ns ba bw1 grow pointer">
+                <span class="f4 mr2">Comment</span>
+                <i class="fa-regular fa-comment fa-1-5x icon-default pointer"></i>
+            </p>
+            <div id="comment_area_div" class="mt2 dn">
+                <textarea class="comment_area br5 bw1 ba br4 ph3 pv2 mid-gray w-100" name="comment" placeholder="Your comment"></textarea>
+            </div>
+
+        </section>
         <section id="hit">
             <div class="cf mt1">
                 <div class="fl mb3 tc f3 w-20 mt1">
@@ -34,6 +45,20 @@
                     Hit <span>{{current_hit}}</span> / <span>{{total_hits}}&nbsp;</span>
                     <button @click="go_to_hit(current_hit + 1)" class="mid-gray br-100 pa1 bw0 bg-near-white pointer prev-next-btns">&nbsp;&gt;&nbsp;</button>
                 </div>
+                <div class="fr mt1 mr1">
+                    <div class="file-upload file-download br-100 w2-5 h2-5">
+                      <input type="button" id="download-btn"/>
+                      <label for="download-btn"><i class="pointer fa fa-arrow-down"></i></label>
+                    </div>
+                </div>
+
+                <div class="fr mt1 mr2 ml2">
+                    <div class="file-upload br-100 w2-5 h2-5">
+                      <input type="file" id="upload-btn" @change="handle_file_upload"/>
+                      <label for="upload-btn"><i class="pointer fa fa-arrow-up"></i></label>
+                    </div>
+                </div>
+
                 <div class="fr mr3">
                     <div>
                         <span v-for="n in (total_hits / 2)" v-bind:id="'circle-' + n" @click="go_to_hit_circle(n, $event)" class="circle pointer"><span class="tooltiptext">{{n}}</span></span>
