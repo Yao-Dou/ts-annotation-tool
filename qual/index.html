@@ -680,7 +680,7 @@
                             answer=2
                             span="online videos"
                             span2="music videos"
-                            explanation="music videos is a more specific than online videos and it corrsponds to `It Gril`, so it is is an elaboration."
+                            explanation="music videos is more specific than online videos and it corrsponds to `It Gril`, so it is is an elaboration."
                             ></edit>
                         <br />
                         <edit
@@ -712,14 +712,40 @@
 
             </tab-content>
             <tab-content title="Annotating Splits">
-                <h1>Annotating Insertions</h1>
-                <p>An insertion is an attempt to <b><i>add clarity</i></b> by adding information which didn't previously exist. While deletions are straightforward, insertions come in many different forms. There are three types of insertions:</p>
-                <ul>
-                    <li><b>Elaboration</b> - Added meaningful and correct extra information</li>
-                    <li><b>Hallucination</b> - Added irrelevant, incorrect or incoherent information</li>
-                    <li><b>Trivial Insertion</b> - Added minor wording (the, a, etc.)</li>
-                </ul>
+                <h1>Annotating Splits</h1>
+                <p>A sentence split is an attempt to simplify the complex original sentence by
+                    splitting it into two or more simpler sentences. Although the split edits are
+                    easy to spot and are automatically marked as a <span class="txt-split">||</span> symbol,
+                    split edits are always accompanied by other edits like deletion, substitution, or insertion, which you need to mark as well.</p>
+                <p>
+                    For example, to split a sentence, simply adding punctuation marks such as periods is not enough, as the new sentences should be grammatically correct.
+                </p>
+                <p>
+                    Splits can either be good or unnecessary. A good split is one that makes the sentence simpler and easier to understand. An unnecessary split is one that does not make the sentence simpler.
+                </p>
+                <p>
+                    A split can also introduce a grammar / fluency error, like any other edits.
+                </p>
                 <h2>Examples</h2>
+                <p>
+                    Now let's look at some examples of split edits.
+                </p>
+
+                <example-sent>
+                    <template #complex-sent>Today is Jack's 21st birthday, <esp>and</esp> he and his famility goes to Florida to celebrate!</template>
+                    <template #simple-sent>Today is Jack's 21st birthday. <esp>||</esp> He and his famility goes to Florida to celebrate!</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            split_edit="deletion"
+                            simplify=false
+                            span="and"
+                            explanation="delete `and` is associated with this split edit."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <h2>Quiz</h2>
             </tab-content>
             <tab-content title="Quiz" class="quiz-tab">
                 <iframe src="../index.html" width="100%" height="900"></iframe>

@@ -43,11 +43,19 @@ const EditHeader = Vue.component('edit-header', {
         <span class="edit-type txt-substitution f3">to </span>
         <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;<slot name="span2"></slot>&nbsp;</span>
       </template>
+      <template v-if="this.type == 'split' && this.split_edit=='deletion'">
+        <span class="edit-type txt-split f3">split </span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
+        <span class="edit-type txt-split f3">( delete </span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;<slot name="span"></slot>&nbsp;</span>
+        <span class="edit-type txt-split f3">)</span>
+      </template>
     </div>
   `,
-  props: ['type'],
+  props: ['type', 'split_edit'],
   created: function() {
     this.type = this.$props.type;
+    this.split_edit = this.$props.split_edit;
   }
 });
 const AnswerBox = Vue.component('answer-box', {
@@ -127,7 +135,7 @@ const Edit = Vue.component('edit', {
   template: `
     <div>
       <div class="edit">
-        <edit-header :type=type>
+        <edit-header :type=type :split_edit=split_edit>
           <template #span>{{span}}</template>
           <template #span2>{{span2}}</template>
         </edit-header>
@@ -250,7 +258,7 @@ const Edit = Vue.component('edit', {
       </template>
     </div>
     `,
-    props: ['type', 'subtype', 'subsubtype', 'span', 'span2', 'answer', 'explanation', 'grammar', 'simplify', 'interactive', 'incorrectMessage', 'correctMessage'],
+    props: ['type', 'subtype', 'subsubtype', 'span', 'span2', 'answer', 'explanation', 'grammar', 'simplify', 'interactive', 'incorrectMessage', 'correctMessage', 'split_edit'],
     methods: {          
       getQuestion: function() {
         switch (this.$props.type) {
