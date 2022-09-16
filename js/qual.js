@@ -72,6 +72,20 @@ const AnswerBox = Vue.component('answer-box', {
         <label class="for-checkbox-tools-severity question-deletion" v-bind:for="editId*id"> <slot></slot> </label>
       </div>
     </template>
+    <template v-else-if="this.type == 'substitution'">
+      <div class="column-severity w-25">
+        <template v-if="interactive">
+          <input class="checkbox-tools checkbox-tools-severity" type="radio" v-bind:id="editId*id" v-bind:name="editId">
+        </template>
+        <template v-else-if="isAnswer">
+          <input class="checkbox-tools checkbox-tools-severity" type="radio" disabled checked>
+        </template>
+        <template v-else>
+          <input class="checkbox-tools checkbox-tools-severity" type="radio" disabled>
+        </template>
+        <label class="for-checkbox-tools-severity question-substitution" v-bind:for="editId*id"> <slot></slot> </label>
+      </div>
+    </template>
     <template v-else-if="this.type == 'grammar'">
       <div>
         <template v-if="isAnswer"><input class="checkbox-tools-yes-no" type="radio" name="insertion-yes-no" id="insertion-yes" value="yes" checked></template>
@@ -129,7 +143,7 @@ const Edit = Vue.component('edit', {
           </div>
         </template>
 
-        <template v-if="this.subtype != '' && this.type == 'substitution'">
+        <template v-if="this.type == 'substitution'">
           <p class="mb2 b tracked-light">
             {{question}}
           </p>
@@ -141,11 +155,64 @@ const Edit = Vue.component('edit', {
           </div>
         </template>
 
-        <template v-if="this.answer > 0">
+        <template v-if="this.subtype == 'same' && this.simplify != undefined">
+          <p class="mb2 b tracked-light">
+            Does the new phrase simplify the original phrase? 
+            </p>
+            <div class="tc grammar-answer">
+            <answer-box :isAnswer="this.simplify=='true'" :type=type>yes</answer-box>
+            <answer-box :isAnswer="this.simplify=='false'" :type=type>no</answer-box>
+          </div>
+        </template>
+
+        <template v-if="this.subtype == 'less' && this.answer > 0">
+          <p class="mb2 b tracked-light">
+            Is the deleted information significant to the main idea of the original sentence?
+            </p>
+            <div class="tc">
+              <answer-box :isAnswer="this.answer==1" :type=type>1 - not at all</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type>2 - minor</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type>3 - somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==4" :type=type>4 - very much</answer-box>
+            </div>
+        </template>
+
+        <template v-if="this.subtype == 'more' && this.subsubtype != undefined">
+          <p class="mb2 b tracked-light">
+            Select the type:
+            </p>
+            <div class="tc">
+              <answer-box :isAnswer="this.subsubtype=='elaboration'" :type=type>elaboration</answer-box>
+              <answer-box :isAnswer="this.subsubtype=='hallucination'" :type=type>hallucination</answer-box>
+            </div>
+        </template>
+
+        <template v-if="this.subtype == 'more' && this.subsubtype == 'elaboration' && this.answer > 0">
+          <p class="mb2 b tracked-light">
+            How much the new information helps you to read and understand the sentence?
+            </p>
+            <div class="tc">
+              <answer-box :isAnswer="this.answer==1" :type=type>1 - Minor</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type>2 - Somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type>3 - A lot</answer-box>
+            </div>
+        </template>
+
+        <template v-if="this.subtype == 'different' && this.answer > 0">
+          <p class="mb2 b tracked-light">
+            How severe is this error?
+            </p>
+            <div class="tc">
+              <answer-box :isAnswer="this.answer==1" :type=type>1 - Minor</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type>2 - Somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type>3 - A lot</answer-box>
+            </div>
+        </template>
+
+        <template v-if="this.answer > 0 && this.subtype != 'less' && this.subtype != 'more' && this.subtype != 'different'">
           <p class="mb2 b tracked-light">
             {{question}}
           </p>
-
           <template v-if="this.type == 'deletion'">
             <div class="tc">
               <answer-box :isAnswer="this.answer==1" :type=type :interactive=interactive :id=1 :editId=editId :update=updateInteractiveMessage>1 - not at all</answer-box>
@@ -183,7 +250,7 @@ const Edit = Vue.component('edit', {
       </template>
     </div>
     `,
-    props: ['type', 'subtype', 'span', 'span2', 'answer', 'explanation', 'grammar', 'interactive', 'incorrectMessage', 'correctMessage'],
+    props: ['type', 'subtype', 'subsubtype', 'span', 'span2', 'answer', 'explanation', 'grammar', 'simplify', 'interactive', 'incorrectMessage', 'correctMessage'],
     methods: {          
       getQuestion: function() {
         switch (this.$props.type) {
@@ -191,7 +258,7 @@ const Edit = Vue.component('edit', {
             return 'Is the deleted span significant to the main idea of the original sentence?';
           case 'insertion':
             return 'Is this insertion edit an elaboration, hallucination or adding trivial words?';
-          case 'substition':
+          case 'substitution':
             return 'Compared to the original phrase, the new phrase expresses:'
           default:
             return;
@@ -203,8 +270,10 @@ const Edit = Vue.component('edit', {
             return 'How much it helps you to read and understand the sentence?';
           case 'hallucination':
             return 'How much it affects the main idea of the original sentence?';
+          case "same":
+            return 'Does the new phrase simplify the original phrase?';
           default:
-            return '';
+            return this.$props.subtype;
         }
       },
       updateInteractiveMessage: function(isCorrect) {

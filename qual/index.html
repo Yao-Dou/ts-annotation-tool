@@ -283,42 +283,17 @@
                 <p><b>NOTE:</b> Sometimes you will see <u>spacing errors</u>. These are typically a formatting problems with our data and you do not need to annotate these errors.</p>
                 <h2>Quiz</h2>
                 <p>Now it’s your turn! Take a look at these sentences and try to identify and categorize the deletions.</p>
-                <todo>Implement interactivity and more examples</todo>
-                <example-sent>
-                    <template #complex-sent>SIMSREE was named after the <ed>then-</ed>governor of Bombay, <ed>Lord Sydenham of Combe,</ed> who was an early proponent in the spread of <ed>commerce-based vocational</ed> courses in India.</template>
-                    <template #simple-sent>SIMSREE was named after the governor of Bombay, who was an proponent in the spread of courses in India.</template>
-                    <template #edit>
-                        <edit
-                            type="deletion"
-                            span="then-"
-                            answer=1
-                            interactive=true
-                            incorrectMessage="incorrect message"
-                            correctMessage="correct message"
-                        ></edit>
-                        <br />
-                        <edit
-                            type="deletion"
-                            span="Lord Sydenham of Combe,"
-                            answer=1
-                            interactive=true
-                        ></edit>
-                        <br />
-                        <edit
-                            type="deletion"
-                            span="early"
-                            answer=1
-                            interactive=true
-                        ></edit>
-                        <br />
-                        <edit
-                            type="deletion"
-                            span="commerce-based vocational"
-                            answer=1
-                            interactive=true
-                        ></edit>
-                    </template>
-                </example-sent>
+                <h3 class="mb0">2.1:</h3>
+                <iframe id="deletion_quiz_1" src="quiz_instance.html?original=SIMSREE was named after the then-governor of Bombay, Lord Sydenham of Combe, who was an early proponent in the spread of commerce-based vocational courses in India.
+                &simplified=SIMSREE was named after the governor of Bombay, who was an proponent in the spread of courses in India." width="100%" height="550" class="center db bb b--black-20"></iframe>
+
+                <h3 class="mb0">2.2:</h3>
+                <iframe id="deletion_quiz_2" src="quiz_instance.html?original=The first of these was the 2008–09 season, in which the team finished 3rd in the Western Conference, with a 50–32 record, and lost in the first round of the playoffs to the eventual champion Los Angeles Lakers.
+                &simplified=The first of these was the 2008–09 season, in which the team finished 3rd in the Western Conference, and lost to the champion Los Angeles Lakers." width="100%" height="550" class="center db bb b--black-20"></iframe>
+                
+                <h3 class="mb0">2.3:</h3>
+                <iframe id="deletion_quiz_3" src="quiz_instance.html?original=A few animals have chromatic response, changing color in changing environments, either seasonally (ermine, snowshoe hare) or far more rapidly with chromatophores in their integument (the cephalopod family).
+                &simplified=Some animals have 'chromatic responses', they change color depending on what's around them." width="100%" height="550" class="center db"></iframe>
             </tab-content>
             <tab-content title="Annotating Insertions">
                 <h1>Annotating Insertions</h1>
@@ -481,8 +456,7 @@
                 </example-sent>
                 <h2>Putting it Together</h2>
                 <p>Similar to deletions, insertions can introduce <i>fluency</i> and <i>grammar</i> errors. Remember! <i>Grammar</i> and <i>fluency</i> errors are independent of your other rating. You could have a helpful elaboration insertion which introduces an error or a high impact hallucination which does not introduce a error. Take a look a these examples with many insertions:</p>
-                <example-sent 
-                    explanation="">
+                <example-sent>
                     <template #complex-sent>Atmospheric nitrogen is the largest pool of available nitrogen in terrestrial ecosystems.</template>
                     <template #simple-sent>Atmospheric nitrogen<ei>, in our air on earth,</ei> is the largest pool of <ei>an</ei> available nitrogen in terrestrial ecosystems <ei>our scientists had access to</ei>.</template>
                     <template #edit>
@@ -511,8 +485,7 @@
                             ></edit>
                     </template>
                 </example-sent>
-                <example-sent 
-                    explanation="">
+                <example-sent>
                     <template #complex-sent>Éric Gauthier is also a novella author specialising in science fiction and fantasy.</template>
                     <template #simple-sent>Éric Gauthier<ei>, famous for his soloist dancing career,</ei> is also a novella author specialising in <ei>the</ei> science fiction and fantasy <ei>genres</ei>.</template>
                     <template #edit>
@@ -576,35 +549,166 @@
                     <li>more information</li>
                     <li>different meaning</li>
                 </ul>
-                <example-sent 
-                    explanation="">
-                    <template #complex-sent>Éric Gauthier is also a novella author specialising in science fiction and fantasy.</template>
-                    <template #simple-sent>Éric Gauthier<ei>, famous for his soloist dancing career,</ei> is also a novella author specialising in <ei>the</ei> science fiction and fantasy <ei>genres</ei>.</template>
+                <example-sent>
+                    <template #complex-sent>Clank <es>asks Ratchet to help him</es> find the famous superhero Captain Qwark.</template>
+                    <template #simple-sent>Clank <es>asks for help from Ratchet to</es> find Captain Qwark.</template>
                     <template #edit>
                         <edit
                             type="substitution"
                             subtype="same"
-                            span=", famous for his soloist dancing career,"
-                            span2=".famous for"
-                            answer="1"
-                            explanation="Although the insertion is high quality and correct, it is irrelevant to the rest of the sentence and doesn’t help the reader understand the main meaning of the sentence."
+                            span="asks Ratchet to help him"
+                            span2="asks for help from Ratchet to"
+                            explanation="the new span has exactly the same meaning as the original span."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>He <es>served as the prime minister of Egypt</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1946 and again from 1946 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+                    <template #simple-sent>He <es>was Egypt's Prime Minister</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            subtype="same"
+                            span="served as the prime minister of Egypt"
+                            span2="was Egypt's Prime Minister"
+                            explanation="the new span has exactly the same meaning as the original span."
                             ></edit>
                             <br />
                         <edit
                             type="substitution"
+                            subtype="less"
+                            span="between 1945 and 1946 and again from 1946 and 1948."
+                            span2="between 1945 and 1948."
+                            explanation="the new span misses a small detail about `again`"
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>She appeared in <es>several</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>online videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"It Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+                    <template #simple-sent>She appeared in <es>a few</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>music videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"She Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
                             subtype="same"
-                            span="the"
-                            answer="2"
-                            explanation="“the” doesn’t introduce an error, but it doesn’t have an impact on the sentence."
+                            span="several"
+                            span2="a few"
+                            explanation="several and a few expresses the same meaning."
+                            ></edit>
+                        <br />
+                        <edit
+                            type="substitution"
+                            subtype="more"
+                            span="online videos"
+                            span2="music videos"
+                            explanation="music videos is a more specific type of online videos."
+                            ></edit>
+                        <br />
+                        <edit
+                            type="substitution"
+                            subtype="different"
+                            span='"It Girl"'
+                            span2='"She Girl"'
+                            explanation='"She Girl" is different from "It Girl"'
                             ></edit>
                     </template>
                 </example-sent>
 
                 <h2>Rating by Severity</h2>
+                <p>
+                    After selecting the type of the substitution edit, you will rate the severity of the edit by answering the question corresponding to the edit type.
+                    Let's do the examples that we have seen above.
+                </p>
+                
+                <example-sent>
+                    <template #complex-sent>Clank <es>asks Ratchet to help him</es> find the famous superhero Captain Qwark.</template>
+                    <template #simple-sent>Clank <es>asks for help from Ratchet to</es> find Captain Qwark.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            subtype="same"
+                            simplify=false
+                            span="asks Ratchet to help him"
+                            span2="asks for help from Ratchet to"
+                            explanation="the new span doesn't simplify the original span."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>He <es>served as the prime minister of Egypt</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1946 and again from 1946 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+                    <template #simple-sent>He <es>was Egypt's Prime Minister</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            subtype="same"
+                            simplify=true
+                            span="served as the prime minister of Egypt"
+                            span2="was Egypt's Prime Minister"
+                            explanation="the new span is simpler than the original span."
+                            ></edit>
+                            <br />
+                        <edit
+                            type="substitution"
+                            subtype="less"
+                            answer=2
+                            span="between 1945 and 1946 and again from 1946 and 1948."
+                            span2="between 1945 and 1948."
+                            explanation="`again` is a minor detail in the original sentence."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>She appeared in <es>several</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>online videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"It Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+                    <template #simple-sent>She appeared in <es>a few</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>music videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"She Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            subtype="same"
+                            simplify=true
+                            span="several"
+                            span2="a few"
+                            explanation="'a few' is simpler than 'several'."
+                            ></edit>
+                        <br />
+                        <edit
+                            type="substitution"
+                            subtype="more"
+                            subsubtype="elaboration"
+                            answer=2
+                            span="online videos"
+                            span2="music videos"
+                            explanation="music videos is a more specific than online videos and it corrsponds to `It Gril`, so it is is an elaboration."
+                            ></edit>
+                        <br />
+                        <edit
+                            type="substitution"
+                            subtype="different"
+                            answer=2
+                            span='"It Girl"'
+                            span2='"She Girl"'
+                            explanation='For this one, you can mark the severity as 1 or 2.'
+                            ></edit>
+                    </template>
+                </example-sent>
 
                 <h2>Quiz</h2>
-                <iframe id="test_iframe" src="quiz_instance.html?original=me&simplified=you" width="100%" height="500" class="center db"></iframe>
-                <input id="get-annotation-btn" type="button" value="Submit"/>
+                <h3 class="mb0">4.1:</h3>
+                <iframe id="substitution_quiz_1" src="quiz_instance.html?original=He toured with the IPO in the spring of 1990 for their first-ever performance in the Soviet Union, with 
+                    concerts in Moscow and Leningrad, and toured with the IPO again in 1994, performing in China and India.&simplified=He performed with the IPO in the spring of 1990 
+                    for their first time in the Soviet Union with concerts in Moscow and Leningrad, and performed with the IPO again in China and India in 1994." width="100%" height="550" class="center db bb b--black-20"></iframe>
+                
+                <h3 class="mb0">4.2:</h3>
+                <iframe id="substitution_quiz_2" src="quiz_instance.html?original=It has a capacity of 98,772, making it the largest stadium in Europe, and the eleventh largest in the world.
+                &simplified=It can accommodate 98,772 people which makes it the largest stadium in Europe and the eleventh largest in the world." width="100%" height="550" class="center db bb b--black-20"></iframe>
+
+                <h3 class="mb0">4.3:</h3>
+                <iframe id="substitution_quiz_3" src="quiz_instance.html?original=
+                Mercury is similar in appearance to the Moon: it is heavily cratered with regions of smooth plains, has no natural satellites and no substantial atmosphere.
+                &simplified=Mercury, which looks like the Moon with its many craters and areas of smoothness, has no orbiting bodies around it and a minimal atmosphere." width="100%" height="550" class="center db"></iframe>
+                <!-- <input id="get-annotation-btn" type="button" value="Submit"/> -->
 
             </tab-content>
             <tab-content title="Annotating Splits">

@@ -645,24 +645,6 @@ const app = Vue.createApp({
         }]
         this.total_hits = 1;
         this.process_everything();
-        // console.log(this.$route.query.test)
-        // fetch("https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/human_references_58.json")
-        //     .then(r => r.json())
-        //     .then(json => {
-        //         this.hits_data = json;
-        //         for (let i = 0; i < this.hits_data.length; i++) {
-        //             if (this.hits_data[i].annotations == undefined) {
-        //                 this.hits_data[i].annotations = {
-        //                     'deletion': [],
-        //                     'substitution': [],
-        //                     'insertion': [],
-        //                     'split': []
-        //                 }
-        //             }
-        //         }
-        //         this.total_hits = json.length;
-        //         this.process_everything();
-        //     });
     },
     mounted: function () {
     },
@@ -800,6 +782,9 @@ const app = Vue.createApp({
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.addClass("white")
+
+                        let split_signs = $(`.split-sign[data-id=${event.target.dataset.id}]`)
+
                         let below_spans= $(`.${category}_below[data-id=${event.target.dataset.id}]`)
                         below_spans.addClass("white")
                         below_spans.removeClass(`txt-${category}`)
@@ -807,16 +792,37 @@ const app = Vue.createApp({
 
                         let id = event.target.dataset.id
                         let real_id = id.split("-")[1]
+                        if (event.target.classList.contains(`split-sign`)) {
+                            if (event.target.classList.contains(`txt-${category}-light`)) {
+                                spans.addClass(`bg-${category}-light`)
+                                spans.addClass(`white`)
+                                spans.removeClass(`txt-${category}-light`)
+                                below_spans.addClass(`bg-${category}-light`)
+                                return
+                            } else {
+                                spans.addClass(`bg-${category}`)
+                                spans.addClass(`white`)
+                                spans.removeClass(`txt-${category}`)
+                                below_spans.addClass(`bg-${category}`)
+                                return
+                            }
+                        }
 
                         // check if bd-{category}-light is already in the class list
                         if (event.target.classList.contains(`border-${category}-light`)) {
                             spans.addClass(`bg-${category}-light`)
+                            if (category == 'split') {
+                                split_signs.removeClass(`txt-${category}-light`)
+                            }
                             below_spans.addClass(`bg-${category}-light`)
                             if (category == 'substitution') {
                                 this.$parent.lines[category][real_id].color = "rgba(173, 197, 250, 1.0)"
                             }
                         } else {
                             spans.addClass(`bg-${category}`)
+                            if (category == 'split') {
+                                split_signs.removeClass(`txt-${category}`)
+                            }
                             below_spans.addClass(`bg-${category}`)
                             if (category == 'substitution') {
                                 this.$parent.lines[category][real_id].color = "rgba(33, 134, 235, 1.0)"
@@ -827,19 +833,47 @@ const app = Vue.createApp({
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.removeClass("white")
+
+                        let split_signs = $(`.split-sign[data-id=${event.target.dataset.id}]`)
+
                         let below_spans= $(`.${category}_below[data-id=${event.target.dataset.id}]`)
                         below_spans.removeClass("white")
 
                         let id = event.target.dataset.id
                         let real_id = id.split("-")[1]
 
+                        let below_spans_class_list = below_spans.attr('class').split(/\s+/)
+                        if (event.target.classList.contains(`split-sign`)) {
+                            if (below_spans_class_list.includes(`bg-${category}-light`)) {
+                                spans.removeClass(`bg-${category}-light`)
+                                spans.removeClass(`white`)
+                                split_signs.addClass(`txt-${category}-light`)
+                                below_spans.removeClass(`bg-${category}-light`)
+                                below_spans.addClass(`txt-${category}-light`)
+                                return
+                            } else {
+                                spans.removeClass(`bg-${category}`)
+                                spans.removeClass(`white`)
+                                split_signs.addClass(`txt-${category}`)
+                                below_spans.removeClass(`bg-${category}`)
+                                below_spans.addClass(`txt-${category}`)
+                                return
+                            }
+                        }
+
                         if (event.target.classList.contains(`border-${category}-light`)) {
                             below_spans.addClass(`txt-${category}-light`)
+                            if (category == 'split') {
+                                split_signs.addClass(`txt-${category}-light`)
+                            }
                             if (category == 'substitution') {
                                 this.$parent.lines[category][real_id].color = "rgba(173, 197, 250, 0.4)"
                             }
                         } else {
                             below_spans.addClass(`txt-${category}`)
+                            if (category == 'split') {
+                                split_signs.addClass(`txt-${category}`)
+                            }
                             if (category == 'substitution') {
                                 this.$parent.lines[category][real_id].color = "rgba(33, 134, 235, 0.46)"
                             }
@@ -909,13 +943,20 @@ const app = Vue.createApp({
                         // if the target is a span, go to the parent div
                         let target = event.target
                         if (target.tagName == 'SPAN' && target.parentElement.tagName != 'DIV') {
-                            target = target.parentElement
+                            if (target.parentElement.parentElement.tagName != 'DIV') {
+                                target = target.parentElement.parentElement
+                            } else {
+                                target = target.parentElement
+                            }
                         } else if (target.tagName == 'I') {
                             target = target.parentElement.parentElement
                         }
                         let category = target.dataset.category
                         let spans = $(`.${category}[data-id=${target.dataset.id}]`)
                         spans.addClass("white")
+
+                        let split_signs = $(`.split-sign[data-id=${target.dataset.id}]`)
+
                         let below_spans= $(`.${category}_below[data-id=${target.dataset.id}]`)
                         below_spans.addClass("white")
                         below_spans.removeClass(`txt-${category}`)
@@ -928,12 +969,14 @@ const app = Vue.createApp({
 
                         // check if bd-{category}-light is already in the class list
                         if (classList.includes(`border-${category}-light-all`)) {
+                            split_signs.removeClass(`txt-${category}-light`)
                             spans.addClass(`bg-${category}-light`)
                             below_spans.addClass(`bg-${category}-light`)
                             if (category == 'substitution') {
                                 this.$parent.lines[category][real_id].color = "rgba(173, 197, 250, 1.0)"
                             }
                         } else {
+                            split_signs.removeClass(`txt-${category}`)
                             spans.addClass(`bg-${category}`)
                             below_spans.addClass(`bg-${category}`)
                             if (category == 'substitution') {
@@ -945,13 +988,20 @@ const app = Vue.createApp({
                         // if the target is a span, go to the parent div
                         let target = event.target
                         if (target.tagName == 'SPAN' && target.parentElement.tagName != 'DIV') {
-                            target = target.parentElement
+                            if (target.parentElement.parentElement.tagName != 'DIV') {
+                                target = target.parentElement.parentElement
+                            } else {
+                                target = target.parentElement
+                            }
                         } else if (target.tagName == 'I') {
                             target = target.parentElement.parentElement
                         }
                         let category = target.dataset.category
                         let spans = $(`.${category}[data-id=${target.dataset.id}]`)
                         spans.removeClass("white")
+
+                        let split_signs = $(`.split-sign[data-id=${target.dataset.id}]`)
+
                         let below_spans= $(`.${category}_below[data-id=${target.dataset.id}]`)
                         below_spans.removeClass("white")
 
@@ -960,11 +1010,13 @@ const app = Vue.createApp({
                         let real_id = target.dataset.id.split("-")[1]
 
                         if (classList.includes(`border-${category}-light-all`)) {
+                            split_signs.addClass(`txt-${category}-light`)
                             below_spans.addClass(`txt-${category}-light`)
                             if (category == 'substitution') {
                                 this.$parent.lines[category][real_id].color = "rgba(173, 197, 250, 0.4)"
                             }
                         } else {
+                            split_signs.addClass(`txt-${category}`)
                             below_spans.addClass(`txt-${category}`)
                             if (category == 'substitution') {
                                 this.$parent.lines[category][real_id].color = "rgba(33, 134, 235, 0.46)"
