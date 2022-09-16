@@ -25,12 +25,19 @@ img {
     margin-bottom: 42px;
 }
 .wizard-tab-content, .wizard-card-footer {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 17px;
     line-height: 1.3;
 }
+.wizard-tab-container {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz-tab {
+    max-width: 100% !important;
+}
+
 .wizard-title {
     font-size: xx-large;
 }
@@ -85,4 +92,13 @@ iframe {
 }
 .stepTitle {
     margin-top: 8px;
+}
+
+.deletion-examples {
+    cursor: default;
+    margin-top: 5px;
+}
+
+.deletion-examples-active {
+    background-color: #F4B8B1;
 }

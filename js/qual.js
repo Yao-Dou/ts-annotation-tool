@@ -9,7 +9,7 @@ const ExampleSent = Vue.component('example-sent', {
       </div>
       <p class="sent-desc">Simplified Sentence (Human or AI Model Written):</p>
       <div class="sent">
-          <p><slot name="simple-sent"></slot></p>
+          <p class="mb1"><slot name="simple-sent"></slot></p>
       </div>
       <slot name="edit"></slot>
       <template v-if="this.explanation != undefined">
@@ -19,7 +19,7 @@ const ExampleSent = Vue.component('example-sent', {
       </template>
     </div>
     `,
-    props: ['explanation']
+    props: ['explanation'],
 });
 
 const Sent = Vue.component('sent', {
@@ -28,14 +28,20 @@ const Sent = Vue.component('sent', {
 const EditHeader = Vue.component('edit-header', {
   template: `
     <div class="f4 mt0 mb2 tc"> 
-    <span class="edit-label">Edit:</span> 
+      <span class="edit-label">Edit:</span> 
       <template v-if="this.type == 'deletion'">
         <span class="edit-type txt-deletion f3">delete </span>
-        <span class="pa1 edit-text br-pill-ns border-deletion-all deletion_below txt-deletion">&nbsp;<slot></slot>&nbsp;</span>
+        <span class="pa1 edit-text br-pill-ns border-deletion-all deletion_below txt-deletion">&nbsp;<slot name="span"></slot>&nbsp;</span>
       </template>
       <template v-if="this.type == 'insertion'">
         <span class="edit-type txt-insertion f3">insert </span>
-        <span class="pa1 edit-text br-pill-ns border-insertion-all insertion_below txt-insertion">&nbsp;<slot></slot>&nbsp;</span>
+        <span class="pa1 edit-text br-pill-ns border-insertion-all insertion_below txt-insertion">&nbsp;<slot name="span"></slot>&nbsp;</span>
+      </template>
+      <template v-if="this.type == 'substitution'">
+        <span class="edit-type txt-substitution f3">substitute </span>
+        <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;<slot name="span"></slot>&nbsp;</span>
+        <span class="edit-type txt-substitution f3">to </span>
+        <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;<slot name="span2"></slot>&nbsp;</span>
       </template>
     </div>
   `,
@@ -107,9 +113,12 @@ const Edit = Vue.component('edit', {
   template: `
     <div>
       <div class="edit">
-        <edit-header :type=type>{{ span }}</edit-header>
+        <edit-header :type=type>
+          <template #span>{{span}}</template>
+          <template #span2>{{span2}}</template>
+        </edit-header>
 
-        <template v-if="this.subtype != ''">
+        <template v-if="this.subtype != '' && this.type == 'insertion'">
           <p class="mb2 b tracked-light">
             {{question}}
           </p>
@@ -117,6 +126,18 @@ const Edit = Vue.component('edit', {
             <answer-box :isAnswer="this.subtype=='elaboration'" :type=type>Elaboration</answer-box>
             <answer-box :isAnswer="this.subtype=='hallucination'" :type=type>Hallucination</answer-box>
             <answer-box :isAnswer="this.subtype=='trivial'" :type=type>Trivial Insertion</answer-box>
+          </div>
+        </template>
+
+        <template v-if="this.subtype != '' && this.type == 'substitution'">
+          <p class="mb2 b tracked-light">
+            {{question}}
+          </p>
+          <div class="tc">
+            <answer-box :isAnswer="this.subtype=='same'" :type=type>the same meaning</answer-box>
+            <answer-box :isAnswer="this.subtype=='less'" :type=type>less information</answer-box>
+            <answer-box :isAnswer="this.subtype=='more'" :type=type>more information</answer-box>
+            <answer-box :isAnswer="this.subtype=='different'" :type=type>different meaning</answer-box>
           </div>
         </template>
 
@@ -162,7 +183,7 @@ const Edit = Vue.component('edit', {
       </template>
     </div>
     `,
-    props: ['type', 'subtype', 'span', 'answer', 'explanation', 'grammar', 'interactive', 'incorrectMessage', 'correctMessage'],
+    props: ['type', 'subtype', 'span', 'span2', 'answer', 'explanation', 'grammar', 'interactive', 'incorrectMessage', 'correctMessage'],
     methods: {          
       getQuestion: function() {
         switch (this.$props.type) {
@@ -170,6 +191,8 @@ const Edit = Vue.component('edit', {
             return 'Is the deleted span significant to the main idea of the original sentence?';
           case 'insertion':
             return 'Is this insertion edit an elaboration, hallucination or adding trivial words?';
+          case 'substition':
+            return 'Compared to the original phrase, the new phrase expresses:'
           default:
             return;
         }
@@ -202,16 +225,16 @@ const Edit = Vue.component('edit', {
 });
 
 const Substitution = Vue.component('es', {
-  template: `<span class="bg-substitution-light"><slot /></span>`
+  template: `<span class="bg-substitution-light substitution"><slot /></span>`
 });
 const Insertion = Vue.component('ei', {
-  template: `<span class="bg-insertion-light"><slot /></span>`
+  template: `<span class="bg-insertion-light insertion"><slot /></span>`
 });
 const Deletion = Vue.component('ed', {
-  template: `<span class="bg-deletion-light"><slot /></span>`
+  template: `<span class="bg-deletion-light deletion"><slot /></span>`
 });
 const Split = Vue.component('esp', {
-  template: `<span class="bg-split-light"><slot /></span>`
+  template: `<span class="bg-split-light split"><slot /></span>`
 });
 const Todo = Vue.component('todo', {
   template: `<span class="todo"><slot /></span>`
@@ -240,6 +263,10 @@ new Vue({
     onChange: function() {
       $('html, body').animate({ scrollTop: 0 }, 'fast');
     }
+  },
+  mounted() {
+    var wizard = this.$refs.wizard
+    wizard.activateAll()
   }
 })
 
@@ -260,31 +287,48 @@ function removeSpan() {
   $('#bt-sent-out').html(contents_out)
 }
 
-$('#bt-1').hover(
-    function() { addSpan(18, 11) },
-    function() { removeSpan() }
+addSpan(18, 11)
+
+$('#bt-1').mouseover(
+    function() { 
+      addSpan(18, 11) 
+    }
 )
-$('#bt-2').hover(
-  function() { addSpan(29, 8) },
-  function() { removeSpan() }
+$('#bt-2').mouseover(
+  function() { addSpan(29, 8) }
 )
-$('#bt-3').hover(
-  function() { addSpan(0, 38) },
-  function() { removeSpan() }
+$('#bt-3').mouseover(
+  function() { addSpan(0, 38) }
 )
-$('#bt-4').hover(
-  function() { addSpan(70, 11) },
-  function() { removeSpan() }
+$('#bt-4').mouseover(
+  function() { addSpan(70, 11) }
 )
-$('#bt-5').hover(
-  function() { addSpan(82, 16) },
-  function() { removeSpan() }
+$('#bt-5').mouseover(
+  function() { addSpan(82, 16) }
 )
-$('#bt-6').hover(
-  function() { addSpan(0, 38) },
-  function() { removeSpan() }
+$('#bt-6').mouseover(
+  function() { addSpan(0, 38) }
 )
-$('#bt-7').hover(
-  function() { addSpan(105, 37) },
-  function() { removeSpan() }
+$('#bt-7').mouseover(
+  function() { addSpan(105, 37) }
 )
+
+$(".deletion-examples").mouseover(
+  function() {
+    // current background to red
+    $(this).css("background-color", "#F4B8B1");
+    // other background to white
+    $(this).siblings().css("background-color", "#fff");
+  }
+);
+
+
+$("#get-annotation-btn").click(function() {
+  var iframe = document.getElementById("test_iframe");
+  // console.log(iframe)
+  var elmnt = iframe.contentWindow.document.getElementById("hits-data");
+  let data = elmnt.innerHTML;
+  console.log(data);
+  // download data as json file
+  // console.log(elmnt.)
+});

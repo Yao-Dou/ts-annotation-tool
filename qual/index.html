@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/c3b36ffc0c.js" crossorigin="anonymous"></script>
 
     <script src="../js/leader-line.min.js"></script>
+    <script src="../js/jsplumb.bundle.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/vue-form-wizard/dist/vue-form-wizard.min.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
@@ -33,7 +34,8 @@
             next-button-text="Next" 
             back-button-text="Back" 
             finish-button-text="Finish"
-            title="Error Annotation Tutorial"
+            title="Text Simplification Annotation Tutorial"
+            ref="wizard"
             subtitle="">
             <tab-content title="Introduction">
                 <h1>Introduction</h1>
@@ -79,8 +81,8 @@
                 <h2>Examples</h2>
                 <example-sent 
                     explanation="This is a substitution. We see the “an easy fix” takes the place of “a straightforward solution” in the sentence.">
-                    <template #complex-sent><es>A straightforward solution</es> for foggy car windows is run the heater.</template>
-                    <template #simple-sent><es>An easy fix</es> for foggy car windows is run the heater.</template>
+                    <template #complex-sent><es class="original_span" data-id="0">A straightforward solution</es> for foggy car windows is run the heater.</template>
+                    <template #simple-sent><es class="simplified_span" data-id="0">An easy fix</es> for foggy car windows is run the heater.</template>
                 </example-sent>
 
                 <example-sent 
@@ -100,7 +102,7 @@
                     Generally, you want to select the <b><i>smallest amount of text</i></b> which contains the edit as possible. Sometimes there can be two different types of edits next to each other. If a edit seems too large, try to highlight multiple edits instead.
                 </p>
                 <h2>Examples</h2>
-                <example-sent 
+                <example-sent
                     explanation="While “straightforward solution” and “, which can sometimes takes a while,” appeared next to each other, the phrase “easy fix” is only substituting the words “starightforward solution” and the phrase “, which can sometimes takes a while,” isn’t contained anywhere else in the sentence.">
                     <template #complex-sent>A <es>straightforward solution</es><ed>, which can sometimes takes a while</ed>, for foggy car windows is to run the heater</template>
                     <template #simple-sent>An <es>easy fix</es> for foggy car windows is to run the heater</template>
@@ -108,8 +110,8 @@
 
                 <example-sent 
                     explanation="Substitutions may be on another side of the sentence. “is known as data fitting” is referring to “Data fitting is” even though it has been moved.">
-                    <template #complex-sent><es>The task find a model</es> that best fits some <es>observed data and prior information</es> <es>is known as data fitting</es>.</template>
-                    <template #simple-sent><es>Data fitting</es> <es>is the task to find a model</es> that best fits some <es>information</es>.</template>
+                    <template #complex-sent><es>The task find a model</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> that best fits some <es>observed data and prior information</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> <es>is known as data fitting.</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub></template>
+                    <template #simple-sent><es>Data fitting</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> <es>is the task to find a model</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> that best fits some <es>information.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
                 </example-sent>
 
                 <example-sent 
@@ -180,7 +182,7 @@
                     When content is deleted from a sentence, it will always contain some amount of information. We also ask that you rate <i>how significant</i> the deleted content is to the <i>main idea</i> of the original sentence. You will rate the significance on a 4 point scale.
                 </p>
                 <h2>Examples</h2>
-                <p>Observe this sentence:</p>
+                <p>Observe this original sentence:</p>
                 <div class="ex-sent bt-sent-cont">
                     <p class="sent-desc">Original Sentence (Human Written):</p>
                     <div class="sent">
@@ -193,13 +195,13 @@
                 </div>
                 <p>This sentence communicates many different facts. Here are just a few:</p>
                 <ul>
-                    <li id="bt-1">Booker T. Washington was born in Virginia</li>
-                    <li id="bt-2">Booker T. Washington was born in 1856</li>
-                    <li id="bt-3">Booker T. Washington was born into slavery</li>
-                    <li id="bt-4">Booker T. Washington was an influential leader</li>
-                    <li id="bt-5">Booker T. Washington was a African American leader</li>
-                    <li id="bt-6">Booker T. Washington was a influential African American leader as a result of being born into slavery</li>
-                    <li id="bt-7">Booker T. Washington was a leader at the beginning of the Progressive Era</li>
+                    <li id="bt-1" class="deletion-examples deletion-examples-active">Booker T. Washington was born in Virginia</li>
+                    <li id="bt-2" class="deletion-examples">Booker T. Washington was born in 1856</li>
+                    <li id="bt-3" class="deletion-examples">Booker T. Washington was born into slavery</li>
+                    <li id="bt-4" class="deletion-examples">Booker T. Washington was an influential leader</li>
+                    <li id="bt-5" class="deletion-examples">Booker T. Washington was a African American leader</li>
+                    <li id="bt-6" class="deletion-examples">Booker T. Washington was a influential African American leader as a result of being born into slavery</li>
+                    <li id="bt-7" class="deletion-examples">Booker T. Washington was a leader at the beginning of the Progressive Era</li>
                 </ul>
                 <p>Hover over each fact to see which part of the sentence could be deleted to remove the fact from the sentence. As you can see, sentences which communicate many ideas may be hard to narrow down whether a span is <i>significant</i>.</p>
                 <p>In this case, the <i>main idea</i> of the sentence is <i>Booker T. Washington is an influential African American leader</i>. Deletions are necessary for text simplification, we just want to ensure this <i>main idea</i> is still being communicated.</p>
@@ -328,8 +330,7 @@
                     <li><b>Trivial Insertion</b> - Added minor wording (the, a, etc.)</li>
                 </ul>
                 <h2>Examples</h2>
-                <example-sent 
-                    explanation="">
+                <example-sent explanation="">
                     <template #complex-sent>The FZD1 transcript is expressed in various tissues.</template>
                     <template #simple-sent>The FZD1 <ei>protein</ei> transcript is expressed in <ei>the</ei> various tissues.</template>
                     <template #edit>
@@ -547,18 +548,82 @@
                 <todo>It would be nice to have deletions in the quiz as well.</todo>
             </tab-content>
             <tab-content title="Annotating Substitutions">
-                <todo>Implement this</todo>
+                <h1>Annotating Substitutions</h1>
+                <p>Now that you learn what are deletions and insertions, let's look at a more complicated edit type: the substitution. </p>
+                <p>A substitution edit <b>rephrases a span</b> in the original sentence with another span.
+                    Remember a substitution is distict from an insertion or a deletion, because it rewords some information which previously existed in the sentence.
+                    A substitution always adds, deletes or retains information, but sometimes it rewrites a phrase to an entirely different meaning.</p>
+                <h2>Disinguish between substitution and deletion + insertion</h2>
+                <p>Substitution and deletion + insertion sometimes are hard to differentiate, but here are the rules to help you:</p>
+                <ul>
+                    <li>Mark as <b>substitution</b>, if both spans are about same type of content (actions, locations, ...).</li>
+                    <li>Mark as <b>deletion + insertion</b>, otherwise.</li>
+                </ul>
+                <example-sent>
+                    <template #complex-sent>John was traveling in the summer in <ed>2020.</ed></template>
+                    <template #simple-sent>John was traveling in the summer in <ei>Paris.</ei></template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>John was <es>traveling</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> in the summer in <es>2020.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+                    <template #simple-sent>John was <es>skiing</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> in the winter in <es>2021.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+                </example-sent>
+
+                <h2>Examples</h2>
+                <p>As mentioned before, substitution is categorized into four types as the new phrase expresses: </p>
+                <ul>
+                    <li>the same meaning (paraphrase)</li>
+                    <li>less information</li>
+                    <li>more information</li>
+                    <li>different meaning</li>
+                </ul>
+                <example-sent 
+                    explanation="">
+                    <template #complex-sent>Éric Gauthier is also a novella author specialising in science fiction and fantasy.</template>
+                    <template #simple-sent>Éric Gauthier<ei>, famous for his soloist dancing career,</ei> is also a novella author specialising in <ei>the</ei> science fiction and fantasy <ei>genres</ei>.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            subtype="same"
+                            span=", famous for his soloist dancing career,"
+                            span2=".famous for"
+                            answer="1"
+                            explanation="Although the insertion is high quality and correct, it is irrelevant to the rest of the sentence and doesn’t help the reader understand the main meaning of the sentence."
+                            ></edit>
+                            <br />
+                        <edit
+                            type="substitution"
+                            subtype="same"
+                            span="the"
+                            answer="2"
+                            explanation="“the” doesn’t introduce an error, but it doesn’t have an impact on the sentence."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <h2>Rating by Severity</h2>
+
+                <h2>Quiz</h2>
+                <iframe id="test_iframe" src="quiz_instance.html?original=me&simplified=you" width="100%" height="500" class="center db"></iframe>
+                <input id="get-annotation-btn" type="button" value="Submit"/>
+
             </tab-content>
             <tab-content title="Annotating Splits">
-                <todo>Implement this</todo>
+                <h1>Annotating Insertions</h1>
+                <p>An insertion is an attempt to <b><i>add clarity</i></b> by adding information which didn't previously exist. While deletions are straightforward, insertions come in many different forms. There are three types of insertions:</p>
+                <ul>
+                    <li><b>Elaboration</b> - Added meaningful and correct extra information</li>
+                    <li><b>Hallucination</b> - Added irrelevant, incorrect or incoherent information</li>
+                    <li><b>Trivial Insertion</b> - Added minor wording (the, a, etc.)</li>
+                </ul>
+                <h2>Examples</h2>
             </tab-content>
-            <tab-content title="Quiz">
+            <tab-content title="Quiz" class="quiz-tab">
                 <iframe src="../index.html" width="100%" height="900"></iframe>
             </tab-content>
         </form-wizard>
     </div>
 
-    <script src="../js/qual.js"></script>
 </body>
-
+<script src="../js/qual.js"></script>
 </html>
