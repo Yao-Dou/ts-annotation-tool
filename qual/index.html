@@ -122,12 +122,19 @@
                     Now it's your turn! Take a look at these pairs of sentences and try to select the edits. <b>You do not need to annotate your edits, just select the alignment!</b>
                 </p>
 
-                <iframe id="deletion_quiz_2" src="quiz_instance.html?original=Genetic diversity among male bees in honey bee mating areas can lead to stronger, healthier honey bee colonies.
-                &simplified=When male bees have diversity in their DNA, honey bee mating areas can lead to stronger and healthier honey bee groups." width="100%" height="550" class="center db bb b--black-20"></iframe>
+                <h3 class="mb0">1.1:</h3>
+                <quiz
+                    id="span_selection_quiz_1"
+                    original="Genetic diversity among male bees in honey bee mating areas can lead to stronger, healthier honey bee colonies."
+                    simplified="When male bees have diversity in their DNA, honey bee mating areas can lead to stronger and healthier honey bee groups."
+                    ></quiz>
 
-                <iframe id="deletion_quiz_2" src="quiz_instance.html?original=The Krispy Kreme location has been closed since Feb. 10, when it was gutted by suspected arson, leaving the back of the building a charred shell and melting much of the interior.
-                &simplified=The Krispy Kreme, a popular doughnut shop in Atlanta, has been closed after it was burned down, leaving the back of the building a charred shell, while melting much of the inside." width="100%" height="550" class="center db bb b--black-20"></iframe>
-                
+                <h3 class="mb0">1.2:</h3>
+                <quiz
+                    id="span_selection_quiz_2"
+                    original="The Krispy Kreme location has been closed since Feb. 10, when it was gutted by suspected arson, leaving the back of the building a charred shell and melting much of the interior."
+                    simplified="The Krispy Kreme, a popular doughnut shop in Atlanta, has been closed after it was burned down, leaving the back of the building a charred shell, while melting much of the inside."
+                    ></quiz>
 
                 <p>
                     In the real HIT, we have trained another AI to provide the alignment for you. However, this AI is frequently wrong (it will be wrong for almost every HIT), so please also fix its alignments. Go ahead and try it!
@@ -135,8 +142,14 @@
 
                 <todo>Add given alignments</todo>
 
-                <iframe id="deletion_quiz_2" src="quiz_instance.html?original=Sanskrit arose in South Asia after its predecessor languages had diffused there from the northwest in the late Bronze Age.
-                &simplified=After the Bronze age, old, parent languages had began travelling into South Asia. From that, Sansckrit arose." width="100%" height="550" class="center db bb b--black-20"></iframe>
+                <h3 class="mb0">1.3:</h3>
+                <quiz
+                    id="span_selection_quiz_3"
+                    original="Sanskrit arose in South Asia after its predecessor languages had diffused there from the northwest in the late Bronze Age."
+                    simplified="After the Bronze age, old, parent languages had began travelling into South Asia. || From that, Sansckrit arose."
+                    ></quiz>
+
+                <div style="margin-bottom: 300px"></div>
             </tab-content>
             <tab-content title="Annotating Deletions">
                 <h1>Annotating Deletions</h1>
@@ -203,7 +216,6 @@
                 </ul>
                 <p>Hover over each fact to see which part of the sentence could be deleted to remove the fact from the sentence. As you can see, sentences which communicate many ideas may be hard to narrow down whether a span is <i>significant</i>.</p>
                 <p>In this case, the <i>main idea</i> of the sentence is <i>Booker T. Washington is an influential African American leader</i>. Deletions are necessary for text simplification, we just want to ensure this <i>main idea</i> is still being communicated.</p>
-                <todo>Add other booker t washington examples</todo>
                 <p>Let’s put it together with a few other sentences:</p>
                 <example-sent 
                     explanation="The introductory clause “Like so many hyped books before it,” situates the sentence within the context of “hyped books.” However, it doesn’t relate to the main idea of the sentence: the author’s opinion on The Midnight Library.">
@@ -513,10 +525,12 @@
                             ></edit>
                     </template>
                 </example-sent>
-                <todo>Need an example of a trivial insertion which helps simplify.</todo>
                 <h2>Quiz</h2>
                 <p>Now it’s your turn! Take a look at these sentences and rate the insertions for type and quality.</p>
-                <todo>It would be nice to have deletions in the quiz as well.</todo>
+                <iframe id="insertion_quiz_1" src="quiz_instance.html?original=Sanskrit arose in South Asia after its predecessor languages had diffused there from the northwest in the late Bronze Age.
+                &simplified=After the Bronze age, old, parent languages had began travelling into South Asia. From that, Sansckrit arose." width="100%" height="550" class="center db bb b--black-20"></iframe>
+                <iframe id="insertion_quiz_2" src="quiz_instance.html?original=Sanskrit arose in South Asia after its predecessor languages had diffused there from the northwest in the late Bronze Age.
+                &simplified=After the Bronze age, old, parent languages had began travelling into South Asia. || From that, Sansckrit arose." width="100%" height="550" class="center db bb b--black-20"></iframe>
             </tab-content>
             <tab-content title="Annotating Substitutions">
                 <h1>Annotating Substitutions</h1>

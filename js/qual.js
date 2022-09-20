@@ -316,6 +316,44 @@ const Split = Vue.component('esp', {
 const Todo = Vue.component('todo', {
   template: `<span class="todo"><slot /></span>`
 });
+const Quiz = Vue.component('quiz', {
+  template: `
+  <div>
+    <img class="span_selection_quiz_answer" :id=id :src=imgsrc>
+    <iframe :id=id :src=iframesrc width="100%" height="550" class="center db"></iframe>
+    <div class="bb b--black-20 answer-container">
+      <template v-if="this.answerExists == true">
+        <a :id=id class="quiz-answer">See our answer →</a>
+      </template>
+    </div>
+  </div>
+  `,
+  props: ['id', 'original', 'simplified'],
+  created: function() {
+    this.imgsrc = "./img/quiz-answers/" + this.$props.id + ".png"
+    this.iframesrc = "quiz_instance.html?original=" + this.$props.original + "&simplified=" + this.$props.simplified
+    this.answerExists = true;
+    $.ajax({
+      url:this.imgsrc,
+      type:'HEAD',
+      error:function(){
+        console.log('could not find ' + this.$props.id); 
+        this.answerExists = false
+      }, 
+    });
+  },
+  mounted: function() {
+    let ourId = this.$props.id;
+    $('a#' + ourId).hover( function() {
+      $('img#' + ourId).css("display","inherit")
+    }, function() {
+      $('img#' + ourId).css("display","none")
+    })
+  }
+});
+
+
+
 
 new Vue({
   el: '#app',
@@ -331,7 +369,8 @@ new Vue({
     'ei': Insertion,
     'ed': Deletion,
     'esp': Split,
-    'tood': Todo
+    'todo': Todo,
+    'quiz': Quiz
   },
   methods: {
     onComplete: function() {
@@ -339,6 +378,22 @@ new Vue({
     },
     onChange: function() {
       $('html, body').animate({ scrollTop: 0 }, 'fast');
+
+      // Allow dynamic resizing of iframes
+      let resizeObservers = [];
+      $('iframe').each(function () {
+          // Add an offset for extra space after the iframe
+          constant = 40;
+          try {
+            let observer = new ResizeObserver(entries => 
+              this.height = this.contentWindow.document.body.scrollHeight + constant
+            )
+            observer.observe(this.contentWindow.document.body)
+            resizeObservers.push(observer)
+          } catch (e) {
+            console.log(e)
+          }
+      })
     }
   },
   mounted() {
@@ -398,7 +453,6 @@ $(".deletion-examples").mouseover(
     $(this).siblings().css("background-color", "#fff");
   }
 );
-
 
 $("#get-annotation-btn").click(function() {
   var iframe = document.getElementById("test_iframe");
