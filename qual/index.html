@@ -49,10 +49,8 @@
                 </ul>
 
                 <p>Here's a big picture of what we're doing:</p>
-
-                <todo>ANNOTATE SCREENSHOT</todo>
+                <img src="./img/overview.png" alt="Big picture of the task" width="1200">
                 <br />
-                <img src="./img/overview.png" alt="Big picture of the task" width="500">
                 <todo>One other idea I had is to add interactives throughout the tutorial. Like selecting whether a span is a hallucination or insertion, selecting the severity of a deletion, etc.</todo>
             </tab-content>
             <tab-content title="Selecting Alignments">
@@ -121,23 +119,24 @@
 
                 <h2>Quiz</h2>
                 <p>
-                    Now it's your turn! Take a look at these pairs of sentences and try to select the edits.
+                    Now it's your turn! Take a look at these pairs of sentences and try to select the edits. <b>You do not need to annotate your edits, just select the alignment!</b>
                 </p>
 
-                <todo>How do I make this interactive? We would need to reference Yao's interface here somehow</todo>
+                <iframe id="deletion_quiz_2" src="quiz_instance.html?original=Genetic diversity among male bees in honey bee mating areas can lead to stronger, healthier honey bee colonies.
+                &simplified=When male bees have diversity in their DNA, honey bee mating areas can lead to stronger and healthier honey bee groups." width="100%" height="550" class="center db bb b--black-20"></iframe>
 
-                <ul>
-                    <li>Genetic diversity among male bees in honey bee mating areas can lead to stronger, healthier honey bee colonies.</li>
-                    <li>The Krispy Kreme location has been closed since Feb. 10, when it was gutted by suspected arson, leaving the back of the building a charred shell and melting much of the interior.</li>
-                </ul>
+                <iframe id="deletion_quiz_2" src="quiz_instance.html?original=The Krispy Kreme location has been closed since Feb. 10, when it was gutted by suspected arson, leaving the back of the building a charred shell and melting much of the interior.
+                &simplified=The Krispy Kreme, a popular doughnut shop in Atlanta, has been closed after it was burned down, leaving the back of the building a charred shell, while melting much of the inside." width="100%" height="550" class="center db bb b--black-20"></iframe>
+                
 
                 <p>
                     In the real HIT, we have trained another AI to provide the alignment for you. However, this AI is frequently wrong (it will be wrong for almost every HIT), so please also fix its alignments. Go ahead and try it!
                 </p>
 
-                <ul>
-                    <li>Sanskrit arose in South Asia after its predecessor languages had diffused there from the northwest in the late Bronze Age.</li>
-                </ul>
+                <todo>Add given alignments</todo>
+
+                <iframe id="deletion_quiz_2" src="quiz_instance.html?original=Sanskrit arose in South Asia after its predecessor languages had diffused there from the northwest in the late Bronze Age.
+                &simplified=After the Bronze age, old, parent languages had began travelling into South Asia. From that, Sansckrit arose." width="100%" height="550" class="center db bb b--black-20"></iframe>
             </tab-content>
             <tab-content title="Annotating Deletions">
                 <h1>Annotating Deletions</h1>
@@ -160,14 +159,14 @@
                             <edit
                                 type="deletion"
                                 span="entire"
-                                answer="1"
+                                answer="3"
                                 explanation=""
                             ></edit>
                             <br />
                             <edit
                                 type="deletion"
                                 span="only"
-                                answer="1"
+                                answer="2"
                                 explanation="“entire” and “only” contain information emthasizing the rarity of the Hecksherville valley only having two villages. While the main idea of the sentence is retained, key information was lost."
                             ></edit>
                         </template>
