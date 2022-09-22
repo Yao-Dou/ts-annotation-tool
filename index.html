@@ -34,7 +34,7 @@
                 <i class="fa-regular fa-comment fa-1-5x icon-default pointer"></i>
             </p>
             <div id="comment_area_div" class="mt2 dn">
-                <textarea class="comment_area br5 bw1 ba br4 ph3 pv2 mid-gray w-100" name="comment" placeholder="Your comment"></textarea>
+                <textarea id="comment_area" class="comment_area br5 bw1 ba br4 ph3 pv2 mid-gray w-100" name="comment" placeholder="Your comment for this hit" @input="record_comment"></textarea>
             </div>
 
         </section>
@@ -46,17 +46,13 @@
                     <button @click="go_to_hit(current_hit + 1)" class="mid-gray br-100 pa1 bw0 bg-near-white pointer prev-next-btns">&nbsp;&gt;&nbsp;</button>
                 </div>
                 <div class="fr mt1 mr1">
-                    <div class="file-upload file-download br-100 w2-5 h2-5">
-                      <input type="button" id="download-btn"/>
-                      <label for="download-btn"><i class="pointer fa fa-arrow-down"></i></label>
-                    </div>
+                    <input type="button" id="download-btn" @click="handle_file_download"/>
+                    <label class="file-upload file-download br-100 w2-5 h2-5 pointer" for="download-btn"><i class="fa fa-arrow-down"></i></label>
                 </div>
 
                 <div class="fr mt1 mr2 ml2">
-                    <div class="file-upload br-100 w2-5 h2-5">
-                      <input type="file" id="upload-btn" @change="handle_file_upload"/>
-                      <label for="upload-btn"><i class="pointer fa fa-arrow-up"></i></label>
-                    </div>
+                    <input type="file" id="upload-btn" @change="handle_file_upload"/>
+                    <label class="file-upload br-100 w2-5 h2-5 pointer" for="upload-btn"><i class="fa fa-arrow-up"></i></label>
                 </div>
 
                 <div class="fr mr3">

@@ -280,7 +280,7 @@ const app = Vue.createApp({
                         new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
                         new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(this.edits_dict[key][i]["original"][1], this.edits_dict[key][i]["original"][2])}&nbsp`;
                         new_html += `</span>`;
-                        new_html += `<span class="edit-type txt-${key}${light} f3"> to </span>`;
+                        new_html += `<span class="edit-type txt-${key}${light} f3"> with </span>`;
                         new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
                         new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(this.edits_dict[key][i]["simplified"][1], this.edits_dict[key][i]["simplified"][2])}&nbsp`;
                         new_html += `</span>`;
@@ -401,10 +401,15 @@ const app = Vue.createApp({
             this.process_edits_html();
             $(`.circle`).removeClass('circle-active');
             $(`#circle-${this.current_hit}`).addClass('circle-active');
-            if ($(`#circle-${this.current_hit}`).hasClass("circle-bookmark")) {
+            if ("bookmark" in this.hits_data[this.current_hit - 1] && this.hits_data[this.current_hit - 1]["bookmark"]) {
                 $(`.bookmark`).addClass('bookmark-active');
             } else {
                 $(`.bookmark`).removeClass('bookmark-active');
+            }
+            if ("comment" in this.hits_data[this.current_hit - 1]) {
+                $(`#comment_area`).val(this.hits_data[this.current_hit - 1]["comment"]);
+            } else {
+                $(`#comment_area`).val("");
             }
         },
         go_to_hit(hit_num) {
@@ -439,6 +444,10 @@ const app = Vue.createApp({
         leave_comment(event) {
             // if #comment_area_div is not displayed, display it
             $("#comment_area_div").show();
+        },
+        record_comment(event) {
+            // record the comment
+            this.hits_data[this.current_hit - 1]["comment"] = event.target.value;
         },
         cancel_click() {
             $(".icon-default").removeClass("open")
@@ -554,6 +563,11 @@ const app = Vue.createApp({
             }
         },
         bookmark_this_hit() {
+            if ("bookmark" in this.hits_data[this.current_hit - 1]) {
+                this.hits_data[this.current_hit - 1].bookmark = !this.hits_data[this.current_hit - 1].bookmark
+            } else {
+                this.hits_data[this.current_hit - 1].bookmark = true
+            }
             // if "bookmark-active" is in classlist of ".bookmark"
             if ($(".bookmark").hasClass("bookmark-active")) {
                 // remove "bookmark-active" from classlist of ".bookmark"
@@ -624,6 +638,18 @@ const app = Vue.createApp({
             this.total_hits = new_json.length;
             this.process_everything();
         },
+        handle_file_download() {
+            var json = JSON.stringify(this.hits_data);
+            var blob = new Blob([json], {type: "application/json"});
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "annotations.json";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
     },
     created: function () {
         fetch("https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/human_references_58.json")
@@ -1077,7 +1103,7 @@ const app = Vue.createApp({
                                 this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
                                 this.$parent.annotating_edit_span_for_split += `&nbsp${original_sentence.substring(category_id_dict["original"][1], category_id_dict["original"][2])}&nbsp`;
                                 this.$parent.annotating_edit_span_for_split += `</span>`;
-                                this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> to </span>`;
+                                this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> with </span>`;
                                 this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
                                 this.$parent.annotating_edit_span_for_split += `&nbsp${simplified_sentence.substring(category_id_dict["simplified"][1], category_id_dict["simplified"][2])}&nbsp`;
                                 this.$parent.annotating_edit_span_for_split += `</span>`;

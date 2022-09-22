@@ -610,7 +610,7 @@
                 </example-sent>
 
                 <h2>Examples</h2>
-                <p>As mentioned before, substitution is categorized into four types as the new phrase expresses: </p>
+                <p>As mentioned before, substitution is categorized into four types as the new phrase expresses:</p>
                 <ul>
                     <li>the same meaning (paraphrase)</li>
                     <li>less information</li>
@@ -784,9 +784,9 @@
                 <p>A sentence split is an attempt to simplify the complex original sentence by
                     splitting it into two or more simpler sentences. Although the split edits are
                     easy to spot and are automatically marked as a <span class="txt-split">||</span> symbol,
-                    split edits are always accompanied by other edits like deletion, substitution, or insertion, which you need to mark as well.</p>
-                <p>
-                    For example, to split a sentence, simply adding punctuation marks such as periods is not enough, as the new sentences should be grammatically correct.
+                    split edits are usually accompanied by other edits like deletion, substitution, or insertion, which you need to mark as well.</p>
+                <p class="mt1">
+                    For example, to split a sentence, only changing the punctuation like comma to period and uppercasing the first letter of the second sentence is usually not enough to make the new sentences grammatically correct.
                 </p>
                 <p>
                     Splits can either be good or unnecessary. A good split is one that makes the sentence simpler and easier to understand. An unnecessary split is one that does not make the sentence simpler.
@@ -798,6 +798,22 @@
                 <p>
                     Now let's look at some examples of split edits.
                 </p>
+                <p class="fw5">Split edits by only changing the punctuation:</p>
+                <example-sent>
+                    <template #complex-sent>A typical afternoon in Iceland can feel like standing in a wind tunnel loaded with seawater, and yet Icelandic horses trot around calmly.</template>
+                    <template #simple-sent>A typical afternoon in Iceland can feel like standing in a wind tunnel loaded with seawater. <esp>||</esp> And yet Icelandic horses trot around calmly.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            split_edit="simple"
+                            simplify=false
+                            span="and"
+                            explanation="only change the punctuation and uppercase the first letter of the second sentence."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <p class="fw5">Split edits associated with a deletion edit:</p>
 
                 <example-sent>
                     <template #complex-sent>Today is Jack's 21st birthday, <esp>and</esp> he and his famility goes to Florida to celebrate!</template>
@@ -812,6 +828,70 @@
                             ></edit>
                     </template>
                 </example-sent>
+
+                <p class="fw5">Split edits associated with an insertion edit:</p>
+                <example-sent>
+                    <template #complex-sent>Animals — our sharp, loud, restless, dangerous, inconvenient planetary roommates — were pushed to the margins.</template>
+                    <template #simple-sent>Animals <esp>are</esp> our sharp, loud, restless, dangerous, inconvenient planetary roommates. <esp>||</esp> <esp>But they</esp> were pushed to the margins.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            split_edit="insertion"
+                            simplify=false
+                            span="and"
+                            explanation="delete `and` is associated with this split edit."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <p class="fw5">Split edits associated with a substitution edit:</p>
+                <example-sent>
+                    <template #complex-sent>“People may be less likely to notice days with a modest increase in fine particulate matter from smoke, 
+                        but those days can still have an impact on people’s health,” said Marissa Childs, <esp>who</esp> led the research while getting her Ph.D from Stanford.</template>
+                    <template #simple-sent>“People may be less likely to notice days with a modest increase in fine particulate matter from smoke, 
+                        but those days can still have an impact on people’s health,” said Marissa Childs. <esp>||</esp> <esp>She</esp> led the research while getting her Ph.D from Stanford. </template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            split_edit="substitution"
+                            simplify=false
+                            span="who"
+                            span2="She"
+                            explanation="substitute `who` with `She` is associated with this split edit."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <p class="red">more complex and interesting ones</p>
+
+                <example-sent>
+                    <template #complex-sent>Defined as air quality deemed unhealthy for all age groups, "extreme smoke day" happens more and more often in the past decade.</template>
+                    <template #simple-sent>"Extreme smoke day" is defined as air quality deemed unhealthy for all age groups. <esp>||</esp> It happens more and more often in the past decade.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            split_edit="insertion"
+                            simplify=false
+                            span="and"
+                            explanation="delete `and` is associated with this split edit."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>Internationally renowned for its breeding and success in competitions, Skeiðvellir is home to Icelandic Horseworld, a tourist attraction on the premises.</template>
+                    <template #simple-sent>"Extreme smoke day" is defined as air quality deemed unhealthy for all age groups. <esp>||</esp> It happens more and more often in the past decade.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            split_edit="insertion"
+                            simplify=false
+                            span="and"
+                            explanation="delete `and` is associated with this split edit."
+                            ></edit>
+                    </template>
+                </example-sent>
+                
 
                 <h2>Quiz</h2>
             </tab-content>

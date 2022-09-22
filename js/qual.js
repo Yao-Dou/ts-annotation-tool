@@ -40,14 +40,34 @@ const EditHeader = Vue.component('edit-header', {
       <template v-if="this.type == 'substitution'">
         <span class="edit-type txt-substitution f3">substitute </span>
         <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;<slot name="span"></slot>&nbsp;</span>
-        <span class="edit-type txt-substitution f3">to </span>
+        <span class="edit-type txt-substitution f3">with </span>
         <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;<slot name="span2"></slot>&nbsp;</span>
+      </template>
+      <template v-if="this.type == 'split' && this.split_edit=='simple'">
+        <span class="edit-type txt-split f3">split </span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
       </template>
       <template v-if="this.type == 'split' && this.split_edit=='deletion'">
         <span class="edit-type txt-split f3">split </span>
         <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
         <span class="edit-type txt-split f3">( delete </span>
         <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;<slot name="span"></slot>&nbsp;</span>
+        <span class="edit-type txt-split f3">)</span>
+      </template>
+      <template v-if="this.type == 'split' && this.split_edit=='insertion'">
+        <span class="edit-type txt-split f3">split </span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
+        <span class="edit-type txt-split f3">( insert </span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;<slot name="span"></slot>&nbsp;</span>
+        <span class="edit-type txt-split f3">)</span>
+      </template>
+      <template v-if="this.type == 'split' && this.split_edit=='substitution'">
+        <span class="edit-type txt-split f3">split </span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
+        <span class="edit-type txt-split f3">( substitute </span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;<slot name="span"></slot>&nbsp;</span>
+        <span class="edit-type txt-split f3">with</span>
+        <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;<slot name="span2"></slot>&nbsp;</span>
         <span class="edit-type txt-split f3">)</span>
       </template>
     </div>

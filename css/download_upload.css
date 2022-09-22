@@ -11,7 +11,17 @@
     /* font-size: 100px; */
   }
 
-  .file-upload input {
+  #download-btn {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -9999px;
+    opacity: 0;
+    visibility: hidden;
+    box-sizing: border-box;
+  }
+
+  #upload-btn {
     position: absolute;
     width: 0;
     height: 0;
