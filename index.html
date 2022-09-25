@@ -24,7 +24,7 @@
 </head>
 
 <body class="sans-serif">
-    <div id="app" class="container w-60 mv3 mb-3 card-body">
+    <div id="app" class="container w-65 mv3 mb-3 card-body">
         <!-- <svg id="lines">
             <line x1="50" y1="50" x2="1000" y2="1000" stroke="black" stroke-width="1" />
         </svg> -->
@@ -176,7 +176,7 @@
                     </div>
                 </div>
 
-                <div class="quality-selection w-100" data-category="deletion">
+                <div class="quality-selection w-100 active" data-category="deletion">
                     <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
                     <div class="f4 mt0 mb2 tc">
                         Edit:
@@ -216,7 +216,7 @@
                                         <input class="checkbox-tools checkbox-tools-severity " type="radio" name="severity"
                                             id="severity-4" value="very bad" v-model="deletion_severity_box">
                                         <label class="for-checkbox-tools-severity question-deletion" for="severity-4" id="severity-4-label">
-                                            4 - very much
+                                            4 - a lot
                                         </label>
                                     </div>
                                 </div>
@@ -236,7 +236,7 @@
                             rows="4" style="width: 100%; resize: none; overflow-y: hidden;"></textarea>
                       </div> -->
                         <!-- disable  -->
-                        <div class="buttons tc mt2">
+                        <div class="buttons tc">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
                             <button @click="save_anntotation_click('deletion', $event)" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns" :class="{'o-40': save_validated_deletion, 'grow': !save_validated_deletion}" :disabled="save_validated_deletion">Save <i class="fa-solid fa-check"></i></button>
                         </div>
@@ -445,7 +445,7 @@
                             rows="4" style="width: 100%; resize: none; overflow-y: hidden;"></textarea>
                       </div> -->
                         <!-- disable  -->
-                        <div class="buttons tc mt2">
+                        <div class="buttons tc">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
                             <button @click="save_anntotation_click('substitution', $event)" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns" :class="{'o-40': save_validated_substitution, 'grow': !save_validated_substitution}" :disabled="save_validated_substitution">Save <i class="fa-solid fa-check"></i></button>
                         </div>
@@ -453,7 +453,7 @@
                 </div>
 
 
-                <div class="quality-selection w-100" data-category="insertion">
+                <div class="quality-selection w-100 active" data-category="insertion">
                     <p class="f3 courier ttu mv1">Annotating an Edit <i class="fa-solid fa-pencil"></i></p>
                     <div class="f4 mt0 mb2 tc">
                         Edit:
@@ -466,56 +466,151 @@
                         <div class="single_part over-hide z-bigger mt3">
                             <div class="row">
                                 <div class="pb2">
-                                    <p class="mb2 mt3-5 b tracked-light">Is this insertion edit an <i>elaboration</i>, <i>hallucination</i> or adding trivial words?</i>
+                                    <p class="mb2 mt3-5 b tracked-light">Select the type of this insertion edit.</i>
                                     </p>
                                     <div class="tc mt3">
-                                        <div class="column-severity w-33">
+                                        <div class="column-severity w-20">
                                             <input @click="insertion_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
                                             id="insertion-type-elaboration" value="elaboration" v-model="insertion_type_box">
                                             <label class="for-checkbox-tools-yes-no question-insertion" for="insertion-type-elaboration">Elaboration</label>
                                         </div>
-                                        <div class="column-severity w-33">
-                                            <input @click="insertion_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
-                                            id="insertion-type-hallucination" value="hallucination" v-model="insertion_type_box">
-                                            <label class="for-checkbox-tools-yes-no question-insertion" for="insertion-type-hallucination">Hallucination</label>
-                                        </div>
-                                        <div class="column-severity w-33">
+                                        <div class="column-severity w-20">
                                             <input @click="insertion_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
                                                 id="insertion-type-trivial" value="trivial" v-model="insertion_type_box">
                                             <label class="for-checkbox-tools-severity question-insertion" for="insertion-type-trivial">Trivial Insertion</label>
+                                        </div>
+                                        <div class="column-severity w-20">
+                                            <input @click="insertion_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-type-repetition" value="repetition" v-model="insertion_type_box">
+                                            <label class="for-checkbox-tools-yes-no question-insertion" for="insertion-type-repetition">Repetition</label>
+                                        </div>
+                                        <div class="column-severity w-20">
+                                            <input @click="insertion_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-type-contradiction" value="contradiction" v-model="insertion_type_box">
+                                            <label class="for-checkbox-tools-yes-no question-insertion" for="insertion-type-contradiction">Contradiction</label>
+                                        </div>
+                                        <div class="column-severity w-20">
+                                            <input @click="insertion_type_click" class="checkbox-tools checkbox-tools-severity" type="radio" name="insertion-type"
+                                            id="insertion-type-hallucination" value="hallucination" v-model="insertion_type_box">
+                                            <label class="for-checkbox-tools-yes-no question-insertion" for="insertion-type-hallucination">Hallucination</label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="insertion-type-elaboration insertion-type-div mt1 dn pb2">
-                                    <p class="mt0 mb2 b tracked-light">How much it helps you to read and understand the sentence?</i>
+                                    <p class="mt0 mb2 b tracked-light">Rate the efficacy (how much it helps you to read and understand the sentence?)</i>
                                     </p>
                                     <div class="tc">
                                         <div class="column-severity w-33">
                                             <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-elaboration-severity"
                                                 id="inerstion-elaboration-severity-1" value="minor" v-model="insertion_elaboration_severity_box">
                                             <label class="for-checkbox-tools-severity question-insertion" for="inerstion-elaboration-severity-1">
-                                                1 - Minor
+                                                1 - minor
                                             </label>
                                         </div>
                                         <div class="column-severity w-33">
                                             <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-elaboration-severity"
                                                 id="inerstion-elaboration-severity-2" value="somewhat" v-model="insertion_elaboration_severity_box">
                                             <label class="for-checkbox-tools-severity question-insertion" for="inerstion-elaboration-severity-2">
-                                                2 - Somewhat
+                                                2 - somewhat
                                             </label>
                                         </div>
                                         <div class="column-severity w-33">
                                             <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-elaboration-severity"
                                                 id="inerstion-elaboration-severity-3" value="a lot" v-model="insertion_elaboration_severity_box">
                                             <label class="for-checkbox-tools-severity question-insertion" for="inerstion-elaboration-severity-3">
-                                                3 - A lot
+                                                3 - a lot
                                             </label>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="insertion-type-trivial insertion-type-div dn pb2">
+                                    <p class="mt1 pb2 b tracked-light">Is the inserted phrase or word a transition (i.e. <i>"but"</i>, <i>"so"</i>)?
+                                        <input class="checkbox-tools-yes-no" type="radio" name="insertion-trivial-transition-yes-no"
+                                            id="insertion-trivial-transition-yes" value="yes" v-model="insertion_trivial_transition_yes_no_box">
+                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-trivial-transition-yes">yes</label>
+                                        <input class="checkbox-tools-yes-no" type="radio" name="insertion-trivial-transition-yes-no"
+                                            id="insertion-trivial-transition-no" value="no" v-model="insertion_trivial_transition_yes_no_box">
+                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-trivial-transition-no">no</label>
+                                    </p>
+
+                                    <p class="pt2 b tracked-light">Does it help you to read and understand the sentence?
+                                        <input @click="insertion_show_grammar" class="checkbox-tools-yes-no" type="radio" name="insertion-trivial-yes-no"
+                                            id="insertion-trivial-yes" value="yes" v-model="insertion_trivial_yes_no_box">
+                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-trivial-yes">yes</label>
+                                        <input @click="insertion_show_grammar" class="checkbox-tools-yes-no" type="radio" name="insertion-trivial-yes-no"
+                                            id="insertion-trivial-no" value="no" v-model="insertion_trivial_yes_no_box">
+                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-trivial-no">no</label>
+                                    </p>
+                                </div>
+
+                                <div class="insertion-type-repetition insertion-type-div mt1 dn pb2">
+                                    <p class="mt0 mb3 b tracked-light">Rate the severity (how much it makes the sentence harder to read and understand?).</p>
+                                    <div class="tc">
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-repetition-severity"
+                                                id="inerstion-repetition-severity-1" value="minor" v-model="insertion_repetition_severity_box">
+                                            <label class="for-checkbox-tools-severity question-insertion" for="inerstion-repetition-severity-1">
+                                                1 - minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-repetition-severity"
+                                                id="inerstion-repetition-severity-2" value="somewhat" v-model="insertion_repetition_severity_box">
+                                            <label class="for-checkbox-tools-severity question-insertion" for="inerstion-repetition-severity-2">
+                                                2 - somewhat
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-repetition-severity"
+                                                id="inerstion-repetition-severity-3" value="a lot" v-model="insertion_repetition_severity_box">
+                                            <label class="for-checkbox-tools-severity question-insertion" for="inerstion-repetition-severity-3">
+                                                3 - a lot
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="insertion-type-contradiction insertion-type-div mt1 dn pb2">
+                                    <p class="mt0 mb3 b tracked-light">Rate the severity (how much it makes the sentence harder to read and understand?).</p>
+                                    <div class="tc">
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-contradiction-severity"
+                                                id="inerstion-contradiction-severity-1" value="minor" v-model="insertion_contradiction_severity_box">
+                                            <label class="for-checkbox-tools-severity question-insertion" for="inerstion-contradiction-severity-1">
+                                                1 - minor
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-contradiction-severity"
+                                                id="inerstion-contradiction-severity-2" value="somewhat" v-model="insertion_contradiction_severity_box">
+                                            <label class="for-checkbox-tools-severity question-insertion" for="inerstion-contradiction-severity-2">
+                                                2 - somewhat
+                                            </label>
+                                        </div>
+                                        <div class="column-severity w-33">
+                                            <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-contradiction-severity"
+                                                id="inerstion-contradiction-severity-3" value="a lot" v-model="insertion_contradiction_severity_box">
+                                            <label class="for-checkbox-tools-severity question-insertion" for="inerstion-contradiction-severity-3">
+                                                3 - a lot
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="insertion-type-hallucination insertion-type-div mt1 dn pb2">
-                                    <p class="mt0 mb3 b tracked-light">How much it affects the main idea of the original sentence?</p>
+                                    <p class="mt0 pb2 b tracked-light">Is the new infromation hallucinated in relevant to the context?
+                                        <input class="checkbox-tools-yes-no" type="radio" name="insertion-hallucination-relevance-yes-no"
+                                            id="insertion-hallucination-relevance-yes" value="yes" v-model="insertion_hallucination_relevance_yes_no_box">
+                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-hallucination-relevance-yes">yes</label>
+                                        <input class="checkbox-tools-yes-no" type="radio" name="insertion-hallucination-relevance-yes-no"
+                                            id="insertion-hallucination-relevance-no" value="no" v-model="insertion_hallucination_relevance_yes_no_box">
+                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-hallucination-relevance-no">no</label>
+                                    </p>
+
+                                    <p class="mt0 mb3 b tracked-light">Rate the severity (how much it makes the sentence harder to read and understand?).</p>
                                     <div class="tc">
                                         <div class="column-severity w-33">
                                             <input @click="insertion_show_grammar" class="checkbox-tools checkbox-tools-severity " type="radio" name="inerstion-hallucination-severity"
@@ -541,16 +636,7 @@
                                     </div>
                                 </div>
 
-                                <div class="insertion-type-trivial insertion-type-div dn pb2">
-                                    <p class="mt1 b tracked-light">Does it help you to read and understand the sentence?
-                                        <input @click="insertion_show_grammar" class="checkbox-tools-yes-no" type="radio" name="insertion-trivial-yes-no"
-                                            id="insertion-trivial-yes" value="yes" v-model="insertion_trivial_yes_no_box">
-                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-trivial-yes">yes</label>
-                                        <input @click="insertion_show_grammar" class="checkbox-tools-yes-no" type="radio" name="insertion-trivial-yes-no"
-                                            id="insertion-trivial-no" value="no" v-model="insertion_trivial_yes_no_box">
-                                        <label class="normal for-checkbox-tools-yes-no question-insertion" for="insertion-trivial-no">no</label>
-                                    </p>
-                                </div>
+
 
                                 <div class="insertion-grammar-div dn">
                                     <p class="mt2 mb3 b tracked-light">Does it introduce any fluency / grammar error?
@@ -615,7 +701,7 @@
                             rows="4" style="width: 100%; resize: none; overflow-y: hidden;"></textarea>
                       </div> -->
                         <!-- disable  -->
-                        <div class="buttons tc mt2">
+                        <div class="buttons tc">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
                             <button @click="save_anntotation_click('split', $event)" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns" :class="{'o-40': save_validated_split, 'grow': !save_validated_split}" :disabled="save_validated_split">Save <i class="fa-solid fa-check"></i></button>
                         </div>

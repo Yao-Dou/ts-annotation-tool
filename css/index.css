@@ -149,6 +149,9 @@
     width: 15%;
 }
 
+.w-16 {
+    width: 16.6%;
+}
 
 #lines {
     position: absolute;
@@ -267,7 +270,7 @@
 #response_box {
     position: fixed;
     top: 72px;
-    left: 80%;
+    left: 83%;
 }
 
 .w2-5 {
@@ -291,4 +294,8 @@
 textarea {
     outline: none;
     /* border: none; */
+}
+
+.w-65 {
+    width: 65%;
 }
