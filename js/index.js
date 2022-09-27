@@ -2,7 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             total_hits: 0,
-            current_hit: 3,
+            current_hit: 1,
             hits_data: null,
             original_html: '',
             simplified_html: '',
@@ -590,65 +590,151 @@ const app = Vue.createApp({
                     } else if (key == 'substitution') {
                         let type = annotation[0]
                         if (type == "same") {
-                            if (annotation[1] == "yes") {
+                            if (annotation[1] == "positive") {
                                 annotation_text += `<span class="light-orange ba bw1 pa1">good paraphrase</span>`;
+                                annotation_text += `<span class="light-pink br-pills ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
+                            } else if (annotation[1] == "negative") {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad paraphrase</span>`;
+                                annotation_text += `<span class="light-pink br-pills ba bw1 pa1">severity: ${annotation[3]}</span>`;
                             } else {
                                 annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary paraphrase</span>`;
                             }
-                            if (annotation[2] == "yes") {
+                            if (annotation[4] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (type == "different") {
-                            annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution</span>`;
-                            annotation_text += `<span class="light-pink ba bw1 pa1">${annotation[1]} severe</span>`;
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution that changes the meaning</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
                             if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (type == "less") {
                             if (annotation[1] == "perfect" ||  annotation[1] == "good") {
-                                annotation_text = `<span class="light-orange ba bw1 pa1">${annotation[1]} substitution</span>`
+                                annotation_text = `<span class="light-orange ba bw1 pa1">${annotation[1]} substitution that removes unnecessary information</span>`
                             } else {
-                                annotation_text = `<span class="light-purple ba bw1 pa1">${annotation[1]} substitution</span>`;
+                                annotation_text = `<span class="light-purple ba bw1 pa1">${annotation[1]} substitution that removes necessary information</span>`;
                             }
                             if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (type == "more") {
                             if (annotation[1] == "elaboration") {
-                                annotation_text += `<span class="light-orange ba bw1 pa1">include elaboration</span>`;
-                                annotation_text += `<span class="light-pink ba bw1 pa1">simplify ${annotation[2]}</span>`;
-                            } else {
-                                annotation_text += `<span class="light-purple ba bw1 pa1">include hallucination</span>`;
-                                annotation_text += `<span class="light-pink ba bw1 pa1">hallucinate ${annotation[2]}</span>`;
-                            }
-                            if (annotation[3] == "yes") {
-                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                annotation_text += `<span class="light-orange ba bw1 pa1">good substitution with elaboration</span>`;
+                                annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
+                                if (annotation[3] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
+                            } else if (annotation[1] == "hallucination") {
+                                if (annotation[2] == "no") {
+                                    annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>irrelevant</i> hallucination</span>`;
+                                } else {
+                                    annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>relevant</i> hallucination</span>`;
+                                }
+                                annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[3]}</span>`;
+                                if (annotation[4] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
+                            } else if (annotation[1] == "trivial") {
+                                if (annotation[2] == "no") {
+                                    annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary substitution with trivial change</span>`;
+                                } else {
+                                    annotation_text += `<span class="light-orange ba bw1 pa1">good substitution with trivial change</span>`;
+                                    annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[3]}</span>`;
+                                }
+                                if (annotation[4] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
+                            } else if (annotation[1] == "repetition") {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with repetition</span>`;
+                                annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
+                                if (annotation[3] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
+                            } else if (annotation[1] == "contradiction") {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with contradiction</span>`;
+                                annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
+                                if (annotation[3] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
                             }
                         }
                     } else if (key == 'insertion') {
                         if (annotation[0] == "elaboration") {
-                            annotation_text += `<span class="light-orange ba bw1 pa1">elaboration</span>`;
-                            annotation_text += `<span class="light-pink ba bw1 pa1">simplify ${annotation[1]}</span>`;
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good substitution with elaboration</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[1]}</span>`;
+                            if (annotation[2] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
                         } else if (annotation[0] == "hallucination") {
-                            annotation_text += `<span class="light-purple ba bw1 pa1">hallucination</span>`;
-                            annotation_text += `<span class="light-pink ba bw1 pa1">hallucinate ${annotation[1]}</span>`;
-                        } else {
-                            if (annotation[1] == "yes") {
-                                annotation_text += `<span class="light-orange ba bw1 pa1">good trivial insertion</span>`;
+                            if (annotation[1] == "no") {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>irrelevant</i> hallucination</span>`;
                             } else {
-                                annotation_text += `<span class="light-purple ba bw1 pa1">bad trivial insertion</span>`;
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>relevant</i> hallucination</span>`;
+                            }
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
+                            if (annotation[3] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
+                        } else if (annotation[0] == "trivial") {
+                            if (annotation[1] == "no") {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary substitution with trivial change</span>`;
+                            } else {
+                                annotation_text += `<span class="light-orange ba bw1 pa1">good substitution with trivial change</span>`;
+                                annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
+                            }
+                            if (annotation[3] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
+                        } else if (annotation[0] == "repetition") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with repetition</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
+                            if (annotation[2] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
+                        } else if (annotation[0] == "contradiction") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with contradiction</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
+                            if (annotation[2] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         }
-                        if (annotation[2] == "yes") {
+                    } else if (key == 'split') {
+                        if (annotation[0] == "positive") {
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good split</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
+                        } else if (annotation[0] == "negative") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad split</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
+                        } else {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary split</span>`
+                        }
+                        if (annotation[3] == "yes") {
                             annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                         }
-                    } else if (key == 'split') {
-                        if (annotation[0] == "yes") {
-                            annotation_text = `<span class="light-orange ba bw1 pa1">good split</span>`
+                    } else if (key == 'reorder') {
+                        if (annotation[0] == "positive") {
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good reorder</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
+                        } else if (annotation[0] == "negative") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad reorder</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
                         } else {
-                            annotation_text = `<span class="light-purple ba bw1 pa1">unnecessary split</span>`;
+                            annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary reorder</span>`
                         }
-                        if (annotation[1] == "yes") {
+                        if (annotation[3] == "yes") {
+                            annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                        }
+                    } else if (key == 'structure') {
+                        if (annotation[0] == "positive") {
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good structure change</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
+                        } else if (annotation[0] == "negative") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad structure change</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
+                        } else {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary structure change</span>`
+                        }
+                        if (annotation[3] == "yes") {
                             annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                         }
                     }
@@ -809,15 +895,27 @@ const app = Vue.createApp({
             this.process_everything();
             this.refresh_edit();
         },
-        save_anntotation_click(category, event) {
+        save_annotation_click(category, event) {
             let edit_id = this.annotating_edit_span_category_id
             
             let box = []
             if (category == "deletion") {
                 box = [this.deletion_severity_box, this.deletion_grammar_yes_no_box]
+            } else if (category == "insertion") {
+                if (this.insertion_type_box == "elaboration") {
+                    box = [this.insertion_type_box, this.insertion_elaboration_severity_box, this.insertion_grammar_yes_no_box]
+                } else if (this.insertion_type_box == "hallucination") {
+                    box = [this.insertion_type_box, this.insertion_hallucination_relevance_yes_no_box, this.insertion_hallucination_severity_box, this.insertion_grammar_yes_no_box]
+                } else if (this.insertion_type_box == "trivial") {
+                    box = [this.insertion_type_box, this.insertion_trivial_yes_no_box, this.insertion_trivial_severity_box, this.insertion_grammar_yes_no_box]
+                } else if (this.insertion_type_box == "repetition") {
+                    box = [this.insertion_type_box, this.insertion_repetition_severity_box, this.insertion_grammar_yes_no_box]
+                } else if (this.insertion_type_box == "contradiction") {
+                    box = [this.insertion_type_box, this.insertion_contradiction_severity_box, this.insertion_grammar_yes_no_box]
+                }
             } else if (category == "substitution") {
                 if (this.substitution_type_box == "same") {
-                    box = [this.substitution_type_box, this.substitution_simplify_yes_no_box, this.substitution_grammar_yes_no_box]
+                    box = [this.substitution_type_box, this.substitution_impact_box, this.substitution_positive_severity_box, this.substitution_negative_severity_box, this.substitution_grammar_yes_no_box]
                 } else if (this.substitution_type_box == "different") {
                     box = [this.substitution_type_box, this.substitution_different_severity_box, this.substitution_grammar_yes_no_box]
                 } else if (this.substitution_type_box == "less") {
@@ -825,20 +923,22 @@ const app = Vue.createApp({
                 } else if (this.substitution_type_box == "more") {
                     if (this.substitution_more_type_box == "elaboration") {
                         box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_elaboration_severity_box, this.substitution_grammar_yes_no_box]
-                    } else {
-                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_hallucination_severity_box, this.substitution_grammar_yes_no_box]
+                    } else if (this.substitution_more_type_box == "hallucination") {
+                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_hallucination_relevance_yes_no_box, this.substitution_hallucination_severity_box, this.substitution_grammar_yes_no_box]
+                    } else if (this.substitution_more_type_box == "trivial") {
+                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_trivial_yes_no_box, this.substitution_trivial_severity_box, this.substitution_grammar_yes_no_box]
+                    } else if (this.substitution_more_type_box == "repetition") {
+                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_repetition_severity_box, this.substitution_grammar_yes_no_box]
+                    } else if (this.substitution_more_type_box == "contradiction") {
+                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_contradiction_severity_box, this.substitution_grammar_yes_no_box]
                     }
                 }
             } else if (category == "split") {
-                box = [this.split_simplify_yes_no_box, this.split_grammar_yes_no_box]
-            } else if (category == "insertion") {
-                if (this.insertion_type_box == "elaboration") {
-                    box = [this.insertion_type_box, this.insertion_elaboration_severity_box, this.insertion_grammar_yes_no_box]
-                } else if (this.insertion_type_box == "hallucination") {
-                    box = [this.insertion_type_box, this.insertion_hallucination_severity_box, this.insertion_grammar_yes_no_box]
-                } else{
-                    box = [this.insertion_type_box, this.insertion_trivial_yes_no_box, this.insertion_grammar_yes_no_box]
-                }
+                box = [this.split_impact_box, this.split_negative_severity_box, this.split_positive_severity_box, this.split_grammar_yes_no_box]
+            } else if (category == "reorder") {
+                box = [this.reorder_impact_box, this.reorder_negative_severity_box, this.reorder_positive_severity_box, this.reorder_grammar_yes_no_box]
+            } else if (category == "structure") {
+                box = [this.structure_impact_box, this.structure_negative_severity_box, this.structure_positive_severity_box, this.structure_grammar_yes_no_box]
             }
             console.log(box)
             this.hits_data[this.current_hit - 1].annotations[category][edit_id] = box
