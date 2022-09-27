@@ -102,7 +102,7 @@ const app = Vue.createApp({
             let original_sentence = this.hits_data[this.current_hit - 1].original
             let original_spans = this.hits_data[this.current_hit - 1].original_spans
             original_spans.sort(function(a, b) {
-                return a[1] - b[1];
+                return a[1] - b[1] || b[2] - a[2];
             });
             // iterate original_spans list
             for (let i = 0; i < original_spans.length; i++) {
@@ -166,7 +166,7 @@ const app = Vue.createApp({
             original_spans.push([category_id, start, end]);
             // rank original_spans list by [1]
             original_spans.sort(function(a, b) {
-                return a[1] - b[1];
+                return a[1] - b[1] || b[2] - a[2];
             });
             // iterate original_spans list
             for (let i = 0; i < original_spans.length; i++) {
@@ -221,7 +221,7 @@ const app = Vue.createApp({
             let simplified_sentence = this.hits_data[this.current_hit - 1].simplified
             let simplified_spans = this.hits_data[this.current_hit - 1].simplified_spans
             simplified_spans.sort(function(a, b) {
-                return a[1] - b[1];
+                return a[1] - b[1] || b[2] - a[2];
             });
             // iterate simplified_spans list
             for (let i = 0; i < simplified_spans.length; i++) {
@@ -298,7 +298,7 @@ const app = Vue.createApp({
             simplified_spans.push([category_id, start, end]);
             // rank simplified_spans list by [1]
             simplified_spans.sort(function(a, b) {
-                return a[1] - b[1];
+                return a[1] - b[1] || b[2] - a[2];
             });
             // iterate simplified_spans list
             for (let i = 0; i < simplified_spans.length; i++) {
@@ -815,7 +815,6 @@ const app = Vue.createApp({
             let simplified_spans = this.hits_data[this.current_hit - 1].simplified_spans
             let selected_category = $("input[name=edit_cotegory]:checked").val();
             let category_edits = this.edits_dict[selected_category]
-            console.log(this.edits_dict)
             // get the highest key in the category_edits
             let max_key = 0;
             for (let key in category_edits) {
