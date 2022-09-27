@@ -13,6 +13,8 @@
 	--insertion: #64c466;
 	--deletion: #ee2a2a;
 	--split: #F7CE46;
+	--reorder: #3ca3a7;
+	--structure: #EF8c56;
 	--selection: #0071e3;
 }
 
@@ -229,6 +231,18 @@ p{
 .checkbox-tools:checked + label.question-insertion,
 .checkbox-tools:checked + label.txt-insertion{
 	border: 2px solid var(--insertion);
+}
+
+.checkbox-tools-yes-no:checked + label.question-reorder,
+.checkbox-tools:checked + label.question-reorder,
+.checkbox-tools:checked + label.txt-reorder{
+	border: 2px solid var(--reorder);
+}
+
+.checkbox-tools-yes-no:checked + label.question-structure,
+.checkbox-tools:checked + label.question-structure,
+.checkbox-tools:checked + label.txt-structure{
+	border: 2px solid var(--structure);
 }
 
 .checkbox-tools-yes-no:not(:checked) + label:hover {
