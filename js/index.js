@@ -132,8 +132,13 @@ const app = Vue.createApp({
                     if (i == start_i) {
                         sentence_html += original_sentence.substring(original_spans[i][1], next_span[1]);
                     } else {
-                        sentence_html += original_sentence.substring(original_spans[i][2], next_span[1]);
-                    }                    
+                        if (whether_more_overlap) {
+                            sentence_html += original_sentence.substring(original_spans[i-1][2], next_span[1]);
+                        } else {
+                            sentence_html += original_sentence.substring(original_spans[i][2], next_span[1]);
+                        }
+                    }
+                    whether_more_overlap = false             
                     let next_category = this.id_to_category[next_span[0]]
                     let outside = ""
                     if (i < original_spans.length - 2 && original_spans[i + 2][1] <= original_spans[i+1][2]) {
@@ -236,8 +241,13 @@ const app = Vue.createApp({
                     if (i == start_i) {
                         sentence_html += original_sentence.substring(original_spans[i][1], next_span[1]);
                     } else {
-                        sentence_html += original_sentence.substring(original_spans[i][2], next_span[1]);
-                    }                    
+                        if (whether_more_overlap) {
+                            sentence_html += original_sentence.substring(original_spans[i - 1][2], next_span[1]);
+                        } else {
+                            sentence_html += original_sentence.substring(original_spans[i][2], next_span[1]);
+                        }
+                    }
+                    whether_more_overlap = false               
                     let next_category = this.id_to_category[next_span[0]]
                     let outside = ""
                     if (i < original_spans.length - 2 && original_spans[i + 2][1] <= original_spans[i+1][2]) {
@@ -330,38 +340,84 @@ const app = Vue.createApp({
                         sentence_html += `<span @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category}${light} pointer span simplified_span ${outside}" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
                     }
                 }
-                if (i < simplified_spans.length - 1) {
+                let start_i = i
+                let whether_more_overlap = false
+                while (i < simplified_spans.length - 1 && simplified_spans[i + 1][1] <= simplified_spans[start_i][2]) {
+                    // the next span is in the current span
                     let next_span = simplified_spans[i + 1]
-                    if (next_span[1] <= simplified_spans[i][2]) {
+                    if (i == start_i) {
                         sentence_html += simplified_sentence.substring(simplified_spans[i][1], next_span[1]);
-                        let next_category = this.id_to_category[next_span[0]]
-                        if (next_category == "split" && (simplified_sentence.substring(next_span[1], next_span[2]) =="||")) {
-                            sentence_html += `<span @mouseover.stop @mouseout.stop @mousedown.stop @mouseup.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} pointer span simplified_span txt-split split-sign" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                    } else {
+                        if (whether_more_overlap) {
+                            sentence_html += simplified_sentence.substring(simplified_spans[i - 1][2], next_span[1]);
+                        } else {
+                            sentence_html += simplified_sentence.substring(simplified_spans[i][2], next_span[1]);
+                        }
+                    }
+                    whether_more_overlap = false                 
+                    let next_category = this.id_to_category[next_span[0]]
+                    let outside = ""
+                    if (i < simplified_spans.length - 2 && simplified_spans[i + 2][1] <= simplified_spans[i+1][2]) {
+                        outside = "middleside"
+                    }
+                    if (next_category == "split" && (simplified_sentence.substring(next_span[1], next_span[2]) =="||")) {
+                        sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} pointer span simplified_span txt-split split-sign" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                    } else {
+                        let light = "-light"
+                        let simplified_span_id = next_span[3]
+                        if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (simplified_span_id in this.hits_data[[this.current_hit - 1]].annotations[next_category])) {
+                            light = ""
+                        }
+                        if (next_category == "split" || next_category == "structure") {
+                            let childcategory = this.id_to_category[next_span[4]]
+                            let childid = next_span[5]
+                            sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span ${outside}" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `"data-childcategory=${childcategory} data-childid=${childid}>`;
+                        } else {
+                            sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span ${outside}" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                        }
+                    }
+                    i++;
+                    if (i < simplified_spans.length - 1 && simplified_spans[i + 1][1] <= simplified_spans[i][2]) {
+                        whether_more_overlap = true
+                        // the next span is in the current span
+                        let next_next_span = simplified_spans[i + 1]
+                        sentence_html += simplified_sentence.substring(simplified_spans[i][1], next_next_span[1]);  
+                        let next_category = this.id_to_category[next_next_span[0]]
+                        if (next_category == "split" && (simplified_sentence.substring(next_next_span[1], next_next_span[2]) =="||")) {
+                            sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} pointer span simplified_span txt-split split-sign" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `">`;
                         } else {
                             let light = "-light"
-                            let simplified_span_id = next_span[3]
+                            let simplified_span_id = next_next_span[3]
                             if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (simplified_span_id in this.hits_data[[this.current_hit - 1]].annotations[next_category])) {
                                 light = ""
                             }
                             if (next_category == "split" || next_category == "structure") {
-                                let childcategory = this.id_to_category[next_span[4]]
-                                let childid = next_span[5]
-                                sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `"data-childcategory=${childcategory} data-childid=${childid}>`;
+                                let childcategory = this.id_to_category[next_next_span[4]]
+                                let childid = next_next_span[5]
+                                sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `"data-childcategory=${childcategory} data-childid=${childid}>`;
                             } else {
-                                sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                                sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `">`;
                             }
                         }
-                        sentence_html += simplified_sentence.substring(next_span[1], next_span[2]);
+                        sentence_html += simplified_sentence.substring(next_next_span[1], next_next_span[2]);
+                        sentence_html += "</span>";
+                        sentence_html += simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]);
+                        console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
                         sentence_html += `</span>`;
-                        sentence_html += simplified_sentence.substring(next_span[2], simplified_spans[i][2]);
-                        sentence_html += `</span>`;
-                        prev_idx = simplified_spans[i][2];
                         i++;
                     } else {
-                        sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
-                        sentence_html += `</span>`;
-                        prev_idx = simplified_spans[i][2];
+                        sentence_html += simplified_sentence.substring(next_span[1], next_span[2]);
+                        sentence_html += "</span>";
                     }
+                }
+                if (start_i != i) {
+                    if (whether_more_overlap) {
+                        sentence_html += simplified_sentence.substring(simplified_spans[i - 1][2], simplified_spans[start_i][2]);
+                    } else {
+                        sentence_html += simplified_sentence.substring(simplified_spans[i][2], simplified_spans[start_i][2]);
+                    }
+                    sentence_html += `</span>`;
+                    prev_idx = simplified_spans[start_i][2];
                 } else {
                     sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
                     sentence_html += `</span>`;
@@ -400,36 +456,80 @@ const app = Vue.createApp({
                         sentence_html += `<span @mousedown.stop @mouseup.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category} pointer span simplified_span ${outside}" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
                     }
                 }
-                if (i < simplified_spans.length - 1) {
+                let start_i = i
+                let whether_more_overlap = false
+                while (i < simplified_spans.length - 1 && simplified_spans[i + 1][1] <= simplified_spans[start_i][2]) {
+                    // the next span is in the current span
                     let next_span = simplified_spans[i + 1]
-                    if (next_span[1] <= simplified_spans[i][2]) {
+                    if (i == start_i) {
                         sentence_html += simplified_sentence.substring(simplified_spans[i][1], next_span[1]);
-                        let next_category = this.id_to_category[next_span[0]]
-                        if (next_span[1] == start && next_span[2] == end) {
+                    } else {
+                        if (whether_more_overlap) {
+                            sentence_html += simplified_sentence.substring(simplified_spans[i - 1][2], next_span[1]);
+                        } else {
+                            sentence_html += simplified_sentence.substring(simplified_spans[i][2], next_span[1]);
+                        }
+                    }                  
+                    whether_more_overlap = false  
+                    let next_category = this.id_to_category[next_span[0]]
+                    let outside = ""
+                    if (i < simplified_spans.length - 2 && simplified_spans[i + 2][1] <= simplified_spans[i+1][2]) {
+                        outside = "middleside"
+                    }
+                    if (next_span[1] == start && next_span[2] == end) {
+                        sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${next_category}-light span ${outside}">`;
+                    } else {
+                        if (next_category == "split" && (simplified_sentence.substring(next_span[1], next_span[2]) =="||")) {
+                            sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} pointer span simplified_span txt-split split-sign" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                        } else {
+                            let light = "-light"
+                            let simplified_span_id = next_span[3]
+                            if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (simplified_span_id in this.hits_data[[this.current_hit - 1]].annotations[next_category])) {
+                                light = ""
+                            }
+                            sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span ${outside}" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                        }
+                    }
+                    i++;
+                    if (i < simplified_spans.length - 1 && simplified_spans[i + 1][1] <= simplified_spans[i][2]) {
+                        whether_more_overlap = true
+                        // the next span is in the current span
+                        let next_next_span = simplified_spans[i + 1]
+                        sentence_html += simplified_sentence.substring(simplified_spans[i][1], next_next_span[1]);  
+                        let next_category = this.id_to_category[next_next_span[0]]
+                        if (next_next_span[1] == start && next_next_span[2] == end) {
                             sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${next_category}-light span">`;
                         } else {
-                            if (next_category == "split" && (simplified_sentence.substring(next_span[1], next_span[2]) =="||")) {
-                                sentence_html += `<span @mousedown.stop @mouseup.stop @click.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} pointer span simplified_span txt-split split-sign" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                            if (next_category == "split" && (simplified_sentence.substring(next_next_span[1], next_next_span[2]) =="||")) {
+                                sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} pointer span simplified_span txt-split split-sign" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `">`;
                             } else {
                                 let light = "-light"
-                                let simplified_span_id = next_span[3]
+                                let simplified_span_id = next_next_span[3]
                                 if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (simplified_span_id in this.hits_data[[this.current_hit - 1]].annotations[next_category])) {
                                     light = ""
                                 }
-                                sentence_html += `<span @mousedown.stop @mouseup.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                                sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span simplified_span" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `">`;
                             }
                         }
-                        sentence_html += simplified_sentence.substring(next_span[1], next_span[2]);
+                        sentence_html += simplified_sentence.substring(next_next_span[1], next_next_span[2]);
+                        sentence_html += "</span>";
+                        sentence_html += simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]);
+                        console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
                         sentence_html += `</span>`;
-                        sentence_html += simplified_sentence.substring(next_span[2], simplified_spans[i][2]);
-                        sentence_html += `</span>`;
-                        prev_idx = simplified_spans[i][2];
                         i++;
                     } else {
-                        sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
-                        sentence_html += `</span>`;
-                        prev_idx = simplified_spans[i][2];
+                        sentence_html += simplified_sentence.substring(next_span[1], next_span[2]);
+                        sentence_html += "</span>";
                     }
+                }
+                if (start_i != i) {
+                    if (whether_more_overlap) {
+                        sentence_html += simplified_sentence.substring(simplified_spans[i - 1][2], simplified_spans[start_i][2]);
+                    } else {
+                        sentence_html += simplified_sentence.substring(simplified_spans[i][2], simplified_spans[start_i][2]);
+                    }
+                    sentence_html += `</span>`;
+                    prev_idx = simplified_spans[start_i][2];
                 } else {
                     sentence_html += simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]);
                     sentence_html += `</span>`;
