@@ -124,21 +124,11 @@ const app = Vue.createApp({
                 } else {
                     sentence_html += `<span @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category}${light} pointer span original_span ${outside}" data-category="${category}" data-id="${category}-` + original_span_id + `">`;
                 }
-                let start_i = i
-                let whether_more_overlap = false
-                while (i < original_spans.length - 1 && original_spans[i + 1][1] <= original_spans[start_i][2]) {
-                    // the next span is in the current span
+                
+                if (i < original_spans.length - 1 && original_spans[i + 1][1] <= original_spans[i][2]) {
                     let next_span = original_spans[i + 1]
-                    if (i == start_i) {
-                        sentence_html += original_sentence.substring(original_spans[i][1], next_span[1]);
-                    } else {
-                        sentence_html += original_sentence.substring(original_spans[i][2], next_span[1]);
-                    }                    
+                    sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i + 1][1]);
                     let next_category = this.id_to_category[next_span[0]]
-                    let outside = ""
-                    if (i < original_spans.length - 2 && original_spans[i + 2][1] <= original_spans[i+1][2]) {
-                        outside = "middleside"
-                    }
                     let light = "-light"
                     let original_span_id = next_span[3]
                     if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[next_span[0]]])) {
@@ -147,48 +137,16 @@ const app = Vue.createApp({
                     if (next_category == "split" || next_category == "structure") {
                         let childcategory = this.id_to_category[next_span[4]]
                         let childid = next_span[5]
-                        sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span ${outside}" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `" data-childcategory=${childcategory} data-childid=${childid}>`;
+                        sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `" data-childcategory=${childcategory} data-childid=${childid}>`;
                     } else {
-                        sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span ${outside}" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+                        sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
                     }
+                    sentence_html += original_sentence.substring(next_span[1], next_span[2]);
+                    sentence_html += "</span>";
+                    sentence_html += original_sentence.substring(next_span[2], original_spans[i][2]);
+                    sentence_html += "</span>";
+                    prev_idx = original_spans[i][2];
                     i++;
-                    if (i < original_spans.length - 1 && original_spans[i + 1][1] <= original_spans[i][2]) {
-                        whether_more_overlap = true
-                        // the next span is in the current span
-                        let next_next_span = original_spans[i + 1]
-                        sentence_html += original_sentence.substring(original_spans[i][1], next_next_span[1]);  
-                        let next_category = this.id_to_category[next_next_span[0]]
-                        let light = "-light"
-                        let original_span_id = next_next_span[3]
-                        if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[next_next_span[0]]])) {
-                            light = ""
-                        }
-                        if (next_category == "split" || next_category == "structure") {
-                            let childcategory = this.id_to_category[next_next_span[4]]
-                            let childid = next_next_span[5]
-                            sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `" data-childcategory=${childcategory} data-childid=${childid}>`;
-                        } else {
-                            sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `">`;
-                        }
-                        sentence_html += original_sentence.substring(next_next_span[1], next_next_span[2]);
-                        sentence_html += "</span>";
-                        sentence_html += original_sentence.substring(next_next_span[2], original_spans[i][2]);
-                        console.log(original_sentence.substring(next_next_span[2], original_spans[i][2]))
-                        sentence_html += `</span>`;
-                        i++;
-                    } else {
-                        sentence_html += original_sentence.substring(next_span[1], next_span[2]);
-                        sentence_html += "</span>";
-                    }
-                }
-                if (start_i != i) {
-                    if (whether_more_overlap) {
-                        sentence_html += original_sentence.substring(original_spans[i - 1][2], original_spans[start_i][2]);
-                    } else {
-                        sentence_html += original_sentence.substring(original_spans[i][2], original_spans[start_i][2]);
-                    }
-                    sentence_html += `</span>`;
-                    prev_idx = original_spans[start_i][2];
                 } else {
                     sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i][2]);
                     sentence_html += `</span>`;
@@ -265,7 +223,7 @@ const app = Vue.createApp({
                         } else {
                             let light = "-light"
                             let original_span_id = next_next_span[3]
-                            if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[next_next_span[0]]])) {
+                            if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[next_span[0]]])) {
                                 light = ""
                             }
                             sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span" data-category="${next_category}" data-id="${next_category}-` + next_next_span[3] + `">`;
@@ -2123,3 +2081,33 @@ const app = Vue.createApp({
 
 
 app.mount('#app')
+
+
+
+if (i < original_spans.length - 1 && original_spans[i + 1][1] <= original_spans[i][2]) {
+    let next_span = original_spans[i + 1]
+    sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i + 1][1]);
+    let next_category = this.id_to_category[next_span[0]]
+    let light = "-light"
+    let original_span_id = next_span[3]
+    if (("annotations" in this.hits_data[[this.current_hit - 1]]) && (original_span_id in this.hits_data[[this.current_hit - 1]].annotations[this.id_to_category[next_span[0]]])) {
+        light = ""
+    }
+    if (next_category == "split" || next_category == "structure") {
+        let childcategory = this.id_to_category[next_span[4]]
+        let childid = next_span[5]
+        sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `" data-childcategory=${childcategory} data-childid=${childid}>`;
+    } else {
+        sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
+    }
+    sentence_html += original_sentence.substring(next_span[1], next_span[2]);
+    sentence_html += "</span>";
+    sentence_html += original_sentence.substring(next_span[2], original_spans[i][2]);
+    sentence_html += "</span>";
+    prev_idx = original_spans[i][2];
+    i++;
+} else {
+    sentence_html += original_sentence.substring(original_spans[i][1], original_spans[i][2]);
+    sentence_html += `</span>`;
+    prev_idx = original_spans[i][2];
+}
