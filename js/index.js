@@ -1120,7 +1120,7 @@ const app = Vue.createApp({
         }
     },
     created: function () {
-        fetch("https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/human_references_58.json")
+        fetch("https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/human_references_60.json")
             .then(r => r.json())
             .then(json => {
                 this.hits_data = json;
