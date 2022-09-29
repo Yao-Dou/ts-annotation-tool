@@ -54,10 +54,14 @@
             </tab-content>
             <tab-content title="Selecting Alignments">
                 <h1>Selecting Alignments</h1>
+                <p>We'll begin by understanding the ways our AI simplifies sentences.</p>
                 <p>
-                    We'll begin by understanding the ways our AI simplifies sentences. Each individual highlight is called a <i>edit</i>. Your task is to <i>align</i> the edits between the complex and simplified sentences.
+                    Each independent piece of information in a sentence is called a <i>phrase</i>. Our AI may add, delete or modify the wording within a phrase. It may also re-order phrases or split a complex sentence into two sentences. Each individual change to the sentence is called an <i>edit</i>. Your task is to <i>align</i> the edits between the complex and simplified sentences. 
                 </p>
                 <h2>Types of Edits</h2>
+                <p>
+                    We see two classes of edits. <i>Phrase edits</i> which modify a single piece of information and <i>syntax edits</i> which modify the structure of the sentence. We begin by introducing the phrase edits:
+                </p>
                 <p>
                     <ul>
                         <li>
@@ -66,12 +70,24 @@
                             <ei>Insertion Edits</ei> - The AI attempted to <b><i>add clarity</i></b> by adding information which didn't previously exist.
                         </li><li>
                             <es>Substitution Edits</es> - The AI attempted to <b><i>reword a complicated phrase or concept</i></b>
-                        </li><li>
-                            <esp>Splitting Edits</esp> - The AI attemped to <b><i>split a complex sentence</i></b> into two simpler sentences.
                         </li>
                     </ul>
                 </p>
+                <p>The <i>syntax edits</i> will be less common, and will look very different from phrase edits:</p>
+                <p>
+                    <ul>
+                        <li>
+                            <esp>Splitting Edits</esp> - The AI attemped to <b><i>split a complex sentence</i></b> into two simpler sentences.
+                        </li><li>
+                            <er>Reordering Edits</er> - The AI attempted to <b><i>re-order</i></b> the words within a phrase or phrases within a sentence.
+                        </li><li>
+                            <est>Structural Edits</est> - The AI attemped to modify the tense, structure or voice of the sentence to present information more clearly.
+                        </li>
+                    </ul>
+                </p>
+                <p><b>NOTE:</b> <i>Phrase edits</i> and <i>syntax edits</i> are independent of each other! A single word can be a part of both a <i>phrase edit</i> <b><i>and</i></b> a <i>syntax edit</i>.</p>
                 <p>Here's an example of what selecting alignments looks like for one sentence:</p>
+                <todo>Redo GIF with sentence alignment edits</todo>
                 <img src="./img/span-selection.gif" alt="Big picture of the task" width="600">
                 <br />
                 <h2>Examples</h2>
@@ -95,7 +111,7 @@
 
                 <h2>How much do we select?</h2>
                 <p>
-                    Generally, you want to select the <b><i>smallest amount of text</i></b> which contains the edit as possible. Sometimes there can be two different types of edits next to each other. If a edit seems too large, try to highlight multiple edits instead.
+                    Generally, you want to select the <b><i>smallest amount of text</i></b> as possible which contains <b><i>a single piece of information</i></b>. Sometimes there can be two different types of edits next to each other. If a edit seems too large, try to highlight multiple edits instead.
                 </p>
                 <h2>Examples</h2>
                 <example-sent
@@ -105,15 +121,27 @@
                 </example-sent>
 
                 <example-sent 
-                    explanation="Substitutions may be on another side of the sentence. “is known as data fitting” is referring to “Data fitting is” even though it has been moved.">
-                    <template #complex-sent>The task find a model that best fits some <es>observed data and prior information</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>is known as data fitting.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
-                    <template #simple-sent><es>Data fitting is</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> the task <ei>to</ei> find a model that best fits some <es>information.</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub></template>
-                </example-sent>
-
-                <example-sent 
                     explanation="Take a second to note all the changes. You may be faced with many changes in a single sentence.">
                     <template #complex-sent>The tallest timber-frame <es>structure</es> in the U.S.<ed>, by all accounts,</ed> is Carbon12, <ed>an eight-story condominium tower</ed> in Portland OR<ed>, completed in 2018</ed>.</template>
                     <template #simple-sent>The tallest timber-frame <es>building</es> in the U.S.<ei>, using only wood pegs instead of nails and screws,</ei> is Carbon12 in Portland OR.</template>
+                </example-sent>
+
+                <example-sent
+                    explanation="The sentence was converted from a dependent and independent clause to two independent clauses.">
+                    <template #complex-sent>Although the subject lacked character developement, he grew in other ways.</template>
+                    <template #simple-sent>The subject lacked character development and grew in other ways.</template>
+                </example-sent>
+
+                <example-sent
+                    explanation="The author converted the sentence from active to passive voice. However, notice that this required the verb “prepare” to be modified from present to past tense. Because this is required to make the structural change work, it is part of the structural change. “With loving care” is not selected because it is still presented after “prepares each meal.”">
+                    <template #complex-sent>The award-winning chef prepares each meal with loving care.</template>
+                    <template #simple-sent>Each meal is prepared with loving care by the award-winning chef.</template>
+                </example-sent>
+
+                <example-sent 
+                    explanation="Substitutions may be on another side of the sentence. “is known as data fitting” is referring to “Data fitting is” even though it has been moved.">
+                    <template #complex-sent>The task find a model that best fits some <es>observed data and prior information</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>is known as data fitting.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+                    <template #simple-sent><es>Data fitting is</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> the task <ei>to</ei> find a model that best fits some <es>information.</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub></template>
                 </example-sent>
 
                 <h2>Quiz</h2>
@@ -138,6 +166,8 @@
                 <p>
                     In the real HIT, we have trained another AI to provide the alignment for you. However, this AI is frequently wrong (it will be wrong for almost every HIT), so please also fix its alignments. Go ahead and try it!
                 </p>
+
+                <todo>Redo the answer on this question</todo>
 
                 <h3 class="mb0">1.3:</h3>
                 <quiz
