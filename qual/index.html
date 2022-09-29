@@ -81,7 +81,7 @@
                         </li><li>
                             <er>Reordering Edits</er> - The AI attempted to <b><i>re-order</i></b> the words within a phrase or phrases within a sentence.
                         </li><li>
-                            <est>Structural Edits</est> - The AI attemped to modify the tense, structure or voice of the sentence to present information more clearly.
+                            <est>Structural Edits</est> - The AI attemped to <b><i>modify attributes</i></b> (like the tense, structure or voice) of the sentence to present information more clearly.
                         </li>
                     </ul>
                 </p>
@@ -125,6 +125,8 @@
                     <template #complex-sent>The tallest timber-frame <es>structure</es> in the U.S.<ed>, by all accounts,</ed> is Carbon12, <ed>an eight-story condominium tower</ed> in Portland OR<ed>, completed in 2018</ed>.</template>
                     <template #simple-sent>The tallest timber-frame <es>building</es> in the U.S.<ei>, using only wood pegs instead of nails and screws,</ei> is Carbon12 in Portland OR.</template>
                 </example-sent>
+
+                <todo>Add highlighting for these sentences</todo>
 
                 <example-sent
                     explanation="The sentence was converted from a dependent and independent clause to two independent clauses.">
@@ -282,7 +284,7 @@
                     <li id="bt-6" class="deletion-examples">Booker T. Washington was a influential African American leader as a result of being born into slavery</li>
                     <li id="bt-7" class="deletion-examples">Booker T. Washington was a leader at the beginning of the Progressive Era</li>
                 </ul>
-                <p>Hover over each fact to see which part of the sentence could be deleted to remove the fact from the sentence. As you can see, sentences which communicate many ideas may be hard to narrow down whether a span is <i>significant</i>.</p>
+                <p>Hover over each piece of information to see which part of the sentence could be deleted to remove that information from the sentence. As you can see, sentences which communicate many ideas may be hard to narrow down whether a span is <i>significant</i>.</p>
                 <p>In this case, the <i>main idea</i> of the sentence is <i>Booker T. Washington is an influential African American leader</i>. Deletions are necessary for text simplification, we just want to ensure this <i>main idea</i> is still being communicated.</p>
                 <p>Let’s put it together with a few other sentences:</p>
                 <example-sent 
@@ -333,6 +335,44 @@
                         />
                     </template>
                 </example-sent>
+                <h2>Coreference Errors</h2>
+                <p>Deletions may also make a sentence unreadable by deleting a very specific piece of information. If a reference to a pronoun is deleted and not referenced elsewere in the sentence, this is a coreference error.</p>
+                <todo>Add coreference question</todo>
+                <example-sent>
+                    <template #complex-sent>He<ed>, Euler,</ed> was also the first practitioner of graph theory.</template>
+                    <template #simple-sent>He was also the first practitioner of graph theory.</template>
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="Euler"
+                            coreference=true
+                        />
+                    </template>
+                </example-sent>
+                <example-sent
+                    explanation="The reader still knows the subject of Euler is he, so no error is introduced.">
+                    <template #complex-sent>As Euler looked for a solution to the Seven Bridges of Konigsbert, he<ed>, Euler,</ed> was also the first practitioner of graph theory.</template>
+                    <template #simple-sent>As Euler looked for a solution to the Seven Bridges of Konigsbert, he was also the first practitioner of graph theory.</template>
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="Euler"
+                            coreference=false
+                        />
+                    </template>
+                </example-sent>
+                <example-sent
+                    explanation="“It” is meant to replace “salmonella,” however the simplified sentence doesn’t make it clear whehter “it” is referring to “E. coli” or “salmonella”. Because of this ambiguity, an error is introduced.">
+                    <template #complex-sent>E. coli and salmonella can both cause food poisoning, while it <ed>(salmonella)</ed> exclusively comes from raw meat or unwashed produce.</template>
+                    <template #simple-sent>E. coli and salmonella can both cause food poisoning, while it exclusively comes from raw meat or unwashed produce.</template>
+                    <template #edit>
+                        <edit
+                            type="deletion"
+                            span="(salmonella)"
+                            coreference=true
+                        />
+                    </template>
+                </example-sent>
                 <h2>Grammar & Fluency Errors</h2>
                 <p>Deletions may also introuduce errors in <i>fluency</i> or <i>grammar</i>. <i>Fluency</i> refers to the quality or flow of a sentence and <i>grammar</i> refers to the basic conventions.</p>
                 <example-sent 
@@ -363,6 +403,9 @@
                 <h2>Quiz</h2>
                 <p>Now it’s your turn! Take a look at these sentences and try to identify and categorize the deletions.</p>
                 <h3 class="mb0">2.1:</h3>
+
+                <todo>Make sure there's a corefrence error in here</todo>
+
                 <quiz
                     id="deletion_quiz_1"
                     original="SIMSREE was named after the then-governor of Bombay, Lord Sydenham of Combe, who was an early proponent in the spread of commerce-based vocational courses in India."
@@ -385,14 +428,58 @@
             </tab-content>
             <tab-content title="Annotating Insertions">
                 <h1>Annotating Insertions</h1>
-                <p>An insertion is an attempt to <b><i>add clarity</i></b> by adding information which didn't previously exist. While deletions are straightforward, insertions come in many different forms. There are three types of insertions:</p>
+                <p>An insertion is an attempt to <b><i>add clarity</i></b> by adding information which didn't previously exist. While deletions are straightforward, insertions may exibit many more types of errors. We’ll get to the errors later, but for now, let’s talk about <ei>good</ei> insertions:</p>
                 <ul>
                     <li><b>Elaboration</b> - Added meaningful and correct extra information</li>
-                    <li><b>Hallucination</b> - Added irrelevant, incorrect or incoherent information</li>
+                </ul>
+
+                <todo>Update insertion examples to look like interface</todo>
+
+                <example-sent>
+                    <template #complex-sent>A second non-traditional way to enter the M&A stream is through strategic board enhancements.</template>
+                    <template #simple-sent>A second <ei>alternative,</ei> non-traditional way to enter the M&A <ei>(mergers & acquisitions)</ei> stream is through strategic board enhancements.</template>
+                    <template #edit>
+                            <edit
+                                type="insertion"
+                                subtype="elaboration"
+                                span="alternative,"
+                                explanation="While “alternative” adds some information that didn’t previously exist, it doesn’t help define “non-traditional” and debatably adds clarity to the sentence."
+                                answer="1"
+                            ></edit>
+                            <br />                            
+                            <edit
+                                type="insertion"
+                                subtype="elaboration"
+                                span="(mergers & acquisitions)"
+                                explanation="The acronym M&A is entirely undefined in the initial sentence, so this defines a term the reader may have no familiarity with."
+                                answer="3"
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <p>Simplifications may also introduce words which <b><i>do not add new information</i></b>. These <i>trivial edits</i> must be annotated, because even minor changes can still have major effects on the quality of a simplificaiton.</p>
+
+                <ul>
                     <li><b>Trivial Insertion</b> - Added minor wording (the, a, etc.)</li>
                 </ul>
-                <h2>Examples</h2>
-                <example-sent explanation="">
+
+                <todo> Move existing examples to the correct categories</todo>
+                
+                <h2>Annotating Errors</h2>
+                <p>Similar to deletions, insertions have their own types of errors.</p>
+                <ul>
+                    <li>
+                        <b>Hallucination</b> - New information is introduced but <b>does not add clarity</b>
+                    </li><li>
+                        <b>Irrelevant</b> - New information is introduced which is <b>unrelated</b> to the main idea
+                    </li><li>
+                        <b>Contradiction</b> - Phrase added but <b>clearly contradicts</b> information in the original sentence
+                    </li><li>
+                        <b>Redundant</b> - Phrase added but <b>fails to contain new information</b>
+                    </li>
+                </ul>
+                <p>Let’s look at some examples of each:</p>
+                <example-sent>
                     <template #complex-sent>The FZD1 transcript is expressed in various tissues.</template>
                     <template #simple-sent>The FZD1 <ei>protein</ei> transcript is expressed in <ei>the</ei> various tissues.</template>
                     <template #edit>
@@ -459,6 +546,7 @@
                         />
                     </template>
                 </example-sent>
+                <todo>Center edit by adding this to their CSS: max-width: 500px; margin: 16px auto 16px auto;</todo>
                 <h2>Rating by Severity</h2>
                 <p>Insertions also have a <i>severity</i>, meaning you will rate them on a scale of 1-3 by how helpful or harmful the insertion is. Here's some examples of different severity elaboration edits:</p>
                 <example-sent 
@@ -620,14 +708,14 @@
             <tab-content title="Annotating Substitutions">
                 <h1>Annotating Substitutions</h1>
                 <p>Now that you learn what are deletions and insertions, let's look at a more complicated edit type: the substitution. </p>
-                <p>A substitution edit <b>rephrases a span</b> in the original sentence with another span.
-                    Remember a substitution is distict from an insertion or a deletion, because it rewords some information which previously existed in the sentence.
-                    A substitution always adds, deletes or retains information, but sometimes it rewrites a phrase to an entirely different meaning.</p>
-                <h2>Disinguish between substitution and deletion + insertion</h2>
-                <p>Substitution and deletion + insertion sometimes are hard to differentiate, but here are the rules to help you:</p>
+                <p>
+                    An edit is a substitution anytime <b>information is retained</b> from the complex to simple sentence but the <b>wording is changed</b>. Parts of the “information” in the original phrase may be added or removed, but the core meaning of the phrase is transfered from the original to simplified sentence. Sometimes, a substitution even entirely <i>rewrites</i> the same phrase to a completely different meaning.
+                </p>
+                <h2>Disinguish between <i>substitution</i> and <i>deletion + insertion</i> pair</h2>
+                <p>Sometimes an edit is a substitution, and somtimes it is an insertion and deletion. This can be hard to differentiate, but here’s a general guideline:</p>
                 <ul>
-                    <li>Mark as <b>substitution</b>, if both spans are about same type of content (actions, locations, ...).</li>
-                    <li>Mark as <b>deletion + insertion</b>, otherwise.</li>
+                    <li><b>Substitution</b> - if both spans are about same type of content (actions, locations, ...)</li>
+                    <li><b>Deletion + Insertion</b> - otherwise</li>
                 </ul>
                 <example-sent>
                     <template #complex-sent>John was traveling in the summer in <ed>2020.</ed></template>
@@ -639,14 +727,225 @@
                     <template #simple-sent>John was <es>skiing</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> in the winter in <es>2021.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
                 </example-sent>
 
-                <h2>Examples</h2>
-                <p>As mentioned before, substitution is categorized into four types as the new phrase expresses:</p>
+                <h2>Types of Substitution</h2>
+                <p>As mentioned before, substitution is categorized into four types:</p>
                 <ul>
-                    <li>the same meaning (paraphrase)</li>
-                    <li>less information</li>
-                    <li>more information</li>
-                    <li>different meaning</li>
+                    <li>
+                        <b>Same meaning</b> - This is also a <i>paraphrase</i>, the AI attempted to <b>replace complicated words</b>, while retaining the meaning
+                    </li><li>
+                        <b>Less information</b> - Similar to an <i>insertion</i>, the AI attempted to modify the phrase to <b>add clarity</b> to the sentence
+                    </li><li>
+                        <b>More information</b> - Similar to a <i>deleton</i>, the AI attempted to modify the phrase to <b>remove unecessary information</b> from the phrase
+                    </li><li>
+                        <b>Different meaning</b> - The AI <b>removed all information</b> and replaced it with <b>new information</b>
+                    </li>
                 </ul>
+                <p>Let’s look at some examples on how to determine what kind of information change is in a substitution:</p>
+
+                <todo>Similar to insertion, need to modify how answers are displayed and update answers</todo>
+
+                <example-sent>
+                    <template #complex-sent><es>Multinomial logistic</es> regression uses <es>the softmax function</es> to compute <es>probabilities</es>.</template>
+                    <template #simple-sent><es>Logit</es> regression uses <es>a function to convert arbitrary numbers to probability</es> to compute <es>likelihood</es>.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            span="Multinomial logistic"
+                            span2="Logit"
+                            explanation="“Logit” removes the “multinomial” modifier. You may be faced with models making replacements to words or concepts you may not understand. In this case you must use your best judgement to determine if information is being replaced or removed."
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="the softmax function"
+                            span2="a function to convert arbitrary numbers to probability"
+                            explanation="The model attempts to define “softmax”. Although the word “softmax” is no longer present (removing the information of exactly what “logistic regression”) uses, information about the definition of “softmax” is added."
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="probabilities"
+                            span2="likelihood"
+                            explanation="The model simply attempted to use a synonym."
+                        ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>Product <es>hops</es> to <es>albuterol inhalers</es> containing <es>hydrofluoroalkane rather than chlorofluorocarbons</es> cost <es>remunerators and outpatients</es> billions of dollars.</template>
+                    <template #simple-sent>Product <es>transitions by companies</es> to <es>new products</es> containing <es>different chemicals</es> cost <es>payers and patients</es> billions of dollars.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            span="hops"
+                            span2="transitions by companies"
+                            explanation="Information is added to define “hops”"
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="albuterol inhalers"
+                            span2="new products"
+                            explanation="While “new products” helps define why we’re worried about “abuterol inhalers,” in simplifying we remove the subject of the sentence “inhalers” and therefore the main idea of the setence is effected."
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="hydrofluoroalkane rather than chlorofluorocarbons"
+                            span2="different chemicals"
+                            explanation="Replacing specific chemical names is helpful for deleting complex information not central to the main idea."
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="remunerators and outpatients"
+                            span2="payers and patients"
+                            explanation="Phrase was replaced with a simpler wording."
+                        ></edit>
+                    </template>
+                </example-sent>
+
+                <h2>Paraphrasing</h2>
+                <p>Likely the <b>most common edit</b> you will encounter is a paraphrase. The AI isn’t modifying the information, it is simply substituting complex words for simpler words. The substitution can be <i>more simple</i>, <i>unchanged</i>, or <i>less simple</i>.</p>
+
+                <example-sent>
+                    <template #complex-sent>In the <es>best</es> cases, these bonds <es>transcend</es> any simplistic <es>dynamic of</es> a caregiver and <es>convalescent</es>, instead embodying a profound <es>reciprocity</es>.</template>
+                    <template #simple-sent>In the <es>top</es> cases, these bonds <es>are more important than</es> any simplistic <es>relationship between</es> a caregiver and <es>a person being cared for</es>, instead embodying a profound <es>reciprocation</es>.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            span="best"
+                            span2="top"
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="transcend"
+                            span2="are more important than"
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="dynamic of"
+                            span2="relationship between"
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="convalescent"
+                            span2="a person being cared for"
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="reciprocity"
+                            span2="reciprocation"
+                        ></edit>
+                    </template>
+                </example-sent>
+
+                <p>Similar to past annotations, you will rate the severity as well:</p>
+                <todo>These should have severity</todo>
+
+                <example-sent>
+                    <template #complex-sent>At the <es>international</es> level sport is frankly <es>mimic</es> warfare.</template>
+                    <template #simple-sent>At the <es>multi-national</es> level sport is frankly <es>impressionist</es> warfare.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            span="international"
+                            span2="multi-national"
+                        ></edit>
+                        <edit
+                            type="substitution"
+                            span="mimic"
+                            span2="impressionist"
+                        ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent
+                    explanation="Complex words are not necessarily long, but would be unfamiliar to a beginning reader."
+                    >
+                    <template #complex-sent>The researchers conducted an <es>assay</es>.</template>
+                    <template #simple-sent>The researchers conducted an <es>investigation</es>.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            span="assay"
+                            span2="investigation"
+                        ></edit>
+                    </template>
+                </example-sent>
+
+                <h2>Meaning Transformation Error</h2>
+                <p>Following other error types, we simply rate the severity for its impact on the clarity of the sentence. Like we mentioned earlier, it may be tough to distinguish between an <i>insertion+deletion</i> and a substitution (specifically a substitution with a <i>totally different meaning</i>). Here’s some examples:</p>
+
+                <todo>It would be nice if I could highlight the spans in the explanation</todo>
+                <example-sent
+                    explanation="Risk factor → event is attempting to capture the same idea, although the meaning of the phrase is completely different. the amount of exercise each participant could do is attempting to communicate a complete different type of concept than composite adherence."
+                    >
+                    <template #complex-sent>Levels of adherence for each <es>risk factor</es> differed by aortic disease subtype, as did <ed>composite adherence</ed>.</template>
+                    <template #simple-sent>Levels of adherence for each <es>event</es> differed by aortic disease subtype, as did <ei>the amount of exercise each participant could do</ei>.</template>
+                </example-sent>
+
+                <h2>Information Change</h2>
+
+                <p>The last two types of substitution: <i>less information</i> and <i>more information</i> ask the exact same questions as <i>deletion</i> and <i>insertion</i>! Please refer back to those steps for in-depth information on these annotations. Here’s a few examples:</p>
+
+                <example-sent>
+                    <template #complex-sent>This study <es>used in-person, semi-structured interviews with</es> <es>collegiate</es> esports <es>players</es> to explore how players <es>conceptualized</es> their competitive gameplay through the <es>serious leisure framework</es>.</template>
+                    <template #simple-sent>This study <es>interviewed</es> <es>college-level</es> esports players to explore how <es>they</es> <es>saw</es> their competitive gameplay through the <es>“serious leisure framework”</es>.</template>
+                    <template #edit>
+                        <edit 
+                            type="substitution"
+                            span="used in-person, semi-structured interviews with"
+                            span2="interviewed"
+                            explanation="Information was deleted as a natural part of the simplification process. This added clarity to the main idea of the sentence."
+                        ></edit>
+                        <edit 
+                            type="substitution"
+                            span="collegiate"
+                            span2="college-level"
+                            explanation="Although the words look similar, “college-level” a more accessible phrase than “collegiate.”"
+                        ></edit>
+                        <edit 
+                            type="substitution"
+                            span="players"
+                            span2="they"
+                            explanation="The pronoun ‘players’ is removed, but ‘they’ is still defined elsewhere in the sentence."
+                        ></edit>
+                        <edit 
+                            type="substitution"
+                            span="conceptualized"
+                            span2="saw"
+                        ></edit>
+                        <edit 
+                            type="substitution"
+                            span="serious leisure framework"
+                            span2="“serious leisure framework”"
+                            explanation="A subtle change, the quotes indicate that the “serious leisure framework” is referring to something defined by the speaker of the sentence, indicating to readers they don’t particularly need to understand every word in the phrase."
+                        ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent><es>Herbert Spencer’s</es> book makes the first <es>thorough</es> analysis of this <es>agrarian</es> society.</template>
+                    <template #simple-sent><es>His</es> book makes the first <es>in-depth</es> analysis of this <es>rural society</es> society.</template>
+                    <template #edit>
+                        <edit 
+                            type="substitution"
+                            span="Herbert Spencer’s"
+                            span2="His"
+                            explanation="Removes a pronoun which isn’t referenced elsewhere in the sentence."
+                        ></edit>
+                        <edit 
+                            type="substitution"
+                            span="thorough"
+                            span2="in-depth"
+                        ></edit>
+                        <edit 
+                            type="substitution"
+                            span="agrarian"
+                            span2="rural society"
+                            explanation="While “rural society” is a simplified definition of “agrarain”, the change adds the word “society” twice to the sentence."
+                        ></edit>
+                    </template>
+                </example-sent>
+
+                <h2>Putting it All Together</h2>
+
                 <example-sent>
                     <template #complex-sent>Clank <es>asks Ratchet to help him</es> find the famous superhero Captain Qwark.</template>
                     <template #simple-sent>Clank <es>asks for help from Ratchet to</es> find Captain Qwark.</template>
@@ -951,6 +1250,111 @@
                 
 
                 <h2>Quiz</h2>
+            </tab-content>
+            <tab-content title="Annotating Ordering Changes">
+                <h1>Annotating Ordering Changes</h1>
+                <p>In a <er>re-order edit</er>, the AI attempted to simply by re-ordering words within a phrase or phrases within a sentence. </p>
+                <todo>Simple example of re-order</todo>
+
+                <h2>Phrase vs. Syntax Edits</h2>
+                <p>Typically a sentence doesn’t just move phrases around, it will modify the wording or information in that phrase. Because of this, an edit can be both a phrase</p>
+                <todo>Examples with reorders and other phrase edits</todo>
+
+                <h2>Rating by Severity</h2>
+                <p>Re-order edits do not modify the information in the sentence. Therefore, we only rate for how the edit <b>adds clarity</b>. Similar to a paraphrase (i.e. a substitution which adds no new information), we rate whether the edit is helpful and its efficacy/severity. </p>
+                <todo>1-2 severity examples</todo>
+            </tab-content>
+            <tab-content title="Annotating Structure Changes">
+                <p>In a <est>structural edit</est>, the AI attemped to modify the tense, structure or voice of the sentence to present the information more clearly. Unlike other edits, structural edits are a <b>composite edit</b>, meaning they are only seen as a combination of other edits. Let’s start with some examples of structural edits:</p>
+
+                <p>
+                    Her book makes the first thorough analysis of this rural society.
+
+The first thorough analysis of this rural society is made by her book.
+
+The voice of the sentence was changed from active to passive.
+
+Donaldson attempted to speak clearly.
+
+Because donaldson attempted to speak clearly.
+
+The sentence was modified from being an independent to a dependent clause.
+
+We compute the Pearson correlation to asses annotation quality
+
+We computed the Pearson correlation when we assessed annotation quality.
+
+A change in tense qualifies as a structural change.
+
+Her book makes the first thorough analysis of this rural society, and one that draws on all available sources.
+
+Drawing on all available sources, her book makes the first thorough analysis of this rural society.
+                </p>
+
+
+                <p>A structural edit is independent of a re-order edit! Remember a re-order edit exists simply to annotate the order information is being presented has changed, while a structural edit <i>requires</i> some attribute of the sentence to be modified.</p>
+
+Although I found structural annotation difficult, with pracitce the annotation became easier.
+
+With practice the annotation became easier, although I found structural annotation difficult.
+
+The order of phrases is simply flipped, while the underlying structure of the sentence remains unchanged.
+
+The annotation became easier with practice, although I found structural annotation difficult.
+
+The first clause was moved to the beginning as a reorder, but became a structural change when it was changed from passive to active voice.
+
+I found structural annotation difficult because pracitce made the annotation easier.
+
+The sentence was converted from passive + active voice to active + passive voice.
+
+                <h2>Rating by Severity</h2>
+                <p>We rate severity similar to the <i>re-order edit</i>. Because no information is changed, we only annotate for how the change <b>adds clarity</b>.</p>
+
+Like an actor repeating his part in an old play, Prince Vassily always spoke languidly
+
+Like an actor repeating his part in an old play, Prince Vassily had always spoke languidly
+
+The change in tense seems to have no real impact on the sentence.
+
+Prince Vassily always spoke languidly, like an actor repeating his part in an old play.
+
+Presenting the content of the sentence before the metaphor operating on the content adds clarity to what the metaphor is talking about.
+
+Like an actor repeating his part in an old play, languidly was how Prince Vassily always spoke.
+
+Making the adverb “languidly” the subject of the second clause adds confusion.
+
+                <h2>Phrase vs. Syntax Edits</h2>
+
+                <p>As you can see <i>phrase edits</i> can only capture how individual pieces of information or a small set of words change. When the AI creates an edit which modifies the sentence as a whole, this <i>must</i> be captured by a structural edit. Here’s some examples of overlapping phrase and syntax edits:</p>
+
+The amount that Phoenix spends on criminal enforcement is difficult to quantify, in part because the City does not classify arrests by housing status.
+
+Because the City of Pheonix, in part, refuses to use an individual’s housing to organize arrests, it has become hard to find out how much it spends on policing.
+
+                <h2>Only Select 1 Reorder</h2>
+
+                <p>One particular case you may find is a structural change which re-orders a phrase. In this case, only select the phrase which you think best captures the re-order, not every phrase which is moved in the sentence.</p>
+
+Because ice cream sales have increased, we observe more reported drownings.
+
+More reported drownings are observed because ice cream sales have increased.
+
+Notice how “Because ice cream sales have increased” and “we observe more reported drownings” could technically both be selected for the re-order edit. However, the structural edit is aiming to present “More reported drownings” first, so we highlight that phrase as our re-order edit.
+
+                <h2>Putting it Together</h2>
+
+                <p>Structural edits are the least common and most complicated edit type, so if there is ambiguity in your answer, we encourage you provide a comment explaining why you made your decision. Here’s an example which may prove difficult to annotate:</p>
+
+Anna Pavlovna Scherer, in spite of her forty years, was on the contrary brimming over with excitement and impulsiveness.
+
+In spite of her many years, Anna Pavlovna Scherer overflows with impulsiveness and excitement, on the contrary of her age.
+
+                <h2>Quiz</h2>
+            </tab-content>
+            <tab-content title="Conclusion & Reference">
+                <todo>Add decision tree</todo>
             </tab-content>
             <tab-content title="Quiz" class="quiz-tab">
                 <iframe src="../index.html" width="100%" height="900"></iframe>

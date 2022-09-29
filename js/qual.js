@@ -333,6 +333,12 @@ const Deletion = Vue.component('ed', {
 const Split = Vue.component('esp', {
   template: `<span class="bg-split-light split"><slot /></span>`
 });
+const Structure = Vue.component('esp', {
+  template: `<span class="bg-structure-light structure"><slot /></span>`
+});
+const Reorder = Vue.component('esp', {
+  template: `<span class="bg-reorder-light reorder"><slot /></span>`
+});
 const Todo = Vue.component('todo', {
   template: `<span class="todo"><slot /></span>`
 });
@@ -372,9 +378,6 @@ const Quiz = Vue.component('quiz', {
   }
 });
 
-
-
-
 new Vue({
   el: '#app',
   components: {
@@ -389,6 +392,8 @@ new Vue({
     'ei': Insertion,
     'ed': Deletion,
     'esp': Split,
+    'est': Structure,
+    'er': Reorder,
     'todo': Todo,
     'quiz': Quiz
   },
