@@ -53,6 +53,12 @@ const EditHeader = Vue.component('edit-header', {
         <span class="edit-type txt-substitution f3">with </span>
         <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;<slot name="span2"></slot>&nbsp;</span>
       </template>
+      <template v-if="this.type == 'structural'">
+        <span class="edit-type txt-structure f3">structure </span>
+        <span class="pa1 edit-text br-pill-ns border-structure-all structure_below txt-structure">&nbsp;
+          <i class="fa-solid fa-tree"></i> - <slot name="span"></slot> 
+        </span> 
+      </template>
       <template v-if="this.type == 'split' && this.split_edit=='simple'">
         <span class="edit-type txt-split f3">split </span>
         <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
@@ -136,6 +142,13 @@ const AnswerBox = Vue.component('answer-box', {
         <template v-if="isAnswer"><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled checked></template>
         <template v-else><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled></template>
         <label class="for-checkbox-tools-severity question-insertion" checked> <slot></slot> </label>
+      </div>
+    </template>
+    <template v-else-if="this.type == 'structural'">
+      <div class="column-severity column-structure w-10">
+        <template v-if="isAnswer"><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled checked></template>
+        <template v-else><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled></template>
+        <label class="for-checkbox-tools-severity question-structure" checked> <slot></slot> </label>
       </div>
     </template>
   `,
@@ -297,7 +310,7 @@ const Edit = Vue.component('edit', {
 
         <template v-if="this.impact != ''">
           <p class="mb2 b tracked-light">
-            How the edit impact the simplicity of the phrase?
+            How does the edit impact the simplicity of the phrase?
           </p>
           <div class="tc">
             <answer-box :isAnswer="this.impact=='positive'" :type=type :id=11 :editId=editId>positive</answer-box>

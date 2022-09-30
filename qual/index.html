@@ -1122,65 +1122,7 @@
                             explanation="substitute `who` with `She` is associated with this split edit."
                             ></edit>
                     </template>
-                </example-sent>
-
-                <p class="red">more complex and interesting ones</p>
-
-                <example-sent>
-                    <template #complex-sent>Defined as air quality deemed unhealthy for all age groups, "extreme smoke day" happens more and more often in the past decade.</template>
-                    <template #simple-sent>"Extreme smoke day" is defined as air quality deemed unhealthy for all age groups. <esp>||</esp> It happens more and more often in the past decade.</template>
-                    <template #edit>
-                        <edit
-                            type="split"
-                            split_edit="insertion"
-                            simplify=false
-                            span="and"
-                            explanation="delete `and` is associated with this split edit."
-                            ></edit>
-                    </template>
-                </example-sent>
-
-                <example-sent>
-                    <template #complex-sent>The polymer is most often epoxy, but other polymers, such as polyester, vinyl ester or nylon, are also sometimes used.</template>
-                    <template #simple-sent>Often the polymer used is epoxy, other polymers that can be used are polyester, vinyl ester or nylon.</template>
-                    <template #edit>
-                        <edit
-                            type="split"
-                            ></edit>
-                    </template>
-                </example-sent>
-
-                <example-sent>
-                    <template #complex-sent>The task find a model that best fits some observed data and prior information  is known as data fitting.</template>
-                    <template #simple-sent>Data fitting is the task to find a model that best fits some information.</template>
-                    <template #edit>
-                        <edit
-                            type="split"
-                            ></edit>
-                    </template>
-                </example-sent>
-
-                <example-sent>
-                    <template #complex-sent>The award-winning chef prepares each meal with loving care.</template>
-                    <template #simple-sent>Each meal is cooked with loving care by the award-winning chef.</template>
-                    <template #edit>
-                        <edit
-                            type="split"
-                            ></edit>
-                    </template>
-                </example-sent>
-
-
-                <example-sent>
-                    <template #complex-sent>Fearing that Drek will destroy the galaxy, Clank asks Ratchet to help him find the famous superhero Captain Qwark, in an effort to stop Drek.</template>
-                    <template #simple-sent>Clank was fearing that Drek will destroy the galaxy, so he asked Ratchet to help him find the famous superhero Captain Qwark, in an effort to stop Drek.</template>
-                    <template #edit>
-                        <edit
-                            type="split"
-                            ></edit>
-                    </template>
-                </example-sent>
-                
+                </example-sent>                
 
                 <h2>Quiz</h2>
             </tab-content>
@@ -1272,7 +1214,8 @@
                     <template #edit>
                         <edit
                             type="structural"
-                            
+                            span="1"
+                            impact="none"
                             explanation="The change in tense seems to have no real impact on the sentence."
                             ></edit>
                     </template>
@@ -1284,7 +1227,9 @@
                     <template #edit>
                         <edit
                             type="structural"
-                            
+                            span="1"
+                            impact="positive"
+                            answer="2"
                             explanation="Presenting the content of the sentence before the metaphor operating on the content adds clarity to what the metaphor is talking about."
                             ></edit>
                     </template>
@@ -1296,7 +1241,9 @@
                     <template #edit>
                         <edit
                             type="structural"
-                            
+                            span="1"
+                            impact="negative"
+                            answer="1"
                             explanation="Making the adverb “languidly” the subject of the second clause adds confusion."
                             ></edit>
                     </template>
@@ -1306,15 +1253,24 @@
 
                 <p>As you can see <i>phrase edits</i> can only capture how individual pieces of information or a small set of words change. When the AI creates an edit which modifies the sentence as a whole, this <i>must</i> be captured by a structural edit. Here’s some examples of overlapping phrase and syntax edits:</p>
 
-                <example-sent>
-                    <template #complex-sent><es>The amount that</es> <es>Phoenix</es> spends on <es>criminal enforcement</es> <es>is difficult</es> <es>to quantify</es><ur>, in part</ur> <ur>because</ur> <es>the City</es> <es>does not</es> <es>classify</es> arrests <es>by housing status</es>.</template>
-                    <template #simple-sent><ur>Because</ur> <ei>the City of</ei> Pheonix<ur>, in part,</ur> <es>refuses to use</es> <es>an individual’s housing</es> <es>to organize</es> arrests, <es>it</es> <es>has become hard</es> <es>to find out how much</es> <ei>it</ei> spends <es>on policing</es>.</template>
+                <example-sent>   
+                    <template #complex-sent><div style="line-height: 35px"><ur><ust><es>The amount that</es> <es>Phoenix</es> spends on <es>criminal enforcement</es> <es>is difficult</es> <es>to quantify</es></ur></ust><ss>1</ss>, <ur>in part</ur> <ur><ust>because</ust></ur><ss>2</ss> <es>the City</es> <es>does not</es> <es>classify</es> arrests <es>by housing status</es>.</div></template>
+                    <template #simple-sent><div style="line-height: 35px"><ust><ur>Because</ur></ust><ss>2</ss> <ei>the City of</ei> Pheonix<ur>, in part,</ur> <es>refuses to use</es> <es>an individual’s housing</es> <es>to organize</es> arrests, <ur><ust><es>it</es> <es>has become hard</es> <es>to find out how much</es> <ei>it</ei> spends <es>on policing</es></ust></ur><ss>1</ss>.</div></template>
                     <template #edit>
                         <edit
                             type="structural"
-                            
-                            explanation="Making the adverb “languidly” the subject of the second clause adds confusion."
+                            span="1"
+                            impact="negative"
+                            answer="2"               
+                            explanation="This edit changes the order of the clauses in the sentence. Because the sentence is trying to communicate cause and effect (quantifying spending is difficult because a lack of data), the edit moves the effect before the cause."
                             ></edit>
+                        <edit
+                            type="structural"
+                            span="2"
+                            impact="positive"
+                            answer="1"
+                            explanation="This edit simply moves 'because' before 'in part'. This adds clarity to the order information is being presented."
+                        ></edit>
                     </template>
                 </example-sent>
 
@@ -1323,6 +1279,7 @@
                 <p>One particular case you may find is a structural change which re-orders a phrase. In this case, only select the phrase which you think best captures the re-order, not every phrase which is moved in the sentence.</p>
 
                 <example-sent
+                    noedits=true
                     explanation="Notice how “Because ice cream sales have increased” and “we observe more reported drownings” could technically both be selected for the re-order edit. However, the structural edit is aiming to present “More reported drownings” first, so we highlight that phrase as our re-order edit."
                     >
                     <template #complex-sent>Because ice cream sales have increased, <ust><ur><es>we observe</es> more reported drownings</ur></ust><ss>1</ss>.</template>
@@ -1334,18 +1291,33 @@
                 <p>Structural edits are the least common and most complicated edit type, so if there is ambiguity in your answer, we encourage you provide a comment explaining why you made your decision. Here’s an example which may prove difficult to annotate:</p>
 
                 <example-sent>
-                    <template #complex-sent>Anna Pavlovna Scherer, in spite of her forty years, was on the contrary brimming over with excitement and impulsiveness.</template>
-                    <template #simple-sent>In spite of her many years, Anna Pavlovna Scherer overflows with impulsiveness and excitement, on the contrary of her age.</template>
+                    <template #complex-sent><div style="line-height: 35px">Anna Pavlovna Scherer, <ust><ur>in spite of her <es>forty</es> years</ur></ust><ss>1</ss>, was <ust><ur>on the contrary</ur></ust><ss>2</ss> <es>brimming over</es> with <ur>excitement and impulsiveness</ur>.</div></template>
+                    <template #simple-sent><div style="line-height: 35px"><ust><ur>In spite of her <es>many</es> years</ur></ust><ss>1</ss>, Anna Pavlovna Scherer <es>overflows</es> with <ur>impulsiveness and excitement</ur>, <ust><ur>on the contrary</ur></ust><ss>2</ss> <ei>of her age</ei>.</div></template>
                     <template #edit>
                         <edit
                             type="structural"
-                            
-                            explanation=""
+                            span="1"
+                            impact="positive"
+                            answer="1"               
+                            explanation="The sentence could be seen as having too many interrupting dependenct clauses. By moving this to the beginning of the sentence, sentence flow is improved."
                             ></edit>
+                        <edit
+                            type="structural"
+                            span="2"
+                            impact="negative"
+                            answer="2"
+                            explanation="'on the contrary' is supposed to communicate that there was a discrepancy in how the subject acted and how the subjet should have acted. By moving it to the end of the sentence, it is no longer helpful."
+                        ></edit>
                     </template>
                 </example-sent>
 
                 <h2>Quiz</h2>
+                <h3 class="mb0">8.1:</h3>
+                <quiz
+                    id="structure_quiz_1"
+                    original="The incidence of Am stars hosting hot-brown dwarfs resulted higher than the frequency of Am stars in general"
+                    simplified="Compared to Am starts generally, Am stars which hosted hot-brown drafs were more frequent."
+                    ></quiz>
             </tab-content>
             <tab-content title="Conclusion & Reference">
                 <todo>Add decision tree</todo>
