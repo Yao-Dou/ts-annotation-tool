@@ -91,22 +91,33 @@
                 <img src="./img/span-selection.gif" alt="Big picture of the task" width="600">
                 <br />
                 <h2>Examples</h2>
-                <example-sent 
+                <p>This tutorial will primerily demonstrate how to annotate through examples. When you read through the examples, think about how you would annotate the spans:</p>
+                <example-sent  
+                    noedits=true
                     explanation="This is a substitution. We see the “an easy fix” takes the place of “a straightforward solution” in the sentence.">
                     <template #complex-sent><es class="original_span" data-id="0">A straightforward solution</es> for foggy car windows is run the heater.</template>
                     <template #simple-sent><es class="simplified_span" data-id="0">An easy fix</es> for foggy car windows is run the heater.</template>
                 </example-sent>
 
-                <example-sent 
+                <example-sent  
+                    noedits=true
                     explanation="This is a deletion. We see “Contrary to popular belief” was entirely removed with nothing taking it's place in the sentence.">
                     <template #complex-sent><ed>Contrary to popular belief</ed>, the moon is made of rocks, not cheese.</template>
                     <template #simple-sent>The moon is made of rocks, not cheese.</template>
                 </example-sent>
 
                 <example-sent 
+                    noedits=true
                     explanation="This is an insertion. The span or its information didn't at all exist in the sentence.">
                     <template #complex-sent>The S&P 500 closed after heavy trading.</template>
                     <template #simple-sent>The S&P 500, <ei>an index fund of the largest 500 companies,</ei> closed after heavy trading.</template>
+                </example-sent>
+
+                <example-sent 
+                    noedits=true
+                    explanation="This is a syntax edit. Notice how the information in the sentence was unchanged, but the sentence was converted from a dependent and independent clause to two independent clauses.">
+                    <template #complex-sent><ust noto>Although</ust><ss>1</ss> the subject lacked character developement<ust noto>, he</ust><ss>1</ss> grew in other ways.</template>
+                    <template #simple-sent>The subject lacked character development <ust noto>and</ust><ss>1</ss> grew in other ways.</template>
                 </example-sent>
 
                 <h2>How much do we select?</h2>
@@ -115,35 +126,33 @@
                 </p>
                 <h2>Examples</h2>
                 <example-sent
-                    explanation="While “straightforward solution” and “, which can sometimes takes a while,” appeared next to each other, the phrase “easy fix” is only substituting the words “starightforward solution” and the phrase “, which can sometimes takes a while,” isn’t contained anywhere else in the sentence.">
-                    <template #complex-sent>A <es>straightforward solution</es><ed>, which can sometimes takes a while</ed>, for foggy car windows is to run the heater</template>
+                    noedits=true
+                    explanation="While “straightforward solution” and “, which can sometimes take a while,” appeared next to each other, the phrase “easy fix” is only substituting the words “starightforward solution” and the phrase “, which can sometimes takes a while,” isn’t contained anywhere else in the sentence.">
+                    <template #complex-sent>A <es>straightforward solution</es><ed>, which can sometimes take a while</ed>, for foggy car windows is to run the heater</template>
                     <template #simple-sent>An <es>easy fix</es> for foggy car windows is to run the heater</template>
                 </example-sent>
 
                 <example-sent 
+                    noedits=true
                     explanation="Take a second to note all the changes. You may be faced with many changes in a single sentence.">
                     <template #complex-sent>The tallest timber-frame <es>structure</es> in the U.S.<ed>, by all accounts,</ed> is Carbon12, <ed>an eight-story condominium tower</ed> in Portland OR<ed>, completed in 2018</ed>.</template>
                     <template #simple-sent>The tallest timber-frame <es>building</es> in the U.S.<ei>, using only wood pegs instead of nails and screws,</ei> is Carbon12 in Portland OR.</template>
                 </example-sent>
 
-                <todo>Add highlighting for these sentences</todo>
-
-                <example-sent
-                    explanation="The sentence was converted from a dependent and independent clause to two independent clauses.">
-                    <template #complex-sent>Although the subject lacked character developement, he grew in other ways.</template>
-                    <template #simple-sent>The subject lacked character development and grew in other ways.</template>
-                </example-sent>
-
-                <example-sent
-                    explanation="The author converted the sentence from active to passive voice. However, notice that this required the verb “prepare” to be modified from present to past tense. Because this is required to make the structural change work, it is part of the structural change. “With loving care” is not selected because it is still presented after “prepares each meal.”">
-                    <template #complex-sent>The award-winning chef prepares each meal with loving care.</template>
-                    <template #simple-sent>Each meal is prepared with loving care by the award-winning chef.</template>
-                </example-sent>
+                <p>Remember! You may be tasked with identifing phrase and syntax edits at the same time.</p>
 
                 <example-sent 
-                    explanation="Substitutions may be on another side of the sentence. “is known as data fitting” is referring to “Data fitting is” even though it has been moved.">
-                    <template #complex-sent>The task find a model that best fits some <es>observed data and prior information</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>is known as data fitting.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
-                    <template #simple-sent><es>Data fitting is</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> the task <ei>to</ei> find a model that best fits some <es>information.</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub></template>
+                    noedits=true
+                    explanation="The sentences was converted from active to passive voice. However, notice that this required the verb “prepare” to be modified from present to past tense. Because this is required to make the structural change work, it is part of the structural change. “With loving care” is not selected because it is still presented after “prepares each meal.”">
+                    <template #complex-sent>The award-winning chef <ust noto><es>prepares</es></ust><ss>1</ss> <ust><ur>each meal</ur></ust><ss>1</ss> <ust><ur>with loving care</ur></ust><ss>2</ss>.</template>
+                    <template #simple-sent><ust><ur>Each meal</ur></ust><ss>1</ss> <ust noto><ei>is</ei></ust><ss>1</ss> <ust noto><es>prepared</es></ust><ss>1</ss> <ust><ur>with loving care</ur></ust><ss>2</ss> <ust noto><ei>by</ei></ust><ss>2</ss> the award-winning chef.</template>
+                </example-sent>
+
+                <example-sent  
+                    noedits=true
+                    explanation="Phrase edits may be part of a structural edit. “is known as data fitting” is referring to “Data fitting is” even though it has been moved.">
+                    <template #complex-sent>The task find a model that best fits some <es>observed data and prior information</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <ust noto><es>is known as data fitting</es></ust> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub><ss>1</ss>.</template>
+                    <template #simple-sent><ust noto><es>Data fitting is</es></ust> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub><ss>1</ss> the task <ust noto><ei>to</ei></ust><ss>1</ss> find a model that best fits some <es>information</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub>.</template>
                 </example-sent>
 
                 <h2>Quiz</h2>
@@ -433,8 +442,6 @@
                     <li><b>Elaboration</b> - Added meaningful and correct extra information</li>
                 </ul>
 
-                <todo>Update insertion examples to look like interface</todo>
-
                 <example-sent>
                     <template #complex-sent>A second non-traditional way to enter the M&A stream is through strategic board enhancements.</template>
                     <template #simple-sent>A second <ei>alternative,</ei> non-traditional way to enter the M&A <ei>(mergers & acquisitions)</ei> stream is through strategic board enhancements.</template>
@@ -463,22 +470,6 @@
                     <li><b>Trivial Insertion</b> - Added minor wording (the, a, etc.)</li>
                 </ul>
 
-                <todo> Move existing examples to the correct categories</todo>
-                
-                <h2>Annotating Errors</h2>
-                <p>Similar to deletions, insertions have their own types of errors.</p>
-                <ul>
-                    <li>
-                        <b>Hallucination</b> - New information is introduced but <b>does not add clarity</b>
-                    </li><li>
-                        <b>Irrelevant</b> - New information is introduced which is <b>unrelated</b> to the main idea
-                    </li><li>
-                        <b>Contradiction</b> - Phrase added but <b>clearly contradicts</b> information in the original sentence
-                    </li><li>
-                        <b>Redundant</b> - Phrase added but <b>fails to contain new information</b>
-                    </li>
-                </ul>
-                <p>Let’s look at some examples of each:</p>
                 <example-sent>
                     <template #complex-sent>The FZD1 transcript is expressed in various tissues.</template>
                     <template #simple-sent>The FZD1 <ei>protein</ei> transcript is expressed in <ei>the</ei> various tissues.</template>
@@ -498,38 +489,54 @@
                             ></edit>
                     </template>
                 </example-sent>
+                
+                <h2>Annotating Errors</h2>
+                <p>Similar to deletions, insertions have their own types of errors.</p>
+                <ul>
+                    <li>
+                        <b>Hallucination</b> - New information is introduced but <b>does not add clarity</b>
+                    </li><li>
+                        <b>Irrelevant</b> - New information is introduced which is <b>unrelated</b> to the main idea
+                    </li><li>
+                        <b>Contradiction</b> - Phrase added but <b>clearly contradicts</b> information in the original sentence
+                    </li><li>
+                        <b>Redundant</b> - Phrase added but <b>fails to contain new information</b>
+                    </li>
+                </ul>
+                <p>Let’s look at some examples of each:</p>
                 <example-sent 
-                    explanation="This statement is clearly meaningless to the rest of the sentence.">
+                    explanation="This statement is clearly meaningless to the rest of the sentence. The new information adds no clarity.">
                     <template #complex-sent>Only certain organisms, called photoautotrophs, can perform photosynthesis.</template>
                     <template #simple-sent>Only certain organisms, called photoautotrophs, can perform photosynthesis <ei>when they decide to</ei>.</template>
                     <template #edit>
                         <edit
                             type="insertion"
                             subtype="hallucination"
+                            irrelevant=false
                             span="when they decide to"
                         />
                     </template>
                 </example-sent>
                 <example-sent 
-                    explanation="This is a low quality elaboration. This is NOT a halluncaiton because it would have needed to be (1) irrelevant, (2) incorrect or (3) incoherent.">
+                    explanation="The exact span 'can perform photosynthesis' is seen at the end of the sentence. No information is addded, while technically the added span isn't false.">
                     <template #complex-sent>Only certain organisms, called photoautotrophs, can perform photosynthesis.</template>
                     <template #simple-sent>Only certain organisms <ei>can perform photosynthesis</ei>, called photoautotrophs, can perform photosynthesis.</template>
                     <template #edit>
                         <edit
                             type="insertion"
-                            subtype="elaboration"
+                            subtype="repetition"
                             span="can perform photosynthesis"
                         />
                     </template>
                 </example-sent>
                 <example-sent 
-                    explanation="Be careful about minor changes which still may heavily impact the meaning of the sentence.">
+                    explanation="Be careful about minor changes. This small change heavily impacts the meaning of the sentence.">
                     <template #complex-sent>In January, the Watergate burglars were convicted, along with Hunt and Liddy.</template>
                     <template #simple-sent>In January, the Watergate burglars were <ei>not</ei> convicted, along with Hunt and Liddy.</template>
                     <template #edit>
                         <edit
                             type="insertion"
-                            subtype="hallucination"
+                            subtype="contradiction"
                             span="not"
                         />
                     </template>
@@ -546,7 +553,6 @@
                         />
                     </template>
                 </example-sent>
-                <todo>Center edit by adding this to their CSS: max-width: 500px; margin: 16px auto 16px auto;</todo>
                 <h2>Rating by Severity</h2>
                 <p>Insertions also have a <i>severity</i>, meaning you will rate them on a scale of 1-3 by how helpful or harmful the insertion is. Here's some examples of different severity elaboration edits:</p>
                 <example-sent 
@@ -565,16 +571,17 @@
                 <example-sent 
                     explanation="This insertion adds information, but it is only moderately helpful.">
                     <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
-                    <template #simple-sent>Many volitile organic chemicals<ei>, which harm our environment,</ei> are increasing in abundance in the lower troposphere.</template>
+                    <template #simple-sent>Many volitile organic chemicals<ei>, which are bad,</ei> are increasing in abundance in the lower troposphere.</template>
                     <template #edit>
                         <edit
                             type="insertion"
                             subtype="elaboration"
                             span=", which are bad,"
-                            answer="2"
+                            answer="1"
                         />
                     </template>
                 </example-sent>
+                <p>Here's some examples of different severity errors:</p>
                 <example-sent 
                     explanation="This insertion is correct, but simply restates what is already in the sentence.">
                     <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
@@ -582,13 +589,12 @@
                     <template #edit>
                         <edit
                             type="insertion"
-                            subtype="elaboration"
+                            subtype="repetition"
                             span=", which are chemicals,"
                             answer="1"
                         />
                     </template>
                 </example-sent>
-                <p>Here's some examples of different severity hallucination edits:</p>
                 <example-sent 
                     explanation="While the edit is coherent, the content of the edit clearly contradicts the meaning of the sentence.">
                     <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
@@ -596,7 +602,7 @@
                     <template #edit>
                         <edit
                             type="insertion"
-                            subtype="hallucination"
+                            subtype="contradiction"
                             span=", which are decreasing,"
                             answer="3"
                         />
@@ -611,18 +617,19 @@
                             type="insertion"
                             subtype="hallucination"
                             span="of varying size"
+                            irrelevant=true
                             answer="2"
                         />
                     </template>
                 </example-sent>
                 <example-sent 
-                    explanation="This insertion clearly is simply repeating the phrase “organic chemicals”. This is an incoherent repetition, so it’s a hallucination. However, it doesn’t impact the main idea of the sentence.">
+                    explanation="This insertion clearly is simply repeating the phrase “organic chemicals”. This is an incoherent repetition. However, it doesn’t impact the main idea of the sentence.">
                     <template #complex-sent>Many volitile organic chemicals are increasing in abundance in the lower troposphere.</template>
                     <template #simple-sent>Many volitile organic chemicals <ei>organic chemicals organic chemicals</ei> are increasing in abundance in the lower troposphere.</template>
                     <template #edit>
                         <edit
                             type="insertion"
-                            subtype="hallucination"
+                            subtype="repetition"
                             span="organic chemicals organic chemicals"
                             answer="1"
                         />
@@ -641,15 +648,14 @@
                             answer="1"
                             explanation="This defines the complicated word “atmospheric”."
                             ></edit>
-                            <br />
                         <edit
                             type="insertion"
                             subtype="trivial"
                             span="an"
                             answer="1"
+                            grammar=true
                             explanation="“Available nitrogen” is a direct object, adding “an” modifies the phrase to become an indirect object."
                             ></edit>
-                            <br />
                         <edit
                             type="insertion"
                             subtype="elaboration"
@@ -665,12 +671,12 @@
                     <template #edit>
                         <edit
                             type="insertion"
-                            subtype="elaboration"
+                            subtype="hallucination"
                             span=", famous for his soloist dancing career,"
                             answer="1"
+                            irrelevant=true
                             explanation="Although the insertion is high quality and correct, it is irrelevant to the rest of the sentence and doesn’t help the reader understand the main meaning of the sentence."
                             ></edit>
-                            <br />
                         <edit
                             type="insertion"
                             subtype="trivial"
@@ -678,13 +684,11 @@
                             answer="2"
                             explanation="“the” doesn’t introduce an error, but it doesn’t have an impact on the sentence."
                             ></edit>
-                            <br />
                         <edit
                             type="insertion"
                             subtype="elaboration"
                             span="genres"
                             answer="2"
-                            explanation="??"
                             ></edit>
                     </template>
                 </example-sent>
@@ -717,12 +721,16 @@
                     <li><b>Substitution</b> - if both spans are about same type of content (actions, locations, ...)</li>
                     <li><b>Deletion + Insertion</b> - otherwise</li>
                 </ul>
-                <example-sent>
+                <example-sent
+                    noedits=true
+                    >
                     <template #complex-sent>John was traveling in the summer in <ed>2020.</ed></template>
                     <template #simple-sent>John was traveling in the summer in <ei>Paris.</ei></template>
                 </example-sent>
 
-                <example-sent>
+                <example-sent
+                    noedits=true
+                    >
                     <template #complex-sent>John was <es>traveling</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> in the summer in <es>2020.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
                     <template #simple-sent>John was <es>skiing</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> in the winter in <es>2021.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
                 </example-sent>
@@ -742,8 +750,6 @@
                 </ul>
                 <p>Let’s look at some examples on how to determine what kind of information change is in a substitution:</p>
 
-                <todo>Similar to insertion, need to modify how answers are displayed and update answers</todo>
-
                 <example-sent>
                     <template #complex-sent><es>Multinomial logistic</es> regression uses <es>the softmax function</es> to compute <es>probabilities</es>.</template>
                     <template #simple-sent><es>Logit</es> regression uses <es>a function to convert arbitrary numbers to probability</es> to compute <es>likelihood</es>.</template>
@@ -752,18 +758,21 @@
                             type="substitution"
                             span="Multinomial logistic"
                             span2="Logit"
+                            subtype="less"
                             explanation="“Logit” removes the “multinomial” modifier. You may be faced with models making replacements to words or concepts you may not understand. In this case you must use your best judgement to determine if information is being replaced or removed."
                         ></edit>
                         <edit
                             type="substitution"
                             span="the softmax function"
                             span2="a function to convert arbitrary numbers to probability"
+                            subtype="more"
                             explanation="The model attempts to define “softmax”. Although the word “softmax” is no longer present (removing the information of exactly what “logistic regression”) uses, information about the definition of “softmax” is added."
                         ></edit>
                         <edit
                             type="substitution"
                             span="probabilities"
                             span2="likelihood"
+                            subtype="same"
                             explanation="The model simply attempted to use a synonym."
                         ></edit>
                     </template>
@@ -777,24 +786,28 @@
                             type="substitution"
                             span="hops"
                             span2="transitions by companies"
+                            subtype="more"
                             explanation="Information is added to define “hops”"
                         ></edit>
                         <edit
                             type="substitution"
                             span="albuterol inhalers"
                             span2="new products"
+                            subtype="different"
                             explanation="While “new products” helps define why we’re worried about “abuterol inhalers,” in simplifying we remove the subject of the sentence “inhalers” and therefore the main idea of the setence is effected."
                         ></edit>
                         <edit
                             type="substitution"
                             span="hydrofluoroalkane rather than chlorofluorocarbons"
                             span2="different chemicals"
+                            subtype="less"
                             explanation="Replacing specific chemical names is helpful for deleting complex information not central to the main idea."
                         ></edit>
                         <edit
                             type="substitution"
                             span="remunerators and outpatients"
                             span2="payers and patients"
+                            subtype="same"
                             explanation="Phrase was replaced with a simpler wording."
                         ></edit>
                     </template>
@@ -805,30 +818,40 @@
 
                 <example-sent>
                     <template #complex-sent>In the <es>best</es> cases, these bonds <es>transcend</es> any simplistic <es>dynamic of</es> a caregiver and <es>convalescent</es>, instead embodying a profound <es>reciprocity</es>.</template>
-                    <template #simple-sent>In the <es>top</es> cases, these bonds <es>are more important than</es> any simplistic <es>relationship between</es> a caregiver and <es>a person being cared for</es>, instead embodying a profound <es>reciprocation</es>.</template>
+                    <template #simple-sent>In the <es>superlative</es> cases, these bonds <es>are more important than</es> any simplistic <es>relationship between</es> a caregiver and <es>a person being cared for</es>, instead embodying a profound <es>reciprocation</es>.</template>
                     <template #edit>
                         <edit
                             type="substitution"
+                            subtype="same"
+                            impact="negative"
                             span="best"
-                            span2="top"
+                            span2="superlative"
                         ></edit>
                         <edit
                             type="substitution"
+                            subtype="same"
+                            impact="positive"
                             span="transcend"
                             span2="are more important than"
                         ></edit>
                         <edit
                             type="substitution"
+                            subtype="same"
+                            impact="positive"
                             span="dynamic of"
                             span2="relationship between"
                         ></edit>
                         <edit
                             type="substitution"
+                            subtype="same"
+                            impact="positive"
                             span="convalescent"
                             span2="a person being cared for"
                         ></edit>
                         <edit
                             type="substitution"
+                            subtype="same"
+                            impact="none"
                             span="reciprocity"
                             span2="reciprocation"
                         ></edit>
@@ -836,7 +859,6 @@
                 </example-sent>
 
                 <p>Similar to past annotations, you will rate the severity as well:</p>
-                <todo>These should have severity</todo>
 
                 <example-sent>
                     <template #complex-sent>At the <es>international</es> level sport is frankly <es>mimic</es> warfare.</template>
@@ -844,27 +866,35 @@
                     <template #edit>
                         <edit
                             type="substitution"
+                            subtype="same"
+                            impact="positive"
+                            answer="1"
                             span="international"
                             span2="multi-national"
                         ></edit>
                         <edit
                             type="substitution"
                             span="mimic"
+                            subtype="same"
+                            impact="negative"
+                            answer="2"
                             span2="impressionist"
                         ></edit>
                     </template>
                 </example-sent>
 
-                <example-sent
-                    explanation="Complex words are not necessarily long, but would be unfamiliar to a beginning reader."
-                    >
+                <example-sent>
                     <template #complex-sent>The researchers conducted an <es>assay</es>.</template>
                     <template #simple-sent>The researchers conducted an <es>investigation</es>.</template>
                     <template #edit>
                         <edit
                             type="substitution"
+                            subtype="same"
+                            impact="negative"
+                            answer="3"
                             span="assay"
                             span2="investigation"
+                            explanation="Complex words are not necessarily long, but would be unfamiliar to a beginning reader."
                         ></edit>
                     </template>
                 </example-sent>
@@ -872,12 +902,31 @@
                 <h2>Meaning Transformation Error</h2>
                 <p>Following other error types, we simply rate the severity for its impact on the clarity of the sentence. Like we mentioned earlier, it may be tough to distinguish between an <i>insertion+deletion</i> and a substitution (specifically a substitution with a <i>totally different meaning</i>). Here’s some examples:</p>
 
-                <todo>It would be nice if I could highlight the spans in the explanation</todo>
                 <example-sent
-                    explanation="Risk factor → event is attempting to capture the same idea, although the meaning of the phrase is completely different. the amount of exercise each participant could do is attempting to communicate a complete different type of concept than composite adherence."
+                    explanation="'the amount of exercise each participant could do' is attempting to communicate a complete different type of concept than 'composite adherence'."
                     >
                     <template #complex-sent>Levels of adherence for each <es>risk factor</es> differed by aortic disease subtype, as did <ed>composite adherence</ed>.</template>
                     <template #simple-sent>Levels of adherence for each <es>event</es> differed by aortic disease subtype, as did <ei>the amount of exercise each participant could do</ei>.</template>
+                    <template #edit>
+                        <edit
+                            type="substitution"
+                            subtype="different"
+                            answer="3"
+                            span="risk factor"
+                            span2="event"
+                            explanation="'Risk factor' → 'event' is attempting to capture the same idea, although the meaning of the phrase is completely different."
+                        ></edit><edit
+                            type="deletion"
+                            span="composite adherence"
+                            answer="1"
+                        ></edit><edit
+                            type="insertion"
+                            subtype="hallucination"
+                            irrelevant=true
+                            span="the amount of exercise each participant could do"
+                            answer="1"
+                        ></edit>
+                    </template>
                 </example-sent>
 
                 <h2>Information Change</h2>
@@ -892,30 +941,43 @@
                             type="substitution"
                             span="used in-person, semi-structured interviews with"
                             span2="interviewed"
+                            subtype="less"
+                            answer="2"
                             explanation="Information was deleted as a natural part of the simplification process. This added clarity to the main idea of the sentence."
                         ></edit>
                         <edit 
                             type="substitution"
                             span="collegiate"
                             span2="college-level"
+                            subtype="same"
+                            impact="positive"
+                            answer="3"
                             explanation="Although the words look similar, “college-level” a more accessible phrase than “collegiate.”"
                         ></edit>
                         <edit 
                             type="substitution"
                             span="players"
                             span2="they"
+                            subtype="less"
+                            answer="1"
                             explanation="The pronoun ‘players’ is removed, but ‘they’ is still defined elsewhere in the sentence."
                         ></edit>
                         <edit 
                             type="substitution"
                             span="conceptualized"
                             span2="saw"
+                            subtype="same"
+                            impact="positive"
+                            answer="3"
                         ></edit>
                         <edit 
                             type="substitution"
                             span="serious leisure framework"
                             span2="“serious leisure framework”"
                             explanation="A subtle change, the quotes indicate that the “serious leisure framework” is referring to something defined by the speaker of the sentence, indicating to readers they don’t particularly need to understand every word in the phrase."
+                            subtype="more"
+                            instype="elaboration"
+                            answer="2"
                         ></edit>
                     </template>
                 </example-sent>
@@ -928,168 +990,39 @@
                             type="substitution"
                             span="Herbert Spencer’s"
                             span2="His"
+                            subtype="less"
+                            answer="4"
                             explanation="Removes a pronoun which isn’t referenced elsewhere in the sentence."
                         ></edit>
                         <edit 
                             type="substitution"
                             span="thorough"
                             span2="in-depth"
+                            subtype="same"
+                            impact="positive"
+                            answer="3"
                         ></edit>
                         <edit 
                             type="substitution"
                             span="agrarian"
                             span2="rural society"
+                            subtype="more"
+                            instype="repetition"
+                            answer="1"
                             explanation="While “rural society” is a simplified definition of “agrarain”, the change adds the word “society” twice to the sentence."
                         ></edit>
                     </template>
                 </example-sent>
 
-                <h2>Putting it All Together</h2>
-
-                <example-sent>
-                    <template #complex-sent>Clank <es>asks Ratchet to help him</es> find the famous superhero Captain Qwark.</template>
-                    <template #simple-sent>Clank <es>asks for help from Ratchet to</es> find Captain Qwark.</template>
-                    <template #edit>
-                        <edit
-                            type="substitution"
-                            subtype="same"
-                            span="asks Ratchet to help him"
-                            span2="asks for help from Ratchet to"
-                            explanation="the new span has exactly the same meaning as the original span."
-                            ></edit>
-                    </template>
-                </example-sent>
-
-                <example-sent>
-                    <template #complex-sent>He <es>served as the prime minister of Egypt</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1946 and again from 1946 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
-                    <template #simple-sent>He <es>was Egypt's Prime Minister</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
-                    <template #edit>
-                        <edit
-                            type="substitution"
-                            subtype="same"
-                            span="served as the prime minister of Egypt"
-                            span2="was Egypt's Prime Minister"
-                            explanation="the new span has exactly the same meaning as the original span."
-                            ></edit>
-                            <br />
-                        <edit
-                            type="substitution"
-                            subtype="less"
-                            span="between 1945 and 1946 and again from 1946 and 1948."
-                            span2="between 1945 and 1948."
-                            explanation="the new span misses a small detail about `again`"
-                            ></edit>
-                    </template>
-                </example-sent>
-
-                <example-sent>
-                    <template #complex-sent>She appeared in <es>several</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>online videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"It Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
-                    <template #simple-sent>She appeared in <es>a few</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>music videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"She Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
-                    <template #edit>
-                        <edit
-                            type="substitution"
-                            subtype="same"
-                            span="several"
-                            span2="a few"
-                            explanation="several and a few expresses the same meaning."
-                            ></edit>
-                        <br />
-                        <edit
-                            type="substitution"
-                            subtype="more"
-                            span="online videos"
-                            span2="music videos"
-                            explanation="music videos is a more specific type of online videos."
-                            ></edit>
-                        <br />
-                        <edit
-                            type="substitution"
-                            subtype="different"
-                            span='"It Girl"'
-                            span2='"She Girl"'
-                            explanation='"She Girl" is different from "It Girl"'
-                            ></edit>
-                    </template>
-                </example-sent>
-
-                <h2>Rating by Severity</h2>
+                <!-- <h2>Rating by Severity</h2>
                 <p>
                     After selecting the type of the substitution edit, you will rate the severity of the edit by answering the question corresponding to the edit type.
                     Let's do the examples that we have seen above.
                 </p>
-                
-                <example-sent>
-                    <template #complex-sent>Clank <es>asks Ratchet to help him</es> find the famous superhero Captain Qwark.</template>
-                    <template #simple-sent>Clank <es>asks for help from Ratchet to</es> find Captain Qwark.</template>
-                    <template #edit>
-                        <edit
-                            type="substitution"
-                            subtype="same"
-                            simplify=false
-                            span="asks Ratchet to help him"
-                            span2="asks for help from Ratchet to"
-                            explanation="the new span doesn't simplify the original span."
-                            ></edit>
-                    </template>
-                </example-sent>
 
-                <example-sent>
-                    <template #complex-sent>He <es>served as the prime minister of Egypt</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1946 and again from 1946 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
-                    <template #simple-sent>He <es>was Egypt's Prime Minister</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
-                    <template #edit>
-                        <edit
-                            type="substitution"
-                            subtype="same"
-                            simplify=true
-                            span="served as the prime minister of Egypt"
-                            span2="was Egypt's Prime Minister"
-                            explanation="the new span is simpler than the original span."
-                            ></edit>
-                            <br />
-                        <edit
-                            type="substitution"
-                            subtype="less"
-                            answer=2
-                            span="between 1945 and 1946 and again from 1946 and 1948."
-                            span2="between 1945 and 1948."
-                            explanation="`again` is a minor detail in the original sentence."
-                            ></edit>
-                    </template>
-                </example-sent>
+                <todo>The exmaples Yao gave were directly from the dataset. Need to rewrite them.</todo>
 
-                <example-sent>
-                    <template #complex-sent>She appeared in <es>several</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>online videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"It Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
-                    <template #simple-sent>She appeared in <es>a few</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>music videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"She Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
-                    <template #edit>
-                        <edit
-                            type="substitution"
-                            subtype="same"
-                            simplify=true
-                            span="several"
-                            span2="a few"
-                            explanation="'a few' is simpler than 'several'."
-                            ></edit>
-                        <br />
-                        <edit
-                            type="substitution"
-                            subtype="more"
-                            subsubtype="elaboration"
-                            answer=2
-                            span="online videos"
-                            span2="music videos"
-                            explanation="music videos is more specific than online videos and it corrsponds to `It Gril`, so it is is an elaboration."
-                            ></edit>
-                        <br />
-                        <edit
-                            type="substitution"
-                            subtype="different"
-                            answer=2
-                            span='"It Girl"'
-                            span2='"She Girl"'
-                            explanation='For this one, you can mark the severity as 1 or 2.'
-                            ></edit>
-                    </template>
-                </example-sent>
+                <h2>Putting it All Together</h2> -->
 
                 <h2>Quiz</h2>
                 <h3 class="mb0">4.1:</h3>
@@ -1265,91 +1198,152 @@
                 <todo>1-2 severity examples</todo>
             </tab-content>
             <tab-content title="Annotating Structure Changes">
+                <h1>Annotating Structure Changes</h1>
                 <p>In a <est>structural edit</est>, the AI attemped to modify the tense, structure or voice of the sentence to present the information more clearly. Unlike other edits, structural edits are a <b>composite edit</b>, meaning they are only seen as a combination of other edits. Let’s start with some examples of structural edits:</p>
 
-                <p>
-                    Her book makes the first thorough analysis of this rural society.
+                <example-sent
+                    noedits=true
+                    explanation="The sentence was modified from being an independent to a dependent clause."
+                    >
+                    <template #complex-sent>Donaldson attempted to speak clearly.</template>
+                    <template #simple-sent><ust noto><ei>Because</ei></ust> donaldson attempted to speak clearly.</template>
+                </example-sent>
 
-The first thorough analysis of this rural society is made by her book.
+                <example-sent
+                    noedits=true
+                    explanation="A change in tense qualifies as a structural change. Notice how multiple phrases across the sentence were modified as part of the edit. All of these changes are part of the SAME structural edit."
+                    >
+                    <template #complex-sent>We <ust noto><es>compute</es></ust><ss>1</ss> the Pearson correlation <ust noto><es>to asses</es></ust><ss>1</ss> annotation quality.</template>
+                    <template #simple-sent>We <ust noto><es>computed</es></ust><ss>1</ss> the Pearson correlation <ust noto><es>when we assessed</es></ust><ss>1</ss> annotation quality.</template>
+                </example-sent>
 
-The voice of the sentence was changed from active to passive.
+                <example-sent
+                    noedits=true
+                    explanation="The voice of the sentence was changed from active to passive."
+                    >
+                    <template #complex-sent><ust><ur>Her book <es>makes</es></ur></ust> the first thorough analysis of this rural society.</template>
+                    <template #simple-sent>The first thorough analysis of this rural society <ust><ur><es>is made by</es> her book</ur></ust>.</template>
+                </example-sent>
 
-Donaldson attempted to speak clearly.
+                <example-sent
+                    noedits=true
+                    explanation="The sentence was changed from 2 indpendent clauses to a dependent + independent clause."
+                    >
+                    <template #complex-sent>Her book makes the first thorough analysis of this rural society, <ust><ur><ed>and one that</ed> <es>draws</es> on all available sources</ur></ust>.</template>
+                    <template #simple-sent><ust><ur><es>Drawing</es> on all available sources</ur></ust>, her book makes the first thorough analysis of this rural society.</template>
+                </example-sent>
 
-Because donaldson attempted to speak clearly.
+                <p>As we have seen, a change in voice, tense or clause structure can all be types of structural changes.</p>
 
-The sentence was modified from being an independent to a dependent clause.
-
-We compute the Pearson correlation to asses annotation quality
-
-We computed the Pearson correlation when we assessed annotation quality.
-
-A change in tense qualifies as a structural change.
-
-Her book makes the first thorough analysis of this rural society, and one that draws on all available sources.
-
-Drawing on all available sources, her book makes the first thorough analysis of this rural society.
-                </p>
-
+                <h2>Reorder vs. Structural Edits</h2>
 
                 <p>A structural edit is independent of a re-order edit! Remember a re-order edit exists simply to annotate the order information is being presented has changed, while a structural edit <i>requires</i> some attribute of the sentence to be modified.</p>
 
-Although I found structural annotation difficult, with pracitce the annotation became easier.
+                <example-sent
+                    noedits=true
+                    explanation="The order of phrases is simply flipped, while the underlying structure of the sentence remains unchanged."
+                    >
+                    <template #complex-sent><ur>Although I found structural annotation difficult</ur>, with practice the annotation became easier.</template>
+                    <template #simple-sent>With practice the annotation became easier, <ur>although I found structural annotation difficult</ur>.</template>
+                </example-sent>
 
-With practice the annotation became easier, although I found structural annotation difficult.
+                <example-sent
+                    noedits=true
+                    explanation="The first clause was moved to the beginning as a reorder, but became a structural change when it was changed from passive to active voice."
+                    >
+                    <template #complex-sent>Although I found structural annotation difficult, <ust><ur>with practice the annotation became easier</ur></ust>.</template>
+                    <template #simple-sent><ust><ur>The annotation became easier with practice</ur></ust>, although I found structural annotation difficult.</template>
+                </example-sent>
 
-The order of phrases is simply flipped, while the underlying structure of the sentence remains unchanged.
-
-The annotation became easier with practice, although I found structural annotation difficult.
-
-The first clause was moved to the beginning as a reorder, but became a structural change when it was changed from passive to active voice.
-
-I found structural annotation difficult because pracitce made the annotation easier.
-
-The sentence was converted from passive + active voice to active + passive voice.
+                <example-sent
+                    noedits=true
+                    explanation="Pay attention to the three SEPERATE structural edits. A good rule of thumb: if the sentence can stand alone only having a structural edit, then that edit is seperate."
+                    >
+                    <template #complex-sent><ust noto><ed>Although</ed></ust><ss>1</ss> I found structural annotation difficult<ust noto><es>, with</es></ust><ss>2</ss> practice the annotation <ust><ur><es>became</es></ur></ust><ss>3</ss> easier.</template>
+                    <template #simple-sent>I found structural annotation difficult <ust noto><es>because</es></ust><ss>2</ss> practice <ust><ur><es>made</es></ur></ust><ss>3</ss> the annotation easier.</template>
+                </example-sent>
 
                 <h2>Rating by Severity</h2>
                 <p>We rate severity similar to the <i>re-order edit</i>. Because no information is changed, we only annotate for how the change <b>adds clarity</b>.</p>
 
-Like an actor repeating his part in an old play, Prince Vassily always spoke languidly
+                <example-sent>
+                    <template #complex-sent>Like an actor repeating his part in an old play, Prince Vassily always spoke languidly.</template>
+                    <template #simple-sent>Like an actor repeating his part in an old play, Prince Vassily <ust noto>had</ust><ss>1</ss> always spoke languidly.</template>
+                    <template #edit>
+                        <edit
+                            type="structural"
+                            
+                            explanation="The change in tense seems to have no real impact on the sentence."
+                            ></edit>
+                    </template>
+                </example-sent>
 
-Like an actor repeating his part in an old play, Prince Vassily had always spoke languidly
+                <example-sent>
+                    <template #complex-sent><ust><ur>Like an actor repeating his part in an old play</ur></ust><ss>1</ss>, Prince Vassily always spoke languidly.</template>
+                    <template #simple-sent>Prince Vassily always spoke languidly, <ust><ur>like an actor repeating his part in an old play</ur></ust><ss>1</ss>.</template>
+                    <template #edit>
+                        <edit
+                            type="structural"
+                            
+                            explanation="Presenting the content of the sentence before the metaphor operating on the content adds clarity to what the metaphor is talking about."
+                            ></edit>
+                    </template>
+                </example-sent>
 
-The change in tense seems to have no real impact on the sentence.
-
-Prince Vassily always spoke languidly, like an actor repeating his part in an old play.
-
-Presenting the content of the sentence before the metaphor operating on the content adds clarity to what the metaphor is talking about.
-
-Like an actor repeating his part in an old play, languidly was how Prince Vassily always spoke.
-
-Making the adverb “languidly” the subject of the second clause adds confusion.
+                <example-sent>
+                    <template #complex-sent>Like an actor repeating his part in an old play, Prince Vassily always spoke <ust><ur>languidly</ur></ust><ss>1</ss>.</template>
+                    <template #simple-sent>Like an actor repeating his part in an old play, <ust><ur>languidly</ur> <ei>was how</ei></ust><ss>1</ss> Prince Vassily always spoke.</template>
+                    <template #edit>
+                        <edit
+                            type="structural"
+                            
+                            explanation="Making the adverb “languidly” the subject of the second clause adds confusion."
+                            ></edit>
+                    </template>
+                </example-sent>
 
                 <h2>Phrase vs. Syntax Edits</h2>
 
                 <p>As you can see <i>phrase edits</i> can only capture how individual pieces of information or a small set of words change. When the AI creates an edit which modifies the sentence as a whole, this <i>must</i> be captured by a structural edit. Here’s some examples of overlapping phrase and syntax edits:</p>
 
-The amount that Phoenix spends on criminal enforcement is difficult to quantify, in part because the City does not classify arrests by housing status.
-
-Because the City of Pheonix, in part, refuses to use an individual’s housing to organize arrests, it has become hard to find out how much it spends on policing.
+                <example-sent>
+                    <template #complex-sent><es>The amount that</es> <es>Phoenix</es> spends on <es>criminal enforcement</es> <es>is difficult</es> <es>to quantify</es><ur>, in part</ur> <ur>because</ur> <es>the City</es> <es>does not</es> <es>classify</es> arrests <es>by housing status</es>.</template>
+                    <template #simple-sent><ur>Because</ur> <ei>the City of</ei> Pheonix<ur>, in part,</ur> <es>refuses to use</es> <es>an individual’s housing</es> <es>to organize</es> arrests, <es>it</es> <es>has become hard</es> <es>to find out how much</es> <ei>it</ei> spends <es>on policing</es>.</template>
+                    <template #edit>
+                        <edit
+                            type="structural"
+                            
+                            explanation="Making the adverb “languidly” the subject of the second clause adds confusion."
+                            ></edit>
+                    </template>
+                </example-sent>
 
                 <h2>Only Select 1 Reorder</h2>
 
                 <p>One particular case you may find is a structural change which re-orders a phrase. In this case, only select the phrase which you think best captures the re-order, not every phrase which is moved in the sentence.</p>
 
-Because ice cream sales have increased, we observe more reported drownings.
-
-More reported drownings are observed because ice cream sales have increased.
-
-Notice how “Because ice cream sales have increased” and “we observe more reported drownings” could technically both be selected for the re-order edit. However, the structural edit is aiming to present “More reported drownings” first, so we highlight that phrase as our re-order edit.
+                <example-sent
+                    explanation="Notice how “Because ice cream sales have increased” and “we observe more reported drownings” could technically both be selected for the re-order edit. However, the structural edit is aiming to present “More reported drownings” first, so we highlight that phrase as our re-order edit."
+                    >
+                    <template #complex-sent>Because ice cream sales have increased, <ust><ur><es>we observe</es> more reported drownings</ur></ust><ss>1</ss>.</template>
+                    <template #simple-sent><ust><ur>More reported drownings <es>are observed</es></ur></ust><ss>1</ss> because ice cream sales have increased.</template>
+                </example-sent>
 
                 <h2>Putting it Together</h2>
 
                 <p>Structural edits are the least common and most complicated edit type, so if there is ambiguity in your answer, we encourage you provide a comment explaining why you made your decision. Here’s an example which may prove difficult to annotate:</p>
 
-Anna Pavlovna Scherer, in spite of her forty years, was on the contrary brimming over with excitement and impulsiveness.
-
-In spite of her many years, Anna Pavlovna Scherer overflows with impulsiveness and excitement, on the contrary of her age.
+                <example-sent>
+                    <template #complex-sent>Anna Pavlovna Scherer, in spite of her forty years, was on the contrary brimming over with excitement and impulsiveness.</template>
+                    <template #simple-sent>In spite of her many years, Anna Pavlovna Scherer overflows with impulsiveness and excitement, on the contrary of her age.</template>
+                    <template #edit>
+                        <edit
+                            type="structural"
+                            
+                            explanation=""
+                            ></edit>
+                    </template>
+                </example-sent>
 
                 <h2>Quiz</h2>
             </tab-content>

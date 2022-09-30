@@ -71,7 +71,21 @@ img {
     font-size: 16px !important;
 }
 .column-severity {
-    display: table-cell;
+    display: inline-table;
+}
+.column-substitution {
+    min-width: 100px;
+}
+.column-insertion {
+    min-width: 150px;
+}
+.column-severity label {
+    letter-spacing: 0.6px !important;
+    font-size: 14px !important;
+}
+.edit .tracked-light {
+    color: #8a8a8a;
+    letter-spacing: 0.1px;
 }
 .bt-sent {
     margin-bottom: 6px
@@ -133,4 +147,22 @@ img.span_selection_quiz_answer {
     border-color: rgba(0,0,0,.8);
     border-style: solid;
     border-width: 2px;
+}
+
+.edit-container {
+    margin: 16px auto 16px auto;
+    padding: 0 0 16px 0 !important;
+    max-width: 500px;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    border-color: rgb(201, 201, 201);
+    border-style: solid;
+    border-width: 1px;
+}
+.explain {
+    margin: 0 16px;
+    margin-bottom: 16px;
+}
+.no-edit-explain {
+    margin: 16px 0 0 0 !important;
 }

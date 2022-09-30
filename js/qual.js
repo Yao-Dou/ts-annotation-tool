@@ -11,15 +11,28 @@ const ExampleSent = Vue.component('example-sent', {
       <div class="sent">
           <p class="mb1"><slot name="simple-sent"></slot></p>
       </div>
-      <slot name="edit"></slot>
-      <template v-if="this.explanation != undefined">
-        <div class="explain">
-          {{ explanation }}
+      <template v-if="this.noedits == 'true'">
+        <template v-if="this.explanation != undefined">
+          <div class="explain no-edit-explain">
+            {{ explanation }}
+          </div>
+        </template>
+      </template><template v-else>
+        <div class="edit-container">
+          <slot name="edit"></slot>
+          <template v-if="this.explanation != undefined">
+            <div class="explain">
+              {{ explanation }}
+            </div>
+          </template>
         </div>
       </template>
     </div>
     `,
-    props: ['explanation'],
+    props: ['explanation', 'noedits'],
+    created: function() {
+      this.noedits = this.$props.noedits;
+    }
 });
 
 const Sent = Vue.component('sent', {
@@ -28,13 +41,10 @@ const Sent = Vue.component('sent', {
 const EditHeader = Vue.component('edit-header', {
   template: `
     <div class="f4 mt0 mb2 tc"> 
-      <span class="edit-label">Edit:</span> 
       <template v-if="this.type == 'deletion'">
-        <span class="edit-type txt-deletion f3">delete </span>
         <span class="pa1 edit-text br-pill-ns border-deletion-all deletion_below txt-deletion">&nbsp;<slot name="span"></slot>&nbsp;</span>
       </template>
       <template v-if="this.type == 'insertion'">
-        <span class="edit-type txt-insertion f3">insert </span>
         <span class="pa1 edit-text br-pill-ns border-insertion-all insertion_below txt-insertion">&nbsp;<slot name="span"></slot>&nbsp;</span>
       </template>
       <template v-if="this.type == 'substitution'">
@@ -101,7 +111,7 @@ const AnswerBox = Vue.component('answer-box', {
       </div>
     </template>
     <template v-else-if="this.type == 'substitution'">
-      <div class="column-severity w-25">
+      <div class="column-severity column-substitution w-10">
         <template v-if="interactive">
           <input class="checkbox-tools checkbox-tools-severity" type="radio" v-bind:id="editId*id" v-bind:name="editId">
         </template>
@@ -122,7 +132,7 @@ const AnswerBox = Vue.component('answer-box', {
       </div>
     </template>
     <template v-else-if="this.type == 'insertion'">
-      <div class="column-severity w-33">
+      <div class="column-severity column-insertion w-10">
         <template v-if="isAnswer"><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled checked></template>
         <template v-else><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled></template>
         <label class="for-checkbox-tools-severity question-insertion" checked> <slot></slot> </label>
@@ -166,9 +176,22 @@ const Edit = Vue.component('edit', {
           </p>
           <div class="tc">
             <answer-box :isAnswer="this.subtype=='elaboration'" :type=type>Elaboration</answer-box>
-            <answer-box :isAnswer="this.subtype=='hallucination'" :type=type>Hallucination</answer-box>
             <answer-box :isAnswer="this.subtype=='trivial'" :type=type>Trivial Insertion</answer-box>
+            <answer-box :isAnswer="this.subtype=='repetition'" :type=type>Repetition</answer-box>
+            <answer-box :isAnswer="this.subtype=='contradiction'" :type=type>Contradiction</answer-box>
+            <answer-box :isAnswer="this.subtype=='hallucination'" :type=type>Hallucination</answer-box>
           </div>
+
+          <template v-if="this.irrelevant != ''">
+            <p class="mb2 b tracked-light">
+              Is the addition relevant to its context?
+            </p>
+
+            <div class="tc">
+              <answer-box :isAnswer="this.irrelevant=='false'" :type=type>Yes</answer-box>
+              <answer-box :isAnswer="this.irrelevant=='true'" :type=type>No</answer-box>
+            </div>
+          </template>
         </template>
 
         <template v-if="this.type == 'substitution'">
@@ -176,7 +199,7 @@ const Edit = Vue.component('edit', {
             {{question}}
           </p>
           <div class="tc">
-            <answer-box :isAnswer="this.subtype=='same'" :type=type>the same meaning</answer-box>
+            <answer-box :isAnswer="this.subtype=='same'" :type=type>same meaning</answer-box>
             <answer-box :isAnswer="this.subtype=='less'" :type=type>less information</answer-box>
             <answer-box :isAnswer="this.subtype=='more'" :type=type>more information</answer-box>
             <answer-box :isAnswer="this.subtype=='different'" :type=type>different meaning</answer-box>
@@ -205,14 +228,28 @@ const Edit = Vue.component('edit', {
             </div>
         </template>
 
-        <template v-if="this.subtype == 'more' && this.subsubtype != undefined">
+        <template v-if="this.subtype == 'more' && this.instype != ''">
           <p class="mb2 b tracked-light">
             Select the type:
-            </p>
-            <div class="tc">
-              <answer-box :isAnswer="this.subsubtype=='elaboration'" :type=type>elaboration</answer-box>
-              <answer-box :isAnswer="this.subsubtype=='hallucination'" :type=type>hallucination</answer-box>
-            </div>
+          </p>
+          <div class="tc">
+            <answer-box :isAnswer="this.instype=='elaboration'" :type=type>Elaboration</answer-box>
+            <answer-box :isAnswer="this.instype=='trivial'" :type=type>Trivial Insertion</answer-box>
+            <answer-box :isAnswer="this.instype=='repetition'" :type=type>Repetition</answer-box>
+            <answer-box :isAnswer="this.instype=='contradiction'" :type=type>Contradiction</answer-box>
+            <answer-box :isAnswer="this.instype=='hallucination'" :type=type>Hallucination</answer-box>
+
+            <template v-if="this.answer > 0">
+              <p class="mb2 b tracked-light">
+                Rate the efficacy:
+              </p>
+              <div class="tc">
+                <answer-box :isAnswer="this.answer==1" :type=type>1 - Minor</answer-box>
+                <answer-box :isAnswer="this.answer==2" :type=type>2 - Somewhat</answer-box>
+                <answer-box :isAnswer="this.answer==3" :type=type>3 - A lot</answer-box>
+              </div>
+            </template>
+          </div>
         </template>
 
         <template v-if="this.subtype == 'more' && this.subsubtype == 'elaboration' && this.answer > 0">
@@ -237,16 +274,16 @@ const Edit = Vue.component('edit', {
             </div>
         </template>
 
-        <template v-if="this.answer > 0 && this.subtype != 'less' && this.subtype != 'more' && this.subtype != 'different'">
+        <template v-if="this.answer > 0 && this.type != 'substitution' && this.subtype != 'less' && this.subtype != 'more' && this.subtype != 'different'">
           <p class="mb2 b tracked-light">
-            {{question}}
+            {{ subtypeQuestion }}
           </p>
           <template v-if="this.type == 'deletion'">
             <div class="tc">
-              <answer-box :isAnswer="this.answer==1" :type=type :interactive=interactive :id=1 :editId=editId :update=updateInteractiveMessage>1 - not at all</answer-box>
-              <answer-box :isAnswer="this.answer==2" :type=type :interactive=interactive :id=2 :editId=editId :update=updateInteractiveMessage>2 - minor</answer-box>
-              <answer-box :isAnswer="this.answer==3" :type=type :interactive=interactive :id=3 :editId=editId :update=updateInteractiveMessage>3 - somewhat</answer-box>
-              <answer-box :isAnswer="this.answer==4" :type=type :interactive=interactive :id=4 :editId=editId :update=updateInteractiveMessage>4 - very much</answer-box>
+              <answer-box :isAnswer="this.answer==1" :type=type :id=1 :editId=editId>1 - not at all</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type :id=2 :editId=editId>2 - minor</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type :id=3 :editId=editId>3 - somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==4" :type=type :id=4 :editId=editId>4 - very much</answer-box>
             </div>
           </template>
           <template v-if="this.type == 'insertion'">
@@ -258,11 +295,38 @@ const Edit = Vue.component('edit', {
           </template>
         </template>
 
+        <template v-if="this.impact != ''">
+          <p class="mb2 b tracked-light">
+            How the edit impact the simplicity of the phrase?
+          </p>
+          <div class="tc">
+            <answer-box :isAnswer="this.impact=='positive'" :type=type :id=11 :editId=editId>positive</answer-box>
+            <answer-box :isAnswer="this.impact=='none'" :type=type :id=12 :editId=editId>no impact</answer-box>
+            <answer-box :isAnswer="this.impact=='negative'" :type=type :id=13 :editId=editId>negative</answer-box>
+          </div>
+
+          <template v-if="this.answer > 0">
+            <p class="mb2 b tracked-light">
+              <template v-if="this.impact=='positive'">
+                Rate the efficacy:
+              </template><template v-if="this.impact=='negative'">
+                Rate the severity:
+              </template>
+            </p>
+            <div class="tc">
+              <answer-box :isAnswer="this.answer==1" :type=type>1 - Minor</answer-box>
+              <answer-box :isAnswer="this.answer==2" :type=type>2 - Somewhat</answer-box>
+              <answer-box :isAnswer="this.answer==3" :type=type>3 - A lot</answer-box>
+            </div>
+          </template>
+          </template>
+        </template>
+
         <template v-if="this.grammar != ''">
           <p class="mb2 b tracked-light">
             Does this deletion edit introduce any fluency / grammar error?
           </p>
-          <div class="tc grammar-answer">
+          <div class="tc">
             <answer-box :isAnswer="this.grammar=='true'" :type=type>yes</answer-box>
             <answer-box :isAnswer="this.grammar=='false'" :type=type>no</answer-box>
           </div>
@@ -278,14 +342,14 @@ const Edit = Vue.component('edit', {
       </template>
     </div>
     `,
-    props: ['type', 'subtype', 'subsubtype', 'span', 'span2', 'answer', 'explanation', 'grammar', 'simplify', 'interactive', 'incorrectMessage', 'correctMessage', 'split_edit'],
+    props: ['type', 'subtype', 'subsubtype', 'impact', 'instype', 'helptrivial', 'span', 'span2', 'answer', 'explanation', 'grammar', 'irrelevant', 'simplify', 'interactive', 'incorrectMessage', 'correctMessage', 'split_edit'],
     methods: {          
       getQuestion: function() {
         switch (this.$props.type) {
           case 'deletion':
             return 'Is the deleted span significant to the main idea of the original sentence?';
           case 'insertion':
-            return 'Is this insertion edit an elaboration, hallucination or adding trivial words?';
+            return 'Select the edit type:';
           case 'substitution':
             return 'Compared to the original phrase, the new phrase expresses:'
           default:
@@ -295,10 +359,14 @@ const Edit = Vue.component('edit', {
       getSubtypeQuestion: function() {
         switch (this.$props.subtype) {
           case 'elaboration':
-            return 'How much it helps you to read and understand the sentence?';
+          case 'trivial':
+            return 'Rate the efficacy:';
           case 'hallucination':
-            return 'How much it affects the main idea of the original sentence?';
-          case "same":
+          case 'error':
+          case 'repetition':
+          case 'contradiction':
+            return 'Rate the severity:';
+          case 'same':
             return 'Does the new phrase simplify the original phrase?';
           default:
             return this.$props.subtype;
@@ -315,7 +383,11 @@ const Edit = Vue.component('edit', {
       this.answer = parseInt(this.$props.answer);
       this.explanation = this.$props.explanation ? this.$props.explanation : ``;
       this.$props.subtype = this.$props.subtype ? this.$props.subtype : ``;
+      this.$props.impact = this.$props.impact ? this.$props.impact : ``;
+      this.$props.instype = this.$props.instype ? this.$props.instype : ``;
+      this.$props.helptrivial = this.$props.helptrivial ? this.$props.helptrivial : ``;
       this.$props.grammar = this.$props.grammar ? this.$props.grammar : ``;
+      this.$props.irrelevant = this.$props.irrelevant ? this.$props.irrelevant : ``;
       this.$props.interactive = this.$props.interactive ? this.$props.interactive : ``;
       this.editId = Math.floor(Math.random() * 100);
     }
@@ -333,11 +405,32 @@ const Deletion = Vue.component('ed', {
 const Split = Vue.component('esp', {
   template: `<span class="bg-split-light split"><slot /></span>`
 });
-const Structure = Vue.component('esp', {
+const Structure = Vue.component('est', {
   template: `<span class="bg-structure-light structure"><slot /></span>`
 });
-const Reorder = Vue.component('esp', {
+const UnderlinedStructure = Vue.component('ust', {
+  template: `
+  <template v-if="this.noto">
+    <span class="structure pointer span simplified_span border-structure"><slot /></span>
+  </template><template v-else>
+    <span class="structure pointer span simplified_span outside border-structure"><slot /></span>
+  </template>
+  `,
+  props: ['noto'],
+  created: function() {
+    this.noto = this.$props.noto != undefined;
+  }
+});
+const Subscript = Vue.component('ss', {
+  template: `
+  <sub><i class="fa-solid fa-2xs txt-structure" style='padding-left: 3px'><slot /></i></sub>
+  `
+});
+const Reorder = Vue.component('er', {
   template: `<span class="bg-reorder-light reorder"><slot /></span>`
+});
+const UnderlinedReorder = Vue.component('ur', {
+  template: `<span class="reorder pointer span simplified_span border-reorder"><slot /></span>`
 });
 const Todo = Vue.component('todo', {
   template: `<span class="todo"><slot /></span>`
