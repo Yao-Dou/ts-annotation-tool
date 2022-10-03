@@ -169,3 +169,8 @@ img.span_selection_quiz_answer {
 .edit .txt-structure {
     padding-right: 12px;
 }
+.decision-tree-img {
+    max-width: none;
+    width: 1000px;
+    margin-left: -80px;
+}

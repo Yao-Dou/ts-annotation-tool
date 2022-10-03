@@ -87,7 +87,6 @@
                 </p>
                 <p><b>NOTE:</b> <i>Phrase edits</i> and <i>syntax edits</i> are independent of each other! A single word can be a part of both a <i>phrase edit</i> <b><i>and</i></b> a <i>syntax edit</i>.</p>
                 <p>Here's an example of what selecting alignments looks like for one sentence:</p>
-                <todo>Redo GIF with sentence alignment edits</todo>
                 <img src="./img/span-selection.gif" alt="Big picture of the task" width="600">
                 <br />
                 <h2>Examples</h2>
@@ -177,8 +176,6 @@
                 <p>
                     In the real HIT, we have trained another AI to provide the alignment for you. However, this AI is frequently wrong (it will be wrong for almost every HIT), so please also fix its alignments. Go ahead and try it!
                 </p>
-
-                <todo>Redo the answer on this question</todo>
 
                 <h3 class="mb0">1.3:</h3>
                 <quiz
@@ -1025,21 +1022,23 @@
                 <h2>Putting it All Together</h2> -->
 
                 <h2>Quiz</h2>
+                <p>For this quiz, there may be more than <i>only</i> substitution edits. Please only select the other edits, you do not need to annotate them.</p>
                 <h3 class="mb0">4.1:</h3>
-                <iframe id="substitution_quiz_1" src="quiz_instance.html?original=He toured with the IPO in the spring of 1990 for their first-ever performance in the Soviet Union, with 
-                    concerts in Moscow and Leningrad, and toured with the IPO again in 1994, performing in China and India.&simplified=He performed with the IPO in the spring of 1990 
-                    for their first time in the Soviet Union with concerts in Moscow and Leningrad, and performed with the IPO again in China and India in 1994." width="100%" height="550" class="center db bb b--black-20"></iframe>
-                
+                <quiz
+                    id="substitution_quiz_1"
+                    original="He toured with the IPO in the spring of 1990 for their first-ever performance in the Soviet Union, with concerts in Moscow and Leningrad, and toured with the IPO again in 1994, performing in China and India."
+                    simplified="He performed with the IPO in the spring of 1990 for their first time in the Soviet Union with concerts in Moscow and Leningrad, and performed with the IPO again in China and India in 1994."></quiz>
                 <h3 class="mb0">4.2:</h3>
-                <iframe id="substitution_quiz_2" src="quiz_instance.html?original=It has a capacity of 98,772, making it the largest stadium in Europe, and the eleventh largest in the world.
-                &simplified=It can accommodate 98,772 people which makes it the largest stadium in Europe and the eleventh largest in the world." width="100%" height="550" class="center db bb b--black-20"></iframe>
-
+                <quiz
+                    id="substitution_quiz_2"
+                    original="It has a capacity of 98,772, making it the largest stadium in Europe, and the eleventh largest in the world."
+                    simplified="It can accommodate 98,772 people which makes it the largest stadium in Europe and the eleventh largest in the world." ></quiz>
                 <h3 class="mb0">4.3:</h3>
-                <iframe id="substitution_quiz_3" src="quiz_instance.html?original=
-                Mercury is similar in appearance to the Moon: it is heavily cratered with regions of smooth plains, has no natural satellites and no substantial atmosphere.
-                &simplified=Mercury, which looks like the Moon with its many craters and areas of smoothness, has no orbiting bodies around it and a minimal atmosphere." width="100%" height="550" class="center db"></iframe>
-                <!-- <input id="get-annotation-btn" type="button" value="Submit"/> -->
-
+                <quiz
+                    id="substitution_quiz_3"
+                    original="Mercury is similar in appearance to the Moon: it is heavily cratered with regions of smooth plains, has no natural satellites and no substantial atmosphere."
+                    simplified="Mercury, which looks like the Moon with its many craters and areas of smoothness, has no orbiting bodies around it and a minimal atmosphere."
+                    ></quiz>
             </tab-content>
             <tab-content title="Annotating Splits">
                 <h1>Annotating Splits</h1>
@@ -1125,6 +1124,12 @@
                 </example-sent>                
 
                 <h2>Quiz</h2>
+                <h3 class="mb0">5.1:</h3>
+                <quiz
+                    id="split_quiz_3"
+                    original=""
+                    simplified=""
+                    ></quiz>
             </tab-content>
             <tab-content title="Annotating Ordering Changes">
                 <h1>Annotating Ordering Changes</h1>
@@ -1132,7 +1137,7 @@
                 <todo>Simple example of re-order</todo>
 
                 <h2>Phrase vs. Syntax Edits</h2>
-                <p>Typically a sentence doesn’t just move phrases around, it will modify the wording or information in that phrase. Because of this, an edit can be both a phrase</p>
+                <p>Typically a sentence doesn’t just move phrases around, it will modify the wording or information in that phrase. Because of this, an edit can be both a <i>phrase edit</i> and a <i>syntax edit</i>.</p>
                 <todo>Examples with reorders and other phrase edits</todo>
 
                 <h2>Rating by Severity</h2>
@@ -1316,11 +1321,99 @@
                 <quiz
                     id="structure_quiz_1"
                     original="The incidence of Am stars hosting hot-brown dwarfs resulted higher than the frequency of Am stars in general"
-                    simplified="Compared to Am starts generally, Am stars which hosted hot-brown drafs were more frequent."
+                    simplified="Compared to Am stars generally, Am stars which hosted hot-brown drafs were more frequent."
                     ></quiz>
             </tab-content>
             <tab-content title="Conclusion & Reference">
-                <todo>Add decision tree</todo>
+                <h1>Conclusion</h1>
+                <p>Congradulations on completing the tutorial! You should be able to understand all types of phrase-level and sentence-level edits and the nuances in rating these edits. In the 'Quiz', you will use the onboarding data we provided to test your ability to rate real outputs from our AI models. If you have any questions, feel free to reach out.</p>
+
+                <p>When annotating, if you come across a difficult decision, please refer to this tutorial and make comment explaining your thought process. You can also refer to the below summary of definitions and reminders.</p>                
+
+                <h2>Phrase-level Edits</h2>
+
+                <p>
+                    <ul>
+                        <li>
+                            <ed>Deletion Edits</ed> - The AI attempted to <b><i>simplify by deleting</i></b> unnecessary information.
+                        </li><li>
+                            <ei>Insertion Edits</ei> - The AI attempted to <b><i>add clarity</i></b> by adding information which didn't previously exist.
+                        </li><li>
+                            <es>Substitution Edits</es> - The AI attempted to <b><i>reword a complicated phrase or concept</i></b>
+                        </li>
+                    </ul>
+                </p>
+
+                <h2>Identifying Change in Information</h2>
+
+                <p>Information change can be broadly organized into the following categories. While <ei>insertions</ei> primerily add information and <ed>deletions</ed> primerily remove information, <es>substitutions</es> can be vague:</p>
+                <p><ul>
+                    <li>
+                        Less information - Modify the phrase to <b>add clarity</b> to the sentence
+                    </li><li>
+                        Same meaning (<b>Paraphrase</b>) - Replace complicated words, while retaining the meaning
+                    </li><li>
+                        More information - Modify the phrase to <b>remove unecessary information</b> from the phrase
+                    </li><li>
+                        Different meaning - The AI removed all information and <b>replaced</b> it with new information
+                    </li>
+                </ul></p>
+
+                <h2>Phrase-level Errors</h2>
+
+                <p>Information addition (either through an <ei>insertion</ei> or <es>substitution</es>) may take the following forms:</p>
+                <p><ul>
+                    <li>
+                        Elaboration - Added <b>meaningful and correct</b> extra information
+                    </li><li>
+                        Trivial Insertion - Added <b>minor</b> wording (the, a, etc.)
+                    </li><li>
+                        Hallucination - New information is introduced but <b>does not add clarity</b>
+                    </li><li>
+                        Irrelevant - New information is introduced which is <b>unrelated</b> to the main idea
+                    </li><li>
+                        Contradiction - Phrase added but clearly <b>contradicts</b> information in the original sentence
+                    </li><li>
+                        Redundant - Phrase added but <b>fails to contain new information</b>
+                    </li>
+                </ul></p>
+
+                <p>Information removal (either through an <ed>deletion</ed> or <es>substitution</es>) may exibit errors as well:</p>
+                <p><ul>
+                    <li>
+                        Coreference Error - A <b>reference to a pronoun is deleted</b> and not referenced elsewhere in the sentence
+                    </li>
+                </ul></p>
+
+                <p>Lastly, any edit (syntactic or phrasal), may exhibit:</p>
+                <p><ul>
+                    <li>
+                        Grammar & Fluency Error - A basic error in sentence grammar or fluency. <i>Fluency</i> refers to the quality or flow of a sentence and <i>grammar</i> refers to the basic conventions
+                    </li>
+                </ul></p>
+
+                <h2>Sentence-level Edits</h2>
+
+                <p>
+                    <ul>
+                        <li>
+                            <esp>Splitting Edits</esp> - The AI attemped to <b><i>split a complex sentence</i></b> into two simpler sentences.
+                        </li><li>
+                            <er>Reordering Edits</er> - The AI attempted to <b><i>re-order</i></b> the words within a phrase or phrases within a sentence.
+                        </li><li>
+                            <est>Structural Edits</est> - The AI attemped to <b><i>modify attributes</i></b> (like the tense, structure or voice) of the sentence to present information more clearly.
+                        </li>
+                    </ul>
+                </p>
+
+                <p>Remember <est>strcutural edits</est> are a combination of other edits! You can have up two three overlapping edits.</p>
+
+                <h2>Decision Tree</h2>
+                <p>This graphic outlines the different decisions you may make about edits in a sentence:</p>
+                <br />
+                <img class="decision-tree-img" src="./img/decision-tree.png" alt="Big picture of the task" width="1200">
+                <br />
+                <p>This concludes the tutorial of the interface.</p>
             </tab-content>
             <tab-content title="Quiz" class="quiz-tab">
                 <iframe src="../index.html" width="100%" height="900"></iframe>
