@@ -25,6 +25,7 @@ const app = Vue.createApp({
             // for deletion annotation box
             deletion_severity_box: "",
             deletion_grammar_yes_no_box: "",
+            deletion_coref_yes_no_box: "",
 
             // for insertion annotation box
             insertion_type_box: "",

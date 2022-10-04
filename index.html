@@ -255,6 +255,16 @@
                                         </label>
                                     </div>
                                 </div>
+
+                                <p class="pb1 b tracked-light">Does this deletion result in coreference error?
+                                    <input class="checkbox-tools-yes-no" type="radio" name="deletion-coref-yes-no"
+                                        id="deletion-coref-yes" value="yes"  v-model="deletion_coref_yes_no_box">
+                                    <label class="normal for-checkbox-tools-yes-no question-deletion" for="deletion-coref-yes">yes</label>
+                                    <input class="checkbox-tools-yes-no" type="radio" name="deletion-coref-yes-no"
+                                        id="deletion-coref-no" value="no"  v-model="deletion_coref_yes_no_box">
+                                    <label class="normal for-checkbox-tools-yes-no question-deletion" for="deletion-coref-no">no</label>
+                                </p>
+
                                 <p class="mb3 b tracked-light">Does this deletion edit introduce any fluency / grammar error?
                                     <input class="checkbox-tools-yes-no" type="radio" name="deletion-yes-no"
                                         id="deletion-yes" value="yes" v-model="deletion_grammar_yes_no_box">
@@ -438,7 +448,7 @@
                                 </div>
 
                                 <div class="substitution-coref-div dn">
-                                    <p class="mt0 pt3 b tracked-light">Does this substitution result in missing subject (i.e. "Emily" -> "She")?
+                                    <p class="mt0 pt3 b tracked-light">Does this deletion result in coreference error (i.e. "Emily" -> "She")?
                                         <input class="checkbox-tools-yes-no" type="radio" name="substitution-coref-yes-no"
                                             id="substitution-coref-yes" value="yes"  v-model="substitution_coref_yes_no_box">
                                         <label class="normal for-checkbox-tools-yes-no question-substitution" for="substitution-coref-yes">yes</label>
