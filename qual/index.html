@@ -343,8 +343,8 @@
                 </example-sent>
                 <h2>Coreference Errors</h2>
                 <p>Deletions may also make a sentence unreadable by deleting a very specific piece of information. If a reference to a pronoun is deleted and not referenced elsewere in the sentence, this is a coreference error.</p>
-                <todo>Add coreference question</todo>
-                <example-sent>
+                <example-sent
+                    explanation="Euler is the subject.">
                     <template #complex-sent>He<ed>, Euler,</ed> was also the first practitioner of graph theory.</template>
                     <template #simple-sent>He was also the first practitioner of graph theory.</template>
                     <template #edit>
@@ -988,6 +988,7 @@
                             span="Herbert Spencer’s"
                             span2="His"
                             subtype="less"
+                            coreference=true
                             answer="4"
                             explanation="Removes a pronoun which isn’t referenced elsewhere in the sentence."
                         ></edit>
@@ -1126,23 +1127,98 @@
                 <h2>Quiz</h2>
                 <h3 class="mb0">5.1:</h3>
                 <quiz
-                    id="split_quiz_3"
-                    original=""
-                    simplified=""
+                    id="split_quiz_1"
+                    original="The notion of nodal security governance while first formulated by Shearing on his visit to Disney World was refined and exemplified in his fieldwork in Zwelethemba."
+                    simplified="The idea of “nodal” security governance, first thought of by Shearing on his visit to Disney World, was worked on. || This idea was then shown when he worked in Zwelethemba."
                     ></quiz>
             </tab-content>
             <tab-content title="Annotating Ordering Changes">
                 <h1>Annotating Ordering Changes</h1>
                 <p>In a <er>re-order edit</er>, the AI attempted to simply by re-ordering words within a phrase or phrases within a sentence. </p>
-                <todo>Simple example of re-order</todo>
-
-                <h2>Phrase vs. Syntax Edits</h2>
-                <p>Typically a sentence doesn’t just move phrases around, it will modify the wording or information in that phrase. Because of this, an edit can be both a <i>phrase edit</i> and a <i>syntax edit</i>.</p>
-                <todo>Examples with reorders and other phrase edits</todo>
+                <example-sent
+                    noedits=true
+                    explanation="You may re-order a phrase across a sentence">
+                    <template #complex-sent>Because of his marked propensity toward procrastination and sloth, <ur>the old man was sympathetic and apathetic</ur>.</template>
+                    <template #simple-sent><ur>The old man was sympathetic and apathetic</ur> because of his marked propensity toward procrastination and sloth.</template>
+                </example-sent>
+                <example-sent
+                    noedits=true
+                    explanation="You may also re-order words within a phrase">
+                    <template #complex-sent>Because of his marked propensity toward <ur>procrastination and sloth</ur><so>1</so>, the old man was <ur>sympathetic and apathetic</ur><so>2</so>.</template>
+                    <template #simple-sent>Because of his marked propensity toward <ur>sloth and procrastination</ur><so>1</so>, the old man was <ur>apathetic and sympathetic</ur><so>2</so>.</template>
+                </example-sent>
 
                 <h2>Rating by Severity</h2>
                 <p>Re-order edits do not modify the information in the sentence. Therefore, we only rate for how the edit <b>adds clarity</b>. Similar to a paraphrase (i.e. a substitution which adds no new information), we rate whether the edit is helpful and its efficacy/severity. </p>
-                <todo>1-2 severity examples</todo>
+
+                <example-sent>
+                    <template #complex-sent><div style="line-height: 35px">The emergence of huge, dominant radio conglomerates like <ur>Clear Channel and Infinity</ur><so>1</so> <ur o>is a direct consequence of <ur>the '96 Act</ur><so>3</so></ur><so>2</so>.</div></template>
+                    <template #simple-sent><div style="line-height: 35px"><ur o><ur>The '96 Act</ur><so>3</so> had a direct consequence of</ur><so>2</so> the emergence of huge, dominant radio conglomerates like <ur>Infinity and Clear Channel</ur><so>1</so>.</div></template>
+                    <template #edit>
+                        <edit
+                            type="reorder"
+                            span="Clear Channel and Infinity"
+                            span2="Infinity and Clear Channel"
+                            reorder="phrase"
+                            impact="none"
+                            explanation="The order of the two names 'Clear Channel and Infinity' is inconsequential to understanding the sentence."
+                            ></edit>
+                        <edit
+                            type="reorder"
+                            span="is a direct consequence of the '96 Act"
+                            span2="The '96 Act had a direct consequence of"
+                            reorder="sentence"
+                            impact="positive"
+                            answer="2"
+                            explanation="Placing the cause of the sentence (the '96 Act') before the effect (the emergence of radio conglomerates) adds clarity."
+                            ></edit>
+                        <edit
+                            type="reorder"
+                            span="the '96 Act"
+                            span2="The '96 Act"
+                            reorder="phrase"
+                            impact="positive"
+                            answer="1"
+                            explanation="Placing the '96 act at the beginning of the phrase modifies the voice of the sentence to focus on the '96 Act' itself."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <h2>Phrase vs. Syntax Edits</h2>
+                <p>Typically a sentence doesn’t just move phrases around, it will modify the wording or information in that phrase. Because of this, an edit can be both a <i>phrase edit</i> and a <i>syntax edit</i>.</p>
+
+                <example-sent>
+                    <template #complex-sent><ed>The fact of the matter is that</ed> <ed>it</ed> is not John Ziegler's job <ur><es>to be</es> responsible,</ur><so>1</so> <ed>or nuanced,</ed> or to think about <ur>whether <es>his on-air comments are productive or dangerous, or cogent, or even defensible</es></ur><so>2</so>.</template>
+                    <template #simple-sent><ur>Whether <es>what he says during his show</es> <es>is helpful or not,</es></ur><so>2</so> <ur><es>being</es> responsible</ur><so>1</so> is not John Ziegler's job.</template>
+                    <template #edit>
+                        <edit
+                            type="reorder"
+                            span="to be responsible,"
+                            span2="being responsible"
+                            reorder="phrase"
+                            impact="negative"
+                            answer="1"
+                            explanation="Although 'John Ziegler's job' is the subject of the sentence and should be introduced before the phrase 'being responsible,' it doesn't have a significant impact on the clarity."
+                            ></edit>
+                        <edit
+                            type="reorder"
+                            span="whether his on-air comments are productive or dangerous, or cogent, or even defensible"
+                            span2="Whether what he says during his show is helpful or not,"
+                            reorder="sentence"
+                            impact="negative"
+                            answer="2"
+                            explanation="Placing this dependent clause at the beginning of the sentence is confusing because the reader doesn't yet know what it's modifying."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <h2>Quiz</h2>
+                <h3 class="mb0">6.1:</h3>
+                <quiz
+                    id="reorder_quiz_1"
+                    original="On the contrary, in an indirect heat exchanger, the cold and hot streams do NOT mix; therefore, the mass conservation equation must be applied to each flow stream individually."
+                    simplified="The mass conversion equation should be applied to each flow stream in an indrect heat exchanger because, on the contrary, the hot and cold streams do NOT mix."
+                    ></quiz>
             </tab-content>
             <tab-content title="Annotating Structure Changes">
                 <h1>Annotating Structure Changes</h1>
@@ -1150,18 +1226,18 @@
 
                 <example-sent
                     noedits=true
-                    explanation="The sentence was modified from being an independent to a dependent clause."
+                    explanation="The second clause in the sentence was modified from an independent clause to a single word."
                     >
-                    <template #complex-sent>Donaldson attempted to speak clearly.</template>
-                    <template #simple-sent><ust noto><ei>Because</ei></ust> donaldson attempted to speak clearly.</template>
+                    <template #complex-sent>Donaldson attempted to speak clearly and <ust noto><es>he was successful</es></ust>.</template>
+                    <template #simple-sent>Donaldson attempted to speak clearly and <ust noto><es>successfully</es></ust>.</template>
                 </example-sent>
 
                 <example-sent
                     noedits=true
-                    explanation="A change in tense qualifies as a structural change. Notice how multiple phrases across the sentence were modified as part of the edit. All of these changes are part of the SAME structural edit."
+                    explanation="A change in tense qualifies as a structural change."
                     >
-                    <template #complex-sent>We <ust noto><es>compute</es></ust><ss>1</ss> the Pearson correlation <ust noto><es>to asses</es></ust><ss>1</ss> annotation quality.</template>
-                    <template #simple-sent>We <ust noto><es>computed</es></ust><ss>1</ss> the Pearson correlation <ust noto><es>when we assessed</es></ust><ss>1</ss> annotation quality.</template>
+                    <template #complex-sent>We <ust noto><es>compute</es></ust><ss>1</ss> the Pearson correlation <ust noto><es>to asses</es></ust><ss>2</ss> annotation quality.</template>
+                    <template #simple-sent>We <ust noto><es>computed</es></ust><ss>1</ss> the Pearson correlation <ust noto><ei>when we</ei> <es>assessed</es></ust><ss>2</ss> annotation quality.</template>
                 </example-sent>
 
                 <example-sent
@@ -1177,7 +1253,7 @@
                     explanation="The sentence was changed from 2 indpendent clauses to a dependent + independent clause."
                     >
                     <template #complex-sent>Her book makes the first thorough analysis of this rural society, <ust><ur><ed>and one that</ed> <es>draws</es> on all available sources</ur></ust>.</template>
-                    <template #simple-sent><ust><ur><es>Drawing</es> on all available sources</ur></ust>, her book makes the first thorough analysis of this rural society.</template>
+                    <template #simple-sent><div style="line-height: 35px"><ust><ur><es>Drawing</es> on all available sources</ur></ust>, her book makes the first thorough analysis of this rural society.</div></template>
                 </example-sent>
 
                 <p>As we have seen, a change in voice, tense or clause structure can all be types of structural changes.</p>
@@ -1287,8 +1363,8 @@
                     noedits=true
                     explanation="Notice how “Because ice cream sales have increased” and “we observe more reported drownings” could technically both be selected for the re-order edit. However, the structural edit is aiming to present “More reported drownings” first, so we highlight that phrase as our re-order edit."
                     >
-                    <template #complex-sent>Because ice cream sales have increased, <ust><ur><es>we observe</es> more reported drownings</ur></ust><ss>1</ss>.</template>
-                    <template #simple-sent><ust><ur>More reported drownings <es>are observed</es></ur></ust><ss>1</ss> because ice cream sales have increased.</template>
+                    <template #complex-sent>Because ice cream sales have increased, <ur><ust><es>we observe</es></ust><ss>1</ss> more reported drownings</ur>.</template>
+                    <template #simple-sent><ur>More reported drownings <ust><es>are observed</es></ur></ust><ss>1</ss> because ice cream sales have increased.</template>
                 </example-sent>
 
                 <h2>Putting it Together</h2>
@@ -1317,7 +1393,7 @@
                 </example-sent>
 
                 <h2>Quiz</h2>
-                <h3 class="mb0">8.1:</h3>
+                <h3 class="mb0">7.1:</h3>
                 <quiz
                     id="structure_quiz_1"
                     original="The incidence of Am stars hosting hot-brown dwarfs resulted higher than the frequency of Am stars in general"

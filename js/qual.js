@@ -59,6 +59,12 @@ const EditHeader = Vue.component('edit-header', {
           <i class="fa-solid fa-tree"></i> - <slot name="span"></slot> 
         </span> 
       </template>
+      <template v-if="this.type == 'reorder'">
+        <span class="edit-type txt-reorder f3">reorder </span>
+        <span class="pa1 edit-text br-pill-ns border-reorder-all substitution_below txt-reorder">&nbsp;<slot name="span"></slot>&nbsp;</span>
+        <span class="edit-type txt-reorder f3">to </span>
+        <span class="pa1 edit-text br-pill-ns border-reorder-all substitution_below txt-reorder">&nbsp;<slot name="span2"></slot>&nbsp;</span>
+      </template>
       <template v-if="this.type == 'split' && this.split_edit=='simple'">
         <span class="edit-type txt-split f3">split </span>
         <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
@@ -151,6 +157,13 @@ const AnswerBox = Vue.component('answer-box', {
         <label class="for-checkbox-tools-severity question-structure" checked> <slot></slot> </label>
       </div>
     </template>
+    <template v-else-if="this.type == 'reorder'">
+      <div class="column-severity column-structure w-10">
+        <template v-if="isAnswer"><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled checked></template>
+        <template v-else><input class="checkbox-tools checkbox-tools-severity" type="radio" value="minor" disabled></template>
+        <label class="for-checkbox-tools-severity question-reorder" checked> <slot></slot> </label>
+      </div>
+    </template>
   `,
   props: ['isAnswer', 'type', 'interactive', 'id', 'editId', 'update'],
   created: function() {
@@ -182,6 +195,17 @@ const Edit = Vue.component('edit', {
           <template #span>{{span}}</template>
           <template #span2>{{span2}}</template>
         </edit-header>
+
+        <template v-if="this.reorder != ''">
+          <p class="mb2 b tracked-light">
+            What level is the reorder?
+          </p>
+
+          <div class="tc">
+            <answer-box :isAnswer="this.reorder=='sentence'" :type=type>word-level</answer-box>
+            <answer-box :isAnswer="this.reorder=='phrase'" :type=type>component-level</answer-box>
+          </div>
+        </template>
 
         <template v-if="this.subtype != '' && this.type == 'insertion'">
           <p class="mb2 b tracked-light">
@@ -239,6 +263,17 @@ const Edit = Vue.component('edit', {
               <answer-box :isAnswer="this.answer==3" :type=type>3 - somewhat</answer-box>
               <answer-box :isAnswer="this.answer==4" :type=type>4 - very much</answer-box>
             </div>
+        </template>
+
+        <template v-if="this.coreference != ''">
+          <p class="mb2 b tracked-light">
+            Does the substitution remove a subject?
+          </p>
+
+          <div class="tc">
+            <answer-box :isAnswer="this.coreference=='true'" :type=type>yes</answer-box>
+            <answer-box :isAnswer="this.coreference=='false'" :type=type>no</answer-box>
+          </div>
         </template>
 
         <template v-if="this.subtype == 'more' && this.instype != ''">
@@ -355,7 +390,7 @@ const Edit = Vue.component('edit', {
       </template>
     </div>
     `,
-    props: ['type', 'subtype', 'subsubtype', 'impact', 'instype', 'helptrivial', 'span', 'span2', 'answer', 'explanation', 'grammar', 'irrelevant', 'simplify', 'interactive', 'incorrectMessage', 'correctMessage', 'split_edit'],
+    props: ['type', 'subtype', 'subsubtype', 'impact', 'instype', 'helptrivial', 'coreference', 'reorder', 'span', 'span2', 'answer', 'explanation', 'grammar', 'irrelevant', 'simplify', 'interactive', 'incorrectMessage', 'correctMessage', 'split_edit'],
     methods: {          
       getQuestion: function() {
         switch (this.$props.type) {
@@ -402,6 +437,8 @@ const Edit = Vue.component('edit', {
       this.$props.grammar = this.$props.grammar ? this.$props.grammar : ``;
       this.$props.irrelevant = this.$props.irrelevant ? this.$props.irrelevant : ``;
       this.$props.interactive = this.$props.interactive ? this.$props.interactive : ``;
+      this.$props.reorder = this.$props.reorder ? this.$props.reorder : ``;
+      this.$props.coreference = this.$props.coreference ? this.$props.coreference : ``;
       this.editId = Math.floor(Math.random() * 100);
     }
 });
@@ -434,16 +471,31 @@ const UnderlinedStructure = Vue.component('ust', {
     this.noto = this.$props.noto != undefined;
   }
 });
-const Subscript = Vue.component('ss', {
+const SubscriptStructure = Vue.component('ss', {
   template: `
   <sub><i class="fa-solid fa-2xs txt-structure" style='padding-left: 3px'><slot /></i></sub>
+  `
+});
+const SubscriptReorder = Vue.component('so', {
+  template: `
+  <sub><i class="fa-solid fa-2xs txt-reorder" style='padding-left: 3px'><slot /></i></sub>
   `
 });
 const Reorder = Vue.component('er', {
   template: `<span class="bg-reorder-light reorder"><slot /></span>`
 });
 const UnderlinedReorder = Vue.component('ur', {
-  template: `<span class="reorder pointer span simplified_span border-reorder"><slot /></span>`
+  template: `
+  <template v-if="this.o">
+    <span class="reorder pointer span simplified_span outside border-reorder"><slot /></span>
+  </template><template v-else>
+    <span class="reorder pointer span simplified_span border-reorder"><slot /></span>
+  </template>
+  `,
+  props: ['o'],
+  created: function() {
+    this.o = this.$props.o != undefined;
+  }
 });
 const Todo = Vue.component('todo', {
   template: `<span class="todo"><slot /></span>`
