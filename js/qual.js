@@ -109,7 +109,7 @@ const AnswerBox = Vue.component('answer-box', {
   },
   template: `
     <template v-if="this.type == 'deletion'">
-      <div class="column-severity w-25">
+      <div class="column-severity column-substitution w-10">
         <template v-if="interactive">
           <input class="checkbox-tools checkbox-tools-severity" type="radio" v-bind:id="editId*id" v-bind:name="editId">
         </template>
@@ -427,7 +427,7 @@ const Edit = Vue.component('edit', {
     },
     created: function() {
       this.question = this.getQuestion();
-      this.subtypeQuestion = this.getSubtypeQuestion();
+      this.subtypeQuestion = this.$props.type == 'deletion' ? this.question : this.getSubtypeQuestion();
       this.answer = parseInt(this.$props.answer);
       this.explanation = this.$props.explanation ? this.$props.explanation : ``;
       this.$props.subtype = this.$props.subtype ? this.$props.subtype : ``;
