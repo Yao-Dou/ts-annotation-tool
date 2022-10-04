@@ -55,6 +55,7 @@ const app = Vue.createApp({
             substitution_hallucination_relevance_yes_no_box: "",
             substitution_negative_severity_box: "",
             substitution_grammar_yes_no_box: "",
+            substitution_coref_yes_no_box: "",
 
             // for split annotation box
             split_impact_box: "",
@@ -67,6 +68,7 @@ const app = Vue.createApp({
             reorder_positive_severity_box: "",
             reorder_negative_severity_box: "",
             reorder_grammar_yes_no_box: "",
+            reorder_level_box: "",
 
             // for structure annotation box
             structure_impact_box: "",
@@ -1144,6 +1146,9 @@ const app = Vue.createApp({
                 if (value != "same") {
                     $(`.substitution-impact-div`).hide(400);
                 }
+                if (value != "less") {
+                    $(`.substitution-coref-div`).hide(400);
+                }
             }
         },
         substitution_more_click(event) {
@@ -1159,7 +1164,18 @@ const app = Vue.createApp({
             }
         },
         substitution_show_grammar(event) {
-            if (!$(`substitution-grammar-div`).is(":visible")) {
+            if ($(`.substitution-coref-div`).is(":visible")) {
+                $('.substitution-coref-div').hide(400);
+            }
+            if (!$(`.substitution-grammar-div`).is(":visible")) {
+                $('.substitution-grammar-div').slideDown(400);
+            }
+        },
+        substitution_show_coref(event) {
+            if (!$(`.substitution-coref-div`).is(":visible")) {
+                $('.substitution-coref-div').slideDown(400);
+            }
+            if (!$(`.substitution-grammar-div`).is(":visible")) {
                 $('.substitution-grammar-div').slideDown(400);
             }
         },
