@@ -1,0 +1,705 @@
+[
+    {
+        "id": 0,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "None of the authors, contributors, sponsors, administrators, or anyone else connected with wikipedia can be responsible for the use of the information contained in or linked from these web pages.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 1,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "None of the authors, editors , sponsors, administrators, vandals, or anyone else connected with wikipedia.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 2,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "None contributors, , , , sponsors or administrators vandals, anyone else connected , , can be for your use of the information or contained in linked.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 3,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "Nobody connected with Wikipedia can be responsible for how you use the information contained within the web pages.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 4,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "No one connected with Wikipedia in any way is responsible for your use of the information contained in or linked from these web pages.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 5,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way at all, can be responsible for your use of the information on these web pages.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 6,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "The authors, contributors, administrators, the , or anyone else connected with wikipedia , in any way anyone , can be responsible for your use of the information contained in or linked from these web pages.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 7,
+        "original": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with Wikipedia, in any way whatsoever, can be responsible for your use of the information contained in or linked from these web pages.",
+        "original_spans": [],
+        "simplified": "None of the authors, contributors, sponsors, administrators, vandals, or anyone else connected with wikipedia, in any way at all, can be responsible for your use of the information in or linked from these web pages.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 8,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "He studied at wheaton college from 1939 to 1943.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 9,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "Graham went to wheaton college from 1939 to 1943.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 10,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "Graham studied at wheaton college from 1939 to 1943.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 11,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "Graham wheaton attended college , he graduated in anthropology.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 12,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "In 1943, graham graduated from wheaton college in illinois with a degree in anthropology.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 13,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "Graham went to Wheaton College from 1939 to 1943. || He got a BA in anthropology in 1943.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 14,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "Graham attended Wheaton College from 1939 to 1943. || He graduated there with BA in Anthropology during this period.",
+        "simplified_spans": [
+            [
+                2,
+                51,
+                53,
+                0
+            ]
+        ],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 15,
+        "original": "Graham attended Wheaton College from 1939 to 1943, when he graduated with a BA in anthropology.",
+        "original_spans": [],
+        "simplified": "Graham went to Wheaton College from 1939-1943. || He graduated with a BA in anthropology.",
+        "simplified_spans": [
+            [
+                2,
+                47,
+                49,
+                0
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 16,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "Glinde received its town charter in 1979.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 17,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "On june 24 1979 , glinde was given its town charter.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 18,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "The 750th anniversary , glinde received its town charter.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 19,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "On june 24 1979 , the 750th anniversary of the village was renamed.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 20,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "On June 24, 1979 (the 750th anniversary of the village) Glinde became a town.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 21,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "Glinde was given its town charter on it's 750th anniversary which was on June 24, 1979.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 22,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "Glinde got the town freedom June 24th 1979 (the 750th birthday of the village).",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 23,
+        "original": "On June 24 1979 (the 750th anniversary of the village), Glinde received its town charter.",
+        "original_spans": [],
+        "simplified": "On june 24, 1979, (on the 750th anniversary of the village), glinde became a town.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 24,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne marie-madeleine demessieux ( february 13, 1921 november 11, 1968 ) , was a pianist, composer, organist, and pedagogue.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 25,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne marie-madeleine demessieux ( born february 13, 1921 in 1921 , 1921 ) is a french organist.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 26,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne Marie-Madeleine Demessieux was a French organ player, piano player, composer, and teacher.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 27,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne Marie-Madeleine Demessieux ( born Paris, 13 February 1921 ; died Paris 11 November 1968) was a French organist.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 28,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne demessieux ( born jeanne marie-madeleine demessieux , 13 february 1921 ; died paris , 11 november 1968 ) was a french organist, pianist, composer, and pedagogue.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 29,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne marie - madeleine jeanne marie - madeleine ( february 13, 1921 november 11, 1968 ) was a french organist, pianist, composer, and jeanne marie - madeleine.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 30,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne demessieux (born montpellier, france, 13 february 1921 ; died paris, 11 november 1968), was a french organist and composer.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 31,
+        "original": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and pedagogue.",
+        "original_spans": [],
+        "simplified": "Jeanne Marie-Madeleine Demessieux (February 13, 1921 November 11, 1968), was a French organist, pianist, composer, and a strict teacher.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 32,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "\" The zephyr song \"",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 33,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "The album featured the singles \" by the way \", \" the zephyr song \", \" ca n't stop \", \" dosed \" and \" universally speaking \".",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 34,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "The songs on the album were \"By the Way \", \"The Zephyr Song \", \" Cant Stop\" and \"Dosed \".",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 35,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "From the album included the singles \" by the way \" , \" the zephyr song \" , \" ca n't stop \" , \" dosed \" and \" universally speaking \".",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 36,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "The singles were \" by the way \", \" the zephyr song \", \" ca n't stop \", \" from \" and \" from speaking \".",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 37,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "The singles from the album included \"By the Way \", \"The Zephyr Song \", \"Ca n't Stop \", \"Dosed\" and \"Universally Speaking \".",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 38,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "The singles from the album were \" by the way \", \" the zephyr song \", \" ca n't stop \", \" dosed \" and \" universally speaking \".",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 39,
+        "original": "The singles from the album included \"By the Way\", \"The Zephyr Song\", \"Ca n't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "original_spans": [],
+        "simplified": "The songs from the album that were released as singles were \"By the Way\", \"The Zephyr Song\", \"Can't Stop\", \"Dosed\" and \"Universally Speaking\".",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 40,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "At four-and-a-half years old he was left to fend for himself on the streets of northern italy for the next four years.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 41,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "At four-and-a-half years old he was left to fend for himself on the streets of northern italy for the next four years.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 42,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "He was to fend , living and roving through towns with homeless groups of children.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 43,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "At four-and-a-half years old he was left to live for himself on the streets of northern Italy for the next four years, living in various homes made for homeless children and moving through towns with groups of other homeless children.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 44,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "At four-and-a-half years old he was left to live on the streets of northern italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 45,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "When he was four and a half years old he was left to live on the streets of northern Italy for the next four years. || He lived in many orphanages and went around towns with groups of other homeless children.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 46,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "At four and a half years old he was left to fend for himself on the streets of northern italy for the next four years. || he lived in various orphanages and roving through towns with other homeless children.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 47,
+        "original": "At four-and-a-half years old he was left to fend for himself on the streets of northern Italy for the next four years, living in various orphanages and roving through towns with groups of other homeless children.",
+        "original_spans": [],
+        "simplified": "He was able to fend for himself on the streets of northern Italy at 4 years old for the next 4 years. || He lived in many orphanages with other homeless children.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 48,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "This leads to consumer confusion when 220 ( 1,048,576 bytes is referenced as 1 mb ( megabyte ) instead of 1 mib.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 49,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "This leads to consumer confusion when 220 ( 1,048,576 ) bytes is referenced as 1 mb.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 50,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "This leads 220 ( 1,048,576 bytes ) is referenced instead.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 51,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "This leads to confusion when 220 bytes is written as 1 MB ( \" megabyte \" ) instead of 1 MiB ( \" megabyte \" ).",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 52,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "This leads to consumer confusion when 220 ( 1,048,576 ) bytes is referenced as 1 mb ( 1 mb ) instead of 1 mi.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 53,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "1 mib = 220 bytes = 1,048,576 bytes = 1,024 kibibytes the mebibyte is closely related to the megabyte (mb).",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 54,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 55,
+        "original": "This leads to consumer confusion when 220 (1,048,576) bytes is referenced as 1 MB (megabyte) instead of 1 MiB.",
+        "original_spans": [],
+        "simplified": "Consumers become confused when 220 (1,048,576) bytes is referred to as 1 MB (megabyte) instead of 1 MiB.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 56,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "Jurisdiction draws its substance , conflict laws, and the powers of the executive and branches of government to allocate resources to serve the needs.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 57,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "It is made up of the branches of government , the executive and legislative branches of government , and the powers of the executive and legislative branches of government.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 58,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to make resources to best serve the needs of its native society.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 59,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "To draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to provide resources to the needs of its native society.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 60,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "Jurisdiction relies on public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to give resources to best serve the needs of its society.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 61,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "Jurisdiction  gets meaning from public international law, conflict of laws, constitutional law and the powers of the various branches of government to give resources to help society.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 62,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "Jurisdiction is made up of public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government. || The powers of the executive and legislative branches of government are also used.",
+        "simplified_spans": [
+            [
+                2,
+                162,
+                164,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 63,
+        "original": "Jurisdiction draws its substance from public international law, conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resources to best serve the needs of its native society.",
+        "original_spans": [],
+        "simplified": "Jurisdiction draws its substance from public international law. || conflict of laws, constitutional law and the powers of the executive and legislative branches of government to allocate resource to best serve the needs of its native society.",
+        "simplified_spans": [
+            [
+                2,
+                64,
+                66,
+                0
+            ]
+        ],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 64,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He served as the prime minister of egypt between 1945 and 1946.",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 65,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He served he served and and.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 66,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He served as the prime minister of egypt from date@4.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 67,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He was Egypt's Prime Minister between 1945 and 1948.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 68,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He was Prime Minister of Egypt from 1945 to 1946, and again from 1946 to 1948.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 69,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He was prime minister of egypt between 1945 and 1946 and again from 1946 and again from 1948.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 70,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He was the prime minister of egypt from 1945 to 1946 and again from 1946 to 1948.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 71,
+        "original": "He served as the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "original_spans": [],
+        "simplified": "He was the prime minister of Egypt between 1945 and 1946 and again from 1946 and 1948.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 72,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": "Instead , the crew made a trailer with a cantilevered arm attached to the \" hovercraft \".",
+        "simplified_spans": [],
+        "system": "systems/Dress-Ls.lower"
+    },
+    {
+        "id": 73,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": ", the crew fashioned a trailer with a cantilevered arm attached \" shot \" and the scene.",
+        "simplified_spans": [],
+        "system": "systems/Hybrid.lower"
+    },
+    {
+        "id": 74,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": "Instead, the crew made a trailer with an arm attached to the craft and filmed the scene while driving.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 75,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": "Instead , the crew fashioned a trailer with a small arm attached to the \"hovercraft\" and shot the scene while riding up templin highway north of santa clarita.",
+        "simplified_spans": [],
+        "system": "systems/transformer_w_split.txt"
+    },
+    {
+        "id": 76,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": "The crew tried to make a trailer with a trailer arm attached to the \"hovercraft\" and shot the scene while riding up templin highway north of santa clarita.",
+        "simplified_spans": [],
+        "system": "systems/lstm_w_split.txt"
+    },
+    {
+        "id": 77,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": "Instead, the crew designed a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 78,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": "They built a trailer connected to the \"hover craft\" in the movie and shot the scene while riding up a highway north of santa clarita.",
+        "simplified_spans": [],
+        "system": "new_systems/simple_wiki.txt"
+    },
+    {
+        "id": 79,
+        "original": "Instead, the crew fashioned a trailer with a cantilevered arm attached to the \"hovercraft\" and shot the scene while riding up Templin Highway north of Santa Clarita.",
+        "original_spans": [],
+        "simplified": "Instead, the crew made a trailer with a cantilevered arm attached to the \"hovercraft \". || They shot the scene while they were riding up the Templin Highway.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    }
+]
