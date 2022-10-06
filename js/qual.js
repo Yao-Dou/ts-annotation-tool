@@ -557,7 +557,19 @@ new Vue({
   },
   methods: {
     onComplete: function() {
-      alert('Complete!');
+      var iframe = document.getElementById("quiz_5_iframe");
+      // console.log(iframe)
+      var elmnt = iframe.contentWindow.document.getElementById("hits-data");
+      let data = elmnt.innerHTML;
+      console.log(data);
+      // download data as json file
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
+      element.setAttribute('download', "quiz_5_hits.json");
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
     },
     onChange: function() {
       $('html, body').animate({ scrollTop: 0 }, 'fast');
@@ -636,13 +648,3 @@ $(".deletion-examples").mouseover(
     $(this).siblings().css("background-color", "#fff");
   }
 );
-
-$("#get-annotation-btn").click(function() {
-  var iframe = document.getElementById("test_iframe");
-  // console.log(iframe)
-  var elmnt = iframe.contentWindow.document.getElementById("hits-data");
-  let data = elmnt.innerHTML;
-  console.log(data);
-  // download data as json file
-  // console.log(elmnt.)
-});

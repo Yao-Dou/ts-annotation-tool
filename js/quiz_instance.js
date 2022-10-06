@@ -1269,8 +1269,8 @@ const app = Vue.createApp({
             $(".annotation-icon").removeClass('txt-insertion')
             $(".annotation-icon").removeClass('txt-deletion')
             $(".annotation-icon").removeClass('txt-split')
-            $('.quality-selection').hide();
-            $(".span-selection-div").hide();
+            $('.quality-selection').hide(400);
+            $(".span-selection-div").hide(400);
 
             // insertion_annotation hide divs
             $(".insertion-type-div").hide();
