@@ -36,7 +36,7 @@
         "original": "Shade sets the main plot of the novel in motion when he impetuously defies that law, and inadvertently initiates a chain of events that leads to the destruction of his colony's home, forcing their premature migration, and his separation from them.",
         "original_spans": [],
         "simplified": "Shade starts the main story of the book when he breaks the law. || That starts a story that leads to the destructon of his colony's home. || That made them move away, and he was separated from them.",
-        "simplified_spans": [[2, 64, 66], [2, 138, 140]],
+        "simplified_spans": [[2, 64, 66, 0], [2, 138, 140, 1]],
         "system": "new_systems/asset.test.simp.second"
     }
 ]
