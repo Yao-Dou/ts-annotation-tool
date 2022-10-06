@@ -154,6 +154,15 @@
                     <template #simple-sent><ust noto><es>Data fitting is</es></ust> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub><ss>1</ss> the task <ust noto><ei>to</ei></ust><ss>1</ss> find a model that best fits some <es>information</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub>.</template>
                 </example-sent>
 
+                <h2>Capitalization & Ending Period</h2>
+                <p>Some of our AI outputs automatically lowercase all the words in their output, add spacing around punctuation or remove the ending period in the sentence, please ignore these changes.</p>
+                <example-sent  
+                    noedits=true
+                    explanation="These are edits are outside the actual simplification being performed by the model.">
+                    <template #complex-sent>Georgia Tech stunned No. 24-ranked and defending Atlantic Coast Conference champion Pitt, 26-21, in Brent Key’s debut.</template>
+                    <template #simple-sent>georgia tech stunned no . 24 - ranked and defending atlantic coast conference champion pitt , 26-21 , in brent key’s debut</template>
+                </example-sent>
+
                 <h2>Quiz</h2>
                 <p>
                     Now it's your turn! Take a look at these pairs of sentences and try to select the edits. <b>You do not need to annotate your edits, just select the alignment!</b>
@@ -545,6 +554,30 @@
                             type="insertion"
                             subtype="trivial"
                             span="that"
+                        />
+                    </template>
+                </example-sent>
+                <h2>Evaluating Factuality</h2>
+                <p>Sometimes you will see an insertion which adds new information which you may not know if it's correct or not. In this case, try to do basic research to see if the insertion is easily, verifiably correct. If there's any ambiguity, feel free to leave a comment on that sentence.</p>
+                <example-sent>
+                    <template #complex-sent>Hillary Clinton was born in the fall of 1947.</template>
+                    <template #simple-sent>Hillary Clinton was born in the fall of 1947 <ei>in Chicago</ei>.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="elaboration"
+                            span="in Chicago"
+                        />
+                    </template>
+                </example-sent>
+                <example-sent>
+                    <template #complex-sent>Hillary Clinton was born in the fall of 1947.</template>
+                    <template #simple-sent>Hillary Clinton was born in the fall of 1947 <ei>outside the United States</ei>.</template>
+                    <template #edit>
+                        <edit
+                            type="insertion"
+                            subtype="hallucination"
+                            span="outside the United States"
                         />
                     </template>
                 </example-sent>
