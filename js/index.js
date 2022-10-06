@@ -1404,6 +1404,9 @@ const app = Vue.createApp({
                         }
                     },
                     hover_span(event) {
+                        if ($(".quality-selection").is(":visible")) {
+                            return
+                        }
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.addClass("white")
@@ -1439,6 +1442,9 @@ const app = Vue.createApp({
                         }
                     },
                     un_hover_span(event) {
+                        if ($(".quality-selection").is(":visible")) {
+                            return
+                        }
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.removeClass("white")
@@ -1532,72 +1538,78 @@ const app = Vue.createApp({
                         let category = event.target.dataset.category
                         let id = event.target.dataset.id
                         let real_id = id.split("-")[1]
-                        if ($("input[name=edit_cotegory]:checked").val() == 'split') {
-                            let normal_id = parseInt(real_id) + 1
-                            if (event.target.classList.contains(`split-sign`)) {
-                                if (normal_id == 1) {
-                                    this.$parent.selected_split = `the 1st split`
-                                } else if (normal_id == 2) {
-                                    this.$parent.selected_split = `the 2nd split`
-                                } else if (normal_id == 3) {
-                                    this.$parent.selected_split = `the 3rd split`
+                        if ($(".quality-selection").is(":visible")) {
+                            if ($("input[name=edit_cotegory]:checked").val() == 'split') {
+                                let normal_id = parseInt(real_id) + 1
+                                if (event.target.classList.contains(`split-sign`)) {
+                                    if (normal_id == 1) {
+                                        this.$parent.selected_split = `the 1st split`
+                                    } else if (normal_id == 2) {
+                                        this.$parent.selected_split = `the 2nd split`
+                                    } else if (normal_id == 3) {
+                                        this.$parent.selected_split = `the 3rd split`
+                                    } else {
+                                        this.$parent.selected_split = `the ${normal_id}th split`
+                                    }
+                                    this.$parent.selected_split_id = parseInt(real_id)
                                 } else {
-                                    this.$parent.selected_split = `the ${normal_id}th split`
+                                    if (real_id in this.$parent.selected_edits[category]) {
+                                        delete this.$parent.selected_edits[category][real_id]
+                                    } else {
+                                        this.$parent.selected_edits[category][real_id] = edits_dict[category][real_id]
+                                    }
                                 }
-                                this.$parent.selected_split_id = parseInt(real_id)
-                            } else {
+                            }
+                            if ($("input[name=edit_cotegory]:checked").val() == 'structure') {
                                 if (real_id in this.$parent.selected_edits[category]) {
                                     delete this.$parent.selected_edits[category][real_id]
                                 } else {
                                     this.$parent.selected_edits[category][real_id] = edits_dict[category][real_id]
                                 }
                             }
-                        }
-                        if ($("input[name=edit_cotegory]:checked").val() == 'structure') {
-                            if (real_id in this.$parent.selected_edits[category]) {
-                                delete this.$parent.selected_edits[category][real_id]
-                            } else {
-                                this.$parent.selected_edits[category][real_id] = edits_dict[category][real_id]
-                            }
-                        }
-                        this.$parent.selected_edits_html = ""
-                        for (let key in this.$parent.selected_edits) {
-                            for (let temp_id in this.$parent.selected_edits[key]) {
-                                let edit = this.$parent.selected_edits[key][temp_id]
-                                if (key == 'deletion') {
-                                    this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">delete </span>`;
-                                    this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                    this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[1],edit[2])}&nbsp`;
-                                    this.$parent.selected_edits_html += `</span>`;
-                                    this.$parent.selected_edits_html += ",&nbsp&nbsp";
-                                } else if (key == 'insertion') {
-                                    this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">insert </span>`;
-                                    this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                    this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(edit[1],edit[2])}&nbsp`;
-                                    this.$parent.selected_edits_html += `</span>`;
-                                    this.$parent.selected_edits_html += ",&nbsp&nbsp";
-                                } else if (key == 'substitution') {
-                                    this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">substitute </span>`;
-                                    this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                    this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[0][1],edit[0][2])}&nbsp`;
-                                    this.$parent.selected_edits_html += `</span>`;
-                                    this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> with </span>`;
-                                    this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                    this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(edit[1][1],edit[1][2])}&nbsp`;
-                                    this.$parent.selected_edits_html += `</span>`;
-                                    this.$parent.selected_edits_html += ",&nbsp&nbsp";
-                                } else if (key == 'reorder') {
-                                    this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">reorder </span>`;
-                                    this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                    this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[0][1],edit[0][2])}&nbsp`;
-                                    this.$parent.selected_edits_html += `</span>`;
-                                    this.$parent.selected_edits_html += ",&nbsp&nbsp";
+                            this.$parent.selected_edits_html = ""
+                            for (let key in this.$parent.selected_edits) {
+                                for (let temp_id in this.$parent.selected_edits[key]) {
+                                    let edit = this.$parent.selected_edits[key][temp_id]
+                                    if (key == 'deletion') {
+                                        this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">delete </span>`;
+                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[1],edit[2])}&nbsp`;
+                                        this.$parent.selected_edits_html += `</span>`;
+                                        this.$parent.selected_edits_html += ",&nbsp&nbsp";
+                                    } else if (key == 'insertion') {
+                                        this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">insert </span>`;
+                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(edit[1],edit[2])}&nbsp`;
+                                        this.$parent.selected_edits_html += `</span>`;
+                                        this.$parent.selected_edits_html += ",&nbsp&nbsp";
+                                    } else if (key == 'substitution') {
+                                        this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">substitute </span>`;
+                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[0][1],edit[0][2])}&nbsp`;
+                                        this.$parent.selected_edits_html += `</span>`;
+                                        this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> with </span>`;
+                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(edit[1][1],edit[1][2])}&nbsp`;
+                                        this.$parent.selected_edits_html += `</span>`;
+                                        this.$parent.selected_edits_html += ",&nbsp&nbsp";
+                                    } else if (key == 'reorder') {
+                                        this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">reorder </span>`;
+                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[0][1],edit[0][2])}&nbsp`;
+                                        this.$parent.selected_edits_html += `</span>`;
+                                        this.$parent.selected_edits_html += ",&nbsp&nbsp";
+                                    }
                                 }
                             }
+                        } else {
+                            $(`.annotation-icon[data-id=${id}]`).click()
                         }
-                        console.log(this.$parent.selected_edits)
                     },
                     hover_span(event) {
+                        if ($(".quality-selection").is(":visible")) {
+                            return
+                        }
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.addClass("white")
@@ -1658,6 +1670,9 @@ const app = Vue.createApp({
                         }
                     },
                     un_hover_span(event) {
+                        if ($(".quality-selection").is(":visible")) {
+                            return
+                        }
                         let category = event.target.dataset.category
                         let spans = $(`.${category}[data-id=${event.target.dataset.id}]`)
                         spans.removeClass("white")
@@ -1778,6 +1793,9 @@ const app = Vue.createApp({
                 template: `<div class="f4 lh-paras">${this.edits_html}</div>`,
                 methods: {
                     hover_span(event) {
+                        if ($(".quality-selection").is(":visible")) {
+                            return
+                        }
                         // console.log(this.$parent.hits_data)
                         // if the target is a span, go to the parent div
                         let target = event.target
@@ -1824,6 +1842,9 @@ const app = Vue.createApp({
                         }
                     },
                     un_hover_span(event) {
+                        if ($(".quality-selection").is(":visible")) {
+                            return
+                        }
                         // if the target is a span, go to the parent div
                         let target = event.target
                         if (target.tagName == 'SPAN' && target.parentElement.tagName != 'DIV') {
