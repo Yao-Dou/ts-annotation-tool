@@ -1293,6 +1293,61 @@ const app = Vue.createApp({
 
             // structure_annotation hide divs
             $(".structure-impact-div").hide();
+
+            // for deletion annotation box
+            this.deletion_severity_box = ""
+            this.deletion_grammar_yes_no_box= ""
+            this.deletion_coref_yes_no_box= ""
+
+            // for insertion annotation box
+            this.insertion_type_box= ""
+            this.insertion_elaboration_severity_box= ""
+            this.insertion_trivial_yes_no_box= ""
+            this.insertion_trivial_severity_box= ""
+            this.insertion_repetition_severity_box= ""
+            this.insertion_contradiction_severity_box= ""
+            this.insertion_hallucination_severity_box= ""
+            this.insertion_hallucination_relevance_yes_no_box= ""
+            this.insertion_trivial_yes_no_box= ""
+            this.insertion_grammar_yes_no_box= ""
+
+            // for substitution annotation box
+            this.substitution_type_box= ""
+            this.substitution_simplify_yes_no_box= ""
+            this.substitution_impact_box= ""
+            this.substitution_less_severity_box= ""
+            this.substitution_more_type_box= ""
+            this.substitution_elaboration_severity_box= ""
+            this.substitution_repetition_severity_box= ""
+            this.substitution_trivial_severity_box= ""
+            this.substitution_trivial_yes_no_box= ""
+            this.substitution_contradiction_severity_box= ""
+            this.substitution_hallucination_severity_box= ""
+            this.substitution_different_severity_box= ""
+            this.substitution_positive_severity_box= ""
+            this.substitution_hallucination_relevance_yes_no_box= ""
+            this.substitution_negative_severity_box= ""
+            this.substitution_grammar_yes_no_box= ""
+            this.substitution_coref_yes_no_box= ""
+
+            // for split annotation box
+            this.split_impact_box= ""
+            this.split_negative_severity_box= ""
+            this.split_positive_severity_box= ""
+            this.split_grammar_yes_no_box= ""
+
+            // for reorder annotation box
+            this.reorder_impact_box= ""
+            this.reorder_positive_severity_box= ""
+            this.reorder_negative_severity_box= ""
+            this.reorder_grammar_yes_no_box= ""
+            this.reorder_level_box= ""
+
+            // for structure annotation box
+            this.structure_impact_box= ""
+            this.structure_positive_severity_box= ""
+            this.structure_negative_severity_box= ""
+            this.structure_grammar_yes_no_box= ""
         },
         show_span_selection(event) {
             // this.process_original_html();
