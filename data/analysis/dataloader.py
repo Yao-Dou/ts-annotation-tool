@@ -122,9 +122,13 @@ def sum_edits(data):
             out[type_] += num_edits[type_]
     return out
 
+# Returns sentences for system
+def get_sentences_for_system(data, system):
+    return [x for x in data if x['system'] == system]
+
 # Returns total number of edits for a given system
 def sum_edits_for_system(data, system):
-    return sum_edits([x for x in data if x['system'] == system])
+    return sum_edits(get_sentences_for_system(data, system))
 
 # Creates basic metadata about each span
 def get_span_metadata(spans):
@@ -215,10 +219,14 @@ def process_add_info(raw_annotation):
             edit_quality = Quality.ERROR
             error_type = Error.UNNECESSARY_INSERTION
     else:
-        # need to support 'hallucination' // 'irrelevant' case
         edit_quality = Quality.ERROR
-        error_type, rating, grammar_error = raw_annotation
-        error_type = error_type_mapping[error_type]
+        if (annotation_type == 'hallucination'):
+            error_type, irrelevancy, rating, grammar_error = raw_annotation
+            if error_mapping[irrelevancy] == True:
+                error_type = Error.IRRELEVANT
+        else:
+            error_type, rating, grammar_error = raw_annotation
+            error_type = error_type_mapping[error_type]
         rating = severity_mapping[rating]
     
     grammar_error = error_mapping[grammar_error] if grammar_error != '' else False
@@ -228,19 +236,15 @@ def process_add_info(raw_annotation):
 def process_same_info(annotation):
     # ex. (substitution) ['positive', 'a lot', 'minor', 'no']
     # ex. (reorder) ['negative', 'a lot', '', 'no', 'word']
-    # ex. (structure) [['positive', '', 'a lot', 'no']], ['positive', '', 'somewhat', 'yes']}]
-    edit_quality, rating, rating2, grammar_error = annotation
-
-    # there's a problem that the rating could be the second or third element...
-    if rating == '':
-        rating = rating2
+    # ex. (structure) ['positive', '', 'a lot', 'no'], ['positive', '', 'somewhat', 'yes']
+    edit_quality, pos_rating, neg_rating, grammar_error = annotation
 
     edit_quality, grammar_error = impact_mapping[edit_quality], error_mapping[grammar_error]
     error_type = None
     if edit_quality == Quality.QUALITY:
-        rating = simplification_quality_mapping[rating]
+        rating = simplification_quality_mapping[pos_rating]
     elif edit_quality == Quality.ERROR:
-        rating = severity_mapping[rating]
+        rating = severity_mapping[neg_rating]
         error_type = Error.COMPLEX_WORDING
     else:
         rating = None
@@ -250,6 +254,14 @@ def process_diff_info(annotation):
     # ['very', 'no']
     rating, grammar_error = different_meaning_severity_mapping[annotation[0]], error_mapping[annotation[1]]
     return Quality.ERROR, rating, Error.INFORMATION_REWRITE, grammar_error
+
+# So when coding the interface, substitutions follow the format:
+# [quality, pos_rating, neg_rating, grammar_error]
+# but syntax errors follow this format:
+# [quality, neg_rating, pos_rating, grammar_error]
+# this swaps the neg and pos for syntax errors
+def swap_same_sub_fix(annotation):
+    annotation[1], annotation[2] = annotation[2], annotation[1]
 
 def process_annotation(edit):
     type_ = edit['type']
@@ -269,7 +281,9 @@ def process_annotation(edit):
         # need to incorporate reorder level into annotation somehow
         reorder_level = reorder_mapping[raw_annotation[-1]]
         raw_annotation = raw_annotation[:-1]
+        swap_same_sub_fix(raw_annotation)
     elif (type_ == 'structure' or type_ == 'split'):
+        swap_same_sub_fix(raw_annotation)
         pass
 
     # Process annotation based on information change
