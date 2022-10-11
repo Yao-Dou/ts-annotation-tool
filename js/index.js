@@ -1126,11 +1126,11 @@ const app = Vue.createApp({
                     }
                 }
             } else if (category == "split") {
-                box = [this.split_impact_box, this.split_negative_severity_box, this.split_positive_severity_box, this.split_grammar_yes_no_box]
+                box = [this.split_impact_box, this.split_positive_severity_box, this.split_negative_severity_box, this.split_grammar_yes_no_box]
             } else if (category == "reorder") {
-                box = [this.reorder_impact_box, this.reorder_negative_severity_box, this.reorder_positive_severity_box, this.reorder_grammar_yes_no_box, this.reorder_level_box]
+                box = [this.reorder_impact_box, this.reorder_positive_severity_box, this.reorder_negative_severity_box, this.reorder_grammar_yes_no_box, this.reorder_level_box]
             } else if (category == "structure") {
-                box = [this.structure_impact_box, this.structure_negative_severity_box, this.structure_positive_severity_box, this.structure_grammar_yes_no_box]
+                box = [this.structure_impact_box, this.structure_positive_severity_box, this.structure_negative_severity_box, this.structure_grammar_yes_no_box]
             }
             console.log(box)
             this.hits_data[this.current_hit - 1].annotations[category][edit_id] = box
