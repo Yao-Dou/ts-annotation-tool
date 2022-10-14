@@ -1415,6 +1415,9 @@ const app = Vue.createApp({
         if (data_path == null) {
             data_path = '5_systems_plus_3_human_80_total.json'
         }
+        if (urlParams.get('batch') != null) {
+            data_path = `batches/batch_${urlParams.get('batch')}.json`
+        }
         fetch(`https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/${data_path}`)
             .then(r => r.json())
             .then(json => {
