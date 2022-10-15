@@ -1,0 +1,498 @@
+[
+    {
+        "id": 0,
+        "original": "Brunstad has several fast food restaurants, a cafeteria-style restaurant, coffee bar, and its own grocery store.",
+        "original_spans": [],
+        "simplified": "Brunstad has several fast food restaurants, a cafe , coffee bar, and its own grocery store.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 1,
+        "original": "Brunstad has several fast food restaurants, a cafeteria-style restaurant, coffee bar, and its own grocery store.",
+        "original_spans": [],
+        "simplified": "Brunstad is home to a few fast food restaurants, a cafeteria, coffee bar and a grocery store.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 2,
+        "original": "Brunstad has several fast food restaurants, a cafeteria-style restaurant, coffee bar, and its own grocery store.",
+        "original_spans": [],
+        "simplified": "Brunstad has several fast food restaurants, a cafeteria-style restaurant, coffee bar, and its own grocery store.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 3,
+        "original": "Brunstad has several fast food restaurants, a cafeteria-style restaurant, coffee bar, and its own grocery store.",
+        "original_spans": [],
+        "simplified": "Brunstad has several fast food restaurants. || Brunstad also has a cafeteria and a coffee bar.",
+        "simplified_spans": [
+            [
+                2,
+                44,
+                46,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 4,
+        "original": "Brunstad has several fast food restaurants, a cafeteria-style restaurant, coffee bar, and its own grocery store.",
+        "original_spans": [],
+        "simplified": "Brunstad has many restaurants. || Some are fast food, one is a cafeteria, and one is a coffee bar. || It also has a grocery store.",
+        "simplified_spans": [
+            [
+                2,
+                31,
+                33,
+                0
+            ],
+            [
+                2,
+                99,
+                101,
+                1
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 5,
+        "original": "A fee is the price one pays as remuneration for services, especially the honorarium paid to a doctor, lawyer, consultant, or other member of a learned profession.",
+        "original_spans": [],
+        "simplified": "A fee is the price one pays for services, especially to a doctor, lawyer, or other member of a learned profession.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 6,
+        "original": "A fee is the price one pays as remuneration for services, especially the honorarium paid to a doctor, lawyer, consultant, or other member of a learned profession.",
+        "original_spans": [],
+        "simplified": "A fee is the price paid for services.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 7,
+        "original": "A fee is the price one pays as remuneration for services, especially the honorarium paid to a doctor, lawyer, consultant, or other member of a learned profession.",
+        "original_spans": [],
+        "simplified": "A fee is the price a person pays for services, especially the honorarium paid to a doctor, a lawyer, a consultant, or other member of a good profession.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 8,
+        "original": "A fee is the price one pays as remuneration for services, especially the honorarium paid to a doctor, lawyer, consultant, or other member of a learned profession.",
+        "original_spans": [],
+        "simplified": "A fee is the price that pays as remuneration for services, especially the honorarium paid to a doctor, lawyer, consultant, or other member of a learned profession.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 9,
+        "original": "A fee is the price one pays as remuneration for services, especially the honorarium paid to a doctor, lawyer, consultant, or other member of a learned profession.",
+        "original_spans": [],
+        "simplified": "A fee refers to the monetary compensation paid for services rendered particularly relating to the remuneration paid to professionals having specific skill  and knowledge viz. || a doctor's fee, lawyer's fee, consultant's fee etc.",
+        "simplified_spans": [
+            [
+                2,
+                175,
+                177,
+                0
+            ]
+        ],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 10,
+        "original": "Defiantly, she vowed to never renounce the Commune, and dared the judges to sentence her to death.",
+        "original_spans": [],
+        "simplified": "She refused to give up the Commune and prefered the death sentence",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 11,
+        "original": "Defiantly, she vowed to never renounce the Commune, and dared the judges to sentence her to death.",
+        "original_spans": [],
+        "simplified": "She said she would not abandon the Commune and would prefer death.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 12,
+        "original": "Defiantly, she vowed to never renounce the Commune, and dared the judges to sentence her to death.",
+        "original_spans": [],
+        "simplified": "Defiantly , she vowed to never renounce the commune , and dared the judges to sentence her to death.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 13,
+        "original": "Defiantly, she vowed to never renounce the Commune, and dared the judges to sentence her to death.",
+        "original_spans": [],
+        "simplified": "She vowed to never give up the Commune. || She also told the judges to sentence her to death.",
+        "simplified_spans": [
+            [
+                2,
+                40,
+                42,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 14,
+        "original": "Defiantly, she vowed to never renounce the Commune, and dared the judges to sentence her to death.",
+        "original_spans": [],
+        "simplified": "Bravely, she refused to speak against the Commune. || She dared the judges to sentence her to death.",
+        "simplified_spans": [
+            [
+                2,
+                51,
+                53,
+                0
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 15,
+        "original": "Plot Captain Caleb Holt (Kirk Cameron) is a firefighter in Albany, Georgia and firmly keeps the cardinal rule of all firemen, \"Never leave your partner behind\".",
+        "original_spans": [],
+        "simplified": "Kirk Cameron, a firefighter in Albany,Georgia, always follows this rule: Never leave your partner behind.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 16,
+        "original": "Plot Captain Caleb Holt (Kirk Cameron) is a firefighter in Albany, Georgia and firmly keeps the cardinal rule of all firemen, \"Never leave your partner behind\".",
+        "original_spans": [],
+        "simplified": "Plot Captain Caleb Holt (Kirk Cameron) is a firefighter in Albany, Georgia and follows the cardinal rule of firemen, \"Never leave your partner behind\".",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 17,
+        "original": "Plot Captain Caleb Holt (Kirk Cameron) is a firefighter in Albany, Georgia and firmly keeps the cardinal rule of all firemen, \"Never leave your partner behind\".",
+        "original_spans": [],
+        "simplified": "Plot Captain Caleb Holt ( played by Kirk Cameron) is a firefighter in Albany, Georgia. || He always says, \"Never leave your partner behind \".",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 18,
+        "original": "Plot Captain Caleb Holt (Kirk Cameron) is a firefighter in Albany, Georgia and firmly keeps the cardinal rule of all firemen, \"Never leave your partner behind\".",
+        "original_spans": [],
+        "simplified": "Plot Captain Caleb Holt (Kirk Cameron) plays a firefighter in Albany, Georgia. || He firmly keeps the primary rule of firemen, which is \"Never leave your partner behind\".",
+        "simplified_spans": [
+            [
+                2,
+                79,
+                81,
+                0
+            ]
+        ],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 19,
+        "original": "Plot Captain Caleb Holt (Kirk Cameron) is a firefighter in Albany, Georgia and firmly keeps the cardinal rule of all firemen, \"Never leave your partner behind\".",
+        "original_spans": [],
+        "simplified": "The plot captain kirk cameron is a firefighter in albany , georgia. || he keeps the rule of all firemen, \" never leave your partner behind\".",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 20,
+        "original": "Bremer reported plans to put Saddam on trial, but claimed that the details of such a trial had not yet been determined.",
+        "original_spans": [],
+        "simplified": "Bremer said they would take Saddam to court, but had no details.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 21,
+        "original": "Bremer reported plans to put Saddam on trial, but claimed that the details of such a trial had not yet been determined.",
+        "original_spans": [],
+        "simplified": "Bremer reported plans to put Saddam on trial, but claimed that such a trial had not yet been determined.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 22,
+        "original": "Bremer reported plans to put Saddam on trial, but claimed that the details of such a trial had not yet been determined.",
+        "original_spans": [],
+        "simplified": "Bremer said he wanted to put Saddam on trial, but said that the details of such a trial were not known yet.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 23,
+        "original": "Bremer reported plans to put Saddam on trial, but claimed that the details of such a trial had not yet been determined.",
+        "original_spans": [],
+        "simplified": "Bremer said plans to put saddam on trial, but said that the details of such a trial had not yet been found.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 24,
+        "original": "Bremer reported plans to put Saddam on trial, but claimed that the details of such a trial had not yet been determined.",
+        "original_spans": [],
+        "simplified": "Bremer let others know about plans to put Saddam on trial but said that the results of the trial weren't decided.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 25,
+        "original": "Finally in 1482 the Order dispatched him to Florence, the \u2018 city of his destiny \u2019.",
+        "original_spans": [],
+        "simplified": "In 1482 the Order sent him to Florence the city he was supposed to go to.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 26,
+        "original": "Finally in 1482 the Order dispatched him to Florence, the \u2018 city of his destiny \u2019.",
+        "original_spans": [],
+        "simplified": "Finally in 1482 the order sent him to florence , the city of his destiny.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 27,
+        "original": "Finally in 1482 the Order dispatched him to Florence, the \u2018 city of his destiny \u2019.",
+        "original_spans": [],
+        "simplified": "In 1482, the Order sent him to Florence, the \" city of his destiny \".",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 28,
+        "original": "Finally in 1482 the Order dispatched him to Florence, the \u2018 city of his destiny \u2019.",
+        "original_spans": [],
+        "simplified": "In 1482 the Order sent him to Florence, the 'city of his destiny'.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 29,
+        "original": "Finally in 1482 the Order dispatched him to Florence, the \u2018 city of his destiny \u2019.",
+        "original_spans": [],
+        "simplified": "Finally in 1482 the Order dispatched him to Florence, the \u2018 city of his destiny \u2019.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 30,
+        "original": "The Prime Minister stays in office only as long as he or she retains the support of the lower house.",
+        "original_spans": [],
+        "simplified": "The Prime Minister stays in office till their retains to the lower house.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 31,
+        "original": "The Prime Minister stays in office only as long as he or she retains the support of the lower house.",
+        "original_spans": [],
+        "simplified": "The Prime Minister stays in office as long as they are supported by the lower house.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 32,
+        "original": "The Prime Minister stays in office only as long as he or she retains the support of the lower house.",
+        "original_spans": [],
+        "simplified": "The prime minister stays in office only as long as he or she has the support of the lower house.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 33,
+        "original": "The Prime Minister stays in office only as long as he or she retains the support of the lower house.",
+        "original_spans": [],
+        "simplified": "The Prime Minister stays in office only as long as he or she has the support of the House of Commons.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 34,
+        "original": "The Prime Minister stays in office only as long as he or she retains the support of the lower house.",
+        "original_spans": [],
+        "simplified": "The Prime Minister remains in office as long as the lower house is in favor.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 35,
+        "original": "During childhood she suffered from collapsed lungs twice, she had pneumonia 4-5 times a year, a ruptured appendix, and had a tonsillar cyst.",
+        "original_spans": [],
+        "simplified": "As a child she suffered from collaped lungs, pneumonia, a ruptured appendix and a tonsillar cyst.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 36,
+        "original": "During childhood she suffered from collapsed lungs twice, she had pneumonia 4-5 times a year, a ruptured appendix, and had a tonsillar cyst.",
+        "original_spans": [],
+        "simplified": "She suffered from many lung,appendix and throat related diseases in her childhood.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 37,
+        "original": "During childhood she suffered from collapsed lungs twice, she had pneumonia 4-5 times a year, a ruptured appendix, and had a tonsillar cyst.",
+        "original_spans": [],
+        "simplified": "When she was a child she had collapsed lungs twice, had pneumonia 4-5 times a year, a broken appendix, and had a tonsil cyst.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 38,
+        "original": "During childhood she suffered from collapsed lungs twice, she had pneumonia 4-5 times a year, a ruptured appendix, and had a tonsillar cyst.",
+        "original_spans": [],
+        "simplified": "During childhood she had collapsed lungs twice, and had pneumonia 4-5 times a year, a ruptured appendix, and had a tonsillar cyst.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 39,
+        "original": "During childhood she suffered from collapsed lungs twice, she had pneumonia 4-5 times a year, a ruptured appendix, and had a tonsillar cyst.",
+        "original_spans": [],
+        "simplified": "During childhood she suffered from collapsed lungs twice. || She also had a ruptured appendix, a tonsillar cyst, and pneumonia 4-5 times a year.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ]
+        ],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 40,
+        "original": "From 1900 to 1920 many new facilities were constructed on campus, including facilities for the dental and pharmacy programs, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library complexes, and two residence halls.",
+        "original_spans": [],
+        "simplified": "From 1900 to 1920 a lot of new facilities were built on campus, including buildings for the  dental and pharmacy programs, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library complexes, and two dormitories.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 41,
+        "original": "From 1900 to 1920 many new facilities were constructed on campus, including facilities for the dental and pharmacy programs, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library complexes, and two residence halls.",
+        "original_spans": [],
+        "simplified": "From 1900 to 1920 , many new facilities were built on campus, including facilities for the dental and pharmacy programs, a chemistry building, a building for the natural sciences, a large hospital and library complexes.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 42,
+        "original": "From 1900 to 1920 many new facilities were constructed on campus, including facilities for the dental and pharmacy programs, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library complexes, and two residence halls.",
+        "original_spans": [],
+        "simplified": "From 1900 to 1920 many new facilities were constructed on campus, including facilities for the dental and pharmacy programs, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library complexes, and two residence halls.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 43,
+        "original": "From 1900 to 1920 many new facilities were constructed on campus, including facilities for the dental and pharmacy programs, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library complexes, and two residence halls.",
+        "original_spans": [],
+        "simplified": "From 1900 to 1920 many new buildings were built on campus. || These included a dental and pharmacy building, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library buildings, and two residence halls.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 44,
+        "original": "From 1900 to 1920 many new facilities were constructed on campus, including facilities for the dental and pharmacy programs, a chemistry building, a building for the natural sciences, Hill Auditorium, large hospital and library complexes, and two residence halls.",
+        "original_spans": [],
+        "simplified": "From 1900 to 1920 many new buildings were built on campus. || These buildings housed the dental, pharmacy, chemistry and natural science programs. || They also included an auditorium, hospital, libraries and residence halls.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ],
+            [
+                2,
+                147,
+                149,
+                1
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 45,
+        "original": "Prospectors from California, Europe and China were also digging along the Peel River and up the mountain slopes.",
+        "original_spans": [],
+        "simplified": "People from california , europe and china were also digging up the peel river and up the mountain slopes.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 46,
+        "original": "Prospectors from California, Europe and China were also digging along the Peel River and up the mountain slopes.",
+        "original_spans": [],
+        "simplified": "Californian, European, and Chinese prospectors were also digging along the Peel River and up the mountain.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 47,
+        "original": "Prospectors from California, Europe and China were also digging along the Peel River and up the mountain slopes.",
+        "original_spans": [],
+        "simplified": "Prospectors from California, Europe and China were digging along the Peel River and up the slopes of the mountain.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 48,
+        "original": "Prospectors from California, Europe and China were also digging along the Peel River and up the mountain slopes.",
+        "original_spans": [],
+        "simplified": "Miners from America, Europe, and China were digging near the Peel River and up the mountains.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 49,
+        "original": "Prospectors from California, Europe and China were also digging along the Peel River and up the mountain slopes.",
+        "original_spans": [],
+        "simplified": "Gold diggers from California, Europe and China dug along the Peel River. || They also dug up the mountain slopes.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    }
+]

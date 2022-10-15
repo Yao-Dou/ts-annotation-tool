@@ -11,6 +11,8 @@ const app = Vue.createApp({
             single_edit_html: '',
             enable_select_original_sentence: false,
             enable_select_simplified_sentence: false,
+            enable_multi_select_original_sentence: false,
+            enable_multi_select_simplified_sentence: false,
             selected_span_in_original: '',
             selected_span_in_simplified: '',
             selected_span_in_original_indexs: [],
@@ -92,7 +94,9 @@ const app = Vue.createApp({
             clicked_deletion: "",
 
             annotating_edit_span_in_original: '',
+            annotating_edit_span_in_original_for_substitution: '',
             annotating_edit_span_in_simplified: '',
+            annotating_edit_span_in_simplified_for_substitution: '',
             annotating_edit_span_for_split: '',
             annotating_edit_span_for_structure: '',
             annotating_edit_span_category_id: -1,
@@ -181,7 +185,6 @@ const app = Vue.createApp({
                         sentence_html += original_sentence.substring(next_next_span[1], next_next_span[2]);
                         sentence_html += "</span>";
                         sentence_html += original_sentence.substring(next_next_span[2], original_spans[i][2]);
-                        console.log(original_sentence.substring(next_next_span[2], original_spans[i][2]))
                         sentence_html += `</span>`;
                         i++;
                     } else {
@@ -206,14 +209,21 @@ const app = Vue.createApp({
             sentence_html += original_sentence.substring(prev_idx);
             this.original_html = sentence_html;
         },
-        process_original_html_with_selected_span(category, start, end) {
-            this.selected_span_in_original_indexs = [start, end]
+        process_original_html_with_selected_span(category) {
+            let start = this.selected_span_in_original_indexs[0]
+            let end = this.selected_span_in_original_indexs[1]
             let prev_idx = 0
             let sentence_html = ''
             let original_sentence = this.hits_data[this.current_hit - 1].original
             let original_spans = JSON.parse(JSON.stringify(this.hits_data[this.current_hit - 1].original_spans))
             let category_id = this.category_to_id[category]
-            original_spans.push([category_id, start, end]);
+            if (this.enable_multi_select_original_sentence) {
+                for (let i = 0; i < this.selected_span_in_original_indexs.length; i++) {
+                    original_spans.push([category_id, this.selected_span_in_original_indexs[i][0], this.selected_span_in_original_indexs[i][1]])
+                }
+            } else {
+                original_spans.push([category_id, start, end]);
+            }
             // rank original_spans list by [1]
             original_spans.sort(function(a, b) {
                 return a[1] - b[1] || b[2] - a[2];
@@ -226,7 +236,20 @@ const app = Vue.createApp({
                 if (i < original_spans.length - 1 && original_spans[i + 1][1] <= original_spans[i][2]) {
                     outside = "outside"
                 }
-                if (original_spans[i][1] == start && original_spans[i][2] == end) {
+                let whether_is_selected = false
+                if (this.enable_multi_select_original_sentence) {
+                    for (let j = 0; j < this.selected_span_in_original_indexs.length; j++) {
+                        if (original_spans[i][1] == this.selected_span_in_original_indexs[j][0] && original_spans[i][2] == this.selected_span_in_original_indexs[j][1] && span_category == category) {
+                            whether_is_selected = true
+                            break
+                        }
+                    }
+                } else {
+                    if (original_spans[i][1] == start && original_spans[i][2] == end && span_category == category) {
+                        whether_is_selected = true
+                    }
+                }
+                if (whether_is_selected) {
                     sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${span_category}-light span ${outside}">`;
                 } else {
                     let light = "-light"
@@ -256,7 +279,21 @@ const app = Vue.createApp({
                     if (i < original_spans.length - 2 && original_spans[i + 2][1] <= original_spans[i+1][2]) {
                         outside = "middleside"
                     }
-                    if (next_span[1] == start && next_span[2] == end) {
+
+                    whether_is_selected = false
+                    if (this.enable_multi_select_original_sentence) {
+                        for (let j = 0; j < this.selected_span_in_original_indexs.length; j++) {
+                            if (next_span[1] == this.selected_span_in_original_indexs[j][0] && next_span[2] == this.selected_span_in_original_indexs[j][1] && next_category == category) {
+                                whether_is_selected = true
+                                break
+                            }
+                        }
+                    } else {
+                        if (next_span[1] == start && next_span[2] == end && next_category == category) {
+                            whether_is_selected = true
+                        }
+                    }
+                    if (whether_is_selected) {
                         sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${next_category}-light span ${outside}">`;
                     } else {
                         let light = "-light"
@@ -266,6 +303,7 @@ const app = Vue.createApp({
                         }
                         sentence_html += `<span @mouseover.stop @mouseout.stop @click.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${next_category} border-${next_category}${light} pointer span original_span ${outside}" data-category="${next_category}" data-id="${next_category}-` + next_span[3] + `">`;
                     }
+
                     i++;
                     if (i < original_spans.length - 1 && original_spans[i + 1][1] <= original_spans[i][2]) {
                         whether_more_overlap = true
@@ -273,7 +311,20 @@ const app = Vue.createApp({
                         let next_next_span = original_spans[i + 1]
                         sentence_html += original_sentence.substring(original_spans[i][1], next_next_span[1]);  
                         let next_category = this.id_to_category[next_next_span[0]]
-                        if (next_next_span[1] == start && next_next_span[2] == end) {
+                        whether_is_selected = false
+                        if (this.enable_multi_select_original_sentence) {
+                            for (let j = 0; j < this.selected_span_in_original_indexs.length; j++) {
+                                if (next_next_span[1] == this.selected_span_in_original_indexs[j][0] && next_next_span[2] == this.selected_span_in_original_indexs[j][1] && next_category == category) {
+                                    whether_is_selected = true
+                                    break
+                                }
+                            }
+                        } else {
+                            if (next_next_span[1] == start && next_next_span[2] == end && next_category == category) {
+                                whether_is_selected = true
+                            }
+                        }
+                        if (whether_is_selected) {
                             sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${next_category}-light span">`;
                         } else {
                             let light = "-light"
@@ -430,14 +481,21 @@ const app = Vue.createApp({
             sentence_html += simplified_sentence.substring(prev_idx);
             this.simplified_html = sentence_html;
         },
-        process_simplified_html_with_selected_span(category, start, end) {
-            this.selected_span_in_simplified_indexs = [start, end]
+        process_simplified_html_with_selected_span(category) {
+            let start = this.selected_span_in_simplified_indexs[0]
+            let end = this.selected_span_in_simplified_indexs[1]
             let prev_idx = 0
             let sentence_html = ''
             let simplified_sentence = this.hits_data[this.current_hit - 1].simplified
             let simplified_spans = JSON.parse(JSON.stringify(this.hits_data[this.current_hit - 1].simplified_spans))
             let category_id = this.category_to_id[category]
-            simplified_spans.push([category_id, start, end]);
+            if (this.enable_multi_select_simplified_sentence) {
+                for (let i = 0; i < this.selected_span_in_simplified_indexs.length; i++) {
+                    simplified_spans.push([category_id, this.selected_span_in_simplified_indexs[i][0], this.selected_span_in_simplified_indexs[i][1]])
+                }
+            } else {
+                simplified_spans.push([category_id, start, end]);
+            }
             // rank simplified_spans list by [1]
             simplified_spans.sort(function(a, b) {
                 return a[1] - b[1] || b[2] - a[2];
@@ -445,18 +503,31 @@ const app = Vue.createApp({
             // iterate simplified_spans list
             for (let i = 0; i < simplified_spans.length; i++) {
                 sentence_html += simplified_sentence.substring(prev_idx, simplified_spans[i][1]);
-                let category = this.id_to_category[simplified_spans[i][0]]
+                let span_category = this.id_to_category[simplified_spans[i][0]]
                 let outside = ""
                 if (i < simplified_spans.length - 1 && simplified_spans[i + 1][1] <= simplified_spans[i][2]) {
                     outside = "outside"
                 }
-                if (simplified_spans[i][1] == start && simplified_spans[i][2] == end) {
-                    sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${category}-light span ${outside}">`;
+                let whether_is_selected = false
+                if (this.enable_multi_select_simplified_sentence) {
+                    for (let j = 0; j < this.selected_span_in_simplified_indexs.length; j++) {
+                        if (simplified_spans[i][1] == this.selected_span_in_simplified_indexs[j][0] && simplified_spans[i][2] == this.selected_span_in_simplified_indexs[j][1] && span_category == category) {
+                            whether_is_selected = true
+                            break
+                        }
+                    }
                 } else {
-                    if (category == "split" && (simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]) =="||")) {
-                        sentence_html += `<span @mousedown.stop @mouseup.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${category} pointer span simplified_span txt-split split-sign ${outside}" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                    if (simplified_spans[i][1] == start && simplified_spans[i][2] == end && span_category == category) {
+                        whether_is_selected = true
+                    }
+                }
+                if (whether_is_selected) {
+                    sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${span_category}-light span ${outside}">`;
+                } else {
+                    if (span_category == "split" && (simplified_sentence.substring(simplified_spans[i][1], simplified_spans[i][2]) =="||")) {
+                        sentence_html += `<span @mousedown.stop @mouseup.stop @click="click_span"  @mouseover="hover_span" @mouseout="un_hover_span" class="${span_category} pointer span simplified_span txt-split split-sign ${outside}" data-category="${span_category}" data-id="${span_category}-` + simplified_spans[i][3] + `">`;
                     } else {
-                        sentence_html += `<span @mousedown.stop @mouseup.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${category} border-${category} pointer span simplified_span ${outside}" data-category="${category}" data-id="${category}-` + simplified_spans[i][3] + `">`;
+                        sentence_html += `<span @mousedown.stop @mouseup.stop @click="click_span" @mouseover="hover_span" @mouseout="un_hover_span" class="${span_category} border-${span_category} pointer span simplified_span ${outside}" data-category="${span_category}" data-id="${span_category}-` + simplified_spans[i][3] + `">`;
                     }
                 }
                 let start_i = i
@@ -479,7 +550,21 @@ const app = Vue.createApp({
                     if (i < simplified_spans.length - 2 && simplified_spans[i + 2][1] <= simplified_spans[i+1][2]) {
                         outside = "middleside"
                     }
-                    if (next_span[1] == start && next_span[2] == end) {
+
+                    whether_is_selected = false
+                    if (this.enable_multi_select_simplified_sentence) {
+                        for (let j = 0; j < this.selected_span_in_simplified_indexs.length; j++) {
+                            if (next_span[1] == this.selected_span_in_simplified_indexs[j][0] && next_span[2] == this.selected_span_in_simplified_indexs[j][1] && next_category == category) {
+                                whether_is_selected = true
+                                break
+                            }
+                        }
+                    } else {
+                        if (next_span[1] == start && next_span[2] == end && next_category == category) {
+                            whether_is_selected = true
+                        }
+                    }
+                    if (whether_is_selected) {
                         sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${next_category}-light span ${outside}">`;
                     } else {
                         if (next_category == "split" && (simplified_sentence.substring(next_span[1], next_span[2]) =="||")) {
@@ -500,7 +585,21 @@ const app = Vue.createApp({
                         let next_next_span = simplified_spans[i + 1]
                         sentence_html += simplified_sentence.substring(simplified_spans[i][1], next_next_span[1]);  
                         let next_category = this.id_to_category[next_next_span[0]]
-                        if (next_next_span[1] == start && next_next_span[2] == end) {
+
+                        whether_is_selected = false
+                        if (this.enable_multi_select_simplified_sentence) {
+                            for (let j = 0; j < this.selected_span_in_simplified_indexs.length; j++) {
+                                if (next_next_span[1] == this.selected_span_in_simplified_indexs[j][0] && next_next_span[2] == this.selected_span_in_simplified_indexs[j][1] && next_category == category) {
+                                    whether_is_selected = true
+                                    break
+                                }
+                            }
+                        } else {
+                            if (next_next_span[1] == start && next_next_span[2] == end && next_category == category) {
+                                whether_is_selected = true
+                            }
+                        }
+                        if (whether_is_selected) {
                             sentence_html += `<span @mouseover.stop @mouseout.stop class="bg-${next_category}-light span">`;
                         } else {
                             if (next_category == "split" && (simplified_sentence.substring(next_next_span[1], next_next_span[2]) =="||")) {
@@ -546,31 +645,41 @@ const app = Vue.createApp({
             this.edits_dict = {'deletion': {}, 'substitution': {}, 'insertion': {}, 'split':{}, 'reorder':{}, 'structure':{}}
             let original_spans = this.hits_data[this.current_hit - 1].original_spans
             let simplified_spans = this.hits_data[this.current_hit - 1].simplified_spans
-            // map for substituion that mapping to simplified span
-            let substitution_map = {}
 
             let spans_for_sort = [...original_spans]
             // remove split and structure span from spans_for_sort
             for (let i = 0; i < spans_for_sort.length; i++) {
-                if (spans_for_sort[i][0] == 2 || spans_for_sort[i][0] == 5) {
+                if (spans_for_sort[i][0] == 1 || spans_for_sort[i][0] == 2 || spans_for_sort[i][0] == 5) {
                     spans_for_sort.splice(i, 1);
                     i--;
                 }
             }
             let structure_in_ids = []
+            let substitution_in_ids = []
             let new_html = ''
             for (let i = 0; i < original_spans.length; i++) {
                 if (original_spans[i][0] == 0) {
                     this.edits_dict['deletion'][original_spans[i][3]] = original_spans[i];
                 } else if (original_spans[i][0] == 1) {
-                    this.edits_dict['substitution'][original_spans[i][3]] = [original_spans[i]];
+                    // this.edits_dict['substitution'][original_spans[i][3]] = [original_spans[i]];
+                    if (!(substitution_in_ids.includes(original_spans[i][3]))) {
+                        substitution_in_ids.push(original_spans[i][3])
+                        spans_for_sort.push(original_spans[i])
+                        this.edits_dict['substitution'][original_spans[i][3]] = {"original": [], "simplified": []};
+                    }
+                    this.edits_dict['substitution'][original_spans[i][3]]["original"].push(original_spans[i]);
                 } else if (original_spans[i][0] == 2) {
                     if (!(original_spans[i][3] in this.edits_dict['split'])) {
                         this.edits_dict['split'][original_spans[i][3]] = {'split':null, 'deletion': {}, 'insertion': {}, 'substitution': {}, 'reorder':{}};
                     }
                     let associated_span_category = this.id_to_category[original_spans[i][4]]
-                    if (associated_span_category == 'reorder' || associated_span_category == 'substitution') {
+                    if (associated_span_category == 'reorder') {
                         this.edits_dict['split'][original_spans[i][3]][associated_span_category][original_spans[i][5]] = [original_spans[i]];
+                    } else if ( associated_span_category == 'substitution') {
+                        if (!(original_spans[i][5] in this.edits_dict['split'][original_spans[i][3]][associated_span_category])) {
+                            this.edits_dict['split'][original_spans[i][3]][associated_span_category][original_spans[i][5]] = {"original": [], "simplified": []};
+                        }
+                        this.edits_dict['split'][original_spans[i][3]][associated_span_category][original_spans[i][5]]["original"].push(original_spans[i]);
                     } else {
                         this.edits_dict['split'][original_spans[i][3]][associated_span_category][original_spans[i][5]] = original_spans[i];
                     }
@@ -583,8 +692,13 @@ const app = Vue.createApp({
                         this.edits_dict['structure'][original_spans[i][3]] = {'deletion': {}, 'insertion': {}, 'substitution': {}, 'reorder':{}};
                     }
                     let associated_span_category = this.id_to_category[original_spans[i][4]]
-                    if (associated_span_category == 'reorder' || associated_span_category == 'substitution') {
+                    if (associated_span_category == 'reorder') {
                         this.edits_dict['structure'][original_spans[i][3]][associated_span_category][original_spans[i][5]] = [original_spans[i]];
+                    } else if (associated_span_category == 'substitution') {
+                        if (!(original_spans[i][5] in this.edits_dict['structure'][original_spans[i][3]][associated_span_category])) {
+                            this.edits_dict['structure'][original_spans[i][3]][associated_span_category][original_spans[i][5]] = {"original": [], "simplified": []};
+                        }
+                        this.edits_dict['structure'][original_spans[i][3]][associated_span_category][original_spans[i][5]]["original"].push(original_spans[i]);
                     } else {
                         this.edits_dict['structure'][original_spans[i][3]][associated_span_category][original_spans[i][5]] = original_spans[i];
                     }
@@ -601,8 +715,10 @@ const app = Vue.createApp({
                         spans_for_sort.push(simplified_spans[i]);
                     } else {
                         let associated_span_category = this.id_to_category[simplified_spans[i][4]]
-                        if (associated_span_category == 'reorder' || associated_span_category == 'substitution') {
+                        if (associated_span_category == 'reorder') {
                             this.edits_dict['split'][simplified_spans[i][3]][associated_span_category][simplified_spans[i][5]].push(simplified_spans[i]);
+                        } else if (associated_span_category == 'substitution') {
+                            this.edits_dict['split'][simplified_spans[i][3]][associated_span_category][simplified_spans[i][5]]["simplified"].push(simplified_spans[i]);
                         } else {
                             this.edits_dict['split'][simplified_spans[i][3]][associated_span_category][simplified_spans[i][5]] = simplified_spans[i];
                         }
@@ -611,8 +727,7 @@ const app = Vue.createApp({
                     this.edits_dict['insertion'][simplified_spans[i][3]] = simplified_spans[i];
                     spans_for_sort.push(simplified_spans[i]);
                 } else if (simplified_spans[i][0] == 1) {
-                    this.edits_dict['substitution'][simplified_spans[i][3]].push(simplified_spans[i]);
-                    substitution_map[simplified_spans[i][3]] = simplified_spans[i];
+                    this.edits_dict['substitution'][simplified_spans[i][3]]["simplified"].push(simplified_spans[i]);
                 } else if (simplified_spans[i][0] == 4) {
                     this.edits_dict['reorder'][simplified_spans[i][3]].push(simplified_spans[i]);
                 } else if (simplified_spans[i][0] == 5) {
@@ -624,9 +739,10 @@ const app = Vue.createApp({
                         structure_in_ids.push(simplified_spans[i][3]);
                     }
                     let associated_span_category = this.id_to_category[simplified_spans[i][4]]
-                    if (associated_span_category == 'reorder' || associated_span_category == 'substitution') {
-                        console.log(this.edits_dict['structure'])
+                    if (associated_span_category == 'reorder') {
                         this.edits_dict['structure'][simplified_spans[i][3]][associated_span_category][simplified_spans[i][5]].push(simplified_spans[i]);
+                    } else if (associated_span_category == 'substitution') {
+                            this.edits_dict['structure'][simplified_spans[i][3]][associated_span_category][simplified_spans[i][5]]["simplified"].push(simplified_spans[i]);
                     } else {
                         this.edits_dict['structure'][simplified_spans[i][3]][associated_span_category][simplified_spans[i][5]] = simplified_spans[i];
                     }
@@ -660,10 +776,26 @@ const app = Vue.createApp({
                 } else if (key == "substitution") {
                     new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(span[1], span[2])}&nbsp`;
                     new_html += `</span>`;
+                    let original_spans_for_subs = this.edits_dict['substitution'][i]["original"];
+                    for (let original_span of original_spans_for_subs) {
+                        if (original_span[1] != span[1] || original_span[2] != span[2]) {
+                            new_html += `<span class="edit-type txt-${key}${light} f3"> and </span>`;
+                            new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                            new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(original_span[1], original_span[2])}&nbsp`;
+                            new_html += `</span>`;
+                        }
+                    }
                     new_html += `<span class="edit-type txt-${key}${light} f3"> with </span>`;
-                    new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
-                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(substitution_map[i][1], substitution_map[i][2])}&nbsp`;
-                    new_html += `</span>`;
+                    let simplified_spans_for_subs = this.edits_dict['substitution'][i]["simplified"];
+                    for (let j = 0; j < simplified_spans_for_subs.length; j++) {
+                        let simplified_span = simplified_spans_for_subs[j];
+                        if (j != 0) {
+                            new_html += `<span class="edit-type txt-${key}${light} f3"> and </span>`;
+                        }
+                        new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                        new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(simplified_span[1], simplified_span[2])}&nbsp`;
+                        new_html += `</span>`;
+                    }
                 } else if (key == "split") {
                     // console.log(span)
                     new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(span[1], span[2])}&nbsp</span>`;
@@ -692,13 +824,25 @@ const app = Vue.createApp({
                                 new_html += `</span>`;
                             } else if (current_category == "substitution") {
                                 new_html += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
-                                new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
-                                new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(this.edits_dict[key][i][current_category][j][0][1], this.edits_dict[key][i][current_category][j][0][2])}&nbsp`;
-                                new_html += `</span>`;
+                                let original_spans_for_subs_under_split = this.edits_dict[key][i][current_category][j]["original"];
+                                for (let k = 0; k < original_spans_for_subs_under_split.length; k++) {
+                                    if (k != 0) {
+                                        new_html += `<span class="edit-type txt-${key}${light} f3"> and </span>`;
+                                    }
+                                    new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(original_spans_for_subs_under_split[k][1], original_spans_for_subs_under_split[k][2])}&nbsp`;
+                                    new_html += `</span>`;
+                                }
                                 new_html += `<span class="edit-type txt-${key}${light} f3"> with </span>`;
-                                new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
-                                new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(this.edits_dict[key][i][current_category][j][1][1], this.edits_dict[key][i][current_category][j][1][2])}&nbsp`;
-                                new_html += `</span>`;
+                                let simplified_spans_for_subs_under_split = this.edits_dict[key][i][current_category][j]["simplified"];
+                                for (let k = 0; k < simplified_spans_for_subs_under_split.length; k++) {
+                                    if (k != 0) {
+                                        new_html += `<span class="edit-type txt-${key}${light} f3"> and </span>`;
+                                    }
+                                    new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(simplified_spans_for_subs_under_split[k][1], simplified_spans_for_subs_under_split[k][2])}&nbsp`;
+                                    new_html += `</span>`;
+                                }
                             } else if (current_category == "reorder") {
                                 new_html += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
                                 new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
@@ -735,13 +879,25 @@ const app = Vue.createApp({
                                 new_html += `</span>`;
                             } else if (current_category == "substitution") {
                                 new_html += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
-                                new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
-                                new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(this.edits_dict[key][i][current_category][j][0][1], this.edits_dict[key][i][current_category][j][0][2])}&nbsp`;
-                                new_html += `</span>`;
+                                let original_spans_for_subs_under_split = this.edits_dict[key][i][current_category][j]["original"];
+                                for (let k = 0; k < original_spans_for_subs_under_split.length; k++) {
+                                    if (k != 0) {
+                                        new_html += `<span class="edit-type txt-${key}${light} f3"> and </span>`;
+                                    }
+                                    new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].original.substring(original_spans_for_subs_under_split[k][1], original_spans_for_subs_under_split[k][2])}&nbsp`;
+                                    new_html += `</span>`;
+                                }
                                 new_html += `<span class="edit-type txt-${key}${light} f3"> with </span>`;
-                                new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
-                                new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(this.edits_dict[key][i][current_category][j][1][1], this.edits_dict[key][i][current_category][j][1][2])}&nbsp`;
-                                new_html += `</span>`;
+                                let simplified_spans_for_subs_under_split = this.edits_dict[key][i][current_category][j]["simplified"];
+                                for (let k = 0; k < simplified_spans_for_subs_under_split.length; k++) {
+                                    if (k != 0) {
+                                        new_html += `<span class="edit-type txt-${key}${light} f3"> and </span>`;
+                                    }
+                                    new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
+                                    new_html += `&nbsp${this.hits_data[this.current_hit - 1].simplified.substring(simplified_spans_for_subs_under_split[k][1], simplified_spans_for_subs_under_split[k][2])}&nbsp`;
+                                    new_html += `</span>`;
+                                }
                             } else if (current_category == "reorder") {
                                 new_html += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
                                 new_html += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${i}" data-category="${key}">`;
@@ -1019,9 +1175,12 @@ const app = Vue.createApp({
                 let new_deletion = [0, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], max_key + 1]
                 original_spans.push(new_deletion)
             } else if (selected_category == "substitution") {
-                let new_substitution = [[1, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], max_key + 1], [1, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], max_key + 1]]
-                original_spans.push(new_substitution[0])
-                simplified_spans.push(new_substitution[1])
+                for (let i = 0; i < this.selected_span_in_original_indexs.length; i++) {
+                    original_spans.push([1, this.selected_span_in_original_indexs[i][0], this.selected_span_in_original_indexs[i][1], max_key + 1])
+                }
+                for (let i = 0; i < this.selected_span_in_simplified_indexs.length; i++) {
+                    simplified_spans.push([1, this.selected_span_in_simplified_indexs[i][0], this.selected_span_in_simplified_indexs[i][1], max_key + 1])
+                }
             } else if (selected_category == "reorder") {
                 let new_reorder = [[4, this.selected_span_in_original_indexs[0], this.selected_span_in_original_indexs[1], max_key + 1], [4, this.selected_span_in_simplified_indexs[0], this.selected_span_in_simplified_indexs[1], max_key + 1]]
                 original_spans.push(new_reorder[0])
@@ -1252,6 +1411,26 @@ const app = Vue.createApp({
                 $(`#circle-${this.current_hit}`).addClass('circle-bookmark');
             }
         },
+        restart_hit() {
+            this.hits_data[this.current_hit - 1].annotations = {
+                'deletion': [],
+                'substitution': [],
+                'insertion': [],
+                'split': [],
+                'reorder': [],
+                'structure': [],
+            }
+            this.hits_data[this.current_hit - 1].original_spans = [];
+            this.hits_data[this.current_hit - 1].simplified_spans = [];
+            let simplified_text = this.hits_data[this.current_hit - 1].simplified;
+            let split_signs = [...simplified_text.matchAll(/\|\|/gi)].map(a => a.index);
+            for (let i = 0; i < split_signs.length; i++) {
+                split_sign = split_signs[i];
+                this.hits_data[this.current_hit - 1].simplified_spans.push([2, split_sign, split_sign + 2, i]);
+            }
+            this.refresh_edit();
+            this.process_everything();
+        },
         refresh_edit() {
             this.open = false;
             this.selected_span_in_original = '',
@@ -1262,6 +1441,8 @@ const app = Vue.createApp({
             this.selected_edits_html = "",
             this.enable_select_original_sentence = false;
             this.enable_select_simplified_sentence = false;
+            this.enable_multi_select_original_sentence = false;
+            this.enable_multi_select_simplified_sentence = false;
             $("input[name=edit_cotegory]").prop("checked", false);
             $(".checkbox-tools").prop("checked", false);
             $(".checkbox-tools-yes-no").prop("checked", false);
@@ -1357,16 +1538,35 @@ const app = Vue.createApp({
             if (event.target.value == 'deletion') {
                 this.enable_select_original_sentence = true;
                 this.enable_select_simplified_sentence = false;
+                this.enable_multi_select_original_sentence = false;
+                this.enable_multi_select_simplified_sentence = false;
             }  else if (event.target.value == 'substitution' || event.target.value == 'reorder') {
                 this.enable_select_original_sentence = true;
                 this.enable_select_simplified_sentence = true;
+                if (event.target.value == 'substitution') {
+                    this.enable_multi_select_original_sentence = true;
+                    this.enable_multi_select_simplified_sentence = true;
+                } else {
+                    this.enable_multi_select_original_sentence = false;
+                    this.enable_multi_select_simplified_sentence = false;
+                }
             } else if (event.target.value == 'split' || event.target.value == 'structure') {
                 this.enable_select_original_sentence = false;
                 this.enable_select_simplified_sentence = false;
+                this.enable_multi_select_original_sentence = false;
+                this.enable_multi_select_simplified_sentence = false;
             } else {
                 this.enable_select_simplified_sentence = true;
                 this.enable_select_original_sentence = false;
+                this.enable_multi_select_original_sentence = false;
+                this.enable_multi_select_simplified_sentence = false;
             }
+            this.selected_span_in_original = "";
+            this.selected_span_in_simplified = "";
+            this.selected_span_in_original_indexs = [];
+            this.selected_span_in_simplified_indexs = [];
+            this.process_original_html();
+            this.process_simplified_html();
         },
         async parseJsonFile(file) {
             return new Promise((resolve, reject) => {
@@ -1412,11 +1612,20 @@ const app = Vue.createApp({
     created: function () {
         let urlParams = new URLSearchParams(window.location.search);
         let data_path = urlParams.get('data');
+        console.log(urlParams.get('name'))
         if (data_path == null) {
             data_path = '5_systems_plus_3_human_80_total.json'
         }
+        let batch_odd_names = ["anton", "ayush", "kelly"]
+        let batch_even_names = ["rachel", "vishnesh", "vinayak"]
         if (urlParams.get('batch') != null) {
-            data_path = `batches/batch_${urlParams.get('batch')}.json`
+            if (urlParams.get('name') == null) {
+                data_path = `batches/batch_${urlParams.get('batch')}.json`
+            } else if (batch_odd_names.includes(urlParams.get('name').toLowerCase())) {
+                data_path = `batches/batch_${urlParams.get('batch') * 2 - 1}.json`
+            } else if (batch_even_names.includes(urlParams.get('name').toLowerCase())) {
+                data_path = `batches/batch_${urlParams.get('batch') * 2}.json`
+            }
         }
         fetch(`https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/${data_path}`)
             .then(r => r.json())
@@ -1434,7 +1643,6 @@ const app = Vue.createApp({
                         }
                     }
                 }
-                console.log(json.length)
                 this.total_hits = json.length;
                 this.process_everything();
             });
@@ -1477,13 +1685,26 @@ const app = Vue.createApp({
                                         this.$parent.selected_edits_html += ",&nbsp&nbsp";
                                     } else if (key == 'substitution') {
                                         this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">substitute </span>`;
-                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[0][1],edit[0][2])}&nbsp`;
-                                        this.$parent.selected_edits_html += `</span>`;
+                                        let original_spans_for_subs = edit["original"]
+                                        let simplified_spans_for_subs = edit["simplified"]
+                                        for (let j = 0; j < original_spans_for_subs.length; j++) {
+                                            if (j != 0) {
+                                                this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> and </span>`;
+                                            }
+                                            this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                            this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(original_spans_for_subs[j][1], original_spans_for_subs[j][2])}&nbsp`;
+                                            this.$parent.selected_edits_html += `</span>`;
+                                        }
+
                                         this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> with </span>`;
-                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(edit[1][1],edit[1][2])}&nbsp`;
-                                        this.$parent.selected_edits_html += `</span>`;
+                                        for (let j = 0; j < simplified_spans_for_subs.length; j++) {
+                                            if (j != 0) {
+                                                this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> and </span>`;
+                                            }
+                                            this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                            this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(simplified_spans_for_subs[j][1],simplified_spans_for_subs[j][2])}&nbsp`;
+                                            this.$parent.selected_edits_html += `</span>`;
+                                        }
                                         this.$parent.selected_edits_html += ",&nbsp&nbsp";
                                     } else if (key == 'reorder') {
                                         this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">reorder </span>`;
@@ -1577,17 +1798,21 @@ const app = Vue.createApp({
                         if (!this.$parent.enable_select_original_sentence) {
                             return
                         }
-                        this.$parent.process_original_html();
+                        let selected_category = $("input[name=edit_cotegory]:checked").val();
                         let selection = window.getSelection();
                         if (selection.anchorNode != selection.focusNode || selection.anchorNode == null) {
+                            this.$parent.process_original_html_with_selected_span(selected_category);
                             return;
                         }
+
                         let range = selection.getRangeAt(0);
                         let [start, end] = [range.startOffset, range.endOffset];
                         
                         if (start == end) {
+                            this.$parent.process_original_html_with_selected_span(selected_category)
                             return;
                         }
+
                         // manipulate start and end to try to respect word boundaries and remove
                         // whitespace.
                         end -= 1; // move to inclusive model for these computations.
@@ -1608,11 +1833,27 @@ const app = Vue.createApp({
                         end += 1;
                         // stop if empty or invalid range after movement
                         if (start >= end) {
+                            this.$parent.process_original_html_with_selected_span(selected_category);
                             return;
                         }
                         this.$parent.selected_span_in_original = '\xa0' + txt.substring(start, end) + '\xa0'
-                        let selected_category = $("input[name=edit_cotegory]:checked").val();
-                        this.$parent.process_original_html_with_selected_span(selected_category, start, end);
+
+                        if (this.$parent.enable_multi_select_original_sentence) {
+                            this.$parent.selected_span_in_original_indexs.push([start, end]);
+                            this.$parent.selected_span_in_original = "";
+                            // iterate through this.$parent.selected_span_in_original_indexs
+                            for (let i = 0; i < this.$parent.selected_span_in_original_indexs.length; i++) {
+                                let [start, end] = this.$parent.selected_span_in_original_indexs[i];
+                                this.$parent.selected_span_in_original += `<span class="bg-substitution-light">\xa0`;
+                                this.$parent.selected_span_in_original += `<span @click="remove_selected('${selected_category}',${start},${end})" class="hover-white black br-pill mr1 pointer">✘</span>`
+                                this.$parent.selected_span_in_original += txt.substring(start, end) + '\xa0';
+                                this.$parent.selected_span_in_original += `</span>`;
+                                this.$parent.selected_span_in_original += "&nbsp&nbsp";
+                            }
+                        } else {
+                            this.$parent.selected_span_in_original_indexs = [start, end];
+                        }
+                        this.$parent.process_original_html_with_selected_span(selected_category);
                     },
                     deselect_original_html(event) {
                         if (!this.$parent.enable_select_original_sentence) {
@@ -1680,13 +1921,26 @@ const app = Vue.createApp({
                                         this.$parent.selected_edits_html += ",&nbsp&nbsp";
                                     } else if (key == 'substitution') {
                                         this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">substitute </span>`;
-                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(edit[0][1],edit[0][2])}&nbsp`;
-                                        this.$parent.selected_edits_html += `</span>`;
+                                        let original_spans_for_subs = edit["original"]
+                                        let simplified_spans_for_subs = edit["simplified"]
+                                        for (let j = 0; j < original_spans_for_subs.length; j++) {
+                                            if (j != 0) {
+                                                this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> and </span>`;
+                                            }
+                                            this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                            this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].original.substring(original_spans_for_subs[j][1], original_spans_for_subs[j][2])}&nbsp`;
+                                            this.$parent.selected_edits_html += `</span>`;
+                                        }
+
                                         this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> with </span>`;
-                                        this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
-                                        this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(edit[1][1],edit[1][2])}&nbsp`;
-                                        this.$parent.selected_edits_html += `</span>`;
+                                        for (let j = 0; j < simplified_spans_for_subs.length; j++) {
+                                            if (j != 0) {
+                                                this.$parent.selected_edits_html += `<span class="edit-type txt-${key}"> and </span>`;
+                                            }
+                                            this.$parent.selected_edits_html += `<span class="pa1 edit-text br-pill-ns txt-${key} border-${key}-all">`;
+                                            this.$parent.selected_edits_html += `&nbsp${this.$parent.hits_data[this.$parent.current_hit - 1].simplified.substring(simplified_spans_for_subs[j][1],simplified_spans_for_subs[j][2])}&nbsp`;
+                                            this.$parent.selected_edits_html += `</span>`;
+                                        }
                                         this.$parent.selected_edits_html += ",&nbsp&nbsp";
                                     } else if (key == 'reorder') {
                                         this.$parent.selected_edits_html += `<span class="edit-type txt-${key}">reorder </span>`;
@@ -1834,18 +2088,19 @@ const app = Vue.createApp({
                         if (!this.$parent.enable_select_simplified_sentence) {
                             return
                         }
+                        let selected_category = $("input[name=edit_cotegory]:checked").val();
                         let selection = window.getSelection();
                         if (selection.anchorNode != selection.focusNode || selection.anchorNode == null) {
-                            this.$parent.process_simplified_html()
+                            this.$parent.process_simplified_html_with_selected_span(selected_category)
                             return;
                         }
                         let range = selection.getRangeAt(0);
                         let [start, end] = [range.startOffset, range.endOffset];
                         
-                        // if (start == end) {
-                        //     this.$parent.process_simplified_html()
-                        //     return;
-                        // }
+                        if (start == end) {
+                            this.$parent.process_simplified_html_with_selected_span(selected_category)
+                            return;
+                        }
                         // manipulate start and end to try to respect word boundaries and remove
                         // whitespace.
                         end -= 1; // move to inclusive model for these computations.
@@ -1866,12 +2121,27 @@ const app = Vue.createApp({
                         end += 1;
                         // stop if empty or invalid range after movement
                         if (start >= end) {
-                            this.$parent.process_simplified_html()
+                            this.$parent.process_simplified_html_with_selected_span(selected_category)
                             return;
                         }
                         this.$parent.selected_span_in_simplified = '\xa0' + txt.substring(start, end) + '\xa0'
-                        let selected_category = $("input[name=edit_cotegory]:checked").val();
-                        this.$parent.process_simplified_html_with_selected_span(selected_category, start, end);
+
+                        if (this.$parent.enable_multi_select_simplified_sentence) {
+                            this.$parent.selected_span_in_simplified_indexs.push([start, end]);
+                            this.$parent.selected_span_in_simplified = "";
+                            // iterate through this.$parent.selected_span_in_simplified_indexs
+                            for (let i = 0; i < this.$parent.selected_span_in_simplified_indexs.length; i++) {
+                                let [start, end] = this.$parent.selected_span_in_simplified_indexs[i];
+                                this.$parent.selected_span_in_simplified += `<span class="bg-substitution-light">\xa0`;
+                                this.$parent.selected_span_in_simplified += `<span @click="remove_selected('${selected_category}',${start},${end})" class="hover-white black br-pill mr1 pointer">✘</span>`
+                                this.$parent.selected_span_in_simplified += txt.substring(start, end) + '\xa0';
+                                this.$parent.selected_span_in_simplified += `</span>`;
+                                this.$parent.selected_span_in_simplified += "&nbsp&nbsp";
+                            }
+                        } else {
+                            this.$parent.selected_span_in_simplified_indexs = [start, end];
+                        }
+                        this.$parent.process_simplified_html_with_selected_span(selected_category);
                     },
                     deselect_simplified_html(event) {
                         if (!this.$parent.enable_select_simplified_sentence) {
@@ -2019,11 +2289,33 @@ const app = Vue.createApp({
                         // parse the real_id to int
                         real_id = parseInt(real_id)
 
-                        if (category == "substitution" || category == "reorder") {
+                        if (category == "reorder") {
                             let annotating_span_orginal = edit_dict[category][real_id][0]
                             let annotating_span_simplified = edit_dict[category][real_id][1]
                             this.$parent.annotating_edit_span_in_original = original_sentence.substring(annotating_span_orginal[1], annotating_span_orginal[2])
                             this.$parent.annotating_edit_span_in_simplified = simplified_sentence.substring(annotating_span_simplified[1], annotating_span_simplified[2])
+                        } else if (category == "substitution") {
+                            let original_spans_for_subs = edit_dict[category][real_id]["original"]
+                            let simplified_spans_for_subs = edit_dict[category][real_id]["simplified"]
+                            this.$parent.annotating_edit_span_in_original_for_substitution = ""
+                            for (let i = 0; i < original_spans_for_subs.length; i++) {
+                                if (i != 0) {
+                                    this.$parent.annotating_edit_span_in_original_for_substitution += `<span class="edit-type txt-${category} f3"> and </span>`
+                                }
+                                this.$parent.annotating_edit_span_in_original_for_substitution += `<span class="pa1 edit-text br-pill-ns txt-${category} border-${category}-all ${category}_below">`
+                                this.$parent.annotating_edit_span_in_original_for_substitution += `&nbsp${original_sentence.substring(original_spans_for_subs[i][1], original_spans_for_subs[i][2])}&nbsp`;
+                                this.$parent.annotating_edit_span_in_original_for_substitution += `</span>`
+                            }
+                            this.$parent.annotating_edit_span_in_simplified_for_substitution = ""
+                            for (let i = 0; i < simplified_spans_for_subs.length; i++) {
+                                if (i != 0) {
+                                    this.$parent.annotating_edit_span_in_simplified_for_substitution += `<span class="edit-type txt-${category} f3"> and </span>`
+                                }
+                                this.$parent.annotating_edit_span_in_simplified_for_substitution += `<span class="pa1 edit-text br-pill-ns txt-${category} border-${category}-all ${category}_below">`
+                                this.$parent.annotating_edit_span_in_simplified_for_substitution += `&nbsp${simplified_sentence.substring(simplified_spans_for_subs[i][1], simplified_spans_for_subs[i][2])}&nbsp`;
+                                this.$parent.annotating_edit_span_in_simplified_for_substitution += `</span>`
+                            }
+                            console
                         } else if (category == "split") {
                             this.$parent.annotating_edit_span_for_split = ""
                             let category_id_dict = edit_dict[category][real_id]
@@ -2044,23 +2336,35 @@ const app = Vue.createApp({
                                     }
                                     if (current_category == "insertion") {
                                         this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
-                                        this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
+                                        this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below">`;
                                         this.$parent.annotating_edit_span_for_split += `&nbsp${simplified_sentence.substring(category_id_dict[current_category][j][1], category_id_dict[current_category][j][2])}&nbsp`;
                                         this.$parent.annotating_edit_span_for_split += `</span>`;
                                     } else if (current_category == "deletion") {
                                         this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
-                                        this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
+                                        this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below">`;
                                         this.$parent.annotating_edit_span_for_split += `&nbsp${original_sentence.substring(category_id_dict[current_category][j][1], category_id_dict[current_category][j][2])}&nbsp`;
                                         this.$parent.annotating_edit_span_for_split += `</span>`;
                                     } else if (current_category == "substitution") {
                                         this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
-                                        this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
-                                        this.$parent.annotating_edit_span_for_split += `&nbsp${original_sentence.substring(category_id_dict[current_category][j][0][1], category_id_dict[current_category][j][0][2])}&nbsp`;
-                                        this.$parent.annotating_edit_span_for_split += `</span>`;
+                                        let original_spans_for_subs_under_split = category_id_dict[current_category][j]["original"]
+                                        let simplified_spans_for_subs_under_split = category_id_dict[current_category][j]["simplified"]
+                                        for (let k = 0; k < original_spans_for_subs_under_split.length; k++) {
+                                            if (k != 0) {
+                                                this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> and </span>`
+                                            }
+                                            this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below">`
+                                            this.$parent.annotating_edit_span_for_split += `&nbsp${original_sentence.substring(original_spans_for_subs_under_split[k][1], original_spans_for_subs_under_split[k][2])}&nbsp`;
+                                            this.$parent.annotating_edit_span_for_split += `</span>`
+                                        }
                                         this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> with </span>`;
-                                        this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
-                                        this.$parent.annotating_edit_span_for_split += `&nbsp${simplified_sentence.substring(category_id_dict[current_category][j][1][1], category_id_dict[current_category][j][1][2])}&nbsp`;
-                                        this.$parent.annotating_edit_span_for_split += `</span>`;
+                                        for (let k = 0; k < simplified_spans_for_subs_under_split.length; k++) {
+                                            if (k != 0) {
+                                                this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> and </span>`
+                                            }
+                                            this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below">`
+                                            this.$parent.annotating_edit_span_for_split += `&nbsp${simplified_sentence.substring(simplified_spans_for_subs_under_split[k][1], simplified_spans_for_subs_under_split[k][2])}&nbsp`;
+                                            this.$parent.annotating_edit_span_for_split += `</span>`
+                                        }
                                     } else if (current_category == "reorder") {
                                         this.$parent.annotating_edit_span_for_split += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
                                         this.$parent.annotating_edit_span_for_split += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
@@ -2099,13 +2403,25 @@ const app = Vue.createApp({
                                         this.$parent.annotating_edit_span_for_structure += `</span>`;
                                     } else if (current_category == "substitution") {
                                         this.$parent.annotating_edit_span_for_structure += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
-                                        this.$parent.annotating_edit_span_for_structure += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
-                                        this.$parent.annotating_edit_span_for_structure += `&nbsp${original_sentence.substring(category_id_dict[current_category][j][0][1], category_id_dict[current_category][j][0][2])}&nbsp`;
-                                        this.$parent.annotating_edit_span_for_structure += `</span>`;
+                                        let original_spans_for_subs_under_split = category_id_dict[current_category][j]["original"]
+                                        let simplified_spans_for_subs_under_split = category_id_dict[current_category][j]["simplified"]
+                                        for (let k = 0; k < original_spans_for_subs_under_split.length; k++) {
+                                            if (k != 0) {
+                                                this.$parent.annotating_edit_span_for_structure += `<span class="edit-type txt-${key}${light} f3"> and </span>`
+                                            }
+                                            this.$parent.annotating_edit_span_for_structure += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below">`
+                                            this.$parent.annotating_edit_span_for_structure += `&nbsp${original_sentence.substring(original_spans_for_subs_under_split[k][1], original_spans_for_subs_under_split[k][2])}&nbsp`;
+                                            this.$parent.annotating_edit_span_for_structure += `</span>`
+                                        }
                                         this.$parent.annotating_edit_span_for_structure += `<span class="edit-type txt-${key}${light} f3"> with </span>`;
-                                        this.$parent.annotating_edit_span_for_structure += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
-                                        this.$parent.annotating_edit_span_for_structure += `&nbsp${simplified_sentence.substring(category_id_dict[current_category][j][1][1], category_id_dict[current_category][j][1][2])}&nbsp`;
-                                        this.$parent.annotating_edit_span_for_structure += `</span>`;
+                                        for (let k = 0; k < simplified_spans_for_subs_under_split.length; k++) {
+                                            if (k != 0) {
+                                                this.$parent.annotating_edit_span_for_structure += `<span class="edit-type txt-${key}${light} f3"> and </span>`
+                                            }
+                                            this.$parent.annotating_edit_span_for_structure += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below">`
+                                            this.$parent.annotating_edit_span_for_structure += `&nbsp${simplified_sentence.substring(simplified_spans_for_subs_under_split[k][1], simplified_spans_for_subs_under_split[k][2])}&nbsp`;
+                                            this.$parent.annotating_edit_span_for_structure += `</span>`
+                                        }
                                     } else if (current_category == "reorder") {
                                         this.$parent.annotating_edit_span_for_structure += `<span class="edit-type txt-${key}${light} f3"> ${current_category_short} </span>`;
                                         this.$parent.annotating_edit_span_for_structure += `<span class="pa1 edit-text br-pill-ns txt-${key}${light} border-${key}${light}-all ${key}_below" data-id="${key}-${real_id}" data-category="${key}">`;
@@ -2220,7 +2536,7 @@ const app = Vue.createApp({
                         for (let id in split_edits_dict) {
                             let color = "rgba(250, 229, 175, 0.4)"
                             if (("annotations" in this.$parent.hits_data[[this.$parent.current_hit - 1]]) && (id in this.$parent.hits_data[[this.$parent.current_hit - 1]].annotations["split"])) {
-                                color = "rgba(33, 134, 235, 0.46)"
+                                color = "rgba(247, 206, 70, 0.46)"
                             }
                             this.$parent.lines["split"][id] = []
                             for (let span_category in split_edits_dict[id]) {
@@ -2301,6 +2617,70 @@ const app = Vue.createApp({
                 }
             }
         },
+        compiled_substitution_selected_span_in_original() {
+            return {
+                template: `<span>${this.selected_span_in_original}</span>`,
+                methods: {
+                    remove_selected(category, start, end) {
+                        let txt = this.$parent.hits_data[this.$parent.current_hit - 1].original
+                        // remove [start,end] from selected_span_in_original_indexs
+                        for (let index in this.$parent.selected_span_in_original_indexs) {
+                            let span = this.$parent.selected_span_in_original_indexs[index]
+                            if (span[0] == start && span[1] == end) {
+                                this.$parent.selected_span_in_original_indexs.splice(index, 1)
+                                break
+                            }
+                        }
+
+                        // this.$parent.selected_span_in_original_indexs.push([start, end]);
+                        this.$parent.selected_span_in_original = "";
+                        // iterate through this.$parent.selected_span_in_original_indexs
+                        for (let i = 0; i < this.$parent.selected_span_in_original_indexs.length; i++) {
+                            let [start, end] = this.$parent.selected_span_in_original_indexs[i];
+                            let selected_span = this.$parent.selected_span_in_original.substring(start, end);
+                            this.$parent.selected_span_in_original += `<span class="bg-substitution-light">\xa0`;
+                            this.$parent.selected_span_in_original += `<span @click="remove_selected('${category}',${start},${end})" class="hover-white black br-pill mr1 pointer">✘</span>`
+                            this.$parent.selected_span_in_original += txt.substring(start, end) + '\xa0';
+                            this.$parent.selected_span_in_original += `</span>`;
+                            this.$parent.selected_span_in_original += "&nbsp&nbsp";
+                        }
+                        this.$parent.process_original_html_with_selected_span(category);
+                    }
+                },
+            }
+        },
+        compiled_substitution_selected_span_in_simplified() {
+            return {
+                template: `<span>${this.selected_span_in_simplified}</span>`,
+                methods: {
+                    remove_selected(category, start, end) {
+                        let txt = this.$parent.hits_data[this.$parent.current_hit - 1].simplified
+                        // remove [start,end] from selected_span_in_simplified_indexs
+                        for (let index in this.$parent.selected_span_in_simplified_indexs) {
+                            let span = this.$parent.selected_span_in_simplified_indexs[index]
+                            if (span[0] == start && span[1] == end) {
+                                this.$parent.selected_span_in_simplified_indexs.splice(index, 1)
+                                break
+                            }
+                        }
+
+                        // this.$parent.selected_span_in_simplified_indexs.push([start, end]);
+                        this.$parent.selected_span_in_simplified = "";
+                        // iterate through this.$parent.selected_span_in_simplified_indexs
+                        for (let i = 0; i < this.$parent.selected_span_in_simplified_indexs.length; i++) {
+                            let [start, end] = this.$parent.selected_span_in_simplified_indexs[i];
+                            let selected_span = this.$parent.selected_span_in_simplified.substring(start, end);
+                            this.$parent.selected_span_in_simplified += `<span class="bg-substitution-light">\xa0`;
+                            this.$parent.selected_span_in_simplified += `<span @click="remove_selected('${category}',${start},${end})" class="hover-white black br-pill mr1 pointer">✘</span>`
+                            this.$parent.selected_span_in_simplified += txt.substring(start, end) + '\xa0';
+                            this.$parent.selected_span_in_simplified += `</span>`;
+                            this.$parent.selected_span_in_simplified += "&nbsp&nbsp";
+                        }
+                        this.$parent.process_simplified_html_with_selected_span(category);
+                    }
+                },
+            }
+        },
         compiled_split_annotating_span(){
             return {
                 template: `${this.annotating_edit_span_for_split}`,
@@ -2315,7 +2695,6 @@ const app = Vue.createApp({
             if (this.hits_data == null) {
                 return 0
             } else {
-                // console.log(this.edits_dict)
                 // iterate through the edits_dict and count the number of edits
                 let total_num = 0
                 for (let category in this.edits_dict) {
