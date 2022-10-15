@@ -69,7 +69,8 @@
                             <!-- <span id="line_start" class="f5">Original <span id="line_1_start"  class="red">Sentence</span> (Human Written):</span> -->
                         </p>
                         <div class="fr">
-                            <i @click="bookmark_this_hit" class="bookmark fa-regular fa-bookmark fa-lg pointer"></i>
+                            <i @click="restart_hit" class="fa-solid fa-arrows-rotate fa-lg pointer mr2"></i>
+                            <i @click="bookmark_this_hit" class="bookmark fa-regular fa-bookmark fa-lg pointer ml1"></i>
                         </div>
                     </div>
                     
@@ -156,22 +157,22 @@
                                 </div>
 
                                 <div class="span-selection-div" data-category="substitution">
-                                    <p class="mt0 mb2 b tracked-light">Select or click the text span from the <i>Original Sentence</i>.
+                                    <p class="mt0 mb2 b tracked-light">Select the text span from the <i>Original Sentence</i>.
                                     </p>
-                                    <p class="tracked-light">Selected span: <span class="bg-substitution-light">{{selected_span_in_original}}</span></p>
+                                    <p class="tracked-light">Selected span: <component :is="compiled_substitution_selected_span_in_original"></component></p>
                                     <div class="">
-                                        <p class="mb2 b tracked-light">Select or click the text span from the <i>Simplified Sentence</i>.
+                                        <p class="mb2 b tracked-light">Select the text span from the <i>Simplified Sentence</i>.
                                         </p>
-                                        <p class="tracked-light">Selected span: <span class="bg-substitution-light">{{selected_span_in_simplified}}</span></p>
+                                        <p class="tracked-light">Selected span: <component :is="compiled_substitution_selected_span_in_simplified"></component></p>
                                     </div>
                                 </div>
 
                                 <div class="span-selection-div" data-category="reorder">
-                                    <p class="mt0 mb2 b tracked-light">Select or click the text span from the <i>Original Sentence</i>.
+                                    <p class="mt0 mb2 b tracked-light">Select the text span from the <i>Original Sentence</i>.
                                     </p>
                                     <p class="tracked-light">Selected span: <span class="bg-reorder-light">{{selected_span_in_original}}</span></p>
                                     <div class="">
-                                        <p class="mb2 b tracked-light">Select or click the substitution span from the <i>Simplified Sentence</i>.
+                                        <p class="mb2 b tracked-light">Select the text span from the <i>Simplified Sentence</i>.
                                         </p>
                                         <p class="tracked-light">Selected span: <span class="bg-reorder-light">{{selected_span_in_simplified}}</span></p>
                                     </div>
@@ -293,9 +294,10 @@
                     <div class="f4 mt0 mb2 tc">
                         Edit:
                         <span class="edit-type txt-substitution f3">substitute </span>
-                        <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;{{annotating_edit_span_in_original}}&nbsp;</span>
-                        <span class="edit-type txt-substitution f3"> to </span>
-                        <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span>
+                        <span v-html="annotating_edit_span_in_original_for_substitution"></span>
+                        <span class="edit-type txt-substitution f3"> with </span>
+                        <span v-html="annotating_edit_span_in_simplified_for_substitution"></span>
+                        <!-- <span class="pa1 edit-text br-pill-ns border-substitution-all substitution_below txt-substitution">&nbsp;{{annotating_edit_span_in_simplified}}&nbsp;</span> -->
                     </div>
         
                     <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->

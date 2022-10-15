@@ -1,0 +1,509 @@
+[
+    {
+        "id": 0,
+        "original": "The wounds inflicted by a club are generally known as bludgeoning or blunt-force trauma injuries.",
+        "original_spans": [],
+        "simplified": "The wounds by a club are generally known as bludgeoning or blunt-force trauma injuries.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 1,
+        "original": "The wounds inflicted by a club are generally known as bludgeoning or blunt-force trauma injuries.",
+        "original_spans": [],
+        "simplified": "Wounds caused by a club are known as bludgeoning or blunt-force trauma injuries.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 2,
+        "original": "The wounds inflicted by a club are generally known as bludgeoning or blunt-force trauma injuries.",
+        "original_spans": [],
+        "simplified": "The wounds caused by a club are known as bludgeoning or blunt-force trauma.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 3,
+        "original": "The wounds inflicted by a club are generally known as bludgeoning or blunt-force trauma injuries.",
+        "original_spans": [],
+        "simplified": "The wounds caused by a club are known as \" bludgeoning \" or \" blunt-force trauma \".",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 4,
+        "original": "The wounds inflicted by a club are generally known as bludgeoning or blunt-force trauma injuries.",
+        "original_spans": [],
+        "simplified": "Wounds from a club are usually called bludgeoning or blunt-force trauma injuries.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 5,
+        "original": "Tajikistan, Turkmenistan and Uzbekistan border Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "original_spans": [],
+        "simplified": "Tajikistan , turkmenistan and uzbekistan border afghanistan to the north, iran to the west, pakistan to the south and china to the east.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 6,
+        "original": "Tajikistan, Turkmenistan and Uzbekistan border Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "original_spans": [],
+        "simplified": "Tajikistan, Turkmenistan and Uzbekistan are next to Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 7,
+        "original": "Tajikistan, Turkmenistan and Uzbekistan border Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "original_spans": [],
+        "simplified": "Afghanistan is to the north, Iran is to the west, Pakistan is to the south, and the People's Republic of China is to the east of Pakistan.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 8,
+        "original": "Tajikistan, Turkmenistan and Uzbekistan border Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "original_spans": [],
+        "simplified": "Tajikistan, Turkmenistan and Uzbekistan are north of Afghanistan, Iran is west, Pakistan is south and People's Republic of China is east.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 9,
+        "original": "Tajikistan, Turkmenistan and Uzbekistan border Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "original_spans": [],
+        "simplified": "Tajikistan, Turkmenistan and Uzbekistan border Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 10,
+        "original": "Seventy-five defencemen are in the Hall of Fame, more than any other current position, while only 35 goaltenders have been inducted.",
+        "original_spans": [],
+        "simplified": "75 defencemen and 35 goaltenders are in the Hall of Fame.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 11,
+        "original": "Seventy-five defencemen are in the Hall of Fame, more than any other current position, while only 35 goaltenders have been inducted.",
+        "original_spans": [],
+        "simplified": "Seventy-five defencemen are in the hall of fame , while only 35 goaltenders have been inducted.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 12,
+        "original": "Seventy-five defencemen are in the Hall of Fame, more than any other current position, while only 35 goaltenders have been inducted.",
+        "original_spans": [],
+        "simplified": "Seventy-five defencemen are in the Hall of Fame, but only 35 goaltenders.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 13,
+        "original": "Seventy-five defencemen are in the Hall of Fame, more than any other current position, while only 35 goaltenders have been inducted.",
+        "original_spans": [],
+        "simplified": "Seventy-five defencemen are in the Hall of Fame while only 35 goaltenders have been inducted.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 14,
+        "original": "Seventy-five defencemen are in the Hall of Fame, more than any other current position, while only 35 goaltenders have been inducted.",
+        "original_spans": [],
+        "simplified": "Seventy-five defencemen are in the Hall of Fame. || This is more than any other current player, and only 35 goaltenders have been added.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 15,
+        "original": "There he had one daughter, later baptized as Mary Ann Fisher Power, to Ann (e) Power.",
+        "original_spans": [],
+        "simplified": "There he had one daughter, mary ann fisher power , to ann power.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 16,
+        "original": "There he had one daughter, later baptized as Mary Ann Fisher Power, to Ann (e) Power.",
+        "original_spans": [],
+        "simplified": "He had one daughter with Anne Power named Mary Ann Fisher Power.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 17,
+        "original": "There he had one daughter, later baptized as Mary Ann Fisher Power, to Ann (e) Power.",
+        "original_spans": [],
+        "simplified": "He had one daughter with Ann (e) Power.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 18,
+        "original": "There he had one daughter, later baptized as Mary Ann Fisher Power, to Ann (e) Power.",
+        "original_spans": [],
+        "simplified": "There he had a daughter, Mary Ann Fisher Power. || She was born to Ann (e) Power.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 19,
+        "original": "There he had one daughter, later baptized as Mary Ann Fisher Power, to Ann (e) Power.",
+        "original_spans": [],
+        "simplified": "There he had one daughter. || She was later baptized as Mary Ann Fisher Power. || She went by the name Ann(e) Power.",
+        "simplified_spans": [
+            [
+                2,
+                27,
+                29,
+                0
+            ],
+            [
+                2,
+                79,
+                81,
+                1
+            ]
+        ],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 20,
+        "original": "The New York City Housing Authority Police Department was a law enforcement agency in New York City that existed from 1952 to 1995.",
+        "original_spans": [],
+        "simplified": "The New York City Housing Authority Police Department was in New York City from 1952 to 1995.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 21,
+        "original": "The New York City Housing Authority Police Department was a law enforcement agency in New York City that existed from 1952 to 1995.",
+        "original_spans": [],
+        "simplified": "The New York City Housing Authority Police Department existed from 1952 to 1995.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 22,
+        "original": "The New York City Housing Authority Police Department was a law enforcement agency in New York City that existed from 1952 to 1995.",
+        "original_spans": [],
+        "simplified": "The New York City Housing Authority Police Department was a police department in New York City, New York, United States.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 23,
+        "original": "The New York City Housing Authority Police Department was a law enforcement agency in New York City that existed from 1952 to 1995.",
+        "original_spans": [],
+        "simplified": "The new york city housing authority police department was a law enforcement agency that was created in 1952 and 1995.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 24,
+        "original": "The New York City Housing Authority Police Department was a law enforcement agency in New York City that existed from 1952 to 1995.",
+        "original_spans": [],
+        "simplified": "The New York City Housing Authority Police Department was a law enforcement agency in New York City that existed from 1952 to 1995.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 25,
+        "original": "This was demonstrated in the Miller-Urey experiment by Stanley L. Miller and Harold C. Urey in 1953.",
+        "original_spans": [],
+        "simplified": "This was demonstrated in the Miller-Urey experiment in 1953.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 26,
+        "original": "This was demonstrated in the Miller-Urey experiment by Stanley L. Miller and Harold C. Urey in 1953.",
+        "original_spans": [],
+        "simplified": "This was shown in the Miller-Urey experiment in 1953.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 27,
+        "original": "This was demonstrated in the Miller-Urey experiment by Stanley L. Miller and Harold C. Urey in 1953.",
+        "original_spans": [],
+        "simplified": "This was shown in the Miller-Urey experiment in 1953 by Stanley L. Miller and Harold C. Urey.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 28,
+        "original": "This was demonstrated in the Miller-Urey experiment by Stanley L. Miller and Harold C. Urey in 1953.",
+        "original_spans": [],
+        "simplified": "This was first shown in the miller-urey experiment in 1953 by stanley l. miller and harold c. urey.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 29,
+        "original": "This was demonstrated in the Miller-Urey experiment by Stanley L. Miller and Harold C. Urey in 1953.",
+        "original_spans": [],
+        "simplified": "In 1953, Stanley L. Miller and Harold C. Urey demonstrated this in the Miller-Urey experiment.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 30,
+        "original": "Fives is a British sport believed to derive from the same origins as many racquet sports.",
+        "original_spans": [],
+        "simplified": "Fives is a British racquet sport.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 31,
+        "original": "Fives is a British sport believed to derive from the same origins as many racquet sports.",
+        "original_spans": [],
+        "simplified": "Fives is a British sport developed from the same origins as many racquet sports.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 32,
+        "original": "Fives is a British sport believed to derive from the same origins as many racquet sports.",
+        "original_spans": [],
+        "simplified": "Fives is a british sport believed to be derived from racquet sports.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 33,
+        "original": "Fives is a British sport believed to derive from the same origins as many racquet sports.",
+        "original_spans": [],
+        "simplified": "Fives are a British sport believed to derive from the same origins as many racquet sports.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 34,
+        "original": "Fives is a British sport believed to derive from the same origins as many racquet sports.",
+        "original_spans": [],
+        "simplified": "Fives is a British sport. || Many people think it has the same origins as many racquet sports.",
+        "simplified_spans": [
+            [
+                2,
+                26,
+                28,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 35,
+        "original": "The body color varies from medium brown to gold-ish to beige-white; and occasionally, is marked with dark brown spots, especially on the limbs.",
+        "original_spans": [],
+        "simplified": "The body color varies from medium-brown to gold-ish to beige-white; and occasionally, is marked with dark brown spots, especially on the limbs.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 36,
+        "original": "The body color varies from medium brown to gold-ish to beige-white; and occasionally, is marked with dark brown spots, especially on the limbs.",
+        "original_spans": [],
+        "simplified": "The color of their body varies from medium brown to gold-ish to beige-white. || Sometimes they have dark brown spots, especially on their legs.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 37,
+        "original": "The body color varies from medium brown to gold-ish to beige-white; and occasionally, is marked with dark brown spots, especially on the limbs.",
+        "original_spans": [],
+        "simplified": "The body color varies from medium brown to gold/beige/white. || There are sometimes dark brown spots, especially on the limbs.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ]
+        ],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 38,
+        "original": "The body color varies from medium brown to gold-ish to beige-white; and occasionally, is marked with dark brown spots, especially on the limbs.",
+        "original_spans": [],
+        "simplified": "The body colour is found to vary. || It varies from medium brown to goldish and to beige-white. || Sometimes it is marked with dark brown spots. || it happens especially on the limbs.",
+        "simplified_spans": [
+            [
+                2,
+                34,
+                36,
+                0
+            ],
+            [
+                2,
+                96,
+                98,
+                1
+            ],
+            [
+                2,
+                145,
+                147,
+                2
+            ]
+        ],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 39,
+        "original": "The body color varies from medium brown to gold-ish to beige-white; and occasionally, is marked with dark brown spots, especially on the limbs.",
+        "original_spans": [],
+        "simplified": "The body can have different colors. || It can change from medium brown to white. || Sometimes it has dark brown spots.",
+        "simplified_spans": [
+            [
+                2,
+                36,
+                38,
+                0
+            ],
+            [
+                2,
+                81,
+                83,
+                1
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 40,
+        "original": "In return, Rollo swore fealty to Charles, converted to Christianity, and undertook to defend the northern region of France against the incursions of other Viking groups.",
+        "original_spans": [],
+        "simplified": "Rollo promised to serve Charles, became a Christian and agreed to defend northern France against Vikings.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 41,
+        "original": "In return, Rollo swore fealty to Charles, converted to Christianity, and undertook to defend the northern region of France against the incursions of other Viking groups.",
+        "original_spans": [],
+        "simplified": "In return, rollo swore fealty to charles , converted to christianity , and began to defend the northern region of france against the incursions of other viking groups.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 42,
+        "original": "In return, Rollo swore fealty to Charles, converted to Christianity, and undertook to defend the northern region of France against the incursions of other Viking groups.",
+        "original_spans": [],
+        "simplified": "In return, Rollo pledged faithfulness to Charles, became a Christian, and took steps to defend the northern region of France against any other  Viking groups.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 43,
+        "original": "In return, Rollo swore fealty to Charles, converted to Christianity, and undertook to defend the northern region of France against the incursions of other Viking groups.",
+        "original_spans": [],
+        "simplified": "In return, Rollo swore loyalty to Charles and converted to Christianity. || He also said he would defend the northern part of France against other Viking groups.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 44,
+        "original": "In return, Rollo swore fealty to Charles, converted to Christianity, and undertook to defend the northern region of France against the incursions of other Viking groups.",
+        "original_spans": [],
+        "simplified": "Rollo bowed to Charles. || He converted to Christianity. || He defended the northern area of France from Vikings.",
+        "simplified_spans": [
+            [
+                2,
+                24,
+                26,
+                0
+            ],
+            [
+                2,
+                57,
+                59,
+                1
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 45,
+        "original": "Val Venis defeated Rikishi in a Steel cage match to retain the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after Tazz hit Rikishi with a TV camera.",
+        "original_spans": [],
+        "simplified": "Val venis beat rikishi in a steel cage match to retain the wwf intercontinental championship after tazz hit rikishi with a tv camera.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 46,
+        "original": "Val Venis defeated Rikishi in a Steel cage match to retain the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after Tazz hit Rikishi with a TV camera.",
+        "original_spans": [],
+        "simplified": "Val Venis defeated Rikishi in a Steel cage match; he pinned Rikishi after he was hit by a camera.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 47,
+        "original": "Val Venis defeated Rikishi in a Steel cage match to retain the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after Tazz hit Rikishi with a TV camera.",
+        "original_spans": [],
+        "simplified": "Val Venis beat Rikishi in a Steel cage match to keep the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after Tazz hit Rikishi with a TV camera.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 48,
+        "original": "Val Venis defeated Rikishi in a Steel cage match to retain the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after Tazz hit Rikishi with a TV camera.",
+        "original_spans": [],
+        "simplified": "Val Venis defeated Rikishi in a Steel cage match to retain the WWF Intercontinental Championship (14:10) and Venis pinned Rikishi after Tazz hit Rikishi with a TV camera",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 49,
+        "original": "Val Venis defeated Rikishi in a Steel cage match to retain the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after Tazz hit Rikishi with a TV camera.",
+        "original_spans": [],
+        "simplified": "Val Venis pinned Rikish to retain the WWF Intercontinental Championship in a steel cage match. || Rikishi was hit with a TV camera by Tazz.",
+        "simplified_spans": [
+            [
+                2,
+                95,
+                97,
+                0
+            ]
+        ],
+        "system": "systems/asset.test.simp"
+    }
+]
