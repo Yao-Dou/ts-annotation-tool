@@ -529,7 +529,8 @@ const Quiz = Vue.component('quiz', {
   mounted: function() {
     let ourId = this.$props.id;
     $('a#' + ourId).hover( function() {
-      $('img#' + ourId).css("display","inherit")
+      // show
+      $('img#' + ourId).show();
     }, function() {
       $('img#' + ourId).css("display","none")
     })
