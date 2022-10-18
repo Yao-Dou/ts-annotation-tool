@@ -1008,16 +1008,16 @@ const app = Vue.createApp({
                         }
                     } else if (key == 'insertion') {
                         if (annotation[0] == "elaboration") {
-                            annotation_text += `<span class="light-orange ba bw1 pa1">good substitution with elaboration</span>`;
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good insertion with elaboration</span>`;
                             annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[1]}</span>`;
                             if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (annotation[0] == "hallucination") {
                             if (annotation[1] == "no") {
-                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>irrelevant</i> hallucination</span>`;
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with <i>irrelevant</i> hallucination</span>`;
                             } else {
-                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>relevant</i> hallucination</span>`;
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with <i>relevant</i> hallucination</span>`;
                             }
                             annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
                             if (annotation[3] == "yes") {
@@ -1025,22 +1025,22 @@ const app = Vue.createApp({
                             }
                         } else if (annotation[0] == "trivial") {
                             if (annotation[1] == "no") {
-                                annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary substitution with trivial change</span>`;
+                                annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary insertion with trivial change</span>`;
                             } else {
-                                annotation_text += `<span class="light-orange ba bw1 pa1">good substitution with trivial change</span>`;
+                                annotation_text += `<span class="light-orange ba bw1 pa1">good insertion with trivial change</span>`;
                                 annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
                             }
                             if (annotation[3] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (annotation[0] == "repetition") {
-                            annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with repetition</span>`;
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with repetition</span>`;
                             annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
                             if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (annotation[0] == "contradiction") {
-                            annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with contradiction</span>`;
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with contradiction</span>`;
                             annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
                             if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
