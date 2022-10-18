@@ -1165,22 +1165,23 @@
                 </example-sent>
                 <example-sent
                     noedits=true
-                    explanation="You may also re-order words within a phrase">
-                    <template #complex-sent>Because of his marked propensity toward <ur>procrastination and sloth</ur><so>1</so>, the old man was <ur>sympathetic and apathetic</ur><so>2</so>.</template>
-                    <template #simple-sent>Because of his marked propensity toward <ur>sloth and procrastination</ur><so>1</so>, the old man was <ur>apathetic and sympathetic</ur><so>2</so>.</template>
+                    explanation="You may also re-order words within a phrase or sentence. Notice: you only need to mark one of word that's being reordered because we know a reorder edit
+                                always include two spans. So in this example, you will ignore 'and' and mark 'procrastination' instead of 'procrastination and sloth'.">
+                    <template #complex-sent>Because of his marked propensity toward <ur>procrastination</ur><so>1</so> and sloth, the old man was <ur>sympathetic</ur><so>2</so> and apathetic.</template>
+                    <template #simple-sent>Because of his marked propensity toward sloth and <ur>procrastination</ur><so>1</so>, the old man was apathetic and <ur>sympathetic</ur><so>2</so>.</template>
                 </example-sent>
 
                 <h2>Rating by Severity</h2>
                 <p>Re-order edits do not modify the information in the sentence. Therefore, we only rate for how the edit <b>adds clarity</b>. Similar to a paraphrase (i.e. a substitution which adds no new information), we rate whether the edit is helpful and its efficacy/severity. </p>
 
                 <example-sent>
-                    <template #complex-sent><div style="line-height: 35px">The emergence of huge, dominant radio conglomerates like <ur>Clear Channel and Infinity</ur><so>1</so> <ur o>is a direct consequence of <ur>the '96 Act</ur><so>3</so></ur><so>2</so>.</div></template>
-                    <template #simple-sent><div style="line-height: 35px"><ur o><ur>The '96 Act</ur><so>3</so> had a direct consequence of</ur><so>2</so> the emergence of huge, dominant radio conglomerates like <ur>Infinity and Clear Channel</ur><so>1</so>.</div></template>
+                    <template #complex-sent><div style="line-height: 35px">The emergence of huge, dominant radio conglomerates like <ur>Clear Channel</ur><so>1</so> and Infinity <ur o>is a direct consequence of <ur>the '96 Act</ur><so>3</so></ur><so>2</so>.</div></template>
+                    <template #simple-sent><div style="line-height: 35px"><ur o><ur>The '96 Act</ur><so>3</so> had a direct consequence of</ur><so>2</so> the emergence of huge, dominant radio conglomerates like Infinity and <ur>Clear Channel</ur><so>1</so>.</div></template>
                     <template #edit>
                         <edit
                             type="reorder"
-                            span="Clear Channel and Infinity"
-                            span2="Infinity and Clear Channel"
+                            span="Clear Channel"
+                            span2="Clear Channel"
                             reorder="phrase"
                             impact="none"
                             explanation="The order of the two names 'Clear Channel and Infinity' is inconsequential to understanding the sentence."

@@ -202,8 +202,8 @@ const Edit = Vue.component('edit', {
           </p>
 
           <div class="tc">
-            <answer-box :isAnswer="this.reorder=='sentence'" :type=type>word-level</answer-box>
-            <answer-box :isAnswer="this.reorder=='phrase'" :type=type>component-level</answer-box>
+            <answer-box :isAnswer="this.reorder=='phrase'" :type=type>word-level</answer-box>
+            <answer-box :isAnswer="this.reorder=='sentence'" :type=type>component-level</answer-box>
           </div>
         </template>
 
