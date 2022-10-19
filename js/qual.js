@@ -83,6 +83,15 @@ const EditHeader = Vue.component('edit-header', {
         <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;<slot name="span"></slot>&nbsp;</span>
         <span class="edit-type txt-split f3">)</span>
       </template>
+      <template v-if="this.type == 'split' && this.split_edit=='insertion2'">
+      <span class="edit-type txt-split f3">split </span>
+      <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
+      <span class="edit-type txt-split f3">( insert </span>
+      <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;<slot name="span"></slot>&nbsp;</span>
+      <span class="edit-type txt-split f3"> , insert </span>
+      <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;But they&nbsp;</span>
+      <span class="edit-type txt-split f3">)</span>
+    </template>
       <template v-if="this.type == 'split' && this.split_edit=='substitution'">
         <span class="edit-type txt-split f3">split </span>
         <span class="pa1 edit-text br-pill-ns border-split-all split_below txt-split">&nbsp;||&nbsp;</span>
@@ -202,8 +211,8 @@ const Edit = Vue.component('edit', {
           </p>
 
           <div class="tc">
-            <answer-box :isAnswer="this.reorder=='sentence'" :type=type>word-level</answer-box>
-            <answer-box :isAnswer="this.reorder=='phrase'" :type=type>component-level</answer-box>
+            <answer-box :isAnswer="this.reorder=='phrase'" :type=type>word-level</answer-box>
+            <answer-box :isAnswer="this.reorder=='sentence'" :type=type>component-level</answer-box>
           </div>
         </template>
 
@@ -529,7 +538,8 @@ const Quiz = Vue.component('quiz', {
   mounted: function() {
     let ourId = this.$props.id;
     $('a#' + ourId).hover( function() {
-      $('img#' + ourId).css("display","inherit")
+      // show
+      $('img#' + ourId).show();
     }, function() {
       $('img#' + ourId).css("display","none")
     })

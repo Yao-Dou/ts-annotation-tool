@@ -139,10 +139,12 @@ iframe {
     padding-bottom: 16px;
 }
 img.span_selection_quiz_answer {
-    position: absolute;
     display: none;
-    margin-top: 16px;
-    margin-left: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 650px;
     border-radius: 0.5rem;
     border-color: rgba(0,0,0,.8);
     border-style: solid;
