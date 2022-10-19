@@ -11,6 +11,16 @@ mapping = {
     'structure': 5
 }
 
+# Maps edit id to hex color
+color_mapping = {
+    'deletion': '#ee2a2a',
+    'substitution': '#2186eb',
+    'insertion': '#64C466',
+    'split': '#F7CE46',
+    'reorder': '#3ca3a7',
+    'structure': '#FF9F15'
+}
+
 # Specify metadata for an empty span
 empty_span = {
     'span': None,
@@ -97,6 +107,30 @@ error_type_mapping = {
 reorder_mapping = {
     'word': ReorderLevel.WORD,
     'component': ReorderLevel.COMPONENT
+}
+
+# Maps system codes to names
+system_name_mapping = {
+    'new_systems/asset.test.simp.second': 'ASSET',
+    'new_systems/simple_wiki.txt': 'Simp Wiki',
+    'new_systems/turk_corpus_random.txt': 'Turk Corpus',
+    'systems/Dress-Ls.lower': 'DRESS',
+    'systems/Hybrid.lower': 'Hybrid',
+    'systems/T5.txt': 'T5',
+    'systems/lstm_w_split.txt': 'LSTM Split',
+    'systems/transformer_w_split.txt': 'BERT Split'
+}
+
+ # Maps error codes to names
+error_name_mapping = {
+    Error.COREFERENCE: 'Coreference',
+    Error.INFORMATION_REWRITE: 'Information Rewrite',
+    Error.REPETITION: 'Repetition',
+    Error.CONTRADICTION: 'Contradiction',
+    Error.HALLUCINATION: 'Hallucination',
+    Error.IRRELEVANT: 'Irrelevant',
+    Error.UNNECESSARY_INSERTION: 'Unnecessary Insertion',
+    Error.COMPLEX_WORDING: 'Complex Wording'
 }
 
 # Given a set of spans, returns all spans of a given type
