@@ -227,8 +227,12 @@ def consolidate_edits(data):
 def process_del_info(raw_annotation):
     # ex. ['perfect', 'no', 'no']
     rating, error_type = None, None
-
     rating, coreference, grammar_error = raw_annotation
+    
+    # Sometimes the interface glitches and you can't answer this question
+    if grammar_error == '':
+        grammar_error = 'no'
+
     rating, coreference, grammar_error = quality_mapping[rating], error_mapping[coreference], error_mapping[grammar_error]
     
     if coreference:
