@@ -1,32 +1,6 @@
 import copy
 from enum import Enum
 
-# Maps the edit id to the edit
-mapping = {
-    'deletion': 0,
-    'substitution': 1,
-    'insertion': 3,
-    'split': 2,
-    'reorder': 4,
-    'structure': 5
-}
-
-# Maps edit id to hex color
-color_mapping = {
-    'deletion': '#ee2a2a',
-    'substitution': '#2186eb',
-    'insertion': '#64C466',
-    'split': '#F7CE46',
-    'reorder': '#3ca3a7',
-    'structure': '#FF9F15'
-}
-
-# Specify metadata for an empty span
-empty_span = {
-    'span': None,
-    'span_length': None
-}
-
 # Enums declaring annotation types
 class Information(Enum):
     LESS = 1
@@ -52,6 +26,39 @@ class Quality(Enum):
 class ReorderLevel(Enum):
     WORD = 1
     COMPONENT = 2
+
+# Maps the edit id to the edit
+mapping = {
+    'deletion': 0,
+    'substitution': 1,
+    'insertion': 3,
+    'split': 2,
+    'reorder': 4,
+    'structure': 5
+}
+
+# Maps edit id to hex color
+color_mapping = {
+    'deletion': '#ee2a2a',
+    'substitution': '#2186eb',
+    'insertion': '#64C466',
+    'split': '#F7CE46',
+    'reorder': '#3ca3a7',
+    'structure': '#FF9F15'
+}
+
+information_change_color_mapping = {
+    Information.MORE: '#64C466',
+    Information.SAME: '#2186eb',
+    Information.LESS: '#ee2a2a',
+    Information.DIFFERENT: '#b103fc'
+}
+
+# Specify metadata for an empty span
+empty_span = {
+    'span': None,
+    'span_length': None
+}
     
 # Maps raw annotation outputs to enums or numbers
 quality_mapping = {
@@ -111,14 +118,16 @@ reorder_mapping = {
 
 # Maps system codes to names
 system_name_mapping = {
-    'new_systems/asset.test.simp.second': 'ASSET',
+    'new_systems/asset.test.simp.second': 'ASSET 2',
+    'systems/asset.test.simp': 'ASSET 1',
     'new_systems/simple_wiki.txt': 'Simp Wiki',
     'new_systems/turk_corpus_random.txt': 'Turk Corpus',
     'systems/Dress-Ls.lower': 'DRESS',
     'systems/Hybrid.lower': 'Hybrid',
     'systems/T5.txt': 'T5',
     'systems/lstm_w_split.txt': 'LSTM Split',
-    'systems/transformer_w_split.txt': 'BERT Split'
+    'systems/transformer_w_split.txt': 'BERT Split',
+    'systems/con_simplification.txt': 'Controllable',
 }
 
  # Maps error codes to names
@@ -133,6 +142,34 @@ error_name_mapping = {
     Error.COMPLEX_WORDING: 'Complex Wording'
 }
 
+# Utility class for creating edit type trees
+class Node:
+    def __init__(self, amount, label, id):
+        self.children = []
+        self.amount = amount
+        self.label = label
+        self.id = id
+
+    def add_child(self, child):
+        self.children.append(child)
+
+    def get_children(self):
+        return self.children
+
+    def __str__(self):
+        return str([self.label, self.amount, [str(x) for x in self.children]])
+
+# Counts some slice of data
+def count_data(data, edit_type=None, information_impact=None, quality_type=None):
+    annotations = [i for j in [x['processed_annotations'] for x in data] for i in j]
+    if edit_type != None:
+        annotations = [x for x in annotations if x['edit_type'] == edit_type]
+    if information_impact != None:
+        annotations = [x for x in annotations if x['information_impact'] == information_impact]
+    if quality_type != None:
+        annotations = [x for x in annotations if x['type'] == quality_type]
+    return len(annotations)
+
 # Given a set of spans, returns all spans of a given type
 def get_spans_by_type(spans, type_):
     return [x for x in spans if x[0] == mapping[type_]]
@@ -143,26 +180,67 @@ def count_edits(sent):
     for type_ in mapping.keys():
         count = max([x[3] for x in get_spans_by_type(sent['original_spans'], type_)] + [x[3] for x in get_spans_by_type(sent['simplified_spans'], type_)] + [0])
         out[type_] = count
+
+    for count in out:
+        if count == None:
+            raise Exception(sent)
+    
     return out
 
-# Gets sum of all edits
-def sum_edits(data):
+def count_info_change(sent):
+    out = {}
+    for type_ in Information:
+        out[type_] = sum([1 for ann in sent['processed_annotations'] if ann['information_impact'] == type_])
+    return out
+
+# Gets sum of all edits, optionally filtered by system
+def sum_edits(data, system=None):
+    if system is not None:
+        data = get_sentences_for_system(data, system)
+    
+    # Initialize mapping array
     out = {}
     for type_ in mapping.keys():
         out[type_] = 0
+
     for sent in data:
         num_edits = count_edits(sent)
         for type_ in num_edits.keys():
             out[type_] += num_edits[type_]
     return out
 
+# Get sum of all information change types
+def sum_info_change(data, system=None):
+    if system is not None:
+        data = get_sentences_for_system(data, system)
+
+    out = {}
+    for type_ in Information:
+        out[type_] = 0
+    for sent in data:
+        num_edits = count_info_change(sent)
+        for type_ in num_edits.keys():
+            out[type_] += num_edits[type_]
+    return out
+
+# Gets sum of errors
+def sum_errors(data, system=None):
+    if system is not None:
+        data = get_sentences_for_system(data, system)
+
+    ann = [i for j in [sent['processed_annotations'] for sent in data] for i in j]
+    errors = [a for a in ann if a['type'] == Quality.ERROR]
+    
+    # Initialize mapping array
+    out = {}
+    for type_ in Error:
+        errors_by_type = [e for e in errors if e['error_type'] == type_]
+        out[type_] = len(errors_by_type)
+    return out
+
 # Returns sentences for system
 def get_sentences_for_system(data, system):
     return [x for x in data if x['system'] == system]
-
-# Returns total number of edits for a given system
-def sum_edits_for_system(data, system):
-    return sum_edits(get_sentences_for_system(data, system))
 
 # Creates basic metadata about each span
 def get_span_metadata(spans):
@@ -277,6 +355,12 @@ def process_same_info(annotation):
     # ex. (structure) ['positive', '', 'a lot', 'no'], ['positive', '', 'somewhat', 'yes']
     edit_quality, pos_rating, neg_rating, grammar_error = annotation
 
+    # delete this, just added to make things work
+    if grammar_error == '':
+        print(f"Couldn't process grammar for annotation: {annotation}")
+        grammar_error = 'no'
+        pos_rating = 'somewhat'
+
     edit_quality, grammar_error = impact_mapping[edit_quality], error_mapping[grammar_error]
     error_type = None
     if edit_quality == Quality.QUALITY:
@@ -305,6 +389,9 @@ def process_annotation(edit):
     type_ = edit['type']
     raw_annotation = edit['annotation']
 
+    if raw_annotation == '':
+        raise Exception(edit)
+
     information_impact = Information.SAME
     
     # Classify edit types into their information change
@@ -316,8 +403,8 @@ def process_annotation(edit):
         information_impact = information_mapping[raw_annotation[0]]
         raw_annotation = raw_annotation[1:]
     elif (type_ == 'reorder'):
-        # need to incorporate reorder level into annotation somehow
-        reorder_level = reorder_mapping[raw_annotation[-1]]
+        # TODO: need to incorporate reorder level into annotation somehow
+        reorder_level = reorder_mapping[raw_annotation[-1]] if raw_annotation[-1] != '' else None
         raw_annotation = raw_annotation[:-1]
         swap_same_sub_fix(raw_annotation)
     elif (type_ == 'structure' or type_ == 'split'):
