@@ -1,0 +1,176 @@
+[
+    {
+        "id": 0,
+        "original": "In 1438 Trevi passed under the temporal rule of the Church as part of the legation of Perugia, and thenceforth its history merges first with that of the States of the Church, then (1860) with the united Kingdom of Italy.",
+        "original_spans": [],
+        "simplified": "In 1438 Trevi passed under the temporal rule of the Church as part of the legation of Perugia, and then its history comes together with that of the States of the Church, and then (1860) with the Kingdom of Italy.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 1,
+        "original": "In 1438 Trevi passed under the temporal rule of the Church as part of the legation of Perugia, and thenceforth its history merges first with that of the States of the Church, then (1860) with the united Kingdom of Italy.",
+        "original_spans": [],
+        "simplified": "In 1438 trevi passed under the temporal rule of the church as part of the legation of perugia , and then it merges with states of the church , then ( 1860 ) with the united kingdom of italy.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 2,
+        "original": "In 1438 Trevi passed under the temporal rule of the Church as part of the legation of Perugia, and thenceforth its history merges first with that of the States of the Church, then (1860) with the united Kingdom of Italy.",
+        "original_spans": [],
+        "simplified": "Trevi passed under the Church's rule in 1483 due to the legation of Perugia and since then its history has merged with the States of the Church and the United Kingdom of Italy.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 3,
+        "original": "In 1438 Trevi passed under the temporal rule of the Church as part of the legation of Perugia, and thenceforth its history merges first with that of the States of the Church, then (1860) with the united Kingdom of Italy.",
+        "original_spans": [],
+        "simplified": "In 1438 Trevi passed under the materialistic rule of the Church as part of the authority of Perugia, and so its history combines first with that of the States of the Church, then (1860) with the united Kingdom of Italy.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 4,
+        "original": "In 1438 Trevi passed under the temporal rule of the Church as part of the legation of Perugia, and thenceforth its history merges first with that of the States of the Church, then (1860) with the united Kingdom of Italy.",
+        "original_spans": [],
+        "simplified": "In 1438 the Church took control of Trevi. || From that point on, Trevi's history merges with the history of the States of the Church, and then the united Kingdom of Italy.",
+        "simplified_spans": [
+            [
+                2,
+                42,
+                44,
+                0
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 5,
+        "original": "Prior to the arrival of the storm, the National Park Service closed visitor centers and campgrounds along the Outer Banks.",
+        "original_spans": [],
+        "simplified": "Before the storm arrived, the National Park Service closed the visior centers and campgrounds.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 6,
+        "original": "Prior to the arrival of the storm, the National Park Service closed visitor centers and campgrounds along the Outer Banks.",
+        "original_spans": [],
+        "simplified": "Before the storm came into the area, the National Park Service closed many places for people to visit along the Outer Banks.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 7,
+        "original": "Prior to the arrival of the storm, the National Park Service closed visitor centers and campgrounds along the Outer Banks.",
+        "original_spans": [],
+        "simplified": "Before the storm arrived , the national park service closed visitor centers and campgrounds along the outer banks.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 8,
+        "original": "Prior to the arrival of the storm, the National Park Service closed visitor centers and campgrounds along the Outer Banks.",
+        "original_spans": [],
+        "simplified": "Before the storm arrived the National Park Service closed visitor centers and campgrounds along the Outer Banks.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 9,
+        "original": "Prior to the arrival of the storm, the National Park Service closed visitor centers and campgrounds along the Outer Banks.",
+        "original_spans": [],
+        "simplified": "Before the storm came, the National Parks Service closed the visitor centers and the places where people were camping along the Outer Banks.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 10,
+        "original": "After the Sena dynasty, Dhaka was successively ruled by the Turkish and Afghan governors descending from the Delhi Sultanate before the arrival of the Mughals in 1608.",
+        "original_spans": [],
+        "simplified": "After the sena dynasty, dhaka was successively ruled by the turkish and afghan governors from the delhi sultanate before the arrival of the mughals in 1608.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 11,
+        "original": "After the Sena dynasty, Dhaka was successively ruled by the Turkish and Afghan governors descending from the Delhi Sultanate before the arrival of the Mughals in 1608.",
+        "original_spans": [],
+        "simplified": "Following the Sena dynasty and before the arrival of the Mughals in 1608, Dhaka was ruled by the Turkish and Afghan governors from the Dehli Sultanate.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 12,
+        "original": "After the Sena dynasty, Dhaka was successively ruled by the Turkish and Afghan governors descending from the Delhi Sultanate before the arrival of the Mughals in 1608.",
+        "original_spans": [],
+        "simplified": "After the Sena leaders, Dhaka was ruled by Turkish and Afghan leaders from the Delhi Sultanate before the Mughals arrived in 1608.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 13,
+        "original": "After the Sena dynasty, Dhaka was successively ruled by the Turkish and Afghan governors descending from the Delhi Sultanate before the arrival of the Mughals in 1608.",
+        "original_spans": [],
+        "simplified": "Between the arrival of the Mughals in 1608 and the rule of the Sena dynasty, Dhaka was successively ruled by the Turkish and Afghan governors descending from the Delhi Sultanate.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 14,
+        "original": "After the Sena dynasty, Dhaka was successively ruled by the Turkish and Afghan governors descending from the Delhi Sultanate before the arrival of the Mughals in 1608.",
+        "original_spans": [],
+        "simplified": "After the Sena dynasty, Dhaka was ruled by the Turkish and Afghan governors who came from the Delhi Sultanate. || This was before the Mughals came to Dhaka in 1608.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 15,
+        "original": "Her notorious friendship with the Russian mystic Grigori Rasputin was also an important factor in her life.",
+        "original_spans": [],
+        "simplified": "Her friendship with russian mystic grigori rasputin was also an important factor in her life.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 16,
+        "original": "Her notorious friendship with the Russian mystic Grigori Rasputin was also an important factor in her life.",
+        "original_spans": [],
+        "simplified": "Her friendship with Grigori Rasputin was important.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 17,
+        "original": "Her notorious friendship with the Russian mystic Grigori Rasputin was also an important factor in her life.",
+        "original_spans": [],
+        "simplified": "Her friendship with the Russian mystic Grigori Rasputin was also an important part of her life.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 18,
+        "original": "Her notorious friendship with the Russian mystic Grigori Rasputin was also an important factor in her life.",
+        "original_spans": [],
+        "simplified": "Her infamous friendship with Russian mystic Grigori Rasputin was important in her life.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 19,
+        "original": "Her notorious friendship with the Russian mystic Grigori Rasputin was also an important factor in her life.",
+        "original_spans": [],
+        "simplified": "Her well-known and poorly thought of friendship with the Russian mystic, Grigori Rasputin, was also an important part of her life.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    }
+]

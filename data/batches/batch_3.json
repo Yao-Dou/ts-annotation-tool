@@ -1,0 +1,195 @@
+[
+    {
+        "id": 0,
+        "original": "The sheer weight of the continental icecap sitting on top of Lake Vostok is believed to contribute to the high oxygen concentration.",
+        "original_spans": [],
+        "simplified": "The weight of the continental icecap on Lake Vostok is thought to contribute to the high oxygen concentration.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 1,
+        "original": "The sheer weight of the continental icecap sitting on top of Lake Vostok is believed to contribute to the high oxygen concentration.",
+        "original_spans": [],
+        "simplified": "The sheer weight of the continental icecap is believed to contribute to the high oxygen concentration.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 2,
+        "original": "The sheer weight of the continental icecap sitting on top of Lake Vostok is believed to contribute to the high oxygen concentration.",
+        "original_spans": [],
+        "simplified": "The weight of the continental icecap sitting on top of Lake Vostok is thought to be a reason for the high amount of oxygen.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 3,
+        "original": "The sheer weight of the continental icecap sitting on top of Lake Vostok is believed to contribute to the high oxygen concentration.",
+        "original_spans": [],
+        "simplified": "The total weight of the continental icecap sitting on top of Lake Vostok is thought to contribute to the high oxygen concentration.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 4,
+        "original": "The sheer weight of the continental icecap sitting on top of Lake Vostok is believed to contribute to the high oxygen concentration.",
+        "original_spans": [],
+        "simplified": "Just the weight of the continental ice cap sitting on top of Lake Vostok is believed to contribute to the high oxygen level.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 5,
+        "original": "Terms such as \"undies\" for underwear and \"movie\" for \"moving picture\" are oft-heard terms in English.",
+        "original_spans": [],
+        "simplified": "\"undies\" for underwear and \"movie\" for motion picture are English slang words.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 6,
+        "original": "Terms such as \"undies\" for underwear and \"movie\" for \"moving picture\" are oft-heard terms in English.",
+        "original_spans": [],
+        "simplified": "Words like  \"undies\" for underwear and \"movie\" for \"moving picture\" are often used in English.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 7,
+        "original": "Terms such as \"undies\" for underwear and \"movie\" for \"moving picture\" are oft-heard terms in English.",
+        "original_spans": [],
+        "simplified": "Terms such as \"undies\" for underwear and \"movie\" for \"moving picture\" are often used.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 8,
+        "original": "Terms such as \"undies\" for underwear and \"movie\" for \"moving picture\" are oft-heard terms in English.",
+        "original_spans": [],
+        "simplified": "The term \"undies\" for underwear and movie\" for \"moving picture\" are oft-heard in english.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 9,
+        "original": "Terms such as \"undies\" for underwear and \"movie\" for \"moving picture\" are oft-heard terms in English.",
+        "original_spans": [],
+        "simplified": "The word undies for underwear an movie for moving picture are words heard a lot in English.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 10,
+        "original": "The spacecraft consists of two main elements: the NASA Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the ESA Huygens probe, named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "original_spans": [],
+        "simplified": "The spacecraft hasof two main elements: the NASA Cassini orbiter and the ESA Huygens probe.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 11,
+        "original": "The spacecraft consists of two main elements: the NASA Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the ESA Huygens probe, named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "original_spans": [],
+        "simplified": "The spacecraft has two main elements: the nasa cassini orbiter, named after the italian-french astronomer giovanni domenico cassini , and the esa huygens probe, named after dutch astronomer christiaan huygens.",
+        "simplified_spans": [],
+        "system": "systems/con_simplification.txt"
+    },
+    {
+        "id": 12,
+        "original": "The spacecraft consists of two main elements: the NASA Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the ESA Huygens probe, named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "original_spans": [],
+        "simplified": "The spacecraft is made of two main elements: the NASA Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the ESA Huygens probe, named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 13,
+        "original": "The spacecraft consists of two main elements: the NASA Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the ESA Huygens probe, named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "original_spans": [],
+        "simplified": "The ESA Huygens Probe Is Named After The Dutch astronomer and mathematician Christiaan Huygens. || The NASA Cassini orbiter is named after the Italian-French astronomer Giovanni Domenico Cassini. || The ESA Huygens probe is named after the Dutch astronomer.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ],
+            [
+                2,
+                196,
+                198,
+                1
+            ]
+        ],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 14,
+        "original": "The spacecraft consists of two main elements: the NASA Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the ESA Huygens probe, named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "original_spans": [],
+        "simplified": "The spacecraft has two main parts: the NASA Cassini orbiter and the ESA Huygens probe. || The orbiter is named after the Italian-French astronomer Giovanni Domenico Cassini. || The probe is named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ],
+            [
+                2,
+                174,
+                176,
+                1
+            ]
+        ],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 15,
+        "original": "Barneville-la-Bertran is a commune in the Calvados department in the Basse-Normandie region in northwestern France.",
+        "original_spans": [],
+        "simplified": "Barneville-la-Bertran is a commune in the Basse-Normandie region in northwestern France.",
+        "simplified_spans": [],
+        "system": "new_systems/turk_corpus_random.txt"
+    },
+    {
+        "id": 16,
+        "original": "Barneville-la-Bertran is a commune in the Calvados department in the Basse-Normandie region in northwestern France.",
+        "original_spans": [],
+        "simplified": "Barneville-la-Bertran is a community in the Calvados department in Basse-Normandie region located in northwestern France.",
+        "simplified_spans": [],
+        "system": "systems/asset.test.simp"
+    },
+    {
+        "id": 17,
+        "original": "Barneville-la-Bertran is a commune in the Calvados department in the Basse-Normandie region in northwestern France.",
+        "original_spans": [],
+        "simplified": "It is found in the region Basse-Normandie in the Calvados department in the northwest of France.",
+        "simplified_spans": [],
+        "system": "systems/T5.txt"
+    },
+    {
+        "id": 18,
+        "original": "Barneville-la-Bertran is a commune in the Calvados department in the Basse-Normandie region in northwestern France.",
+        "original_spans": [],
+        "simplified": "Barneville la Bertran is a commune in northwestern France in the Basse Normandie regions.",
+        "simplified_spans": [],
+        "system": "new_systems/asset.test.simp.second"
+    },
+    {
+        "id": 19,
+        "original": "Barneville-la-Bertran is a commune in the Calvados department in the Basse-Normandie region in northwestern France.",
+        "original_spans": [],
+        "simplified": "Barneville-la-bertran is a commune. || it is found in the basse-normandie region in the basse-normandie region in northwest france.",
+        "simplified_spans": [
+            [
+                2,
+                36,
+                38,
+                0
+            ]
+        ],
+        "system": "systems/con_simplification.txt"
+    }
+]
