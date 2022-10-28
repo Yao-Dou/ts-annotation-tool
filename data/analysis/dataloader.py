@@ -158,6 +158,7 @@ def process_add_info(raw_annotation):
     if (annotation_type == 'elaboration'):
         edit_quality = Quality.QUALITY
         rating, grammar_error = raw_annotation[1:]
+        rating = simplification_quality_mapping[rating]
     elif (annotation_type == 'trivial'):
         helpful, rating, grammar_error = raw_annotation[1:]
         if helpful == 'yes':
@@ -225,6 +226,34 @@ def calculate_edit_length(original_span, simplified_span):
         simp_len = simplified_span[1] - simplified_span[0]
     return abs(simp_len - orig_len)
 
+def calculate_annotation_score(annotation):
+    edit_score = 0
+    
+    if annotation['rating'] != None and annotation['rating'] != '':
+        # Deletion rating should be reversed
+        rating = annotation['rating']
+        # if annotation['edit_type'] == 'deletion':
+        #     rating = 3 - rating
+        rating -= 2
+        edit_score = rating
+    else:
+        edit_score = 0
+
+    if annotation['type'] == Quality.ERROR:
+        edit_score = abs(edit_score) * -1
+
+    if annotation['grammar_error'] == True:
+        edit_score = abs(edit_score) * -1
+    return edit_score * annotation['size']
+
+def calculate_sentence_score(sent):
+    # Calculate the score of each annotation
+    for annotation in sent['processed_annotations']:
+        annotation['score'] = calculate_annotation_score(annotation)
+    
+    # Simply sum the scores for each annotation
+    return sum(annotation['score'] for annotation in sent['processed_annotations'])
+
 def process_annotation(edit):
     edit_type = edit['type']
     raw_annotation = edit['annotation']
@@ -290,4 +319,7 @@ def consolidate_annotations(data):
         # Create a new entry for the 'length-normalized' size of the edit
         for i in range(len(sent['processed_annotations'])):
             sent['processed_annotations'][i]['size'] /= len(sent['original'])
+
+        # Create new entry for total sentence score
+        sent['score'] = calculate_sentence_score(sent)
     return out
