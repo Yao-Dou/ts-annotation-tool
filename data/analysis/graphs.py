@@ -83,10 +83,10 @@ def edit_type_by_system(data, flipped=True):
         fig, ax = plt.subplots(figsize=(8, 4))
         bottom = [0 for x in range(len(system_labels))]
         for edit_type in edit_type_labels:
-                val = [sum_edit_types[label][edit_type] for label in system_labels]
-                displayed_x_labels = [system_name_mapping[label] for label in system_labels]
-                ax.bar(displayed_x_labels, val, width, bottom=bottom, label=edit_type, color=color_mapping[edit_type])
-                bottom = [bottom[i] + val[i] for i in range(len(val))]
+            val = [sum_edit_types[label][edit_type] for label in system_labels]
+            displayed_x_labels = [system_name_mapping[label] for label in system_labels]
+            ax.bar(displayed_x_labels, val, width, bottom=bottom, label=edit_type, color=color_mapping[edit_type])
+            bottom = [bottom[i] + val[i] for i in range(len(val))]
         ax.set_xlabel('System')
         ax.set_title('Edit Types by System')
         ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
