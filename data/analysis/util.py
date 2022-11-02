@@ -122,4 +122,78 @@ def get_sentences_for_system(data, system):
 def get_comments(data):
     for entry in data:
         if 'comment' in entry.keys():
-            print(f"{entry['user'].upper()} - HIT {str(entry['id']+1)}: {entry['comment']}")
+            print(f"{entry['user'].upper()} - HIT {str(entry['id']+1)}: {entry['comment']}\n")
+
+# Returns the average of a list
+def avg(lst):
+    if len(lst) == 0:
+        return 0
+    return round(sum(lst) / len(lst), 2)
+
+def best_performing(data):
+    # Print highest scoring sentences
+    print("Highest Scoring:")
+    sents = sorted(data, key=lambda x: x['score'], reverse=True)[:5]
+    for sent in sents:
+        print(f"{sent['user']} - Batch {sent['batch']}, HIT {sent['hit_id']+1} (ID {sent['id']}) - {str(sent['score'])}")
+    highest = sents
+
+    # Print lowest scoring sentences
+    print("\nLowest scoring:")
+    sents = sorted(data, key=lambda x: x['score'])[:5]
+    for sent in sents:
+        print(f"{sent['user']} - Batch {sent['batch']}, HIT {sent['hit_id']+1} (ID {sent['id']}) - {str(sent['score'])}")
+    lowest = sents
+    return highest, lowest
+
+# A lot of the '0's are sentences with a single, trivial substitution
+def is_single_substitution(sent):
+    return len(sent['processed_annotations']) == 1 and sent['processed_annotations'][0]['edit_type'] == 'substitution' and sent['processed_annotations'][0]['type'] == Quality.TRIVIAL
+
+def zero_scoring_sents(data):
+    sents = [sent for sent in data if sent['score'] == 0 and len(sent['edits']) != 0 and not is_single_substitution(sent)][:5]
+    for sent in sents:
+        print(f"{sent['user']} - Batch {sent['batch']}, HIT {sent['hit_id']+1} (ID {sent['id']})")
+    return sents
+
+
+# Converts the sentence to a dictionary of (start, end) -> {}
+def generate_token_dict(sent):
+    counter = 0
+    tokens = {}
+    for word in sent.split(' '):
+        tokens[(counter, counter + len(word))] = {}
+        counter = counter + len(word) + 1
+    return tokens
+
+# Converts sentence to dictionary of (start, end) -> {edit_type: #}
+def get_annotations_per_token(sents, sent_type):
+    edit_dict_value = sent_type + '_span'
+    tokens = generate_token_dict(sents[0][sent_type])
+    
+    # Iterate through all annotators' edits
+    for sent in sents:
+        for edit in sent['edits']:
+            if edit[edit_dict_value] is None:
+                continue
+
+            elongated_span = edit[edit_dict_value]
+            composite_spans = [(entry[0] + elongated_span[0], entry[1] + elongated_span[0]) for entry in list(generate_token_dict(sents[0][sent_type][elongated_span[0]:elongated_span[1]]).keys())]
+
+            for c_span in composite_spans:
+                if c_span in tokens.keys():
+                    if edit['type'] not in tokens[c_span].keys():
+                        tokens[c_span][edit['type']] = 0
+                    tokens[c_span][edit['type']] += 1
+                elif c_span is None:
+                    pass
+                else:
+                    print("there's a problem boss")
+    
+    # Remove spans with no annotations from any annotator
+    keys = list(tokens.keys())
+    for entry in keys:
+        if len(tokens[entry].keys()) == 0:
+            del tokens[entry]
+    return tokens
+    

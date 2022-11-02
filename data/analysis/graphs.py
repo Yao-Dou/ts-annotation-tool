@@ -5,6 +5,10 @@ from names import *
 from util import *
 from dataloader import quality_mapping
 
+# Temporary for getting rid of errors
+import warnings
+warnings.filterwarnings("ignore")
+
 # Maps edit id to hex color
 color_mapping = {
     'deletion': '#ee2a2a',
@@ -17,7 +21,13 @@ color_mapping = {
     Information.MORE: '#64C466',
     Information.SAME: '#2186eb',
     Information.LESS: '#ee2a2a',
-    Information.DIFFERENT: '#b103fc'
+    Information.DIFFERENT: '#b103fc',
+
+    'new_systems/asset.test.simp.second': 'orange',
+    'new_systems/turk_corpus_random.txt': 'blue',
+    'systems/T5.txt': 'red',
+    'systems/asset.test.simp': 'green',
+    'systems/con_simplification.txt': 'purple'
 }
 
 # Maps system codes to names
@@ -71,8 +81,12 @@ all_system_labels = [x for x in [
     'systems/asset.test.simp',
     'new_systems/asset.test.simp.second'
 ] if x in systems]
-width = 0.5
 
+# MatPlotLib parameters
+width = 0.5
+plt.rcParams["figure.figsize"] = [7.5, 4]
+plt.rcParams["figure.autolayout"] = True
+plt.rcParams["figure.max_open_warning"] = False
 
 def edit_type_by_system(data, flipped=True):
     # Create sums of different dimensions
@@ -348,3 +362,59 @@ def sankey_combined(data):
     fig.update_layout(title_text="Edit Type Distribution", font_size=11, width=700, height=500)
     fig.show()
     
+def draw_agreement(sents):
+    annotator = list(set([x['user'] for x in sents]))
+    sent_spans = [len(sents[0]['original']) for i in sents]
+
+    fig, ax = plt.subplots(2)
+    for axis_num, sent_type in enumerate(['original_span', 'simplified_span']):
+        b1 = ax[axis_num].barh(annotator, sent_spans, color="blue", alpha=0.2)
+
+        for edit_type in edit_type_labels:
+            entry = []
+            for edit_number in range(max([len([x for x in sent['edits'] if x['type'] == edit_type]) for sent in sents])):
+                e = []
+                for i in range(len(sents)):
+                    edits = [x for x in sents[i]['edits'] if x['type'] == edit_type]
+                    if edit_number < len(edits) and edits[edit_number][sent_type] is not None:
+                        e.append(edits[edit_number][sent_type])
+                    else:
+                        e.append((0, 0))
+                entry.append(e)
+            
+            for e in entry:
+                b2 = ax[axis_num].barh(annotator, [x[1]-x[0] for x in e], left=[x[0] for x in e], color=color_mapping[edit_type], alpha=0.5)
+
+        ax[axis_num].set_xticks([])
+
+        ax[axis_num].spines['bottom'].set_visible(False)
+        ax[axis_num].spines['top'].set_visible(False)
+        ax[axis_num].spines['left'].set_visible(False)
+        ax[axis_num].spines['right'].set_visible(False)
+    
+    # plt.legend([b1, b2], ["None", "Deletion", "Substitution"], title="Edit Type", loc="upper right")
+    fig.suptitle(f'Batch {sents[0]["batch"]} | HIT {sents[0]["hit_id"]+1}')
+
+    fig.show()
+
+def avg_span_size(annotations):
+    span_size = [avg([x['size'] for x in annotations if x['edit_type'] == edit_type]) for edit_type in edit_type_labels]
+    fig, ax = plt.subplots(figsize=(6, 4))
+    ax.bar(edit_type_labels, span_size, width, color=[color_mapping[label] for label in edit_type_labels])
+    ax.set_xlabel('System')
+    ax.set_title('Average Edit Span Size')
+    plt.show()
+
+def score_distribution(data):
+    annotations = sorted([x for y in [sent['processed_annotations'] for sent in data] for x in y], key=lambda x: x['score'])
+
+    # Print distribution of edit scores
+    n_bins = 100
+    fig, axs = plt.subplots(1, 2, tight_layout=True)
+    axs[0].hist([x['score'] for x in annotations], bins=n_bins)
+    axs[0].set_title("Distribution of Edit Scores")
+
+    # Print distribution of sentence scores
+    axs[1].hist([x['score'] for x in data], bins=n_bins)
+    axs[1].set_title("Distribution of Sentence Scores")
+    fig.show()

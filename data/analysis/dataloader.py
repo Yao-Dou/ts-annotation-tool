@@ -1,5 +1,7 @@
 import copy
 import math
+import os
+import json
 from util import *
 from types import *
 
@@ -139,9 +141,11 @@ def process_del_info(raw_annotation):
     rating, error_type = None, None
     rating, coreference, grammar_error = raw_annotation
     
-    # Sometimes the interface glitches and you can't answer this question
+    # Sometimes the interface glitches and you can't answer these questions
     if grammar_error == '':
         grammar_error = 'no'
+    if coreference == '':
+        coreference = 'no'
 
     rating, grammar_error, coreference = quality_mapping[rating], error_mapping[coreference], error_mapping[grammar_error]
     
@@ -228,22 +232,48 @@ def calculate_edit_length(original_span, simplified_span):
 
 def calculate_annotation_score(annotation):
     edit_score = 0
+
+    # Elaboration is always "good"
+    rating_mapping_simplification = {
+        0: 1,
+        1: 2,
+        2: 3
+    }
+
+    # Severity for deletions only
+    rating_mapping = {
+        0: -3,
+        1: -1,
+        2: 1,
+        3: 3
+    }
+
+    # Unnecessary insertions have no severity...
+    if annotation['error_type'] == Error.UNNECESSARY_INSERTION:
+        # Assigning it to a 'somewhat' severity error
+        edit_score = 2
+
+    # Should a trivial structural change have severity?
     
     if annotation['rating'] != None and annotation['rating'] != '':
-        # Deletion rating should be reversed
-        rating = annotation['rating']
-        # if annotation['edit_type'] == 'deletion':
-        #     rating = 3 - rating
-        rating -= 2
+        if annotation['type'] == Quality.ERROR:
+            rating = annotation['rating'] + 1
+        elif annotation['information_impact'] == Information.LESS:
+            rating = rating_mapping[annotation['rating']]
+        elif annotation['information_impact'] == Information.MORE or annotation['information_impact'] == Information.SAME:
+            rating = rating_mapping_simplification[annotation['rating']]
+        else:
+            # fix
+            rating = rating_mapping[annotation['rating']]
         edit_score = rating
     else:
         edit_score = 0
 
     if annotation['type'] == Quality.ERROR:
-        edit_score = abs(edit_score) * -1
+        edit_score = abs(edit_score) * -2
 
     if annotation['grammar_error'] == True:
-        edit_score = abs(edit_score) * -1
+        edit_score = abs(edit_score) * -1.5
     return edit_score * annotation['size']
 
 def calculate_sentence_score(sent):
@@ -319,7 +349,33 @@ def consolidate_annotations(data):
         # Create a new entry for the 'length-normalized' size of the edit
         for i in range(len(sent['processed_annotations'])):
             sent['processed_annotations'][i]['size'] /= len(sent['original'])
+    return out
 
-        # Create new entry for total sentence score
+def calculate_sentence_scores(data):
+    out = copy.deepcopy(data)
+    for sent in out:
         sent['score'] = calculate_sentence_score(sent)
+    return out
+
+def add_simpeval_scores(data):
+    # Add SimpEval scores to data ('simpeval_scores' field)
+    out = copy.deepcopy(data)
+    simpeval = []
+    files = [i for j in [[f'../simpeval/{x}/{y}' for y in os.listdir('../simpeval/'+x)] for x in os.listdir('../simpeval/')] for i in j]
+    for filename in files:
+        with open(filename) as f:
+            individual_annotation = json.load(f)
+            simpeval += individual_annotation
+    for i in range(len(out)):
+        sent = out[i]
+        system = sent['system']
+        simpeval_sents = [entry for entry in simpeval if entry['Original'] == sent['original']]
+        final = []
+        for entry in simpeval_sents:
+            for sentence_type in ['Deletions', 'Paraphrases', 'Splittings']:
+                for entry_sent in entry[sentence_type]:
+                    if entry_sent[2] == system:
+                        final.append({'sentence_type': sentence_type.lower(), 'score': entry_sent[0], 'spans': entry_sent[3:]})
+        scores = [x['score'] for x in final]
+        out[i]['simpeval_scores'] = scores
     return out
