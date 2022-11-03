@@ -4,6 +4,7 @@ import numpy as np
 from names import *
 from util import *
 from dataloader import quality_mapping
+from scipy.stats import kendalltau
 
 # Temporary for getting rid of errors
 import warnings
@@ -418,3 +419,23 @@ def score_distribution(data):
     axs[1].hist([x['score'] for x in data], bins=n_bins)
     axs[1].set_title("Distribution of Sentence Scores")
     fig.show()
+
+def simpeval_agreement(data, average=True):
+    if (average):
+        scores = [(int(sum(sent['simpeval_scores'])/5), sent['score']) for sent in data]
+    else:
+        # Simply takes the first annotator of 5
+        scores = []
+        for sent in data:
+            if len(sent['simpeval_scores']) != 0:
+                scores.append((int(sent['simpeval_scores'][0]), sent['score']))
+            else:
+                scores.append((0, sent['score']))
+    pts = [p for p in scores if p[0] != 0]
+    kt = kendalltau([p[0] for p in pts], [p[1] for p in pts])
+    plt.scatter([p[0] for p in pts], [p[1] for p in pts], c ="red", alpha=0.2)
+    plt.xlabel('Average SimpEval score')
+    plt.ylabel('Our score')
+    plt.figtext(.1, .8, f"corr = {kt.correlation:.2f} | p = {kt.pvalue:.2f}")
+    plt.title(f'SimpEval Correlation ({len(pts)} sentences)')
+    plt.show()

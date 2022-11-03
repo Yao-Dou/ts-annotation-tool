@@ -150,12 +150,16 @@ def best_performing(data):
 def is_single_substitution(sent):
     return len(sent['processed_annotations']) == 1 and sent['processed_annotations'][0]['edit_type'] == 'substitution' and sent['processed_annotations'][0]['type'] == Quality.TRIVIAL
 
+# Get sentences which scored a 0
 def zero_scoring_sents(data):
     sents = [sent for sent in data if sent['score'] == 0 and len(sent['edits']) != 0 and not is_single_substitution(sent)][:5]
     for sent in sents:
-        print(f"{sent['user']} - Batch {sent['batch']}, HIT {sent['hit_id']+1} (ID {sent['id']})")
+        print(get_sent_info(sent))
     return sents
 
+# Print information about a sentence's annotator, batch, HIT
+def get_sent_info(sent):
+    return f"{sent['user']} - Batch {sent['batch']}, HIT {sent['hit_id']+1} (ID {sent['id']})"
 
 # Converts the sentence to a dictionary of (start, end) -> {}
 def generate_token_dict(sent):

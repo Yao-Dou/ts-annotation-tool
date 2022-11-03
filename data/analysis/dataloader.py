@@ -2,6 +2,7 @@ import copy
 import math
 import os
 import json
+import csv
 from util import *
 from types import *
 
@@ -230,60 +231,6 @@ def calculate_edit_length(original_span, simplified_span):
         simp_len = simplified_span[1] - simplified_span[0]
     return abs(simp_len - orig_len)
 
-def calculate_annotation_score(annotation):
-    edit_score = 0
-
-    # Elaboration is always "good"
-    rating_mapping_simplification = {
-        0: 1,
-        1: 2,
-        2: 3
-    }
-
-    # Severity for deletions only
-    rating_mapping = {
-        0: -3,
-        1: -1,
-        2: 1,
-        3: 3
-    }
-
-    # Unnecessary insertions have no severity...
-    if annotation['error_type'] == Error.UNNECESSARY_INSERTION:
-        # Assigning it to a 'somewhat' severity error
-        edit_score = 2
-
-    # Should a trivial structural change have severity?
-    
-    if annotation['rating'] != None and annotation['rating'] != '':
-        if annotation['type'] == Quality.ERROR:
-            rating = annotation['rating'] + 1
-        elif annotation['information_impact'] == Information.LESS:
-            rating = rating_mapping[annotation['rating']]
-        elif annotation['information_impact'] == Information.MORE or annotation['information_impact'] == Information.SAME:
-            rating = rating_mapping_simplification[annotation['rating']]
-        else:
-            # fix
-            rating = rating_mapping[annotation['rating']]
-        edit_score = rating
-    else:
-        edit_score = 0
-
-    if annotation['type'] == Quality.ERROR:
-        edit_score = abs(edit_score) * -2
-
-    if annotation['grammar_error'] == True:
-        edit_score = abs(edit_score) * -1.5
-    return edit_score * annotation['size']
-
-def calculate_sentence_score(sent):
-    # Calculate the score of each annotation
-    for annotation in sent['processed_annotations']:
-        annotation['score'] = calculate_annotation_score(annotation)
-    
-    # Simply sum the scores for each annotation
-    return sum(annotation['score'] for annotation in sent['processed_annotations'])
-
 def process_annotation(edit):
     edit_type = edit['type']
     raw_annotation = edit['annotation']
@@ -351,13 +298,7 @@ def consolidate_annotations(data):
             sent['processed_annotations'][i]['size'] /= len(sent['original'])
     return out
 
-def calculate_sentence_scores(data):
-    out = copy.deepcopy(data)
-    for sent in out:
-        sent['score'] = calculate_sentence_score(sent)
-    return out
-
-def add_simpeval_scores(data):
+def add_simpeval_scores_json(data):
     # Add SimpEval scores to data ('simpeval_scores' field)
     out = copy.deepcopy(data)
     simpeval = []
@@ -377,5 +318,23 @@ def add_simpeval_scores(data):
                     if entry_sent[2] == system:
                         final.append({'sentence_type': sentence_type.lower(), 'score': entry_sent[0], 'spans': entry_sent[3:]})
         scores = [x['score'] for x in final]
+        out[i]['simpeval_scores'] = scores
+    return out
+    
+def add_simpeval_scores(data, json=False):
+    # JSON will get the scores from the original simpeval files
+    if (json):
+        return add_simpeval_scores_json(data)
+
+    with open('../simp_eval/21_systems_annotations.csv') as f:
+        reader = csv.reader(f)
+        next(reader)
+        simeval_sents = [row[2:13] for row in reader]
+
+    out = copy.deepcopy(data)
+    for i in range(len(out)):
+        sent = out[i]
+        scores = [entry for entry in simeval_sents if entry[0] == sent['original'] and entry[2] == sent['system']][0][7:]
+        scores = [float(x) for x in scores]
         out[i]['simpeval_scores'] = scores
     return out
