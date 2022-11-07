@@ -1,0 +1,149 @@
+[
+    {
+        "id": 0,
+        "original": "The wounds inflicted by a club are generally known as bludgeoning or blunt-force trauma injuries.",
+        "original_spans": [],
+        "simplified": "The injuries caused by a club are called bludgeoning or blunt force trauma injuries.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 1,
+        "original": "Tajikistan, Turkmenistan and Uzbekistan border Afghanistan to the north, Iran to the west, Pakistan to the south and the People's Republic of China to the east.",
+        "original_spans": [],
+        "simplified": "The countries that border Tajikistan are Afghanistan to the north, Pakistan to the south, Iran to the west, and China to the east.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 2,
+        "original": "Seventy-five defencemen are in the Hall of Fame, more than any other current position, while only 35 goaltenders have been inducted.",
+        "original_spans": [],
+        "simplified": "Seventy-five defencemen are in the Hockey Hall of Fame. || Only 35 goaltenders have been added to the Hall of Fame.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 3,
+        "original": "There he had one daughter, later baptized as Mary Ann Fisher Power, to Ann (e) Power.",
+        "original_spans": [],
+        "simplified": "His wife was Ann (e) Power. || His daughter was named Mary Ann Fisher Power.",
+        "simplified_spans": [
+            [
+                2,
+                28,
+                30,
+                0
+            ]
+        ],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 4,
+        "original": "The New York City Housing Authority Police Department was a law enforcement agency in New York City that existed from 1952 to 1995.",
+        "original_spans": [],
+        "simplified": "The New York City Housing Authority Police Department was a police department in New York City that was started in 1952.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 5,
+        "original": "This was demonstrated in the Miller-Urey experiment by Stanley L. Miller and Harold C. Urey in 1953.",
+        "original_spans": [],
+        "simplified": "This was shown to be true by Stanley L. Miller and Harold C. Urey in 1953.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 6,
+        "original": "Fives is a British sport believed to derive from the same origins as many racquet sports.",
+        "original_spans": [],
+        "simplified": "Fives is a British sport. || It has the same origin as many other racquet sports.",
+        "simplified_spans": [
+            [
+                2,
+                26,
+                28,
+                0
+            ]
+        ],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 7,
+        "original": "The body color varies from medium brown to gold-ish to beige-white; and occasionally, is marked with dark brown spots, especially on the limbs.",
+        "original_spans": [],
+        "simplified": "The color of their body varies from medium brown to gold-ish to beige-white. || Sometimes, they have dark brown spots on their body.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 8,
+        "original": "In return, Rollo swore fealty to Charles, converted to Christianity, and undertook to defend the northern region of France against the incursions of other Viking groups.",
+        "original_spans": [],
+        "simplified": "In return, Rollo swore fealty to Charles and converted to Christianity. || He also promised to defend the northern part of France from other Viking groups.",
+        "simplified_spans": [
+            [
+                2,
+                72,
+                74,
+                0
+            ]
+        ],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 9,
+        "original": "Val Venis defeated Rikishi in a Steel cage match to retain the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after Tazz hit Rikishi with a TV camera.",
+        "original_spans": [],
+        "simplified": "Val Venis won against Rikishi to keep the WWF Intercontinental Championship (14:10) Venis pinned Rikishi after hitting him with a TV camera.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 20,
+        "original": "The sheer weight of the continental icecap sitting on top of Lake Vostok is believed to contribute to the high oxygen concentration.",
+        "original_spans": [],
+        "simplified": "The sheer weight of the continental icecap sitting on top of Lake Vostok makes it easy for oxygen to get into the lake.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 21,
+        "original": "Terms such as \"undies\" for underwear and \"movie\" for \"moving picture\" are oft-heard terms in English.",
+        "original_spans": [],
+        "simplified": "For example, \"undies\" means \"underwear\" in English, and \"movie\" means \"moving picture\".",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 22,
+        "original": "The spacecraft consists of two main elements: the NASA Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the ESA Huygens probe, named after the Dutch astronomer, mathematician and physicist Christiaan Huygens.",
+        "original_spans": [],
+        "simplified": "The spacecraft consists of two main parts: the Cassini orbiter, named after the Italian-French astronomer Giovanni Domenico Cassini, and the Huygens probe, named after Christiaan Huygens, a Dutch mathematician and physicist.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    },
+    {
+        "id": 23,
+        "original": "Barneville-la-Bertran is a commune in the Calvados department in the Basse-Normandie region in northwestern France.",
+        "original_spans": [],
+        "simplified": "It is found in the region Basse-Normandie in the Calvados department in the northwest of France.",
+        "simplified_spans": [],
+        "system": "systems/muss_untokenized.txt"
+    }
+]
