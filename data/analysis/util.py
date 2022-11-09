@@ -125,10 +125,10 @@ def get_comments(data):
             print(f"{entry['user'].upper()} - HIT {str(entry['id']+1)}: {entry['comment']}\n")
 
 # Returns the average of a list
-def avg(lst):
+def avg(lst, prec=2):
     if len(lst) == 0:
         return 0
-    return round(sum(lst) / len(lst), 2)
+    return round(sum(lst) / len(lst), prec)
 
 def best_performing(data):
     # Print highest scoring sentences

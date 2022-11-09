@@ -411,7 +411,7 @@ def load_data(path, batch_num=None, preprocess=False):
     if preprocess:
         data = consolidate_edits(data)                      # Adds 'edits' field
         data = consolidate_annotations(data)                # Adds 'processed_annotations' field
-        data = add_simpeval_scores(data, json=True)         # Adds 'simpeval_scores' field
+        data = add_simpeval_scores(data)                    # Adds 'simpeval_scores' field. Can optionally not take the z-score normalized scores with "json=True"
         data = calculate_sentence_scores(data)              # Adds 'score' field
     
     return data

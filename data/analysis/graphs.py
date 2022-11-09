@@ -417,25 +417,44 @@ def avg_span_size(annotations):
     ax.set_title('Average Edit Span Size')
     plt.show()
 
-def score_distribution(data):
+def score_distribution(data, include_simpeval=False):
     annotations = sorted([x for y in [sent['processed_annotations'] for sent in data] for x in y], key=lambda x: x['score'])
 
     # Print distribution of edit scores
     n_bins = 100
-    fig, axs = plt.subplots(1, 2, tight_layout=True)
-    axs[0].hist([x['score'] for x in annotations], bins=n_bins)
-    axs[0].set_title("Distribution of Edit Scores")
 
-    # Print distribution of sentence scores
-    axs[1].hist([x['score'] for x in data], bins=n_bins)
-    axs[1].set_title("Distribution of Sentence Scores")
+    if include_simpeval:
+        fig, axs = plt.subplots(2, 2, tight_layout=True)
+        axs[0, 0].hist([x['score'] for x in annotations], bins=n_bins)
+        axs[0, 0].set_title("Distribution of Edit Scores")
+
+        # Print distribution of sentence scores
+        axs[0, 1].hist([x['score'] for x in data], bins=n_bins)
+        axs[0, 1].set_title("Distribution of Sentence Scores")
+
+        # Print distribution of simp eval scores
+        axs[1, 0].hist([i for j in [x['simpeval_scores'] for x in data] for i in j], bins=n_bins)
+        axs[1, 0].set_title("Distribution of SimpEval Scores")
+
+        # Print distribution of simp eval scores
+        axs[1, 1].hist([avg(x['simpeval_scores']) for x in data], bins=n_bins)
+        axs[1, 1].set_title("Distribution of Avg. SimpEval Scores")
+        fig.show()
+    else:
+        fig, axs = plt.subplots(1, 2, tight_layout=True)
+        axs[0].hist([x['score'] for x in annotations], bins=n_bins)
+        axs[0].set_title("Distribution of Edit Scores")
+
+        # Print distribution of sentence scores
+        axs[1].hist([x['score'] for x in data], bins=n_bins)
+        axs[1].set_title("Distribution of Sentence Scores")
     fig.show()
 
 def simpeval_agreement(data, average=True):
     if (average):
-        scores = [(int(sum(sent['simpeval_scores'])/5), sent['score']) for sent in data]
+        scores = [(avg(sent['simpeval_scores'], prec=5), sent['score']) for sent in data]
     else:
-        # Simply takes the first annotator of 5
+        # Simply takes the first annotator
         scores = []
         for sent in data:
             if len(sent['simpeval_scores']) != 0:
