@@ -118,7 +118,7 @@ def associate_spans(sent):
 
             # If the ID has no spans, skip
             if orig_span is empty_span and simp_span is empty_span:
-                break
+                continue
                 
             # Convert list of dicts to list of spans, retaining None value if necessary
             orig_span = [x['span'] for x in orig_span] if orig_span is not empty_span else None
@@ -145,11 +145,13 @@ def process_del_info(raw_annotation):
     # ex. ['perfect', 'no', 'no']
     rating, error_type = None, None
     rating, coreference, grammar_error = raw_annotation
-    
-    # Sometimes the interface glitches and you can't answer these questions
+
+    # Deal with annotators sometimes not filling out all fields
     if grammar_error == '':
+        print(f"Couldn't process grammar for deletion: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
     if coreference == '':
+        print(f"Couldn't process coreference error for deletion: {raw_annotation}. Assuming 'no'...")
         coreference = 'no'
 
     rating, grammar_error, coreference = quality_mapping[rating], error_mapping[coreference], error_mapping[grammar_error]
@@ -176,6 +178,10 @@ def process_add_info(raw_annotation):
         else:
             edit_quality = Quality.ERROR
             error_type = Error.UNNECESSARY_INSERTION
+
+            # If an annotator sets a rating, then says 'no', the rating is still there
+            # therefore, we should ignore this rating
+            rating = None
     else:
         edit_quality = Quality.ERROR
         if (annotation_type == 'hallucination'):
@@ -191,18 +197,20 @@ def process_add_info(raw_annotation):
     return edit_quality, rating, error_type, grammar_error
 
 
-def process_same_info(annotation):
+def process_same_info(raw_annotation):
     # ex. (substitution) ['positive', 'a lot', 'minor', 'no']
     # ex. (reorder) ['negative', 'a lot', '', 'no', 'word']
     # ex. (structure) ['positive', '', 'a lot', 'no'], ['positive', '', 'somewhat', 'yes']
-    edit_quality, pos_rating, neg_rating, grammar_error = annotation
+    edit_quality, pos_rating, neg_rating, grammar_error = raw_annotation
 
-    # delete this, just added to make things work
+    # Deal with annotators sometimes not filling out all fields
     if grammar_error == '':
-        print(f"Couldn't process grammar for annotation: {annotation}")
+        print(f"Couldn't process grammar for substitution: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
-        pos_rating = 'somewhat'
-
+        if pos_rating == '':
+            print(f"Couldn't process positive rating for substitution: {raw_annotation}. Assuming 'somewhat'...")
+            pos_rating = 'somewhat'
+  
     edit_quality, grammar_error = impact_mapping[edit_quality], error_mapping[grammar_error]
     error_type = None
     if edit_quality == Quality.QUALITY:
@@ -214,9 +222,9 @@ def process_same_info(annotation):
         rating = None
     return edit_quality, rating, error_type, grammar_error
 
-def process_diff_info(annotation):
+def process_diff_info(raw_annotation):
     # ['very', 'no']
-    rating, grammar_error = different_meaning_severity_mapping[annotation[0]], error_mapping[annotation[1]]
+    rating, grammar_error = different_meaning_severity_mapping[raw_annotation[0]], error_mapping[raw_annotation[1]]
     return Quality.ERROR, rating, Error.INFORMATION_REWRITE, grammar_error
 
 # So when coding the interface, substitutions follow the format:
@@ -241,8 +249,8 @@ def process_annotation(edit):
     edit_type = edit['type']
     raw_annotation = edit['annotation']
 
-    if raw_annotation == '':
-        raise Exception(edit)
+    if raw_annotation == '' or raw_annotation is None:
+        raise Exception(f'Could not process edit: {edit}')
 
     information_impact = Information.SAME
     
@@ -291,17 +299,36 @@ def process_annotation(edit):
         'size': size,
     }
 
-def process_annotations(annotations):
-    return [process_annotation(edit) for edit in annotations]
+# def process_annotations(annotations):
+#     return [process_annotation(edit) for edit in annotations]
 
 def consolidate_annotations(data):
     out = copy.deepcopy(data)
-    for sent in out:
-        sent['processed_annotations'] = process_annotations(sent['edits'])
+    idx = 0
+    while idx < len(out):
+        sent = out[idx]
+        processed = []
+        successful = True
+        for edit in sent['edits']:
+            try: 
+                processed.append(process_annotation(edit))
+            except Exception as e:
+                print(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
+                successful = False
+        
+        # Delete the sentence if we could not process the annotations for it
+        if not successful:
+            del out[idx]
+            continue
+        
+        sent['processed_annotations'] = processed
 
         # Create a new entry for the 'length-normalized' size of the edit
         for i in range(len(sent['processed_annotations'])):
             sent['processed_annotations'][i]['size'] /= len(sent['original'])
+        
+        out[idx] = sent
+        idx += 1
     return out
 
 def add_simpeval_scores_json(data):

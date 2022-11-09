@@ -113,6 +113,9 @@ def calculate_sentence_score(sent, parameters):
 def calculate_sentence_scores(data, parameters=default_params):
     out = copy.deepcopy(data)
     for sent in out:
-        sent['score'] = calculate_sentence_score(sent, parameters)
+        try:
+            sent['score'] = calculate_sentence_score(sent, parameters)
+        except Exception as e:
+            raise Exception(f'Could not process score on {sent}. Caught exception: {e}')
     return out
 
