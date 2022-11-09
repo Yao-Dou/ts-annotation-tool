@@ -1,3 +1,5 @@
+import copy
+import math
 from names import *
 
 content_errors = [
@@ -30,6 +32,18 @@ rating_mapping_error = {
     1: 4,
     2: 9,
     3: 16
+}
+
+# Default parameters for scoring
+default_params = {
+    'good_deletion': 7,
+    'good_trivial_insertion': 8,
+    'good_insertion': 2,
+    'good_paraphrase': 2,
+    'good_syntax': 6,
+    'grammar_error': -1.5,
+    'content_error': -2,
+    'size_calculation': 'log'
 }
 
 def calculate_annotation_score(annotation, parameters):
@@ -96,7 +110,7 @@ def calculate_sentence_score(sent, parameters):
     # Simply sum the scores for each annotation
     return sum(annotation['score'] for annotation in sent['processed_annotations'])
 
-def calculate_sentence_scores(data, parameters):
+def calculate_sentence_scores(data, parameters=default_params):
     out = copy.deepcopy(data)
     for sent in out:
         sent['score'] = calculate_sentence_score(sent, parameters)

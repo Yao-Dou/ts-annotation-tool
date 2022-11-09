@@ -5,6 +5,10 @@ import json
 import csv
 from util import *
 from types import *
+from scoring import *
+
+# File paths
+simp_eval_json_path = '../simp_eval/21_systems_annotations.csv'
 
 # Specify metadata for an empty span
 empty_span = {
@@ -109,10 +113,8 @@ def associate_spans(sent):
             simp_span = [x for x in simp_spans if x['id'] == i and x['type'] == type_]
 
             # If the original or simplified span is missing (i.e. addition or deletion), fill in with dummy span
-            orig_span = orig_span[0] if len(orig_span) > 0 else empty_span
-            simp_span = simp_span[0] if len(simp_span) > 0 else empty_span
-
-            # TODO: This only takes the first span. Need to support edit types which have multiple spans (splits, structure)
+            orig_span = orig_span if len(orig_span) > 0 else empty_span
+            simp_span = simp_span if len(simp_span) > 0 else empty_span
 
             # If the ID has no spans, skip
             if orig_span is empty_span and simp_span is empty_span:
@@ -124,8 +126,6 @@ def associate_spans(sent):
                 'id': i-1,
                 'original_span': orig_span['span'],
                 'simplified_span': simp_span['span'],
-                # 'original_span_length': orig_span['span_length'],
-                # 'simplified_span_length': simp_span['span_length'],
                 'annotation': annotations[i]
             }]
     return edits
@@ -326,7 +326,7 @@ def add_simpeval_scores(data, json=False):
     if (json):
         return add_simpeval_scores_json(data)
 
-    with open('../simp_eval/21_systems_annotations.csv') as f:
+    with open(simp_eval_json_path) as f:
         reader = csv.reader(f)
         next(reader)
         simeval_sents = [row[2:13] for row in reader]
@@ -338,3 +338,47 @@ def add_simpeval_scores(data, json=False):
         scores = [float(x) for x in scores]
         out[i]['simpeval_scores'] = scores
     return out
+
+def load_data(path, batch_num=None, preprocess=False):
+    data = []
+
+    if not 'annotated' in path:
+        raise Exception('Currently only supports format of \"annotated\" files.')
+
+    files = [f'{path}/{x}' for x in os.listdir(path)]
+
+    files = sorted(files)
+
+    # Only include files of a single batch
+    if (batch_num is not None):
+        files = [x for x in files if ('batch_' + str(batch_num)) in x]
+
+    # Exclude corrupted file
+    files = [x for x in files if 'batch_2_rachel' not in x]
+
+    print(f'Loading files: {files}\n')
+
+    # Add file and append user's name
+    id_counter = 0
+    batches = set([int(x.split('.')[-2].split('_')[-2]) for x in files])
+    for batch_num in batches:
+        for filename in [x for x in files if ('batch_' + str(batch_num)) in x]:
+            with open(filename) as f:
+                individual_annotation = json.load(f)
+                for entry in individual_annotation:
+                    entry['user'] = filename.split('.')[-2].split('_')[-1]
+                    entry['batch'] = batch_num
+                    entry['hit_id'] = entry['id']
+                    entry['id'] += id_counter
+                data += individual_annotation
+        id_counter += len(individual_annotation)
+
+    print(f'Found users: {set([sent["user"] for sent in data])}\n')
+
+    if preprocess:
+        data = consolidate_edits(data)                      # Adds 'edits' field
+        data = consolidate_annotations(data)                # Adds 'processed_annotations' field
+        data = add_simpeval_scores(data, json=True)         # Adds 'simpeval_scores' field
+        data = calculate_sentence_scores(data)              # Adds 'score' field
+    
+    return data
