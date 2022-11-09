@@ -181,18 +181,18 @@ def get_annotations_per_token(sents, sent_type):
             if edit[edit_dict_value] is None:
                 continue
 
-            elongated_span = edit[edit_dict_value]
-            composite_spans = [(entry[0] + elongated_span[0], entry[1] + elongated_span[0]) for entry in list(generate_token_dict(sents[0][sent_type][elongated_span[0]:elongated_span[1]]).keys())]
+            for elongated_span in edit[edit_dict_value]:
+                composite_spans = [(entry[0] + elongated_span[0], entry[1] + elongated_span[0]) for entry in list(generate_token_dict(sents[0][sent_type][elongated_span[0]:elongated_span[1]]).keys())]
 
-            for c_span in composite_spans:
-                if c_span in tokens.keys():
-                    if edit['type'] not in tokens[c_span].keys():
-                        tokens[c_span][edit['type']] = 0
-                    tokens[c_span][edit['type']] += 1
-                elif c_span is None:
-                    pass
-                else:
-                    print("there's a problem boss")
+                for c_span in composite_spans:
+                    if c_span in tokens.keys():
+                        if edit['type'] not in tokens[c_span].keys():
+                            tokens[c_span][edit['type']] = 0
+                        tokens[c_span][edit['type']] += 1
+                    elif c_span is None:
+                        pass
+                    else:
+                        print("there's a problem boss")
     
     # Remove spans with no annotations from any annotator
     keys = list(tokens.keys())

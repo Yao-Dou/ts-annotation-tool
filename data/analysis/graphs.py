@@ -364,12 +364,15 @@ def sankey_combined(data):
     fig.show()
     
 def draw_agreement(sents):
-    annotator = list(set([x['user'] for x in sents]))
-    sent_spans = [len(sents[0]['original']) for i in sents]
+    sents = sorted(sents, key=lambda x: x['user'], reverse=True)
+    annotator = sorted(list(set([x['user'] for x in sents])), reverse=True)
 
     fig, ax = plt.subplots(2)
     for axis_num, sent_type in enumerate(['original_span', 'simplified_span']):
-        b1 = ax[axis_num].barh(annotator, sent_spans, color="blue", alpha=0.2)
+        if sent_type == 'original_span':
+            b1 = ax[axis_num].barh(annotator, [len(sents[0]['original']) for i in sents], color="blue", alpha=0.2)
+        elif sent_type == 'simplified_span':
+            b1 = ax[axis_num].barh(annotator, [len(sents[0]['simplified']) for i in sents], color="blue", alpha=0.2)
 
         for edit_type in edit_type_labels:
             entry = []
@@ -380,11 +383,19 @@ def draw_agreement(sents):
                     if edit_number < len(edits) and edits[edit_number][sent_type] is not None:
                         e.append(edits[edit_number][sent_type])
                     else:
-                        e.append((0, 0))
+                        e.append([(0, 0)])
                 entry.append(e)
             
-            for e in entry:
-                b2 = ax[axis_num].barh(annotator, [x[1]-x[0] for x in e], left=[x[0] for x in e], color=color_mapping[edit_type], alpha=0.5)
+            for edit in entry:
+                for i in range(max([len(x) for x in edit])):
+                    spans = []
+                    for ann in edit:
+                        if i < len(ann):
+                            spans.append(ann[i])
+                        else:
+                            spans.append((0, 0))
+                    e = spans
+                    b2 = ax[axis_num].barh(annotator, [x[1]-x[0] for x in e], left=[x[0] for x in e], color=color_mapping[edit_type], alpha=0.5)
 
         ax[axis_num].set_xticks([])
 

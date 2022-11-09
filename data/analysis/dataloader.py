@@ -119,13 +119,17 @@ def associate_spans(sent):
             # If the ID has no spans, skip
             if orig_span is empty_span and simp_span is empty_span:
                 break
+                
+            # Convert list of dicts to list of spans, retaining None value if necessary
+            orig_span = [x['span'] for x in orig_span] if orig_span is not empty_span else None
+            simp_span = [x['span'] for x in simp_span] if simp_span is not empty_span else None
             
             # Compile spans into edit
             edits += [{
                 'type': type_,
                 'id': i-1,
-                'original_span': orig_span['span'],
-                'simplified_span': simp_span['span'],
+                'original_span': orig_span,
+                'simplified_span': simp_span,
                 'annotation': annotations[i]
             }]
     return edits
@@ -226,9 +230,11 @@ def swap_same_sub_fix(annotation):
 def calculate_edit_length(original_span, simplified_span):
     orig_len, simp_len = 0, 0
     if original_span is not None:
-        orig_len = original_span[1] - original_span[0]
+        for span in original_span:
+            orig_len = span[1] - span[0]
     if simplified_span is not None:
-        simp_len = simplified_span[1] - simplified_span[0]
+        for span in simplified_span:
+            simp_len = span[1] - span[0]
     return abs(simp_len - orig_len)
 
 def process_annotation(edit):
