@@ -192,6 +192,7 @@ def get_annotations_per_token(sents, sent_type):
                     elif c_span is None:
                         pass
                     else:
+                        print(edit)
                         print("there's a problem boss")
     
     # Remove spans with no annotations from any annotator
