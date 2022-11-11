@@ -1,0 +1,112 @@
+Here are two original text I tried (breaking lines for readability):
+
+The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building 
+from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of 
+accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.
+
+Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol 
+laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated "sobering up" 
+zones as a way to make fans feel safe and comfortable while attending the World Cup.
+
+
+Two Decoding methods that I tried: temperature = 1, top_p = 0.96; temperature = 0, top_p = 1
+
+Template / instructions that I tried:
+
+    1.Please simplify the following complex sentence.
+
+    {input}
+
+    output (top-p): The architecture of Winchester College reflects the multiple periods of building from the college's foundation in 1382 
+                    to the present day.
+
+                    Some football fans may be apprehensions about going to the World Cup in Qatar because of the alcohol laws, but World Cup 
+                    organizers have created "sobering up" zones.
+
+    output (argmax): The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of 
+                    building from the college's foundation in 1382 to present day.
+
+                    Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol 
+                    laws concerning consuming alcohol in public places, but World Cup organizers have announced the creation of designated 
+                    "sobering up" zones as a way to make fans feel safe and comfortable while attending the World Cup.
+
+
+    2.Please rewrite the following complex sentence in a simpler way.
+
+    {input}
+
+    output (top-p): Winchester College was founded in 1382 and has since undergone multiple expansions that reflect the diverse set of architectural 
+                    styles from the respective periods.
+
+                    Some football fans are worried about Qatar's alcohol laws, but organizers say there will be designated "sobering up" zones at the World Cup.
+
+    output (argmax): The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building 
+                    from the college's foundation in 1382 to present day.
+
+                    Some football fans may be concerned about Qatar's alcohol laws before going to the World Cup, but organizers have created 
+                    designated "sobering up" zones to make fans feel safe and comfortable.
+
+
+    3. Please rewrite the following complex sentence using simpler English.
+
+    {input}
+
+    output (top-p): The architecture of Winchester College includes buildings from multiple periods, such as the college's foundation in 1382, 
+                    the medieval and Early Modern periods, the Victorian era, the turn of the 20th century, and more recently.
+
+                    Some people are worried about going to the World Cup in Qatar because you are not allowed to drink alcohol in public places. 
+                    The people who are organizing the World Cup say that there will be special places where people can go to drink alcohol.
+
+    output (argmax): The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building 
+                    from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of 
+                    accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.
+
+                    Some football fans may be worried about going to the World Cup in Qatar because of the alcohol laws. 
+                    World Cup organizers have announced that there will be "sobering up" zones for people who have been drinking.
+
+
+    4. Please rewrite the following complex sentence in a simpler way. You can do so by replacing complex words with simpler synonyms 
+    (i.e. paraphrasing), deleting unimportant information (i.e. compression), and/or splitting a long complex sentence into several simpler ones.
+    
+    {input}
+
+    output (top-p): Winchester College's architecture consists of a variety of styles from different periods. The college was founded in 1382, 
+                    and since then there have been additions in the medieval and Early Modern periods, as well as a major expansion of 
+                    accommodation in the Victorian era. In the 20th century there have been further extensions.
+
+                    Apprehensions about going to the World Cup in Qatar may arise from the alcohol laws concerning consuming alcohol in public places, 
+                    but World Cup organizers have announced the creation of designated "sobering up" zones.
+
+    output (argmax): The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building 
+                    from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of 
+                    accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.
+
+                    Some football fans may be worried about going to the World Cup in Qatar because of the alcohol laws. 
+                    But World Cup organizers say there will be special "sobering up" zones for fans.
+
+    5. Please rewrite the following original sentence in order to make it easier to understand by non-native speakers of English. 
+    You can do so by replacing complex words with simpler synonyms (i.e. paraphrasing), deleting unimportant information (i.e. compression), 
+    and/or splitting a long complex sentence into several simpler ones. The final simplified sentence needs to be grammatical, fluent, and 
+    retain the main ideas of its original counterpart without altering its meaning.
+
+    {input}
+
+    output (top-p): The architecture of Winchester College is very diverse. It was founded in 1382, and since then there have been many 
+                    additions in different architectural styles from the medieval to Early Modern periods. In the Victorian era there 
+                    was a big expansion of accommodation, and then further extensions at the turn of the 20th century and more recently.
+
+                    Some people who like football may feel worried about going to the World Cup in Qatar. 
+                    This is because in Qatar, it is against the law to drink alcohol in public places. 
+                    However, the people who are organizing the World Cup say that they will make special areas where people can go to drink alcohol. 
+                    This is so that fans who are going to the World Cup will feel safe and comfortable.
+
+    output (argmax): The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of 
+                    building from the college's foundation in 1382. These styles include additions from the medieval and Early Modern periods, 
+                    to a major expansion of accommodation in the Victorian era. There have also been further extensions at the turn of the 20th 
+                    century and more recently.
+
+                    Some football fans around the world may be worried about going to the World Cup in Qatar because of the alcohol laws. 
+                    These laws say that people are not allowed to drink alcohol in public places. 
+                    But the people who are organizing the World Cup say that they will make special "sobering up" zones. 
+                    This will be a place where people can go to drink alcohol. 
+                    The organizers say that they are doing this so that fans will feel safe and comfortable while they are at the World Cup.

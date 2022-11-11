@@ -1156,6 +1156,10 @@ const app = Vue.createApp({
         cancel_click() {
             $(".icon-default").removeClass("open")
             this.refresh_edit();
+            this.process_original_html();
+            document.getElementById("original-sentence").innerHTML = this.original_html;
+            this.process_simplified_html();
+            document.getElementById("simplified-sentence").innerHTML = this.simplified_html;
         },
         save_click() {
             $(".icon-default").removeClass("open")
@@ -1798,6 +1802,7 @@ const app = Vue.createApp({
                         if (!this.$parent.enable_select_original_sentence) {
                             return
                         }
+
                         let selected_category = $("input[name=edit_cotegory]:checked").val();
                         let selection = window.getSelection();
                         if (selection.anchorNode != selection.focusNode || selection.anchorNode == null) {
@@ -1809,7 +1814,6 @@ const app = Vue.createApp({
                         let [start, end] = [range.startOffset, range.endOffset];
                         
                         if (start == end) {
-                            this.$parent.process_original_html_with_selected_span(selected_category)
                             return;
                         }
 
@@ -2098,7 +2102,6 @@ const app = Vue.createApp({
                         let [start, end] = [range.startOffset, range.endOffset];
                         
                         if (start == end) {
-                            this.$parent.process_simplified_html_with_selected_span(selected_category)
                             return;
                         }
                         // manipulate start and end to try to respect word boundaries and remove

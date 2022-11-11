@@ -24,6 +24,9 @@
 
 <body class="sans-serif">
     <div id="app" class="container w-65 mv3 mb-3 card-body">
+        <section id="helper_list" class="w-10">
+            helper
+        </section>
         <section id="response_box">
             <p @click="leave_comment" class="comment_button mv0 pa2 br-pill-ns ba bw1 grow pointer">
                 <span class="f4 mr2">Comment</span>
@@ -32,8 +35,8 @@
             <div id="comment_area_div" class="mt2 dn">
                 <textarea id="comment_area" class="comment_area br5 bw1 ba br4 ph3 pv2 mid-gray w-100" name="comment" placeholder="Your comment for this hit" @input="record_comment"></textarea>
             </div>
-
         </section>
+
         <section id="hit">
             <div class="cf mt1">
                 <div class="fl mb3 tc f3 w-20 mt1">

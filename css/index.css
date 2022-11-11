@@ -340,6 +340,12 @@
     left: 83%;
 }
 
+#helper_list {
+    position: fixed;
+    top: 72px;
+    left: 5%;
+}
+
 .w2-5 {
     width: 2.3em;
 }
