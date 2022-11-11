@@ -1157,9 +1157,19 @@ const app = Vue.createApp({
             $(".icon-default").removeClass("open")
             this.refresh_edit();
             this.process_original_html();
-            document.getElementById("original-sentence").innerHTML = this.original_html;
+            this.original_html = this.original_html + "1"
+            // remove the added "1"
+            this.original_html = this.original_html.slice(0, -1);
+            
             this.process_simplified_html();
-            document.getElementById("simplified-sentence").innerHTML = this.simplified_html;
+            this.simplified_html = this.simplified_html + "1"
+            // remove the added "1"
+            this.simplified_html = this.simplified_html.slice(0, -1);
+
+            this.process_edits_html();
+            this.edits_html = this.edits_html + "1"
+            // remove the added "1"
+            this.edits_html = this.edits_html.slice(0, -1);
         },
         save_click() {
             $(".icon-default").removeClass("open")
@@ -2158,7 +2168,7 @@ const app = Vue.createApp({
         },
         compiled_edits_html() {
             return {
-                template: `<div class="f4 lh-paras">${this.edits_html}</div>`,
+                template: `<div id="edits_html" class="f4 lh-paras">${this.edits_html}</div>`,
                 methods: {
                     hover_span(event) {
                         if ($(".quality-selection").is(":visible")) {
