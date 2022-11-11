@@ -212,7 +212,7 @@
                         <!-- disable  -->
                         <div class="buttons tc mt2">
                             <button @click="cancel_click" class="cancel-button b quality_button bw0 ba mr2 br-pill-ns grow" type="button">Cancel <i class="fa-solid fa-close"></i></button>
-                            <button @click="save_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns grow" type="button">Save <i class="fa-solid fa-check"></i></button>
+                            <button @click="save_click" class="confirm-button b quality_button bw0 ba ml2 br-pill-ns" type="button" :class="{'o-40': add_validated_edit, 'grow': !add_validated_edit}" :disabled="add_validated_edit">Save <i class="fa-solid fa-check"></i></button>
                         </div>
                     </div>
                 </div>

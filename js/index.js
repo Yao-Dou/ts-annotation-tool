@@ -17,6 +17,7 @@ const app = Vue.createApp({
             selected_span_in_simplified: '',
             selected_span_in_original_indexs: [],
             selected_span_in_simplified_indexs: [],
+            selected_add_edit_category_temp: '',
 
             // selected_edits_html is for split and structure edits
             selected_edits_html: "",
@@ -1160,7 +1161,7 @@ const app = Vue.createApp({
             this.original_html = this.original_html + "1"
             // remove the added "1"
             this.original_html = this.original_html.slice(0, -1);
-            
+
             this.process_simplified_html();
             this.simplified_html = this.simplified_html + "1"
             // remove the added "1"
@@ -1447,6 +1448,8 @@ const app = Vue.createApp({
         },
         refresh_edit() {
             this.open = false;
+            this.selected_split = ""
+            this.selected_add_edit_category_temp = "";
             this.selected_span_in_original = '',
             this.selected_span_in_simplified = '',
             this.selected_span_in_original_indexs = [],
@@ -1549,6 +1552,7 @@ const app = Vue.createApp({
             // this.process_simplified_html();
             $(`.span-selection-div`).hide(400);
             $(`.span-selection-div[data-category=${event.target.value}]`).slideDown(400);
+            this.selected_add_edit_category_temp = event.target.value;
             if (event.target.value == 'deletion') {
                 this.enable_select_original_sentence = true;
                 this.enable_select_simplified_sentence = false;
@@ -2732,6 +2736,16 @@ const app = Vue.createApp({
                 }
                 return total_num
             }
+        },
+        add_validated_edit() {
+            if (this.selected_add_edit_category_temp == 'split') {
+                if (this.selected_split == '') {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            return false
         },
         save_validated_deletion () {
             return false
