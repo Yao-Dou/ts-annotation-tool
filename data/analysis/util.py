@@ -202,3 +202,34 @@ def get_annotations_per_token(sents, sent_type):
             del tokens[entry]
     return tokens
     
+
+from sty import fg, bg, ef, rs
+
+def st(text):
+    return bg(int('FF', 16), int('9F', 16), int('15', 16)) + fg(0) + text + fg.rs + bg.rs 
+
+# Highlights a type of sentence change. TODO: coloring doesn't work
+def print_changes(sents, type_='structure'):
+    for sent in sents:
+        edits = [x for x in sent['edits'] if x['type'] == type_]
+        if len(edits) == 0:
+            continue
+
+        orig = sent['original']
+        simp = sent['simplified']
+        print(f'{get_sent_info(sent)}\n')
+        for edit in edits:
+            # A bit obnoxious, but if there are no spans in the edit, we have to convert it to an empty array
+            orig_spans = edit['original_span'] if edit['original_span'] is not None else []
+            simp_spans = edit['simplified_span'] if edit['simplified_span'] is not None else []
+
+            c = 0
+            for span in orig_spans:
+                orig = orig[:span[0]+c] + st(orig[span[0]+c:span[1]+c]) + orig[span[1]+c:]
+                c += len(st(''))
+            c = 0
+            for span in simp_spans:
+                simp = simp[:span[0]+c] + st(simp[span[0]+c:span[1]+c]) + simp[span[1]+c:]
+                c += len(st(''))
+            print(orig)
+            print(simp, end='\n\n')
