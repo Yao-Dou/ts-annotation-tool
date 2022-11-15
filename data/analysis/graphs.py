@@ -172,6 +172,7 @@ def errors_by_system(data):
         count += 1
     ax.set_ylabel('Number of errors')
     ax.set_title('Errors by System')
+    ax.plot([4.5, 4.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
     ax.legend()
     plt.xticks(x, error_labels, rotation=45, ha="right")
     plt.show()
@@ -287,8 +288,12 @@ def sankey_combined(data):
         counter += 1
 
     for rating in range(3):
-        nodes["trivial_" + str(rating)] = Node(count_data(data, quality_type=Quality.TRIVIAL, rating=rating, length_normalized=length_normalized), "trivial_" + str(rating), counter)
+        nodes["trivial_" + str(rating)] = Node(count_data(data, quality_type=Quality.TRIVIAL, rating=rating, length_normalized=length_normalized), "trivial_" + str(rating), counter)      
         counter += 1
+
+    # Substitution trivial insertions have no efficacy, include this
+    nodes["trivial_4"] = Node(count_data(data, quality_type=Quality.TRIVIAL, rating=None, length_normalized=length_normalized), "trivial_4", counter)
+    counter += 1
 
     # create edit_type -> info_change links
     for edit_type in edit_types:
@@ -319,6 +324,11 @@ def sankey_combined(data):
         amt = count_data(data, quality_type=Quality.TRIVIAL, rating=rating, length_normalized=length_normalized)
         links.append({'source': nodes[Quality.TRIVIAL].id, 'target': nodes[trivial_node_name].id, 'value': amt})
 
+    # create trivial -> trivial paraphrase links
+    trivial_node_name = "trivial_4"
+    amt = count_data(data, quality_type=Quality.TRIVIAL, rating=None, length_normalized=length_normalized)
+    links.append({'source': nodes[Quality.TRIVIAL].id, 'target': nodes[trivial_node_name].id, 'value': amt})
+
     nodes = [{'id': x.id, 'label': x.label, 'color': 'black'} for x in nodes.values()]
 
     for node in nodes:
@@ -333,34 +343,48 @@ def sankey_combined(data):
         name_mapping.update(error_name_mapping)
         name_mapping.update({quality_mapping[k]: k for k in quality_mapping})
 
+        # Teporary trivial name mapping
+        name_mapping.update({
+            "trivial_0": "0 Rating",
+            "trivial_1": "1 Rating",
+            "trivial_2": "2 Rating",
+            "trivial_4": "Trivial Paraphrase",
+        })
+
         if node['label'] in name_mapping.keys():
             node['label'] = name_mapping[node['label']]
 
     # Convert dict tree values to lists
-    labels, colors = [str(x['label']) for x in nodes], [x['color'] for x in nodes]
+    labels, colors = [str(x['label']).capitalize() for x in nodes], [x['color'] for x in nodes]
     sources, targets, values = [x['source'] for x in links], [x['target'] for x in links], [x['value'] for x in links]
 
     fig = go.Figure(data=[go.Sankey(
-        node = dict(
-        pad = 15,
-        thickness = 10,
-        line = dict(color = "black", width = 0.5),
-        label = labels,
-        color = colors
-        ),
-        link = dict(
-        source = sources, # index of source node
-        target = targets, # index of end node
-        value = values,   # amount in link
-        # label = data['link']['label'],   # label of link (not necessary)
-        # color = data['link']['color']
-        ),
-        valueformat = "d",
-        valuesuffix = " edits"
+            node = dict(
+            pad = 15,
+            thickness = 10,
+            line = dict(color = "black", width = 0.5),
+            label = labels,
+            color = colors
+            ),
+            link = dict(
+                source = sources, # index of source node
+                target = targets, # index of end node
+                value = values,   # amount in link
+                # label = data['link']['label'],   # label of link (not necessary)
+                # color = data['link']['color']
+            ),
+            valueformat = "d",
+            valuesuffix = " edits"
+        ),]   
     )
-    ])
-
-    fig.update_layout(title_text="Edit Type Distribution", font_size=11, width=700, height=500)
+    fig.update_layout(
+        title_text="", 
+        # font_family="Times New Roman",
+        font_color="black",
+        font_size=11, 
+        width=700,
+        height=500
+    )
     fig.show()
     
 def draw_agreement(sents):

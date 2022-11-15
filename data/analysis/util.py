@@ -1,3 +1,4 @@
+from sty import fg, bg, ef, rs
 from names import *
 
 # try not to use this
@@ -202,9 +203,6 @@ def get_annotations_per_token(sents, sent_type):
             del tokens[entry]
     return tokens
     
-
-from sty import fg, bg, ef, rs
-
 def st(text):
     return bg(int('FF', 16), int('9F', 16), int('15', 16)) + fg(0) + text + fg.rs + bg.rs 
 
