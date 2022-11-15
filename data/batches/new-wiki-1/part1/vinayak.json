@@ -1,0 +1,577 @@
+[
+    {
+        "id": 0,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "Winchester College\u2019s architecture includes a variety of architectural styles. || This reflects multiple periods of building from when the college was founded in 1382 way until its most recent extensions. || This includes additions made during the medieval and Early Modern periods and a major expansion of accommodation in the Victorian era.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                204,
+                206,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College has a diverse set of styles that reflects the multiple periods of building from the college's foundation in 1382. || This includes additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 3,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, to a major expansion of accommodation at the turn of the 20th century and to further extensions at the end of the 20th century, to the present day.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 4,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The buildings of Winchester College have diverse architectural styles. || They reflect multiple periods of building from the college\u2019s founding in 1382, through additions in the medieval and early modern periods. || They also show big expansions to accommodations in the Victorian era and at the beginning of the 20th century and more recently.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                213,
+                215,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 5,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published many books, including the Fantastic Fungi Community Cookbook (2021). || It has recipes by people who collect wild mushrooms, experts on mushrooms, and cooks who make mushroom dishes.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 6,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published numerous books. || Fantastic Fungi Community Cookbook (2021) has recipes by wild mushroom foragers, mycologists, and chefs who make mushroom-based dishes.",
+        "simplified_spans": [
+            [
+                2,
+                35,
+                37,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published many books including Fantastic Fungi Community Cookbook (2021). || This book has recipes from wild mushroom foragers, mycologists, and other people who study mushrooms.",
+        "simplified_spans": [
+            [
+                2,
+                83,
+                85,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 8,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published books which include recipes by foragers, mycologists, and chefs that involve mushroom-based dishes.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 9,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published numerous books, including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 10,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their friend Hosanna travel by steamboat from Jamaica to the United Kingdom. || They arrive in London's Notting Hill before going to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 11,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, as well as their friend Hosanna catch a boat from Jamaica to London. || Then, they will move to the midlands.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Sisters, Leah and Chantrelle, and their acquaintance Hosanna ride a steamboat from Saint Ann Parish in Jamaica to the United Kingdom. || They arrive in London\u2019s Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 13,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica. || They arrive in London's Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                117,
+                119,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom. || They arrive in London's Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                139,
+                141,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "After winning in 2019, his second term was marked by the COVID-19 pandemic and by tremendous instability, since his closest political friends, which he also endorsed, were corrupt.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 16,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "His second term was marked by the COVID-19 pandemic. || It was also marked by a lot of political instability because he supported corrupt governments after the 2020 elections. || These elections included his closest political allies, the social democrats, which he has supported a lot.",
+        "simplified_spans": [
+            [
+                2,
+                53,
+                55,
+                0
+            ],
+            [
+                2,
+                176,
+                178,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "He defeated PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019. || This was his second term and it has been marked by the COVID-19 pandemic and by tremendous political instability. || This is because he has endorsed corrupt governments after the 2020 legislative elections. || These governments are made up of his closest political allies, the social democrats. || He has endorsed them more than Ion Iliescu.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ],
+            [
+                2,
+                183,
+                185,
+                1
+            ],
+            [
+                2,
+                276,
+                278,
+                2
+            ],
+            [
+                2,
+                364,
+                366,
+                3
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 18,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "After defeating Viorica D\u0103ncil\u0103 by a large margin in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability. || This is due to the corrupt governments he has endorsed after the 2020 legislative elections. || These governments are made up of his closest political allies, the social democrats. || He has endorsed them more than Ion Iliescu.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ],
+            [
+                2,
+                253,
+                255,
+                1
+            ],
+            [
+                2,
+                341,
+                343,
+                2
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 19,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "His second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 20,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue would cost around $8 a month and would come with perks like reduced ads, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 21,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk stated that Twitter Blue\u2019s price would increase to around $8.00 USD per-month. || He also announced Twitter Blue would include less advertising, the ability to post longer audio and videos, and verified account status.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue would cost around US$8 per month. || It would include features such as less advertising on Twitter, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue's price would be raised to around US$8.00 per-month, and that people would be able to post longer audio and video files, and that the service would be more cost-effective.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 24,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue's price would increase to around US$8.00 per-month. || He said it would  include less advertising on Twitter, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 25,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book has more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 26,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book has more than 200 new color photographs taken by the British architectural photographer Morley von Sternberg. || It also has older images to show buildings that have been changed a lot or destroyed.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images that have not been used a lot since the book was first published.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 28,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book contains more than 200 newly commissioned color photographs by Morley von Sternbeg. || It also contains older images which show buildings that were changed significantly or destroyed.",
+        "simplified_spans": [
+            [
+                2,
+                93,
+                95,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 29,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "More than 200 new color photos by British architectural photographer Morley von Sternberg illustrate the book, as well as older images where needed to show buildings that have been changed or torn down.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "The last president to run after leaving office was Theodore Roosevelt, who ran in the 1912 election and came in second. || Herbert Hoover, the President of the United States, tried to run for president several times after leaving office, but he was not chosen by the Republican Party.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 31,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "The last president to run after leaving office was Theodore Roosevelt, although Herbert Hoover did later seek the Republican presidential nomination in 1933.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "The last president who ran after leaving the presidential office was Theador Roosevelt. || He came in second in the 1912 election as the representative for the Progressive Party. || Herbert Hoover also tried to seek the Republican nomination after leaving office in 1933.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ],
+            [
+                2,
+                179,
+                181,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 33,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "Theodore Roosevelt was the last president to run after leaving office. || In 1912, he ran as the presidential nominee of the Progressive Party and came in second. || Herbert Hoover briefly sought the Republican presidential nomination at several national conventions after he left office in 1933.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                163,
+                165,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 34,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "Theodore Roosevelt was the last president to run after leaving office. || In 1912, he ran as the presidential nominee of the Progressive Party and came in second. || Herbert Hoover did seek the Republican presidential nomination at several national conventions after leaving office in 1933.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                163,
+                165,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 35,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone video from the Islamic State showed bombs being dropped on a bullet/rocket storage in a contested part of Syria.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "The Islamic State and the Syrian government were fighting to control an area in Syria called Deir ez-Zor. || During that time, the Islamic State released videos that showed bombs being dropped on a weapons storage facility in that area.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria. || This facility was in an area of contested control between the Islamic State and the Syrian government at the time.",
+        "simplified_spans": [
+            [
+                2,
+                129,
+                131,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "The Islamic State dropped bombs on an ammunitions facility located in Deir ez-Zor, Syria. || This area was being fought over by the Islamic State and the Syrian government at the time.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 39,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "An Islamic State drone video showed bombs being dropped on an ammunitions facility in Deir ez-Zor, Syria. || The area has been under dispute between the Islamic State and the Syrian government for a long time.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    }
+]

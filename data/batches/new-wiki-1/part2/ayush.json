@@ -1,0 +1,563 @@
+[
+    {
+        "id": 0,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "In the first film adaptation, director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself. || In contrast, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first film adaptation, which contained many changes, Barbeau-Lavalette\u2019s film remained more faithful to the book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first film adaptation, which was entirely written out by director Samuel Fuller, had a younger fictional actress replace Seberg, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 3,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first movie, Barbeau-Lavalette did not change the character of Gary. || The first movie, directed by Samuel Fuller, changed the character of Gary, replaced Seberg with a younger actress, and made the story about the dog itself.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 4,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "In the first movie adaptation, Samuel Fuller removed Gary, replaced Seberg with a younger fictional actress, and made the story center on the dog. || Meanwhile, Barbeay-Lavalette\u2019s movie adaptation was closer to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                147,
+                149,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 5,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will portray Reality Winner, the whistle-blower, in a dark comedy bio-pic. || Kerry Howley wrote the script, which is based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" || Fogel will also direct the movie.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ],
+            [
+                2,
+                205,
+                207,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 6,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "In the New York Magazine movie, \u201cWho is Reality Winner?\u201d, Emilia Jones portrays the whistle-blower known as Reality Winner. || The script was written by Kerry Howley with Fogel directing.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner with Fogel also on board to direct from a script written by Kerry Howley based on her own 2017 New York Magazine feature.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 8,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will play the whistle-blower Reality Winner from a script written by Kerry Howley. || It is based on her own feature, \"Who Is Reality Winner?\" || and Fogel will direct.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ],
+            [
+                2,
+                156,
+                158,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 9,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will portray the whistle-blower Reality Winner in a bio-pic that is described as darkly comedic. || The script was written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" || Fogel is on board to direct.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ],
+            [
+                2,
+                226,
+                228,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 10,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since. || He has a lot of experience in the film industry, and he also has a lot of graphic design and photography experience.",
+        "simplified_spans": [
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 11,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "During hard times, he was led to study Graphic Design, and after that became a cinematographer. || Also, he had a lot of experiences with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "A hard situation encouraged him to study Graphic Design in 2007. || Since then, he\u2019s been a Cinematographer in the film industry. || He also has a lot of experience with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                65,
+                67,
+                0
+            ],
+            [
+                2,
+                130,
+                132,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 13,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, he decided to study Graphic Design in 2007. || Since then, he has been working as a Cinematographer in the film industry. || He also has a lot of experience with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, he studied Graphic Design in 2007 and has since been working as a Cinematographer in the film industry. || He also has a lot of experience with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                130,
+                132,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin has expanded his farming business to include agritourism. || He uses his farm to host weddings, corporate meetings, and a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                65,
+                67,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 16,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin\u2019s business also offers agritourism. || Corbin uses his farm to host weddings, host corporate meetings, and attract visitors to a Christmas display every year.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin has expanded his business to include agritourism. || This means that he uses his farm to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 18,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin's farm isn't just used for farming-- he's also expanded his business to include agritourism. || This means that his farm is used to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 19,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "As well as farming, Corbin has started a small business called \"Agritourism\". || He uses his farm to host weddings, business meetings, and a big Christmas display every year.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 20,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "DJ Akademiks held a three-hour stream in honor of Takeoff. || He analyzed videos from the moment of the murder of Kirshnik and also called for fighting the ideology of violence in hip-hop. || This includes stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ],
+            [
+                2,
+                189,
+                191,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 21,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "The blogger DJ Akademiks held a three hour stream to honor Takeoff, where he analyzed videos from the moment of Takeoff\u2019s murder. || He also said we have to fight violence in hip-hop, and that we should not copy rappers like YNW Melly and Tay-K, who were murderers.",
+        "simplified_spans": [
+            [
+                2,
+                130,
+                132,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "DJ Akademiks held a three hour stream to remember Takeoff. || He analyzed videos from the moment of the murder of Kirshnik and called for people to stop promoting the idea of violence in hip-hop. || This includes stop imitating rappers YNW Melly and Tay-K, who were both convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ],
+            [
+                2,
+                196,
+                198,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for people to stop copying rappers who were convicted of murder, including YNW Melly and Tay-K.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 24,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour long stream to honor Takeoff. || In this stream, he analyzed videos from the moment of Kirshnik\u2019s murder. || He also asked people to challenge the use of violence in hip-hop and to stop copying rappers like YNW Melly and Tay-K who were convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                145,
+                147,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 25,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first female Governor of Massachusetts in January 2023. || She will also be the first openly lesbian woman and third openly LGBT person to take office as governor of a U.S. state (after Kate Brown and Jared Polis).",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 26,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first openly lesbian woman and third openly LBGT person to be governor of a U.S. state.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "When she takes office in January 2023, she will be the first woman governor of Massachusetts and the first openly lesbian governor of any U.S. state. || She will also be the first openly lesbian governor of any U.S. state.",
+        "simplified_spans": [
+            [
+                2,
+                150,
+                152,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 28,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will officially start her position as Governor of Massachusetts in January 2023. || When this happens, she will become the first female Governor of Massachussets. || She will also be the first openly lesbian woman and third openly LGBT person to take office as governor of a U.S state.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ],
+            [
+                2,
+                167,
+                169,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 29,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first female Governor of Massachusetts in 2023. || She will also be the first openly lesbian woman and third openly LGBT person to take office as governor of a U.S. state.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her manager, she soon got a chance to show off her talent when she was promoted to become the acting manager of the agency.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 31,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series is about Abi, who gets a job at a top advertising agency in Lagos. || She eventually became acting manager after her hostile manager left to another location.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series is about the story of Abi who gets a job at a top ad agency in Lagos. || Though she has a rough start with her superior, she gets a chance to shine at work when she is promoted to acting manager. || This happens because her manager travels to another branch.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ],
+            [
+                2,
+                214,
+                216,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 33,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "This sitcom series is about Abi (played by Bolu Essien). || At the beginning, she got a job at a top advertising agency in Lagos. || Her superior wasn't nice to her, but she had a chance to show her talent at work. || After the manager traveled to another branch, Abi was promoted to become the acting manager.",
+        "simplified_spans": [
+            [
+                2,
+                57,
+                59,
+                0
+            ],
+            [
+                2,
+                130,
+                132,
+                1
+            ],
+            [
+                2,
+                215,
+                217,
+                2
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 34,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "Abi (played by Bolu Essien) is the star of the sitcom series. || She got a job at a top advertising agency in Lagos, even though she had a rough start with her boss. || She got promoted to acting manager when the manager had to travel to another branch.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ],
+            [
+                2,
+                166,
+                168,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    }
+]

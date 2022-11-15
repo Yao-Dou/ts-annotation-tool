@@ -1,0 +1,604 @@
+[
+    {
+        "id": 0,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published many books, including the Fantastic Fungi Community Cookbook (2021). || It has recipes by people who collect wild mushrooms, experts on mushrooms, and cooks who make mushroom dishes.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 1,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published numerous books. || Fantastic Fungi Community Cookbook (2021) has recipes by wild mushroom foragers, mycologists, and chefs who make mushroom-based dishes.",
+        "simplified_spans": [
+            [
+                2,
+                35,
+                37,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published many books including Fantastic Fungi Community Cookbook (2021). || This book has recipes from wild mushroom foragers, mycologists, and other people who study mushrooms.",
+        "simplified_spans": [
+            [
+                2,
+                83,
+                85,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 3,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published books which include recipes by foragers, mycologists, and chefs that involve mushroom-based dishes.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 4,
+        "original": "Bone has published numerous books including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "original_spans": [],
+        "simplified": "Bone has published numerous books, including Fantastic Fungi Community Cookbook (2021), which includes recipes by wild mushroom foragers, mycologists, and chefs specializing in mushroom-based dishes.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 5,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their friend Hosanna travel by steamboat from Jamaica to the United Kingdom. || They arrive in London's Notting Hill before going to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 6,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, as well as their friend Hosanna catch a boat from Jamaica to London. || Then, they will move to the midlands.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Sisters, Leah and Chantrelle, and their acquaintance Hosanna ride a steamboat from Saint Ann Parish in Jamaica to the United Kingdom. || They arrive in London\u2019s Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 8,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica. || They arrive in London's Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                117,
+                119,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom. || They arrive in London's Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                139,
+                141,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "Repeatedly attacked during the War of Restoration of Independence, it was during the attack on the city of Elvas that the fort stood out for its heroic resistance.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 11,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "During the War of Restoration of Independence, the fort was repeatedly attacked. || The fort stood out for its historic resistance during the siege of the city of Elvas, which Spanish commander Don Luis de Haro led in 1658.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "It was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "The fort was repeatedly besieged during the War of Restoration of Independence. || The Spanish commander Don Luis de Haro led a siege of the city of Elvas in 1658. || The fort's defenders showed heroic resistance during this siege.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ],
+            [
+                2,
+                164,
+                166,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 14,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "It was often attacked during the War of Restoration of Independence. || In 1658, the Spanish commander Don Luis de Haro attacked the city of Elvas, and the defenders of the fort gave their lives to save the city.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 15,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia has a leaf-like body with thin ribs and spindle-shaped bodies, similar to most other Erniettomorphs from Namibia. || It is differentiated from other taxa, such as Pteridinium and Rangea, by having smaller petaloids and a configuration of ribs that are sub-parallel to its axis.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 16,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia looks similar to other Ernettiomorphs. || It is similar due to its overall leaf-like body and thin ribs, but is different due to its smaller petaloids and the location of its ribs.",
+        "simplified_spans": [
+            [
+                2,
+                47,
+                49,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia looks similar to other Erniettomorphs from Namibia. || It has a leaf-like body with thin ribs and a spindle-shaped body. || However, it is smaller with sub-parallel ribs.",
+        "simplified_spans": [
+            [
+                2,
+                60,
+                62,
+                0
+            ],
+            [
+                2,
+                129,
+                131,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia has a leaf-like body with thin ribs and spindle-shaped bodies. || It differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis. || The petaloids are the parts of the plant that stick out from the body.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                260,
+                262,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 19,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia looks similar to other types of fossils from Namibia, with a leaf-like body, thin ribs, and rod shaped bodies. || However, it is different from other similar fossil classes because it has smaller petals and a different rib configuration.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 20,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the rise in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 21,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime on progressives and liberals. || However,  Biden had rejected calls from racial justice protesters to \u201cdefund the police.\u201d",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals. || However, Biden has said that he would not do anything to make the police less needed.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 23,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans blamed the increase in violent crime in 2020 and 2021 on Democrats. || However, Biden has refused to \u201cdefund the police\u201d, a slogan supported by racial justice protesters.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 24,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "The increase in violent crime and homicides in 2020 and 2021 has been blamed by Republicans on progressives and liberals, although Biden had previously rejected calls for \"defunding the police\", a slogan supported by racial justice protesters.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 25,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "His second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 26,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "His second term was marked by the COVID-19 pandemic. || It was also marked by a lot of political instability because he supported corrupt governments after the 2020 elections. || These elections included his closest political allies, the social democrats, which he has supported a lot.",
+        "simplified_spans": [
+            [
+                2,
+                53,
+                55,
+                0
+            ],
+            [
+                2,
+                176,
+                178,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "After winning in 2019, his second term was marked by the COVID-19 pandemic and by tremendous instability, since his closest political friends, which he also endorsed, were corrupt.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 28,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "He defeated PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019. || This was his second term and it has been marked by the COVID-19 pandemic and by tremendous political instability. || This is because he has endorsed corrupt governments after the 2020 legislative elections. || These governments are made up of his closest political allies, the social democrats. || He has endorsed them more than Ion Iliescu.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ],
+            [
+                2,
+                183,
+                185,
+                1
+            ],
+            [
+                2,
+                276,
+                278,
+                2
+            ],
+            [
+                2,
+                364,
+                366,
+                3
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 29,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "After defeating Viorica D\u0103ncil\u0103 by a large margin in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability. || This is due to the corrupt governments he has endorsed after the 2020 legislative elections. || These governments are made up of his closest political allies, the social democrats. || He has endorsed them more than Ion Iliescu.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ],
+            [
+                2,
+                253,
+                255,
+                1
+            ],
+            [
+                2,
+                341,
+                343,
+                2
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 30,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk announced the creation of a \u201ccontent moderation council\u201d with diverse viewpoints in order to determine how the platform would deal with free speech. || He announced a delay of \u201cmajor content decisions or account reinstatements\" until then.",
+        "simplified_spans": [
+            [
+                2,
+                154,
+                156,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk said that he would create a \u201ccontent moderation council\u201d with many different perspectives to handle free speech on the platform. || He also declared that no \u201cmajor content decisions or account reinstatements\u201d would be made until the council was created.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk also announced the creation of a \"content moderation council\" with people from different backgrounds to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 33,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk also announced that a \"content moderation council\" with different opinions will be created to decide how the platform will handle free speech. || He also said that there will be a break on \"major content decisions or account restorations\" until the council is made.",
+        "simplified_spans": [
+            [
+                2,
+                148,
+                150,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 34,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk also said he would create a \"content moderation council\" with people with different views to decide how the platform should handle free speech. || He said he would not make any major content decisions or changes until then.",
+        "simplified_spans": [
+            [
+                2,
+                149,
+                151,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 35,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "Theodore Roosevelt was the last president to run after leaving office. || In 1912, he ran as the presidential nominee of the Progressive Party and came in second. || Herbert Hoover briefly sought the Republican presidential nomination at several national conventions after he left office in 1933.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                163,
+                165,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 36,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "The last president to run after leaving office was Theodore Roosevelt, although Herbert Hoover did later seek the Republican presidential nomination in 1933.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "Theodore Roosevelt was the last president to run after leaving office. || In 1912, he ran as the presidential nominee of the Progressive Party and came in second. || Herbert Hoover did seek the Republican presidential nomination at several national conventions after leaving office in 1933.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                163,
+                165,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 38,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "The last president to run after leaving office was Theodore Roosevelt, who ran in the 1912 election and came in second. || Herbert Hoover, the President of the United States, tried to run for president several times after leaving office, but he was not chosen by the Republican Party.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 39,
+        "original": "The last president to run after leaving office was Theodore Roosevelt, who came in second in the 1912 election as the presidential nominee of the Progressive Party, although Herbert Hoover did briefly seek the Republican presidential nomination at several national conventions subsequent to leaving office in 1933.",
+        "original_spans": [],
+        "simplified": "The last president who ran after leaving the presidential office was Theador Roosevelt. || He came in second in the 1912 election as the representative for the Progressive Party. || Herbert Hoover also tried to seek the Republican nomination after leaving office in 1933.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ],
+            [
+                2,
+                179,
+                181,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    }
+]

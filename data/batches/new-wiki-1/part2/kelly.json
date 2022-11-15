@@ -1,0 +1,490 @@
+[
+    {
+        "id": 0,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "American and British oil producers reported record profits in 2022. || However, they rewarded their shareholders with the extra money instead of investing the money back into the business.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 1,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil producers reported record profits in 2022. || They rewarded shareholders with dividends and stock buybacks. || This is different from their past actions of using profits to increase production.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                139,
+                141,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major oil producers in America and Britain reported record profits in 2022. || They rewarded their shareholders by giving them dividends and buying back their stocks. || This was different from their past practice of using their profits to produce more oil.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ],
+            [
+                2,
+                167,
+                169,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 3,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "In 2022, major American and British oil producers reported record profits. || Instead of reinvesting these profits into more production, they distributed them to shareholders in the form of dividends and stock buybacks.",
+        "simplified_spans": [
+            [
+                2,
+                75,
+                77,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 4,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil producers reported record profits in 2022, rather than following their past practice of plowing profits back into more production, they rewarded their shareholders with dividends and stock buybacks.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 5,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "In the first film adaptation, director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself. || In contrast, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 6,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first film adaptation, which contained many changes, Barbeau-Lavalette\u2019s film remained more faithful to the book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first film adaptation, which was entirely written out by director Samuel Fuller, had a younger fictional actress replace Seberg, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 8,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first movie, Barbeau-Lavalette did not change the character of Gary. || The first movie, directed by Samuel Fuller, changed the character of Gary, replaced Seberg with a younger actress, and made the story about the dog itself.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 9,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "In the first movie adaptation, Samuel Fuller removed Gary, replaced Seberg with a younger fictional actress, and made the story center on the dog. || Meanwhile, Barbeay-Lavalette\u2019s movie adaptation was closer to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                147,
+                149,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist who wants to stay anonymous said that the Egyptian authorities are arresting people without a reason before COP. || They are stopping people and checking their phones for anything that shows they disagree with the government.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 11,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist hiding his identity said Egyptian authorities were randomly interrogating people ahead of COP, such as randomly stopping people and inspecting their phones for dissent.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist who did not want to be named said the Egyptian government was holding random arrests ahead of COP. || He said they stopped people at random and checked their phones to look for evidence of dissent.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 13,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist said the Egyptian government was doing random phone searches ahead of a climate change conference. || During the search, they were looking for any evidence of dispute with the government.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 14,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist who did not want to reveal his name said the Egyptian authorities were arresting people without a reason before COP, where they stop people randomly and look at their cell phones for any proof of disagreement.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 15,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws, but World Cup organizers say that they will have \"sobering up\" zones where people will be told not to drink alcohol while watching the games.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 16,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Fans around the world are unsure about going to the World Cup in Qatar because of its alcohol laws. || In response, World Cup organizers say they will create \u201csobering up\u201d zones to make fans feel safer.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans may not like going to the World Cup in Qatar because of its alcohol laws, but organizers announced the creation of \u201csobering up\u201d zones to make fans feel safe while attending.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may have some concerns about going to the World Cup in Qatar because of the alcohol laws concerning drinking in public places, but World Cup organizers have announced the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Some football fans might be nervous about going to the World Cup in Qatar because of the alcohol laws, but World Cup organizers are setting up areas where people can drink alcohol so that fans feel safe and comfortable.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 20,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly declared that Mauritius and the UK would begin talks to discuss control over the British Indian Ocean Territory. || This was taking into account the recent international legal proceedings.",
+        "simplified_spans": [
+            [
+                2,
+                178,
+                180,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 21,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On November 3rd, 2022, the British Foreign Secretary said the UK and Mauritius were discussing granting independence over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory. || This decision takes into account the recent international legal proceedings.",
+        "simplified_spans": [
+            [
+                2,
+                191,
+                193,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 23,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 24,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly said that the UK and Mauritius had decided to start talks to take over the British Indian Ocean Territory. || This was because of legal cases that were going on before.",
+        "simplified_spans": [
+            [
+                2,
+                172,
+                174,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 25,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "DJ Akademiks held a three-hour stream in honor of Takeoff. || He analyzed videos from the moment of the murder of Kirshnik and also called for fighting the ideology of violence in hip-hop. || This includes stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ],
+            [
+                2,
+                189,
+                191,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "The blogger DJ Akademiks held a three hour stream to honor Takeoff, where he analyzed videos from the moment of Takeoff\u2019s murder. || He also said we have to fight violence in hip-hop, and that we should not copy rappers like YNW Melly and Tay-K, who were murderers.",
+        "simplified_spans": [
+            [
+                2,
+                130,
+                132,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "DJ Akademiks held a three hour stream to remember Takeoff. || He analyzed videos from the moment of the murder of Kirshnik and called for people to stop promoting the idea of violence in hip-hop. || This includes stop imitating rappers YNW Melly and Tay-K, who were both convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ],
+            [
+                2,
+                196,
+                198,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 28,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for people to stop copying rappers who were convicted of murder, including YNW Melly and Tay-K.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 29,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour long stream to honor Takeoff. || In this stream, he analyzed videos from the moment of Kirshnik\u2019s murder. || He also asked people to challenge the use of violence in hip-hop and to stop copying rappers like YNW Melly and Tay-K who were convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                145,
+                147,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 30,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "Abi (played by Bolu Essien) is the star of the sitcom series. || She got a job at a top advertising agency in Lagos, even though she had a rough start with her boss. || She got promoted to acting manager when the manager had to travel to another branch.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ],
+            [
+                2,
+                166,
+                168,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series is about Abi, who gets a job at a top advertising agency in Lagos. || She eventually became acting manager after her hostile manager left to another location.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her manager, she soon got a chance to show off her talent when she was promoted to become the acting manager of the agency.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 33,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series is about the story of Abi who gets a job at a top ad agency in Lagos. || Though she has a rough start with her superior, she gets a chance to shine at work when she is promoted to acting manager. || This happens because her manager travels to another branch.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ],
+            [
+                2,
+                214,
+                216,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 34,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "This sitcom series is about Abi (played by Bolu Essien). || At the beginning, she got a job at a top advertising agency in Lagos. || Her superior wasn't nice to her, but she had a chance to show her talent at work. || After the manager traveled to another branch, Abi was promoted to become the acting manager.",
+        "simplified_spans": [
+            [
+                2,
+                57,
+                59,
+                0
+            ],
+            [
+                2,
+                130,
+                132,
+                1
+            ],
+            [
+                2,
+                215,
+                217,
+                2
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    }
+]

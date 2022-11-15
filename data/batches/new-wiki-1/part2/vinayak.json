@@ -1,0 +1,493 @@
+[
+    {
+        "id": 0,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "More recently, after a nominee is announced, the Judiciary Committee does some investigation before the hearings start. || During this time, committee members and their staffs get ready for the hearings by looking into the nominee's background and relevant issues.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "The Judiciary Committee does an investigative stage between the announcement of the nomination and the start of hearings. || Committee members and their staffs get ready for the hearings by looking over the background of the nominees and relevant issues.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "The Judiciary Committee does an investigation between the announcement of the nomination and the start of hearings. || In this investigation, committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 3,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee and its staffs prepare for the hearings by looking over the background of the nominees and the issues that will be discussed in the hearings.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 4,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "When the hearings start after nominations, the Judiciary Committee members and their staff look at the background of nominees.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 5,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will portray Reality Winner, the whistle-blower, in a dark comedy bio-pic. || Kerry Howley wrote the script, which is based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" || Fogel will also direct the movie.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ],
+            [
+                2,
+                205,
+                207,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 6,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "In the New York Magazine movie, \u201cWho is Reality Winner?\u201d, Emilia Jones portrays the whistle-blower known as Reality Winner. || The script was written by Kerry Howley with Fogel directing.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner with Fogel also on board to direct from a script written by Kerry Howley based on her own 2017 New York Magazine feature.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 8,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will play the whistle-blower Reality Winner from a script written by Kerry Howley. || It is based on her own feature, \"Who Is Reality Winner?\" || and Fogel will direct.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ],
+            [
+                2,
+                156,
+                158,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 9,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will portray the whistle-blower Reality Winner in a bio-pic that is described as darkly comedic. || The script was written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" || Fogel is on board to direct.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ],
+            [
+                2,
+                226,
+                228,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 10,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "There is general agreement among the mediators that this agreement is a step towards peace. || However, there is also agreement that true peace has not yet been realized.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 11,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Outside observers and mediators think that this agreement is a step towards peace. || However, they think that true peace has not been fully realized yet.",
+        "simplified_spans": [
+            [
+                2,
+                83,
+                85,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "There is agreement among meditators that this agreement is a step toward peace, but true peace hasn\u2019t been realized yet.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 13,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Most mediators and some outside observers agree that this agreement is a step towards peace, but true peace has not been achieved yet.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Mediators and some outside observers agree that this agreement is a step towards peace, but true peace has not yet been achieved.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests focused on election results or economic problems and were violently stopped by Iran\u2019s government. || In addition to increasing women\u2019s rights, the current protest has one main demand: the overthrow of the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                121,
+                123,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 16,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Where earlier protests focused on election results or economic issues, the current protest, other than more rights for women, has one demand: get rid of the Islamic Republic.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Whereas earlier major protests were quelled by Iran's government, the current protest has one main demand: the overthrow of the Islamic Republic.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 18,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests were violently stopped by Iran's government. || These protests were about election results or economic problems. || The current protest is about getting more rights for women and the overthrow of the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ],
+            [
+                2,
+                136,
+                138,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 19,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests, which were violently quelled by Iran's government, focused on election results or economic problems. || The current protest, however, has one main demand: that the Islamic Republic be removed from power.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 20,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, he decided to study Graphic Design in 2007. || Since then, he has been working as a Cinematographer in the film industry. || He also has a lot of experience with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 21,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "During hard times, he was led to study Graphic Design, and after that became a cinematographer. || Also, he had a lot of experiences with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, he studied Graphic Design in 2007 and has since been working as a Cinematographer in the film industry. || He also has a lot of experience with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                130,
+                132,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since. || He has a lot of experience in the film industry, and he also has a lot of graphic design and photography experience.",
+        "simplified_spans": [
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 24,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also his have a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "A hard situation encouraged him to study Graphic Design in 2007. || Since then, he\u2019s been a Cinematographer in the film industry. || He also has a lot of experience with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                65,
+                67,
+                0
+            ],
+            [
+                2,
+                130,
+                132,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 25,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin's farm isn't just used for farming-- he's also expanded his business to include agritourism. || This means that his farm is used to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 26,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin\u2019s business also offers agritourism. || Corbin uses his farm to host weddings, host corporate meetings, and attract visitors to a Christmas display every year.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "As well as farming, Corbin has started a small business called \"Agritourism\". || He uses his farm to host weddings, business meetings, and a big Christmas display every year.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 28,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin has expanded his farming business to include agritourism. || He uses his farm to host weddings, corporate meetings, and a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                65,
+                67,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 29,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin has expanded his business to include agritourism. || This means that he uses his farm to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist who did not want to be named said the Egyptian government was holding random arrests ahead of COP. || He said they stopped people at random and checked their phones to look for evidence of dissent.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 31,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist hiding his identity said Egyptian authorities were randomly interrogating people ahead of COP, such as randomly stopping people and inspecting their phones for dissent.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist said the Egyptian government was doing random phone searches ahead of a climate change conference. || During the search, they were looking for any evidence of dispute with the government.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 33,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist who did not want to reveal his name said the Egyptian authorities were arresting people without a reason before COP, where they stop people randomly and look at their cell phones for any proof of disagreement.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 34,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist who wants to stay anonymous said that the Egyptian authorities are arresting people without a reason before COP. || They are stopping people and checking their phones for anything that shows they disagree with the government.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    }
+]
