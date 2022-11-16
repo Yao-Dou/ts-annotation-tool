@@ -1,0 +1,547 @@
+[
+    {
+        "id": 0,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The buildings of Winchester College have diverse architectural styles. || They reflect multiple periods of building from the college\u2019s founding in 1382, through additions in the medieval and early modern periods. || They also show big expansions to accommodations in the Victorian era and at the beginning of the 20th century and more recently.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                213,
+                215,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 1,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "Winchester College\u2019s architecture includes a variety of architectural styles. || This reflects multiple periods of building from when the college was founded in 1382 way until its most recent extensions. || This includes additions made during the medieval and Early Modern periods and a major expansion of accommodation in the Victorian era.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                204,
+                206,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 3,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College has a diverse set of styles that reflects the multiple periods of building from the college's foundation in 1382. || This includes additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 4,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, to a major expansion of accommodation at the turn of the 20th century and to further extensions at the end of the 20th century, to the present day.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 5,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In \"Marriages and Infidelities,\" Oates uses the titles and themes from earlier novellas and short stories and adapts them to match her own goals.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 6,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In Marriages and Infidelities, Oates hints to novellas and short stories by earlier writers. || She uses their titles or their themes and adapts them to fit with her artistic intentions.",
+        "simplified_spans": [
+            [
+                2,
+                93,
+                95,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In Marriages and Infidelities, Oates clearly refers to novellas and short stories by other writers. || She does this by using either their titles or their themes and changing them to match her own goals.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 8,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In Marriages and Infidelities, Oates uses many short stories and novellas by earlier writers. || She uses their titles or their themes, and changes them to fit her own ideas of what is important.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 9,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "Oates references short stories written by earlier writers in her book, Marriages and Infidelities. || She does this by using the stories\u2019 titles or themes and changing them to match her artistic goals.",
+        "simplified_spans": [
+            [
+                2,
+                99,
+                101,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "The fort was repeatedly besieged during the War of Restoration of Independence. || The Spanish commander Don Luis de Haro led a siege of the city of Elvas in 1658. || The fort's defenders showed heroic resistance during this siege.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ],
+            [
+                2,
+                164,
+                166,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 11,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "During the War of Restoration of Independence, the fort was repeatedly attacked. || The fort stood out for its historic resistance during the siege of the city of Elvas, which Spanish commander Don Luis de Haro led in 1658.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "It was often attacked during the War of Restoration of Independence. || In 1658, the Spanish commander Don Luis de Haro attacked the city of Elvas, and the defenders of the fort gave their lives to save the city.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 13,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "Repeatedly attacked during the War of Restoration of Independence, it was during the attack on the city of Elvas that the fort stood out for its heroic resistance.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 14,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "It was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 15,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals. || However, Biden has said that he would not do anything to make the police less needed.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 16,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime on progressives and liberals. || However,  Biden had rejected calls from racial justice protesters to \u201cdefund the police.\u201d",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans blamed the increase in violent crime in 2020 and 2021 on Democrats. || However, Biden has refused to \u201cdefund the police\u201d, a slogan supported by racial justice protesters.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "The increase in violent crime and homicides in 2020 and 2021 has been blamed by Republicans on progressives and liberals, although Biden had previously rejected calls for \"defunding the police\", a slogan supported by racial justice protesters.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the rise in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 20,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue's price would increase to around US$8.00 per-month. || He said it would  include less advertising on Twitter, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 21,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk stated that Twitter Blue\u2019s price would increase to around $8.00 USD per-month. || He also announced Twitter Blue would include less advertising, the ability to post longer audio and videos, and verified account status.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue would cost around $8 a month and would come with perks like reduced ads, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 23,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue would cost around US$8 per month. || It would include features such as less advertising on Twitter, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 24,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue's price would be raised to around US$8.00 per-month, and that people would be able to post longer audio and video files, and that the service would be more cost-effective.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 25,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "More than 200 new color photos by British architectural photographer Morley von Sternberg illustrate the book, as well as older images where needed to show buildings that have been changed or torn down.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book has more than 200 new color photographs taken by the British architectural photographer Morley von Sternberg. || It also has older images to show buildings that have been changed a lot or destroyed.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book has more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 28,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images that have not been used a lot since the book was first published.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 29,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book contains more than 200 newly commissioned color photographs by Morley von Sternbeg. || It also contains older images which show buildings that were changed significantly or destroyed.",
+        "simplified_spans": [
+            [
+                2,
+                93,
+                95,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 30,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to avoid discussing Qatar's poor human rights records. || They should \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and should \"focus on the football.\"",
+        "simplified_spans": [
+            [
+                2,
+                141,
+                143,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On November 5, 2022, FIFA sent a letter to all participating nations. || It told them to stop any discussion of Qatar\u2019s poor human rights records, to \u201crespect all opinions and beliefs, without handing out moral lessons to the rest of the world\", and to \"focus on the football.\"",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to stop talking about Qatar and to focus on the football. || The letter said that they should \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\".",
+        "simplified_spans": [
+            [
+                2,
+                144,
+                146,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 33,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On November 5, 2022, FIFA sent a letter to all of its participating nations. || This letter told them to stop discussing Qatar\u2019s poor human rights records to \u201crespect all opinions and beliefs, without handing out moral lessons to the rest of the world\u201d and to \u201cfocus on the football.\u201d.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 34,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "FIFA sent a letter to all participating nations on November 5, 2022. || The letter told them to stop discussing Qatar's poor human rights records and to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world.\" || The letter also said to \"focus on the football.\"",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                249,
+                251,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 35,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil producers reported record profits in 2022, rather than following their past practice of plowing profits back into more production, they rewarded their shareholders with dividends and stock buybacks.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 36,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil producers reported record profits in 2022. || They rewarded shareholders with dividends and stock buybacks. || This is different from their past actions of using profits to increase production.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                139,
+                141,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "American and British oil producers reported record profits in 2022. || However, they rewarded their shareholders with the extra money instead of investing the money back into the business.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 38,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major oil producers in America and Britain reported record profits in 2022. || They rewarded their shareholders by giving them dividends and buying back their stocks. || This was different from their past practice of using their profits to produce more oil.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ],
+            [
+                2,
+                167,
+                169,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 39,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "In 2022, major American and British oil producers reported record profits. || Instead of reinvesting these profits into more production, they distributed them to shareholders in the form of dividends and stock buybacks.",
+        "simplified_spans": [
+            [
+                2,
+                75,
+                77,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    }
+]

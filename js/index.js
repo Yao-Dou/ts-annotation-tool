@@ -1637,12 +1637,18 @@ const app = Vue.createApp({
         let batch_odd_names = ["anton", "ayush", "kelly"]
         let batch_even_names = ["rachel", "vishnesh", "vinayak"]
         if (urlParams.get('batch') != null) {
-            if (urlParams.get('name') == null) {
-                data_path = `batches/batch_${urlParams.get('batch')}.json`
-            } else if (batch_odd_names.includes(urlParams.get('name').toLowerCase())) {
-                data_path = `batches/batch_${urlParams.get('batch') * 2 - 1}.json`
-            } else if (batch_even_names.includes(urlParams.get('name').toLowerCase())) {
-                data_path = `batches/batch_${urlParams.get('batch') * 2}.json`
+            if (urlParams.get('batch') == 3) {
+                data_path = `batches/new-wiki-1/part1/${urlParams.get('name')}.json`
+            } else if (urlParams.get('batch') == 4) {
+                data_path = `batches/new-wiki-1/part2/${urlParams.get('name')}.json`
+            } else {
+                if (urlParams.get('name') == null) {
+                    data_path = `batches/batch_${urlParams.get('batch')}.json`
+                } else if (batch_odd_names.includes(urlParams.get('name').toLowerCase())) {
+                    data_path = `batches/batch_${urlParams.get('batch') * 2 - 1}.json`
+                } else if (batch_even_names.includes(urlParams.get('name').toLowerCase())) {
+                    data_path = `batches/batch_${urlParams.get('batch') * 2}.json`
+                }
             }
         }
         fetch(`https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/${data_path}`)

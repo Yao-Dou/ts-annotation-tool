@@ -1,0 +1,467 @@
+[
+    {
+        "id": 0,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "There is agreement among meditators that this agreement is a step toward peace, but true peace hasn\u2019t been realized yet.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 1,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Outside observers and mediators think that this agreement is a step towards peace. || However, they think that true peace has not been fully realized yet.",
+        "simplified_spans": [
+            [
+                2,
+                83,
+                85,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Most mediators and some outside observers agree that this agreement is a step towards peace, but true peace has not been achieved yet.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 3,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Mediators and some outside observers agree that this agreement is a step towards peace, but true peace has not yet been achieved.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 4,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "There is general agreement among the mediators that this agreement is a step towards peace. || However, there is also agreement that true peace has not yet been realized.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 5,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Whereas earlier major protests were quelled by Iran's government, the current protest has one main demand: the overthrow of the Islamic Republic.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 6,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Where earlier protests focused on election results or economic issues, the current protest, other than more rights for women, has one demand: get rid of the Islamic Republic.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests were violently stopped by Iran's government. || These protests were about election results or economic problems. || The current protest is about getting more rights for women and the overthrow of the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ],
+            [
+                2,
+                136,
+                138,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 8,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests, which were violently quelled by Iran's government, focused on election results or economic problems. || The current protest, however, has one main demand: that the Islamic Republic be removed from power.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 9,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests focused on election results or economic problems and were violently stopped by Iran\u2019s government. || In addition to increasing women\u2019s rights, the current protest has one main demand: the overthrow of the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                121,
+                123,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin's farm isn't just used for farming-- he's also expanded his business to include agritourism. || This means that his farm is used to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 11,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin\u2019s business also offers agritourism. || Corbin uses his farm to host weddings, host corporate meetings, and attract visitors to a Christmas display every year.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "As well as farming, Corbin has started a small business called \"Agritourism\". || He uses his farm to host weddings, business meetings, and a big Christmas display every year.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 13,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin has expanded his farming business to include agritourism. || He uses his farm to host weddings, corporate meetings, and a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                65,
+                67,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 14,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin has expanded his business to include agritourism. || This means that he uses his farm to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 15,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws, but World Cup organizers say that they will have \"sobering up\" zones where people will be told not to drink alcohol while watching the games.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 16,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Fans around the world are unsure about going to the World Cup in Qatar because of its alcohol laws. || In response, World Cup organizers say they will create \u201csobering up\u201d zones to make fans feel safer.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans may not like going to the World Cup in Qatar because of its alcohol laws, but organizers announced the creation of \u201csobering up\u201d zones to make fans feel safe while attending.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may have some concerns about going to the World Cup in Qatar because of the alcohol laws concerning drinking in public places, but World Cup organizers have announced the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Some football fans might be nervous about going to the World Cup in Qatar because of the alcohol laws, but World Cup organizers are setting up areas where people can drink alcohol so that fans feel safe and comfortable.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 20,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly declared that Mauritius and the UK would begin talks to discuss control over the British Indian Ocean Territory. || This was taking into account the recent international legal proceedings.",
+        "simplified_spans": [
+            [
+                2,
+                178,
+                180,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 21,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On November 3rd, 2022, the British Foreign Secretary said the UK and Mauritius were discussing granting independence over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory. || This decision takes into account the recent international legal proceedings.",
+        "simplified_spans": [
+            [
+                2,
+                191,
+                193,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 23,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 24,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly said that the UK and Mauritius had decided to start talks to take over the British Indian Ocean Territory. || This was because of legal cases that were going on before.",
+        "simplified_spans": [
+            [
+                2,
+                172,
+                174,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 25,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first female Governor of Massachusetts in 2023. || She will also be the first openly lesbian woman and third openly LGBT person to take office as governor of a U.S. state.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first openly lesbian woman and third openly LBGT person to be governor of a U.S. state.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first female Governor of Massachusetts in January 2023. || She will also be the first openly lesbian woman and third openly LGBT person to take office as governor of a U.S. state (after Kate Brown and Jared Polis).",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 28,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "When she takes office in January 2023, she will be the first woman governor of Massachusetts and the first openly lesbian governor of any U.S. state. || She will also be the first openly lesbian governor of any U.S. state.",
+        "simplified_spans": [
+            [
+                2,
+                150,
+                152,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 29,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will officially start her position as Governor of Massachusetts in January 2023. || When this happens, she will become the first female Governor of Massachussets. || She will also be the first openly lesbian woman and third openly LGBT person to take office as governor of a U.S state.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ],
+            [
+                2,
+                167,
+                169,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 30,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "After Flynn got enough support to become council president, Arroyo released a statement that was like a concession. || He praised Flynn's kindness and work ethic, and said that he looked forward \"to seeing how Flynn uses those qualities in this leadership role.\"",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "When it was clear Flynn was going to be council president, Arroyo gave a concession speech. || He praised Flynn\u2019s good qualities and said that he wants to see Flynn use these qualities while president.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "However, after Flynn was able to get enough support to become council president, Arroyo said that he was happy for him. || Arroyo said that he was happy for Flynn's kindness and work ethic, and that he looked forward to seeing how Flynn used those qualities in his new job.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 33,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "When Flynn got support to become council president, Arroyo sent out a message. || The message was an informal concession that praised Flynn\u2019s kindness and work ethic. || It also said that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "simplified_spans": [
+            [
+                2,
+                79,
+                81,
+                0
+            ],
+            [
+                2,
+                167,
+                169,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 34,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement. || In the statement, Arroyo gave strong praise to Flynn's kindness and work ethic. || Arroyo also declared that he looked forward to \"seeing how Flynn utilizes those great qualities in this leadership role.\"",
+        "simplified_spans": [
+            [
+                2,
+                128,
+                130,
+                0
+            ],
+            [
+                2,
+                211,
+                213,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    }
+]

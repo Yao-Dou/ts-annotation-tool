@@ -1,0 +1,512 @@
+[
+    {
+        "id": 0,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad. || Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "simplified_spans": [
+            [
+                2,
+                175,
+                177,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 1,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "Recently,  Poland\u2019s Minister of National Defence announced that Poland will create a barrier along its border with the Russian exclave of Kaliningrad. || They aim to stop Russia from illegally transporting migrants to Europe.",
+        "simplified_spans": [
+            [
+                2,
+                151,
+                153,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 2,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak said that they would build a wall along the border with Russia's Kaliningrad because they thought that people from Russia were trying to enter Europe through that area.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 3,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Poland\u2019s Minister of National Defence announced the creation of a barrier along the border of a Russian exclave. || Poland believes Russia will use the border to transport illegal immigrants to Europe.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 4,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad. || Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "simplified_spans": [
+            [
+                2,
+                175,
+                177,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 5,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil producers reported record profits in 2022, rather than following their past practice of plowing profits back into more production, they rewarded their shareholders with dividends and stock buybacks.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 6,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil producers reported record profits in 2022. || They rewarded shareholders with dividends and stock buybacks. || This is different from their past actions of using profits to increase production.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                139,
+                141,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "American and British oil producers reported record profits in 2022. || However, they rewarded their shareholders with the extra money instead of investing the money back into the business.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 8,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major oil producers in America and Britain reported record profits in 2022. || They rewarded their shareholders by giving them dividends and buying back their stocks. || This was different from their past practice of using their profits to produce more oil.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ],
+            [
+                2,
+                167,
+                169,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "In 2022, major American and British oil producers reported record profits. || Instead of reinvesting these profits into more production, they distributed them to shareholders in the form of dividends and stock buybacks.",
+        "simplified_spans": [
+            [
+                2,
+                75,
+                77,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "When the hearings start after nominations, the Judiciary Committee members and their staff look at the background of nominees.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 11,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "The Judiciary Committee does an investigative stage between the announcement of the nomination and the start of hearings. || Committee members and their staffs get ready for the hearings by looking over the background of the nominees and relevant issues.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "More recently, after a nominee is announced, the Judiciary Committee does some investigation before the hearings start. || During this time, committee members and their staffs get ready for the hearings by looking into the nominee's background and relevant issues.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "The Judiciary Committee does an investigation between the announcement of the nomination and the start of hearings. || In this investigation, committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 14,
+        "original": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee undertakes an investigative stage in which committee members and their staffs prepare for the hearings by looking over the background of the nominees and relevant issues.",
+        "original_spans": [],
+        "simplified": "In more recent practice, between the announcement of the nomination and the start of hearings, the Judiciary Committee and its staffs prepare for the hearings by looking over the background of the nominees and the issues that will be discussed in the hearings.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 15,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "In the first film adaptation, director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself. || In contrast, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 16,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first film adaptation, which contained many changes, Barbeau-Lavalette\u2019s film remained more faithful to the book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first film adaptation, which was entirely written out by director Samuel Fuller, had a younger fictional actress replace Seberg, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first movie, Barbeau-Lavalette did not change the character of Gary. || The first movie, directed by Samuel Fuller, changed the character of Gary, replaced Seberg with a younger actress, and made the story about the dog itself.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 19,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "In the first movie adaptation, Samuel Fuller removed Gary, replaced Seberg with a younger fictional actress, and made the story center on the dog. || Meanwhile, Barbeay-Lavalette\u2019s movie adaptation was closer to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                147,
+                149,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 20,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will portray Reality Winner, the whistle-blower, in a dark comedy bio-pic. || Kerry Howley wrote the script, which is based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" || Fogel will also direct the movie.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ],
+            [
+                2,
+                205,
+                207,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 21,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "In the New York Magazine movie, \u201cWho is Reality Winner?\u201d, Emilia Jones portrays the whistle-blower known as Reality Winner. || The script was written by Kerry Howley with Fogel directing.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner with Fogel also on board to direct from a script written by Kerry Howley based on her own 2017 New York Magazine feature.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 23,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will play the whistle-blower Reality Winner from a script written by Kerry Howley. || It is based on her own feature, \"Who Is Reality Winner?\" || and Fogel will direct.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ],
+            [
+                2,
+                156,
+                158,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 24,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones will portray the whistle-blower Reality Winner in a bio-pic that is described as darkly comedic. || The script was written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" || Fogel is on board to direct.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ],
+            [
+                2,
+                226,
+                228,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 25,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests, which were violently quelled by Iran's government, focused on election results or economic problems. || The current protest, however, has one main demand: that the Islamic Republic be removed from power.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    },
+    {
+        "id": 26,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Where earlier protests focused on election results or economic issues, the current protest, other than more rights for women, has one demand: get rid of the Islamic Republic.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 27,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests focused on election results or economic problems and were violently stopped by Iran\u2019s government. || In addition to increasing women\u2019s rights, the current protest has one main demand: the overthrow of the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                121,
+                123,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 28,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Whereas earlier major protests were quelled by Iran's government, the current protest has one main demand: the overthrow of the Islamic Republic.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 29,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests were violently stopped by Iran's government. || These protests were about election results or economic problems. || The current protest is about getting more rights for women and the overthrow of the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ],
+            [
+                2,
+                136,
+                138,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 30,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "When Flynn got support to become council president, Arroyo sent out a message. || The message was an informal concession that praised Flynn\u2019s kindness and work ethic. || It also said that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "simplified_spans": [
+            [
+                2,
+                79,
+                81,
+                0
+            ],
+            [
+                2,
+                167,
+                169,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "When it was clear Flynn was going to be council president, Arroyo gave a concession speech. || He praised Flynn\u2019s good qualities and said that he wants to see Flynn use these qualities while president.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement. || In the statement, Arroyo gave strong praise to Flynn's kindness and work ethic. || Arroyo also declared that he looked forward to \"seeing how Flynn utilizes those great qualities in this leadership role.\"",
+        "simplified_spans": [
+            [
+                2,
+                128,
+                130,
+                0
+            ],
+            [
+                2,
+                211,
+                213,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 33,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "After Flynn got enough support to become council president, Arroyo released a statement that was like a concession. || He praised Flynn's kindness and work ethic, and said that he looked forward \"to seeing how Flynn uses those qualities in this leadership role.\"",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 34,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "However, after Flynn was able to get enough support to become council president, Arroyo said that he was happy for him. || Arroyo said that he was happy for Flynn's kindness and work ethic, and that he looked forward to seeing how Flynn used those qualities in his new job.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/Muss"
+    }
+]
