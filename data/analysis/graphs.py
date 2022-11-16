@@ -493,3 +493,28 @@ def simpeval_agreement(data, average=True):
     plt.figtext(.1, .8, f"corr = {kt.correlation:.2f} | p = {kt.pvalue:.2f}")
     plt.title(f'SimpEval Correlation ({len(pts)} sentences)')
     plt.show()
+
+def edit_length(data, systems, type_='edit_dist', simpeval=False):
+    total_sent = 0
+    for system in systems:
+        if type_ == 'edit_dist':
+            plt.ylabel('Edit Distance')
+            if simpeval:
+                scores = [(avg(sent['simpeval_scores'], prec=10), edit_dist(sent['original'], sent['simplified'])) for sent in data if sent['system'] == system]
+            else:
+                scores = [(sent['score'], edit_dist(sent['original'], sent['simplified'])) for sent in data if sent['system'] == system]
+        elif type_ == 'char_diff':
+            plt.ylabel('% of sentence modified')
+            if simpeval:
+                scores = [(avg(sent['simpeval_scores'], prec=10), sum([x['size'] for x in sent['processed_annotations']])) for sent in data if sent['system'] == system]
+            else:
+                scores = [(sent['score'], sum([x['size'] for x in sent['processed_annotations']])) for sent in data if sent['system'] == system]
+        plt.scatter([p[0] for p in scores], [p[1] for p in scores], c=color_mapping[system], alpha=0.5, label=system_name_mapping[system])
+        total_sent += len(scores)
+    if simpeval:
+        plt.xlabel('SimpEval score')
+    else:
+        plt.xlabel('Our score')
+    plt.title(f'Scoring vs. Edits ({total_sent} sentences)')
+    plt.legend()
+    plt.show()
