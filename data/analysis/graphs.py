@@ -28,7 +28,13 @@ color_mapping = {
     'new_systems/turk_corpus_random.txt': 'blue',
     'systems/T5.txt': 'red',
     'systems/asset.test.simp': 'green',
-    'systems/con_simplification.txt': 'purple'
+    'systems/con_simplification.txt': 'purple',
+
+    'new-wiki-1/Muss': '#FFB145',
+    'new-wiki-1/GPT-3-zero-shot': '#FF4545',
+    'new-wiki-1/GPT-3-few-shot': '#FF45D7',
+    'new-wiki-1/Human 1 Writing': '#45FFDA',
+    'new-wiki-1/Human 2 Writing': '#45FF7A'
 }
 
 # Maps system codes to names
@@ -43,6 +49,11 @@ system_name_mapping = {
     'systems/lstm_w_split.txt': 'LSTM Split',
     'systems/transformer_w_split.txt': 'BERT Split',
     'systems/con_simplification.txt': 'Controllable',
+    'new-wiki-1/Muss': 'MUSS',
+    'new-wiki-1/GPT-3-zero-shot': 'GPT-3 Zero',
+    'new-wiki-1/GPT-3-few-shot': 'GPT-3 Few',
+    'new-wiki-1/Human 1 Writing': 'Human 1',
+    'new-wiki-1/Human 2 Writing': 'Human 2'
 }
 
 # Don't need this 
@@ -77,10 +88,15 @@ all_system_labels = [x for x in [
     'systems/transformer_w_split.txt',
     'systems/con_simplification.txt',
     'systems/T5.txt',
+    'new-wiki-1/Muss',
+    'new-wiki-1/GPT-3-zero-shot',
+    'new-wiki-1/GPT-3-few-shot',
     'new_systems/turk_corpus_random.txt',
     'new_systems/simple_wiki.txt',
     'systems/asset.test.simp',
-    'new_systems/asset.test.simp.second'
+    'new_systems/asset.test.simp.second',
+    'new-wiki-1/Human 1 Writing',
+    'new-wiki-1/Human 2 Writing'
 ] if x in systems]
 
 # MatPlotLib parameters
@@ -105,7 +121,7 @@ def edit_type_by_system(data, flipped=True):
         ax.set_xlabel('System')
         ax.set_title('Edit Types by System')
         ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
-        ax.plot([1.5, 1.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+        ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
     else:
         fig, ax = plt.subplots(figsize=(6, 4))
         bottom = [0 for x in range(len(edit_types))]
@@ -138,7 +154,7 @@ def system_by_information_change(data):
     ax.set_xlabel('System')
     ax.set_title('Information Change by System')
     ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
-    ax.plot([1.5, 1.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+    ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
     ax.legend()
     plt.show()
 
@@ -389,7 +405,7 @@ def sankey_combined(data):
     
 def draw_agreement(sents):
     sents = sorted(sents, key=lambda x: x['user'], reverse=True)
-    annotator = sorted(list(set([x['user'] for x in sents])), reverse=True)
+    annotator = sorted(list(set([f"{x['user']}\nBatch {x['batch']}\nHIT {x['hit_id']+1}" for x in sents])), reverse=True)
 
     fig, ax = plt.subplots(2)
     for axis_num, sent_type in enumerate(['original_span', 'simplified_span']):
@@ -429,7 +445,8 @@ def draw_agreement(sents):
         ax[axis_num].spines['right'].set_visible(False)
     
     # plt.legend([b1, b2], ["None", "Deletion", "Substitution"], title="Edit Type", loc="upper right")
-    fig.suptitle(f'Batch {sents[0]["batch"]} | HIT {sents[0]["hit_id"]+1}')
+    # fig.suptitle(f'Batch {sents[0]["batch"]} | HIT {sents[0]["hit_id"]+1}')
+    fig.suptitle(f"{sents[0]['original'][:30]}...")
 
     fig.show()
 

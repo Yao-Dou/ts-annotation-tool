@@ -107,6 +107,10 @@ def associate_spans(sent):
     counts = count_edits(sent)
     for type_ in counts.keys():
         annotations = sent['annotations'][type_]
+        if counts[type_] != 0 and counts[type_] + 1 > len(annotations):
+            print(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations) - 1} annotations. Likely a missing annotation. Skipping edit type...')
+            edits += []
+            continue
         for i in range(1, counts[type_]+1):
             # Get all spans corresponding to the ID
             orig_span = [x for x in orig_spans if x['id'] == i and x['type'] == type_]
@@ -367,12 +371,14 @@ def add_simpeval_scores(data, json=False):
     out = copy.deepcopy(data)
     for i in range(len(out)):
         sent = out[i]
-        scores = [entry for entry in simeval_sents if entry[0] == sent['original'] and entry[2] == sent['system']][0][7:]
-        scores = [float(x) for x in scores]
-        out[i]['simpeval_scores'] = scores
+        simpeval_scores = [entry for entry in simeval_sents if entry[0] == sent['original'] and entry[2] == sent['system']]
+        if len(simpeval_scores) != 0:
+            scores = [0][7:]
+            scores = [float(x) for x in scores]
+            out[i]['simpeval_scores'] = scores
     return out
 
-def load_data(path, batch_num=None, preprocess=False):
+def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     data = []
 
     if not 'annotated' in path:
@@ -396,7 +402,7 @@ def load_data(path, batch_num=None, preprocess=False):
     batches = set([int(x.split('.')[-2].split('_')[-2]) for x in files])
     for batch_num in batches:
         for filename in [x for x in files if ('batch_' + str(batch_num)) in x]:
-            with open(filename) as f:
+            with open(filename, encoding='utf-8') as f:
                 individual_annotation = json.load(f)
                 for entry in individual_annotation:
                     entry['user'] = filename.split('.')[-2].split('_')[-1]
@@ -405,6 +411,21 @@ def load_data(path, batch_num=None, preprocess=False):
                     entry['id'] += id_counter
                 data += individual_annotation
         id_counter += len(individual_annotation)
+
+    # ID is used to identify unique sentences, this WAS okay in the past because
+    # each batch was the same ordering, but now that batches are randomized, this
+    # needs to be re-done once sentences are loaded
+    # Really should be grouped by original and system, because two systems could have the same simplification
+    if realign_ids:
+        unique_sents = [sent['simplified'] for sent in data]
+        unique_sents = [i for n, i in enumerate(unique_sents) if i not in unique_sents[:n]] # remove duplicates while retaining ordering
+        new_data = []
+        for i in range(len(unique_sents)):
+            sents = sorted([sent for sent in data if sent['simplified'] == unique_sents[i]], key=lambda x: x['user'])
+            for sent in sents:
+                sent['id'] = i
+            new_data.extend(sents)
+        data = new_data
 
     print(f'Found users: {set([sent["user"] for sent in data])}\n')
 
