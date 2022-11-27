@@ -25,6 +25,11 @@ class Error(Enum):
     UNNECESSARY_INSERTION = 'Unnecessary Insertion'
     COMPLEX_WORDING = 'Complex Wording'
 
+class Family(Enum):
+    CONTENT = 'Content'
+    SYNTAX = 'Syntax'
+    LEXICAL = 'Lexical'
+
 class Quality(Enum):
     QUALITY = 'No Error'
     TRIVIAL = 'Trivial'

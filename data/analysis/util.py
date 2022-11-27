@@ -71,7 +71,7 @@ def count_info_change(sent):
     return out
 
 # Gets sum of all edits, optionally filtered by system
-def sum_edits(data, system=None):
+def sum_edits(data, system=None, normalized=False):
     if system is not None:
         data = get_sentences_for_system(data, system)
     
@@ -84,6 +84,11 @@ def sum_edits(data, system=None):
         num_edits = count_edits(sent)
         for type_ in num_edits.keys():
             out[type_] += num_edits[type_]
+        
+    if normalized:
+        for type_ in out.keys():
+            if len(data) != 0:
+               out[type_] /= len(data)
     return out
 
 # Get sum of all information change types

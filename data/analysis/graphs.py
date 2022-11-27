@@ -105,13 +105,18 @@ plt.rcParams["figure.figsize"] = [7.5, 4]
 plt.rcParams["figure.autolayout"] = True
 plt.rcParams["figure.max_open_warning"] = False
 
-def edit_type_by_system(data, flipped=True):
+def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False):
+    # Normalized will divide the number of edits by the total number of sentences
+
     # Create sums of different dimensions
-    sum_edit_types = {system: sum_edits(data, system=system) for system in systems}
+    sum_edit_types = {system: sum_edits(data, system=system, normalized=normalized) for system in systems}
     system_labels = [x for x in all_system_labels if x in set([sent['system'] for sent in data])]
-    
+
     if flipped:
-        fig, ax = plt.subplots(figsize=(8, 4))
+        size = (8, 4)
+        if all_datasets:
+            size = (10, 4)
+        fig, ax = plt.subplots(figsize=size)
         bottom = [0 for x in range(len(system_labels))]
         for edit_type in edit_type_labels:
             val = [sum_edit_types[label][edit_type] for label in system_labels]
@@ -121,7 +126,10 @@ def edit_type_by_system(data, flipped=True):
         ax.set_xlabel('System')
         ax.set_title('Edit Types by System')
         ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
-        ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+        line_location = [2.5, 2.5]
+        if all_datasets:
+            line_location = [4.5, 4.5]
+        ax.plot(line_location, [0, ax.get_ylim()[-1]], ls='--', c='k')
     else:
         fig, ax = plt.subplots(figsize=(6, 4))
         bottom = [0 for x in range(len(edit_types))]

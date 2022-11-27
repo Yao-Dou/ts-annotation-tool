@@ -152,10 +152,10 @@ def process_del_info(raw_annotation):
 
     # Deal with annotators sometimes not filling out all fields
     if grammar_error == '':
-        print(f"Couldn't process grammar for deletion: {raw_annotation}. Assuming 'no'...")
+        # print(f"Couldn't process grammar for deletion: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
     if coreference == '':
-        print(f"Couldn't process coreference error for deletion: {raw_annotation}. Assuming 'no'...")
+        # print(f"Couldn't process coreference error for deletion: {raw_annotation}. Assuming 'no'...")
         coreference = 'no'
 
     rating, grammar_error, coreference = quality_mapping[rating], error_mapping[coreference], error_mapping[grammar_error]
@@ -209,7 +209,7 @@ def process_same_info(raw_annotation):
 
     # Deal with annotators sometimes not filling out all fields
     if grammar_error == '':
-        print(f"Couldn't process grammar for substitution: {raw_annotation}. Assuming 'no'...")
+        # print(f"Couldn't process grammar for substitution: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
         if pos_rating == '':
             print(f"Couldn't process positive rating for substitution: {raw_annotation}. Assuming 'somewhat'...")
@@ -289,6 +289,16 @@ def process_annotation(edit):
     if error_type is not None:
         edit_quality = Quality.ERROR
 
+    # Determine the family of edit based on edit type and information change
+    edit_family = None
+    if information_impact != Information.SAME:
+        edit_family = Family.CONTENT
+    elif edit_type == 'substitution':
+        edit_family = Family.LEXICAL
+    else:
+        edit_family = Family.SYNTAX
+
+
     # Get the length of the edit
     size = calculate_edit_length(edit['original_span'], edit['simplified_span'])
 
@@ -297,6 +307,7 @@ def process_annotation(edit):
         'id': edit['id'],
         'information_impact': information_impact,
         'type': edit_quality,
+        'family': edit_family,
         'grammar_error': grammar_error,
         'error_type': error_type,
         'rating': rating,
@@ -390,7 +401,10 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
 
     # Only include files of a single batch
     if (batch_num is not None):
-        files = [x for x in files if ('batch_' + str(batch_num)) in x]
+        selected_files = []
+        for num in batch_num:
+            selected_files.extend([x for x in files if ('batch_' + str(num)) in x])
+        files = selected_files
 
     # Exclude corrupted file
     files = [x for x in files if 'batch_2_rachel' not in x]
