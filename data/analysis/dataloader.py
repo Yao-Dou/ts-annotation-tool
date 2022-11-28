@@ -160,10 +160,16 @@ def process_del_info(raw_annotation):
 
     rating, grammar_error, coreference = quality_mapping[rating], error_mapping[coreference], error_mapping[grammar_error]
     
+    edit_quality = Quality.QUALITY
     if coreference:
         error_type = Error.COREFERENCE
+        edit_quality = Quality.ERROR
+
+    if rating == 0 or rating == 1:
+        error_type = Error.BAD_DELETION
+        edit_quality = Quality.ERROR
     
-    return Quality.QUALITY, rating, error_type, grammar_error
+    return edit_quality, rating, error_type, grammar_error
 
 def process_add_info(raw_annotation):
     # ex. ['trivial', 'no', '', ''], ['elaboration', 'minor', 'no'], ['repetition', 'somewhat', 'no']
@@ -201,7 +207,7 @@ def process_add_info(raw_annotation):
     return edit_quality, rating, error_type, grammar_error
 
 
-def process_same_info(raw_annotation):
+def process_same_info(raw_annotation, edit_type):
     # ex. (substitution) ['positive', 'a lot', 'minor', 'no']
     # ex. (reorder) ['negative', 'a lot', '', 'no', 'word']
     # ex. (structure) ['positive', '', 'a lot', 'no'], ['positive', '', 'somewhat', 'yes']
@@ -212,18 +218,27 @@ def process_same_info(raw_annotation):
         # print(f"Couldn't process grammar for substitution: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
         if pos_rating == '':
-            print(f"Couldn't process positive rating for substitution: {raw_annotation}. Assuming 'somewhat'...")
+            # print(f"Couldn't process positive rating for substitution: {raw_annotation}. Assuming 'somewhat'...")
             pos_rating = 'somewhat'
   
     edit_quality, grammar_error = impact_mapping[edit_quality], error_mapping[grammar_error]
+
     error_type = None
     if edit_quality == Quality.QUALITY:
         rating = simplification_quality_mapping[pos_rating]
     elif edit_quality == Quality.ERROR:
         rating = severity_mapping[neg_rating]
-        error_type = Error.COMPLEX_WORDING
-    else:
+        if edit_type == 'substitution':
+            error_type = Error.COMPLEX_WORDING
+        elif edit_type == 'reorder':
+            error_type = Error.BAD_REORDER
+        elif edit_type == 'structure':
+            error_type = Error.BAD_STRUCTURE
+        elif edit_type == 'split':
+            error_type = Error.BAD_SPLIT
+    elif edit_quality == Quality.TRIVIAL:
         rating = None
+
     return edit_quality, rating, error_type, grammar_error
 
 def process_diff_info(raw_annotation):
@@ -257,6 +272,7 @@ def process_annotation(edit):
         raise Exception(f'Could not process edit: {edit}')
 
     information_impact = Information.SAME
+    reorder_level = None
     
     # Classify edit types into their information change
     if (edit_type == 'deletion'):
@@ -267,7 +283,6 @@ def process_annotation(edit):
         information_impact = information_mapping[raw_annotation[0]]
         raw_annotation = raw_annotation[1:]
     elif (edit_type == 'reorder'):
-        # TODO: need to incorporate reorder level into annotation somehow
         reorder_level = reorder_mapping[raw_annotation[-1]] if raw_annotation[-1] != '' else None
         raw_annotation = raw_annotation[:-1]
         swap_same_sub_fix(raw_annotation)
@@ -283,7 +298,7 @@ def process_annotation(edit):
     elif (information_impact == Information.DIFFERENT):
         edit_quality, rating, error_type, grammar_error = process_diff_info(raw_annotation)
     else:
-        edit_quality, rating, error_type, grammar_error = process_same_info(raw_annotation)
+        edit_quality, rating, error_type, grammar_error = process_same_info(raw_annotation, edit_type)
 
     # For berevity, we simply set the error type to ERROR if any error exists
     if error_type is not None:
@@ -312,6 +327,7 @@ def process_annotation(edit):
         'error_type': error_type,
         'rating': rating,
         'size': size,
+        'reorder_level': reorder_level
     }
 
 # def process_annotations(annotations):
@@ -399,7 +415,7 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
 
     files = sorted(files)
 
-    # Only include files of a single batch
+    # Only include files of a specified batches
     if (batch_num is not None):
         selected_files = []
         for num in batch_num:

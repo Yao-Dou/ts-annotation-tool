@@ -252,3 +252,75 @@ def edit_dist(s1, s2):
                 distances_.append(1 + min((distances[i1], distances[i1 + 1], distances_[-1])))
         distances = distances_
     return distances[-1]
+
+def get_edits_by_family(data, family):
+    out = {}
+    systems = set([sent['system'] for sent in data])
+    for system in systems:
+        sents = [sent for sent in data if sent['system'] == system]
+        anns = [ann for sent in sents for ann in sent['processed_annotations']]
+        selected = [ann for ann in anns if ann['family'] == family]
+
+        quality_edits = [ann for ann in selected if ann['type'] == Quality.QUALITY]
+        quality_annotations = {}
+        if family == Family.CONTENT:
+            for impact in Information:
+                quality_annotations[impact] = len([ann for ann in quality_edits if ann['information_impact'] == impact])
+        elif family == Family.SYNTAX:
+            for reorder_level in ReorderLevel:
+                quality_annotations[reorder_level] = len([ann for ann in quality_edits if ann['reorder_level'] == reorder_level])
+            quality_annotations[Edit.STRUCTURE] = len([ann for ann in quality_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
+        elif family == Family.LEXICAL:
+            quality_annotations[Information.SAME] = len(quality_edits)
+
+        error_edits = [ann for ann in selected if ann['type'] == Quality.ERROR]
+        error_annotations = {}
+        if family == Family.CONTENT:
+            for error_type in Error:
+                error_annotations[error_type] = len([ann for ann in error_edits if ann['error_type'] == error_type])
+        elif family == Family.SYNTAX:
+            for reorder_level in ReorderLevel:
+                error_annotations[reorder_level] = len([ann for ann in error_edits if ann['reorder_level'] == reorder_level])
+            error_annotations[Edit.STRUCTURE] = len([ann for ann in error_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
+        elif family == Family.LEXICAL:
+            # TODO: This should be grammar error, not Quality.ERROR
+            # In general, counting the grammar edits is really weird
+            error_annotations[Quality.ERROR] = len([ann for ann in anns if ann['grammar_error']])
+            error_annotations[Error.COMPLEX_WORDING] = len([ann for ann in error_edits if ann['error_type'] == Error.COMPLEX_WORDING])
+
+        out[system] = {'quality': quality_annotations, 'error': error_annotations}
+    return out
+
+def get_ratings_by_edit_type(data, edit_type):
+    if edit_type == 'paraphrase':
+        family = Family.LEXICAL
+        edit_type = 'substitution'
+    elif edit_type == 'split' or edit_type == 'structure' or edit_type == 'reorder':
+        family = Family.SYNTAX
+    else:
+        raise ValueError(f'Edit type not supported for this operation: {edit_type}')
+
+    out = {}
+    systems = set([sent['system'] for sent in data])
+    for system in systems:
+        sents = [sent for sent in data if sent['system'] == system]
+        anns = [ann for sent in sents for ann in sent['processed_annotations']]
+        selected = [ann for ann in anns if ann['family'] == family]
+        selected = [ann for ann in anns if ann['edit_type'] == edit_type]
+
+        quality_edits = [ann for ann in selected if ann['type'] == Quality.QUALITY]
+        quality_annotations = {}
+        for rating in range(3):
+            quality_annotations[rating] = len([ann for ann in quality_edits if ann['rating'] == rating])
+        
+        error_edits = [ann for ann in selected if ann['type'] == Quality.ERROR]
+        error_annotations = {}
+        for rating in range(3):
+            error_annotations[rating] = len([ann for ann in error_edits if ann['rating'] == rating])
+
+        out[system] = {
+            'quality': quality_annotations, 
+            'trivial': len([ann for ann in selected if ann['type'] == Quality.TRIVIAL]),
+            'error': error_annotations}
+    return out
+    

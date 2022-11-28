@@ -34,7 +34,25 @@ color_mapping = {
     'new-wiki-1/GPT-3-zero-shot': '#FF4545',
     'new-wiki-1/GPT-3-few-shot': '#FF45D7',
     'new-wiki-1/Human 1 Writing': '#45FFDA',
-    'new-wiki-1/Human 2 Writing': '#45FF7A'
+    'new-wiki-1/Human 2 Writing': '#45FF7A',
+
+    Error.COREFERENCE: '#e65388',
+    Error.REPETITION: '#c3eb98',
+    Error.CONTRADICTION: '#c3eb98',
+    Error.HALLUCINATION: '#c3eb98',
+    Error.IRRELEVANT: '#c3eb98',
+    Error.INFORMATION_REWRITE: '#ca54e8',
+    Error.BAD_DELETION: '#eb6565',
+    Error.BAD_REORDER: '#81d3d6',
+    Error.BAD_STRUCTURE: '#ffc573',
+    Error.BAD_SPLIT: '#f5db87',
+    Error.UNNECESSARY_INSERTION: '#b0f5b7',
+    Error.COMPLEX_WORDING: '#8e88f7',
+
+    ReorderLevel.COMPONENT: '#7db39a',
+    ReorderLevel.WORD: '#54b387',
+    Edit.STRUCTURE: '#FF9F15',
+    Quality.ERROR: '#ad9ef0',
 }
 
 # Maps system codes to names
@@ -166,39 +184,28 @@ def system_by_information_change(data):
     ax.legend()
     plt.show()
 
-def errors_by_system(data):
+def errors_by_system(data, include_deletions=False):
     sum_errors_types = {system: sum_errors(data, system=system) for system in systems}
-    plotted_errors = [
-        Error.COREFERENCE, 
-        Error.REPETITION,  
-        Error.CONTRADICTION,  
-        Error.HALLUCINATION,  
-        Error.IRRELEVANT, 
-        Error.UNNECESSARY_INSERTION, 
-        Error.INFORMATION_REWRITE,
-        Error.COMPLEX_WORDING
-    ]
-
-    error_labels = [str(x).split('.')[1].lower().replace('_',' ') for x in plotted_errors]
+    plotted_errors = [x for x in Error if x != Error.BAD_DELETION or include_deletions]
     system_labels = [x for x in all_system_labels if x in set([sent['system'] for sent in data])]
 
-    fig, ax = plt.subplots(figsize=(6, 4))
-    bottom = [0 for x in range(len(error_labels))]
-
+    fig, ax = plt.subplots(figsize=(10, 4))
+    bottom = [0 for x in range(len(plotted_errors))]
     width = 0.15
 
     count = 0 
     for system in system_labels:
         val = [sum_errors_types[system][label] for label in plotted_errors]
-        x = np.arange(len(error_labels))
+        x = np.arange(len(plotted_errors))
         ax.bar(x-(2*width)+count*width, val, width, label=system_name_mapping[system])
         bottom = [bottom[i] + val[i] for i in range(len(val))]
         count += 1
     ax.set_ylabel('Number of errors')
     ax.set_title('Errors by System')
-    ax.plot([4.5, 4.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
-    ax.legend()
-    plt.xticks(x, error_labels, rotation=45, ha="right")
+    ax.plot([5.5, 5.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+    ax.plot([8.5, 8.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+    ax.legend(bbox_to_anchor=(1, 1), loc="upper left")
+    plt.xticks(x, [x.value for x in plotted_errors], rotation=45, ha="right")
     plt.show()
 
 def sankey_seperated(data):
@@ -542,4 +549,124 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False):
         plt.xlabel('Our score')
     plt.title(f'Scoring vs. Edits ({total_sent} sentences)')
     plt.legend()
+    plt.show()
+
+def edits_by_family(data, family):
+    out = get_edits_by_family(data, family)
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    width = 0.35
+
+    # Get the system labels by preserving the order of systems
+    system_labels = [x for x in system_name_mapping if x in out.keys()]
+    x = np.arange(len(system_labels))
+
+    # Graph the quality edits
+    quality_data = {system : out[system]['quality'] for system, _ in out.items()}
+    bottom = [0 for x in range(len(system_labels))]
+    if family == Family.CONTENT:
+        quality_iterator = Information
+    elif family == Family.SYNTAX:
+        quality_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+    elif family == Family.LEXICAL:
+        quality_iterator = [Information.SAME]
+    for quality_type in quality_iterator:
+        val = [quality_data[label][quality_type] for label in system_labels]
+        if sum(val) != 0:
+            ax.bar(x - width/2 - 0.05, val, width, bottom=bottom, label=quality_type.value, color=color_mapping[quality_type])
+        bottom = [bottom[i] + val[i] for i in range(len(val))]
+
+    ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
+
+    # Graph the error edits
+    error_data = {system : out[system]['error'] for system, _ in out.items()}
+    bottom = [0 for x in range(len(system_labels))]
+    if family == Family.CONTENT:
+        error_iterator = Error
+    elif family == Family.SYNTAX:
+        error_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+    elif family == Family.LEXICAL:
+        error_iterator = [Error.COMPLEX_WORDING, Quality.ERROR]
+    for error_type in error_iterator:
+        val = [error_data[label][error_type] for label in system_labels]
+        if sum(val) != 0:
+            ax.bar(x + width/2 + 0.05, val, width, bottom=bottom, label=error_type.value, color=color_mapping[error_type])
+        bottom = [bottom[i] + val[i] for i in range(len(val))]
+
+    displayed_x_labels = [system_name_mapping[label] for label in system_labels]
+
+    if family == Family.CONTENT:
+        ax.set_title('Content Edits by System')
+    elif family == Family.SYNTAX:
+        ax.set_title('Syntax Edits by System')
+    elif family == Family.LEXICAL:
+        ax.set_title('Lexical Edits by System')
+    ax.set_xlabel('System')
+    ax.set_xticklabels(['none'] + displayed_x_labels)
+    # ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+    ax.legend(bbox_to_anchor=(1, 1), loc="upper left")
+
+    # Set the margins a little higher than the max value
+    plt.ylim(0, max([sum(x.values()) for x in quality_data.values()]) + 10)
+
+    plt.show()
+
+# Select one of : Paraphrase, Split, Structure, Reorder
+# Could do this with deletions as well
+def ratings_by_edit_type(data, edit_type):
+    out = get_ratings_by_edit_type(data, edit_type)
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    width = 0.12
+
+    # Get the system labels by preserving the order of systems
+    system_labels = [x for x in system_name_mapping if x in out.keys()]
+    x = np.arange(len(system_labels))
+
+    custom_color_mapping = {
+        'quality': {
+            0: '#b8ffbf',
+            1: '#91ff9c',
+            2: '#61ed6f'
+        },
+        'trivial': '#cccccc',
+        'error': {
+            0: '#ffbaba',
+            1: '#fc8d8d',
+            2: '#f76a6a'
+        }
+    }
+
+    # Graph the quality edits
+    spacing = [x + width, x + 2*width, x + 3*width]
+    quality_data = {system : out[system]['quality'] for system, _ in out.items()}
+    for rating in range(3):
+        bottom = [0 for x in range(len(system_labels))]
+        val = [quality_data[label][rating] for label in system_labels]
+        ax.bar(spacing[rating], val, width, label=rating + 1, color=custom_color_mapping['quality'][rating])
+        
+    # Graph the error edits
+    spacing = [x - width, x - 2*width, x - 3*width]
+    error_data = {system : out[system]['error'] for system, _ in out.items()}
+    for rating in reversed(range(3)):
+        bottom = [0 for x in range(len(system_labels))]
+        val = [error_data[label][rating] for label in system_labels]
+        ax.bar(spacing[rating], val, width,label=-rating-1, color=custom_color_mapping['error'][rating])
+
+    # Graph the trivial edits
+    trvial_data = {system : out[system]['trivial'] for system, _ in out.items()}
+    bottom = [0 for x in range(len(system_labels))]
+    val = [trvial_data[label] for label in system_labels]
+    ax.bar(x, val, width, label=0, color=custom_color_mapping['trivial'])
+
+    displayed_x_labels = [system_name_mapping[label] for label in system_labels]
+
+    ax.set_title(f'{edit_type.capitalize()} Ratings by System')
+    ax.set_xlabel('System')
+    ax.set_xticklabels(['none'] + displayed_x_labels)
+    ax.legend(bbox_to_anchor=(1, 1), loc="upper left")
+
+    # Set the margins a little higher than the max value
+    plt.ylim(0, max([max(x.values()) for x in quality_data.values()]) + 10)
+
     plt.show()

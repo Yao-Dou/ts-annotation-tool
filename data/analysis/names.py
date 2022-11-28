@@ -10,18 +10,26 @@ class Edit(Enum):
     SPLIT = 'Split'
 
 class Information(Enum):
-    LESS = 'Less Information'
+    LESS = 'Generalization'
     SAME = 'Same Information'
-    MORE = 'More Information'
+    MORE = 'Elaboration'
     DIFFERENT = 'Different Information'
 
 class Error(Enum):
+    # Explicit Content Errors
     COREFERENCE = 'Coreference'
-    INFORMATION_REWRITE = 'Information Rewrite'
     REPETITION = 'Repetition'
     CONTRADICTION = 'Contradiction'
     HALLUCINATION = 'Hallucination'
     IRRELEVANT = 'Irrelevant'
+    INFORMATION_REWRITE = 'Information Rewrite'
+    # Implicit Content Errors
+    BAD_DELETION = 'Bad Deletion'
+    # Structure Errors
+    BAD_REORDER = 'Bad Reorder'
+    BAD_STRUCTURE = 'Bad Structure'
+    BAD_SPLIT = 'Bad Split'
+    # Lexical Errors
     UNNECESSARY_INSERTION = 'Unnecessary Insertion'
     COMPLEX_WORDING = 'Complex Wording'
 
