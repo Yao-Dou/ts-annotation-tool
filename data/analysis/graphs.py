@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import numpy as np
+import copy
 from names import *
 from util import *
 from dataloader import quality_mapping
@@ -71,7 +72,11 @@ system_name_mapping = {
     'new-wiki-1/GPT-3-zero-shot': 'GPT-3 Zero',
     'new-wiki-1/GPT-3-few-shot': 'GPT-3 Few',
     'new-wiki-1/Human 1 Writing': 'Human 1',
-    'new-wiki-1/Human 2 Writing': 'Human 2'
+    'new-wiki-1/Human 2 Writing': 'Human 2',
+
+    'aggregated/asset': 'ASSET',
+    'aggregated/turk': 'Turk Corpus',
+    'aggregated/human': 'Our Data'
 }
 
 # Don't need this 
@@ -114,7 +119,11 @@ all_system_labels = [x for x in [
     'systems/asset.test.simp',
     'new_systems/asset.test.simp.second',
     'new-wiki-1/Human 1 Writing',
-    'new-wiki-1/Human 2 Writing'
+    'new-wiki-1/Human 2 Writing',
+
+    'aggregated/turk',
+    'aggregated/asset',
+    'aggregated/human'
 ] if x in systems]
 
 # MatPlotLib parameters
@@ -123,7 +132,31 @@ plt.rcParams["figure.figsize"] = [7.5, 4]
 plt.rcParams["figure.autolayout"] = True
 plt.rcParams["figure.max_open_warning"] = False
 
-def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False):
+def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False, humans=False):
+    if humans:
+        humans = ['Human', 'asset', 'turk_corpus']
+        data = [sent for sent in copy.deepcopy(data) if any([human in sent['system'] for human in humans])]
+        for sent_id in range(len(data)):
+            sys_name = data[sent_id]['system']
+            if 'Human' in sys_name:
+                data[sent_id]['system'] = 'aggregated/human'
+            elif 'asset' in sys_name:
+                data[sent_id]['system'] = 'aggregated/asset'
+            elif 'turk_corpus' in sys_name:
+                data[sent_id]['system'] = 'aggregated/turk'
+
+    size = (8, 4)
+    width = 0.5
+    if all_datasets:
+        size = (10, 4)
+    if humans:
+        size = (4, 4)
+        width = 0.8
+
+    line_location = [2.5, 2.5]
+    if all_datasets:
+        line_location = [4.5, 4.5]
+
     # Normalized will divide the number of edits by the total number of sentences
 
     # Create sums of different dimensions
@@ -131,9 +164,6 @@ def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False
     system_labels = [x for x in all_system_labels if x in set([sent['system'] for sent in data])]
 
     if flipped:
-        size = (8, 4)
-        if all_datasets:
-            size = (10, 4)
         fig, ax = plt.subplots(figsize=size)
         bottom = [0 for x in range(len(system_labels))]
         for edit_type in edit_type_labels:
@@ -144,13 +174,17 @@ def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False
         ax.set_xlabel('System')
         ax.set_title('Edit Types by System')
         ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
-        line_location = [2.5, 2.5]
-        if all_datasets:
-            line_location = [4.5, 4.5]
-        ax.plot(line_location, [0, ax.get_ylim()[-1]], ls='--', c='k')
+
+        if not humans:
+            ax.plot(line_location, [0, ax.get_ylim()[-1]], ls='--', c='k')
+
+        if humans:
+            ax.set_title('')
+            ax.set_ylabel('# Edits per Sentence')
+            ax.set_xlabel('Dataset')
     else:
         fig, ax = plt.subplots(figsize=(6, 4))
-        bottom = [0 for x in range(len(edit_types))]
+        bottom = [0 for x in range(len(edit_type_labels))]
 
         for system in system_labels:
             val = [sum_edit_types[system][label] for label in edit_type_labels]
@@ -159,6 +193,12 @@ def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False
         ax.set_ylabel('Number of edits')
         ax.set_title('Edit Types by System')
     ax.legend()
+
+    out_filename = 'img/edit-type-systems.svg'
+    if humans:
+        out_filename = "img/edit-type-human-written.svg"
+    plt.savefig(out_filename, format="svg")
+
     plt.show()
 
 def system_by_information_change(data):
@@ -551,64 +591,70 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False):
     plt.legend()
     plt.show()
 
-def edits_by_family(data, family):
-    out = get_edits_by_family(data, family)
-
-    fig, ax = plt.subplots(figsize=(8, 4))
+def edits_by_family(data, family=None):
+    fig, ax = plt.subplots(3, 1, figsize=(8, 11))
     width = 0.35
 
-    # Get the system labels by preserving the order of systems
-    system_labels = [x for x in system_name_mapping if x in out.keys()]
-    x = np.arange(len(system_labels))
+    for plt_idx, family in enumerate(Family):
+        out = get_edits_by_family(data, family)
+        # Get the system labels by preserving the order of systems
+        system_labels = [x for x in system_name_mapping if x in out.keys()]
+        x = np.arange(len(system_labels))
 
-    # Graph the quality edits
-    quality_data = {system : out[system]['quality'] for system, _ in out.items()}
-    bottom = [0 for x in range(len(system_labels))]
-    if family == Family.CONTENT:
-        quality_iterator = Information
-    elif family == Family.SYNTAX:
-        quality_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
-    elif family == Family.LEXICAL:
-        quality_iterator = [Information.SAME]
-    for quality_type in quality_iterator:
-        val = [quality_data[label][quality_type] for label in system_labels]
-        if sum(val) != 0:
-            ax.bar(x - width/2 - 0.05, val, width, bottom=bottom, label=quality_type.value, color=color_mapping[quality_type])
-        bottom = [bottom[i] + val[i] for i in range(len(val))]
+        # Graph the quality edits
+        quality_data = {system : out[system]['quality'] for system, _ in out.items()}
+        bottom = [0 for x in range(len(system_labels))]
+        if family == Family.CONTENT:
+            quality_iterator = Information
+        elif family == Family.SYNTAX:
+            quality_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+        elif family == Family.LEXICAL:
+            quality_iterator = [Information.SAME]
+        for quality_type in quality_iterator:
+            val = [quality_data[label][quality_type] for label in system_labels]
+            if sum(val) != 0:
+                ax[plt_idx].bar(x - width/2 - 0.05, val, width, bottom=bottom, label=quality_type.value, color=color_mapping[quality_type])
+            bottom = [bottom[i] + val[i] for i in range(len(val))]
 
-    ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
+        ax[plt_idx].set_yticks([i*round(max(bottom)/5) for i in range(6)])
 
-    # Graph the error edits
-    error_data = {system : out[system]['error'] for system, _ in out.items()}
-    bottom = [0 for x in range(len(system_labels))]
-    if family == Family.CONTENT:
-        error_iterator = Error
-    elif family == Family.SYNTAX:
-        error_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
-    elif family == Family.LEXICAL:
-        error_iterator = [Error.COMPLEX_WORDING, Quality.ERROR]
-    for error_type in error_iterator:
-        val = [error_data[label][error_type] for label in system_labels]
-        if sum(val) != 0:
-            ax.bar(x + width/2 + 0.05, val, width, bottom=bottom, label=error_type.value, color=color_mapping[error_type])
-        bottom = [bottom[i] + val[i] for i in range(len(val))]
+        # Graph the error edits
+        error_data = {system : out[system]['error'] for system, _ in out.items()}
+        bottom = [0 for x in range(len(system_labels))]
+        if family == Family.CONTENT:
+            error_iterator = Error
+        elif family == Family.SYNTAX:
+            error_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+        elif family == Family.LEXICAL:
+            error_iterator = [Error.COMPLEX_WORDING, Quality.ERROR]
+        for error_type in error_iterator:
+            val = [error_data[label][error_type] for label in system_labels]
+            if sum(val) != 0:
+                ax[plt_idx].bar(x + width/2 + 0.05, val, width, bottom=bottom, label=error_type.value, color=color_mapping[error_type])
+            bottom = [bottom[i] + val[i] for i in range(len(val))]
 
-    displayed_x_labels = [system_name_mapping[label] for label in system_labels]
+        displayed_x_labels = [system_name_mapping[label] for label in system_labels]
 
-    if family == Family.CONTENT:
-        ax.set_title('Content Edits by System')
-    elif family == Family.SYNTAX:
-        ax.set_title('Syntax Edits by System')
-    elif family == Family.LEXICAL:
-        ax.set_title('Lexical Edits by System')
-    ax.set_xlabel('System')
-    ax.set_xticklabels(['none'] + displayed_x_labels)
-    # ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
-    ax.legend(bbox_to_anchor=(1, 1), loc="upper left")
+        if family == Family.CONTENT:
+            ax[plt_idx].set_title('Content Edits')
+        elif family == Family.SYNTAX:
+            ax[plt_idx].set_title('Syntax Edits')
+        elif family == Family.LEXICAL:
+            ax[plt_idx].set_title('Lexical Edits')
+        
+        if family == Family.LEXICAL:
+            ax[plt_idx].set_xlabel('System')
+        ax[plt_idx].set_xticklabels(['none'] + displayed_x_labels)
+        # ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+        ax[plt_idx].legend(bbox_to_anchor=(1, 1), loc="upper left")
 
-    # Set the margins a little higher than the max value
-    plt.ylim(0, max([sum(x.values()) for x in quality_data.values()]) + 10)
+        # Set the margins a little higher than the max value
+        plt.ylim(0, max([sum(x.values()) for x in quality_data.values()]) + 10)
 
+    out_filename = f'img/edit-ratings-all.svg'
+    plt.savefig(out_filename, format="svg")
+
+    plt.tight_layout()
     plt.show()
 
 # Select one of : Paraphrase, Split, Structure, Reorder

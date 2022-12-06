@@ -165,6 +165,7 @@ def process_del_info(raw_annotation):
         error_type = Error.COREFERENCE
         edit_quality = Quality.ERROR
 
+    # I've manually checked this for correctness. 0 = very bad, 1 = bad
     if rating == 0 or rating == 1:
         error_type = Error.BAD_DELETION
         edit_quality = Quality.ERROR
@@ -400,9 +401,11 @@ def add_simpeval_scores(data, json=False):
         sent = out[i]
         simpeval_scores = [entry for entry in simeval_sents if entry[0] == sent['original'] and entry[2] == sent['system']]
         if len(simpeval_scores) != 0:
-            scores = [0][7:]
+            scores = simpeval_scores[0][7:]
             scores = [float(x) for x in scores]
             out[i]['simpeval_scores'] = scores
+        else:
+            out[i]['simpeval_scores'] = None
     return out
 
 def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
