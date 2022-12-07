@@ -1,6 +1,6 @@
 import copy
 import math
-from names import *
+from utils.names import *
 
 content_errors = [
     Error.HALLUCINATION,

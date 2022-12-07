@@ -1,5 +1,5 @@
 from sty import fg, bg, ef, rs
-from names import *
+from utils.names import *
 
 # try not to use this
 mapping = {

@@ -1,4 +1,3 @@
-from names import *
 from enum import Enum
 
 class Edit(Enum):

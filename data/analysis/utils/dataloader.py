@@ -3,9 +3,9 @@ import math
 import os
 import json
 import csv
-from util import *
-from types import *
-from scoring import *
+from utils.util import *
+from utils.names import *
+from utils.scoring import *
 
 # File paths
 simp_eval_json_path = '../simp_eval/21_systems_annotations.csv'

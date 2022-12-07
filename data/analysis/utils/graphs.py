@@ -2,9 +2,9 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import numpy as np
 import copy
-from names import *
-from util import *
-from dataloader import quality_mapping
+from utils.names import *
+from utils.util import *
+from utils.dataloader import quality_mapping
 from scipy.stats import kendalltau
 
 # Temporary for getting rid of errors
