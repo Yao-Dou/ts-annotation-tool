@@ -177,7 +177,7 @@ def generate_token_dict(sent):
     return tokens
 
 # Converts sentence to dictionary of (start, end) -> {edit_type: #}
-def get_annotations_per_token(sents, sent_type):
+def get_annotations_per_token(sents, sent_type, remove_none=True):
     edit_dict_value = sent_type + '_span'
     tokens = generate_token_dict(sents[0][sent_type])
     
@@ -202,10 +202,11 @@ def get_annotations_per_token(sents, sent_type):
                         print("there's a problem boss")
     
     # Remove spans with no annotations from any annotator
-    keys = list(tokens.keys())
-    for entry in keys:
-        if len(tokens[entry].keys()) == 0:
-            del tokens[entry]
+    if remove_none:
+        keys = list(tokens.keys())
+        for entry in keys:
+            if len(tokens[entry].keys()) == 0:
+                del tokens[entry]
     return tokens
     
 def st(text):

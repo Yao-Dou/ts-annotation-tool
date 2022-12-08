@@ -25,6 +25,7 @@ mapping = {
     'reorder': 4,
     'structure': 5
 }
+reverse_mapping = {v: k for k, v in mapping.items()}
     
 quality_mapping = {
     'very bad': 0,
@@ -82,17 +83,25 @@ reorder_mapping = {
 }
 
 # Creates basic metadata about each span
+
+# Structure also has a span[4] and span[5] entry, indicating
+# the composite type and the id of the span within the structure change
+
 def get_span_metadata(spans):
     out = []
     for type_ in mapping:
         spans_of_type = get_spans_by_type(spans, type_)
         for span in spans_of_type:
-            out += [{
+            entry = {
                 'id': span[3],
                 'type': type_,
                 'span': (span[1], span[2]),
                 'span_length': span[2] - span[1]
-            }]
+            }
+            if type_ == 'structure':
+                entry['composite_type'] = reverse_mapping[span[4]]
+                entry['composite_id'] = span[5]
+            out += [entry]
     return out
 
 # Creates 'edit' list for a sentence
@@ -128,14 +137,20 @@ def associate_spans(sent):
             orig_span = [x['span'] for x in orig_span] if orig_span is not empty_span else None
             simp_span = [x['span'] for x in simp_span] if simp_span is not empty_span else None
             
-            # Compile spans into edit
-            edits += [{
+            entry = {
                 'type': type_,
                 'id': i-1,
                 'original_span': orig_span,
                 'simplified_span': simp_span,
                 'annotation': annotations[i]
-            }]
+            }
+
+            # For structure edits, add composite edits
+            # if type_ == 'structure':
+                
+            
+            # Compile spans into edit
+            edits += [entry]
     return edits
 
 # Creates 'edit' list for all sentences
