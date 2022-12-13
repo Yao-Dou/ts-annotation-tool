@@ -39,9 +39,9 @@ color_mapping = {
 
     Error.COREFERENCE: '#e65388',
     Error.REPETITION: '#c3eb98',
-    Error.CONTRADICTION: '#c3eb98',
-    Error.HALLUCINATION: '#c3eb98',
-    Error.IRRELEVANT: '#c3eb98',
+    Error.CONTRADICTION: '#a2cf72',
+    Error.HALLUCINATION: '#b4ed77',
+    Error.IRRELEVANT: '#8ebd5c',
     Error.INFORMATION_REWRITE: '#ca54e8',
     Error.BAD_DELETION: '#eb6565',
     Error.BAD_REORDER: '#81d3d6',
@@ -592,7 +592,7 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False):
     plt.show()
 
 def edits_by_family(data, family=None):
-    fig, ax = plt.subplots(3, 1, figsize=(8, 11))
+    fig, ax = plt.subplots(3, 1, figsize=(6, 13))
     width = 0.35
 
     for plt_idx, family in enumerate(Family):
@@ -613,6 +613,11 @@ def edits_by_family(data, family=None):
         for quality_type in quality_iterator:
             val = [quality_data[label][quality_type] for label in system_labels]
             if sum(val) != 0:
+                # Custom labels
+                label = quality_type.value
+                if family == Family.SYNTAX:
+                    label = 'Quality ' + quality_type.value.lower() + ' edit'
+
                 ax[plt_idx].bar(x - width/2 - 0.05, val, width, bottom=bottom, label=quality_type.value, color=color_mapping[quality_type])
             bottom = [bottom[i] + val[i] for i in range(len(val))]
 
@@ -630,7 +635,14 @@ def edits_by_family(data, family=None):
         for error_type in error_iterator:
             val = [error_data[label][error_type] for label in system_labels]
             if sum(val) != 0:
-                ax[plt_idx].bar(x + width/2 + 0.05, val, width, bottom=bottom, label=error_type.value, color=color_mapping[error_type])
+                # Custom labels
+                label = error_type.value
+                if family == Family.SYNTAX or Family.LEXICAL:
+                    if label == 'Error':
+                        label = 'Grammar'
+                    label += ' Error'
+
+                ax[plt_idx].bar(x + width/2 + 0.05, val, width, bottom=bottom, label=label, color=color_mapping[error_type])
             bottom = [bottom[i] + val[i] for i in range(len(val))]
 
         displayed_x_labels = [system_name_mapping[label] for label in system_labels]
@@ -646,7 +658,16 @@ def edits_by_family(data, family=None):
             ax[plt_idx].set_xlabel('System')
         ax[plt_idx].set_xticklabels(['none'] + displayed_x_labels)
         # ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
-        ax[plt_idx].legend(bbox_to_anchor=(1, 1), loc="upper left")
+        # p5, = plot([0],  marker='None',
+        #    linestyle='None', label='dummy-empty')
+        # leg3 = legend([p5, p1, p2, p5, p3, p4],
+        #       ['Quality Edits'] + categories + ['Error Edits'] + categories,
+        #       bbox_to_anchor=(1, 1), loc="upper left", ncol=1)
+
+        ax[plt_idx].legend(loc='upper center', bbox_to_anchor=(0.5, -0.15),
+          fancybox=True, ncol=2)
+        
+        #.legend(bbox_to_anchor=(1, 1), loc="upper left")
 
         # Set the margins a little higher than the max value
         plt.ylim(0, max([sum(x.values()) for x in quality_data.values()]) + 10)

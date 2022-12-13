@@ -1,3 +1,4 @@
+import copy
 from sty import fg, bg, ef, rs
 from utils.names import *
 
@@ -293,30 +294,54 @@ def get_edits_by_family(data, family):
     return out
 
 def get_ratings_by_edit_type(data, edit_type):
+    information_change = None
     if edit_type == 'paraphrase':
         family = Family.LEXICAL
         edit_type = 'substitution'
     elif edit_type == 'split' or edit_type == 'structure' or edit_type == 'reorder':
         family = Family.SYNTAX
+    elif edit_type == 'elaboration' or edit_type == 'generalization':
+        family = Family.CONTENT
+        if edit_type == 'elaboration':
+            information_change = Information.MORE
+        elif edit_type == 'generalization':
+            information_change = Information.LESS
     else:
         raise ValueError(f'Edit type not supported for this operation: {edit_type}')
 
     out = {}
     systems = set([sent['system'] for sent in data])
     for system in systems:
+        score_range = 3
+
         sents = [sent for sent in data if sent['system'] == system]
         anns = [ann for sent in sents for ann in sent['processed_annotations']]
         selected = [ann for ann in anns if ann['family'] == family]
         selected = [ann for ann in anns if ann['edit_type'] == edit_type]
 
+        # Selecting content edits
+        if edit_type == 'elaboration' or edit_type == 'generalization':
+            selected = [ann for ann in anns if ann['information_impact'] == information_change]
+            if edit_type == 'generalization':
+                selected = copy.deepcopy(selected)
+                del_mapping = {
+                    None: None,
+                    0: 2,
+                    1: 1,
+                    2: 1,
+                    3: 2
+                }
+                for ann in selected:
+                    ann['rating'] = del_mapping[ann['rating']]
+
         quality_edits = [ann for ann in selected if ann['type'] == Quality.QUALITY]
         quality_annotations = {}
-        for rating in range(3):
+        for rating in range(score_range):
             quality_annotations[rating] = len([ann for ann in quality_edits if ann['rating'] == rating])
         
         error_edits = [ann for ann in selected if ann['type'] == Quality.ERROR]
         error_annotations = {}
-        for rating in range(3):
+        for rating in range(score_range):
             error_annotations[rating] = len([ann for ann in error_edits if ann['rating'] == rating])
 
         out[system] = {

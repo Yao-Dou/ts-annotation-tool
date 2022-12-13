@@ -8,7 +8,19 @@ content_errors = [
     Error.REPETITION,
     Error.IRRELEVANT,
     Error.COREFERENCE,
-    Error.INFORMATION_REWRITE
+    Error.INFORMATION_REWRITE,
+    Error.BAD_DELETION
+]
+
+syntax_errors = [
+    Error.BAD_REORDER,
+    Error.BAD_STRUCTURE,
+    Error.BAD_SPLIT
+]
+
+lexical_errors = [
+    Error.COMPLEX_WORDING,
+    Error.UNNECESSARY_INSERTION
 ]
 
 # Scores for "good" edits (excl. less info)
@@ -41,8 +53,10 @@ default_params = {
     'good_insertion': 2,
     'good_paraphrase': 2,
     'good_syntax': 6,
-    'grammar_error': -1.5,
     'content_error': -2,
+    'syntax_error': -1,
+    'lexical_error': -1.5,
+    'grammar_error': -1,
     'size_calculation': 'log'
 }
 
@@ -89,6 +103,12 @@ def calculate_annotation_score(annotation, parameters):
 
     if annotation['error_type'] in content_errors:
         edit_score = abs(edit_score) * parameters['content_error']
+
+    if annotation['error_type'] in syntax_errors:
+        edit_score = abs(edit_score) * parameters['syntax_error']
+
+    if annotation['error_type'] in lexical_errors:
+        edit_score = abs(edit_score) * parameters['lexical_error']
 
     # Calculate the annotation size
     annotation_size = annotation['size']
