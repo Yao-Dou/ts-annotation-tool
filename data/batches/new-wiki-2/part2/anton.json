@@ -1,0 +1,673 @@
+[
+    {
+        "id": 0,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "Critics praised the film's direction by Coogler, the action sequences, production and costume design, and the performances of Wright, Gurira, Huerta, and Bassett. || They also approved of its emotional weight, musical score, and its tributes to Boseman. || However, the runtime was criticized.",
+        "simplified_spans": [
+            [
+                2,
+                163,
+                165,
+                0
+            ],
+            [
+                2,
+                254,
+                256,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The film received overall positive reviews with most of its qualities receiving praise. || However, its runtime received criticism.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 2,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "Film critics praised Coogler\u2019s direction, action scenes, production and costume design, the cast\u2019s performances, emotional weight, musical score, and tributes to Boseman. || Some critics disliked the length of the movie.",
+        "simplified_spans": [
+            [
+                2,
+                171,
+                173,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "Critics praised Coogler's directing, action sequences, production, costume design, the cast's performances (especially those of Wright, Gurira, Huerta, and Bassett), the emotional weight, music, and tributes to Boseman. || However, they criticized its long runtime.",
+        "simplified_spans": [
+            [
+                2,
+                220,
+                222,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 4,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The film received mostly positive reviews from critics, with praise towards Coogler's direction, the action sequences, the production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), and the musical score, which many critics said was very good.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 5,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The movie received positive reviews from critics. || They praised Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 6,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started to see if Ronaldo had legally broken his contract. || They wanted to end his contract.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 7,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United sought legal action when Ronaldo tried to breach his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "Manchester United started looking for a legal solution to the problem of whether or not Cristiano Ronaldo had violated the terms of his contract, with the intention of ending it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started looking for legal options regarding whether Ronaldo broke his contract, with the aim of ending it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started legal action to see if Ronaldo had broken his contract. || They wanted to end his contract.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 11,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 12,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United began seeking legal action over whether Ronaldo had breached his contract, and were looking to terminate his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 13,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "The media projected Fetterman to win the election on November 9.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, media outlets announced that Fetterman had won the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was predicted by the media as the winner of the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 16,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, the media said that Fetterman was the winner of the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 17,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was thought to be the winner of the election by media outlets.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 18,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On Novermber 9, media outlets predicted Fetterman would win the US Senate election in Pennsylvania.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 19,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 20,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England beat Pakistan in the 2022 final. || This made them the T20 World Cup holders, winning their second title.",
+        "simplified_spans": [
+            [
+                2,
+                41,
+                43,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 21,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second title when they beat Pakistan in the final. || They are the reigning T20 World Cup holders.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 22,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second T20 World Cup title in 2022 by defeating Pakistan in the final.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "The current T20 World Cup holder is England.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 24,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "After winning the last T20 World Cup, England won the T20 World Cup for the second time. || They beat Pakistan in the 2022 final.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 25,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second title by defeating Pakistan in the 2022 T20 World Cup final, making them the reigning champions.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 27,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "Around 80% of the buildings in the area were renovated or modified after the 1999 earthquakes, making them better able to withstand this recent earthquake.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 28,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "About 80 percent of buildings in the area were rebuilt after the 1999 earthquakes.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "About 80 percent of buildings in the area were rebuilt or changed after the 1999 earthquake. || This made the 1999 earthquake less bad.",
+        "simplified_spans": [
+            [
+                2,
+                93,
+                95,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 30,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "Because most buildings in the area were rebuilt after 1999, this earthquake doesn\u2019t have much impact.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "Around 80% of the buildings in the area were rebuilt or modified after the 1999 earthquakes, thus decreasing the effect of this quake.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 32,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "To reduce the impact of this earthquake, about 80 percent of buildings were updated after the 1999 earthquakes.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 33,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "About 80 % of buildings in the area were rebuilt after the 1999 earthquakes, reducing the effect of this earthquake.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 34,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, while more than half of Republicans said it was a top congressional priority.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 35,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A poll found that only 28% of Americans supported having an impeachment investigation into Hunter Biden, but it also found half of Republicans supported it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority. || More than half of self-identified Republicans supported it as a top congressional priority.",
+        "simplified_spans": [
+            [
+                2,
+                215,
+                217,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 37,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "In mid-November 2022, a Morning Consult poll revealed that only 28% of Americans thought an impeachment investigation or investigations into Hunter Biden's business dealings should be a major congressional focus, but over half of Republicans agreed it should be a priority.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A tech company called Morning Consult conducted a poll in mid-November 2022. || This poll found that only 28% of Americans thought it was important for congress to look into Hunter Biden\u2019s business exchanges. || However, the poll also found that more than half of Republicans thought it was important for congress to look into this issue.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ],
+            [
+                2,
+                209,
+                211,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 39,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "In November 2022, a Morning Consult survey revealed that only 28% of Americans wanted impeachment investigations into Hunter Biden's business affairs to be a primary focus of Congress. || However, over half of self-identified Republicans supported that idea.",
+        "simplified_spans": [
+            [
+                2,
+                185,
+                187,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 40,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 41,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, there is painted decoration. || The decoration was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 42,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decoration is preserved on the interior, facade, and portico of the building, which was done in two separate time periods. || The first was likely when it was first constructed, while the second likely happened after 1913 when the building's use changed.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decoration is preserved in the interior and on the facade. || This preservation possibly occurred during its construction and its change of use after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 44,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decorations are kept on the face of the building, on the porch, and on the inside. || These paintings were made in two different time periods. || The first time period was when the building was built. || The second time period was after 1913, when the building\u2019s use was changed.",
+        "simplified_spans": [
+            [
+                2,
+                91,
+                93,
+                0
+            ],
+            [
+                2,
+                151,
+                153,
+                1
+            ],
+            [
+                2,
+                209,
+                211,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 45,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior and on the facade, there is preserved painted decoration. || It was done during two different periods. || The first was during the construction of the building and the second may have happened after 1913 when its use changed.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                119,
+                121,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 46,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, probably after 1913, when the building was changed from its original use.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 47,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, painted decoration is preserved. || This was done in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 48,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "The book A Wilder Life is divided into sections based on the season. || It covers self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || It also has photos and illustrations of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                164,
+                166,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 49,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life shows that getting in touch with nature is possible. || To show this, the book details many different aspects of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 50,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life demonstrates that people can reconnect with nature by looking at sections devoted to each season. || These sections discuss self-reliance, gardening and growing, cooking, health and beauty, and wilderness. || Images and illustrations reflect the beauty of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ],
+            [
+                2,
+                220,
+                222,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 51,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life is divided into sections that cover self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || It has photos and illustrations that bring to life the great outdoors, and shows that connecting with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 52,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "The book is divided into sections for each season and covers things like self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || A Wilder Life shows that it is possible to get in touch with nature and have fun with it.",
+        "simplified_spans": [
+            [
+                2,
+                155,
+                157,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 53,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "It covers topics such as growing and gardening, cooking, health and beauty, and wilderness. || A Wilder Life shows that getting in touch with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 54,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "It is divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || With photos and illustrations evocative of the great outdoors, \" A Wilder Life \" shows that getting in touch with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                149,
+                151,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    }
+]

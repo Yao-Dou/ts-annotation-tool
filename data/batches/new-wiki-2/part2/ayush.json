@@ -1,0 +1,698 @@
+[
+    {
+        "id": 0,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom said that the government of Scotland had no right to hold a second referendum on independence without the permission of the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 1,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom ruled that the Scottish government cannot hold another referendum on Scottish independence without permission from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom ruled that the Scottish government could not hold another referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The UK\u2019s Supreme Court will not simply let the Scottish government hold a second election to decide if Scotland will become separate from the UK. || To hold such an election, the Scottish government will need the support of the British Government.",
+        "simplified_spans": [
+            [
+                2,
+                146,
+                148,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 4,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the UK ruled unanimously that the Scottish government does not have the authority to organize a second Scottish independence referendum without permission from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 5,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom denied the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 6,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "They imposed a fine of $400, or $100 per count of fraud, and three years of supervised release following the prison sentence.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 7,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a fine of $400, or $100 for each count of fraud. || He was sentenced to three-year supervised release after the prison term.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 8,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a fine of $400, or $100 for each count of fraud. || After the prison term, he was released on supervised release.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 9,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a three-year supervised release and a fine of $400.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "You will receive a fine of $400 for the fraud or $100 for each count. || You will also be under supervised release for three years after the prison term.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 11,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence was a 400$ fine and a three-year supervised release after jail.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 13,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club, especially after he said he could not attend pre-season training due to his daughter's illness.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 14,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On November 14th, Ronaldo said in an interview that he felt \u201cbetrayed\u201d by ten Hag and others who wanted Ronaldo to leave the club. || He also added that the club \u201cdoubted\u201d him when he could not attend pre-season practice due to his sick daughter. || Finally, he said that he does not respect ten Hag \u201cbecause he doesn\u2019t show respect for me.\u201d",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ],
+            [
+                2,
+                247,
+                249,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 15,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published. || In the interview, Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, Piers Morgan interviewed Ronaldo, who expressed feeling \"let down\" by ten Hag and a few others who wanted him to leave the club. || He also said the club \"questioned\" him when he said he was not available to attend pre-season training due to his daughter being ill. Ronaldo added that he felt ten Hag lacked \"regard for me\", which ultimately caused Ronaldo to be unhappy with the communication from the club.",
+        "simplified_spans": [
+            [
+                2,
+                145,
+                147,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, Ronaldo had an interview with Piers Morgan, where he said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted him to leave the club. || Ronaldo also said that the club \"doubted\" him when he said he could not go to pre-season training because his daughter was sick. || He said that he was disappointed with the club\u2019s communication and that he did not respect ten Hag \"because he doesn't show respect for me\".",
+        "simplified_spans": [
+            [
+                2,
+                169,
+                171,
+                0
+            ],
+            [
+                2,
+                301,
+                303,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 18,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview of Ronaldo with journalist Piers Morgan was published. || Ronaldo said he was \"betrayed\" by ten Hag and other people who wanted him to leave the club. || He also said the club \"doubted\" him when he said he couldn't come to pre-season training due to his daughter's illness. || He was unhappy because ten Hag did not show him respect.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ],
+            [
+                2,
+                180,
+                182,
+                1
+            ],
+            [
+                2,
+                303,
+                305,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 19,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 20,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried's wealth decreased in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 21,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before November 2022, Bankman-Fried donated a lot of money to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 22,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Friend\u2019s money disappeared in November 2022, he donated a lot of money to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Bankman-Fried was a major donor to Democratic Party candidates before they lost money in November 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 24,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Bankman-Fried donated to Democratic Party candidates before their wealth declined in November 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 25,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried lost all of his money in November 2022, he was a very important donor to the Democratic Party.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 26,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried's wealth was destroyed in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 27,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "After winning the last T20 World Cup, England won the T20 World Cup for the second time. || They beat Pakistan in the 2022 final.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 28,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England beat Pakistan in the 2022 final. || This made them the T20 World Cup holders, winning their second title.",
+        "simplified_spans": [
+            [
+                2,
+                41,
+                43,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 29,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second title by defeating Pakistan in the 2022 T20 World Cup final, making them the reigning champions.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second T20 World Cup title in 2022 by defeating Pakistan in the final.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second title when they beat Pakistan in the final. || They are the reigning T20 World Cup holders.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 32,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "The current T20 World Cup holder is England.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 33,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 34,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson went back to West Point in 1972 and was given the job of developing and teaching cadets as the third Regimental Tactical officer.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 35,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson went back to West Point in 1972 as the 3rd Regimental Tactical officer. || His job was to educate and train cadets.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 36,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson went back to West Point in 1972. || Over there, he was the 3rd Regimental Tactical officer. || He was in charge of coaching new military students and helping them become better.",
+        "simplified_spans": [
+            [
+                2,
+                42,
+                44,
+                0
+            ],
+            [
+                2,
+                101,
+                103,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson returned to West Point in 1972 as the 3rd Regimental Tactical officer. || His main job at West Point was to train the new cadets.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 38,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson returned to West Point in 1972 to be the 3rd Regimental Tactical officer. || He was tasked with developing and training cadets.",
+        "simplified_spans": [
+            [
+                2,
+                83,
+                85,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 39,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson came back to West Point in 1972 to serve as the 3rd Regimental Tactical officer. || He had to develop and train cadets.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 40,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer. || He was in charge of developing and training cadets.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 41,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decorations are kept on the face of the building, on the porch, and on the inside. || These paintings were made in two different time periods. || The first time period was when the building was built. || The second time period was after 1913, when the building\u2019s use was changed.",
+        "simplified_spans": [
+            [
+                2,
+                91,
+                93,
+                0
+            ],
+            [
+                2,
+                151,
+                153,
+                1
+            ],
+            [
+                2,
+                209,
+                211,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 42,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, probably after 1913, when the building was changed from its original use.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 43,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior and on the facade, there is preserved painted decoration. || It was done during two different periods. || The first was during the construction of the building and the second may have happened after 1913 when its use changed.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                119,
+                121,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, there is painted decoration. || The decoration was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 45,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decoration is preserved in the interior and on the facade. || This preservation possibly occurred during its construction and its change of use after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 46,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decoration is preserved on the interior, facade, and portico of the building, which was done in two separate time periods. || The first was likely when it was first constructed, while the second likely happened after 1913 when the building's use changed.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 47,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, painted decoration is preserved. || This was done in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 48,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiography composed of short stories, essays, and stories from Kojima's life. || Many of these focus on the pop culture media he loves and how it has impacted him.",
+        "simplified_spans": [
+            [
+                2,
+                105,
+                107,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 49,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes spanning Kojima's life, many of which focus on the various pop culture media which Kojima developed an adoration for and how they have impacted him.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 50,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is a book that Hideo Kojima wrote about his life. || The book has a lot of short stories, essays, and stories about his life. || Many of the stories are about things that Kojima has loved as a child.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ],
+            [
+                2,
+                144,
+                146,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 51,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is a book written by Kojima about his life. || It has several short stories and essays. || Many of these talk about the pop culture media Kojima liked and how they changed his life.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ],
+            [
+                2,
+                106,
+                108,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 52,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiography by Kojima, containing stories, essays, and anecdotes about his life. || Several of these focus on the pop culture media he loves and how they have impacted him.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 53,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is a book about Kojima\u2019s life and the pop culture media he liked.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 54,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    }
+]

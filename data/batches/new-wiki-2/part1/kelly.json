@@ -1,0 +1,580 @@
+[
+    {
+        "id": 0,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club said on social media that the gunman was subdued by customers and that it was \"devastated by the senseless attack on our community\". || It offered condolences to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 1,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "On social media, the club said customers stopped the gunman. || It wrote it was \"devastated by the senseless attack on our community.\" || It also gave words of support to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ],
+            [
+                2,
+                135,
+                137,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 2,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club said on social media that customers stopped the gunman, that it was \"devastated by the senseless attack on our community \", and that it offered condolences to the victims and their families.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club announced on social media that customers had managed to overpower the gunman. || They declared that they were \"deeply saddened by the senseless attack on our community\", and offered condolences to those affected and their families.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 4,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "On social media, the club said that customers stopped the gunman. || They also said that they were \u201cdevastated by the senseless attack on our community\u201d and that they felt sorry for the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 5,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club reported on social media that customers were able to contain the gunman. || They expressed that they were \"shocked and saddened by the vicious attack on our community\" and offered their deepest sympathies to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                82,
+                84,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 6,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The restaurant said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community \", and that it offered condolences to the victims and their families.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a reclusive family who spend months living in virtual isolation in the family mansion to prevent their community from finding out that daughter Hesseen has gotten pregnant from a one-night stand. || Their fragile equilibrium is challenged when Hesseen leaves the house soon after the baby's birth to look for the father.",
+        "simplified_spans": [
+            [
+                2,
+                215,
+                217,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 8,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "This film follows a wealthy family that has been living quietly in a mansion for months to keep their daughter H\u00e9l\u00e8ne's pregnancy out of the public eye. || H\u00e9l\u00e8ne unexpectedly leaves the house after the baby is born to search for the father. || Their secluded lifestyle is disrupted by this sudden departure.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ],
+            [
+                2,
+                242,
+                244,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The film focuses on a wealthy family that keeps to themselves. || They spent months living in isolation in the family mansion to stop their community from finding out that their daughter had gotten pregnant from a one-night stand. || This all changed when the daughter left the house after the baby was born to look for the father.",
+        "simplified_spans": [
+            [
+                2,
+                63,
+                65,
+                0
+            ],
+            [
+                2,
+                231,
+                233,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The film follows an isolated wealthy family. || In order to stop their community from knowing that the daughter H\u00e9l\u00e8ne is pregnant after a one-night stand, they do not leave their mansion for months. || When H\u00e9l\u00e8ne gives birth and runs away from the home to look for the father, the fragile balance of the home breaks.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                200,
+                202,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 11,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "A wealthy family isolates themselves in their mansion to hide that daughter H\u00e9l\u00e8ne is pregnant from a one-night stand. || But, their fragile balance is broken when H\u00e9l\u00e8ne leaves the house to look for the father after the baby is born.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 12,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a family who spend months living in virtual isolation because their daughter H\u00e9l\u00e8ne has gotten pregnant after a one-night stand. || After the baby is born, H\u00e9l\u00e8ne leaves the house to look for the father, but the family does not know if the father is the father of the baby or not.",
+        "simplified_spans": [
+            [
+                2,
+                148,
+                150,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 13,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a rich family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand. || H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for her father.",
+        "simplified_spans": [
+            [
+                2,
+                213,
+                215,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Before the 2022 FIFA World Cup, Qatar was accused of hiring paid actors to act as fans at the tournament to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 15,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Only days before the 2022 FIFA World Cup started, people accused Qatar of paying actors to play fans in the competition in order to make the country look good.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 16,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Before the 2022 FIFA World Cup began, Qatar was reported to have paid people to pretend to be fans in order to create a good image for the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before the 2022 FIFA World Cup began, Qatar was accused of paying people to pretend to be fans, in order to show the world a good impression of their country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "A few days before the start of the 2022 FIFA World Cup, Qatar was accused of paying actors to play fans at the tournament. || This is because they want to promote the country.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 19,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before the start of the 2022 FIFA World Cup, Qatar was accused of having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 20,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "Anonymous sources told The Wall Street Journal that FTX lent $10 billion of their customer assets to Alameda Research in 2022. || CEO Caroline Ellison let other Alameda employees know that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh were aware of this decision.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 22,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "Anonymous sources reported to The Wall Street Journal that FTX lent $10 billion of its customer assets to Alameda Research in 2022. || Caroline Ellison, Alameda's CEO, told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh were aware of this decision.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources, FTX lent $10 billion of its customer\u2019s money to Alameda Research in 2022. || The Alameda CEO told her employees that she and the FTX leadership knew about the lending.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 24,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "The Wall Street Journal reported that FTX had given Alameda Research $10 billion to buy some of its business, and that Alameda CEO Caroline Ellison had told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about the deal.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 25,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources cited by The Wall Street Journal, FTX had loaned $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 26,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources, Sam Bankman-Fried, Gary Wang, Nishad Singh, and Alameda CEO Caroline Ellison knew that FTX had lent $10 billion of customer assets to Alameda Research.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 27,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources quoted by The Wall Street Journal, FTX had loaned USD 10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists targeted the Russian delegation at a conference. || They said Russians did not deserve respect nor should be at the conference.",
+        "simplified_spans": [
+            [
+                2,
+                63,
+                65,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 29,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation. || They said that the Russians were war criminals, and that they should not be allowed to be at the meeting.",
+        "simplified_spans": [
+            [
+                2,
+                52,
+                54,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 30,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists shouted at the Russian delegation, saying they were guilty of war crimes and didn't deserve to be there or receive respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 32,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists said that the Russians were war criminals and shouldn\u2019t be at the conference.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 33,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists shouted at the Russian delegation, accusing them of being war criminals and saying that they had no right to attend the conference and did not deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 34,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation, stating that the Russians were war criminals who did not have the right to be present at the conference and did not deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "Ukraine's nuclear energy agency blamed Russia for the shelling that damaged the infrastructure required for Ukraine to resume energy production.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 36,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "Ukraine's nuclear energy agency said that Russia was responsible for the shelling.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 37,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the attack. || They said the attack had damaged the energy production infrastructure needed to restore production.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 38,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the opening fire that damaged certain buildings. || These buildings were important for Ukraine to make enough energy for its people.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 39,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency stated that Russia was responsible for shelling that had harmed the infrastructure necessary for producing energy for Ukraine.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 40,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency blamed Russia for the attacks. || They said the attacks damaged the energy production facilities that are important for Ukrainian needs.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 41,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom said that the government of Scotland had no right to hold a second referendum on independence without the permission of the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 43,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The UK\u2019s Supreme Court will not simply let the Scottish government hold a second election to decide if Scotland will become separate from the UK. || To hold such an election, the Scottish government will need the support of the British Government.",
+        "simplified_spans": [
+            [
+                2,
+                146,
+                148,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 44,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom ruled that the Scottish government could not hold another referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 45,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the UK ruled unanimously that the Scottish government does not have the authority to organize a second Scottish independence referendum without permission from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 46,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom denied Scotland the opportunity to hold a second vote for independence without approval from Britain.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 47,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom ruled that the Scottish government cannot hold another referendum on Scottish independence without permission from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 48,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom denied the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    }
+]

@@ -1,0 +1,593 @@
+[
+    {
+        "id": 0,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "Iran Human Rights, a non-profit organization, reported that by 19 November 2022, 378 people, including 43 minors aged 18 or younger, had died due to the government's use of tear gas and gunfire to stop protests. || This was the deadliest protest since 2019-2020, in which 1,500 people were killed.",
+        "simplified_spans": [
+            [
+                2,
+                212,
+                214,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "Iran Human Rights, a non-profit organization, reported on 19 November 2022 that at least 378 people, including 43 minors, had been killed due to the government's use of tear gas and gunfire against protesters. || This was the deadliest protest since 2019\u20132020, with over 1,500 fatalities.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to Iran Human Rights, at least 378 people including 43 minors have been killed as a result of government intervention in protests, making the protest one of the deadliest in a while.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people, including 43 minors under 18 years of age, had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire. || This number does not include people killed during the original protests.",
+        "simplified_spans": [
+            [
+                2,
+                258,
+                260,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 4,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age have been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019-2020 protests that resulted in more than 1,500 deaths.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 5,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "The non-profit organization Iran Human Rights says that at least 378 people including 43 minors had been killed because of the government's actions in the protests. || These actions involved tear gas and gunfire. || These protests have been the deadliest since the 2019\u20132020 protests.",
+        "simplified_spans": [
+            [
+                2,
+                165,
+                167,
+                0
+            ],
+            [
+                2,
+                213,
+                215,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 6,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "In the movie, Julie Ledru plays Julia, a young woman living in social housing who has a bad relationship with her mother. || She is passionate about motocross, so she tries to take bikes for test rides by pretending to be a buyer.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing. || She loves the sport of motocross and wants to learn how to do it, but her mother does n't want her to do it, so she tries to find a job that will let her do it, but it will cost a lot of money.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 9,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "Julie Ledru plays Julia in the film. || She lives in social housing, doesn't get along well with her mom, and loves motocross. || To pursue her passion, she pretends to be a buyer on shopping websites and takes bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                37,
+                39,
+                0
+            ],
+            [
+                2,
+                127,
+                129,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother. || She tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 11,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "In this film, Julie Ledru acts as a young woman named Julia. || Julia lives in social housing and does not have a good relationship with her mother. || She loves the sport of motocross and wants to find a way to take part in it. || Hence, she acts as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ],
+            [
+                2,
+                149,
+                151,
+                1
+            ],
+            [
+                2,
+                229,
+                231,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 12,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "Julie Ledru portrays Julia in the film; Julia lives in public housing and her relationship with her mother is strained. || She loves motocross and will do whatever it takes to try it out. || To this end, she pretends to be a buyer on shopping websites in order to take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ],
+            [
+                2,
+                188,
+                190,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother. || She tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, the Orion spacecraft started to be affected by the Moon's gravity more than Earth's. || This happened at 19:09 UTC, after five days of flight.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, so the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, at 19:09 UTC, the spacecraft entered the lunar sphere of influence and the Moon's gravity became stronger than the Earth's when the spacecraft was very close to it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 17,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, the Orion spaceship entered the Lunar sphere of influence. || This means that the Moon's gravitational force could influence the spaceship more than the Earth's.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022 at 19:09 UTC, the Orion spacecraft began to be affected by the Moon's gravity, since it had entered the Moon's sphere of influence.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence. || This meant that the Moon was pulling the spacecraft with more gravitational force than the Earth.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 20,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Moon's gravitational dominance, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to bring people back to the Moon. || They will also show new technologies and ways to do science, so that people can find out if they can go to Mars.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 22,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to get people on the moon again. || They will also demonstrate technologies and business approaches needed for more space-related missions.",
+        "simplified_spans": [
+            [
+                2,
+                57,
+                59,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 24,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "Missions will be launched to return people to the Moon and prove the technology and commercial practices that are necessary for additional scientific research, including exploring Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 25,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will reestablish a presence on the Moon and show approaches needed for future scientific studies.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 26,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "The goal of these missions is to put humans back on the Moon and show the technologies and strategies that are necessary for further scientific research, like exploring Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to bring humans back to the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Russia has launched a new series of cruise missile strikes, mainly in Western Ukraine. || This has resulted in many power cuts, with Lviv suffering a full blackout.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "As Russian forces launch another wave of cruise missile strikes, widespread blackouts are reported in Western Ukraine.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "After another wave of missile strikes, blackouts have been reported in Western Ukraine including the city of Lviv which experienced a total blackout.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Russian forces have launched new cruise missile strikes, including in the city of Lviv, which has experienced a complete power cut. || There are reports of widespread blackouts in Western Ukraine.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 33,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile attacks. || The city of Lviv has experienced a total blackout.",
+        "simplified_spans": [
+            [
+                2,
+                118,
+                120,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 34,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film has earned over $552 million worldwide. || It became the eighth highest-earning film of 2022.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film made over $552 million, becoming the eighth highest-grossing film of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film has made more than $552 million at the box office and is currently the eighth most successful movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film earned over $552 million globally, making it the eighth most successful movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 39,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has so far made over $552 million worldwide, making it the eighth highest-grossing movie.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 40,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has grossed over $ 570 million worldwide, becoming the eighth highest-grossing movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has made over $552 million worldwide. || It became the eighth highest-grossing movie of 2022.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "Manchester United started looking for a legal solution to the problem of whether or not Cristiano Ronaldo had violated the terms of his contract, with the intention of ending it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started looking for legal options regarding whether Ronaldo broke his contract, with the aim of ending it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United sought legal action when Ronaldo tried to breach his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 45,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started legal action to see if Ronaldo had broken his contract. || They wanted to end his contract.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 46,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 47,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started to see if Ronaldo had legally broken his contract. || They wanted to end his contract.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 48,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United began seeking legal action over whether Ronaldo had breached his contract, and were looking to terminate his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Bankman-Fried was a major donor to Democratic Party candidates before they lost money in November 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    }
+]

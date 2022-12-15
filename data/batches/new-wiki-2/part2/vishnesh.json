@@ -1,0 +1,680 @@
+[
+    {
+        "id": 0,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "Missions will be launched to return people to the Moon and prove the technology and commercial practices that are necessary for additional scientific research, including exploring Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to get people on the moon again. || They will also demonstrate technologies and business approaches needed for more space-related missions.",
+        "simplified_spans": [
+            [
+                2,
+                57,
+                59,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 2,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will reestablish a presence on the Moon and show approaches needed for future scientific studies.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "The goal of these missions is to put humans back on the Moon and show the technologies and strategies that are necessary for further scientific research, like exploring Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 4,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to bring people back to the Moon. || They will also show new technologies and ways to do science, so that people can find out if they can go to Mars.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 5,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to bring humans back to the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 6,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "As Russian forces launch another wave of cruise missile strikes, widespread blackouts are reported in Western Ukraine.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "After another wave of missile strikes, blackouts have been reported in Western Ukraine including the city of Lviv which experienced a total blackout.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Russia has launched a new series of cruise missile strikes, mainly in Western Ukraine. || This has resulted in many power cuts, with Lviv suffering a full blackout.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Russian forces have launched new cruise missile strikes, including in the city of Lviv, which has experienced a complete power cut. || There are reports of widespread blackouts in Western Ukraine.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile attacks. || The city of Lviv has experienced a total blackout.",
+        "simplified_spans": [
+            [
+                2,
+                118,
+                120,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 11,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 12,
+        "original": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes, including the city of Lviv which has experienced a total blackout.",
+        "original_spans": [],
+        "simplified": "Widespread blackouts are reported in Western Ukraine as Russian forces launch another wave of cruise missile strikes.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 13,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "Critics praised the film's direction by Coogler, the action sequences, production and costume design, and the performances of Wright, Gurira, Huerta, and Bassett. || They also approved of its emotional weight, musical score, and its tributes to Boseman. || However, the runtime was criticized.",
+        "simplified_spans": [
+            [
+                2,
+                163,
+                165,
+                0
+            ],
+            [
+                2,
+                254,
+                256,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "Critics praised Coogler's directing, action sequences, production, costume design, the cast's performances (especially those of Wright, Gurira, Huerta, and Bassett), the emotional weight, music, and tributes to Boseman. || However, they criticized its long runtime.",
+        "simplified_spans": [
+            [
+                2,
+                220,
+                222,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "Film critics praised Coogler\u2019s direction, action scenes, production and costume design, the cast\u2019s performances, emotional weight, musical score, and tributes to Boseman. || Some critics disliked the length of the movie.",
+        "simplified_spans": [
+            [
+                2,
+                171,
+                173,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 16,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The film received mostly positive reviews from critics, with praise towards Coogler's direction, the action sequences, the production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), and the musical score, which many critics said was very good.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 17,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The movie received positive reviews from critics. || They praised Coogler's direction, the action sequences, costume design, the cast's performances, emotional weight, musical score, and the tributes to Boseman.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 18,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The film received overall positive reviews with most of its qualities receiving praise. || However, its runtime received criticism.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 19,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The movie received positive reviews from critics. || They praised Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 20,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film made over $552 million, becoming the eighth highest-grossing film of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 21,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has so far made over $552 million worldwide, making it the eighth highest-grossing movie.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 22,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film earned over $552 million globally, making it the eighth most successful movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has grossed over $ 570 million worldwide, becoming the eighth highest-grossing movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 24,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film has earned over $552 million worldwide. || It became the eighth highest-earning film of 2022.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 25,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film has made more than $552 million at the box office and is currently the eighth most successful movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has made over $552 million worldwide. || It became the eighth highest-grossing movie of 2022.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 27,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "They imposed a fine of $400, or $100 per count of fraud, and three years of supervised release following the prison sentence.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 28,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a fine of $400, or $100 for each count of fraud. || He was sentenced to three-year supervised release after the prison term.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a fine of $400, or $100 for each count of fraud. || After the prison term, he was released on supervised release.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 30,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a three-year supervised release and a fine of $400.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "You will receive a fine of $400 for the fraud or $100 for each count. || You will also be under supervised release for three years after the prison term.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 32,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence was a 400$ fine and a three-year supervised release after jail.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 33,
+        "original": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "original_spans": [],
+        "simplified": "The sentence included a fine of $400, or $100 for each count of fraud, and a three-year supervised release after the prison term.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 34,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club, especially after he said he could not attend pre-season training due to his daughter's illness.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 35,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On November 14th, Ronaldo said in an interview that he felt \u201cbetrayed\u201d by ten Hag and others who wanted Ronaldo to leave the club. || He also added that the club \u201cdoubted\u201d him when he could not attend pre-season practice due to his sick daughter. || Finally, he said that he does not respect ten Hag \u201cbecause he doesn\u2019t show respect for me.\u201d",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ],
+            [
+                2,
+                247,
+                249,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published. || In the interview, Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 37,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, Piers Morgan interviewed Ronaldo, who expressed feeling \"let down\" by ten Hag and a few others who wanted him to leave the club. || He also said the club \"questioned\" him when he said he was not available to attend pre-season training due to his daughter being ill. Ronaldo added that he felt ten Hag lacked \"regard for me\", which ultimately caused Ronaldo to be unhappy with the communication from the club.",
+        "simplified_spans": [
+            [
+                2,
+                145,
+                147,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, Ronaldo had an interview with Piers Morgan, where he said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted him to leave the club. || Ronaldo also said that the club \"doubted\" him when he said he could not go to pre-season training because his daughter was sick. || He said that he was disappointed with the club\u2019s communication and that he did not respect ten Hag \"because he doesn't show respect for me\".",
+        "simplified_spans": [
+            [
+                2,
+                169,
+                171,
+                0
+            ],
+            [
+                2,
+                301,
+                303,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 39,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview of Ronaldo with journalist Piers Morgan was published. || Ronaldo said he was \"betrayed\" by ten Hag and other people who wanted him to leave the club. || He also said the club \"doubted\" him when he said he couldn't come to pre-season training due to his daughter's illness. || He was unhappy because ten Hag did not show him respect.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ],
+            [
+                2,
+                180,
+                182,
+                1
+            ],
+            [
+                2,
+                303,
+                305,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 40,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 41,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was thought to be the winner of the election by media outlets.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 42,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "The media projected Fetterman to win the election on November 9.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On Novermber 9, media outlets predicted Fetterman would win the US Senate election in Pennsylvania.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 44,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was predicted by the media as the winner of the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 45,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, media outlets announced that Fetterman had won the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 46,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, the media said that Fetterman was the winner of the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 47,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 48,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "The book A Wilder Life is divided into sections based on the season. || It covers self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || It also has photos and illustrations of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                164,
+                166,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 49,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life shows that getting in touch with nature is possible. || To show this, the book details many different aspects of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 50,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life demonstrates that people can reconnect with nature by looking at sections devoted to each season. || These sections discuss self-reliance, gardening and growing, cooking, health and beauty, and wilderness. || Images and illustrations reflect the beauty of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ],
+            [
+                2,
+                220,
+                222,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 51,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life is divided into sections that cover self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || It has photos and illustrations that bring to life the great outdoors, and shows that connecting with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 52,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "The book is divided into sections for each season and covers things like self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || A Wilder Life shows that it is possible to get in touch with nature and have fun with it.",
+        "simplified_spans": [
+            [
+                2,
+                155,
+                157,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 53,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "It covers topics such as growing and gardening, cooking, health and beauty, and wilderness. || A Wilder Life shows that getting in touch with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 54,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "It is divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || With photos and illustrations evocative of the great outdoors, \" A Wilder Life \" shows that getting in touch with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                149,
+                151,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    }
+]

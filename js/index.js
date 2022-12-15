@@ -1641,6 +1641,10 @@ const app = Vue.createApp({
                 data_path = `batches/new-wiki-1/part1/${urlParams.get('name')}.json`
             } else if (urlParams.get('batch') == 4) {
                 data_path = `batches/new-wiki-1/part2/${urlParams.get('name')}.json`
+            } else if (urlParams.get('batch') == 5) {
+                data_path = `batches/new-wiki-2/part1/${urlParams.get('name')}.json`
+            } else if (urlParams.get('batch') == 6) {
+                data_path = `batches/new-wiki-2/part2/${urlParams.get('name')}.json`
             } else {
                 if (urlParams.get('name') == null) {
                     data_path = `batches/batch_${urlParams.get('batch')}.json`

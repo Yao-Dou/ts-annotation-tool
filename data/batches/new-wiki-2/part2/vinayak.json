@@ -1,0 +1,585 @@
+[
+    {
+        "id": 0,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom said that the government of Scotland had no right to hold a second referendum on independence without the permission of the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 1,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom ruled that the Scottish government cannot hold another referendum on Scottish independence without permission from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom ruled that the Scottish government could not hold another referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The UK\u2019s Supreme Court will not simply let the Scottish government hold a second election to decide if Scotland will become separate from the UK. || To hold such an election, the Scottish government will need the support of the British Government.",
+        "simplified_spans": [
+            [
+                2,
+                146,
+                148,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 4,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the UK ruled unanimously that the Scottish government does not have the authority to organize a second Scottish independence referendum without permission from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 5,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom denied the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 6,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film earned over $552 million globally, making it the eighth most successful movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 7,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has grossed over $ 570 million worldwide, becoming the eighth highest-grossing movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 8,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has so far made over $552 million worldwide, making it the eighth highest-grossing movie.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 9,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film has earned over $552 million worldwide. || It became the eighth highest-earning film of 2022.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film has made more than $552 million at the box office and is currently the eighth most successful movie of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 11,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The film made over $552 million, becoming the eighth highest-grossing film of 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "The film has grossed over $552 million worldwide, becoming the eighth highest-grossing film of 2022.",
+        "original_spans": [],
+        "simplified": "The movie has made over $552 million worldwide. || It became the eighth highest-grossing movie of 2022.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 13,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club, especially after he said he could not attend pre-season training due to his daughter's illness.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 14,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On November 14th, Ronaldo said in an interview that he felt \u201cbetrayed\u201d by ten Hag and others who wanted Ronaldo to leave the club. || He also added that the club \u201cdoubted\u201d him when he could not attend pre-season practice due to his sick daughter. || Finally, he said that he does not respect ten Hag \u201cbecause he doesn\u2019t show respect for me.\u201d",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ],
+            [
+                2,
+                247,
+                249,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 15,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published. || In the interview, Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, Piers Morgan interviewed Ronaldo, who expressed feeling \"let down\" by ten Hag and a few others who wanted him to leave the club. || He also said the club \"questioned\" him when he said he was not available to attend pre-season training due to his daughter being ill. Ronaldo added that he felt ten Hag lacked \"regard for me\", which ultimately caused Ronaldo to be unhappy with the communication from the club.",
+        "simplified_spans": [
+            [
+                2,
+                145,
+                147,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, Ronaldo had an interview with Piers Morgan, where he said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted him to leave the club. || Ronaldo also said that the club \"doubted\" him when he said he could not go to pre-season training because his daughter was sick. || He said that he was disappointed with the club\u2019s communication and that he did not respect ten Hag \"because he doesn't show respect for me\".",
+        "simplified_spans": [
+            [
+                2,
+                169,
+                171,
+                0
+            ],
+            [
+                2,
+                301,
+                303,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 18,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview of Ronaldo with journalist Piers Morgan was published. || Ronaldo said he was \"betrayed\" by ten Hag and other people who wanted him to leave the club. || He also said the club \"doubted\" him when he said he couldn't come to pre-season training due to his daughter's illness. || He was unhappy because ten Hag did not show him respect.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ],
+            [
+                2,
+                180,
+                182,
+                1
+            ],
+            [
+                2,
+                303,
+                305,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 19,
+        "original": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said that he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club, while also adding that the club \"doubted\" him when he said he could not attend pre-season training due to the illness of his daughter, and that he did not respect ten Hag \"because he doesn't show respect for me\", leading him to be disappointed with the communication of the club.",
+        "original_spans": [],
+        "simplified": "On 14 November, an interview with journalist Piers Morgan was published, where Ronaldo said he felt \"betrayed\" by ten Hag and \"two or three others\" who wanted Ronaldo to leave the club.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 20,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 21,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "Manchester United started looking for a legal solution to the problem of whether or not Cristiano Ronaldo had violated the terms of his contract, with the intention of ending it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 22,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started to see if Ronaldo had legally broken his contract. || They wanted to end his contract.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United sought legal action when Ronaldo tried to breach his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 24,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started looking for legal options regarding whether Ronaldo broke his contract, with the aim of ending it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 25,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United started legal action to see if Ronaldo had broken his contract. || They wanted to end his contract.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 26,
+        "original": "United began seeking legal action over whether Ronaldo had breached his contract and was looking to terminate his contract.",
+        "original_spans": [],
+        "simplified": "United began seeking legal action over whether Ronaldo had breached his contract, and were looking to terminate his contract.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 27,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On Novermber 9, media outlets predicted Fetterman would win the US Senate election in Pennsylvania.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 28,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was predicted by the media as the winner of the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 29,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "The media projected Fetterman to win the election on November 9.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, media outlets announced that Fetterman had won the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, the media said that Fetterman was the winner of the election.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 32,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was thought to be the winner of the election by media outlets.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 33,
+        "original": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "original_spans": [],
+        "simplified": "On November 9, Fetterman was projected as the winner of the election by media outlets.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 34,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before November 2022, Bankman-Fried donated a lot of money to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 35,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Bankman-Fried donated to Democratic Party candidates before their wealth declined in November 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 36,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Bankman-Fried was a major donor to Democratic Party candidates before they lost money in November 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried lost all of his money in November 2022, he was a very important donor to the Democratic Party.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 38,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried's wealth decreased in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 39,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Friend\u2019s money disappeared in November 2022, he donated a lot of money to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 40,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried's wealth was destroyed in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 41,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England beat Pakistan in the 2022 final. || This made them the T20 World Cup holders, winning their second title.",
+        "simplified_spans": [
+            [
+                2,
+                41,
+                43,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 42,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second title when they beat Pakistan in the final. || They are the reigning T20 World Cup holders.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 43,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second T20 World Cup title in 2022 by defeating Pakistan in the final.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "The current T20 World Cup holder is England.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 45,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "After winning the last T20 World Cup, England won the T20 World Cup for the second time. || They beat Pakistan in the 2022 final.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 46,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England won their second title by defeating Pakistan in the 2022 T20 World Cup final, making them the reigning champions.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 47,
+        "original": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final, winning their second title.",
+        "original_spans": [],
+        "simplified": "England are the reigning T20 World Cup holders, having beaten Pakistan in the 2022 final.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 48,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant said he was still a Nepali citizen even though he had become an American one. || Nepali law does not allow people to have two citizenships at the same time.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 49,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 50,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The man claimed that he had not given up his Nepali citizenship while being an American citizen. || Nepali law does not allow people to have more than one nationality.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 51,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The person suing said that he did not renounce his Nepali citizenship while being an American citizen. || This is important because Nepali law does not allow for dual citizenship.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 52,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant said he had not given up his Nepali citizenship even though he had become a citizen of the US, which is not allowed according to Nepali law.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 53,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complaint said he did not renounce his Nepali citizenship while being an American citizen.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 54,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen. || Nepali law does not allow the provision of dual citizenship.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    }
+]

@@ -1,0 +1,682 @@
+[
+    {
+        "id": 0,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club announced on social media that customers had managed to overpower the gunman. || They declared that they were \"deeply saddened by the senseless attack on our community\", and offered condolences to those affected and their families.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club reported on social media that customers were able to contain the gunman. || They expressed that they were \"shocked and saddened by the vicious attack on our community\" and offered their deepest sympathies to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                82,
+                84,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "On social media, the club said that customers stopped the gunman. || They also said that they were \u201cdevastated by the senseless attack on our community\u201d and that they felt sorry for the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club said on social media that the gunman was subdued by customers and that it was \"devastated by the senseless attack on our community\". || It offered condolences to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 4,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club said on social media that customers stopped the gunman, that it was \"devastated by the senseless attack on our community \", and that it offered condolences to the victims and their families.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 5,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "On social media, the club said customers stopped the gunman. || It wrote it was \"devastated by the senseless attack on our community.\" || It also gave words of support to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ],
+            [
+                2,
+                135,
+                137,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 6,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The restaurant said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community \", and that it offered condolences to the victims and their families.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to Iran Human Rights, at least 378 people including 43 minors have been killed as a result of government intervention in protests, making the protest one of the deadliest in a while.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people, including 43 minors under 18 years of age, had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire. || This number does not include people killed during the original protests.",
+        "simplified_spans": [
+            [
+                2,
+                258,
+                260,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 9,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "Iran Human Rights, a non-profit organization, reported on 19 November 2022 that at least 378 people, including 43 minors, had been killed due to the government's use of tear gas and gunfire against protesters. || This was the deadliest protest since 2019\u20132020, with over 1,500 fatalities.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age have been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019-2020 protests that resulted in more than 1,500 deaths.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 11,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "The non-profit organization Iran Human Rights says that at least 378 people including 43 minors had been killed because of the government's actions in the protests. || These actions involved tear gas and gunfire. || These protests have been the deadliest since the 2019\u20132020 protests.",
+        "simplified_spans": [
+            [
+                2,
+                165,
+                167,
+                0
+            ],
+            [
+                2,
+                213,
+                215,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 12,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "Iran Human Rights, a non-profit organization, reported that by 19 November 2022, 378 people, including 43 minors aged 18 or younger, had died due to the government's use of tear gas and gunfire to stop protests. || This was the deadliest protest since 2019-2020, in which 1,500 people were killed.",
+        "simplified_spans": [
+            [
+                2,
+                212,
+                214,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "A wealthy family isolates themselves in their mansion to hide that daughter H\u00e9l\u00e8ne is pregnant from a one-night stand. || But, their fragile balance is broken when H\u00e9l\u00e8ne leaves the house to look for the father after the baby is born.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a reclusive family who spend months living in virtual isolation in the family mansion to prevent their community from finding out that daughter Hesseen has gotten pregnant from a one-night stand. || Their fragile equilibrium is challenged when Hesseen leaves the house soon after the baby's birth to look for the father.",
+        "simplified_spans": [
+            [
+                2,
+                215,
+                217,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a family who spend months living in virtual isolation because their daughter H\u00e9l\u00e8ne has gotten pregnant after a one-night stand. || After the baby is born, H\u00e9l\u00e8ne leaves the house to look for the father, but the family does not know if the father is the father of the baby or not.",
+        "simplified_spans": [
+            [
+                2,
+                148,
+                150,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 17,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The film focuses on a wealthy family that keeps to themselves. || They spent months living in isolation in the family mansion to stop their community from finding out that their daughter had gotten pregnant from a one-night stand. || This all changed when the daughter left the house after the baby was born to look for the father.",
+        "simplified_spans": [
+            [
+                2,
+                63,
+                65,
+                0
+            ],
+            [
+                2,
+                231,
+                233,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "This film follows a wealthy family that has been living quietly in a mansion for months to keep their daughter H\u00e9l\u00e8ne's pregnancy out of the public eye. || H\u00e9l\u00e8ne unexpectedly leaves the house after the baby is born to search for the father. || Their secluded lifestyle is disrupted by this sudden departure.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ],
+            [
+                2,
+                242,
+                244,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The film follows an isolated wealthy family. || In order to stop their community from knowing that the daughter H\u00e9l\u00e8ne is pregnant after a one-night stand, they do not leave their mansion for months. || When H\u00e9l\u00e8ne gives birth and runs away from the home to look for the father, the fragile balance of the home breaks.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                200,
+                202,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 20,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a rich family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand. || H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for her father.",
+        "simplified_spans": [
+            [
+                2,
+                213,
+                215,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to an eyewitness, the shooter \"snapped,\" before shooting a woman. || After that, he shot at least ten people in the grocery aisles before going into the break room.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 22,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to people who saw it happen, the shooter \u201csnapped\u201d before shooting a woman. || He then killed workers in the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to the eyewitness account, the shooter \"snapped \" before shooting a woman, then killing employees within the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 24,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "The eyewitness reported that the shooter became enraged, then shot a woman. || He then moved to the break room where he shot more people. || Lastly, he fired at least ten shots in the grocery store aisles.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ],
+            [
+                2,
+                138,
+                140,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 25,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "A witness said that the shooter \"snapped,\" before shooting a woman. || The shooter then killed employees in the break room and fired at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 26,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "An eyewitness said the shooter \"snapped\" and shot a woman. || Then he killed employees in the break room and fired at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to the eyewitness account, the shooter \"snapped \" before shooting a woman. || He then killed employees within the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests. || Some Iranian supporters cheered against their own team or boycotted their team.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "Iranian players made news in their match against England when they did not sing the national anthem in support of Mahsa Amini protests. || Some Iranian fans even cheered against their own team or did not watch their team in the protests, as they felt the team represented the government.",
+        "simplified_spans": [
+            [
+                2,
+                136,
+                138,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team became famous in their opening match against England when they refused to sing the national anthem to support the Mahsa Amini protests. || Because of this, some Iranian supporters cheered against their own team or boycotted their team during the protests.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their first game against England. || They showed support for the Mahsa Amini protests by refusing to sing the national anthem. || Some Iranian supporters did not cheer for Iran or boycotted their country\u2019s team because they believed that the team was representing the government.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                162,
+                164,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team gained attention in their first game against England for not singing the national anthem in solidarity with Mahsa Amini. || Many Iranian fans also showed their disapproval of the team as a representation of the government by cheering against the team and boycotting the match.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 33,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem because of the ongoing protests in Iran. || Many Iranian people did not want to watch the team play because they thought the team should not be playing because of the protests.",
+        "simplified_spans": [
+            [
+                2,
+                163,
+                165,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 34,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests. || Some Iranian supporters cheered against their own team or boycotted their team amidst the ongoing protests.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, the Orion spaceship entered the Lunar sphere of influence. || This means that the Moon's gravitational force could influence the spaceship more than the Earth's.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence. || This meant that the Moon was pulling the spacecraft with more gravitational force than the Earth.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022 at 19:09 UTC, the Orion spacecraft began to be affected by the Moon's gravity, since it had entered the Moon's sphere of influence.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, the Orion spacecraft started to be affected by the Moon's gravity more than Earth's. || This happened at 19:09 UTC, after five days of flight.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 39,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, at 19:09 UTC, the spacecraft entered the lunar sphere of influence and the Moon's gravity became stronger than the Earth's when the spacecraft was very close to it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 40,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, so the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Moon's gravitational dominance, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "Missions will be launched to return people to the Moon and prove the technology and commercial practices that are necessary for additional scientific research, including exploring Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "The goal of these missions is to put humans back on the Moon and show the technologies and strategies that are necessary for further scientific research, like exploring Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will reestablish a presence on the Moon and show approaches needed for future scientific studies.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 45,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to bring people back to the Moon. || They will also show new technologies and ways to do science, so that people can find out if they can go to Mars.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 46,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 47,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to get people on the moon again. || They will also demonstrate technologies and business approaches needed for more space-related missions.",
+        "simplified_spans": [
+            [
+                2,
+                57,
+                59,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 48,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will try to bring humans back to the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom denied Scotland the opportunity to hold a second vote for independence without approval from Britain.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    }
+]

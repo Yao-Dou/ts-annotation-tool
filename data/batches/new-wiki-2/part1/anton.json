@@ -1,0 +1,662 @@
+[
+    {
+        "id": 0,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club said on social media that the gunman was subdued by customers and that it was \"devastated by the senseless attack on our community\". || It offered condolences to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 1,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "On social media, the club said customers stopped the gunman. || It wrote it was \"devastated by the senseless attack on our community.\" || It also gave words of support to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ],
+            [
+                2,
+                135,
+                137,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 2,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club said on social media that customers stopped the gunman, that it was \"devastated by the senseless attack on our community \", and that it offered condolences to the victims and their families.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club announced on social media that customers had managed to overpower the gunman. || They declared that they were \"deeply saddened by the senseless attack on our community\", and offered condolences to those affected and their families.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 4,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "On social media, the club said that customers stopped the gunman. || They also said that they were \u201cdevastated by the senseless attack on our community\u201d and that they felt sorry for the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 5,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The club reported on social media that customers were able to contain the gunman. || They expressed that they were \"shocked and saddened by the vicious attack on our community\" and offered their deepest sympathies to the victims and their families.",
+        "simplified_spans": [
+            [
+                2,
+                82,
+                84,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 6,
+        "original": "The club said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community\", and that it offered condolences to the victims and their families.",
+        "original_spans": [],
+        "simplified": "The restaurant said on social media that customers subdued the gunman, that it was \"devastated by the senseless attack on our community \", and that it offered condolences to the victims and their families.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother. || She tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 8,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "Julie Ledru portrays Julia in the film; Julia lives in public housing and her relationship with her mother is strained. || She loves motocross and will do whatever it takes to try it out. || To this end, she pretends to be a buyer on shopping websites in order to take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ],
+            [
+                2,
+                188,
+                190,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "In this film, Julie Ledru acts as a young woman named Julia. || Julia lives in social housing and does not have a good relationship with her mother. || She loves the sport of motocross and wants to find a way to take part in it. || Hence, she acts as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ],
+            [
+                2,
+                149,
+                151,
+                1
+            ],
+            [
+                2,
+                229,
+                231,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "In the movie, Julie Ledru plays Julia, a young woman living in social housing who has a bad relationship with her mother. || She is passionate about motocross, so she tries to take bikes for test rides by pretending to be a buyer.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 11,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "Julie Ledru plays Julia in the film. || She lives in social housing, doesn't get along well with her mom, and loves motocross. || To pursue her passion, she pretends to be a buyer on shopping websites and takes bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                37,
+                39,
+                0
+            ],
+            [
+                2,
+                127,
+                129,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 12,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing. || She loves the sport of motocross and wants to learn how to do it, but her mother does n't want her to do it, so she tries to find a job that will let her do it, but it will cost a lot of money.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 13,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother. || She tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Before the 2022 FIFA World Cup, Qatar was accused of hiring paid actors to act as fans at the tournament to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 15,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Only days before the 2022 FIFA World Cup started, people accused Qatar of paying actors to play fans in the competition in order to make the country look good.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 16,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Before the 2022 FIFA World Cup began, Qatar was reported to have paid people to pretend to be fans in order to create a good image for the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before the 2022 FIFA World Cup began, Qatar was accused of paying people to pretend to be fans, in order to show the world a good impression of their country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "A few days before the start of the 2022 FIFA World Cup, Qatar was accused of paying actors to play fans at the tournament. || This is because they want to promote the country.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 19,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before the start of the 2022 FIFA World Cup, Qatar was accused of having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 20,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In their first match of the tournament, they beat a highly favored Argentine team 2-1, ending their unbeaten streak that had lasted 36 games since 2019.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 22,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In their initial match in the group, they beat Argentina 2-1. || Argentina had gone 36 games without a loss since 2019.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "During the first game of their group, they won 2-1 against Argentina, who was favored to win. || They broke Argentina\u2019s 36-game win streak, which started in 2019.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 24,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group, they defeated Argentina side 2-1. || The win ended Argentina's 36 game unbeaten streak, the longest in the world.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 25,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group they defeated a much fancied Argentina side 2-1. || This ended an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 26,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "They defeated Argentina 2-1, ending Argentina\u2019s winning streak of 36 games.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 27,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group, they defeated a much fancied Argentina side 2-1. || This ended an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their first game against England. || They showed support for the Mahsa Amini protests by refusing to sing the national anthem. || Some Iranian supporters did not cheer for Iran or boycotted their country\u2019s team because they believed that the team was representing the government.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                162,
+                164,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 29,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem because of the ongoing protests in Iran. || Many Iranian people did not want to watch the team play because they thought the team should not be playing because of the protests.",
+        "simplified_spans": [
+            [
+                2,
+                163,
+                165,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 30,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team gained attention in their first game against England for not singing the national anthem in solidarity with Mahsa Amini. || Many Iranian fans also showed their disapproval of the team as a representation of the government by cheering against the team and boycotting the match.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests. || Some Iranian supporters cheered against their own team or boycotted their team.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 32,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team became famous in their opening match against England when they refused to sing the national anthem to support the Mahsa Amini protests. || Because of this, some Iranian supporters cheered against their own team or boycotted their team during the protests.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 33,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "Iranian players made news in their match against England when they did not sing the national anthem in support of Mahsa Amini protests. || Some Iranian fans even cheered against their own team or did not watch their team in the protests, as they felt the team represented the government.",
+        "simplified_spans": [
+            [
+                2,
+                136,
+                138,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 34,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests. || Some Iranian supporters cheered against their own team or boycotted their team amidst the ongoing protests.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, the Orion spacecraft started to be affected by the Moon's gravity more than Earth's. || This happened at 19:09 UTC, after five days of flight.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 36,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, so the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 37,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, at 19:09 UTC, the spacecraft entered the lunar sphere of influence and the Moon's gravity became stronger than the Earth's when the spacecraft was very close to it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 38,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, the Orion spaceship entered the Lunar sphere of influence. || This means that the Moon's gravitational force could influence the spaceship more than the Earth's.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 39,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022 at 19:09 UTC, the Orion spacecraft began to be affected by the Moon's gravity, since it had entered the Moon's sphere of influence.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 40,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence. || This meant that the Moon was pulling the spacecraft with more gravitational force than the Earth.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 41,
+        "original": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Lunar sphere of influence, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "original_spans": [],
+        "simplified": "On the fifth day of flight, November 20, 2022, at 19:09 UTC, the Orion spacecraft entered the Moon's gravitational dominance, thus the Moon's gravitational force became stronger than Earth's relative to the spacecraft.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the attack. || They said the attack had damaged the energy production infrastructure needed to restore production.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 43,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the opening fire that damaged certain buildings. || These buildings were important for Ukraine to make enough energy for its people.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 44,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "Ukraine's nuclear energy agency said that Russia was responsible for the shelling.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 45,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency stated that Russia was responsible for shelling that had harmed the infrastructure necessary for producing energy for Ukraine.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 46,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency blamed Russia for the attacks. || They said the attacks damaged the energy production facilities that are important for Ukrainian needs.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 47,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "Ukraine's nuclear energy agency blamed Russia for the shelling that damaged the infrastructure required for Ukraine to resume energy production.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 48,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "The film received positive reviews from critics, with praise towards Coogler's direction, the action sequences, production and costume design, the cast's performances (particularly those of Wright, Gurira, Huerta, and Bassett), emotional weight, musical score, and its tributes to Boseman, although the runtime received some criticism.",
+        "original_spans": [],
+        "simplified": "The movie received positive reviews from critics. || They praised Coogler's direction, the action sequences, costume design, the cast's performances, emotional weight, musical score, and the tributes to Boseman.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    }
+]

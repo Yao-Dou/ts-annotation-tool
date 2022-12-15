@@ -1,0 +1,669 @@
+[
+    {
+        "id": 0,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "Julie Ledru portrays Julia in the film; Julia lives in public housing and her relationship with her mother is strained. || She loves motocross and will do whatever it takes to try it out. || To this end, she pretends to be a buyer on shopping websites in order to take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ],
+            [
+                2,
+                188,
+                190,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "Julie Ledru plays Julia in the film. || She lives in social housing, doesn't get along well with her mom, and loves motocross. || To pursue her passion, she pretends to be a buyer on shopping websites and takes bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                37,
+                39,
+                0
+            ],
+            [
+                2,
+                127,
+                129,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "In the movie, Julie Ledru plays Julia, a young woman living in social housing who has a bad relationship with her mother. || She is passionate about motocross, so she tries to take bikes for test rides by pretending to be a buyer.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing. || She loves the sport of motocross and wants to learn how to do it, but her mother does n't want her to do it, so she tries to find a job that will let her do it, but it will cost a lot of money.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 4,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother. || She tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 5,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "In this film, Julie Ledru acts as a young woman named Julia. || Julia lives in social housing and does not have a good relationship with her mother. || She loves the sport of motocross and wants to find a way to take part in it. || Hence, she acts as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ],
+            [
+                2,
+                149,
+                151,
+                1
+            ],
+            [
+                2,
+                229,
+                231,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 6,
+        "original": "The film stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother; passionate about the sport of motocross, she tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "original_spans": [],
+        "simplified": "The movie stars Julie Ledru as Julia, a young woman living in social housing who has a poor relationship with her mother. || She tries to gain the opportunity to participate in the sport by posing as a buyer on shopping websites so that she can take bikes out for test rides.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources, FTX lent $10 billion of its customer\u2019s money to Alameda Research in 2022. || The Alameda CEO told her employees that she and the FTX leadership knew about the lending.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "The Wall Street Journal reported that FTX had given Alameda Research $10 billion to buy some of its business, and that Alameda CEO Caroline Ellison had told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about the deal.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 9,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "Anonymous sources reported to The Wall Street Journal that FTX lent $10 billion of its customer assets to Alameda Research in 2022. || Caroline Ellison, Alameda's CEO, told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh were aware of this decision.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources cited by The Wall Street Journal, FTX had loaned $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 11,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources, Sam Bankman-Fried, Gary Wang, Nishad Singh, and Alameda CEO Caroline Ellison knew that FTX had lent $10 billion of customer assets to Alameda Research.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 12,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "Anonymous sources told The Wall Street Journal that FTX lent $10 billion of their customer assets to Alameda Research in 2022. || CEO Caroline Ellison let other Alameda employees know that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh were aware of this decision.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources quoted by The Wall Street Journal, FTX had loaned USD 10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In their initial match in the group, they beat Argentina 2-1. || Argentina had gone 36 games without a loss since 2019.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group they defeated a much fancied Argentina side 2-1. || This ended an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group, they defeated Argentina side 2-1. || The win ended Argentina's 36 game unbeaten streak, the longest in the world.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 17,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "They defeated Argentina 2-1, ending Argentina\u2019s winning streak of 36 games.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In their first match of the tournament, they beat a highly favored Argentine team 2-1, ending their unbeaten streak that had lasted 36 games since 2019.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "During the first game of their group, they won 2-1 against Argentina, who was favored to win. || They broke Argentina\u2019s 36-game win streak, which started in 2019.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 20,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group, they defeated a much fancied Argentina side 2-1. || This ended an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to an eyewitness, the shooter \"snapped,\" before shooting a woman. || After that, he shot at least ten people in the grocery aisles before going into the break room.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 22,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to people who saw it happen, the shooter \u201csnapped\u201d before shooting a woman. || He then killed workers in the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to the eyewitness account, the shooter \"snapped \" before shooting a woman, then killing employees within the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 24,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "The eyewitness reported that the shooter became enraged, then shot a woman. || He then moved to the break room where he shot more people. || Lastly, he fired at least ten shots in the grocery store aisles.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ],
+            [
+                2,
+                138,
+                140,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 25,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "A witness said that the shooter \"snapped,\" before shooting a woman. || The shooter then killed employees in the break room and fired at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 26,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "An eyewitness said the shooter \"snapped\" and shot a woman. || Then he killed employees in the break room and fired at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to the eyewitness account, the shooter \"snapped \" before shooting a woman. || He then killed employees within the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests. || Some Iranian supporters cheered against their own team or boycotted their team.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "Iranian players made news in their match against England when they did not sing the national anthem in support of Mahsa Amini protests. || Some Iranian fans even cheered against their own team or did not watch their team in the protests, as they felt the team represented the government.",
+        "simplified_spans": [
+            [
+                2,
+                136,
+                138,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team became famous in their opening match against England when they refused to sing the national anthem to support the Mahsa Amini protests. || Because of this, some Iranian supporters cheered against their own team or boycotted their team during the protests.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their first game against England. || They showed support for the Mahsa Amini protests by refusing to sing the national anthem. || Some Iranian supporters did not cheer for Iran or boycotted their country\u2019s team because they believed that the team was representing the government.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                162,
+                164,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team gained attention in their first game against England for not singing the national anthem in solidarity with Mahsa Amini. || Many Iranian fans also showed their disapproval of the team as a representation of the government by cheering against the team and boycotting the match.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 33,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem because of the ongoing protests in Iran. || Many Iranian people did not want to watch the team play because they thought the team should not be playing because of the protests.",
+        "simplified_spans": [
+            [
+                2,
+                163,
+                165,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 34,
+        "original": "The Iranian team notably made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests, with some Iranian supporters cheering against their own team or boycotting their team amidst the ongoing protests as they felt the team was representing the government.",
+        "original_spans": [],
+        "simplified": "The Iranian team made headlines in their opening match against England after refusing to sing the national anthem in solidarity with the Mahsa Amini protests. || Some Iranian supporters cheered against their own team or boycotted their team amidst the ongoing protests.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists said that the Russians were war criminals and shouldn\u2019t be at the conference.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists targeted the Russian delegation at a conference. || They said Russians did not deserve respect nor should be at the conference.",
+        "simplified_spans": [
+            [
+                2,
+                63,
+                65,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists shouted at the Russian delegation, accusing them of being war criminals and saying that they had no right to attend the conference and did not deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists shouted at the Russian delegation, saying they were guilty of war crimes and didn't deserve to be there or receive respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 39,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation. || They said that the Russians were war criminals, and that they should not be allowed to be at the meeting.",
+        "simplified_spans": [
+            [
+                2,
+                52,
+                54,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 40,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation, stating that the Russians were war criminals who did not have the right to be present at the conference and did not deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency stated that Russia was responsible for shelling that had harmed the infrastructure necessary for producing energy for Ukraine.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "Ukraine's nuclear energy agency blamed Russia for the shelling that damaged the infrastructure required for Ukraine to resume energy production.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency blamed Russia for the attacks. || They said the attacks damaged the energy production facilities that are important for Ukrainian needs.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 45,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the attack. || They said the attack had damaged the energy production infrastructure needed to restore production.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 46,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "Ukraine's nuclear energy agency said that Russia was responsible for the shelling.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 47,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the opening fire that damaged certain buildings. || These buildings were important for Ukraine to make enough energy for its people.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 48,
+        "original": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling, which they claimed had damaged exactly the infrastructure needed to restore energy production for Ukrainian needs.",
+        "original_spans": [],
+        "simplified": "The Ukrainian nuclear energy agency said that Russia was responsible for the shelling.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "The Supreme Court of the United Kingdom unanimously denies the Scottish government the right to hold a second referendum on Scottish independence from the United Kingdom without approval from the British government.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United Kingdom denied Scotland the opportunity to hold a second vote for independence without approval from Britain.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    }
+]

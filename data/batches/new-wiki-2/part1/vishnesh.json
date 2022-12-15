@@ -1,0 +1,628 @@
+[
+    {
+        "id": 0,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people, including 43 minors under 18 years of age, had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire. || This number does not include people killed during the original protests.",
+        "simplified_spans": [
+            [
+                2,
+                258,
+                260,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 1,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "The non-profit organization Iran Human Rights says that at least 378 people including 43 minors had been killed because of the government's actions in the protests. || These actions involved tear gas and gunfire. || These protests have been the deadliest since the 2019\u20132020 protests.",
+        "simplified_spans": [
+            [
+                2,
+                165,
+                167,
+                0
+            ],
+            [
+                2,
+                213,
+                215,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 2,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age have been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019-2020 protests that resulted in more than 1,500 deaths.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "Iran Human Rights, a non-profit organization, reported that by 19 November 2022, 378 people, including 43 minors aged 18 or younger, had died due to the government's use of tear gas and gunfire to stop protests. || This was the deadliest protest since 2019-2020, in which 1,500 people were killed.",
+        "simplified_spans": [
+            [
+                2,
+                212,
+                214,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 4,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to Iran Human Rights, at least 378 people including 43 minors have been killed as a result of government intervention in protests, making the protest one of the deadliest in a while.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 5,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "Iran Human Rights, a non-profit organization, reported on 19 November 2022 that at least 378 people, including 43 minors, had been killed due to the government's use of tear gas and gunfire against protesters. || This was the deadliest protest since 2019\u20132020, with over 1,500 fatalities.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 6,
+        "original": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire, making the protests the deadliest since the 2019\u20132020 protests that resulted in more than 1,500 fatalities.",
+        "original_spans": [],
+        "simplified": "According to the non-profit organization Iran Human Rights, as of 19 November 2022, at least 378 people including 43 minors under 18 years of age had been killed as a result of the government's intervention in the protests, involving tear gas and gunfire.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a reclusive family who spend months living in virtual isolation in the family mansion to prevent their community from finding out that daughter Hesseen has gotten pregnant from a one-night stand. || Their fragile equilibrium is challenged when Hesseen leaves the house soon after the baby's birth to look for the father.",
+        "simplified_spans": [
+            [
+                2,
+                215,
+                217,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 8,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "This film follows a wealthy family that has been living quietly in a mansion for months to keep their daughter H\u00e9l\u00e8ne's pregnancy out of the public eye. || H\u00e9l\u00e8ne unexpectedly leaves the house after the baby is born to search for the father. || Their secluded lifestyle is disrupted by this sudden departure.",
+        "simplified_spans": [
+            [
+                2,
+                153,
+                155,
+                0
+            ],
+            [
+                2,
+                242,
+                244,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The film focuses on a wealthy family that keeps to themselves. || They spent months living in isolation in the family mansion to stop their community from finding out that their daughter had gotten pregnant from a one-night stand. || This all changed when the daughter left the house after the baby was born to look for the father.",
+        "simplified_spans": [
+            [
+                2,
+                63,
+                65,
+                0
+            ],
+            [
+                2,
+                231,
+                233,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The film follows an isolated wealthy family. || In order to stop their community from knowing that the daughter H\u00e9l\u00e8ne is pregnant after a one-night stand, they do not leave their mansion for months. || When H\u00e9l\u00e8ne gives birth and runs away from the home to look for the father, the fragile balance of the home breaks.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                200,
+                202,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 11,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "A wealthy family isolates themselves in their mansion to hide that daughter H\u00e9l\u00e8ne is pregnant from a one-night stand. || But, their fragile balance is broken when H\u00e9l\u00e8ne leaves the house to look for the father after the baby is born.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 12,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a family who spend months living in virtual isolation because their daughter H\u00e9l\u00e8ne has gotten pregnant after a one-night stand. || After the baby is born, H\u00e9l\u00e8ne leaves the house to look for the father, but the family does not know if the father is the father of the baby or not.",
+        "simplified_spans": [
+            [
+                2,
+                148,
+                150,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 13,
+        "original": "The film centers on a reclusive wealthy family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand, only to have their fragile equilibrium challenged when H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for the father.",
+        "original_spans": [],
+        "simplified": "The movie is about a rich family who has spent months living in virtual isolation in the family mansion to prevent their community from finding out that daughter H\u00e9l\u00e8ne has gotten pregnant from a one-night stand. || H\u00e9l\u00e8ne abandons the house soon after the baby's birth to look for her father.",
+        "simplified_spans": [
+            [
+                2,
+                213,
+                215,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Before the 2022 FIFA World Cup, Qatar was accused of hiring paid actors to act as fans at the tournament to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 15,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Only days before the 2022 FIFA World Cup started, people accused Qatar of paying actors to play fans in the competition in order to make the country look good.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 16,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Before the 2022 FIFA World Cup began, Qatar was reported to have paid people to pretend to be fans in order to create a good image for the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before the 2022 FIFA World Cup began, Qatar was accused of paying people to pretend to be fans, in order to show the world a good impression of their country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "A few days before the start of the 2022 FIFA World Cup, Qatar was accused of paying actors to play fans at the tournament. || This is because they want to promote the country.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 19,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before the start of the 2022 FIFA World Cup, Qatar was accused of having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 20,
+        "original": "Days prior to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "original_spans": [],
+        "simplified": "Days before to the start of the 2022 FIFA World Cup, Qatar was accused of reportedly having paid actors to play the role of fans at the tournament in order to promote the country.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "Anonymous sources told The Wall Street Journal that FTX lent $10 billion of their customer assets to Alameda Research in 2022. || CEO Caroline Ellison let other Alameda employees know that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh were aware of this decision.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 22,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "Anonymous sources reported to The Wall Street Journal that FTX lent $10 billion of its customer assets to Alameda Research in 2022. || Caroline Ellison, Alameda's CEO, told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh were aware of this decision.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources, FTX lent $10 billion of its customer\u2019s money to Alameda Research in 2022. || The Alameda CEO told her employees that she and the FTX leadership knew about the lending.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 24,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "The Wall Street Journal reported that FTX had given Alameda Research $10 billion to buy some of its business, and that Alameda CEO Caroline Ellison had told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about the deal.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 25,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources cited by The Wall Street Journal, FTX had loaned $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison told other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 26,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources, Sam Bankman-Fried, Gary Wang, Nishad Singh, and Alameda CEO Caroline Ellison knew that FTX had lent $10 billion of customer assets to Alameda Research.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 27,
+        "original": "According to anonymous sources cited by The Wall Street Journal, FTX had lent $10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "original_spans": [],
+        "simplified": "According to anonymous sources quoted by The Wall Street Journal, FTX had loaned USD 10 billion of its customer assets to Alameda Research in 2022, and Alameda CEO Caroline Ellison disclosed to other Alameda employees that she, Sam Bankman-Fried, Gary Wang, and Nishad Singh knew about that decision.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "During the first game of their group, they won 2-1 against Argentina, who was favored to win. || They broke Argentina\u2019s 36-game win streak, which started in 2019.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 29,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group, they defeated Argentina side 2-1. || The win ended Argentina's 36 game unbeaten streak, the longest in the world.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 30,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In their initial match in the group, they beat Argentina 2-1. || Argentina had gone 36 games without a loss since 2019.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group they defeated a much fancied Argentina side 2-1. || This ended an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 32,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "They defeated Argentina 2-1, ending Argentina\u2019s winning streak of 36 games.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 33,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In their first match of the tournament, they beat a highly favored Argentine team 2-1, ending their unbeaten streak that had lasted 36 games since 2019.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 34,
+        "original": "In the opening game of their group, they defeated a much fancied Argentina side 2-1, ending an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "original_spans": [],
+        "simplified": "In the opening game of their group, they defeated a much fancied Argentina side 2-1. || This ended an Argentine unbeaten streak of 36 games dating back to 2019.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "An eyewitness said the shooter \"snapped\" and shot a woman. || Then he killed employees in the break room and fired at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                59,
+                61,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 36,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to the eyewitness account, the shooter \"snapped \" before shooting a woman, then killing employees within the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 37,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to an eyewitness, the shooter \"snapped,\" before shooting a woman. || After that, he shot at least ten people in the grocery aisles before going into the break room.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 38,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to people who saw it happen, the shooter \u201csnapped\u201d before shooting a woman. || He then killed workers in the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 39,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "The eyewitness reported that the shooter became enraged, then shot a woman. || He then moved to the break room where he shot more people. || Lastly, he fired at least ten shots in the grocery store aisles.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ],
+            [
+                2,
+                138,
+                140,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 40,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "A witness said that the shooter \"snapped,\" before shooting a woman. || The shooter then killed employees in the break room and fired at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 41,
+        "original": "According to the eyewitness account, the shooter \"snapped,\" before shooting a woman, proceeding to kill employees within the break room before firing at least ten shots in the grocery aisles.",
+        "original_spans": [],
+        "simplified": "According to the eyewitness account, the shooter \"snapped \" before shooting a woman. || He then killed employees within the break room before firing at least ten shots in the grocery aisles.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation. || They said that the Russians were war criminals, and that they should not be allowed to be at the meeting.",
+        "simplified_spans": [
+            [
+                2,
+                52,
+                54,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 43,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists said that the Russians were war criminals and shouldn\u2019t be at the conference.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 44,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 45,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists shouted at the Russian delegation, accusing them of being war criminals and saying that they had no right to attend the conference and did not deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 46,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists targeted the Russian delegation at a conference. || They said Russians did not deserve respect nor should be at the conference.",
+        "simplified_spans": [
+            [
+                2,
+                63,
+                65,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 47,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists shouted at the Russian delegation, saying they were guilty of war crimes and didn't deserve to be there or receive respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 48,
+        "original": "The activists called out to the Russian delegation, stating that the Russians were war criminals who didn't have the right to be present at the conference and didn't deserve respect.",
+        "original_spans": [],
+        "simplified": "The activists called out to the Russian delegation, stating that the Russians were war criminals who did not have the right to be present at the conference and did not deserve respect.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "original_spans": [],
+        "simplified": "These missions will seek to reestablish a human presence on the Moon and demonstrate technologies and business approaches needed for future scientific studies, including exploration of Mars.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    }
+]

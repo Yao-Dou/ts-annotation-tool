@@ -1,0 +1,713 @@
+[
+    {
+        "id": 0,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried lost all of his money in November 2022, he was a very important donor to the Democratic Party.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 1,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Bankman-Fried donated to Democratic Party candidates before their wealth declined in November 2022.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried's wealth decreased in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Friend\u2019s money disappeared in November 2022, he donated a lot of money to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 4,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before November 2022, Bankman-Fried donated a lot of money to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 5,
+        "original": "Before Bankman-Fried's wealth eroded in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "original_spans": [],
+        "simplified": "Before Bankman-Fried's wealth was destroyed in November 2022, Bankman-Fried was a major donor to Democratic Party candidates.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 6,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant said he was still a Nepali citizen even though he had become an American one. || Nepali law does not allow people to have two citizenships at the same time.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 7,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 8,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The man claimed that he had not given up his Nepali citizenship while being an American citizen. || Nepali law does not allow people to have more than one nationality.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 9,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The person suing said that he did not renounce his Nepali citizenship while being an American citizen. || This is important because Nepali law does not allow for dual citizenship.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant said he had not given up his Nepali citizenship even though he had become a citizen of the US, which is not allowed according to Nepali law.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 11,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complaint said he did not renounce his Nepali citizenship while being an American citizen.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen, and Nepali law does not allow the provision of dual citizenship.",
+        "original_spans": [],
+        "simplified": "The complainant claimed that he had not renounced his Nepali citizenship while being an American citizen. || Nepali law does not allow the provision of dual citizenship.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 13,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "About 80 percent of buildings in the area were rebuilt or changed after the 1999 earthquake. || This made the 1999 earthquake less bad.",
+        "simplified_spans": [
+            [
+                2,
+                93,
+                95,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 14,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "Because most buildings in the area were rebuilt after 1999, this earthquake doesn\u2019t have much impact.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 15,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "About 80 percent of buildings in the area were rebuilt after the 1999 earthquakes.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "Around 80% of the buildings in the area were rebuilt or modified after the 1999 earthquakes, thus decreasing the effect of this quake.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "To reduce the impact of this earthquake, about 80 percent of buildings were updated after the 1999 earthquakes.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 18,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "Around 80% of the buildings in the area were renovated or modified after the 1999 earthquakes, making them better able to withstand this recent earthquake.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 19,
+        "original": "About 80 percent of buildings in the area were reconstructed or retrofitted after the 1999 earthquakes, reducing the impact of this earthquake.",
+        "original_spans": [],
+        "simplified": "About 80 % of buildings in the area were rebuilt after the 1999 earthquakes, reducing the effect of this earthquake.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 20,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority. || More than half of self-identified Republicans supported it as a top congressional priority.",
+        "simplified_spans": [
+            [
+                2,
+                215,
+                217,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 21,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "In mid-November 2022, a Morning Consult poll revealed that only 28% of Americans thought an impeachment investigation or investigations into Hunter Biden's business dealings should be a major congressional focus, but over half of Republicans agreed it should be a priority.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 22,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A poll found that only 28% of Americans supported having an impeachment investigation into Hunter Biden, but it also found half of Republicans supported it.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A tech company called Morning Consult conducted a poll in mid-November 2022. || This poll found that only 28% of Americans thought it was important for congress to look into Hunter Biden\u2019s business exchanges. || However, the poll also found that more than half of Republicans thought it was important for congress to look into this issue.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ],
+            [
+                2,
+                209,
+                211,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 24,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "In November 2022, a Morning Consult survey revealed that only 28% of Americans wanted impeachment investigations into Hunter Biden's business affairs to be a primary focus of Congress. || However, over half of self-identified Republicans supported that idea.",
+        "simplified_spans": [
+            [
+                2,
+                185,
+                187,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 25,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, while more than half of Republicans said it was a top congressional priority.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 26,
+        "original": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority, though it also found more than half of self-identified Republicans supported it as a top congressional priority.",
+        "original_spans": [],
+        "simplified": "A Morning Consult poll in mid-November 2022 found that only 28% of Americans supported having an impeachment investigation or investigations into Hunter Biden's business dealings to be a top congressional priority.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 27,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson came back to West Point in 1972 to serve as the 3rd Regimental Tactical officer. || He had to develop and train cadets.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 28,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson went back to West Point in 1972. || Over there, he was the 3rd Regimental Tactical officer. || He was in charge of coaching new military students and helping them become better.",
+        "simplified_spans": [
+            [
+                2,
+                42,
+                44,
+                0
+            ],
+            [
+                2,
+                101,
+                103,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 29,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson went back to West Point in 1972 and was given the job of developing and teaching cadets as the third Regimental Tactical officer.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson went back to West Point in 1972 as the 3rd Regimental Tactical officer. || His job was to educate and train cadets.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson returned to West Point in 1972 as the 3rd Regimental Tactical officer. || His main job at West Point was to train the new cadets.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 32,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson returned to West Point in 1972 to be the 3rd Regimental Tactical officer. || He was tasked with developing and training cadets.",
+        "simplified_spans": [
+            [
+                2,
+                83,
+                85,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 33,
+        "original": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer, where he was tasked with developing and training cadets.",
+        "original_spans": [],
+        "simplified": "Robinson returned to West Point in 1972 to serve as the 3rd Regimental Tactical officer. || He was in charge of developing and training cadets.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 34,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decoration is preserved on the interior, facade, and portico of the building, which was done in two separate time periods. || The first was likely when it was first constructed, while the second likely happened after 1913 when the building's use changed.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 35,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior and on the facade, there is preserved painted decoration. || It was done during two different periods. || The first was during the construction of the building and the second may have happened after 1913 when its use changed.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                119,
+                121,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 36,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decorations are kept on the face of the building, on the porch, and on the inside. || These paintings were made in two different time periods. || The first time period was when the building was built. || The second time period was after 1913, when the building\u2019s use was changed.",
+        "simplified_spans": [
+            [
+                2,
+                91,
+                93,
+                0
+            ],
+            [
+                2,
+                151,
+                153,
+                1
+            ],
+            [
+                2,
+                209,
+                211,
+                2
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, probably after 1913, when the building was changed from its original use.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 38,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, there is painted decoration. || The decoration was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 39,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "Painted decoration is preserved in the interior and on the facade. || This preservation possibly occurred during its construction and its change of use after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 40,
+        "original": "In the interior, on the facade and the portico, painted decoration is preserved, which was carried out in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "original_spans": [],
+        "simplified": "In the interior, on the facade and the portico, painted decoration is preserved. || This was done in two time periods, the first with its construction and the second possibly with the change of use of the building after 1913.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 41,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is a book about Kojima\u2019s life and the pop culture media he liked.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 42,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is a book that Hideo Kojima wrote about his life. || The book has a lot of short stories, essays, and stories about his life. || Many of the stories are about things that Kojima has loved as a child.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ],
+            [
+                2,
+                144,
+                146,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 43,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiography composed of short stories, essays, and stories from Kojima's life. || Many of these focus on the pop culture media he loves and how it has impacted him.",
+        "simplified_spans": [
+            [
+                2,
+                105,
+                107,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes spanning Kojima's life, many of which focus on the various pop culture media which Kojima developed an adoration for and how they have impacted him.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 45,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is a book written by Kojima about his life. || It has several short stories and essays. || Many of these talk about the pop culture media Kojima liked and how they changed his life.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ],
+            [
+                2,
+                106,
+                108,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 46,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiography by Kojima, containing stories, essays, and anecdotes about his life. || Several of these focus on the pop culture media he loves and how they have impacted him.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 47,
+        "original": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "original_spans": [],
+        "simplified": "The Creative Gene is an autobiographical book comprising a variety of short stories, essays, and anecdotes encompassing Kojima's life, many of which focus on the various pop culture media Kojima developed an adoration for and how they have impacted him.",
+        "simplified_spans": [],
+        "system": "new-wiki-2/T5-11B"
+    },
+    {
+        "id": 48,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life is divided into sections that cover self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || It has photos and illustrations that bring to life the great outdoors, and shows that connecting with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-few-shot"
+    },
+    {
+        "id": 49,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "It covers topics such as growing and gardening, cooking, health and beauty, and wilderness. || A Wilder Life shows that getting in touch with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-3B"
+    },
+    {
+        "id": 50,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "The book is divided into sections for each season and covers things like self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || A Wilder Life shows that it is possible to get in touch with nature and have fun with it.",
+        "simplified_spans": [
+            [
+                2,
+                155,
+                157,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Muss"
+    },
+    {
+        "id": 51,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "The book A Wilder Life is divided into sections based on the season. || It covers self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || It also has photos and illustrations of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                164,
+                166,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/Human 1 Writing"
+    },
+    {
+        "id": 52,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life demonstrates that people can reconnect with nature by looking at sections devoted to each season. || These sections discuss self-reliance, gardening and growing, cooking, health and beauty, and wilderness. || Images and illustrations reflect the beauty of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ],
+            [
+                2,
+                220,
+                222,
+                1
+            ]
+        ],
+        "system": "new-wiki-2/GPT-3-zero-shot"
+    },
+    {
+        "id": 53,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "A Wilder Life shows that getting in touch with nature is possible. || To show this, the book details many different aspects of the outdoors.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/Human 2 Writing"
+    },
+    {
+        "id": 54,
+        "original": "Divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness, and with photos and illustrations evocative of the great outdoors, A Wilder Life shows that getting in touch with nature is possible.",
+        "original_spans": [],
+        "simplified": "It is divided into sections pertaining to each season and covering self-reliance, growing and gardening, cooking, health and beauty, and wilderness. || With photos and illustrations evocative of the great outdoors, \" A Wilder Life \" shows that getting in touch with nature is possible.",
+        "simplified_spans": [
+            [
+                2,
+                149,
+                151,
+                0
+            ]
+        ],
+        "system": "new-wiki-2/T5-11B"
+    }
+]
