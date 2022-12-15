@@ -1,0 +1,769 @@
+[
+    {
+        "id": 0,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In Marriages and Infidelities, Oates takes ideas from novellas and short stories written by earlier authors and creates her own versions according to her artistic goals.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 1,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In \" Marriages and Infidelities \" Oates uses short stories and novellas as inspiration for her work.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 2,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In \" Marriages and Infidelities \", Oates refers to novellas and short stories by earlier writers. || She uses either their titles or their themes, and adapts them in accordance with her artistic intentions.",
+        "simplified_spans": [
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 3,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In Marriages and Infidelities, Oates references novellas and short stories written by earlier authors, which she adapts to meet her artistic goals.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 4,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia. || It has a leaf-like body with thin ribs and spindle-shaped bodies.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 5,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia looks similar to other erniettomorphs from Namibia. || It has a leaf-like body with thin ribs and spindle-shaped bodies.",
+        "simplified_spans": [
+            [
+                2,
+                60,
+                62,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 6,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia has a leaf-like body, thin ribs, and spindle-shaped bodies, similar to most other Erniettomorphs from Namibia. || However, it is distinguished from other taxa like Pteridinium and Rangea by its smaller petaloids and the ribs being sub-parallel to its axis.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 7,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia looks like most other Erniettomorphs from Namibia, with a leaf-like body and thin ribs and spindle-shaped bodies. || However, it has smaller petaloids and the configuration of its ribs run close to its axis, which sets it apart from Pteridinium and Rangea.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 8,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden has previously rejected calls to \"defund the police \", a slogan supported by racial justice protesters.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 9,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have attributed the rise in violent crime and homicides in 2020 and 2021 to progressives and liberals, whereas Biden had declined to support the \"defund the police\" slogan, favored by racial justice activists.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 10,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have said that progressives and liberals are responsible for the rise in violent crime and homicides in 2020 and 2021, although Biden had previously said no to cutting funds for the police, which many racial justice protesters supported.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 11,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime and homicides in 2020 on progressives and liberals. || Biden previously rejected calls to \"defund the police \", a slogan supported by racial justice protesters.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 12,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "Ion Iliescu was re-elected in 2019, winning by a landslide. || Since then, his second term has been challenged by the COVID-19 pandemic and the unstable political situation created by his corruption-tainted ally governments in 2020, including the Social Democrats which he has chosen to remain in power, even more than in his first term.",
+        "simplified_spans": [
+            [
+                2,
+                60,
+                62,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "In 2019, Klaus Iohannis defeated PSD candidate Viorica D\u0103ncil\u0103 by a large margin. || His second term has been marked by the COVID-19 pandemic and considerable political instability. || He has backed corrupt governments in the 2020 legislative elections, which include his closest allies - the social democrats, who he has even more strongly supported than Ion Iliescu.",
+        "simplified_spans": [
+            [
+                2,
+                82,
+                84,
+                0
+            ],
+            [
+                2,
+                182,
+                184,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 14,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 15,
+        "original": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "original_spans": [],
+        "simplified": "After defeating PSD candidate Viorica D\u0103ncil\u0103 by a landslide in 2019, his second term has been marked by the COVID-19 pandemic and by tremendous political instability given the corrupt governments he has endorsed after the 2020 legislative elections, in their composition being also his closest political allies, the social democrats, which he has endorsed at governance even more than Ion Iliescu.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 16,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue would cost around US$8.00 per-month. || It includes fewer ads, the ability to upload audio and video of any length, and verified accounts.",
+        "simplified_spans": [
+            [
+                2,
+                65,
+                67,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 17,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk stated that Twitter Blue's prices would be raised to around US$8.00 per month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 18,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 19,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk announced that Twitter Blue, which is usually priced at $8.00 monthly, would provide customers with the chance to post longer audio and video files, a verified account status, as well as reduced advertising.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 20,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Elon Musk also announced the creation of a \"content moderation council\" to determine how the platform would handle free speech, and announced a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 21,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "He announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 22,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk announced the formation of a \"content moderation council\" composed of individuals with different perspectives. || This council will decide how free speech should be handled on the platform. || Until then, no major changes to content or revivals of accounts will be made.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ],
+            [
+                2,
+                195,
+                197,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 23,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk announced the formation of a \"content moderation council\" with different opinions to decide how the platform should deal with free speech. || He also imposed a \"major content decision or account reinstatement\" moratorium until the council is formed.",
+        "simplified_spans": [
+            [
+                2,
+                144,
+                146,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 24,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On 5 November 2022, FIFA sent out a letter to all participating nations asking them to stop criticising Qatar's poor human rights records and to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world \".",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 25,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "FIFA told all participating nations to stop talking about Qatar's human rights records on November 5, 2022. || They wanted everyone to \"respect all opinions and beliefs without telling the rest of the world what to do\" and urged people to \"focus on the football.\"",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On November 5, 2022, FIFA asked all participating nations to stop and avoid any further talk about Qatar's poor human rights records. || They requested this out of respect for all opinions and beliefs, without trying to give moral advice to the rest of the world, and to focus on the game of football.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On 5 November 2022, FIFA sent out a letter to all the nations in the FIFA World Cup, asking them to stop talking about Qatar's human rights problems and to \"focus on the football. \"",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 28,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage released by the Islamic State showed bombs being dropped on an ammunition store in Deir ez-Zor, Syria. || This area was being fought over by the Islamic State and the Syrian government when the attack occurred.",
+        "simplified_spans": [
+            [
+                2,
+                117,
+                119,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 29,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage from the Islamic State revealed bombs falling on an ammunitions facility in Deir ez-Zor, Syria. || This region was disputed between the Islamic State and the Syrian government at the time.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 30,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage released by Islamic State showed bombs being dropped on an ammunitions facility in Deir ez-Zor, Syria. || This was an area of contested control between the Islamic State and the Syrian government at the time.",
+        "simplified_spans": [
+            [
+                2,
+                117,
+                119,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 31,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility in Deir ez-Zor, Syria.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 32,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Director Samuel Fuller removed the character of Gary and replaced Seberg with a different actor in the first film adaptation. || He also changed the story to make it a horror movie about the dog. || In contrast, director Barbeau-Lavalette stayed true to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                126,
+                128,
+                0
+            ],
+            [
+                2,
+                196,
+                198,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 33,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first movie version, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger actress, and recast the story as a horror movie about the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 34,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first movie, Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror movie centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "The first film adaptation took several liberties with the original book, rewriting the character of Gary, replacing Seberg with a new actress, and refocusing the film as a horror movie based on the canine. || However, director Barbeau-Lavalette stayed truer to the source material.",
+        "simplified_spans": [
+            [
+                2,
+                206,
+                208,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 36,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "It is described as a darkly comedic bio-pic. || Emilia Jones will play the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner? || \".",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                216,
+                218,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 37,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner? || \".",
+        "simplified_spans": [
+            [
+                2,
+                189,
+                191,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 38,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones has been confirmed to play the part of Reality Winner, the whistleblower, in a darkly comedic bio-pic. || The script was written by Kerry Howley, based on her 2017 New York Magazine feature \"Who Is Reality Winner? || \", and Fogel will direct the film.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ],
+            [
+                2,
+                227,
+                229,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 39,
+        "original": "Described as a darkly comedic bio-pic, Emilia Jones was confirmed to be portraying the whistle-blower Reality Winner from a script written by Kerry Howley based on her own 2017 New York Magazine feature, \"Who Is Reality Winner?\" with Fogel also on board to direct.",
+        "original_spans": [],
+        "simplified": "Emilia Jones has been cast to play the role of whistle-blower Reality Winner in a dark comedy biopic. || Kerry Howley wrote the script based on her own 2017 New York Magazine feature \"Who Is Reality Winner?\" || and Fogel is directing the film.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ],
+            [
+                2,
+                208,
+                210,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 40,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also having a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, it encouraged him to study Graphic Design in 2007. || He has been a cinematographer in the movie industry, also having a lot of experience with photography and experience in the field of graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 41,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also having a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "Facing a difficult situation in 2007, he decided to study Graphic Design. || Since then, he has been working as a Cinematographer in the film industry, and he has a lot of experience with photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 42,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also having a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In 2007, his difficult circumstances encouraged him to pursue Graphic Design. || Since then, he has worked as a Cinematographer in the film industry and gained experience in both photography and graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 43,
+        "original": "In a difficult situation, it encouraged him to study Graphic Design in 2007, and he's been since as a Cinematographer in the film industry, also having a lot of experience with photography and experience in the field of graphic design.",
+        "original_spans": [],
+        "simplified": "In a difficult situation, it encouraged him to study Graphic Design in 2007. || He is now working as a Cinematographer in the movie industry, also having a lot of experience with photography and experience in the field of graphic design.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 44,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin runs a farm, and has also opened it up to agritourism, holding weddings and business meetings there, as well as hosting a big Christmas event every year to draw in visitors.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 45,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin's business has grown beyond farming to include agritourism. || This involves hosting weddings, corporate meetings, and a big holiday celebration open to visitors.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 46,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin has expanded his business to include agritourism. || He uses his farm to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 47,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin has expanded his business to include agritourism. || He uses his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 48,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream to honor Takeoff. || He dissected videos from the time of Kirshnik's murder and asked everyone to stop glorifying violence in hip-hop, such as that by rappers YNW Melly and Tay-K who were convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                64,
+                66,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 49,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder, and also called for fighting the ideology of violence in hip hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 50,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 51,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "In honor of Takeoff, blogger DJ Akademiks hosted a three-hour stream in which he examined videos related to the murder of Kirshnik and promoted a shift away from the violent ideology found in hip-hop, including stopping the imitation of rappers YNW Melly and Tay-K who were both convicted of murder.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 52,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "When inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person to hold the office of governor of a U.S. state.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 53,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts. || She will also become the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as Governor of a U.S. state.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 54,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first female Governor of Massachusetts in January 2023, and the first openly lesbian governor of a U.S. state, along with the third openly LGBT person (after Kate Brown and Jared Polis).",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 55,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "In January 2023, she will be sworn in as the Governor of Massachusetts and will become the first female to do so. || She is also the first openly lesbian and third openly LGBT person after Kate Brown and Jared Polis to be elected governor of a US state.",
+        "simplified_spans": [
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 56,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series features the story of Abi (Played by Bolu Essien) who gets a job at a top advertising agency in Lagos.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 57,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "Abi (played by Bolu Essien) had a difficult beginning at a top Lagos advertising agency. || Despite this, she was promoted to become the temporary manager when the original manager had to go to a different branch.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 58,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "Abi (played by Bolu Essien) is featured in the sitcom series. || At first, her supervisor was tough on her. || However, she was promoted to acting manager when the manager traveled to another branch, and this gave her an opportunity to show her abilities at work.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ],
+            [
+                2,
+                108,
+                110,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 59,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The series features the story of Abi (played by Bolu Essien) who gets a job at a top advertising agency in Lagos. || She soon gets a chance to shine at work when she is promoted to become the acting manager after the manager travels to another branch.",
+        "simplified_spans": [
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    }
+]

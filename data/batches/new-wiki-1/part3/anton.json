@@ -1,0 +1,704 @@
+[
+    {
+        "id": 0,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "Winchester College was founded in 1382, and has since gone through different phases of construction, featuring a variety of architectural styles from Medieval, Early Modern, Victorian to 20th century.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "Winchester College was built in several architectural styles over its long history, beginning in 1382. || Additions and extensions were made in the medieval and Early Modern periods, and then more additions in the Victorian era and again in the 20th century.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the many periods of building from the college's foundation in 1382, through additions in the medieval and early modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 4,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In Marriages and Infidelities, Oates takes ideas from novellas and short stories written by earlier authors and creates her own versions according to her artistic goals.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 5,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In \" Marriages and Infidelities \" Oates uses short stories and novellas as inspiration for her work.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 6,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In \" Marriages and Infidelities \", Oates refers to novellas and short stories by earlier writers. || She uses either their titles or their themes, and adapts them in accordance with her artistic intentions.",
+        "simplified_spans": [
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "In Marriages and Infidelities, Oates explicitly alludes to novellas and short stories by earlier writers, making use of either their titles or their themes and adapting them in accordance with her artistic intentions.",
+        "original_spans": [],
+        "simplified": "In Marriages and Infidelities, Oates references novellas and short stories written by earlier authors, which she adapts to meet her artistic goals.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 8,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "It was besieged repeatedly during the War of Restoration of Independence. || During the siege of the city of Elvas led by the Spanish commander Don Luis de Haro in 1658, the fort stood out for its defenders'heroic resistance.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 9,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas led by the Spanish commander Don Luis de Haro in 1658 that the fort stood out for its defenders'heroic resistance.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 10,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "The city of Elvas was besieged multiple times during the War of Restoration of Independence, but in 1658 Don Luis de Haro led a particularly memorable siege. || The fort was particularly noted for its heroic defenders who successfully defended the area.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 11,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "During the War of Restoration of Independence, Elvas was besieged multiple times. || In 1658, Spanish commander Don Luis de Haro led a siege against the city. || The fort's defenders showed great courage and refused to surrender.",
+        "simplified_spans": [
+            [
+                2,
+                82,
+                84,
+                0
+            ],
+            [
+                2,
+                159,
+                161,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 12,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden has previously rejected calls to \"defund the police \", a slogan supported by racial justice protesters.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 13,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have attributed the rise in violent crime and homicides in 2020 and 2021 to progressives and liberals, whereas Biden had declined to support the \"defund the police\" slogan, favored by racial justice activists.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have said that progressives and liberals are responsible for the rise in violent crime and homicides in 2020 and 2021, although Biden had previously said no to cutting funds for the police, which many racial justice protesters supported.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "Republicans have blamed the increase in violent crime and homicides in 2020 and 2021 on progressives and liberals, although Biden had previously rejected calls to \"defund the police\", a slogan supported by racial justice protesters.",
+        "original_spans": [],
+        "simplified": "Republicans have blamed the increase in violent crime and homicides in 2020 on progressives and liberals. || Biden previously rejected calls to \"defund the police \", a slogan supported by racial justice protesters.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk announced that Twitter Blue, which is usually priced at $8.00 monthly, would provide customers with the chance to post longer audio and video files, a verified account status, as well as reduced advertising.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk said that Twitter Blue would cost around US$8.00 per-month. || It includes fewer ads, the ability to upload audio and video of any length, and verified accounts.",
+        "simplified_spans": [
+            [
+                2,
+                65,
+                67,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk stated that Twitter Blue's prices would be raised to around US$8.00 per month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 19,
+        "original": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "original_spans": [],
+        "simplified": "Musk stated that Twitter Blue's pricing would be raised to around US$8.00 per-month, and include reduced advertising on the Twitter service, the ability to post longer audio and video files, and verified account status.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 20,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book features more than 200 new color photographs taken by the British architectural photographer Morley von Sternberg. || It also includes older images of buildings that have been significantly altered or demolished.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 21,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book has more than 200 newly commissioned colour photographs by the British architectural photographer Morley von Sternberg. || There are also older images where needed to show buildings that have been significantly altered or demolished.",
+        "simplified_spans": [
+            [
+                2,
+                129,
+                131,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 22,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg. || It also includes older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "simplified_spans": [
+            [
+                2,
+                144,
+                146,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 23,
+        "original": "The book is illustrated with more than 200 newly commissioned color photographs by the British architectural photographer Morley von Sternberg, as well as older images where needed to illustrate buildings that have been significantly altered or demolished.",
+        "original_spans": [],
+        "simplified": "More than 200 brand-new, colored photographs have been taken by British architectural photographer Morley von Sternberg for this book. || Additionally, older images have been used to show buildings that have changed or been destroyed.",
+        "simplified_spans": [
+            [
+                2,
+                135,
+                137,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 24,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On 5 November 2022, FIFA sent out a letter to all the nations in the FIFA World Cup, asking them to stop talking about Qatar's human rights problems and to \"focus on the football. \"",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 25,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On 5 November 2022, FIFA sent out a letter to all participating nations asking them to stop criticising Qatar's poor human rights records and to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world \".",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 26,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "FIFA told all participating nations to stop talking about Qatar's human rights records on November 5, 2022. || They wanted everyone to \"respect all opinions and beliefs without telling the rest of the world what to do\" and urged people to \"focus on the football.\"",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 27,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On November 5, 2022, FIFA asked all participating nations to stop and avoid any further talk about Qatar's poor human rights records. || They requested this out of respect for all opinions and beliefs, without trying to give moral advice to the rest of the world, and to focus on the game of football.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 28,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major oil producers are expected to report record profits in 2022. || They will reward their shareholders with dividends and stock buybacks instead of plowing profits back into more production.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 29,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Oil companies in the United States and UK announced exceptionally high profits in 2022. || As a result, they distributed dividends to their shareholders and repurchased stocks instead of reinvesting the money into additional production like they had done in the past.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "In 2022, major oil producers in the US and UK earned record profits, giving money to their shareholders in the form of dividends and stock buybacks instead of reinvesting their profits in further production.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil companies reported record profits in 2022. || They rewarded their shareholders with dividends and stock buybacks.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 32,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Many mediators and outside observers agree that this agreement is a step towards peace, but that true peace has not been achieved yet.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 33,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "Mediators and outside observers agree this agreement is a move towards peace, but true peace still has not been reached.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 34,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "The mediators, as well as some observers, think that this agreement is a step towards peace, but that true peace has not yet to be fully realized.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 35,
+        "original": "There is general acknowledgment among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace had yet to be fully realized.",
+        "original_spans": [],
+        "simplified": "There is general agreement among the mediators, as well as some outside observers, that this agreement represents a step towards peace, but that true peace has yet to be fully realized.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 36,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Previous protests in Iran had been about election results and economic troubles, and the government had responded violently. || Now, protesters want more rights for women, but their main goal is to end the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 37,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Unlike earlier major protests, which were violently quelled by Iran's government, the current protest, besides increased rights for women, has one main demand: the overthrowing of the Islamic Republic.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 38,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes. || The current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "simplified_spans": [
+            [
+                2,
+                121,
+                123,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 39,
+        "original": "Whereas earlier major protests, which were violently quelled by Iran's government, focused on election results or economic woes, the current protest, besides increased rights for women, has one main demand: the overthrow of the Islamic Republic.",
+        "original_spans": [],
+        "simplified": "Earlier protests, which were forcefully put down by Iranian authorities, dealt with election results or financial difficulties. || Now, the current demonstration is demanding the collapse of the Islamic Republic, in addition to more rights for women.",
+        "simplified_spans": [
+            [
+                2,
+                128,
+                130,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 40,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin has expanded his business to include agritourism. || He uses his farm to host weddings, corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "In addition to farming, Corbin has expanded his business to include agritourism. || He uses his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "simplified_spans": [
+            [
+                2,
+                81,
+                83,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin runs a farm, and has also opened it up to agritourism, holding weddings and business meetings there, as well as hosting a big Christmas event every year to draw in visitors.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "In addition to farming, Corbin has expanded his business to include agritourism, using his farm to host weddings, host corporate meetings, and attract visitors to a large annual Christmas-themed display.",
+        "original_spans": [],
+        "simplified": "Corbin's business has grown beyond farming to include agritourism. || This involves hosting weddings, corporate meetings, and a big holiday celebration open to visitors.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may have some concerns about going to the World Cup in Qatar because of the alcohol laws in public places. || However, World Cup organizers announced the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 45,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans may have concerns about going to the World Cup in Qatar due to its alcohol laws. || World Cup organizers have introduced designated \"sobering up\" zones to ensure fans feel secure and relaxed when attending.",
+        "simplified_spans": [
+            [
+                2,
+                95,
+                97,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 46,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans may be worried about going to the World Cup in Qatar because of the laws about drinking alcohol in public places, but World Cup organizers have created \"sobering up\" zones to make sure fans feel safe and secure.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 47,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may be apprehensions about going to the World Cup in Qatar because of the alcohol laws. || However, World Cup organizers announced the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 48,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, James Cleverly, the British Foreign Secretary, declared that the UK and Mauritius would start negotiations about who should have control over the British Indian Ocean Territory, considering the most recent international legal cases.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 49,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, UK Foreign Secretary James Cleverly stated that the UK and Mauritius had chosen to open negotiations regarding sovereignty of the British Indian Ocean Territory. || This decision was made taking recent international legal proceedings into consideration.",
+        "simplified_spans": [
+            [
+                2,
+                182,
+                184,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 50,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to start talks about sovereignty over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 51,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 52,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "In January 2023, she will be sworn in as the Governor of Massachusetts and will become the first female to do so. || She is also the first openly lesbian and third openly LGBT person after Kate Brown and Jared Polis to be elected governor of a US state.",
+        "simplified_spans": [
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 53,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "When inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person to hold the office of governor of a U.S. state.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 54,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts. || She will also become the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as Governor of a U.S. state.",
+        "simplified_spans": [
+            [
+                2,
+                94,
+                96,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 55,
+        "original": "Once inaugurated in January 2023, she will become the first female Governor of Massachusetts as well as the first openly lesbian woman and third openly LGBT person (after Kate Brown and Jared Polis) to take office as governor of a U.S. state.",
+        "original_spans": [],
+        "simplified": "She will become the first female Governor of Massachusetts in January 2023, and the first openly lesbian governor of a U.S. state, along with the third openly LGBT person (after Kate Brown and Jared Polis).",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 56,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "However, upon Flynn's apparent success in securing enough backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looks forward, \"to seeing how he utilizes those great qualities in this leadership role. \"",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 57,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 58,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "Upon Flynn's success in getting enough support to become council president, Arroyo released a statement that was like a formal concession. || He commended Flynn's kindness and hard work, and expressed his expectation that Flynn will make use of these qualities in his leadership role.",
+        "simplified_spans": [
+            [
+                2,
+                139,
+                141,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 59,
+        "original": "However, upon Flynn's apparent success in securing sufficient backing to become council president, Arroyo released a statement that acted as an informal concession of sorts, giving strong praise to Flynn's kindness and work ethic, and declaring that he looked forward, \"to seeing how he utilizes those great qualities in this leadership role.\"",
+        "original_spans": [],
+        "simplified": "Flynn had enough support to become council president. || Arroyo released a statement praising Flynn's kindness and work ethic. || He also said he was excited to see how Flynn used those qualities as a leader.",
+        "simplified_spans": [
+            [
+                2,
+                54,
+                56,
+                0
+            ],
+            [
+                2,
+                127,
+                129,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    }
+]

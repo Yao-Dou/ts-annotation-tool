@@ -1,0 +1,772 @@
+[
+    {
+        "id": 0,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "Winchester College was founded in 1382, and has since gone through different phases of construction, featuring a variety of architectural styles from Medieval, Early Modern, Victorian to 20th century.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "Winchester College was built in several architectural styles over its long history, beginning in 1382. || Additions and extensions were made in the medieval and Early Modern periods, and then more additions in the Victorian era and again in the 20th century.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the multiple periods of building from the college's foundation in 1382, through additions in the medieval and Early Modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "original_spans": [],
+        "simplified": "The architecture of Winchester College is a diverse set of architectural styles, reflecting the many periods of building from the college's foundation in 1382, through additions in the medieval and early modern periods, to a major expansion of accommodation in the Victorian era and then further extensions at the turn of the 20th century and more recently.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 4,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their friend Hosanna took a steamboat from Saint Ann Parish in Jamaica to the United Kingdom. || They landed in London's Notting Hill, then relocated to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                132,
+                134,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 5,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their friend Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom. || It arrives in London's Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                133,
+                135,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 6,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Two sisters, Leah and Chantrelle, and their friend Hosanna, catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom. || They arrive in London's Notting Hill before moving to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "Two sisters, Leah and Chantrelle, and their acquaintance Hosanna catch a steamboat from Saint Ann Parish in Jamaica to the United Kingdom, arriving in London's Notting Hill before moving to the Midlands.",
+        "original_spans": [],
+        "simplified": "Leah, Chantrelle, and Hosanna boarded a steamship in Jamaica to sail to the UK. || They arrived in London's Notting Hill and then relocated to the Midlands.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 8,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "It was besieged repeatedly during the War of Restoration of Independence. || During the siege of the city of Elvas led by the Spanish commander Don Luis de Haro in 1658, the fort stood out for its defenders'heroic resistance.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 9,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas led by the Spanish commander Don Luis de Haro in 1658 that the fort stood out for its defenders'heroic resistance.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 10,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "The city of Elvas was besieged multiple times during the War of Restoration of Independence, but in 1658 Don Luis de Haro led a particularly memorable siege. || The fort was particularly noted for its heroic defenders who successfully defended the area.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 11,
+        "original": "Repeatedly besieged during the War of Restoration of Independence, it was during the siege of the city of Elvas, led by the Spanish commander Don Luis de Haro in 1658, that the fort stood out for its defenders' heroic resistance.",
+        "original_spans": [],
+        "simplified": "During the War of Restoration of Independence, Elvas was besieged multiple times. || In 1658, Spanish commander Don Luis de Haro led a siege against the city. || The fort's defenders showed great courage and refused to surrender.",
+        "simplified_spans": [
+            [
+                2,
+                82,
+                84,
+                0
+            ],
+            [
+                2,
+                159,
+                161,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 12,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia looks similar to other erniettomorphs from Namibia. || It has a leaf-like body with thin ribs and spindle-shaped bodies.",
+        "simplified_spans": [
+            [
+                2,
+                60,
+                62,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 13,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia has a leaf-like body, thin ribs, and spindle-shaped bodies, similar to most other Erniettomorphs from Namibia. || However, it is distinguished from other taxa like Pteridinium and Rangea by its smaller petaloids and the ribs being sub-parallel to its axis.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia looks like most other Erniettomorphs from Namibia, with a leaf-like body and thin ribs and spindle-shaped bodies. || However, it has smaller petaloids and the configuration of its ribs run close to its axis, which sets it apart from Pteridinium and Rangea.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia, with it having a leaf-like body with thin ribs and spindle-shaped bodies, however it differentiates itself from other taxa such as Pteridinium and Rangea in the sense that it has smaller petaloids and with the configuration of the ribs being sub-parallel to its axis.",
+        "original_spans": [],
+        "simplified": "Nasepia has an appearance similar to that of most other Erniettomorphs from Namibia. || It has a leaf-like body with thin ribs and spindle-shaped bodies.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk announced the formation of a \"content moderation council\" composed of individuals with different perspectives. || This council will decide how free speech should be handled on the platform. || Until then, no major changes to content or revivals of accounts will be made.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ],
+            [
+                2,
+                195,
+                197,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Musk announced the formation of a \"content moderation council\" with different opinions to decide how the platform should deal with free speech. || He also imposed a \"major content decision or account reinstatement\" moratorium until the council is formed.",
+        "simplified_spans": [
+            [
+                2,
+                144,
+                146,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "Elon Musk also announced the creation of a \"content moderation council\" to determine how the platform would handle free speech, and announced a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 19,
+        "original": "Musk also announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "original_spans": [],
+        "simplified": "He announced the creation of a \"content moderation council\" with diversified viewpoints to determine how the platform would handle free speech, and declared a moratorium on \"major content decisions or account reinstatements\" until then.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 20,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On November 5, 2022, FIFA asked all participating nations to stop and avoid any further talk about Qatar's poor human rights records. || They requested this out of respect for all opinions and beliefs, without trying to give moral advice to the rest of the world, and to focus on the game of football.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 21,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On 5 November 2022, FIFA sent out a letter to all the nations in the FIFA World Cup, asking them to stop talking about Qatar's human rights problems and to \"focus on the football. \"",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 22,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "On 5 November 2022, FIFA sent out a letter to all participating nations asking them to stop criticising Qatar's poor human rights records and to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world \".",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 23,
+        "original": "On November 5, 2022, FIFA sent out a letter to all participating nations telling them to cease and avoid any further or current discussion of Qatar's poor human rights records to \"respect all opinions and beliefs, without handing out moral lessons to the rest of the world\" and to \"focus on the football.\"",
+        "original_spans": [],
+        "simplified": "FIFA told all participating nations to stop talking about Qatar's human rights records on November 5, 2022. || They wanted everyone to \"respect all opinions and beliefs without telling the rest of the world what to do\" and urged people to \"focus on the football.\"",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 24,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage released by Islamic State showed bombs being dropped on an ammunitions facility in Deir ez-Zor, Syria. || This was an area of contested control between the Islamic State and the Syrian government at the time.",
+        "simplified_spans": [
+            [
+                2,
+                117,
+                119,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 25,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility in Deir ez-Zor, Syria.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 26,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage released by the Islamic State showed bombs being dropped on an ammunition store in Deir ez-Zor, Syria. || This area was being fought over by the Islamic State and the Syrian government when the attack occurred.",
+        "simplified_spans": [
+            [
+                2,
+                117,
+                119,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 27,
+        "original": "Drone footage released by the Islamic State showed bombs being dropped on an ammunitions facility located in Deir ez-Zor, Syria, an area of contested control between the Islamic State and the Syrian government at the time.",
+        "original_spans": [],
+        "simplified": "Drone footage from the Islamic State revealed bombs falling on an ammunitions facility in Deir ez-Zor, Syria. || This region was disputed between the Islamic State and the Syrian government at the time.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 28,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Poland's Minister of National Defense Mariusz Blaszczak said Poland will build a barrier along the border with the Russian exclave of Kaliningrad.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 29,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Poland's Minister of National Defence, Mariusz Blaszczak, proclaimed that they would build a wall along their border with the Russian region of Kaliningrad. || Poland suspects that Russia may use this border to smuggle African and Asian immigrants into Europe.",
+        "simplified_spans": [
+            [
+                2,
+                178,
+                180,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Mariusz Blaszczak, Poland's Minister of National Defence, announced plans to build a barrier along the border with Kaliningrad, a Russian exclave. || Poland fears that Russia might use the border to smuggle African and Asian immigrants into Europe.",
+        "simplified_spans": [
+            [
+                2,
+                168,
+                170,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad, as Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "original_spans": [],
+        "simplified": "On November 2, 2022, Poland's Minister of National Defence Mariusz Blaszczak announces the construction of a barrier along the border with the Russian exclave of Kaliningrad. || Poland believes that Russia will use the border to illegally transport African and Asian immigrants to Europe.",
+        "simplified_spans": [
+            [
+                2,
+                175,
+                177,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 32,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Oil companies in the United States and UK announced exceptionally high profits in 2022. || As a result, they distributed dividends to their shareholders and repurchased stocks instead of reinvesting the money into additional production like they had done in the past.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 33,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "In 2022, major oil producers in the US and UK earned record profits, giving money to their shareholders in the form of dividends and stock buybacks instead of reinvesting their profits in further production.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 34,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major American and British oil companies reported record profits in 2022. || They rewarded their shareholders with dividends and stock buybacks.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 35,
+        "original": "Major American and British oil producers reported record profits in 2022, rewarding their shareholders with dividends and stock buybacks rather than following their past practice of plowing profits back into more production.",
+        "original_spans": [],
+        "simplified": "Major oil producers are expected to report record profits in 2022. || They will reward their shareholders with dividends and stock buybacks instead of plowing profits back into more production.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 36,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Director Samuel Fuller removed the character of Gary and replaced Seberg with a different actor in the first film adaptation. || He also changed the story to make it a horror movie about the dog. || In contrast, director Barbeau-Lavalette stayed true to the original book.",
+        "simplified_spans": [
+            [
+                2,
+                126,
+                128,
+                0
+            ],
+            [
+                2,
+                196,
+                198,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 37,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first movie version, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger actress, and recast the story as a horror movie about the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 38,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "Unlike the first movie, Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror movie centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 39,
+        "original": "Unlike the first film adaptation, in which director Samuel Fuller entirely wrote out the character of Gary, replaced Seberg with a younger fictional actress, and recast the story as a horror film centred on the dog itself, Barbeau-Lavalette remained more faithful to the original book.",
+        "original_spans": [],
+        "simplified": "The first film adaptation took several liberties with the original book, rewriting the character of Gary, replacing Seberg with a new actress, and refocusing the film as a horror movie based on the canine. || However, director Barbeau-Lavalette stayed truer to the source material.",
+        "simplified_spans": [
+            [
+                2,
+                206,
+                208,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 40,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP. || They are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An activist said the Egyptian authorities were carrying out random detentions ahead of Cop. || They are randomly stopping people and looking at their mobile phones to look for any evidence of dissent.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "An anonymous activist stated that the Egyptian government was arresting people randomly before COP; they were stopping individuals and searching their phones for signs of disagreement.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "An activist hiding his identity said the Egyptian authorities were carrying out random detentions ahead of COP, where they are randomly stopping people and inspecting their mobile phones to look for any evidence of dissent.",
+        "original_spans": [],
+        "simplified": "A person who wanted to remain anonymous said the Egyptian government is randomly arresting people before a big gathering called COP. || They are checking people's phones to find out if anyone is opposing the government.",
+        "simplified_spans": [
+            [
+                2,
+                133,
+                135,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may have some concerns about going to the World Cup in Qatar because of the alcohol laws in public places. || However, World Cup organizers announced the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 45,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans may have concerns about going to the World Cup in Qatar due to its alcohol laws. || World Cup organizers have introduced designated \"sobering up\" zones to ensure fans feel secure and relaxed when attending.",
+        "simplified_spans": [
+            [
+                2,
+                95,
+                97,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 46,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans may be worried about going to the World Cup in Qatar because of the laws about drinking alcohol in public places, but World Cup organizers have created \"sobering up\" zones to make sure fans feel safe and secure.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 47,
+        "original": "Football fans around the world may find some apprehensions about going to the World Cup in Qatar because of the alcohol laws concerning consuming alcohol in public places, but World Cup organizers announce the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "original_spans": [],
+        "simplified": "Football fans around the world may be apprehensions about going to the World Cup in Qatar because of the alcohol laws. || However, World Cup organizers announced the creation of designated \"sobering up\" zones as a way to make fans feel safe and comfortable while attending the World Cup.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 48,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, James Cleverly, the British Foreign Secretary, declared that the UK and Mauritius would start negotiations about who should have control over the British Indian Ocean Territory, considering the most recent international legal cases.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 49,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, UK Foreign Secretary James Cleverly stated that the UK and Mauritius had chosen to open negotiations regarding sovereignty of the British Indian Ocean Territory. || This decision was made taking recent international legal proceedings into consideration.",
+        "simplified_spans": [
+            [
+                2,
+                182,
+                184,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 50,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to start talks about sovereignty over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 51,
+        "original": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory, taking into account the recent international legal proceedings.",
+        "original_spans": [],
+        "simplified": "On 3 November 2022, the British Foreign Secretary James Cleverly announced that the UK and Mauritius had decided to begin negotiations on sovereignty over the British Indian Ocean Territory.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 52,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream to honor Takeoff. || He dissected videos from the time of Kirshnik's murder and asked everyone to stop glorifying violence in hip-hop, such as that by rappers YNW Melly and Tay-K who were convicted of murder.",
+        "simplified_spans": [
+            [
+                2,
+                64,
+                66,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    },
+    {
+        "id": 53,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder, and also called for fighting the ideology of violence in hip hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 54,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 55,
+        "original": "Blogger DJ Akademiks held a three-hour stream in honor of Takeoff, in which he analyzed videos from the moment of the murder of Kirshnik, and also called for fighting the ideology of violence in hip-hop, including stop imitating rappers YNW Melly and Tay-K, who were convicted of murder.",
+        "original_spans": [],
+        "simplified": "In honor of Takeoff, blogger DJ Akademiks hosted a three-hour stream in which he examined videos related to the murder of Kirshnik and promoted a shift away from the violent ideology found in hip-hop, including stopping the imitation of rappers YNW Melly and Tay-K who were both convicted of murder.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 56,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The series features the story of Abi (played by Bolu Essien) who gets a job at a top advertising agency in Lagos. || She soon gets a chance to shine at work when she is promoted to become the acting manager after the manager travels to another branch.",
+        "simplified_spans": [
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/T5-3B"
+    },
+    {
+        "id": 57,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "The sitcom series features the story of Abi (Played by Bolu Essien) who gets a job at a top advertising agency in Lagos.",
+        "simplified_spans": [],
+        "system": "new-wiki-1/T5-11B"
+    },
+    {
+        "id": 58,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "Abi (played by Bolu Essien) had a difficult beginning at a top Lagos advertising agency. || Despite this, she was promoted to become the temporary manager when the original manager had to go to a different branch.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-zero-shot"
+    },
+    {
+        "id": 59,
+        "original": "The sitcom series features the story of Abi (played by Bolu Essien) who secures a job at a top advertising agency in Lagos, although she had a rough start with her superior, she soon got an opportunity to shine at work when she was promoted to become the acting manager after the manager traveled to another branch.",
+        "original_spans": [],
+        "simplified": "Abi (played by Bolu Essien) is featured in the sitcom series. || At first, her supervisor was tough on her. || However, she was promoted to acting manager when the manager traveled to another branch, and this gave her an opportunity to show her abilities at work.",
+        "simplified_spans": [
+            [
+                2,
+                62,
+                64,
+                0
+            ],
+            [
+                2,
+                108,
+                110,
+                1
+            ]
+        ],
+        "system": "new-wiki-1/GPT-3-few-shot"
+    }
+]
