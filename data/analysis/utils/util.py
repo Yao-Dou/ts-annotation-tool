@@ -255,11 +255,16 @@ def edit_dist(s1, s2):
         distances = distances_
     return distances[-1]
 
-def get_edits_by_family(data, family):
+def get_edits_by_family(data, family, combine_humans=True):
     out = {}
     systems = set([sent['system'] for sent in data])
+    if combine_humans:
+        systems = set([sent['system'] for sent in data if 'Human' not in sent['system']] + ['aggregated/human'])
     for system in systems:
-        sents = [sent for sent in data if sent['system'] == system]
+        if combine_humans and system == 'aggregated/human':
+            sents = [sent for sent in data if 'Human' in sent['system']]
+        else:
+            sents = [sent for sent in data if sent['system'] == system]
         anns = [ann for sent in sents for ann in sent['processed_annotations']]
         selected = [ann for ann in anns if ann['family'] == family]
 
@@ -289,8 +294,18 @@ def get_edits_by_family(data, family):
             # In general, counting the grammar edits is really weird
             error_annotations[Quality.ERROR] = len([ann for ann in anns if ann['grammar_error']])
             error_annotations[Error.COMPLEX_WORDING] = len([ann for ann in error_edits if ann['error_type'] == Error.COMPLEX_WORDING])
+            error_annotations[Error.UNNECESSARY_INSERTION] = len([ann for ann in error_edits if ann['error_type'] == Error.UNNECESSARY_INSERTION])
 
         out[system] = {'quality': quality_annotations, 'error': error_annotations}
+
+        # Since we're combining 2 sets of human annotations, we have to divide by 2
+        if combine_humans:
+            for vala in out.keys():
+                if vala == 'aggregated/human':
+                    for valb in out[vala].keys():
+                        for valc in out[vala][valb].keys():
+                            out[vala][valb][valc] /= 2
+            
     return out
 
 def get_ratings_by_edit_type(data, edit_type):

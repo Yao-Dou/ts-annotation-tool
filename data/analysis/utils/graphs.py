@@ -52,8 +52,16 @@ color_mapping = {
 
     ReorderLevel.COMPONENT: '#7db39a',
     ReorderLevel.WORD: '#54b387',
-    Edit.STRUCTURE: '#FF9F15',
+    Edit.STRUCTURE: '#ffa159',
     Quality.ERROR: '#ad9ef0',
+
+    # For ratings graph
+    'generalization': '#ee2a2a',
+    'paraphrase': '#2186eb',
+    'elaboration': '#64C466',
+    'split': '#F7CE46',
+    'reorder': '#3ca3a7',
+    'structure': '#FF9F15',
 }
 
 # Maps system codes to names
@@ -69,8 +77,8 @@ system_name_mapping = {
     'systems/transformer_w_split.txt': 'BERT Split',
     'systems/con_simplification.txt': 'Controllable',
     'new-wiki-1/Muss': 'MUSS',
-    'new-wiki-1/GPT-3-zero-shot': 'GPT-3 Zero',
-    'new-wiki-1/GPT-3-few-shot': 'GPT-3 Few',
+    'new-wiki-1/GPT-3-zero-shot': 'GPT-Zero',
+    'new-wiki-1/GPT-3-few-shot': 'GPT-Few',
     'new-wiki-1/Human 1 Writing': 'Human 1',
     'new-wiki-1/Human 2 Writing': 'Human 2',
 
