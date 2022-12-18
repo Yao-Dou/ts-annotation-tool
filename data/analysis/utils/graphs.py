@@ -466,9 +466,12 @@ def sankey_combined(data):
     )
     fig.show()
     
-def draw_agreement(sents):
+def draw_agreement(sents, paper=False):
     sents = sorted(sents, key=lambda x: x['user'], reverse=True)
     annotator = sorted(list(set([f"{x['user']}\nBatch {x['batch']}\nHIT {x['hit_id']+1}" for x in sents])), reverse=True)
+
+    if paper:
+        annotator = ['Ann 3', 'Ann 2', 'Ann 1']
 
     fig, ax = plt.subplots(2)
     for axis_num, sent_type in enumerate(['original_span', 'simplified_span']):
@@ -502,6 +505,13 @@ def draw_agreement(sents):
 
         ax[axis_num].set_xticks([])
 
+        sent_type_labels = {
+            'original_span': 'Original',
+            'simplified_span': 'Simplification'
+        }
+        ax[axis_num].set_title(sent_type_labels[sent_type], fontsize = 14)
+        ax[axis_num].tick_params(left=False, labelsize=12)
+
         ax[axis_num].spines['bottom'].set_visible(False)
         ax[axis_num].spines['top'].set_visible(False)
         ax[axis_num].spines['left'].set_visible(False)
@@ -509,7 +519,14 @@ def draw_agreement(sents):
     
     # plt.legend([b1, b2], ["None", "Deletion", "Substitution"], title="Edit Type", loc="upper right")
     # fig.suptitle(f'Batch {sents[0]["batch"]} | HIT {sents[0]["hit_id"]+1}')
-    fig.suptitle(f"{sents[0]['original'][:30]}...")
+    fig.tight_layout()
+    
+    if not paper:
+        fig.suptitle(f"{sents[0]['original'][:30]}...")
+
+    if paper:
+        out_filename = "img/disagreement-highlights.svg"
+        plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
 
     fig.show()
 
