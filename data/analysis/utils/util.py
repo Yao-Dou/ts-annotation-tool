@@ -298,17 +298,17 @@ def get_edits_by_family(data, family, combine_humans=True):
 
         out[system] = {'quality': quality_annotations, 'error': error_annotations}
 
-        # Since we're combining 2 sets of human annotations, we have to divide by 2
-        if combine_humans:
-            for vala in out.keys():
-                if vala == 'aggregated/human':
-                    for valb in out[vala].keys():
-                        for valc in out[vala][valb].keys():
-                            out[vala][valb][valc] /= 2
+    # Since we're combining 2 sets of human annotations, we have to divide by 2
+    if combine_humans:
+        for vala in out.keys():
+            if vala == 'aggregated/human':
+                for valb in out[vala].keys():
+                    for valc in out[vala][valb].keys():
+                        out[vala][valb][valc] /= 2
             
     return out
 
-def get_ratings_by_edit_type(data, edit_type):
+def get_ratings_by_edit_type(data, edit_type, combine_humans=False):
     information_change = None
     if edit_type == 'paraphrase':
         family = Family.LEXICAL
@@ -326,10 +326,15 @@ def get_ratings_by_edit_type(data, edit_type):
 
     out = {}
     systems = set([sent['system'] for sent in data])
+    if combine_humans:
+        systems = set([sent['system'] for sent in data if 'Human' not in sent['system']] + ['aggregated/human'])
     for system in systems:
         score_range = 3
 
-        sents = [sent for sent in data if sent['system'] == system]
+        if combine_humans and system == 'aggregated/human':
+            sents = [sent for sent in data if 'Human' in sent['system']]
+        else:
+            sents = [sent for sent in data if sent['system'] == system]
         anns = [ann for sent in sents for ann in sent['processed_annotations']]
         selected = [ann for ann in anns if ann['family'] == family]
         selected = [ann for ann in anns if ann['edit_type'] == edit_type]
@@ -365,3 +370,98 @@ def get_ratings_by_edit_type(data, edit_type):
             'error': error_annotations}
     return out
     
+def get_edits_by_type(data, quality_error):
+    out = {}
+    systems = set([sent['system'] for sent in data])
+    for system in systems:
+        sents = [sent for sent in data if sent['system'] == system]
+        anns = [ann for sent in sents for ann in sent['processed_annotations']]
+        avg_score = {}
+
+        quality_edits = [ann for ann in anns if ann['type'] == Quality.QUALITY]
+        quality_annotations = {}
+        for impact in [i for i in Information if i != Information.DIFFERENT]:
+            quality_annotations[impact] = [ann['rating'] for ann in quality_edits if ann['information_impact'] == impact]
+        for reorder_level in ReorderLevel:
+            quality_annotations[reorder_level] = [ann['rating'] for ann in quality_edits if ann['reorder_level'] == reorder_level]
+        quality_annotations[Edit.STRUCTURE] = [ann['rating'] for ann in quality_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()]
+        quality_annotations[Information.SAME] = [ann['rating'] for ann in quality_edits if ann['edit_type'] == Edit.SUBSTITUTION.value.lower() and ann['information_impact'] == Information.SAME]
+
+        
+        error_edits = [ann for ann in anns if ann['type'] == Quality.ERROR]
+        error_annotations = {}
+        for impact in [i for i in Information if i != Information.DIFFERENT]:
+            error_annotations[impact] = [ann['rating'] for ann in error_edits if ann['information_impact'] == impact]
+        for reorder_level in ReorderLevel:
+            error_annotations[reorder_level] = [ann['rating'] for ann in error_edits if ann['reorder_level'] == reorder_level]
+        error_annotations[Edit.STRUCTURE] = [ann['rating'] for ann in error_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()]
+        error_annotations[Information.SAME] = [ann['rating'] for ann in error_edits if ann['edit_type'] == Edit.SUBSTITUTION.value.lower() and ann['information_impact'] == Information.SAME]
+        
+        
+        for k in quality_annotations.keys():
+            avg_score[k] = avg(quality_annotations[k] + [i for i in error_annotations[k] if i is not None])
+            if k != Information.LESS:
+                avg_score[k] += 1
+
+        out[system] = avg_score
+    return out
+
+def error_rate(data):
+    # What % of sentences contain at least 1 error?
+    error, noterror = 0, 0
+    for sent in data:
+        for ann in sent['processed_annotations']:
+            if ann['type'] == Quality.ERROR:
+                error += 1
+                break
+    aloe = error/len(data)
+
+    error, noterror = 0, 0
+    for sent in data:
+        for ann in sent['processed_annotations']:
+            if ann['type'] == Quality.ERROR and ann['error_type'] != Error.BAD_DELETION:
+                error += 1
+                break
+    aloe_no_del = error/len(data)
+
+    # What % of edits were errors?
+    error, noterror = 0, 0
+    for sent in data:
+        for ann in sent['processed_annotations']:
+            if ann['type'] == Quality.ERROR:
+                error += 1
+            else:
+                noterror += 1
+    perc_error = error/(noterror+error)
+
+    return aloe, aloe_no_del, perc_error
+
+def edit_ratings_by_family(data, combine_humans=True):
+    families = [
+        'elaboration',
+        'generalization',
+        'split',
+        'structure',
+        'reorder',
+        'paraphrase'
+    ]
+    systems = set([x['system'] for x in data])
+    if combine_humans:
+        systems = set([sent['system'] for sent in data if 'Human' not in sent['system']] + ['aggregated/human'])
+    fam = {}
+    for family in families:
+        ratings = get_ratings_by_edit_type(data, family, combine_humans=True)
+        al = {}
+        for system in systems:
+            # Print quality edits
+            total = sum([x if type(x) is int else sum(x.values()) for x in list(ratings[system].values())])
+            nl = []
+            for i in range(3):
+                nl += [ratings[system]["error"][i] / total]
+            nl += [ratings[system]["trivial"] / total]
+            for i in range(3):
+                nl += [ratings[system]["quality"][i] / total]
+            al[system] = nl
+        # al = ' & ' + al[:-2].capitalize() + '\\tabularnewline'
+        fam[family] = al
+    return fam

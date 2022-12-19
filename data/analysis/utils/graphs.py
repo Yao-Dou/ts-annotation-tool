@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import numpy as np
+import matplotlib as mpl
 import copy
 from utils.names import *
 from utils.util import *
@@ -139,6 +140,24 @@ width = 0.5
 plt.rcParams["figure.figsize"] = [7.5, 4]
 plt.rcParams["figure.autolayout"] = True
 plt.rcParams["figure.max_open_warning"] = False
+
+# Color utils
+def clamp(val, minimum=0, maximum=255):
+    if val < minimum:
+        return minimum
+    if val > maximum:
+        return maximum
+    return val
+
+def colorscale(hexstr, scalefactor):
+    hexstr = hexstr.strip('#')
+    if scalefactor < 0 or len(hexstr) != 6:
+        return hexstr
+    r, g, b = int(hexstr[:2], 16), int(hexstr[2:4], 16), int(hexstr[4:], 16)
+    r = clamp(r * scalefactor)
+    g = clamp(g * scalefactor)
+    b = clamp(b * scalefactor)
+    return "#%02x%02x%02x" % (int(r), int(g), int(b))
 
 def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False, humans=False):
     if humans:
@@ -505,12 +524,13 @@ def draw_agreement(sents, paper=False):
 
         ax[axis_num].set_xticks([])
 
-        sent_type_labels = {
-            'original_span': 'Original',
-            'simplified_span': 'Simplification'
-        }
-        ax[axis_num].set_title(sent_type_labels[sent_type], fontsize = 14)
-        ax[axis_num].tick_params(left=False, labelsize=12)
+        if paper:
+            sent_type_labels = {
+                'original_span': 'Original',
+                'simplified_span': 'Simplification'
+            }
+            ax[axis_num].set_title(sent_type_labels[sent_type], fontsize=14)
+            ax[axis_num].tick_params(left=False, labelsize=12)
 
         ax[axis_num].spines['bottom'].set_visible(False)
         ax[axis_num].spines['top'].set_visible(False)
@@ -591,7 +611,17 @@ def simpeval_agreement(data, average=True):
     plt.title(f'SimpEval Correlation ({len(pts)} sentences)')
     plt.show()
 
-def edit_length(data, systems, type_='edit_dist', simpeval=False):
+def edit_length(data, systems, type_='edit_dist', simpeval=False, average_scores=False):
+    if average_scores:
+        new_data = copy.deepcopy(data)
+        for id_ in set([sent['id'] for sent in data]):
+            sents = [sent for sent in data if sent['id'] == id_]
+            new_score = avg([sent['score'] for sent in sents])
+            for i in range(len(new_data)):
+                if new_data[i]['id'] == id_:
+                    new_data[i]['score'] = new_score
+        data = new_data
+
     total_sent = 0
     for system in systems:
         if type_ == 'edit_dist':
@@ -613,6 +643,7 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False):
     else:
         plt.xlabel('Our score')
     plt.title(f'Scoring vs. Edits ({total_sent} sentences)')
+    plt.gcf().set_size_inches(7, 5)
     plt.legend()
     plt.show()
 
@@ -703,6 +734,127 @@ def edits_by_family(data, family=None):
     plt.tight_layout()
     plt.show()
 
+
+def edits_by_family_separated(data, savefig=False):
+    fig, ax = plt.subplots(3, 2, figsize=(6, 12))
+    width = 0.65
+
+    for plt_idx, family in enumerate(Family):
+        out = get_edits_by_family(data, family)
+        # Get the system labels by preserving the order of systems
+        system_labels = [x for x in system_name_mapping if x in out.keys()]
+        x = np.arange(len(system_labels))
+
+        # Graph the quality edits
+        quality_data = {system : out[system]['quality'] for system, _ in out.items()}
+        bottom = [0 for x in range(len(system_labels))]
+        if family == Family.CONTENT:
+            quality_iterator = Information
+        elif family == Family.SYNTAX:
+            quality_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+        elif family == Family.LEXICAL:
+            quality_iterator = [Information.SAME]
+        for quality_type in quality_iterator:
+            val = [quality_data[label][quality_type] for label in system_labels]
+            if sum(val) != 0:
+                # Custom labels
+                label = quality_type.value
+                # if family == Family.SYNTAX:
+                #     label = 'Quality ' + quality_type.value.lower() + ' edit'
+                if quality_type == Information.SAME:
+                    label = 'Paraphrase'
+
+                ax[plt_idx, 0].bar(x, val, width, bottom=bottom, label=label, color=color_mapping[quality_type])
+            bottom = [bottom[i] + val[i] for i in range(len(val))]
+
+        ax[plt_idx,0].set_yticks([i*round(max(bottom)/5) for i in range(6)])
+
+        # Graph the error edits
+        error_data = {system : out[system]['error'] for system, _ in out.items()}
+        bottom = [0 for x in range(len(system_labels))]
+        if family == Family.CONTENT:
+            error_iterator = [e for e in Error if e != Error.UNNECESSARY_INSERTION]
+        elif family == Family.SYNTAX:
+            error_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+        elif family == Family.LEXICAL:
+            error_iterator = [Error.COMPLEX_WORDING, Quality.ERROR, Error.UNNECESSARY_INSERTION]
+        for error_type in error_iterator:
+            val = [error_data[label][error_type] for label in system_labels]
+
+            # This is a really awful solution, but it would be too much to change the classification of this error
+            if family == Family.LEXICAL and error_type == Error.UNNECESSARY_INSERTION:
+                tmp = get_edits_by_family(data, Family.CONTENT)
+                tmp = {system : tmp[system]['error'] for system, _ in tmp.items()}
+                val = [tmp[label][Error.UNNECESSARY_INSERTION] for label in system_labels]
+
+            if sum(val) != 0:
+                # Custom labels
+                label = error_type.value
+                if family == Family.SYNTAX or Family.LEXICAL:
+                    if label == 'Error':
+                        label = 'Grammar'
+                    # label += ' Error'
+
+                ax[plt_idx, 1].bar(x, val, width, bottom=bottom, label=label, color=color_mapping[error_type])
+            bottom = [bottom[i] + val[i] for i in range(len(val))]
+
+        displayed_x_labels = [system_name_mapping[label] for label in system_labels]
+
+        font_size = 8
+
+        ax[plt_idx,0].tick_params(labelsize=font_size)
+        ax[plt_idx,1].tick_params(labelsize=font_size)
+        
+        ax[plt_idx,0].set_xticklabels(['none'] + displayed_x_labels)
+        ax[plt_idx,1].set_xticklabels(['none'] + displayed_x_labels)
+
+        ax[plt_idx,1].set_yticklabels([])
+
+        font_size = 8
+        legend_loc = (0.5, -0.1)
+
+        if family == Family.LEXICAL:
+            ax[plt_idx,0].set_xlabel('System')
+            ax[plt_idx,1].set_xlabel('System')
+            legend_loc = (0.5, -0.15)
+        elif family == Family.CONTENT:
+            ax[plt_idx,0].set_title('Quality ↑')
+            ax[plt_idx,1].set_title('Error ↓')
+
+        ax[plt_idx,0].legend(loc='upper center', bbox_to_anchor=legend_loc,
+            fancybox=True, ncol=2, borderaxespad=1.,fontsize=font_size,
+            facecolor='white',edgecolor='black',framealpha=1,frameon=False,
+            columnspacing=1,handlelength=1,handleheight=1,handletextpad=0.4,
+            borderpad=0.2)
+
+        ax[plt_idx,1].legend(loc='upper center', bbox_to_anchor=legend_loc,
+            fancybox=True, ncol=2, borderaxespad=1.,fontsize=font_size,
+            facecolor='white',edgecolor='black',framealpha=1,frameon=False,
+            columnspacing=1,handlelength=1,handleheight=1,handletextpad=0.4,
+            borderpad=0.2)
+
+        for ha in ax[plt_idx,0].legend_.legendHandles + ax[plt_idx,1].legend_.legendHandles:
+            ha.set_edgecolor("black")
+
+        # Set the margins a little higher than the max value
+        tick_range = np.arange(0, max([sum(x.values()) for x in quality_data.values()]) + 10, step=20)
+        ax[plt_idx,0].set_yticks(tick_range)
+        ax[plt_idx,1].set_yticks(tick_range)
+
+    # Add titles
+    fig.suptitle('Content Edits', fontsize=14)
+    plt.figtext(0.5, (2/3) - 0.023, "Syntax Edits", va="center", ha="center", size=14)
+    plt.figtext(0.5, (1/3), "Lexical Edits", va="center", ha="center", size=14)
+
+    plt.tight_layout()
+    plt.subplots_adjust(top=1.65)
+    if savefig:
+        out_filename = f'img/edit-ratings-all-separated.svg'
+        plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
+        plt.close(fig)
+    else:
+        plt.show()
+
 # Select one of : Paraphrase, Split, Structure, Reorder
 # Could do this with deletions as well
 def ratings_by_edit_type(data, edit_type):
@@ -760,5 +912,144 @@ def ratings_by_edit_type(data, edit_type):
 
     # Set the margins a little higher than the max value
     plt.ylim(0, max([max(x.values()) for x in quality_data.values()]) + 10)
+
+    plt.show()
+
+def avg_edit_ratings(data):
+    out = get_edits_by_type(data, Quality.QUALITY)
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    width = 0.12
+
+    # Get the system labels by preserving the order of systems
+    system_labels = [x for x in system_name_mapping if x in out.keys()]
+    edit_labels = list(out[list(out.keys())[0]].keys())
+    x = np.arange(len(edit_labels))
+
+    # Graph the edits
+    spacing = [x - 2*width, x - width, x, x + width, x + 2*width, x + 3*width]
+    for i, system in enumerate(system_labels):
+        val = [out[system][label] for label in edit_labels]
+        ax.bar(spacing[i], val, width, label=system_name_mapping[system]) #, color=color_mapping[edit_label])
+
+    displayed_x_labels = [label.value for label in edit_labels]
+
+    ax.set_title(f'Avg. Edit Rating')
+    ax.set_xlabel('System')
+    ax.set_xticklabels(['none'] + displayed_x_labels)
+    ax.set_yticks(np.arange(0, 3, 0.25))
+    ax.legend(bbox_to_anchor=(1, 1), loc="upper left")
+
+    # Set the margins a little higher than the max value
+    plt.ylim(1, 2.5)
+
+    plt.show()
+
+def edit_ratings_barh_old(data):
+    fam = edit_ratings_by_family(data)
+    fig, ax = plt.subplots(len(fam.keys()), 4)
+    for i, family in enumerate(fam.keys()):
+        ratings = fam[family]
+
+        for j, system in enumerate([s for s in all_system_labels if s in ratings.keys()]):
+            left = 0
+            color = color_mapping[family]
+            for k, rating in enumerate(ratings[system]):
+                if j == 0:
+                    label = family.capitalize()
+                else:
+                    label = ' '
+                
+                ax[i, j].barh(label, rating, left=left, color=color, alpha=k*(1/7))
+                left += rating
+            if i == 0:
+                ax[i, j].set_title(system_name_mapping[system])
+
+            ax[i, j].set_xticks([])
+
+            ax[i, j].spines['bottom'].set_visible(False)
+            ax[i, j].spines['top'].set_visible(False)
+            ax[i, j].spines['left'].set_visible(False)
+            ax[i, j].spines['right'].set_visible(False)
+
+    fig.tight_layout()
+    plt.show()
+
+def edit_ratings_barh(data, old_formatting=False):
+    if old_formatting:
+        edit_ratings_barh_old(data)
+        return
+
+    fam = edit_ratings_by_family(data)
+
+    plt.rcParams["figure.figsize"] = [11, 3]
+
+    fig, ax = plt.subplots(4, len(fam.keys()))
+    for i, family in enumerate(fam.keys()):
+        ratings = fam[family]
+
+        for j, system in enumerate([s for s in all_system_labels if s in ratings.keys()]):
+            left = 0
+            curr_plots = []
+            for k, rating in enumerate(ratings[system]):
+                if k < 3:
+                    color = '#5e5e5e'
+                elif k > 3:
+                    color = color_mapping[family]
+                else:
+                    color = '#b8b398'
+
+                if i == 0:
+                    label = system_name_mapping[system]
+                    ax[j, i].tick_params(left=False, labelsize=12)
+                else:
+                    label = ' '
+                    ax[j, i].axis('off')
+                
+                dem = 3
+                scalar = [0.6, 1, 1.3, 1, 0.8, 1, 1.2]
+                color = colorscale(color, scalar[k]) # abs(3-k)*(1/dem) + (1/dem)
+
+                bar_plot = ax[j, i].barh(label, rating, left=left, color=color, edgecolor='#cfcfcf') ##6e6e6e # alpha=abs(3-k)*(1/dem) + (1/dem)
+                ax[j, i].add_patch(mpl.patches.Rectangle((0, -0.4), 1, 0.8, fill=None, alpha=1))
+                
+                curr_plots += [bar_plot]
+                left += rating
+            if j == 0:
+                # add padding
+                ax[j, i].set_title(family.capitalize(), pad=10)
+            elif j == len(ratings.keys()) - 1:
+                labels = [f'-{x-3}' if x - 3 < 0 else f'+{x-3}' for x in range(7)]
+                legend = ax[j, i].legend(
+                    handles=curr_plots, labels=labels, bbox_to_anchor=(0.5, -1.2), 
+                    loc='lower center', borderaxespad=0.,fontsize=10,ncol=7,
+                    facecolor='white',edgecolor='black',framealpha=1,frameon=False,
+                    columnspacing=0.1,handlelength=1,handleheight=1,
+                    # Should be 0
+                    handletextpad=-1, borderpad=0, title=' Error         Quality'
+                )
+                handles, labels = ax[j, i].get_legend_handles_labels()
+                for ha in ax[j, i].legend_.legendHandles:
+                    ha.set_edgecolor("black")
+                for text in legend.get_texts():
+                    text.set_position((0, -15))
+
+            ax[j, i].set_xticks([])
+
+            ax[j, i].spines['bottom'].set_visible(False)
+            ax[j, i].spines['top'].set_visible(False)
+            ax[j, i].spines['left'].set_visible(False)
+            ax[j, i].spines['right'].set_visible(False)
+
+    plt.subplots_adjust(wspace=0, hspace=0, bottom=0.5)
+
+    # Arbitrary text to force padding at bottom of figure
+    fig.text(0.5, -0.01, ' ', ha='center', fontsize=14)
+
+    plt.tight_layout()
+    plt.subplots_adjust()
+
+    out_filename = "img/edit-level-scores.svg"
+    plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
 
     plt.show()
