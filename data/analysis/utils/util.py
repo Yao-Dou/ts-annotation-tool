@@ -453,7 +453,6 @@ def edit_ratings_by_family(data, combine_humans=True):
         ratings = get_ratings_by_edit_type(data, family, combine_humans=True)
         al = {}
         for system in systems:
-            # Print quality edits
             total = sum([x if type(x) is int else sum(x.values()) for x in list(ratings[system].values())])
             nl = []
             for i in range(3):
@@ -462,6 +461,27 @@ def edit_ratings_by_family(data, combine_humans=True):
             for i in range(3):
                 nl += [ratings[system]["quality"][i] / total]
             al[system] = nl
-        # al = ' & ' + al[:-2].capitalize() + '\\tabularnewline'
         fam[family] = al
+    
+    # TODO: Refactor this
+    tmp = {}
+    for family in families:
+        ratings = get_ratings_by_edit_type(data, family, combine_humans=True)
+        al = {}
+        for system in systems:
+            nl = []
+            for i in range(3):
+                nl += [ratings[system]["error"][i]]
+            nl += [ratings[system]["trivial"]]
+            for i in range(3):
+                nl += [ratings[system]["quality"][i]]
+            al[system] = nl
+        tmp[family] = al
+    fam['all'] = {
+        system: [
+            sum([tmp[f][system][i] for f in families])/sum([sum([tmp[f][system][i] for f in families]) for i in range(7)]) for i in range(7)
+        ]
+        for system in systems
+    }
+
     return fam

@@ -63,6 +63,7 @@ color_mapping = {
     'split': '#F7CE46',
     'reorder': '#3ca3a7',
     'structure': '#FF9F15',
+    'all': '#ededed',
 }
 
 # Maps system codes to names
@@ -975,14 +976,18 @@ def edit_ratings_barh_old(data):
     fig.tight_layout()
     plt.show()
 
-def edit_ratings_barh(data, old_formatting=False):
+def edit_ratings_barh(data, include_all=True, old_formatting=False):
     if old_formatting:
         edit_ratings_barh_old(data)
         return
 
     fam = edit_ratings_by_family(data)
 
-    plt.rcParams["figure.figsize"] = [11, 3]
+    if include_all:
+        plt.rcParams["figure.figsize"] = [12.5, 3]
+    else:
+        fam.pop('all', None)
+        plt.rcParams["figure.figsize"] = [11, 3]
 
     fig, ax = plt.subplots(4, len(fam.keys()))
     for i, family in enumerate(fam.keys()):
