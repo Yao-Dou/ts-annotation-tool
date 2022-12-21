@@ -8,7 +8,9 @@ from utils.names import *
 from utils.scoring import *
 
 # File paths
-simp_eval_json_path = '../simp_eval/21_systems_annotations.csv'
+simp_eval_main_path = '../simp_eval/simpeval_2022.csv'
+simp_eval_da_path = '../simp_eval/simpDA_2022.csv'
+simp_eval_likert_path = '../simp_eval/simplikert_2022.csv'
 
 # Specify metadata for an empty span
 empty_span = {
@@ -406,21 +408,49 @@ def add_simpeval_scores(data, json=False):
     if (json):
         return add_simpeval_scores_json(data)
 
-    with open(simp_eval_json_path) as f:
-        reader = csv.reader(f)
-        next(reader)
-        simeval_sents = [row[2:13] for row in reader]
+    simp_eval = []
+    for path in [simp_eval_main_path, simp_eval_da_path, simp_eval_likert_path]:
+        with open(path, encoding='utf-8') as f:
+            reader = csv.reader(f)
+            keys = next(reader)
+            contents = [row for row in reader]
+            loaded = []
+            for sent in contents:
+                loaded += [{k: v for k, vs in zip(keys, sent)}]
+        simp_eval += [loaded]
+    main, da, likert = simp_eval
 
     out = copy.deepcopy(data)
+
+    # Copy the simpeval z-score, likert and DA
     for i in range(len(out)):
         sent = out[i]
-        simpeval_scores = [entry for entry in simeval_sents if entry[0] == sent['original'] and entry[2] == sent['system']]
-        if len(simpeval_scores) != 0:
-            scores = simpeval_scores[0][7:]
-            scores = [float(x) for x in scores]
-            out[i]['simpeval_scores'] = scores
-        else:
-            out[i]['simpeval_scores'] = None
+        main_scores = [s for s in main if s['original'] == sent['original'] and s['system'] in sent['system']]
+        da_scores = [s for s in da if s['Input.original'] == sent['original'] and s['Input.system'] in sent['system']]
+        likert_scores = [s for s in likert if s['Input.original'] == sent['original'] and s['Input.system'] in sent['system']]
+        
+        out[i]['simpeval_scores'] = None
+        if len(main_scores) != 0:
+            main_scores = main_scores[0]
+            out[i]['simpeval_scores'] = [float(x) for x in [main_scores['rating_1_zscore'], main_scores['rating_2_zscore'], main_scores['rating_3_zscore']]]
+
+        out[i]['da_scores'] = None
+        if len(da_scores) != 0:
+            da_scores = [{
+                'adequacy': float(da_score['Answer.adequacy']), 
+                'fluency': float(da_score['Answer.fluency']),
+                'simplicity': float(da_score['Answer.simplicity'])
+            } for da_score in da_scores]
+            out[i]['da_scores'] = da_scores
+
+        out[i]['likert_scores'] = None
+        if len(likert_scores) != 0:
+            likert_scores = [{
+                'adequacy': int(lk_score['Answer.adequacy']), 
+                'fluency': int(lk_score['Answer.fluency']),
+                'simplicity': int(lk_score['Answer.simplicity'])
+            } for lk_score in likert_scores]
+            out[i]['likert_scores'] = likert_scores
     return out
 
 def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
