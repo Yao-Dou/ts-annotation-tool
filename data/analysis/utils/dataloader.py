@@ -416,7 +416,7 @@ def add_simpeval_scores(data, json=False):
             contents = [row for row in reader]
             loaded = []
             for sent in contents:
-                loaded += [{k: v for k, vs in zip(keys, sent)}]
+                loaded += [{k: v for k, v in zip(keys, sent)}]
         simp_eval += [loaded]
     main, da, likert = simp_eval
 
