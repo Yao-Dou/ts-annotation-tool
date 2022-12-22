@@ -809,7 +809,7 @@ def edits_by_family_separated(data, savefig=False):
         ax[plt_idx,0].set_xticklabels(['none'] + displayed_x_labels)
         ax[plt_idx,1].set_xticklabels(['none'] + displayed_x_labels)
 
-        ax[plt_idx,1].set_yticklabels([])
+        # ax[plt_idx,1].set_yticklabels([])
 
         font_size = 8
         legend_loc = (0.5, -0.1)
@@ -838,9 +838,10 @@ def edits_by_family_separated(data, savefig=False):
             ha.set_edgecolor("black")
 
         # Set the margins a little higher than the max value
-        tick_range = np.arange(0, max([sum(x.values()) for x in quality_data.values()]) + 10, step=20)
-        ax[plt_idx,0].set_yticks(tick_range)
-        ax[plt_idx,1].set_yticks(tick_range)
+        tick_range_quality = np.arange(0, max([sum(x.values()) for x in quality_data.values()]) + 10, step=20)
+        tick_range_error = np.arange(0, 101, step=20) # (len(data)/len(out.keys())) + 10
+        ax[plt_idx,0].set_yticks(tick_range_quality)
+        ax[plt_idx,1].set_yticks(tick_range_error)
 
     # Add titles
     fig.suptitle('Content Edits', fontsize=14)
@@ -976,12 +977,12 @@ def edit_ratings_barh_old(data):
     fig.tight_layout()
     plt.show()
 
-def edit_ratings_barh(data, include_all=True, old_formatting=False):
+def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighted=False):
     if old_formatting:
         edit_ratings_barh_old(data)
         return
 
-    fam = edit_ratings_by_family(data)
+    fam = edit_ratings_by_family(data, size_weighted=size_weighted)
 
     if include_all:
         plt.rcParams["figure.figsize"] = [12.5, 3]

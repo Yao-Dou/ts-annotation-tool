@@ -50,7 +50,12 @@ def count_data(data, edit_type=None, information_impact=None, quality_type=None,
 
 # Given a set of spans, returns all spans of a given type
 def get_spans_by_type(spans, type_):
-    return [x for x in spans if x[0] == mapping[type_]]
+    val = [x for x in spans if x[0] == mapping[type_]]
+    # This is extremely broken, but split edits exclusively index starting at 0
+    if type_ == 'split' and any([x[3] == 0 for x in val]):
+        for v in val:
+            v[3] += 1
+    return val
 
 # Given a sentence, returns number of edits for each type
 def count_edits(sent):
@@ -63,6 +68,23 @@ def count_edits(sent):
         if count == None:
             raise Exception(sent)
     
+    return out
+
+# Counts structure changes
+def count_composite_edits(sent, parent_id, edit_type):
+    out = {}
+    for type_ in mapping.keys():
+        orig = get_spans_by_type(sent['original_spans'], edit_type)
+        simp = get_spans_by_type(sent['simplified_spans'], edit_type)
+
+        orig = [x for x in orig if len(x) > 4]
+        simp = [x for x in simp if len(x) > 4]
+
+        count = max(
+            [x[5] for x in orig if x[3] == parent_id and x[4] == mapping[type_]] + 
+            [x[5] for x in simp if x[3] == parent_id and x[4] == mapping[type_]] + 
+            [0])
+        out[type_] = count
     return out
 
 def count_info_change(sent):
@@ -178,13 +200,32 @@ def generate_token_dict(sent):
     return tokens
 
 # Converts sentence to dictionary of (start, end) -> {edit_type: #}
-def get_annotations_per_token(sents, sent_type, remove_none=True):
+def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_composite=False):
     edit_dict_value = sent_type + '_span'
     tokens = generate_token_dict(sents[0][sent_type])
     
     # Iterate through all annotators' edits
     for sent in sents:
-        for edit in sent['edits']:
+        edits = sent['edits']
+
+        # Optionally collapse composite edits
+        if collapse_composite:
+            edits = copy.deepcopy(edits)
+
+            # Seperate structure edits into a separate list
+            edits_with_composite_edits = [x for x in edits if x['type'] == 'structure' or x['type'] == 'split']
+            edits = [x for x in edits if x['type'] != 'structure' and x['type'] != 'split']
+
+            # Add their components to the new list
+            for edit in edits_with_composite_edits:
+                for composite_edit in edit['composite_edits']:
+                    edits += [{
+                        'type': composite_edit['type'],
+                        'original_span': composite_edit['original_span'],
+                        'simplified_span': composite_edit['simplified_span'],
+                    }]
+        
+        for edit in edits:
             if edit[edit_dict_value] is None:
                 continue
 
@@ -255,7 +296,7 @@ def edit_dist(s1, s2):
         distances = distances_
     return distances[-1]
 
-def get_edits_by_family(data, family, combine_humans=True):
+def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=True):
     out = {}
     systems = set([sent['system'] for sent in data])
     if combine_humans:
@@ -277,24 +318,43 @@ def get_edits_by_family(data, family, combine_humans=True):
             for reorder_level in ReorderLevel:
                 quality_annotations[reorder_level] = len([ann for ann in quality_edits if ann['reorder_level'] == reorder_level])
             quality_annotations[Edit.STRUCTURE] = len([ann for ann in quality_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
+            # TODO: Add split here
         elif family == Family.LEXICAL:
             quality_annotations[Information.SAME] = len(quality_edits)
 
-        error_edits = [ann for ann in selected if ann['type'] == Quality.ERROR]
         error_annotations = {}
-        if family == Family.CONTENT:
-            for error_type in Error:
-                error_annotations[error_type] = len([ann for ann in error_edits if ann['error_type'] == error_type])
-        elif family == Family.SYNTAX:
-            for reorder_level in ReorderLevel:
-                error_annotations[reorder_level] = len([ann for ann in error_edits if ann['reorder_level'] == reorder_level])
-            error_annotations[Edit.STRUCTURE] = len([ann for ann in error_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
-        elif family == Family.LEXICAL:
-            # TODO: This should be grammar error, not Quality.ERROR
-            # In general, counting the grammar edits is really weird
-            error_annotations[Quality.ERROR] = len([ann for ann in anns if ann['grammar_error']])
-            error_annotations[Error.COMPLEX_WORDING] = len([ann for ann in error_edits if ann['error_type'] == Error.COMPLEX_WORDING])
-            error_annotations[Error.UNNECESSARY_INSERTION] = len([ann for ann in error_edits if ann['error_type'] == Error.UNNECESSARY_INSERTION])
+        # Whether to count errors by occuring once in a sentence, or each time they occur
+        if errors_by_sent:
+            if family == Family.CONTENT:
+                for error_type in Error:
+                    error_annotations[error_type] = len([sent for sent in sents if any([ann['error_type'] == error_type and ann['type'] == Quality.ERROR and ann['family'] == Family.CONTENT for ann in sent['processed_annotations']])])
+            elif family == Family.SYNTAX:
+                for reorder_level in ReorderLevel:
+                    error_annotations[reorder_level] = len([sent for sent in sents if any([ann['reorder_level'] == reorder_level and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])])  # len([ann for ann in error_edits if ann['reorder_level'] == reorder_level])
+                error_annotations[Edit.STRUCTURE] = len([sent for sent in sents if any([ann['edit_type'] == Edit.STRUCTURE.value.lower() and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])]) # len([ann for ann in error_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
+                # TODO: Add split here
+            elif family == Family.LEXICAL:
+                # TODO: This should be grammar error, not Quality.ERROR
+                # In general, counting the grammar edits is really weird
+                error_annotations[Quality.ERROR] = len([sent for sent in sents if any([ann['grammar_error'] and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])]) # len([ann for ann in anns if ann['grammar_error']])
+                error_annotations[Error.COMPLEX_WORDING] = len([sent for sent in sents if any([ann['error_type'] == Error.COMPLEX_WORDING and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])]) # len([ann for ann in error_edits if ann['error_type'] == Error.COMPLEX_WORDING])
+                error_annotations[Error.UNNECESSARY_INSERTION] = len([sent for sent in sents if any([ann['error_type'] == Error.UNNECESSARY_INSERTION and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])]) # len([ann for ann in error_edits if ann['error_type'] == Error.UNNECESSARY_INSERTION])
+        else:
+            error_edits = [ann for ann in selected if ann['type'] == Quality.ERROR]
+            if family == Family.CONTENT:
+                for error_type in Error:
+                    error_annotations[error_type] = len([ann for ann in error_edits if ann['error_type'] == error_type])
+            elif family == Family.SYNTAX:
+                for reorder_level in ReorderLevel:
+                    error_annotations[reorder_level] = len([ann for ann in error_edits if ann['reorder_level'] == reorder_level])
+                error_annotations[Edit.STRUCTURE] = len([ann for ann in error_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
+                # TODO: Add split here
+            elif family == Family.LEXICAL:
+                # TODO: This should be grammar error, not Quality.ERROR
+                # In general, counting the grammar edits is really weird
+                error_annotations[Quality.ERROR] = len([ann for ann in anns if ann['grammar_error']])
+                error_annotations[Error.COMPLEX_WORDING] = len([ann for ann in error_edits if ann['error_type'] == Error.COMPLEX_WORDING])
+                error_annotations[Error.UNNECESSARY_INSERTION] = len([ann for ann in error_edits if ann['error_type'] == Error.UNNECESSARY_INSERTION])
 
         out[system] = {'quality': quality_annotations, 'error': error_annotations}
 
@@ -308,7 +368,7 @@ def get_edits_by_family(data, family, combine_humans=True):
             
     return out
 
-def get_ratings_by_edit_type(data, edit_type, combine_humans=False):
+def get_ratings_by_edit_type(data, edit_type, combine_humans=False, size_weighted=False):
     information_change = None
     if edit_type == 'paraphrase':
         family = Family.LEXICAL
@@ -357,16 +417,30 @@ def get_ratings_by_edit_type(data, edit_type, combine_humans=False):
         quality_edits = [ann for ann in selected if ann['type'] == Quality.QUALITY]
         quality_annotations = {}
         for rating in range(score_range):
-            quality_annotations[rating] = len([ann for ann in quality_edits if ann['rating'] == rating])
+            edits = [ann for ann in quality_edits if ann['rating'] == rating]
+            if size_weighted:
+                quality_annotations[rating] = len(edits)*avg([e['size'] for e in edits], prec=10)
+            else:
+                quality_annotations[rating] = len(edits)
         
         error_edits = [ann for ann in selected if ann['type'] == Quality.ERROR]
         error_annotations = {}
         for rating in range(score_range):
-            error_annotations[rating] = len([ann for ann in error_edits if ann['rating'] == rating])
+            edits = [ann for ann in error_edits if ann['rating'] == rating]
+            if size_weighted:
+                error_annotations[rating] = len(edits)*avg([e['size'] for e in edits], prec=10)
+            else:
+                error_annotations[rating] = len(edits)
 
+        edits = [ann for ann in selected if ann['type'] == Quality.TRIVIAL]
+        if size_weighted:
+            trivial_amt = len(edits)*avg([e['size'] for e in edits], prec=10)
+        else:
+            trivial_amt = len(edits)
+        
         out[system] = {
             'quality': quality_annotations, 
-            'trivial': len([ann for ann in selected if ann['type'] == Quality.TRIVIAL]),
+            'trivial': trivial_amt,
             'error': error_annotations}
     return out
     
@@ -436,7 +510,7 @@ def error_rate(data):
 
     return aloe, aloe_no_del, perc_error
 
-def edit_ratings_by_family(data, combine_humans=True):
+def edit_ratings_by_family(data, size_weighted=False, combine_humans=True):
     families = [
         'elaboration',
         'generalization',
@@ -450,10 +524,10 @@ def edit_ratings_by_family(data, combine_humans=True):
         systems = set([sent['system'] for sent in data if 'Human' not in sent['system']] + ['aggregated/human'])
     fam = {}
     for family in families:
-        ratings = get_ratings_by_edit_type(data, family, combine_humans=True)
+        ratings = get_ratings_by_edit_type(data, family, combine_humans=True, size_weighted=size_weighted)
         al = {}
         for system in systems:
-            total = sum([x if type(x) is int else sum(x.values()) for x in list(ratings[system].values())])
+            total = sum([x if type(x) is not dict else sum(x.values()) for x in list(ratings[system].values())])
             nl = []
             for i in range(3):
                 nl += [ratings[system]["error"][i] / total]
@@ -466,7 +540,7 @@ def edit_ratings_by_family(data, combine_humans=True):
     # TODO: Refactor this
     tmp = {}
     for family in families:
-        ratings = get_ratings_by_edit_type(data, family, combine_humans=True)
+        ratings = get_ratings_by_edit_type(data, family, combine_humans=True, size_weighted=size_weighted)
         al = {}
         for system in systems:
             nl = []
@@ -485,3 +559,14 @@ def edit_ratings_by_family(data, combine_humans=True):
     }
 
     return fam
+
+def count_dataset_composite_edits(data, parent_type):
+    composite_edits = []
+    for sent in data:
+        edits = [x['composite_edits'] for x in sent['edits'] if x['type'] == parent_type]
+        edits = [i for j in edits for i in j]
+        composite_edits += edits
+    counts = {}
+    for type_ in [x for x in edit_types if x != 'structure' and x != 'split']:
+        counts[type_] = len([x for x in composite_edits if x['type'] == type_])
+    return counts

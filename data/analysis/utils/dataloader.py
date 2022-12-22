@@ -100,9 +100,9 @@ def get_span_metadata(spans):
                 'span': (span[1], span[2]),
                 'span_length': span[2] - span[1]
             }
-            if type_ == 'structure':
-                entry['composite_type'] = reverse_mapping[span[4]]
-                entry['composite_id'] = span[5]
+            if type_ == 'structure' or type_ == 'split':
+                entry['composite_type'] = reverse_mapping[span[4]] if len(span) > 4 else None
+                entry['composite_id'] = span[5] if len(span) > 4 else None
             out += [entry]
     return out
 
@@ -136,20 +136,41 @@ def associate_spans(sent):
                 continue
                 
             # Convert list of dicts to list of spans, retaining None value if necessary
-            orig_span = [x['span'] for x in orig_span] if orig_span is not empty_span else None
-            simp_span = [x['span'] for x in simp_span] if simp_span is not empty_span else None
+            orig_span_amt = [x['span'] for x in orig_span] if orig_span is not empty_span else None
+            simp_span_amt = [x['span'] for x in simp_span] if simp_span is not empty_span else None
             
             entry = {
                 'type': type_,
                 'id': i-1,
-                'original_span': orig_span,
-                'simplified_span': simp_span,
+                'original_span': orig_span_amt,
+                'simplified_span': simp_span_amt,
                 'annotation': annotations[i]
             }
 
             # For structure edits, add composite edits
-            # if type_ == 'structure':
-                
+            if type_ == 'structure' or type_ == 'split':
+                entry['composite_edits'] = []
+                composite_count = count_composite_edits(sent, i, type_)
+                for type_ in composite_count.keys():
+                    for i in range(1, composite_count[type_]+1):
+                        orig_composite_span = [x for x in orig_span if x['composite_id'] == i and x['composite_type'] == type_] if orig_span is not empty_span else []
+                        simp_composite_span = [x for x in simp_span if x['composite_id'] == i and x['composite_type'] == type_] if simp_span is not empty_span else []
+
+                        orig_composite_span = orig_composite_span if len(orig_composite_span) > 0 else empty_span
+                        simp_composite_span = simp_composite_span if len(simp_composite_span) > 0 else empty_span
+
+                        if orig_composite_span is empty_span and simp_composite_span is empty_span:
+                            continue
+
+                        orig_composite_span_amt = [x['span'] for x in orig_composite_span] if orig_composite_span is not empty_span else None
+                        simp_composite_span_amt = [x['span'] for x in simp_composite_span] if simp_composite_span is not empty_span else None
+
+                        entry['composite_edits'] += [{
+                            'type': type_,
+                            'id': i-1,
+                            'original_span': orig_composite_span_amt,
+                            'simplified_span': simp_composite_span_amt,
+                        }]
             
             # Compile spans into edit
             edits += [entry]
@@ -506,6 +527,10 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
         data = new_data
 
     print(f'Found users: {set([sent["user"] for sent in data])}\n')
+
+    # At the very primitive level, weirdly split edits do NOT add an ambiguous None field
+    for sent in data:
+        sent['annotations']['split'] = [None] + sent['annotations']['split']
 
     if preprocess:
         data = consolidate_edits(data)                      # Adds 'edits' field
