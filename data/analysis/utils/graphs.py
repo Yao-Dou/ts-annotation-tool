@@ -646,6 +646,8 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False, average_scores
     plt.title(f'Scoring vs. Edits ({total_sent} sentences)')
     plt.gcf().set_size_inches(7, 5)
     plt.legend()
+    out_filename = f'img/edit-distance-vs-score.svg'
+    plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
     plt.show()
 
 def edits_by_family(data, family=None):

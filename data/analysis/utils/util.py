@@ -562,6 +562,7 @@ def edit_ratings_by_family(data, size_weighted=False, combine_humans=True):
 
 def count_dataset_composite_edits(data, parent_type):
     composite_edits = []
+    edit_types = [val.value.lower() for val in Edit]
     for sent in data:
         edits = [x['composite_edits'] for x in sent['edits'] if x['type'] == parent_type]
         edits = [i for j in edits for i in j]
