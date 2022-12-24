@@ -474,6 +474,19 @@ def add_simpeval_scores(data, json=False):
             out[i]['likert_scores'] = likert_scores
     return out
 
+def calculate_subscores(data):
+    for sent in data:
+        subscores = {}
+        for dim in ['content', 'syntax', 'lexical']:
+            subscores[f'quality_{dim}'] = calculate_sentence_score(sent, get_params(f'quality_{dim}'))
+            subscores[f'error_{dim}'] = calculate_sentence_score(sent, get_params(f'error_{dim}'))
+            subscores[dim] = subscores[f'quality_{dim}'] + subscores[f'error_{dim}']
+        subscores['quality'] = calculate_sentence_score(sent, get_params('quality'))
+        subscores['error'] = calculate_sentence_score(sent, get_params('error'))
+        subscores['all'] = subscores['quality'] + subscores['error']
+        sent['subscores'] = subscores
+    return data
+
 def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     data = []
 
@@ -537,5 +550,6 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
         data = consolidate_annotations(data)                # Adds 'processed_annotations' field
         data = add_simpeval_scores(data)                    # Adds 'simpeval_scores' field. Can optionally not take the z-score normalized scores with "json=True"
         data = calculate_sentence_scores(data)              # Adds 'score' field
+        data = calculate_subscores(data)                    # Adds 'subscores' field
     
     return data

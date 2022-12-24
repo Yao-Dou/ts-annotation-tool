@@ -437,11 +437,21 @@ def get_ratings_by_edit_type(data, edit_type, combine_humans=False, size_weighte
             trivial_amt = len(edits)*avg([e['size'] for e in edits], prec=10)
         else:
             trivial_amt = len(edits)
-        
+
         out[system] = {
             'quality': quality_annotations, 
             'trivial': trivial_amt,
             'error': error_annotations}
+
+    if combine_humans:
+        for vala in out.keys():
+            if vala == 'aggregated/human':
+                for valb in out[vala].keys():
+                    if type(out[vala][valb]) == dict:
+                        for valc in out[vala][valb].keys():
+                            out[vala][valb][valc] /= 2
+                    else:
+                        out[vala][valb] /= 2
     return out
     
 def get_edits_by_type(data, quality_error):
@@ -525,9 +535,11 @@ def edit_ratings_by_family(data, size_weighted=False, combine_humans=True):
     fam = {}
     for family in families:
         ratings = get_ratings_by_edit_type(data, family, combine_humans=True, size_weighted=size_weighted)
+        total = max([sum([x if type(x) is not dict else sum(x.values()) for x in list(ratings[s].values())]) for s in systems])
         al = {}
         for system in systems:
-            total = sum([x if type(x) is not dict else sum(x.values()) for x in list(ratings[system].values())])
+            # Use this line to calulate the percentage at within each system
+            # total = sum([x if type(x) is not dict else sum(x.values()) for x in list(ratings[system].values())])
             nl = []
             for i in range(3):
                 nl += [ratings[system]["error"][i] / total]
@@ -551,6 +563,7 @@ def edit_ratings_by_family(data, size_weighted=False, combine_humans=True):
                 nl += [ratings[system]["quality"][i]]
             al[system] = nl
         tmp[family] = al
+    # all_total = max([sum([sum([tmp[f][system][i] for f in families]) for i in range(7)]) for i in range(7) for system in systems])
     fam['all'] = {
         system: [
             sum([tmp[f][system][i] for f in families])/sum([sum([tmp[f][system][i] for f in families]) for i in range(7)]) for i in range(7)

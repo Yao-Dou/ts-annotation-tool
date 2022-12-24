@@ -1,6 +1,7 @@
 import copy
 import math
 from utils.names import *
+from scipy.stats import percentileofscore
 
 content_errors = [
     Error.HALLUCINATION,
@@ -139,3 +140,78 @@ def calculate_sentence_scores(data, parameters=default_params):
             raise Exception(f'Could not process score on {sent}. Caught exception: {e}')
     return out
 
+# Gets parameters for only a certain family of edits
+def get_params(op):
+    curr_params = default_params.copy()
+    params_consider = []
+
+    if ('quality' in op):
+        if ('content' in op):
+            # Quality content edits
+            params_consider = [
+                'good_deletion',
+                'good_insertion',
+                'content_error'
+            ]
+        elif ('syntax' in op):
+            # Quality syntax edits
+            params_consider = [
+                'good_syntax'
+            ]
+        elif ('lexical' in op):
+            # Qualtiy lexical edits
+            params_consider = [
+                'good_paraphrase',
+                'good_trivial_insertion',
+                'grammar_error'
+            ]
+        else:
+            # All quality edits
+            params_consider = [
+                'good_insertion',
+                'good_deletion',
+                'good_paraphrase',
+                'good_trivial_insertion', 
+                'good_syntax'
+            ]
+    elif ('error' in op):
+        if ('content' in op):
+            # Content errors
+            params_consider = [
+                'content_error'
+            ]
+        elif ('syntax' in op):
+            # Syntax errors
+            params_consider = [
+                'syntax_error'
+            ]
+        elif ('lexical' in op):
+            # Lexcial errors
+            params_consider = [
+                'lexical_error'
+            ]
+        else:
+            # All error edits
+            params_consider = [
+                'content_error',
+                'syntax_error',
+                'lexical_error'
+            ]
+
+    params_consider += ['size_calculation']
+
+    for param in curr_params.keys():
+        if param not in params_consider and op != 'all':
+            curr_params[param] = 0
+    
+    return curr_params
+
+def get_percentile(data, score):
+    systems = set([x['system'] for x in data])
+    scores = {}
+    for dimension in ['lexical', 'syntax', 'content', 'quality', 'error', 'all']:
+        dim_scores = {}
+        for system in systems:
+            dim_scores[system] = percentileofscore([sent['subscores'][dimension] for sent in data if system in sent['system']], score)
+        scores[dimension] = dim_scores
+    return scores

@@ -575,11 +575,11 @@ def score_distribution(data, include_simpeval=False):
         axs[0, 1].set_title("Distribution of Sentence Scores")
 
         # Print distribution of simp eval scores
-        axs[1, 0].hist([i for j in [x['simpeval_scores'] for x in data] for i in j], bins=n_bins)
+        axs[1, 0].hist([i for j in [x['simpeval_scores'] for x in data if x['simpeval_scores'] is not None] for i in j], bins=n_bins)
         axs[1, 0].set_title("Distribution of SimpEval Scores")
 
         # Print distribution of simp eval scores
-        axs[1, 1].hist([avg(x['simpeval_scores']) for x in data], bins=n_bins)
+        axs[1, 1].hist([avg(x['simpeval_scores']) for x in data if x['simpeval_scores'] is not None], bins=n_bins)
         axs[1, 1].set_title("Distribution of Avg. SimpEval Scores")
         fig.show()
     else:
@@ -594,12 +594,17 @@ def score_distribution(data, include_simpeval=False):
 
 def simpeval_agreement(data, average=True):
     if (average):
-        scores = [(avg(sent['simpeval_scores'], prec=5), sent['score']) for sent in data]
+        scores = []
+        for sent in data:
+            if sent['simpeval_scores'] is not None and len(sent['simpeval_scores']) != 0:
+                scores += [(avg(sent['simpeval_scores'], prec=5), sent['score'])]
+            else:
+                scores += [(0, sent['score'])]
     else:
         # Simply takes the first annotator
         scores = []
         for sent in data:
-            if len(sent['simpeval_scores']) != 0:
+            if sent['simpeval_scores'] is not None and len(sent['simpeval_scores']) != 0:
                 scores.append((int(sent['simpeval_scores'][0]), sent['score']))
             else:
                 scores.append((0, sent['score']))
