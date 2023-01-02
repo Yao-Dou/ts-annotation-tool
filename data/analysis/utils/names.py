@@ -33,7 +33,7 @@ class Error(Enum):
     COMPLEX_WORDING = 'Complex Wording'
 
 class Family(Enum):
-    CONTENT = 'Content'
+    CONTENT = 'Conceptual'
     SYNTAX = 'Syntax'
     LEXICAL = 'Lexical'
 

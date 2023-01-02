@@ -228,10 +228,10 @@ def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False
         ax.set_title('Edit Types by System')
     ax.legend()
 
-    out_filename = 'img/edit-type-systems.svg'
+    out_filename = 'img/edit-type-systems.pdf'
     if humans:
-        out_filename = "img/edit-type-human-written.svg"
-    plt.savefig(out_filename, format="svg")
+        out_filename = "img/edit-type-human-written.pdf"
+    plt.savefig(out_filename, format="pdf")
 
     plt.show()
 
@@ -552,8 +552,8 @@ def draw_agreement(sents, paper=False):
         fig.suptitle(f"{sents[0]['original'][:30]}...")
 
     if paper:
-        out_filename = "img/disagreement-highlights.svg"
-        plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
+        out_filename = "img/disagreement-highlights.pdf"
+        plt.savefig(out_filename, format="pdf", bbox_inches='tight', pad_inches=0.0)
 
     fig.show()
 
@@ -657,8 +657,8 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False, average_scores
     plt.title(f'Scoring vs. Edits ({total_sent} sentences)')
     plt.gcf().set_size_inches(7, 5)
     plt.legend()
-    out_filename = f'img/edit-distance-vs-score.svg'
-    plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
+    out_filename = f'img/edit-distance-vs-score.pdf'
+    plt.savefig(out_filename, format="pdf", bbox_inches='tight', pad_inches=0.0)
     plt.show()
 
 def edits_by_family(data, family=None):
@@ -718,7 +718,7 @@ def edits_by_family(data, family=None):
         displayed_x_labels = [system_name_mapping[label] for label in system_labels]
 
         if family == Family.CONTENT:
-            ax[plt_idx].set_title('Content Edits')
+            ax[plt_idx].set_title('Conceptual Edits')
         elif family == Family.SYNTAX:
             ax[plt_idx].set_title('Syntax Edits')
         elif family == Family.LEXICAL:
@@ -742,8 +742,8 @@ def edits_by_family(data, family=None):
         # Set the margins a little higher than the max value
         plt.ylim(0, max([sum(x.values()) for x in quality_data.values()]) + 10)
 
-    out_filename = f'img/edit-ratings-all.svg'
-    plt.savefig(out_filename, format="svg")
+    out_filename = f'img/edit-ratings-all.pdf'
+    plt.savefig(out_filename, format="pdf")
 
     plt.tight_layout()
     plt.show()
@@ -857,15 +857,15 @@ def edits_by_family_separated(data, savefig=False):
         ax[plt_idx,1].set_yticks(tick_range_error)
 
     # Add titles
-    fig.suptitle('Content Edits', fontsize=14)
+    fig.suptitle('Conceptual Edits', fontsize=14)
     plt.figtext(0.5, (2/3) - 0.023, "Syntax Edits", va="center", ha="center", size=14)
     plt.figtext(0.5, (1/3), "Lexical Edits", va="center", ha="center", size=14)
 
     plt.tight_layout()
     plt.subplots_adjust(top=1.65)
     if savefig:
-        out_filename = f'img/edit-ratings-all-separated.svg'
-        plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
+        out_filename = f'img/edit-ratings-all-separated.pdf'
+        plt.savefig(out_filename, format="pdf", bbox_inches='tight', pad_inches=0.0)
         plt.close(fig)
     else:
         plt.show()
@@ -1069,7 +1069,7 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
     plt.tight_layout()
     plt.subplots_adjust()
 
-    out_filename = "img/edit-level-scores.svg"
-    plt.savefig(out_filename, format="svg", bbox_inches='tight', pad_inches=0.0)
+    out_filename = "img/edit-level-scores.pdf"
+    plt.savefig(out_filename, format="pdf", bbox_inches='tight', pad_inches=0.0)
 
     plt.show()
