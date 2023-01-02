@@ -33,6 +33,8 @@ color_mapping = {
     'systems/con_simplification.txt': 'purple',
 
     'new-wiki-1/Muss': '#FFB145',
+    'new-wiki-1/T5-3B': '#aabae3',
+    'new-wiki-1/T5-11B': '#8b8be0',
     'new-wiki-1/GPT-3-zero-shot': '#FF4545',
     'new-wiki-1/GPT-3-few-shot': '#FF45D7',
     'new-wiki-1/Human 1 Writing': '#45FFDA',
@@ -79,6 +81,8 @@ system_name_mapping = {
     'systems/transformer_w_split.txt': 'BERT Split',
     'systems/con_simplification.txt': 'Controllable',
     'new-wiki-1/Muss': 'MUSS',
+    'new-wiki-1/T5-3B': 'T5 3B',
+    'new-wiki-1/T5-11B': 'T5 11B',
     'new-wiki-1/GPT-3-zero-shot': 'GPT-Zero',
     'new-wiki-1/GPT-3-few-shot': 'GPT-Few',
     'new-wiki-1/Human 1 Writing': 'Human 1',
@@ -86,7 +90,7 @@ system_name_mapping = {
 
     'aggregated/asset': 'ASSET',
     'aggregated/turk': 'Turk Corpus',
-    'aggregated/human': 'Our Data'
+    'aggregated/human': 'SimpEval'
 }
 
 # Don't need this 
@@ -122,6 +126,8 @@ all_system_labels = [x for x in [
     'systems/con_simplification.txt',
     'systems/T5.txt',
     'new-wiki-1/Muss',
+    'new-wiki-1/T5-3B',
+    'new-wiki-1/T5-11B',
     'new-wiki-1/GPT-3-zero-shot',
     'new-wiki-1/GPT-3-few-shot',
     'new_systems/turk_corpus_random.txt',
@@ -181,9 +187,9 @@ def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False
         size = (4, 4)
         width = 0.8
 
-    line_location = [2.5, 2.5]
+    line_location = [4.5, 4.5]
     if all_datasets:
-        line_location = [4.5, 4.5]
+        line_location = [6.5, 6.5]
 
     # Normalized will divide the number of edits by the total number of sentences
 
@@ -248,7 +254,7 @@ def system_by_information_change(data):
     ax.set_xlabel('System')
     ax.set_title('Information Change by System')
     ax.set_yticks([i*round(max(bottom)/5) for i in range(6)])
-    ax.plot([2.5, 2.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
+    ax.plot([4.5, 4.5], [0, ax.get_ylim()[-1]], ls='--', c='k')
     ax.legend()
     plt.show()
 
@@ -265,7 +271,7 @@ def errors_by_system(data, include_deletions=False):
     for system in system_labels:
         val = [sum_errors_types[system][label] for label in plotted_errors]
         x = np.arange(len(plotted_errors))
-        ax.bar(x-(2*width)+count*width, val, width, label=system_name_mapping[system])
+        ax.bar(x-(2*width)+count*width, val, width, label=system_name_mapping[system], color=color_mapping[system])
         bottom = [bottom[i] + val[i] for i in range(len(val))]
         count += 1
     ax.set_ylabel('Number of errors')
@@ -990,14 +996,15 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
         return
 
     fam = edit_ratings_by_family(data, size_weighted=size_weighted)
+    sys = list(list(fam.values())[0].keys())
 
     if include_all:
-        plt.rcParams["figure.figsize"] = [12.5, 3]
+        plt.rcParams["figure.figsize"] = [12.5, 4]
     else:
         fam.pop('all', None)
-        plt.rcParams["figure.figsize"] = [11, 3]
+        plt.rcParams["figure.figsize"] = [11, 4]
 
-    fig, ax = plt.subplots(4, len(fam.keys()))
+    fig, ax = plt.subplots(len(sys), len(fam.keys()))
     for i, family in enumerate(fam.keys()):
         ratings = fam[family]
 

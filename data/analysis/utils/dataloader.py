@@ -487,6 +487,13 @@ def calculate_subscores(data):
         sent['subscores'] = subscores
     return data
 
+def collapse_systems(data):
+    data = copy.deepcopy(data)
+    for sent in data:
+        if 'new-wiki-2' in sent['system']:
+            sent['system'] = sent['system'].replace('new-wiki-2', 'new-wiki-1')
+    return data
+
 def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     data = []
 
@@ -551,5 +558,6 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
         data = add_simpeval_scores(data)                    # Adds 'simpeval_scores' field. Can optionally not take the z-score normalized scores with "json=True"
         data = calculate_sentence_scores(data)              # Adds 'score' field
         data = calculate_subscores(data)                    # Adds 'subscores' field
+        data = collapse_systems(data)                       # Fix 'system' field to not distinguish between datasets
     
     return data

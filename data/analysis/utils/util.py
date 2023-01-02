@@ -365,6 +365,16 @@ def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=True):
                 for valb in out[vala].keys():
                     for valc in out[vala][valb].keys():
                         out[vala][valb][valc] /= 2
+
+    # Instead, divide by all sentences
+    # for vala in out.keys():
+    #     if combine_humans and vala == 'aggregated/human':
+    #         total =  len([sent for sent in data if 'Human' in sent['system']])
+    #     else:
+    #         total = len([sent for sent in data if sent['system'] == vala])
+    #     for valb in out[vala].keys():
+    #         for valc in out[vala][valb].keys():
+    #             out[vala][valb][valc] /= total
             
     return out
 
