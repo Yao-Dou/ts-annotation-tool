@@ -222,11 +222,11 @@ def process_add_info(raw_annotation):
     elif (annotation_type == 'trivial'):
         helpful, rating, grammar_error = raw_annotation[1:]
         if helpful == 'yes':
-            edit_quality = Quality.TRIVIAL
+            edit_quality = Quality.QUALITY
             rating = simplification_quality_mapping[rating]
         else:
-            edit_quality = Quality.ERROR
-            error_type = Error.UNNECESSARY_INSERTION
+            edit_quality = Quality.TRIVIAL
+            # error_type = Error.UNNECESSARY_INSERTION
 
             # If an annotator sets a rating, then says 'no', the rating is still there
             # therefore, we should ignore this rating
