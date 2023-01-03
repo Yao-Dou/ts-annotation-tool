@@ -87,10 +87,11 @@ system_name_mapping = {
     'new-wiki-1/GPT-3-few-shot': 'GPT-Few',
     'new-wiki-1/Human 1 Writing': 'Human 1',
     'new-wiki-1/Human 2 Writing': 'Human 2',
+    'aggregated/human': 'Human',
 
     'aggregated/asset': 'ASSET',
     'aggregated/turk': 'Turk Corpus',
-    'aggregated/human': 'SimpEval'
+    'aggregated/simpeval': 'SimpEval'
 }
 
 # Don't need this 
@@ -139,6 +140,7 @@ all_system_labels = [x for x in [
 
     'aggregated/turk',
     'aggregated/asset',
+    'aggregated/simpeval',
     'aggregated/human'
 ] if x in systems]
 
@@ -173,7 +175,7 @@ def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False
         for sent_id in range(len(data)):
             sys_name = data[sent_id]['system']
             if 'Human' in sys_name:
-                data[sent_id]['system'] = 'aggregated/human'
+                data[sent_id]['system'] = 'aggregated/simpeval'
             elif 'asset' in sys_name:
                 data[sent_id]['system'] = 'aggregated/asset'
             elif 'turk_corpus' in sys_name:

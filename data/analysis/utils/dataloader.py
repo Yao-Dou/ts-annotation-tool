@@ -528,6 +528,12 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
                     entry['batch'] = batch_num
                     entry['hit_id'] = entry['id']
                     entry['id'] += id_counter
+
+                # We have an issue where we need to exclude GPT outputs from
+                # batches 5 and 6 because we re-do them using text-davinci-003
+                if batch_num == 5 or batch_num == 6:
+                    individual_annotation = [sent for sent in individual_annotation if 'GPT' not in sent['system']]
+                
                 data += individual_annotation
         id_counter += len(individual_annotation)
 
