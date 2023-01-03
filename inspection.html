@@ -52,7 +52,7 @@
   margin: 0;
   width: 100%;
   max-width: none;
-  height: 2000px;
+  height: 4000px;
 }
 
 .row {
@@ -136,5 +136,23 @@ iframe {
 </html>
 
 <!-- 
-
+fetch(`https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/analysis/st-inspect/set_0.json`)
+            .then(r => r.json())
+            .then(json => {
+                this.hits_data = json;
+                for (let i = 0; i < this.hits_data.length; i++) {
+                    if (this.hits_data[i].annotations == undefined) {
+                        this.hits_data[i].annotations = {
+                            'deletion': [],
+                            'substitution': [],
+                            'insertion': [],
+                            'split': [],
+                            'reorder': [],
+                            'structure': [],
+                        }
+                    }
+                }
+                this.total_hits = json.length;
+                this.process_everything();
+            });
  -->
