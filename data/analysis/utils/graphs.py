@@ -83,8 +83,8 @@ system_name_mapping = {
     'new-wiki-1/Muss': 'MUSS',
     'new-wiki-1/T5-3B': 'T5 3B',
     'new-wiki-1/T5-11B': 'T5 11B',
-    'new-wiki-1/GPT-3-zero-shot': 'GPT-Zero',
-    'new-wiki-1/GPT-3-few-shot': 'GPT-Few',
+    'new-wiki-1/GPT-3-zero-shot': 'GPT-0',
+    'new-wiki-1/GPT-3-few-shot': 'GPT-5',
     'new-wiki-1/Human 1 Writing': 'Human 1',
     'new-wiki-1/Human 2 Writing': 'Human 2',
     'aggregated/human': 'Human',
@@ -834,8 +834,8 @@ def edits_by_family_separated(data, savefig=False):
             ax[plt_idx,1].set_xlabel('System')
             legend_loc = (0.5, -0.15)
         elif family == Family.CONTENT:
-            ax[plt_idx,0].set_title('Quality ↑')
-            ax[plt_idx,1].set_title('Error ↓')
+            ax[plt_idx,0].set_title('Quality ↑ (# Edits)')
+            ax[plt_idx,1].set_title('Error ↓ (% Sentences)')
 
         ax[plt_idx,0].legend(loc='upper center', bbox_to_anchor=legend_loc,
             fancybox=True, ncol=2, borderaxespad=1.,fontsize=font_size,
@@ -853,8 +853,11 @@ def edits_by_family_separated(data, savefig=False):
             ha.set_edgecolor("black")
 
         # Set the margins a little higher than the max value
-        tick_range_quality = np.arange(0, max([sum(x.values()) for x in quality_data.values()]) + 10, step=20)
-        tick_range_error = np.arange(0, 101, step=20) # (len(data)/len(out.keys())) + 10
+        tick_range_quality = np.arange(0, max([sum(x.values()) for x in quality_data.values()]) + 10, step=50)
+        max_error = 101
+        if family == Family.CONTENT: 
+            max_error = 201
+        tick_range_error = np.arange(0, max_error, step=20) # (len(data)/len(out.keys())) + 10        
         ax[plt_idx,0].set_yticks(tick_range_quality)
         ax[plt_idx,1].set_yticks(tick_range_error)
 
