@@ -151,10 +151,10 @@ def associate_spans(sent):
             if type_ == 'structure' or type_ == 'split':
                 entry['composite_edits'] = []
                 composite_count = count_composite_edits(sent, i, type_)
-                for type_ in composite_count.keys():
-                    for i in range(1, composite_count[type_]+1):
-                        orig_composite_span = [x for x in orig_span if x['composite_id'] == i and x['composite_type'] == type_] if orig_span is not empty_span else []
-                        simp_composite_span = [x for x in simp_span if x['composite_id'] == i and x['composite_type'] == type_] if simp_span is not empty_span else []
+                for c_type_ in composite_count.keys():
+                    for k in range(1, composite_count[type_]+1):
+                        orig_composite_span = [x for x in orig_span if x['composite_id'] == k and x['composite_type'] == c_type_] if orig_span is not empty_span else []
+                        simp_composite_span = [x for x in simp_span if x['composite_id'] == k and x['composite_type'] == c_type_] if simp_span is not empty_span else []
 
                         orig_composite_span = orig_composite_span if len(orig_composite_span) > 0 else empty_span
                         simp_composite_span = simp_composite_span if len(simp_composite_span) > 0 else empty_span
@@ -166,12 +166,11 @@ def associate_spans(sent):
                         simp_composite_span_amt = [x['span'] for x in simp_composite_span] if simp_composite_span is not empty_span else None
 
                         entry['composite_edits'] += [{
-                            'type': type_,
-                            'id': i-1,
+                            'type': c_type_,
+                            'id': k-1,
                             'original_span': orig_composite_span_amt,
                             'simplified_span': simp_composite_span_amt,
                         }]
-            
             # Compile spans into edit
             edits += [entry]
     return edits
