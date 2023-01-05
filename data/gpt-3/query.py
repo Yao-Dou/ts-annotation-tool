@@ -59,7 +59,7 @@ def load_batch(path):
         return [row for row in reader]
 
 
-def create_few_shot_input(sent, num_samples=5):
+def create_few_shot_input(sent, asset, num_samples=5):
     example_text = ""
     for example in sample_asset(asset, num_samples=num_samples):
         example_text += (example_template % example)
