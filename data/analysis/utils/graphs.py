@@ -39,6 +39,7 @@ color_mapping = {
     'new-wiki-1/GPT-3-few-shot': '#FF45D7',
     'new-wiki-1/Human 1 Writing': '#45FFDA',
     'new-wiki-1/Human 2 Writing': '#45FF7A',
+    'aggregated/human': '#45FFDA',
 
     Error.COREFERENCE: '#e65388',
     Error.REPETITION: '#c3eb98',
@@ -66,6 +67,12 @@ color_mapping = {
     'reorder': '#3ca3a7',
     'structure': '#FF9F15',
     'all': '#ededed',
+
+    # For splits
+    'split-1': '#F7CE46',
+    'split-2': '#dbb432',
+    'split-3': '#a6871f',
+    'split-4': '#876a07',
 }
 
 # Maps system codes to names
@@ -205,7 +212,7 @@ def edit_type_by_system(data, flipped=True, normalized=False, all_datasets=False
         for edit_type in edit_type_labels:
             val = [sum_edit_types[label][edit_type] for label in system_labels]
             displayed_x_labels = [system_name_mapping[label] for label in system_labels]
-            ax.bar(displayed_x_labels, val, width, bottom=bottom, label=edit_type, color=color_mapping[edit_type])
+            ax.bar(displayed_x_labels, val, width, bottom=bottom, label=edit_type.capitalize(), color=color_mapping[edit_type])
             bottom = [bottom[i] + val[i] for i in range(len(val))]
         ax.set_xlabel('System')
         ax.set_title('Edit Types by System')
@@ -637,7 +644,7 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False, average_scores
         data = new_data
 
     total_sent = 0
-    for system in systems:
+    for system in [s for s in all_system_labels if s in systems]:
         if type_ == 'edit_dist':
             plt.ylabel('Edit Distance')
             if simpeval:
@@ -650,13 +657,13 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False, average_scores
                 scores = [(avg(sent['simpeval_scores'], prec=10), sum([x['size'] for x in sent['processed_annotations']])) for sent in data if sent['system'] == system]
             else:
                 scores = [(sent['score'], sum([x['size'] for x in sent['processed_annotations']])) for sent in data if sent['system'] == system]
-        plt.scatter([p[0] for p in scores], [p[1] for p in scores], c=color_mapping[system], alpha=0.5, label=system_name_mapping[system])
+        plt.scatter([p[0] for p in scores], [p[1] for p in scores], c=color_mapping[system], alpha=0.3, label=system_name_mapping[system])
         total_sent += len(scores)
     if simpeval:
         plt.xlabel('SimpEval score')
     else:
         plt.xlabel('Our score')
-    plt.title(f'Scoring vs. Edits ({total_sent} sentences)')
+    # plt.title(f'Scoring vs. Edits ({total_sent} sentences)')
     plt.gcf().set_size_inches(7, 5)
     plt.legend()
     out_filename = f'img/edit-distance-vs-score.pdf'
