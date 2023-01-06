@@ -152,7 +152,7 @@ def associate_spans(sent):
                 entry['composite_edits'] = []
                 composite_count = count_composite_edits(sent, i, type_)
                 for c_type_ in composite_count.keys():
-                    for k in range(1, composite_count[type_]+1):
+                    for k in range(1, composite_count[c_type_]+1):
                         orig_composite_span = [x for x in orig_span if x['composite_id'] == k and x['composite_type'] == c_type_] if orig_span is not empty_span else []
                         simp_composite_span = [x for x in simp_span if x['composite_id'] == k and x['composite_type'] == c_type_] if simp_span is not empty_span else []
 
