@@ -1,0 +1,1134 @@
+[
+    {
+        "id": 0,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "Pedro Castillo was kicked out as president of Peru. || His supporters felt their political rights were taken away by left-wing and far-left groups. || As a result, social organizations and native peoples organized many demonstrations, known as the 2022 Peruvian political protests.",
+        "simplified_spans": [
+            [
+                2,
+                52,
+                54,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 1,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "The 2022 Peruvian political protests were a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo. || It was organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "simplified_spans": [
+            [
+                2,
+                139,
+                141,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 2,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film talks about the struggle that a woman needs to face after her first child is a baby girl and is made to do superstitious rituals for the want of a male child.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 3,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "This film talks about the problems women face. || If their first child is a girl, they are forced to do superstitious rituals to get a son.",
+        "simplified_spans": [
+            [
+                2,
+                47,
+                49,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 4,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The movie talks about the struggle a woman needs to face after her first child is a baby girl and is made to do superstitious rituals for the lack of a male child after her first child is a baby girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 5,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film portrays the difficult challenge a woman faces when her firstborn is a girl. || She is expected to partake in superstitious rituals in order to have a male child.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 6,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film covers the struggles a woman faces being forced to perform rituals to give birth to a baby boy after giving birth to a girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 7,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film is about a woman struggling and performing superstitious rituals to have a male child, after her first child is a girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 8,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The movie is about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 9,
+        "original": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or works encouraged and supported by the Fungi Foundation).",
+        "original_spans": [],
+        "simplified": "Further important aspects of Fungi in Art are the preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 10,
+        "original": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or works encouraged and supported by the Fungi Foundation).",
+        "original_spans": [],
+        "simplified": "Fungi play an important role in art in terms of preventing fungal decay and contamination of works, as well as creating opportunities for dialogue between mycologists, artists, and the public. || Examples of such projects include the British Mycological Society's 'Massee Art Grant' and the Fungi Foundation's initiatives.",
+        "simplified_spans": [
+            [
+                2,
+                193,
+                195,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 11,
+        "original": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or works encouraged and supported by the Fungi Foundation).",
+        "original_spans": [],
+        "simplified": "Other important aspects of Fungi in Art are about preserving artwork from fungal decay and contamination. || There are also initiatives supporting works that create more communication between fungal researchers, artists, and society.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 12,
+        "original": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or works encouraged and supported by the Fungi Foundation).",
+        "original_spans": [],
+        "simplified": "An important aspect of Fungi in Art is the protection of artwork from fungal damage. || Another important aspect is to make sure mycologists, artists, and society are all on the same page.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 13,
+        "original": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or works encouraged and supported by the Fungi Foundation).",
+        "original_spans": [],
+        "simplified": "Fungi in Art is important for its role in preserving artworks from fungal decay and contamination. || It also supports dialogues between mycologists, artists, and society through initiatives like the 'Massee Art Grant' by the British Mycological Society and other projects supported by the Fungi Foundation.",
+        "simplified_spans": [
+            [
+                2,
+                99,
+                101,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 14,
+        "original": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or works encouraged and supported by the Fungi Foundation).",
+        "original_spans": [],
+        "simplified": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or the Fungi Foundation).",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 15,
+        "original": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination, as well as initiatives fostering and supporting works able to stimulate dialogues between mycologists (fungal researchers), artists, and society (as for example from the 'Massee Art Grant' by the British Mycological Society or works encouraged and supported by the Fungi Foundation).",
+        "original_spans": [],
+        "simplified": "Further important aspects of Fungi in Art relate to preservation of artworks from fungal decay and contamination.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 16,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "Pope Benedict died after Pope Francis announced the decline of his health on 28 December.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 17,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "On December 28, Pope Francis asked his followers to pray for Pope Benedict XVI because the previous Pope was very sick. || News of Benedict\u2019s death was announced after.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 18,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "Pope Francis, Benedict's successor, reported a decline in his health on December 28th and asked people to pray. || Later, the news of his death was announced.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "Pope Francis, Benedict's successor, notified people of a decline in his health on 28 December. || Subsequently, the news of his death was reported and the faithful were asked to pray.",
+        "simplified_spans": [
+            [
+                2,
+                95,
+                97,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 20,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "The news of his death came after Pope Francis, Benedict's successor, said on 28 December that his health was getting worse, and he asked for prayers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 21,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "The news of his death came after Pope Benedict's successor, Pope Francis, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 22,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 23,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany declared that she would remain the Minority Leader of the Vermont House while running for mayor. || She also said she would give her daily duties to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 24,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany announced she would stay as the Minority Leader of the Vermont House while running for mayor and said she would assign her daily duties to Paul N. Poirier, the Assistant Minority Leader.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 25,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany is campaigning for mayor, but announced she would also try to remain as Minority Leader of the Vermont House. || She stated she would give day-to-day work to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 26,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "At first, Stephany said she would stay as Minority Leader of the Vermont House while she was running for mayor, but later she said she would not do that and that Paul N. Poirier would take over.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 27,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "At first, Stephany said she would stay as Minority Leader of the Vermont House while campaigning for mayor. || She said that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 28,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "When Stephany was running for mayor, she said she wanted to stay as the Minority Leader of the Vermont House. || She said she would give the day-to-day duties to Paul N. Poirier, the Assistant Minority Leader.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 29,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 30,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Born on April 27, 1944, Barnes was abused by his alcoholic parents, with his mother attempting to miscarry him by taking several drugs.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 31,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Early life Barnes was born on April 27, 1944, in Detroit, Michigan. || His parents were both alcoholics and Barnes said that his mother tried to have a baby but she did not have a baby.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 32,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Barnes was born in Detroit, Michigan on April 27, 1944. || His alcoholic parents mistreated him regularly. || He said his mother had tried to cause a miscarriage by taking drugs.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ],
+            [
+                2,
+                107,
+                109,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 33,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "He was born in Detroit, Michigan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 34,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Barnes was regularly mistreated by his alcoholic parents. || He claimed his mother wanted to miscarry by taking a quantity of drugs.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 35,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Barnes was born in Detroit, Michigan on April 27, 1944. || His alcoholic parents regularly mistreated him, and he claimed that his mother had tried to cause a miscarriage by taking drugs.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 36,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "He was born in Detroit, Michigan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 37,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was created to collaborate with indigenous people from the area and to bring awareness to the Anacostan culture of the region. || They are also making an interactive map of Washington, D.C. that shows the original village sites and places where artifacts were discovered.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 38,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project works with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 39,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was established to work with local tribe members to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations. || They also want to learn more about the history of the Anacostan area.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 40,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was established to recognize the Anacostan heritage of the region. || They also want to make an interactive map of Washington, D.C that contains original village sites and locations of artifact excavations.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 41,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was set up to collaborate with local tribal members to learn more about and show respect for the Anacostan culture of the area. || They also built an interactive map of Washington, D.C. which shows the original village sites and where artifacts have been excavated.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 42,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project had two goals. || One goal was to work with Anacostan tribe members to better understand their culture in the region. || The second was to create a map of Washington DC with locations of original village sites and where artifacts have been discovered.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 43,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region. || The project will create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "simplified_spans": [
+            [
+                2,
+                166,
+                168,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 44,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "When he moved to Washington, D.C., he worked for the National Capital Park and Planning Commission until 1933. || He helped with the building of the National Mall. || After that, he worked for the National Resources Planning Board, which was part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ],
+            [
+                2,
+                164,
+                166,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 45,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eventually, Eliot moved to Washington, D.C. || He was the director of the National Capital Park and Planning Commission until 1933. || Here, he helped develop the National Mall. || Then, he was the director of the National Resources Planning Board until 1943. || This was a part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                44,
+                46,
+                0
+            ],
+            [
+                2,
+                132,
+                134,
+                1
+            ],
+            [
+                2,
+                178,
+                180,
+                2
+            ],
+            [
+                2,
+                260,
+                262,
+                3
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 46,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "In time, Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 47,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eliot moved to Washington, D.C. and worked in various positions related to the improvement of the city. || From 1933-1943, he was Director of the National Capital Park and Planning Commission, and also worked on the development of the National Mall. || After that, he was Director of the National Resources Planning Board, a part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                104,
+                106,
+                0
+            ],
+            [
+                2,
+                250,
+                252,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 48,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eliot moved to Washington, D.C. || He was the director of the National Capital Park and Planning Commission until 1933, helping make the National Mall. || Then he was Director of the National Resources Planning Board until 1943.",
+        "simplified_spans": [
+            [
+                2,
+                32,
+                34,
+                0
+            ],
+            [
+                2,
+                152,
+                154,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 49,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eliot moved to Washington, D.C. in 1933. || His job was to direct the National Capital Park and Planning Commission and develop the National Mall. || He worked in this role until 1943 when he switched to the National Resources Planning Board, which was part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                41,
+                43,
+                0
+            ],
+            [
+                2,
+                147,
+                149,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 50,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 51,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan. || It was completely rebuilt in 836 by the emir Ziyadat Allah I.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 52,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "The Great Mosque of Kairouan, built by the emir Ziyadat Allah I in 836, is one of the most significant monuments of the Aghlabid era. || Subsequent additions and repairs have complicated the timeline of its construction.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 53,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "The Great Mosque of Kairouan is one of the most important Aghlabid monuments. || The order of events of the monument\u2019s construction is complicated. || In addition to being rebuilt in 836 by the emir Ziyadat Allah I, the monument has also undergone many additions and repairs.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 54,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan. || It was rebuilt in 836 by the emir Ziyadat Allah I. || However, some additions and repairs were made later, which make the history of its construction more complicated.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                132,
+                134,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 55,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "The Great Mosque of Kairouan was a very important Aghlabid monument. || It was reconstructed in 836 by emir Ziyadat Allah I, but further repairs and modifications were done in later years. || This makes it difficult to know the exact timeline of its construction.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                189,
+                191,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 56,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I. || The emir Ziyadat Allah I added more parts to the mosque during his rule.",
+        "simplified_spans": [
+            [
+                2,
+                143,
+                145,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 57,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 58,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic, a point guard for the Dallas Mavericks, scores the first 60-point triple-double in the NBA. || He gained 60 points, 21 rebounds, and 10 assists in a 126-121 win over the New York Knicks.",
+        "simplified_spans": [
+            [
+                2,
+                105,
+                107,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 59,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luca Doncic, a point guard for the Dallas Mavericks, scored the first 60-point triple-double in the NBA. || He had 60 points, 21 rebounds, and 10 assists in the Maverick\u2019s overtime win against the New York Knicks at home.",
+        "simplified_spans": [
+            [
+                2,
+                105,
+                107,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 60,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic, a Slovenian point guard for the Dallas Mavericks, achieved a milestone in the National Basketball Association - the premier men's professional basketball league worldwide. || He scored 60 points, grabbed 21 rebounds and made 10 assists, earning the first 60-point triple-double in the league's history. || The Mavericks won the game 126\u2013121 in overtime against the New York Knicks in Dallas.",
+        "simplified_spans": [
+            [
+                2,
+                185,
+                187,
+                0
+            ],
+            [
+                2,
+                316,
+                318,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 61,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic of the Dallas Mavericks, a Slovenian point guard, scored the first 60-point triple-double in the National Basketball Association. || He had 60 points, 21 rebounds, and 10 assists, helping his team to a 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 62,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic of the Dallas Mavericks becomes the first player in history to record a triple-double in the National Basketball Association. || Doncic had 60 points, 21 rebounds, and 10 assists in the Mavericks' 126-121 overtime win against the New York Knicks in Dallas, Texas.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 63,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic of the Dallas Mavericks scored the first 60-point triple-double in the National Basketball Association. || He scored 60 points, 21 rebounds, and 10 assists in a 126-121 overtime win against the New York Knicks.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 64,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after scoring 60 points, 21 rebounds, and 10 assists in the Mavericks'126-121 overtime win against the New York Knicks in Dallas.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 65,
+        "original": "The 8mm and 16mm camera props used in the film had real film inside them, with LaBelle being taught how to use the cameras so that what was shot with them on set can be developed for usage in the film, as well as how to cut and splice film stock using the editing machines and film projectors of the time period.",
+        "original_spans": [],
+        "simplified": "LaBelle was taught how to use 8mm and 16mm cameras containing real film. || She also learned how to cut and splice the film using the equipment used in the era. || The footage shot with these cameras was then developed and used in the film.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ],
+            [
+                2,
+                161,
+                163,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 66,
+        "original": "The 8mm and 16mm camera props used in the film had real film inside them, with LaBelle being taught how to use the cameras so that what was shot with them on set can be developed for usage in the film, as well as how to cut and splice film stock using the editing machines and film projectors of the time period.",
+        "original_spans": [],
+        "simplified": "LaBelle was taught how to use the 8mm and 16mm camera props with real film inside them, for the film. || She also learned how to cut and splice film stock using the editing machines and projectors of the time period.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 67,
+        "original": "The 8mm and 16mm camera props used in the film had real film inside them, with LaBelle being taught how to use the cameras so that what was shot with them on set can be developed for usage in the film, as well as how to cut and splice film stock using the editing machines and film projectors of the time period.",
+        "original_spans": [],
+        "simplified": "The camera props used in the movie had real film. || Labelle was also taught to use the cameras and older machines from the time period to cut and splice film stock. || This was done so that the footage from the prop cameras could be used in the movie.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ],
+            [
+                2,
+                166,
+                168,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 68,
+        "original": "The 8mm and 16mm camera props used in the film had real film inside them, with LaBelle being taught how to use the cameras so that what was shot with them on set can be developed for usage in the film, as well as how to cut and splice film stock using the editing machines and film projectors of the time period.",
+        "original_spans": [],
+        "simplified": "The 8mm and 16mm camera props used in the film had real film inside them. || Because of this, LaBelle had to learn how to use the cameras so that what was shot with them on set could be used in the movie. || She also had to learn how to use film projectors and editing machines.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                205,
+                207,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 69,
+        "original": "The 8mm and 16mm camera props used in the film had real film inside them, with LaBelle being taught how to use the cameras so that what was shot with them on set can be developed for usage in the film, as well as how to cut and splice film stock using the editing machines and film projectors of the time period.",
+        "original_spans": [],
+        "simplified": "The 8mm and 16mm camera props used in the movie had real film inside them. || LaBelle was taught how to use the cameras so that what was shot with them on set can be developed for use in the movie.",
+        "simplified_spans": [
+            [
+                2,
+                75,
+                77,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 70,
+        "original": "The 8mm and 16mm camera props used in the film had real film inside them, with LaBelle being taught how to use the cameras so that what was shot with them on set can be developed for usage in the film, as well as how to cut and splice film stock using the editing machines and film projectors of the time period.",
+        "original_spans": [],
+        "simplified": "In the movie, the 8mm and 16mm camera props had real film inside them. || Labelle was taught how to use the cameras and how to edit the film with machines and projectors of the time period. || Thus, the footage he shot on set was able to be used in the movie.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                190,
+                192,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 71,
+        "original": "The 8mm and 16mm camera props used in the film had real film inside them, with LaBelle being taught how to use the cameras so that what was shot with them on set can be developed for usage in the film, as well as how to cut and splice film stock using the editing machines and film projectors of the time period.",
+        "original_spans": [],
+        "simplified": "The 8mm and 16mm camera props used in the movie had real film inside them. || LaBelle was taught how to use the cameras so that what was shot with them on set can be used in the movie.",
+        "simplified_spans": [
+            [
+                2,
+                75,
+                77,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 72,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Crawshay-Williams worked as a music critic until 1939. || In 1942, he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                55,
+                57,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 73,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942 he moved to Portmeirion, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 74,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams was a music critic. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 75,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942, he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 76,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Crawshay-Williams was a music critic until 1939. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and math.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 77,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Before 1939, Crawshay-Williams worked as a music critic. || In 1942, he moved to Portmeirion in North Wales and began teaching English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                57,
+                59,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 78,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    }
+]

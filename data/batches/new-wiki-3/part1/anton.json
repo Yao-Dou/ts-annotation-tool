@@ -1,0 +1,1004 @@
+[
+    {
+        "id": 0,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, due to deteriorating conditions and multiple collisions, Highway 401 was shut down between London and Tilbury, near Chatham, on December 23. || Additionally, a 50-vehicle pileup caused the closure of Highway 402 between London and Sarnia.",
+        "simplified_spans": [
+            [
+                2,
+                166,
+                168,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 1,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, because of about 100 vehicles being involved in multiple collisions. || Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup.",
+        "simplified_spans": [
+            [
+                2,
+                186,
+                188,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 2,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for a lot of time on December 23 between London and Tilbury, west of Chatham, because of many cars being hit. || Also, Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup, and it was not clear when it would open again.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 3,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "Due to multiple collisions, Highway 401 was closed for much of December 23 between London and Tilbury in southwestern Ontario. || Highway 402 was also closed between London and Sarnia due to a large accident and bad weather.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 4,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "Highway 401 between London and Tilbury, west of Chatham, was closed on December 23. || It was caused by around 100 vehicles, including multiple tractor trailers, getting into various accidents. || On the same day, Highway 402 closed between London and Sarnia, resulting from a large pileup involving 50 vehicles, plus worsening weather.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ],
+            [
+                2,
+                194,
+                196,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 5,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In Ontario, Highway 401 between London and Tilbury closed for most of December 23 due to 100 vehicles involved in accidents. || Highway 402 between London and Sarnia was also closed due to a 50-vehicle pileup and worsening conditions.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 6,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions. || Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and bad conditions.",
+        "simplified_spans": [
+            [
+                2,
+                220,
+                222,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021, the EU will need 83% of its natural gas from Russia, but following the invasion of Ukraine, gas imports from Russia have fallen. || This is partly because of reduced supply from Russia, partly because people in the EU no longer use as much gas, and partly because of rising costs.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 8,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "The EU used to import a lot of gas from Russia. || But due to the invasion of Ukraine, gas imports from Russia have fallen. || This is because costs have increased, supply from Russia has gone down, consumption in Europe has decreased, and Europe wants to move away from Russia as a natural gas supplier.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ],
+            [
+                2,
+                124,
+                126,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 9,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen. || This is partly due to the increasing cost, and partly due to reductions in supply from Russia.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 10,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021, the EU imported 83% of its natural gas, mostly from Russia. || However, after Russia invaded Ukraine, gas imports from Russia dropped due to increasing costs and reduced supply, as well as lower consumption and the desire to look for an alternative supplier to Gazprom.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 11,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported 83% of its natural gas. || However, after the invasion of Ukraine, gas imports from Russia have gone down. || This is because it is getting more expensive, supply from Russia is going down, less gas is being used, and they want to stop using Russia's Gazprom as a supplier.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ],
+            [
+                2,
+                131,
+                133,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 12,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported most of its natural gas, but following Russia's invasion of Ukraine, gas imports from them have decreased. || This is because of the rising cost, cuts in supply, reduction in consumption, and a wish to no longer be dependent on Gazprom for resources.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 13,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported 83.3 % of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 15,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Wednesday Addams' dance to Lady Gaga's \"Bloody Mary\" went viral on TikTok after it was released on Wednesday.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 16,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "After the release of the series Wednesday, Wednesday\u2019s dance to the song \u201cBloody Mary\u201d went viral on TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "After the release of Wednesday, Wednesday Addams\u2019s dance from the show and its fan\u2019s recreations of Lady Gaga\u2019s song \u201cBloody Mary\u201d became very popular on TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 18,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" became popular on TikTok after its release.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 19,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "A fan made a dance from the series to Lady Gaga's song \"Bloody Mary\". || The dance went viral on video sharing service TikTok, where many people watched the video.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 20,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Following the release of \" Wednesday \", Addams'dance from the series and its fan recreations of Lady Gaga's song \"Bloody Mary\" went viral on the video sharing service TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing was fighting with the government because they wanted nurses to get paid more. || This led to the largest strike the National Health Service had ever seen.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 22,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "After a dispute with the government over the pay of nurses, the Royal College of Nursing went on the largest strike in the history of the NHS.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 23,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing is taking part in the biggest strike in National Health Service history. || This is in response to the government's refusal to give nurses a pay rise.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 24,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing launched the biggest strike in NHS history, arguing with the government over a pay rise for nurses.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 25,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing begin the largest strike action in the service's history. || They are trying to get a 10% pay increase that the government will not accept.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 26,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing began the largest strike action in the history of the National Health Service. || This was because of a disagreement with the government over a pay increase for nurses.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 27,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service. || It is a dispute with the government over a pay increase for nurses.",
+        "simplified_spans": [
+            [
+                2,
+                109,
+                111,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried, the ex-CEO of FTX, was arrested in the Bahamas by the U.S. government. || The reason was not revealed but it was due to some charges.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 29,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried, a former CEO of FTX, was arrested in the Bahamas. || The U.S. government asked for his arrest, but the charges are unknown.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 30,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried used to be the CEO of FTX. || He was arrested in the Bahamas. || This arrest was requested by the U.S. government. || The charges for the arrest have not been revealed yet.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                80,
+                82,
+                1
+            ],
+            [
+                2,
+                133,
+                135,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 31,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas by the United States government on unknown charges.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 32,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas. || He is arrested at the request of the U.S. government on undisclosed charges.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 33,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas as requested by the US.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 34,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried was arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "French serial killer Charles Sobhraj, who received a life sentence for murdering two tourists in Nepal, has been released from prison due to good behavior and old age.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 36,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "January 1 -- Charles Sobhraj, a French serial killer, is released from prison due to his old age and good behavior in accordance with a Supreme Court order. || He had been in prison for two years.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 37,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "Charles Sobhraj, a French serial killer, was released from prison because of his advanced age and good behavior. || This release was ordered by the Supreme Court, as Sobhraj had been serving a life sentence for murdering two tourists in Nepal in 1975.",
+        "simplified_spans": [
+            [
+                2,
+                113,
+                115,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 38,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "The movie is about a French serial killer, Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975. || Sobhraj is released from prison due to his old age and good behavior.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 39,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "French serial killer Charles Sobhraj was in jail in Nepal for life after killing two tourists in 1975. || He was released from prison due to old age and good behavior.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 40,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "Charles Sobhraj, a French serial killer, was released from prison in Nepal due to his old age and good behavior. || This was ordered by the Supreme Court, as Sobhraj had been serving a life sentence since 1975 for murdering two tourists.",
+        "simplified_spans": [
+            [
+                2,
+                113,
+                115,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 41,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government set the volcanic alert status to the highest level due to the eruption of Semeru in East Java, which caused the evacuation of roughly 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 43,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the volcanic alert status to the highest level after Mount Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 44,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the highest level of volcanic alert to the highest level. || Semeru in East Java erupts, forcing around 2,000 people to leave.",
+        "simplified_spans": [
+            [
+                2,
+                91,
+                93,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 45,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government set the volcanic alert status at the highest level after Semeru in East Java erupted.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 46,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raised the volcanic alert status to its highest level following the eruption of Semeru in East Java. || This eruption forced around 2,000 people to evacuate.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 47,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "Around 2,000 people were forcibly evacuated after Semeru in East Java erupted and the Indonesian government raised the volcanic alert status.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 48,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "Fourteen people are killed, and 24 others are injured. || A drunk driver ploughs into crowds at the annual carnival parade in Calabar, Nigeria.",
+        "simplified_spans": [
+            [
+                2,
+                55,
+                57,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 50,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "In Calabar, Cross River State, Nigeria, a drunk driver drove into a crowd of people at a parade. || 14 people were killed, and 24 more were hurt.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 51,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "14 people are killed and 24 others are injured when a drunk driver crashed into people at a carnival parade in Calabar, Nigeria.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 52,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "At the annual carnival parade in Calabar, Cross River State, Nigeria, a drunk driver crashed into the crowd, killing 14 people and injuring 24.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 53,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "A drunk driver crashes into crowds at the yearly carnival parade in Calabar, Nigeria. || 14 people are killed and 24 others are hurt.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 54,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "Fourteen people died and 24 were hurt when a drunk driver crashed into a parade in Calabar, Nigeria.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 55,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "14 people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the yearly carnival parade in Calabar, Cross River State, Nigeria.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 56,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Nest was filmed by Hlynur right outside his house over a period of 18 months. || This was with the support and assistance of his three children.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 57,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Hlynur filmed Nest outside his house over 18 months with help from his three children.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 58,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Nest was filmed by Hlynur outside his house for 18 months, with help from his three children.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 59,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Hlynur filmed the movie Nest outside of his house over 18 months. || His three children supported and helped him.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 60,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Hlynur used his three children to help him film Nest outside his house over 18 months.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 61,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Nest was filmed right outside Hlynur's house for 18 months. || His three children helped him a lot to make the video.",
+        "simplified_spans": [
+            [
+                2,
+                60,
+                62,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 62,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "It was filmed by Hlynur right outside his house over a period of 18 months.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 63,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Southwest airlines cancel a lot of flights for a few days even after the worst weather had reduced. || This happened because Southwest uses a different system for scheduling flights than other major airlines. || Instead of using big transit centers, Southwest's flights go directly from one place to another. || Because of this, many of the pilots and flight attendants were not in the right place, which caused the cancellations.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ],
+            [
+                2,
+                209,
+                211,
+                1
+            ],
+            [
+                2,
+                309,
+                311,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 64,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Other U.S. airlines use hub-and-spoke systems of operations while Southwest uses point-to-point operations. || Southwest had a big problem with crew scheduling because most of its pilots and flight attendants were not where they were supposed to be. || This caused a lot of flights to be canceled for days after the weather got better.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ],
+            [
+                2,
+                250,
+                252,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 65,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other major U.S. airlines, Southwest operates point-to-point flights. || When severe weather hit, the majority of Southwest's pilots and flight attendants were out of position. || This caused a massive crew scheduling issue. || The result was days of many flight cancellations, even after the weather had calmed down and other airlines were back on track.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ],
+            [
+                2,
+                184,
+                186,
+                1
+            ],
+            [
+                2,
+                232,
+                234,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 66,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Southwest Airlines uses point-to-point operations rather than the hub-and-spoke system used by other U.S. airlines. || They had a \"meltdown\" of crew scheduling which caused a lot of flight cancellations, even after the worst weather had passed and other airlines had recovered.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 67,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations. || Because of this, many of its pilots and flight attendants were out of position, which caused a lot of flight cancellations. || Many of these flight cancellations continued for days after the worst weather had gone away.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ],
+            [
+                2,
+                242,
+                244,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 68,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest had a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position. || This resulted in massive numbers of flight cancellations for days after the worst weather had passed and other airlines had largely recovered.",
+        "simplified_spans": [
+            [
+                2,
+                195,
+                197,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 69,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and had a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position. || This resulted in massive numbers of flight cancellations even after the worst weather had subsided and other airlines had largely recovered.",
+        "simplified_spans": [
+            [
+                2,
+                230,
+                232,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 70,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines shut down the country's airspace for six hours because the air traffic management center experienced a power outage. || This caused 282 commercial flights and over 56,000 passengers to be impacted.",
+        "simplified_spans": [
+            [
+                2,
+                165,
+                167,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 71,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closed the country's airspace for six hours because of an electrical outage at their air traffic management center. || This caused 282 commercial flights to be delayed and 56,000 passengers were impacted.",
+        "simplified_spans": [
+            [
+                2,
+                164,
+                166,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 72,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "A power outage in Philipine\u2019s air traffic management center causes its Civil Aviation Authority to close its airspace for almost six hours. || About 282 flights and more than 56,000 passengers are affected.",
+        "simplified_spans": [
+            [
+                2,
+                140,
+                142,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 73,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours because of a power outage. || Around 282 commercial flights and over 56,000 passengers are affected.",
+        "simplified_spans": [
+            [
+                2,
+                126,
+                128,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 74,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closed the country's airspace for nearly six hours due to a power outage in its air traffic management center. || It affected around 282 commercial flights and over 56,000 passengers.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    }
+]

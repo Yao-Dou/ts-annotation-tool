@@ -1,0 +1,857 @@
+[
+    {
+        "id": 0,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, because of about 100 vehicles being involved in multiple collisions. || Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup.",
+        "simplified_spans": [
+            [
+                2,
+                186,
+                188,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 1,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "Highway 401 between London and Tilbury, west of Chatham, was closed on December 23. || It was caused by around 100 vehicles, including multiple tractor trailers, getting into various accidents. || On the same day, Highway 402 closed between London and Sarnia, resulting from a large pileup involving 50 vehicles, plus worsening weather.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ],
+            [
+                2,
+                194,
+                196,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 2,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "Due to multiple collisions, Highway 401 was closed for much of December 23 between London and Tilbury in southwestern Ontario. || Highway 402 was also closed between London and Sarnia due to a large accident and bad weather.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 3,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In Ontario, Highway 401 between London and Tilbury closed for most of December 23 due to 100 vehicles involved in accidents. || Highway 402 between London and Sarnia was also closed due to a 50-vehicle pileup and worsening conditions.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 4,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, due to deteriorating conditions and multiple collisions, Highway 401 was shut down between London and Tilbury, near Chatham, on December 23. || Additionally, a 50-vehicle pileup caused the closure of Highway 402 between London and Sarnia.",
+        "simplified_spans": [
+            [
+                2,
+                166,
+                168,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 5,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for a lot of time on December 23 between London and Tilbury, west of Chatham, because of many cars being hit. || Also, Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup, and it was not clear when it would open again.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 6,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions. || Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and bad conditions.",
+        "simplified_spans": [
+            [
+                2,
+                220,
+                222,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Lionel Messi\u2019s Instagram post of him lifting the world cup trophy and celebrating with Argentina became Instagram\u2019s new most-liked photo, reaching over 56 million likes. || The previous record was held by the Instagram egg.",
+        "simplified_spans": [
+            [
+                2,
+                170,
+                172,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 8,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Lionel Messi\u2019s Instagram post of him holding the FIFA World Cup Trophy exceeded the Instagram egg post and became Instagram\u2019s most-liked post after reaching over 56 million likes.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 9,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "The Instagram post of Argentine footballer Lionel Messi, celebrating with the Argentina team after they won the 2022 FIFA World Cup two days prior, showing him lifting the trophy, gained more likes than any other post ever on the social network. || It got a record-breaking 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "simplified_spans": [
+            [
+                2,
+                246,
+                248,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 10,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Lionel Messi, an Argentine footballer, posted photos on Instagram of him winning the 2022 FIFA World Cup. || It became Instagram's most-liked post ever, with over 56 million likes, surpassing the record held by the Instagram egg.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 11,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Argentine football player Lionel Messi's Instagram post became the most-liked post on the social networking service after reaching over 56 million likes. || The post contained photos of Messi lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior.",
+        "simplified_spans": [
+            [
+                2,
+                154,
+                156,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 12,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup becomes the social networking service's most-liked post after reaching over 56 million likes.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 13,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Argentine footballer Lionel Messi's Instagram post of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Wednesday Addams' dance to Lady Gaga's \"Bloody Mary\" went viral on TikTok after it was released on Wednesday.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 15,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" became popular on TikTok after its release.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 16,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "After the release of Wednesday, Wednesday Addams\u2019s dance from the show and its fan\u2019s recreations of Lady Gaga\u2019s song \u201cBloody Mary\u201d became very popular on TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 17,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "A fan made a dance from the series to Lady Gaga's song \"Bloody Mary\". || The dance went viral on video sharing service TikTok, where many people watched the video.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 18,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 19,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "After the release of the series Wednesday, Wednesday\u2019s dance to the song \u201cBloody Mary\u201d went viral on TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 20,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Following the release of \" Wednesday \", Addams'dance from the series and its fan recreations of Lady Gaga's song \"Bloody Mary\" went viral on the video sharing service TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "The U.S. House of Representatives passed a bill that allowed Puerto Rico to hold a vote to decide whether they should become a state or an independent nation with or without free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 22,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "The U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide if it should stay in the United States or become an independent nation. || The vote was 233-191 in favor of the bill.",
+        "simplified_spans": [
+            [
+                2,
+                201,
+                203,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 23,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a 233-191 vote that crossed party lines, the U.S. House of Representatives passed a bill to give Puerto Rico its first binding referendum. || This referendum will determine if the unincorporated territory should become a state, an independent nation, or an independent nation with a special relationship.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 24,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a 233-191 vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent with free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 25,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a bipartisan vote, the US House of Representatives passed a bill allowing Puerto Ricans to vote for the first time on statehood, self-rule, or self-rule with free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 26,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "The U.S. House of Representatives passed a bill with a 233-191 bipartisan vote. || This bill would allow Puerto Rico to hold its first binding referendum to decide whether to become a state, an independent nation, or a nation with free association.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 27,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a 233-191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The U.S. Senate approved a defense bill that cancels the requirement for military personnel to get vaccines.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 29,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill that removes the vaccine mandate for the U.S. military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 30,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill. || The U.S. military is required to get a vaccine.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 31,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The US Senate passes a bill that cancels the vaccine requirement for the military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 32,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The U.S. Senate has approved a defense bill that removes the requirement to get vaccinated for the military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 33,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill that gets rid of the vaccine requirement for the U.S. military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 34,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill that removes the vaccine mandate for the U.S. military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "January 1 -- Charles Sobhraj, a French serial killer, is released from prison due to his old age and good behavior in accordance with a Supreme Court order. || He had been in prison for two years.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 36,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "French serial killer Charles Sobhraj was in jail in Nepal for life after killing two tourists in 1975. || He was released from prison due to old age and good behavior.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 37,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "The movie is about a French serial killer, Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975. || Sobhraj is released from prison due to his old age and good behavior.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 38,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "Charles Sobhraj, a French serial killer, was released from prison in Nepal due to his old age and good behavior. || This was ordered by the Supreme Court, as Sobhraj had been serving a life sentence since 1975 for murdering two tourists.",
+        "simplified_spans": [
+            [
+                2,
+                113,
+                115,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 39,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "French serial killer Charles Sobhraj, who received a life sentence for murdering two tourists in Nepal, has been released from prison due to good behavior and old age.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 40,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "Charles Sobhraj, a French serial killer, was released from prison because of his advanced age and good behavior. || This release was ordered by the Supreme Court, as Sobhraj had been serving a life sentence for murdering two tourists in Nepal in 1975.",
+        "simplified_spans": [
+            [
+                2,
+                113,
+                115,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 41,
+        "original": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior in accordance with a Supreme Court order.",
+        "original_spans": [],
+        "simplified": "French serial killer Charles Sobhraj, who received a life sentence in Nepal for murdering two tourists in 1975, is released from prison due to his old age and good behavior.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the volcanic alert status to the highest level after Mount Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 43,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raised the volcanic alert status to its highest level following the eruption of Semeru in East Java. || This eruption forced around 2,000 people to evacuate.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 44,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government set the volcanic alert status at the highest level after Semeru in East Java erupted.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 45,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "Around 2,000 people were forcibly evacuated after Semeru in East Java erupted and the Indonesian government raised the volcanic alert status.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 46,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government set the volcanic alert status to the highest level due to the eruption of Semeru in East Java, which caused the evacuation of roughly 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 47,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the highest level of volcanic alert to the highest level. || Semeru in East Java erupts, forcing around 2,000 people to leave.",
+        "simplified_spans": [
+            [
+                2,
+                91,
+                93,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 48,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission said that, starting on January 8, China will stop making people quarantine for COVID-19 when coming from abroad.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 50,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission said that from January 8, people who travel to China from other countries will not need to quarantine for COVID-19.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 51,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission has announced that China will no longer require quarantines for people coming in from other countries, as of January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 52,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission announced that, starting on January 8, China will no longer require people entering the country to be quarantined due to the COVID-19 pandemic.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 53,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "China's National Health Commission said that they would stop their COVID-19 quarantine requirements for people coming from abroad from January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 54,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission announced that China will stop their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 55,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission has announced that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8, 2019.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 56,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "In Cambodia, three Irrawaddy dolphins have passed away within ten days of each other, creating a worrying situation.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 57,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three Irrawaddy dolphins, a critically endangered species, have died in Cambodia within 10 days of each other, causing serious concern.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 58,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three Irrawaddy dolphins have died less than ten days apart in Cambodia. || As they are an endangered species, this has led to a more worrying situation.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 59,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, and the situation is getting worse.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 60,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 61,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three of the endangered Irrawaddy dolphins have died within ten days in Cambodia, raising the alarm.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 62,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 63,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov started writing the script in February 2019 after he went to events in Yekaterinburg honoring the work of Aleksei Balabanov and the 2002 film War. || War was a strong starting point for Chadov\u2019s career.",
+        "simplified_spans": [
+            [
+                2,
+                162,
+                164,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 64,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), in which he played a leading role for the first time.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 65,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov began writing the script in February 2019. || This followed events in Yekaterinburg, which honored Aleksei Balabanov and the movie War (2002 film). || War was the film that propelled Chadov's career almost twenty years ago.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ],
+            [
+                2,
+                163,
+                165,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 66,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "The script began to be written in February 2019. || This was after Aleksey Chadov went to events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the movie \" War \" (2002 movie), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 67,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov started writing the script in February 2019 after he went to events in Yekaterinburg that were dedicated to Aleksei Balabanov\u2019s work and the movie War. || This movie gave a powerful start to Chadov\u2019s career almost twenty years ago.",
+        "simplified_spans": [
+            [
+                2,
+                167,
+                169,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 68,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov attended events dedicated to Aleksei Balabanov and the 2002 movie War in Yekaterinburg in February 2019. || This movie was an important beginning for Chadov's career, which began almost twenty years ago. || Writing of the script then started.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ],
+            [
+                2,
+                219,
+                221,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 69,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the movie \" War \", which almost twenty years ago gave a powerful start to Chadov's career.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 70,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "In 2022, protests were held in Peru. || Supporters of the ousted president, Pedro Castillo, organized them. || People from the left and far left sides of the political spectrum felt they were politically ignored and discriminated against.",
+        "simplified_spans": [
+            [
+                2,
+                37,
+                39,
+                0
+            ],
+            [
+                2,
+                108,
+                110,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 71,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "The 2022 Peruvian political protests are a series of demonstrations called by supporters of the president of Peru, Pedro Castillo. || They are organized by social organizations and indigenous peoples who feel they experienced political disenfranchisement.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 72,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "The 2022 Peruvian political protests will be held on the same day as a series of demonstrations called by supporters of the former president of Peru, Pedro Castillo. || The demonstrations were organized by social organizations and indigenous peoples.",
+        "simplified_spans": [
+            [
+                2,
+                166,
+                168,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 73,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "The 2022 Peruvian protests were led by supporters of removed president Pedro Castillo, who consisted of people that felt abandoned by their government, specifically by left-wing politicians.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 74,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "Protests against the 2022 Peruvian government are being held by people who feel they have been shut out of the political process, particularly those who are left-wing to far left. || These demonstrations, which are in support of the ousted Peruvian president, Pedro Castillo, are being organized by social organizations and indigenous populations.",
+        "simplified_spans": [
+            [
+                2,
+                180,
+                182,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    }
+]

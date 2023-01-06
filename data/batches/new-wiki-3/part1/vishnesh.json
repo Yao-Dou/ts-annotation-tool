@@ -1,0 +1,850 @@
+[
+    {
+        "id": 0,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "The Instagram post of Argentine footballer Lionel Messi, celebrating with the Argentina team after they won the 2022 FIFA World Cup two days prior, showing him lifting the trophy, gained more likes than any other post ever on the social network. || It got a record-breaking 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "simplified_spans": [
+            [
+                2,
+                246,
+                248,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Lionel Messi, an Argentine footballer, posted photos on Instagram of him winning the 2022 FIFA World Cup. || It became Instagram's most-liked post ever, with over 56 million likes, surpassing the record held by the Instagram egg.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Lionel Messi\u2019s Instagram post of him holding the FIFA World Cup Trophy exceeded the Instagram egg post and became Instagram\u2019s most-liked post after reaching over 56 million likes.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Argentine football player Lionel Messi's Instagram post became the most-liked post on the social networking service after reaching over 56 million likes. || The post contained photos of Messi lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior.",
+        "simplified_spans": [
+            [
+                2,
+                154,
+                156,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 4,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup becomes the social networking service's most-liked post after reaching over 56 million likes.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 5,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Lionel Messi\u2019s Instagram post of him lifting the world cup trophy and celebrating with Argentina became Instagram\u2019s new most-liked photo, reaching over 56 million likes. || The previous record was held by the Instagram egg.",
+        "simplified_spans": [
+            [
+                2,
+                170,
+                172,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 6,
+        "original": "Argentine footballer Lionel Messi's Instagram post containing photos of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post after reaching over 56 million likes, surpassing the previous record held by the Instagram egg.",
+        "original_spans": [],
+        "simplified": "Argentine footballer Lionel Messi's Instagram post of him lifting the FIFA World Cup Trophy and celebrating with the Argentina team after winning the 2022 FIFA World Cup two days prior becomes the social networking service's most-liked post.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that were tweeting about flights on his private jet. || However, by blocking these accounts and the accounts of journalists who shared the information, he drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned some Twitter accounts that were giving out information about flights on his private jet. || Musk said that it was like being doxxed, but by doing this, he made more people know about the issue and more people wanted to know about it.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 9,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk did not want people to know about the flights on his private jet, so he blocked the Twitter accounts that shared this information. || However, by doing this, he actually drew more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                141,
+                143,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet. || By blocking these accounts and the accounts of journalists that repeated the information, the issue drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                101,
+                103,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 11,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that published information about his private jet logs, but blocking these accounts and accounts of journalists that shared the information led to more attention on the issue.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 12,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk compared publishing information about flights on his private jet to being \"doxxed\" and banned Twitter accounts that were responsible for doing so. || However, his action of blocking these accounts as well as accounts of journalists who repeated the information only generated more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk, the owner of Tesla, banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed). || By banning these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" became popular on TikTok after its release.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "A fan made a dance from the series to Lady Gaga's song \"Bloody Mary\". || The dance went viral on video sharing service TikTok, where many people watched the video.",
+        "simplified_spans": [
+            [
+                2,
+                70,
+                72,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 17,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "After the release of the series Wednesday, Wednesday\u2019s dance to the song \u201cBloody Mary\u201d went viral on TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Wednesday Addams' dance to Lady Gaga's \"Bloody Mary\" went viral on TikTok after it was released on Wednesday.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "After the release of Wednesday, Wednesday Addams\u2019s dance from the show and its fan\u2019s recreations of Lady Gaga\u2019s song \u201cBloody Mary\u201d became very popular on TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 20,
+        "original": "Following the release of Wednesday, Wednesday Addams's dance from the series and its fan recreations to Lady Gaga's song \"Bloody Mary\" went viral on video sharing service TikTok.",
+        "original_spans": [],
+        "simplified": "Following the release of \" Wednesday \", Addams'dance from the series and its fan recreations of Lady Gaga's song \"Bloody Mary\" went viral on the video sharing service TikTok.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "The U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide if it should stay in the United States or become an independent nation. || The vote was 233-191 in favor of the bill.",
+        "simplified_spans": [
+            [
+                2,
+                201,
+                203,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 22,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a bipartisan vote, the US House of Representatives passed a bill allowing Puerto Ricans to vote for the first time on statehood, self-rule, or self-rule with free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a 233-191 vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent with free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 24,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "The U.S. House of Representatives passed a bill with a 233-191 bipartisan vote. || This bill would allow Puerto Rico to hold its first binding referendum to decide whether to become a state, an independent nation, or a nation with free association.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 25,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "The U.S. House of Representatives passed a bill that allowed Puerto Rico to hold a vote to decide whether they should become a state or an independent nation with or without free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 26,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a 233-191 vote that crossed party lines, the U.S. House of Representatives passed a bill to give Puerto Rico its first binding referendum. || This referendum will determine if the unincorporated territory should become a state, an independent nation, or an independent nation with a special relationship.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "In a 233\u2013191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "original_spans": [],
+        "simplified": "In a 233-191 bipartisan vote, the U.S. House of Representatives passes a bill that would allow Puerto Rico to have its first ever binding referendum to decide whether the unincorporated territory should become a state, an independent nation or an independent nation with free association.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill that removes the vaccine mandate for the U.S. military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The U.S. Senate has approved a defense bill that removes the requirement to get vaccinated for the military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The US Senate passes a bill that cancels the vaccine requirement for the military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill that gets rid of the vaccine requirement for the U.S. military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The U.S. Senate approved a defense bill that cancels the requirement for military personnel to get vaccines.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 33,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill. || The U.S. military is required to get a vaccine.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 34,
+        "original": "The United States Senate passes a defense bill that rescinds the vaccine mandate for the U.S. military.",
+        "original_spans": [],
+        "simplified": "The United States Senate passes a defense bill that removes the vaccine mandate for the U.S. military.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas as requested by the US.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried used to be the CEO of FTX. || He was arrested in the Bahamas. || This arrest was requested by the U.S. government. || The charges for the arrest have not been revealed yet.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                80,
+                82,
+                1
+            ],
+            [
+                2,
+                133,
+                135,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried, the ex-CEO of FTX, was arrested in the Bahamas by the U.S. government. || The reason was not revealed but it was due to some charges.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried, a former CEO of FTX, was arrested in the Bahamas. || The U.S. government asked for his arrest, but the charges are unknown.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 39,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas by the United States government on unknown charges.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 40,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas. || He is arrested at the request of the U.S. government on undisclosed charges.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried was arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States ruled by a majority of 5 to 4 to keep Title 42 of the U.S. Code, which gives the government the ability to remove people who have been to a country with an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States voted 5\u20134 to keep Title 42 of the U.S. Code, which allows the government to remove people who were recently in a country with an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court voted 5-4 to maintain Title 42. || This allows the government to remove anybody from the United States who has recently visited a country that contains an infectious disease.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 45,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-4 that the government can remove a person from the country if they have been in the country and the person has an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 46,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-9 to keep Title 42 of the U.S. Code. || This allows the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 47,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "In a 5-4 decision split, the Supreme Court of the United States decided to keep Title 42 of the U.S Code. || This allows the government to remove people who have recently been in a country with an infectious disease.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 48,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-4 to maintain Title 42 of the U.S. Code. || This allows the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government said it would change the required length for draft from four months to one year. || They did this because they were afraid that China would use military force to pursue Chinese unification.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 50,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government announces that it would extend the required time for military service from four months to one year. || They said that China was trying to bring Taiwan under its control.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 51,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government said they would make conscription last for one year instead of four months. || They explained this was due to the higher risk of China attacking to take over Taiwan.",
+        "simplified_spans": [
+            [
+                2,
+                101,
+                103,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 52,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government announced that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 53,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "There is a greater threat that China will use military force for unification. || As a result, Taiwan extends the length of mandatory military service from four months to one year.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 54,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government has announced that they will lengthen the amount of time needed to serve in the military from four months to a year due to the growing threat of China employing military power to bring about unification.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 55,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government announced that it would extend the required duration for conscription from four months to one year.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 56,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission announced that, starting on January 8, China will no longer require people entering the country to be quarantined due to the COVID-19 pandemic.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 57,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission announced that China will stop their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 58,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "China's National Health Commission said that they would stop their COVID-19 quarantine requirements for people coming from abroad from January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 59,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission said that, starting on January 8, China will stop making people quarantine for COVID-19 when coming from abroad.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 60,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission has announced that China will no longer require quarantines for people coming in from other countries, as of January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 61,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission said that from January 8, people who travel to China from other countries will not need to quarantine for COVID-19.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 62,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission has announced that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8, 2019.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 63,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, and the situation is getting worse.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 64,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three of the endangered Irrawaddy dolphins have died within ten days in Cambodia, raising the alarm.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 65,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 66,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "In Cambodia, three Irrawaddy dolphins have passed away within ten days of each other, creating a worrying situation.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 67,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three Irrawaddy dolphins have died less than ten days apart in Cambodia. || As they are an endangered species, this has led to a more worrying situation.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 68,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three Irrawaddy dolphins, a critically endangered species, have died in Cambodia within 10 days of each other, causing serious concern.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 69,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 70,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "The 2022 Peruvian political protests are a series of demonstrations called by supporters of the president of Peru, Pedro Castillo. || They are organized by social organizations and indigenous peoples who feel they experienced political disenfranchisement.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 71,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "Protests against the 2022 Peruvian government are being held by people who feel they have been shut out of the political process, particularly those who are left-wing to far left. || These demonstrations, which are in support of the ousted Peruvian president, Pedro Castillo, are being organized by social organizations and indigenous populations.",
+        "simplified_spans": [
+            [
+                2,
+                180,
+                182,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 72,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "The 2022 Peruvian protests were led by supporters of removed president Pedro Castillo, who consisted of people that felt abandoned by their government, specifically by left-wing politicians.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 73,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "Pedro Castillo was kicked out as president of Peru. || His supporters felt their political rights were taken away by left-wing and far-left groups. || As a result, social organizations and native peoples organized many demonstrations, known as the 2022 Peruvian political protests.",
+        "simplified_spans": [
+            [
+                2,
+                52,
+                54,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 74,
+        "original": "The 2022 Peruvian political protests correspond to a series of demonstrations called by supporters of the ousted president of Peru, Pedro Castillo, organized by social organizations and indigenous peoples who felt they experienced political disenfranchisement, specifically from the politically left-wing to far left.",
+        "original_spans": [],
+        "simplified": "In 2022, protests were held in Peru. || Supporters of the ousted president, Pedro Castillo, organized them. || People from the left and far left sides of the political spectrum felt they were politically ignored and discriminated against.",
+        "simplified_spans": [
+            [
+                2,
+                37,
+                39,
+                0
+            ],
+            [
+                2,
+                108,
+                110,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    }
+]

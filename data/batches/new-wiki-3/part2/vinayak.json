@@ -1,0 +1,1069 @@
+[
+    {
+        "id": 0,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other major U.S. airlines, Southwest operates point-to-point flights. || When severe weather hit, the majority of Southwest's pilots and flight attendants were out of position. || This caused a massive crew scheduling issue. || The result was days of many flight cancellations, even after the weather had calmed down and other airlines were back on track.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ],
+            [
+                2,
+                184,
+                186,
+                1
+            ],
+            [
+                2,
+                232,
+                234,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and had a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position. || This resulted in massive numbers of flight cancellations even after the worst weather had subsided and other airlines had largely recovered.",
+        "simplified_spans": [
+            [
+                2,
+                230,
+                232,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 2,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closed the country's airspace for six hours because of an electrical outage at their air traffic management center. || This caused 282 commercial flights to be delayed and 56,000 passengers were impacted.",
+        "simplified_spans": [
+            [
+                2,
+                164,
+                166,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 3,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closed the country's airspace for nearly six hours due to a power outage in its air traffic management center. || It affected around 282 commercial flights and over 56,000 passengers.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 4,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours because of a power outage. || Around 282 commercial flights and over 56,000 passengers are affected.",
+        "simplified_spans": [
+            [
+                2,
+                126,
+                128,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 5,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closed their airspace for six hours due to a power outage in its air traffic center, affecting many commercial flights and passengers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 6,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines shut down the country's airspace for six hours because the air traffic management center experienced a power outage. || This caused 282 commercial flights and over 56,000 passengers to be impacted.",
+        "simplified_spans": [
+            [
+                2,
+                165,
+                167,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 7,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "A power outage in Philipine\u2019s air traffic management center causes its Civil Aviation Authority to close its airspace for almost six hours. || About 282 flights and more than 56,000 passengers are affected.",
+        "simplified_spans": [
+            [
+                2,
+                140,
+                142,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center. || This affects around 282 commercial flights and over 56,000 passengers.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 9,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of verse, Genius and Fancy, was published in 1791. || It went into a second edition in 1795, and then was printed again in an expanded version with three times the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 10,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young\u2019s first set of poems was called Genius and Fancy. || It came out in 1791 and it was described as \u201ca survey of the London stage\u201d. || In 1795, a second edition came out and then shortly after, an expanded edition was also released. || The expanded edition had thrice as many pages.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ],
+            [
+                2,
+                135,
+                137,
+                1
+            ],
+            [
+                2,
+                236,
+                238,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 11,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of verse, \" Genius and Fancy \", was published in 1791. || It went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 12,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of poems, called Genius and Fancy, was published in 1791 and became very popular. || It was a survey of the London stage. || In 1795 it went into a second edition, which had three times as many pages as the first one.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ],
+            [
+                2,
+                147,
+                149,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of poetry, Genius and Fancy, was described as \"a survey of the London stage\". || It was published in 1791, went into a second edition in 1795, and then was republished soon after in an expanded edition, which had three times the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 14,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "In 1791, Young's first poetry book, named Genius and Fancy, was released and became successful. || It was described as \"a survey of the London stage\" and was followed by an even larger second edition with triple the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of verse, \" Genius and Fancy \", was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 16,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Mathew was born in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala. || He did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam.",
+        "simplified_spans": [
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 17,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, Kerala. || He attended Christian College in Chengannur and Maharaja's College in Ernakulam. || After graduating, he became a lecturer at Christian College in Chengannur.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ],
+            [
+                2,
+                151,
+                153,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 18,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born in Keekozhur, Kerala, India on September 27, 1940. || He studied at Christian College and Maharaja\u2019s College, and later, he started his career as a lecturer at Christian College.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 19,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, which is a small village in Kerala, India. || He studied at Christian College, Chengannur, and Maharaja\u2019s College, Ernakulam. || After finishing his education, he started working as a teacher at Christian College.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ],
+            [
+                2,
+                185,
+                187,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 20,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, Kerala, India. || He studied at Christian College, Chengannur and Maharaja's College, Ernakulam and began his career by teaching at Christian College, Chengannur.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 21,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Maharaja's College, Ernakulam and Christian College, Chengannur, where he was a very good student.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 22,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "He was born in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala. || Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 23,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment created a battle between the two major political parties of the era. || The parties argued over what the role of Federal courts is and other things.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 24,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment caused hostility between the two major political parties during a battle between them over the role of Federal courts and other issues.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 25,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "An important political event, the impeachment caused conflict between the two major parties in the US at the time. || They disagreed on many issues, including the role of Federal courts.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment was a major event during that time. || It was a struggle between the two major U.S. political parties about, for example, the role of Federal courts.",
+        "simplified_spans": [
+            [
+                2,
+                52,
+                54,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "It was a high-profile affair at the time, because the two major United States political parties of the time, the Democratic Party and the Republican Party, were against each other and wanted to impeach the President.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 28,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "A high-profile affair at the time, the impeachment pitted the two major United States political parties against each other. || The parties had a battle between them over, among other things, what the role of Federal courts should look like.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment was a high-profile affair at the time. || The impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified_spans": [
+            [
+                2,
+                55,
+                57,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 30,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "Progressive members of the New York State Senate opposed LaSalle's nomination. || They saw his record on abortion and labor cases as conservative and voiced their criticism.",
+        "simplified_spans": [
+            [
+                2,
+                79,
+                81,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 31,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's appointment was disagreed with by the progressive members of the New York Senate. || They spoke out against LaSalle because of how he handled cases involving abortion and labor, which they considered too conservative.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 32,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "Progressive members of the New York State Senate did not like LaSalle\u2019s nomination. || They criticized LaSalle's previous work on abortion and labor cases, which they thought were conservative.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 33,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's first job was in the New York State Senate. || Some members of the New York State Senate did not like LaSalle because they thought she was too conservative.",
+        "simplified_spans": [
+            [
+                2,
+                54,
+                56,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 34,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's nomination was opposed by progressive members of the New York State Senate. || They criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 35,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "Progressive members of the New York State Senate did not want LaSalle to be nominated. || They thought he was conservative because of his record on abortion and labor cases.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's nomination was opposed by progressive members of the New York State Senate. || They criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 37,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the Phillips Academy poll was used for the first time. || It correctly predicted the result of all senate races polled before Election Day. || This included Catherine Cortez Masto\u2019s victory in Nevada, but the poll overestimated Republican performance in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                64,
+                66,
+                0
+            ],
+            [
+                2,
+                149,
+                151,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 38,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, Phillips Academy correctly predicted all senate races before Election Day, including Catherine Cortez Masto's victory in Nevada. || However, the poll did not predict the Arizona governor's race or the Georgia senate runoff correctly.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 39,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, Phillips Academy correctly forecasted all senate races polled before Election Day, such as Catherine Cortez Masto's win in Nevada. || However, it overestimated the Republican party in the races for the Arizona governor and Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                140,
+                142,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 40,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the poll's first cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada. || The poll also overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                169,
+                171,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the Philips Academy poll correctly predicted the winners of all senate races which were polled before Election Day. || This included Catherine Cortez Masto\u2019s win in Nevada. || However, the poll wrongly predicted more Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ],
+            [
+                2,
+                182,
+                184,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 42,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "Phillips Academy correctly predicted all senate races in the 2022 poll before Election Day, including Catherine Cortez Masto's win in Nevada. || However, the poll was inaccurate in the Arizona governor race and the Georgia senate runoff, overestimating the Republican vote.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the poll's first cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 44,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "During the 1941 and 1942 Philippines campaign, the US Navy lost their naval base in the Philippines and Hawai'i became their primary base for the Pacific War against Japan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 45,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the U.S. Navy's main base for the early part of the Pacific War against the Empire of Japan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 46,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "After the United States lost the Philippines in World War II, Hawaiian became the main base for the United States Navy when they were fighting in the Pacific against the Empire of Japan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 47,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "Hawaii became the main US naval base for the early part of the Pacific War against Japan after the loss of the US Naval Base in the Philippines in 1941 and 1942.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 48,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "The US Navy lost its base in the Philippines in 1941 and 1942, so Hawaii became the primary base for their island-hopping campaign against the Empire of Japan in the Pacific War.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 49,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "After the US Navy lost their base in the Philippines during the Philippines campaign of 1941 and 1942. || Hawaii became their main base for the early part of the Pacific War against Japan.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 50,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "With the loss of U.S. || Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the U.S. Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified_spans": [
+            [
+                2,
+                22,
+                24,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 51,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I. || The emir Ziyadat Allah I added more parts to the mosque during his rule.",
+        "simplified_spans": [
+            [
+                2,
+                143,
+                145,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 52,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "The Great Mosque of Kairouan is one of the most important Aghlabid monuments. || The order of events of the monument\u2019s construction is complicated. || In addition to being rebuilt in 836 by the emir Ziyadat Allah I, the monument has also undergone many additions and repairs.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 53,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan. || It was completely rebuilt in 836 by the emir Ziyadat Allah I.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 54,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "The Great Mosque of Kairouan, built by the emir Ziyadat Allah I in 836, is one of the most significant monuments of the Aghlabid era. || Subsequent additions and repairs have complicated the timeline of its construction.",
+        "simplified_spans": [
+            [
+                2,
+                134,
+                136,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 55,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan. || It was rebuilt in 836 by the emir Ziyadat Allah I. || However, some additions and repairs were made later, which make the history of its construction more complicated.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                132,
+                134,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 56,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "The Great Mosque of Kairouan was a very important Aghlabid monument. || It was reconstructed in 836 by emir Ziyadat Allah I, but further repairs and modifications were done in later years. || This makes it difficult to know the exact timeline of its construction.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                189,
+                191,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 57,
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "original_spans": [],
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 58,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic of the Dallas Mavericks scored the first 60-point triple-double in the National Basketball Association. || He scored 60 points, 21 rebounds, and 10 assists in a 126-121 overtime win against the New York Knicks.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 59,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic, a Slovenian point guard for the Dallas Mavericks, achieved a milestone in the National Basketball Association - the premier men's professional basketball league worldwide. || He scored 60 points, grabbed 21 rebounds and made 10 assists, earning the first 60-point triple-double in the league's history. || The Mavericks won the game 126\u2013121 in overtime against the New York Knicks in Dallas.",
+        "simplified_spans": [
+            [
+                2,
+                185,
+                187,
+                0
+            ],
+            [
+                2,
+                316,
+                318,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 60,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic, a point guard for the Dallas Mavericks, scores the first 60-point triple-double in the NBA. || He gained 60 points, 21 rebounds, and 10 assists in a 126-121 win over the New York Knicks.",
+        "simplified_spans": [
+            [
+                2,
+                105,
+                107,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 61,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luca Doncic, a point guard for the Dallas Mavericks, scored the first 60-point triple-double in the NBA. || He had 60 points, 21 rebounds, and 10 assists in the Maverick\u2019s overtime win against the New York Knicks at home.",
+        "simplified_spans": [
+            [
+                2,
+                105,
+                107,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 62,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic of the Dallas Mavericks, a Slovenian point guard, scored the first 60-point triple-double in the National Basketball Association. || He had 60 points, 21 rebounds, and 10 assists, helping his team to a 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 63,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Luka Doncic of the Dallas Mavericks becomes the first player in history to record a triple-double in the National Basketball Association. || Doncic had 60 points, 21 rebounds, and 10 assists in the Mavericks' 126-121 overtime win against the New York Knicks in Dallas, Texas.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 64,
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [],
+        "simplified": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after scoring 60 points, 21 rebounds, and 10 assists in the Mavericks'126-121 overtime win against the New York Knicks in Dallas.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 65,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Crawshay-Williams was a music critic until 1939. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and math.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 66,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Crawshay-Williams worked as a music critic until 1939. || In 1942, he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                55,
+                57,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 67,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Before 1939, Crawshay-Williams worked as a music critic. || In 1942, he moved to Portmeirion in North Wales and began teaching English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                57,
+                59,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 68,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams was a music critic. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 69,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942 he moved to Portmeirion, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 70,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942, he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 71,
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [],
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    }
+]

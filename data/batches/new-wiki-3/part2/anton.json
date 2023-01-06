@@ -1,0 +1,225 @@
+[
+    {
+        "id": 0,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closed their airspace for six hours due to a power outage in its air traffic center, affecting many commercial flights and passengers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 1,
+        "original": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center, affecting around 282 commercial flights and over 56,000 passengers.",
+        "original_spans": [],
+        "simplified": "The Civil Aviation Authority of the Philippines closes the country's airspace for nearly six hours due to a power outage in its air traffic management center. || This affects around 282 commercial flights and over 56,000 passengers.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 2,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of poetry, Genius and Fancy, was described as \"a survey of the London stage\". || It was published in 1791, went into a second edition in 1795, and then was republished soon after in an expanded edition, which had three times the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of verse, Genius and Fancy, was published in 1791. || It went into a second edition in 1795, and then was printed again in an expanded version with three times the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                76,
+                78,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 4,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "In 1791, Young's first poetry book, named Genius and Fancy, was released and became successful. || It was described as \"a survey of the London stage\" and was followed by an even larger second edition with triple the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                96,
+                98,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 5,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of verse, \" Genius and Fancy \", was published in 1791. || It went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "simplified_spans": [
+            [
+                2,
+                80,
+                82,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 6,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young\u2019s first set of poems was called Genius and Fancy. || It came out in 1791 and it was described as \u201ca survey of the London stage\u201d. || In 1795, a second edition came out and then shortly after, an expanded edition was also released. || The expanded edition had thrice as many pages.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ],
+            [
+                2,
+                135,
+                137,
+                1
+            ],
+            [
+                2,
+                236,
+                238,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 7,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of poems, called Genius and Fancy, was published in 1791 and became very popular. || It was a survey of the London stage. || In 1795 it went into a second edition, which had three times as many pages as the first one.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ],
+            [
+                2,
+                147,
+                149,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 8,
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [],
+        "simplified": "Young's first collection of verse, \" Genius and Fancy \", was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 9,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany announced she would stay as the Minority Leader of the Vermont House while running for mayor and said she would assign her daily duties to Paul N. Poirier, the Assistant Minority Leader.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "At first, Stephany said she would stay as Minority Leader of the Vermont House while campaigning for mayor. || She said that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 11,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "At first, Stephany said she would stay as Minority Leader of the Vermont House while she was running for mayor, but later she said she would not do that and that Paul N. Poirier would take over.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 12,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "When Stephany was running for mayor, she said she wanted to stay as the Minority Leader of the Vermont House. || She said she would give the day-to-day duties to Paul N. Poirier, the Assistant Minority Leader.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 13,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany declared that she would remain the Minority Leader of the Vermont House while running for mayor. || She also said she would give her daily duties to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 14,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany is campaigning for mayor, but announced she would also try to remain as Minority Leader of the Vermont House. || She stated she would give day-to-day work to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 15,
+        "original": "Stephany initially announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "original_spans": [],
+        "simplified": "Stephany announced her intent to remain as Minority Leader of the Vermont House while campaigning for mayor, stating that she would turn over day-to-day duties to Assistant Minority Leader Paul N. Poirier.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    }
+]

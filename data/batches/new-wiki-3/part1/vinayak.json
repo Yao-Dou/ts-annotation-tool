@@ -1,0 +1,925 @@
+[
+    {
+        "id": 0,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned some Twitter accounts that were giving out information about flights on his private jet. || Musk said that it was like being doxxed, but by doing this, he made more people know about the issue and more people wanted to know about it.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 1,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that published information about his private jet logs, but blocking these accounts and accounts of journalists that shared the information led to more attention on the issue.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 2,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet. || By blocking these accounts and the accounts of journalists that repeated the information, the issue drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                101,
+                103,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 3,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk compared publishing information about flights on his private jet to being \"doxxed\" and banned Twitter accounts that were responsible for doing so. || However, his action of blocking these accounts as well as accounts of journalists who repeated the information only generated more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 4,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that were tweeting about flights on his private jet. || However, by blocking these accounts and the accounts of journalists who shared the information, he drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 5,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk did not want people to know about the flights on his private jet, so he blocked the Twitter accounts that shared this information. || However, by doing this, he actually drew more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                141,
+                143,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 6,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk, the owner of Tesla, banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed). || By banning these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing began the largest strike action in the history of the National Health Service. || This was because of a disagreement with the government over a pay increase for nurses.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 8,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing is taking part in the biggest strike in National Health Service history. || This is in response to the government's refusal to give nurses a pay rise.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 9,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing was fighting with the government because they wanted nurses to get paid more. || This led to the largest strike the National Health Service had ever seen.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 10,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "After a dispute with the government over the pay of nurses, the Royal College of Nursing went on the largest strike in the history of the NHS.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 11,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing launched the biggest strike in NHS history, arguing with the government over a pay rise for nurses.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 12,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing begin the largest strike action in the service's history. || They are trying to get a 10% pay increase that the government will not accept.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 13,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service. || It is a dispute with the government over a pay increase for nurses.",
+        "simplified_spans": [
+            [
+                2,
+                109,
+                111,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas as requested by the US.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 15,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried used to be the CEO of FTX. || He was arrested in the Bahamas. || This arrest was requested by the U.S. government. || The charges for the arrest have not been revealed yet.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                80,
+                82,
+                1
+            ],
+            [
+                2,
+                133,
+                135,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 16,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried, the ex-CEO of FTX, was arrested in the Bahamas by the U.S. government. || The reason was not revealed but it was due to some charges.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 17,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Sam Bankman-Fried, a former CEO of FTX, was arrested in the Bahamas. || The U.S. government asked for his arrest, but the charges are unknown.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 18,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas by the United States government on unknown charges.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 19,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas. || He is arrested at the request of the U.S. government on undisclosed charges.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 20,
+        "original": "Former FTX CEO Sam Bankman-Fried is arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "original_spans": [],
+        "simplified": "Former FTX CEO Sam Bankman-Fried was arrested in the Bahamas at the request of the U.S. government on undisclosed charges.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry announced last month that core consumer prices rose by 3.7 percent compared to November 2021, making it the highest inflation rate recorded since 1981.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 22,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry announced that last month the country experienced its most significant level of inflation since 1981. || Core consumer prices had increased by 3.7 percent compared to November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                136,
+                138,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 23,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan\u2019s Internal Affairs Ministry said that last month, Japan saw its highest inflation since 1981. || Core consumer prices had gone up by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 24,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry reported last month that the country experienced its highest level of inflation since 1981. || Core consumer prices increased by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                126,
+                128,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 25,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's Internal Affairs Ministry reported that inflation reached its highest level since 1981 last month. || Core consumer prices increased by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 26,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "In November 2022, Japan reported that the country had record levels of inflation since 1981 after many consumer prices rose by 3.7% from last year.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 27,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry reported that the country had its highest level of inflation since 1981. || Core consumer prices increased by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "A drunk driver crashes into crowds at the yearly carnival parade in Calabar, Nigeria. || 14 people are killed and 24 others are hurt.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 29,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "Fourteen people are killed, and 24 others are injured. || A drunk driver ploughs into crowds at the annual carnival parade in Calabar, Nigeria.",
+        "simplified_spans": [
+            [
+                2,
+                55,
+                57,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 30,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "Fourteen people died and 24 were hurt when a drunk driver crashed into a parade in Calabar, Nigeria.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 31,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "14 people are killed and 24 others are injured when a drunk driver crashed into people at a carnival parade in Calabar, Nigeria.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 32,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "In Calabar, Cross River State, Nigeria, a drunk driver drove into a crowd of people at a parade. || 14 people were killed, and 24 more were hurt.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 33,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "At the annual carnival parade in Calabar, Cross River State, Nigeria, a drunk driver crashed into the crowd, killing 14 people and injuring 24.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 34,
+        "original": "Fourteen people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the annual carnival parade in Calabar, Cross River State, Nigeria.",
+        "original_spans": [],
+        "simplified": "14 people are killed, and 24 others are injured when a drunk driver ploughs into crowds at the yearly carnival parade in Calabar, Cross River State, Nigeria.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States voted 5\u20134 to keep Title 42 of the U.S. Code, which allows the government to remove people who were recently in a country with an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 36,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-9 to keep Title 42 of the U.S. Code. || This allows the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 37,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-4 that the government can remove a person from the country if they have been in the country and the person has an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 38,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "In a 5-4 decision split, the Supreme Court of the United States decided to keep Title 42 of the U.S Code. || This allows the government to remove people who have recently been in a country with an infectious disease.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 39,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States ruled by a majority of 5 to 4 to keep Title 42 of the U.S. Code, which gives the government the ability to remove people who have been to a country with an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 40,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court voted 5-4 to maintain Title 42. || This allows the government to remove anybody from the United States who has recently visited a country that contains an infectious disease.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 41,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-4 to maintain Title 42 of the U.S. Code. || This allows the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government announces that it would extend the required time for military service from four months to one year. || They said that China was trying to bring Taiwan under its control.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 43,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "There is a greater threat that China will use military force for unification. || As a result, Taiwan extends the length of mandatory military service from four months to one year.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 44,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government announced that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 45,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government has announced that they will lengthen the amount of time needed to serve in the military from four months to a year due to the growing threat of China employing military power to bring about unification.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 46,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government said it would change the required length for draft from four months to one year. || They did this because they were afraid that China would use military force to pursue Chinese unification.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 47,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government said they would make conscription last for one year instead of four months. || They explained this was due to the higher risk of China attacking to take over Taiwan.",
+        "simplified_spans": [
+            [
+                2,
+                101,
+                103,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 48,
+        "original": "The Taiwanese government announces that it would extend the required duration for conscription from four months to one year, citing the increasing threat of China using military force to pursue Chinese unification.",
+        "original_spans": [],
+        "simplified": "The Taiwanese government announced that it would extend the required duration for conscription from four months to one year.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 50,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "In Cambodia, three Irrawaddy dolphins have passed away within ten days of each other, creating a worrying situation.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 51,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three of the endangered Irrawaddy dolphins have died within ten days in Cambodia, raising the alarm.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 52,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three Irrawaddy dolphins have died less than ten days apart in Cambodia. || As they are an endangered species, this has led to a more worrying situation.",
+        "simplified_spans": [
+            [
+                2,
+                73,
+                75,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 53,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three Irrawaddy dolphins, a critically endangered species, have died in Cambodia within 10 days of each other, causing serious concern.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 54,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, and the situation is getting worse.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 55,
+        "original": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia, prompting an increasingly alarming situation.",
+        "original_spans": [],
+        "simplified": "Three members of the endangered Irrawaddy dolphin have died within ten days from each other in Cambodia.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 56,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm caused low temperatures and left many people dead across North America.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 57,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm caused record-breaking low temperatures across North America. || 80 people were killed because of the storm.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 58,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A deadly winter storm swept across North America, resulting in record-low temperatures and the death of over 80 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 59,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm brought record-breaking low temperatures to North America and left more than 80 people dead.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 60,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm left more than 80 people dead across North America because of record-breaking low temperatures.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 61,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 62,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm causes very low temperatures and leaves more than 80 people dead across North America.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 63,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Hlynur filmed Nest outside his house over 18 months with help from his three children.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 64,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Hlynur used his three children to help him film Nest outside his house over 18 months.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 65,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Hlynur filmed the movie Nest outside of his house over 18 months. || His three children supported and helped him.",
+        "simplified_spans": [
+            [
+                2,
+                66,
+                68,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 66,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Nest was filmed right outside Hlynur's house for 18 months. || His three children helped him a lot to make the video.",
+        "simplified_spans": [
+            [
+                2,
+                60,
+                62,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 67,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Nest was filmed by Hlynur right outside his house over a period of 18 months. || This was with the support and assistance of his three children.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 68,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Nest was filmed by Hlynur outside his house for 18 months, with help from his three children.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 69,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "It was filmed by Hlynur right outside his house over a period of 18 months.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 70,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Other U.S. airlines use hub-and-spoke systems of operations while Southwest uses point-to-point operations. || Southwest had a big problem with crew scheduling because most of its pilots and flight attendants were not where they were supposed to be. || This caused a lot of flights to be canceled for days after the weather got better.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ],
+            [
+                2,
+                250,
+                252,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 71,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations. || Because of this, many of its pilots and flight attendants were out of position, which caused a lot of flight cancellations. || Many of these flight cancellations continued for days after the worst weather had gone away.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ],
+            [
+                2,
+                242,
+                244,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 72,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Southwest Airlines uses point-to-point operations rather than the hub-and-spoke system used by other U.S. airlines. || They had a \"meltdown\" of crew scheduling which caused a lot of flight cancellations, even after the worst weather had passed and other airlines had recovered.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 73,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest had a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position. || This resulted in massive numbers of flight cancellations for days after the worst weather had passed and other airlines had largely recovered.",
+        "simplified_spans": [
+            [
+                2,
+                195,
+                197,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 74,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Southwest airlines cancel a lot of flights for a few days even after the worst weather had reduced. || This happened because Southwest uses a different system for scheduling flights than other major airlines. || Instead of using big transit centers, Southwest's flights go directly from one place to another. || Because of this, many of the pilots and flight attendants were not in the right place, which caused the cancellations.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ],
+            [
+                2,
+                209,
+                211,
+                1
+            ],
+            [
+                2,
+                309,
+                311,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    }
+]

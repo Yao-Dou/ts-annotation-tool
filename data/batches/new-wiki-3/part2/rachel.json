@@ -1,0 +1,978 @@
+[
+    {
+        "id": 0,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "Hlynur filmed Nest outside his house over 18 months with help from his three children.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "Nest was filmed by Hlynur right outside his house over a period of 18 months, with the support and assistance of his three children.",
+        "original_spans": [],
+        "simplified": "It was filmed by Hlynur right outside his house over a period of 18 months.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 2,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film is about a woman struggling and performing superstitious rituals to have a male child, after her first child is a girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 3,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The movie talks about the struggle a woman needs to face after her first child is a baby girl and is made to do superstitious rituals for the lack of a male child after her first child is a baby girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 4,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film talks about the struggle that a woman needs to face after her first child is a baby girl and is made to do superstitious rituals for the want of a male child.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 5,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "This film talks about the problems women face. || If their first child is a girl, they are forced to do superstitious rituals to get a son.",
+        "simplified_spans": [
+            [
+                2,
+                47,
+                49,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 6,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film portrays the difficult challenge a woman faces when her firstborn is a girl. || She is expected to partake in superstitious rituals in order to have a male child.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 7,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The film covers the struggles a woman faces being forced to perform rituals to give birth to a baby boy after giving birth to a girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "The film talks about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "original_spans": [],
+        "simplified": "The movie is about the struggle that a woman needs to face and is made to do superstitious rituals for the want of a male child after her first child is a baby girl.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 9,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "The news of his death came after Pope Francis, Benedict's successor, said on 28 December that his health was getting worse, and he asked for prayers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 10,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "Pope Benedict died after Pope Francis announced the decline of his health on 28 December.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 11,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "The news of his death came after Pope Benedict's successor, Pope Francis, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 12,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "Pope Francis, Benedict's successor, reported a decline in his health on December 28th and asked people to pray. || Later, the news of his death was announced.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "On December 28, Pope Francis asked his followers to pray for Pope Benedict XVI because the previous Pope was very sick. || News of Benedict\u2019s death was announced after.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 14,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "Pope Francis, Benedict's successor, notified people of a decline in his health on 28 December. || Subsequently, the news of his death was reported and the faithful were asked to pray.",
+        "simplified_spans": [
+            [
+                2,
+                95,
+                97,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "original_spans": [],
+        "simplified": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 16,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Mathew was born in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala. || He did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam.",
+        "simplified_spans": [
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 17,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, Kerala. || He attended Christian College in Chengannur and Maharaja's College in Ernakulam. || After graduating, he became a lecturer at Christian College in Chengannur.",
+        "simplified_spans": [
+            [
+                2,
+                67,
+                69,
+                0
+            ],
+            [
+                2,
+                151,
+                153,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 18,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born in Keekozhur, Kerala, India on September 27, 1940. || He studied at Christian College and Maharaja\u2019s College, and later, he started his career as a lecturer at Christian College.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 19,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, which is a small village in Kerala, India. || He studied at Christian College, Chengannur, and Maharaja\u2019s College, Ernakulam. || After finishing his education, he started working as a teacher at Christian College.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ],
+            [
+                2,
+                185,
+                187,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 20,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, Kerala, India. || He studied at Christian College, Chengannur and Maharaja's College, Ernakulam and began his career by teaching at Christian College, Chengannur.",
+        "simplified_spans": [
+            [
+                2,
+                74,
+                76,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 21,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Maharaja's College, Ernakulam and Christian College, Chengannur, where he was a very good student.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 22,
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [],
+        "simplified": "He was born in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala. || Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified_spans": [
+            [
+                2,
+                110,
+                112,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 23,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment created a battle between the two major political parties of the era. || The parties argued over what the role of Federal courts is and other things.",
+        "simplified_spans": [
+            [
+                2,
+                85,
+                87,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 24,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment caused hostility between the two major political parties during a battle between them over the role of Federal courts and other issues.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 25,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "An important political event, the impeachment caused conflict between the two major parties in the US at the time. || They disagreed on many issues, including the role of Federal courts.",
+        "simplified_spans": [
+            [
+                2,
+                115,
+                117,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 26,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment was a major event during that time. || It was a struggle between the two major U.S. political parties about, for example, the role of Federal courts.",
+        "simplified_spans": [
+            [
+                2,
+                52,
+                54,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "It was a high-profile affair at the time, because the two major United States political parties of the time, the Democratic Party and the Republican Party, were against each other and wanted to impeach the President.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 28,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "A high-profile affair at the time, the impeachment pitted the two major United States political parties against each other. || The parties had a battle between them over, among other things, what the role of Federal courts should look like.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [],
+        "simplified": "The impeachment was a high-profile affair at the time. || The impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified_spans": [
+            [
+                2,
+                55,
+                57,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 30,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "Progressive members of the New York State Senate opposed LaSalle's nomination. || They saw his record on abortion and labor cases as conservative and voiced their criticism.",
+        "simplified_spans": [
+            [
+                2,
+                79,
+                81,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 31,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's appointment was disagreed with by the progressive members of the New York Senate. || They spoke out against LaSalle because of how he handled cases involving abortion and labor, which they considered too conservative.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 32,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "Progressive members of the New York State Senate did not like LaSalle\u2019s nomination. || They criticized LaSalle's previous work on abortion and labor cases, which they thought were conservative.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 33,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's first job was in the New York State Senate. || Some members of the New York State Senate did not like LaSalle because they thought she was too conservative.",
+        "simplified_spans": [
+            [
+                2,
+                54,
+                56,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 34,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's nomination was opposed by progressive members of the New York State Senate. || They criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 35,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "Progressive members of the New York State Senate did not want LaSalle to be nominated. || They thought he was conservative because of his record on abortion and labor cases.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [],
+        "simplified": "LaSalle's nomination was opposed by progressive members of the New York State Senate. || They criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 37,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the Phillips Academy poll was used for the first time. || It correctly predicted the result of all senate races polled before Election Day. || This included Catherine Cortez Masto\u2019s victory in Nevada, but the poll overestimated Republican performance in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                64,
+                66,
+                0
+            ],
+            [
+                2,
+                149,
+                151,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 38,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, Phillips Academy correctly predicted all senate races before Election Day, including Catherine Cortez Masto's victory in Nevada. || However, the poll did not predict the Arizona governor's race or the Georgia senate runoff correctly.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 39,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, Phillips Academy correctly forecasted all senate races polled before Election Day, such as Catherine Cortez Masto's win in Nevada. || However, it overestimated the Republican party in the races for the Arizona governor and Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                140,
+                142,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 40,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the poll's first cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada. || The poll also overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                169,
+                171,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the Philips Academy poll correctly predicted the winners of all senate races which were polled before Election Day. || This included Catherine Cortez Masto\u2019s win in Nevada. || However, the poll wrongly predicted more Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ],
+            [
+                2,
+                182,
+                184,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 42,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "Phillips Academy correctly predicted all senate races in the 2022 poll before Election Day, including Catherine Cortez Masto's win in Nevada. || However, the poll was inaccurate in the Arizona governor race and the Georgia senate runoff, overestimating the Republican vote.",
+        "simplified_spans": [
+            [
+                2,
+                142,
+                144,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [],
+        "simplified": "In 2022, the poll's first cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 44,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Barnes was born in Detroit, Michigan on April 27, 1944. || His alcoholic parents mistreated him regularly. || He said his mother had tried to cause a miscarriage by taking drugs.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ],
+            [
+                2,
+                107,
+                109,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 45,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "He was born in Detroit, Michigan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 46,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Early life Barnes was born on April 27, 1944, in Detroit, Michigan. || His parents were both alcoholics and Barnes said that his mother tried to have a baby but she did not have a baby.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 47,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Barnes was regularly mistreated by his alcoholic parents. || He claimed his mother wanted to miscarry by taking a quantity of drugs.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 48,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Barnes was born in Detroit, Michigan on April 27, 1944. || His alcoholic parents regularly mistreated him, and he claimed that his mother had tried to cause a miscarriage by taking drugs.",
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 49,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "Born on April 27, 1944, Barnes was abused by his alcoholic parents, with his mother attempting to miscarry him by taking several drugs.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 50,
+        "original": "Born on April 27, 1944, in Detroit, Michigan, Barnes was regularly mistreated by his alcoholic parents, with him claiming that his mother had attempted to miscarry by ingesting a quantity of drugs.",
+        "original_spans": [],
+        "simplified": "He was born in Detroit, Michigan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 51,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was established to work with local tribe members to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations. || They also want to learn more about the history of the Anacostan area.",
+        "simplified_spans": [
+            [
+                2,
+                210,
+                212,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 52,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was established to recognize the Anacostan heritage of the region. || They also want to make an interactive map of Washington, D.C that contains original village sites and locations of artifact excavations.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 53,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project works with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 54,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was set up to collaborate with local tribal members to learn more about and show respect for the Anacostan culture of the area. || They also built an interactive map of Washington, D.C. which shows the original village sites and where artifacts have been excavated.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 55,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project had two goals. || One goal was to work with Anacostan tribe members to better understand their culture in the region. || The second was to create a map of Washington DC with locations of original village sites and where artifacts have been discovered.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 56,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was created to collaborate with indigenous people from the area and to bring awareness to the Anacostan culture of the region. || They are also making an interactive map of Washington, D.C. that shows the original village sites and places where artifacts were discovered.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 57,
+        "original": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region, and to create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "original_spans": [],
+        "simplified": "The DC Native History Project was established to work with local tribe members to gain further understanding and recognition of the Anacostan heritage of the region. || The project will create an interactive map of Washington, D.C. with identified original village sites and the locations of artifact excavations.",
+        "simplified_spans": [
+            [
+                2,
+                166,
+                168,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 58,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the U.S. Navy's main base for the early part of the Pacific War against the Empire of Japan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 59,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "The US Navy lost its base in the Philippines in 1941 and 1942, so Hawaii became the primary base for their island-hopping campaign against the Empire of Japan in the Pacific War.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 60,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "Hawaii became the main US naval base for the early part of the Pacific War against Japan after the loss of the US Naval Base in the Philippines in 1941 and 1942.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 61,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "After the US Navy lost their base in the Philippines during the Philippines campaign of 1941 and 1942. || Hawaii became their main base for the early part of the Pacific War against Japan.",
+        "simplified_spans": [
+            [
+                2,
+                103,
+                105,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 62,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "During the 1941 and 1942 Philippines campaign, the US Navy lost their naval base in the Philippines and Hawai'i became their primary base for the Pacific War against Japan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 63,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "After the United States lost the Philippines in World War II, Hawaiian became the main base for the United States Navy when they were fighting in the Pacific against the Empire of Japan.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 64,
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [],
+        "simplified": "With the loss of U.S. || Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the U.S. Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified_spans": [
+            [
+                2,
+                22,
+                24,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 65,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eventually, Eliot moved to Washington, D.C. || He was the director of the National Capital Park and Planning Commission until 1933. || Here, he helped develop the National Mall. || Then, he was the director of the National Resources Planning Board until 1943. || This was a part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                44,
+                46,
+                0
+            ],
+            [
+                2,
+                132,
+                134,
+                1
+            ],
+            [
+                2,
+                178,
+                180,
+                2
+            ],
+            [
+                2,
+                260,
+                262,
+                3
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 66,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eliot moved to Washington, D.C. || He was the director of the National Capital Park and Planning Commission until 1933, helping make the National Mall. || Then he was Director of the National Resources Planning Board until 1943.",
+        "simplified_spans": [
+            [
+                2,
+                32,
+                34,
+                0
+            ],
+            [
+                2,
+                152,
+                154,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 67,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eliot moved to Washington, D.C. and worked in various positions related to the improvement of the city. || From 1933-1943, he was Director of the National Capital Park and Planning Commission, and also worked on the development of the National Mall. || After that, he was Director of the National Resources Planning Board, a part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                104,
+                106,
+                0
+            ],
+            [
+                2,
+                250,
+                252,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 68,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "Eliot moved to Washington, D.C. in 1933. || His job was to direct the National Capital Park and Planning Commission and develop the National Mall. || He worked in this role until 1943 when he switched to the National Resources Planning Board, which was part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                41,
+                43,
+                0
+            ],
+            [
+                2,
+                147,
+                149,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 69,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "When he moved to Washington, D.C., he worked for the National Capital Park and Planning Commission until 1933. || He helped with the building of the National Mall. || After that, he worked for the National Resources Planning Board, which was part of the Public Works Administration.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ],
+            [
+                2,
+                164,
+                166,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 70,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "In time, Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 71,
+        "original": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, involved in the development of the National Mall, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "original_spans": [],
+        "simplified": "In time Eliot relocated to Washington, D.C., first as director of the National Capital Park and Planning Commission until 1933, then until 1943 as Director of the National Resources Planning Board, which formed part of the Public Works Administration.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    }
+]

@@ -1,0 +1,984 @@
+[
+    {
+        "id": 0,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "Highway 401 between London and Tilbury, west of Chatham, was closed on December 23. || It was caused by around 100 vehicles, including multiple tractor trailers, getting into various accidents. || On the same day, Highway 402 closed between London and Sarnia, resulting from a large pileup involving 50 vehicles, plus worsening weather.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ],
+            [
+                2,
+                194,
+                196,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 1,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, due to deteriorating conditions and multiple collisions, Highway 401 was shut down between London and Tilbury, near Chatham, on December 23. || Additionally, a 50-vehicle pileup caused the closure of Highway 402 between London and Sarnia.",
+        "simplified_spans": [
+            [
+                2,
+                166,
+                168,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 2,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In Ontario, Highway 401 between London and Tilbury closed for most of December 23 due to 100 vehicles involved in accidents. || Highway 402 between London and Sarnia was also closed due to a 50-vehicle pileup and worsening conditions.",
+        "simplified_spans": [
+            [
+                2,
+                125,
+                127,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 3,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for a lot of time on December 23 between London and Tilbury, west of Chatham, because of many cars being hit. || Also, Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup, and it was not clear when it would open again.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 4,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, because of about 100 vehicles being involved in multiple collisions. || Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup.",
+        "simplified_spans": [
+            [
+                2,
+                186,
+                188,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 5,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "Due to multiple collisions, Highway 401 was closed for much of December 23 between London and Tilbury in southwestern Ontario. || Highway 402 was also closed between London and Sarnia due to a large accident and bad weather.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 6,
+        "original": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions, while Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and deteriorating conditions.",
+        "original_spans": [],
+        "simplified": "In southwestern Ontario, Highway 401 was closed for much of December 23 between London and Tilbury, west of Chatham, due to about 100 vehicles, including numerous tractor trailers, being involved in multiple collisions. || Highway 402 was closed between London and Sarnia because of a 50-vehicle pileup and bad conditions.",
+        "simplified_spans": [
+            [
+                2,
+                220,
+                222,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 7,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported 83% of its natural gas. || However, after the invasion of Ukraine, gas imports from Russia have gone down. || This is because it is getting more expensive, supply from Russia is going down, less gas is being used, and they want to stop using Russia's Gazprom as a supplier.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ],
+            [
+                2,
+                131,
+                133,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 8,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021, the EU will need 83% of its natural gas from Russia, but following the invasion of Ukraine, gas imports from Russia have fallen. || This is partly because of reduced supply from Russia, partly because people in the EU no longer use as much gas, and partly because of rising costs.",
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 9,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported most of its natural gas, but following Russia's invasion of Ukraine, gas imports from them have decreased. || This is because of the rising cost, cuts in supply, reduction in consumption, and a wish to no longer be dependent on Gazprom for resources.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 10,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen. || This is partly due to the increasing cost, and partly due to reductions in supply from Russia.",
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 11,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "The EU used to import a lot of gas from Russia. || But due to the invasion of Ukraine, gas imports from Russia have fallen. || This is because costs have increased, supply from Russia has gone down, consumption in Europe has decreased, and Europe wants to move away from Russia as a natural gas supplier.",
+        "simplified_spans": [
+            [
+                2,
+                48,
+                50,
+                0
+            ],
+            [
+                2,
+                124,
+                126,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 12,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021, the EU imported 83% of its natural gas, mostly from Russia. || However, after Russia invaded Ukraine, gas imports from Russia dropped due to increasing costs and reduced supply, as well as lower consumption and the desire to look for an alternative supplier to Gazprom.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 13,
+        "original": "In 2021 the EU imported 83% of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "original_spans": [],
+        "simplified": "In 2021 the EU imported 83.3 % of its natural gas, but following the invasion of Ukraine, gas imports from Russia have fallen, partly due to the increasing cost, partly because of reductions in supply from Russia, partly through reduction of consumption and partly because of a desire to move away from Russia's Gazprom as a supplier.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 14,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk did not want people to know about the flights on his private jet, so he blocked the Twitter accounts that shared this information. || However, by doing this, he actually drew more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                141,
+                143,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 15,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet. || By blocking these accounts and the accounts of journalists that repeated the information, the issue drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                101,
+                103,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 16,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned some Twitter accounts that were giving out information about flights on his private jet. || Musk said that it was like being doxxed, but by doing this, he made more people know about the issue and more people wanted to know about it.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 17,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that published information about his private jet logs, but blocking these accounts and accounts of journalists that shared the information led to more attention on the issue.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 18,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk compared publishing information about flights on his private jet to being \"doxxed\" and banned Twitter accounts that were responsible for doing so. || However, his action of blocking these accounts as well as accounts of journalists who repeated the information only generated more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                157,
+                159,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 19,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk banned Twitter accounts that were tweeting about flights on his private jet. || However, by blocking these accounts and the accounts of journalists who shared the information, he drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 20,
+        "original": "Elon Musk banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed), but by blocking these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "original_spans": [],
+        "simplified": "Elon Musk, the owner of Tesla, banned Twitter accounts that were publishing information about flights on his private jet (which he compared to being doxxed). || By banning these accounts and the accounts of journalists that repeated the information, he drew even more attention to the issue.",
+        "simplified_spans": [
+            [
+                2,
+                158,
+                160,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 21,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing begin the largest strike action in the service's history. || They are trying to get a 10% pay increase that the government will not accept.",
+        "simplified_spans": [
+            [
+                2,
+                87,
+                89,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 22,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing was fighting with the government because they wanted nurses to get paid more. || This led to the largest strike the National Health Service had ever seen.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 23,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing began the largest strike action in the history of the National Health Service. || This was because of a disagreement with the government over a pay increase for nurses.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 24,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing is taking part in the biggest strike in National Health Service history. || This is in response to the government's refusal to give nurses a pay rise.",
+        "simplified_spans": [
+            [
+                2,
+                102,
+                104,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 25,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "After a dispute with the government over the pay of nurses, the Royal College of Nursing went on the largest strike in the history of the NHS.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 26,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing launched the biggest strike in NHS history, arguing with the government over a pay rise for nurses.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 27,
+        "original": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service amid a dispute with the government over a pay increase for nurses.",
+        "original_spans": [],
+        "simplified": "The Royal College of Nursing begins the largest strike action in the history of the National Health Service. || It is a dispute with the government over a pay increase for nurses.",
+        "simplified_spans": [
+            [
+                2,
+                109,
+                111,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 28,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's Internal Affairs Ministry reported that inflation reached its highest level since 1981 last month. || Core consumer prices increased by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 29,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry announced last month that core consumer prices rose by 3.7 percent compared to November 2021, making it the highest inflation rate recorded since 1981.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 30,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "In November 2022, Japan reported that the country had record levels of inflation since 1981 after many consumer prices rose by 3.7% from last year.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 31,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan\u2019s Internal Affairs Ministry said that last month, Japan saw its highest inflation since 1981. || Core consumer prices had gone up by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 32,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry announced that last month the country experienced its most significant level of inflation since 1981. || Core consumer prices had increased by 3.7 percent compared to November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                136,
+                138,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 33,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry reported last month that the country experienced its highest level of inflation since 1981. || Core consumer prices increased by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                126,
+                128,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 34,
+        "original": "Japan's internal affairs ministry reports that the country experienced its highest level of inflation since 1981 last month, after core consumer prices increased by 3.7 percent from November 2021.",
+        "original_spans": [],
+        "simplified": "Japan's internal affairs ministry reported that the country had its highest level of inflation since 1981. || Core consumer prices increased by 3.7 percent from November 2021.",
+        "simplified_spans": [
+            [
+                2,
+                107,
+                109,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 35,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government set the volcanic alert status at the highest level after Semeru in East Java erupted.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 36,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "Around 2,000 people were forcibly evacuated after Semeru in East Java erupted and the Indonesian government raised the volcanic alert status.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 37,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raised the volcanic alert status to its highest level following the eruption of Semeru in East Java. || This eruption forced around 2,000 people to evacuate.",
+        "simplified_spans": [
+            [
+                2,
+                127,
+                129,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 38,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government set the volcanic alert status to the highest level due to the eruption of Semeru in East Java, which caused the evacuation of roughly 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 39,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the highest level of volcanic alert to the highest level. || Semeru in East Java erupts, forcing around 2,000 people to leave.",
+        "simplified_spans": [
+            [
+                2,
+                91,
+                93,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 40,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the volcanic alert status to the highest level after Mount Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 41,
+        "original": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "original_spans": [],
+        "simplified": "The Indonesian government raises the volcanic alert status to the highest level after Semeru in East Java erupts, forcing the evacuation of around 2,000 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 42,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States ruled by a majority of 5 to 4 to keep Title 42 of the U.S. Code, which gives the government the ability to remove people who have been to a country with an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 43,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States voted 5\u20134 to keep Title 42 of the U.S. Code, which allows the government to remove people who were recently in a country with an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 44,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court voted 5-4 to maintain Title 42. || This allows the government to remove anybody from the United States who has recently visited a country that contains an infectious disease.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 45,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-4 that the government can remove a person from the country if they have been in the country and the person has an infectious disease.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 46,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-9 to keep Title 42 of the U.S. Code. || This allows the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 47,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "In a 5-4 decision split, the Supreme Court of the United States decided to keep Title 42 of the U.S Code. || This allows the government to remove people who have recently been in a country with an infectious disease.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 48,
+        "original": "The Supreme Court of the United States rules 5\u20134 to maintain Title 42 of the U.S. Code, allowing the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "original_spans": [],
+        "simplified": "The Supreme Court of the United States rules 5-4 to maintain Title 42 of the U.S. Code. || This allows the government to remove persons who have recently been in a country where an infectious disease was present.",
+        "simplified_spans": [
+            [
+                2,
+                88,
+                90,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 49,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission said that from January 8, people who travel to China from other countries will not need to quarantine for COVID-19.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 50,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "China's National Health Commission said that they would stop their COVID-19 quarantine requirements for people coming from abroad from January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 51,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission announced that, starting on January 8, China will no longer require people entering the country to be quarantined due to the COVID-19 pandemic.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 52,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission announced that China will stop their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 53,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission said that, starting on January 8, China will stop making people quarantine for COVID-19 when coming from abroad.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 54,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission has announced that China will no longer require quarantines for people coming in from other countries, as of January 8.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 55,
+        "original": "The National Health Commission announces that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8.",
+        "original_spans": [],
+        "simplified": "The National Health Commission has announced that China will suspend their COVID-19 quarantine requirements for passengers arriving from abroad beginning on January 8, 2019.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 56,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov began writing the script in February 2019. || This followed events in Yekaterinburg, which honored Aleksei Balabanov and the movie War (2002 film). || War was the film that propelled Chadov's career almost twenty years ago.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ],
+            [
+                2,
+                163,
+                165,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 57,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "The script began to be written in February 2019. || This was after Aleksey Chadov went to events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the movie \" War \" (2002 movie), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "simplified_spans": [
+            [
+                2,
+                49,
+                51,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 58,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), in which he played a leading role for the first time.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 59,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov started writing the script in February 2019 after he went to events in Yekaterinburg that were dedicated to Aleksei Balabanov\u2019s work and the movie War. || This movie gave a powerful start to Chadov\u2019s career almost twenty years ago.",
+        "simplified_spans": [
+            [
+                2,
+                167,
+                169,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 60,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov attended events dedicated to Aleksei Balabanov and the 2002 movie War in Yekaterinburg in February 2019. || This movie was an important beginning for Chadov's career, which began almost twenty years ago. || Writing of the script then started.",
+        "simplified_spans": [
+            [
+                2,
+                120,
+                122,
+                0
+            ],
+            [
+                2,
+                219,
+                221,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 61,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "Aleksey Chadov started writing the script in February 2019 after he went to events in Yekaterinburg honoring the work of Aleksei Balabanov and the 2002 film War. || War was a strong starting point for Chadov\u2019s career.",
+        "simplified_spans": [
+            [
+                2,
+                162,
+                164,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 62,
+        "original": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the film War (2002 film), which almost twenty years ago gave a powerful start to Chadov's career.",
+        "original_spans": [],
+        "simplified": "The script began to be written in February 2019 after Aleksey Chadov attended events in Yekaterinburg dedicated to the work of Aleksei Balabanov and the movie \" War \", which almost twenty years ago gave a powerful start to Chadov's career.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 63,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm left more than 80 people dead across North America because of record-breaking low temperatures.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Muss"
+    },
+    {
+        "id": 64,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm caused low temperatures and left many people dead across North America.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 65,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 66,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A deadly winter storm swept across North America, resulting in record-low temperatures and the death of over 80 people.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 67,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm caused record-breaking low temperatures across North America. || 80 people were killed because of the storm.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 68,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm brought record-breaking low temperatures to North America and left more than 80 people dead.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    },
+    {
+        "id": 69,
+        "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
+        "original_spans": [],
+        "simplified": "A winter storm causes very low temperatures and leaves more than 80 people dead across North America.",
+        "simplified_spans": [],
+        "system": "new-wiki-3/T5-11B"
+    },
+    {
+        "id": 70,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest had a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position. || This resulted in massive numbers of flight cancellations for days after the worst weather had passed and other airlines had largely recovered.",
+        "simplified_spans": [
+            [
+                2,
+                195,
+                197,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/T5-3B"
+    },
+    {
+        "id": 71,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Unlike other major U.S. airlines, Southwest operates point-to-point flights. || When severe weather hit, the majority of Southwest's pilots and flight attendants were out of position. || This caused a massive crew scheduling issue. || The result was days of many flight cancellations, even after the weather had calmed down and other airlines were back on track.",
+        "simplified_spans": [
+            [
+                2,
+                77,
+                79,
+                0
+            ],
+            [
+                2,
+                184,
+                186,
+                1
+            ],
+            [
+                2,
+                232,
+                234,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-zero-shot"
+    },
+    {
+        "id": 72,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Southwest airlines cancel a lot of flights for a few days even after the worst weather had reduced. || This happened because Southwest uses a different system for scheduling flights than other major airlines. || Instead of using big transit centers, Southwest's flights go directly from one place to another. || Because of this, many of the pilots and flight attendants were not in the right place, which caused the cancellations.",
+        "simplified_spans": [
+            [
+                2,
+                100,
+                102,
+                0
+            ],
+            [
+                2,
+                209,
+                211,
+                1
+            ],
+            [
+                2,
+                309,
+                311,
+                2
+            ]
+        ],
+        "system": "new-wiki-3/Human 1 Writing"
+    },
+    {
+        "id": 73,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Other U.S. airlines use hub-and-spoke systems of operations while Southwest uses point-to-point operations. || Southwest had a big problem with crew scheduling because most of its pilots and flight attendants were not where they were supposed to be. || This caused a lot of flights to be canceled for days after the weather got better.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ],
+            [
+                2,
+                250,
+                252,
+                1
+            ]
+        ],
+        "system": "new-wiki-3/Human 2 Writing"
+    },
+    {
+        "id": 74,
+        "original": "Unlike other large U.S. airlines which mostly use hub-and-spoke systems, Southwest uses point-to-point operations and underwent a massive crew scheduling \"meltdown\" because most of its pilots and flight attendants were out of position, which resulted in massive numbers of flight cancellations persisting for days after the worst weather had subsided and other airlines had largely recovered.",
+        "original_spans": [],
+        "simplified": "Southwest Airlines uses point-to-point operations rather than the hub-and-spoke system used by other U.S. airlines. || They had a \"meltdown\" of crew scheduling which caused a lot of flight cancellations, even after the worst weather had passed and other airlines had recovered.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-3/GPT-3-few-shot"
+    }
+]
