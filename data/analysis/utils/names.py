@@ -16,12 +16,12 @@ class Information(Enum):
 
 class Error(Enum):
     # Explicit Content Errors
-    COREFERENCE = 'Coreference'
     REPETITION = 'Repetition'
     CONTRADICTION = 'Contradiction'
     HALLUCINATION = 'Hallucination'
     IRRELEVANT = 'Irrelevant'
     INFORMATION_REWRITE = 'Information Rewrite'
+    COREFERENCE = 'Coreference'
     # Implicit Content Errors
     BAD_DELETION = 'Bad Deletion'
     # Structure Errors

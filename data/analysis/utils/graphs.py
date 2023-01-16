@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.transforms as mtrans
 import plotly.graph_objects as go
 import numpy as np
 import matplotlib as mpl
@@ -21,9 +22,15 @@ color_mapping = {
     'reorder': '#3ca3a7',
     'structure': '#FF9F15',
 
-    Information.MORE: '#64C466',
-    Information.SAME: '#2186eb',
-    Information.LESS: '#ee2a2a',
+    # Information.MORE: '#64C466',
+    # Information.SAME: '#2186eb',
+    # Information.LESS: '#ee2a2a',
+    # Information.DIFFERENT: '#b103fc',
+
+    # Less saturated versions of these colors
+    Information.MORE: '#86d95d',
+    Information.SAME: '#428cd6',
+    Information.LESS: '#f24949',
     Information.DIFFERENT: '#b103fc',
 
     'new_systems/asset.test.simp.second': 'orange',
@@ -57,6 +64,7 @@ color_mapping = {
     ReorderLevel.COMPONENT: '#7db39a',
     ReorderLevel.WORD: '#54b387',
     Edit.STRUCTURE: '#ffa159',
+    Edit.SPLIT: '#F7CE46',
     Quality.ERROR: '#ad9ef0',
 
     # For ratings graph
@@ -75,6 +83,13 @@ color_mapping = {
     'split-4': '#876a07',
 }
 
+color_mapping_override = {
+    ReorderLevel.COMPONENT: '#99d1b7',
+    ReorderLevel.WORD: '#79b89a',
+    Edit.STRUCTURE: '#f5b078',
+    Edit.SPLIT: '#f0ce5d',
+}
+
 # Maps system codes to names
 system_name_mapping = {
     'new_systems/asset.test.simp.second': 'ASSET 2',
@@ -90,8 +105,8 @@ system_name_mapping = {
     'new-wiki-1/Muss': 'MUSS',
     'new-wiki-1/T5-3B': 'T5 3B',
     'new-wiki-1/T5-11B': 'T5 11B',
-    'new-wiki-1/GPT-3-zero-shot': 'GPT-0',
-    'new-wiki-1/GPT-3-few-shot': 'GPT-5',
+    'new-wiki-1/GPT-3-zero-shot': 'Zero-shot GPT-3.5',
+    'new-wiki-1/GPT-3-few-shot': 'Few-shot GPT-3.5',
     'new-wiki-1/Human 1 Writing': 'Human 1',
     'new-wiki-1/Human 2 Writing': 'Human 2',
     'aggregated/human': 'Human',
@@ -760,7 +775,7 @@ def edits_by_family(data, family=None):
 
 def edits_by_family_separated(data, savefig=False):
     fig, ax = plt.subplots(3, 2, figsize=(6, 12))
-    width = 0.65
+    width = 0.7
 
     for plt_idx, family in enumerate(Family):
         out = get_edits_by_family(data, family)
@@ -774,7 +789,7 @@ def edits_by_family_separated(data, savefig=False):
         if family == Family.CONTENT:
             quality_iterator = Information
         elif family == Family.SYNTAX:
-            quality_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+            quality_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE] + [Edit.SPLIT]
         elif family == Family.LEXICAL:
             quality_iterator = [Information.SAME]
         for quality_type in quality_iterator:
@@ -790,15 +805,13 @@ def edits_by_family_separated(data, savefig=False):
                 ax[plt_idx, 0].bar(x, val, width, bottom=bottom, label=label, color=color_mapping[quality_type])
             bottom = [bottom[i] + val[i] for i in range(len(val))]
 
-        ax[plt_idx,0].set_yticks([i*round(max(bottom)/5) for i in range(6)])
-
         # Graph the error edits
         error_data = {system : out[system]['error'] for system, _ in out.items()}
         bottom = [0 for x in range(len(system_labels))]
         if family == Family.CONTENT:
             error_iterator = [e for e in Error if e != Error.UNNECESSARY_INSERTION]
         elif family == Family.SYNTAX:
-            error_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE]
+            error_iterator = [x for x in ReorderLevel] + [Edit.STRUCTURE] + [Edit.SPLIT]
         elif family == Family.LEXICAL:
             error_iterator = [Error.COMPLEX_WORDING, Quality.ERROR, Error.UNNECESSARY_INSERTION]
         for error_type in error_iterator:
@@ -828,21 +841,28 @@ def edits_by_family_separated(data, savefig=False):
         ax[plt_idx,0].tick_params(labelsize=font_size)
         ax[plt_idx,1].tick_params(labelsize=font_size)
         
-        ax[plt_idx,0].set_xticklabels(['none'] + displayed_x_labels)
-        ax[plt_idx,1].set_xticklabels(['none'] + displayed_x_labels)
+        ax[plt_idx,0].set_xticklabels(['none'] + displayed_x_labels, rotation=30, ha="right")
+        ax[plt_idx,1].set_xticklabels(['none'] + displayed_x_labels, rotation=30, ha='right')
+
+        ax[plt_idx,0].spines[['right', 'top']].set_visible(False)
+        ax[plt_idx,1].spines[['right', 'top']].set_visible(False)
+
+        trans = mtrans.Affine2D().translate(10, 0)
+        for t in ax[plt_idx,0].get_xticklabels() + ax[plt_idx,1].get_xticklabels():
+            t.set_transform(t.get_transform()+trans)
 
         # ax[plt_idx,1].set_yticklabels([])
 
         font_size = 8
-        legend_loc = (0.5, -0.1)
+        legend_loc = (0.5, -0.35)
 
         if family == Family.LEXICAL:
             ax[plt_idx,0].set_xlabel('System')
             ax[plt_idx,1].set_xlabel('System')
-            legend_loc = (0.5, -0.15)
+            legend_loc = (0.5, -0.45)
         elif family == Family.CONTENT:
-            ax[plt_idx,0].set_title('Quality ↑ (# Edits)')
-            ax[plt_idx,1].set_title('Error ↓ (% Sentences)')
+            ax[plt_idx,0].set_title('Success ↑ (# Quality / Sent.)')
+            ax[plt_idx,1].set_title('Failure ↓ (# Error / Sent.)')
 
         ax[plt_idx,0].legend(loc='upper center', bbox_to_anchor=legend_loc,
             fancybox=True, ncol=2, borderaxespad=1.,fontsize=font_size,
@@ -860,13 +880,22 @@ def edits_by_family_separated(data, savefig=False):
             ha.set_edgecolor("black")
 
         # Set the margins a little higher than the max value
-        tick_range_quality = np.arange(0, max([sum(x.values()) for x in quality_data.values()]) + 10, step=50)
-        max_error = 101
-        if family == Family.CONTENT: 
-            max_error = 201
-        tick_range_error = np.arange(0, max_error, step=20) # (len(data)/len(out.keys())) + 10        
+        max_quality = max([sum(x.values()) for x in quality_data.values()])
+        tick_range_quality = np.arange(0, max_quality*1.2, step=0.5)
         ax[plt_idx,0].set_yticks(tick_range_quality)
-        ax[plt_idx,1].set_yticks(tick_range_error)
+
+        # ax[plt_idx,0].set_yticks([i*round(max(bottom)/5) for i in range(6)])
+
+        # max_error = max([sum(x.values()) for x in error_data.values()])
+        # tick_range_error = np.arange(0, max_error*1.2, step=0.2)
+        # ax[plt_idx,1].set_yticks(tick_range_error)
+
+        # tick_range_quality = np.arange(0, max([sum(x.values()) for x in quality_data.values()]) + 10, step=50)
+        # max_error = 101
+        # if family == Family.CONTENT: 
+        #     max_error = 201
+        # tick_range_error = np.arange(0, max_error, step=20) # (len(data)/len(out.keys())) + 10        
+        # ax[plt_idx,1].set_yticks(tick_range_error)
 
     # Add titles
     fig.suptitle('Conceptual Edits', fontsize=14)
@@ -874,7 +903,7 @@ def edits_by_family_separated(data, savefig=False):
     plt.figtext(0.5, (1/3), "Lexical Edits", va="center", ha="center", size=14)
 
     plt.tight_layout()
-    plt.subplots_adjust(top=1.65)
+    plt.subplots_adjust(top=1.25)
     if savefig:
         out_filename = f'img/edit-ratings-all-separated.pdf'
         plt.savefig(out_filename, format="pdf", bbox_inches='tight', pad_inches=0.0)
@@ -1033,6 +1062,8 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
 
                 if i == 0:
                     label = system_name_mapping[system]
+                    if 'GPT' in label:
+                        label = label.replace(' GPT', '\nGPT')
                     ax[j, i].tick_params(left=False, labelsize=12)
                 else:
                     label = ' '
@@ -1042,7 +1073,9 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
                 scalar = [0.6, 1, 1.3, 1, 0.8, 1, 1.2]
                 color = colorscale(color, scalar[k]) # abs(3-k)*(1/dem) + (1/dem)
 
-                bar_plot = ax[j, i].barh(label, rating, left=left, color=color, edgecolor='#cfcfcf') ##6e6e6e # alpha=abs(3-k)*(1/dem) + (1/dem)
+                bar_plot = ax[j, i].barh(label, rating, left=left, color=color, edgecolor='#cfcfcf',) ##6e6e6e # alpha=abs(3-k)*(1/dem) + (1/dem)
+                ax[j, i].tick_params(labelsize=9)
+                
                 ax[j, i].add_patch(mpl.patches.Rectangle((0, -0.4), 1, 0.8, fill=None, alpha=1))
                 
                 curr_plots += [bar_plot]
@@ -1051,7 +1084,7 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
                 # add padding
                 ax[j, i].set_title(family.capitalize(), pad=10)
             elif j == len(ratings.keys()) - 1:
-                labels = [f'-{x-3}' if x - 3 < 0 else f'+{x-3}' for x in range(7)]
+                labels = [f'–{abs(x-3)}' if x - 3 < 0 else f'+{x-3}' for x in range(7)]
                 legend = ax[j, i].legend(
                     handles=curr_plots, labels=labels, bbox_to_anchor=(0.5, -1.2), 
                     loc='lower center', borderaxespad=0.,fontsize=10,ncol=7,
@@ -1081,7 +1114,10 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
     plt.tight_layout()
     plt.subplots_adjust()
 
-    out_filename = "img/edit-level-scores.pdf"
+    if size_weighted:
+        out_filename = "img/edit-level-scores.pdf"
+    else:
+        out_filename = "img/edit-level-scores-non-weighted.pdf"
     plt.savefig(out_filename, format="pdf", bbox_inches='tight', pad_inches=0.0)
 
     plt.show()

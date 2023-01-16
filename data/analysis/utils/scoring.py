@@ -49,17 +49,30 @@ rating_mapping_error = {
 
 # Default parameters for scoring
 default_params = {
-    'good_deletion': 7,
-    'good_trivial_insertion': 8,
-    'good_insertion': 2,
-    'good_paraphrase': 2,
-    'good_syntax': 6,
-    'content_error': -2,
-    'syntax_error': -1,
-    'lexical_error': -1.5,
-    'grammar_error': -1,
-    'size_calculation': 'log'
+    'good_deletion': 10, 
+    'good_insertion': 10,
+    'good_syntax': 5, 
+    'good_paraphrase': 2, 
+    'good_trivial_insertion': 0,
+    'content_error': -10, 
+    'syntax_error': -5, 
+    'lexical_error': -2,
+    'grammar_error': -2,
+    'size_calculation': 'exp'
 }
+
+# default_params = {
+#     'good_deletion': 7, 
+#     'good_insertion': 2, 
+#     'good_syntax': 6, 
+#     'good_paraphrase': 2, 
+#     'good_trivial_insertion': 8, 
+#     'content_error': -2, 
+#     'syntax_error': -1, 
+#     'lexical_error': -1.5, 
+#     'grammar_error': -1, 
+#     'size_calculation': 'log'
+# }
 
 def calculate_annotation_score(annotation, parameters):
     edit_score = 0
@@ -114,12 +127,16 @@ def calculate_annotation_score(annotation, parameters):
     # Calculate the annotation size
     annotation_size = annotation['size']
     # Less distinction between large edits
-    if parameters['size_calculation'] == 'log':
+    if parameters['size_calculation'] == 'exp':
+        annotation_size = math.exp(annotation_size) - 1
+    elif parameters['size_calculation'] == 'log':
         annotation_size = 1 + math.log10(annotation_size + 0.1)
     elif parameters['size_calculation'] == 'square':
         annotation_size = annotation_size*annotation_size
     elif parameters['size_calculation'] == 'none':
         annotation_size = 1
+    elif parameters['size_calculation'] == 'linear':
+        annotation_size = annotation_size
     
     return edit_score * annotation_size
 

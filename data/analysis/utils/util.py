@@ -296,7 +296,7 @@ def edit_dist(s1, s2):
         distances = distances_
     return distances[-1]
 
-def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=True):
+def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=False):
     out = {}
     systems = set([sent['system'] for sent in data])
     if combine_humans:
@@ -318,7 +318,7 @@ def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=True):
             for reorder_level in ReorderLevel:
                 quality_annotations[reorder_level] = len([ann for ann in quality_edits if ann['reorder_level'] == reorder_level])
             quality_annotations[Edit.STRUCTURE] = len([ann for ann in quality_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
-            # TODO: Add split here
+            quality_annotations[Edit.SPLIT] = len([ann for ann in quality_edits if ann['edit_type'] == Edit.SPLIT.value.lower()])
         elif family == Family.LEXICAL:
             quality_annotations[Information.SAME] = len(quality_edits)
 
@@ -332,7 +332,7 @@ def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=True):
                 for reorder_level in ReorderLevel:
                     error_annotations[reorder_level] = len([sent for sent in sents if any([ann['reorder_level'] == reorder_level and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])])  # len([ann for ann in error_edits if ann['reorder_level'] == reorder_level])
                 error_annotations[Edit.STRUCTURE] = len([sent for sent in sents if any([ann['edit_type'] == Edit.STRUCTURE.value.lower() and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])]) # len([ann for ann in error_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
-                # TODO: Add split here
+                error_annotations[Edit.SPLIT] = len([sent for sent in sents if any([ann['edit_type'] == Edit.SPLIT.value.lower() and ann['type'] == Quality.ERROR for ann in sent['processed_annotations']])])
             elif family == Family.LEXICAL:
                 # TODO: This should be grammar error, not Quality.ERROR
                 # In general, counting the grammar edits is really weird
@@ -348,7 +348,7 @@ def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=True):
                 for reorder_level in ReorderLevel:
                     error_annotations[reorder_level] = len([ann for ann in error_edits if ann['reorder_level'] == reorder_level])
                 error_annotations[Edit.STRUCTURE] = len([ann for ann in error_edits if ann['edit_type'] == Edit.STRUCTURE.value.lower()])
-                # TODO: Add split here
+                error_annotations[Edit.SPLIT] = len([ann for ann in error_edits if ann['edit_type'] == Edit.SPLIT.value.lower()])
             elif family == Family.LEXICAL:
                 # TODO: This should be grammar error, not Quality.ERROR
                 # In general, counting the grammar edits is really weird
@@ -359,22 +359,22 @@ def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=True):
         out[system] = {'quality': quality_annotations, 'error': error_annotations}
 
     # Since we're combining 2 sets of human annotations, we have to divide by 2
-    if combine_humans:
-        for vala in out.keys():
-            if vala == 'aggregated/human':
-                for valb in out[vala].keys():
-                    for valc in out[vala][valb].keys():
-                        out[vala][valb][valc] /= 2
+    # if combine_humans:
+    #     for vala in out.keys():
+    #         if vala == 'aggregated/human':
+    #             for valb in out[vala].keys():
+    #                 for valc in out[vala][valb].keys():
+    #                     out[vala][valb][valc] /= 2
 
     # Instead, divide by all sentences
-    # for vala in out.keys():
-    #     if combine_humans and vala == 'aggregated/human':
-    #         total =  len([sent for sent in data if 'Human' in sent['system']])
-    #     else:
-    #         total = len([sent for sent in data if sent['system'] == vala])
-    #     for valb in out[vala].keys():
-    #         for valc in out[vala][valb].keys():
-    #             out[vala][valb][valc] /= total
+    for vala in out.keys():
+        if combine_humans and vala == 'aggregated/human':
+            total =  len([sent for sent in data if 'Human' in sent['system']])
+        else:
+            total = len([sent for sent in data if sent['system'] == vala])
+        for valb in out[vala].keys():
+            for valc in out[vala][valb].keys():
+                out[vala][valb][valc] /= total
             
     return out
 

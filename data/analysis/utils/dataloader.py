@@ -489,8 +489,8 @@ def calculate_subscores(data):
 def collapse_systems(data):
     data = copy.deepcopy(data)
     for sent in data:
-        if 'new-wiki-2' in sent['system']:
-            sent['system'] = sent['system'].replace('new-wiki-2', 'new-wiki-1')
+        if 'new-wiki-2' or 'new-wiki-3' in sent['system']:
+            sent['system'] = sent['system'].replace('new-wiki-2', 'new-wiki-1').replace('new-wiki-3', 'new-wiki-1')
     return data
 
 def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
@@ -507,7 +507,7 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     if (batch_num is not None):
         selected_files = []
         for num in batch_num:
-            selected_files.extend([x for x in files if ('batch_' + str(num)) in x])
+            selected_files.extend([x for x in files if ('batch_' + str(num)) + '_' in x])
         files = selected_files
 
     # Exclude corrupted file
