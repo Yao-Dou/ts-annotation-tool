@@ -663,9 +663,9 @@ def edit_length(data, systems, type_='edit_dist', simpeval=False, average_scores
         if type_ == 'edit_dist':
             plt.ylabel('Edit Distance')
             if simpeval:
-                scores = [(avg(sent['simpeval_scores'], prec=10), edit_dist(sent['original'], sent['simplified'])) for sent in data if sent['system'] == system]
+                scores = [(avg(sent['simpeval_scores'], prec=10), sent['ed']) for sent in data if sent['system'] == system]
             else:
-                scores = [(sent['score'], edit_dist(sent['original'], sent['simplified'])) for sent in data if sent['system'] == system]
+                scores = [(sent['score'], sent['ed']) for sent in data if sent['system'] == system]
         elif type_ == 'char_diff':
             plt.ylabel('% of sentence modified')
             if simpeval:
@@ -1045,8 +1045,28 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
         fam.pop('all', None)
         plt.rcParams["figure.figsize"] = [11, 4]
 
+    family_order = [
+        'elaboration',
+        'generalization',
+        'paraphrase',
+        'reorder',
+        'split',
+        'structure',
+        'all'
+    ]
+
+    custom_family_mapping = {
+        'elaboration': 'More Information',
+        'generalization': 'Less Information',
+        'paraphrase': 'Same Information',
+        'reorder': 'Reorder',
+        'split': 'Sentence Split',
+        'structure': 'Structure',
+        'all': 'All',
+    }
+
     fig, ax = plt.subplots(len(sys), len(fam.keys()))
-    for i, family in enumerate(fam.keys()):
+    for i, family in enumerate(family_order):
         ratings = fam[family]
 
         for j, system in enumerate([s for s in all_system_labels if s in ratings.keys()]):
@@ -1082,9 +1102,9 @@ def edit_ratings_barh(data, include_all=True, old_formatting=False, size_weighte
                 left += rating
             if j == 0:
                 # add padding
-                ax[j, i].set_title(family.capitalize(), pad=10)
+                ax[j, i].set_title(custom_family_mapping[family], pad=10)
             elif j == len(ratings.keys()) - 1:
-                labels = [f'–{abs(x-3)}' if x - 3 < 0 else f'+{x-3}' for x in range(7)]
+                labels = [f'–{abs(x-3)} ' if x - 3 < 0 else f'+{x-3}' for x in range(7)]
                 legend = ax[j, i].legend(
                     handles=curr_plots, labels=labels, bbox_to_anchor=(0.5, -1.2), 
                     loc='lower center', borderaxespad=0.,fontsize=10,ncol=7,

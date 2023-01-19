@@ -25,41 +25,93 @@ lexical_errors = [
 ]
 
 # Scores for "good" edits (excl. less info)
+# rating_mapping_simplification = {
+#     0: 1,
+#     1: 4,
+#     2: 9
+# }
+
+# # Scores for less info
+# rating_mapping_deletion = {
+#     0: -4,
+#     1: -1,
+#     2: 1,
+#     3: 4
+# }
+
+# # Scores for errors
+# rating_mapping_error = {
+#     0: 1,
+#     1: 4,
+#     2: 9,
+#     3: 16
+# }
+
 rating_mapping_simplification = {
     0: 1,
-    1: 4,
-    2: 9
+    1: 2,
+    2: 3
 }
 
 # Scores for less info
 rating_mapping_deletion = {
-    0: -4,
+    0: -2,
     1: -1,
     2: 1,
-    3: 4
+    3: 2
 }
 
 # Scores for errors
 rating_mapping_error = {
     0: 1,
-    1: 4,
-    2: 9,
-    3: 16
+    1: 2,
+    2: 3,
+    3: 4
 }
 
 # Default parameters for scoring
+# default_params = {
+#     'good_deletion': 10, 
+#     'good_insertion': 10,
+#     'good_syntax': 5, 
+#     'good_paraphrase': 2, 
+#     'good_trivial_insertion': 0,
+#     'content_error': -10, 
+#     'syntax_error': -5, 
+#     'lexical_error': -2,
+#     'grammar_error': -2,
+#     'size_calculation': 'exp'
+# }
+
+# Linear regression on SimpEval, seperate dimensions of quality and error
+# 3.69273355, 2.93977382, 4.81632663, -0.98446881, -5.30712595, -1.03163116
 default_params = {
-    'good_deletion': 10, 
-    'good_insertion': 10,
-    'good_syntax': 5, 
-    'good_paraphrase': 2, 
+    'good_deletion': 3.69273355, 
+    'good_insertion': 3.69273355,
+    'good_syntax': 2.93977382, 
+    'good_paraphrase': 4.81632663, 
     'good_trivial_insertion': 0,
-    'content_error': -10, 
-    'syntax_error': -5, 
-    'lexical_error': -2,
-    'grammar_error': -2,
+    'content_error': -0.98446881, 
+    'syntax_error': -5.30712595, 
+    'lexical_error': -1.03163116,
+    'grammar_error': -1.03163116,
     'size_calculation': 'exp'
 }
+
+# Linear regression on 3 dimensions
+# 1.0356572 , 1.95144333, 2.84206649
+# default_params = {
+#     'good_deletion': 1.0356572, 
+#     'good_insertion': 1.0356572,
+#     'good_syntax': 1.95144333, 
+#     'good_paraphrase': 2.84206649, 
+#     'good_trivial_insertion': 0,
+#     'content_error': -1.0356572, 
+#     'syntax_error': -1.95144333, 
+#     'lexical_error': -2.84206649,
+#     'grammar_error': -2.84206649,
+#     'size_calculation': 'exp'
+# }
 
 # default_params = {
 #     'good_deletion': 7, 
@@ -109,19 +161,15 @@ def calculate_annotation_score(annotation, parameters):
 
     # Unnecessary insertions have no severity...
     if annotation['error_type'] == Error.UNNECESSARY_INSERTION:
-        # Assigning it to a 'somewhat' severity error
         edit_score = 2
 
     if annotation['grammar_error'] == True:
         edit_score = abs(edit_score) * parameters['grammar_error']
-
-    if annotation['error_type'] in content_errors:
+    elif annotation['error_type'] in content_errors:
         edit_score = abs(edit_score) * parameters['content_error']
-
-    if annotation['error_type'] in syntax_errors:
+    elif annotation['error_type'] in syntax_errors:
         edit_score = abs(edit_score) * parameters['syntax_error']
-
-    if annotation['error_type'] in lexical_errors:
+    elif annotation['error_type'] in lexical_errors:
         edit_score = abs(edit_score) * parameters['lexical_error']
 
     # Calculate the annotation size

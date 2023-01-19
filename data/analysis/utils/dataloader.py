@@ -365,6 +365,7 @@ def process_annotation(edit):
         'error_type': error_type,
         'rating': rating,
         'size': size,
+        'token_size': edit['token_length'],
         'reorder_level': reorder_level
     }
 
@@ -379,6 +380,16 @@ def consolidate_annotations(data):
         processed = []
         successful = True
         for edit in sent['edits']:
+            # Add token length to edit
+            token_length = 0
+            if edit['original_span'] is not None:
+                for span in edit['original_span']:
+                    token_length += len(sent['original'][span[0]:span[1]].split(' '))
+            if edit['simplified_span'] is not None:   
+                for span in edit['simplified_span']:
+                    token_length += len(sent['simplified'][span[0]:span[1]].split(' '))
+            edit['token_length'] = token_length
+
             try: 
                 processed.append(process_annotation(edit))
             except Exception as e:

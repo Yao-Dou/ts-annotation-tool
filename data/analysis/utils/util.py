@@ -429,7 +429,7 @@ def get_ratings_by_edit_type(data, edit_type, combine_humans=False, size_weighte
         for rating in range(score_range):
             edits = [ann for ann in quality_edits if ann['rating'] == rating]
             if size_weighted:
-                quality_annotations[rating] = len(edits)*avg([e['size'] for e in edits], prec=10)
+                quality_annotations[rating] = len(edits)*avg([e['token_size'] for e in edits], prec=10) # size
             else:
                 quality_annotations[rating] = len(edits)
         
@@ -438,7 +438,7 @@ def get_ratings_by_edit_type(data, edit_type, combine_humans=False, size_weighte
         for rating in range(score_range):
             edits = [ann for ann in error_edits if ann['rating'] == rating]
             if size_weighted:
-                error_annotations[rating] = len(edits)*avg([e['size'] for e in edits], prec=10)
+                error_annotations[rating] = len(edits)*avg([e['token_size'] for e in edits], prec=10) # size
             else:
                 error_annotations[rating] = len(edits)
 
