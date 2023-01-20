@@ -119,7 +119,7 @@ def associate_spans(sent):
     for type_ in counts.keys():
         annotations = sent['annotations'][type_]
         if counts[type_] != 0 and counts[type_] + 1 > len(annotations):
-            print(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations) - 1} annotations. Likely a missing annotation. Skipping edit type...')
+            # print(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations) - 1} annotations. Likely a missing annotation. Skipping edit type...')
             edits += []
             continue
         for i in range(1, counts[type_]+1):
@@ -393,7 +393,7 @@ def consolidate_annotations(data):
             try: 
                 processed.append(process_annotation(edit))
             except Exception as e:
-                print(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
+                # print(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
                 successful = False
         
         # Delete the sentence if we could not process the annotations for it
@@ -524,7 +524,7 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     # Exclude corrupted file
     files = [x for x in files if 'batch_2_rachel' not in x]
 
-    print(f'Loading files: {files}\n')
+    # print(f'Loading files: {files}\n')
 
     # Add file and append user's name
     id_counter = 0
