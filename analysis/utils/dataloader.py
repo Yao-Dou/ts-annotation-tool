@@ -366,7 +366,9 @@ def process_annotation(edit):
         'rating': rating,
         'size': size,
         'token_size': edit['token_length'],
-        'reorder_level': reorder_level
+        'reorder_level': reorder_level,
+        'original_span': edit['original_span'],
+        'simplified_span': edit['simplified_span']
     }
 
 # def process_annotations(annotations):
