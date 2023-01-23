@@ -6,3 +6,6 @@ This repo is organized as follows:
 - `gpt-3` - Prompts & scripts to generate GPT simplification
 - `edit_classification` - Training code for edit classification task
 - `paper` - Visualizations used in final paper
+
+To push an interface update please use the `gh-pages` branch:
+`git subtree push --prefix interface origin gh-pages`

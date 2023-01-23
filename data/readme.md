@@ -7,7 +7,7 @@ Data is organized as follows:
 - `simp_eval` - SimpEval likert, direct assessment and rate+rank ratings for the full 60 sentences
 - `automatic_metrics` - Automatic metric scores for full 60 sentences. Includes BLEU, SARI, BERTScore, COMET, LENS
 - `edit_classification` - Data split for edit classification task
-- `structure_inspection` - Data for manual inspection of structure changes (we didn't end up performing this inspection)
+- `inspection` - Data for manual inspection of structure changes (we didn't end up performing this inspection)
 
 We also have an `injestion.ipynb` notebook, which converts raw annotations (in `annotated`) to our released annotations (in `salsa`).
 

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Structure Inspection</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+    <div class="spinner-container">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container" style="display: none">
+        <div class="button-container">
+            <button class="btn btn-secondary" onclick="clickbackwards()"><span class="arrow">Prev (Q)</span></button>
+            <button class="btn btn-secondary" onclick="clickforwards()"><span class="arrow">Next (W)</span></button>
+        </div>
+
+        <div class="row">
+            <div class="col-sm first-col">
+                <h1 class="annotation-header">Your Annotations</h1>
+                <iframe id='iframe-0' src="index.html"></iframe>
+            </div>
+            <div class="col-sm">
+                <h1 class="annotation-header">Annotator 2</h1>
+                <iframe id='iframe-1' src="index.html"></iframe>
+            </div>
+            <div class="col-sm">
+                <h1 class="annotation-header">Annotator 3</h1>
+                <iframe id='iframe-2' src="index.html"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+<!-- 3 column setup -->
+<style>
+.annotation-header {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.first-col {
+    border-width: 4px;
+    border-color: #333333;
+    border-style: dotted;
+}
+
+.button-container {
+  text-align:center;
+  height: 50px;
+}
+.button-container button {
+  border: 0;
+  width: 100px;
+  height: 40px;
+}   
+.container{
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  height: 4000px;
+}
+
+.row {
+  --bs-gutter-x: 10%;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  height: 100%;
+}
+
+.col-sm {
+  padding: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3e6ae1; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+.spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+<script>
+    var loadedCounter = 0;
+
+    // Inject CSS into iframe
+    for (let i = 0; i < 3; i++) {
+        // specify data path with ?data={datapath}
+        let urlParams = new URLSearchParams(window.location.search);
+        let path = null;
+        let batch = urlParams.get('batch');
+        let name = urlParams.get('name');
+        if (batch != null && name != null) {
+            path = `inspection/${name}/batch_${batch}/`
+        }
+
+        $('#iframe-' + i)[0].src = `index.html?data=${path}set_${i}.json`
+
+        $('#iframe-' + i).on("load", function() {
+            $("<style>")
+            .prop("type", "text/css")
+            .html("\
+            #my-window {\
+                position: fixed;\
+                z-index: 102;\
+                display:none;\
+                top:50%;\
+                left:50%;\
+            }\
+            .f5 {\
+                font-size: 0.6em;\
+                color: #6f6f6f;\
+                margin-bottom: 0;\
+            }\
+            .f3 {\
+                font-size: 1.5rem;\
+                margin: 14px 0 0 0;\
+            }\
+            .ba .fr {\
+                float: right;\
+                display: none;\
+            }\
+            .w-65 {\
+                width: 100%;\
+            }\
+            #helper_list, #response_box {\
+                display:none;\
+            }\
+            .hit-selector {\
+                width: 50%;\
+                text-align: left;\
+                margin-bottom: 10px;\
+                margin-top: 5px;\
+            }\
+            .orig-sentence-header {\
+                margin: 0px;\
+            }\
+            ").appendTo($(this).contents().children());
+        });
+
+        $('#iframe-' + i).on("load", function() {
+            loadedCounter++;
+            if (loadedCounter == 3) {
+                $('.spinner-container').hide();
+                $('.container').show();
+            }
+        });
+    }
+
+    // Inject CSS to disable functionality for non-annotation iframes
+    for (let i = 1; i < 3; i++) {
+        $('#iframe-' + i).on("load", function() {
+            $("<style>")
+            .prop("type", "text/css")
+            .html("\
+            .add_button, .file-download, .operation {\
+                opacity: 20%; \
+                pointer-events: none;\
+            }\
+            // #edits_html .w-80 {\
+            //     width: 100%;\
+            // }\
+            \
+            ").appendTo($(this).contents().children());
+        });
+    }
+
+    function clickforwards() {
+        for (let i = 0; i < 3; i++) {
+            $($('#hit .mt1 button', $('#iframe-' + i).contents())[1]).click()
+        }
+    }
+
+    function clickbackwards() {
+        for (let i = 0; i < 3; i++) {
+            $($('#hit .mt1 button', $('#iframe-' + i).contents())[0]).click()
+        }
+    }
+
+    $(document).keypress(function(e) {
+        if ( e.keyCode === 119 ) // w
+            clickforwards();
+        if ( e.keyCode === 113 ) // q
+            clickbackwards();
+    });
+</script>
+
+</html>
+
+<!-- 
+fetch(`https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/analysis/st-inspect/set_0.json`)
+            .then(r => r.json())
+            .then(json => {
+                this.hits_data = json;
+                for (let i = 0; i < this.hits_data.length; i++) {
+                    if (this.hits_data[i].annotations == undefined) {
+                        this.hits_data[i].annotations = {
+                            'deletion': [],
+                            'substitution': [],
+                            'insertion': [],
+                            'split': [],
+                            'reorder': [],
+                            'structure': [],
+                        }
+                    }
+                }
+                this.total_hits = json.length;
+                this.process_everything();
+            });
+ -->

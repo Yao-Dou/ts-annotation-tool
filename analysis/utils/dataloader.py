@@ -557,14 +557,13 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     # ID is used to identify unique sentences, this WAS okay in the past because
     # each batch was the same ordering, but now that batches are randomized, this
     # needs to be re-done once sentences are loaded
-    # Really should be grouped by original and system, because two systems could have the same simplification
     if realign_ids:
-        unique_sents = [sent['simplified'] for sent in data]
+        unique_sents = [(sent['simplified'], sent['system']) for sent in data]
         unique_sents = [i for n, i in enumerate(unique_sents) if i not in unique_sents[:n]] # remove duplicates while retaining ordering
         new_data = []
         full_counter = 0
         for i in range(len(unique_sents)):
-            sents = sorted([sent for sent in data if sent['simplified'] == unique_sents[i]], key=lambda x: x['user'])
+            sents = sorted([sent for sent in data if sent['simplified'] == unique_sents[i][0] and sent['system'] == unique_sents[i][1]], key=lambda x: x['user'])
             for sent in sents:
                 sent['sentence_id'] = i
                 sent['id'] = full_counter

@@ -1,0 +1,7493 @@
+[
+    {
+        "id": 1758,
+        "annotation_id": 1898,
+        "sentence_id": 586,
+        "batch": 11,
+        "hit_id": 8,
+        "user": "anton",
+        "system": "simpeval-ext/T5-11B",
+        "original": "Young's first collection of verse, Genius and Fancy, described as \"a survey of the London stage,\" was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "simplified": "Young's first collection of verse, \" Genius and Fancy \", was published in 1791, went into a second edition in 1795, and then was immediately republished in an expanded edition with three times the number of pages as the original.",
+        "original_spans": [
+            [
+                0,
+                53,
+                97,
+                1
+            ]
+        ],
+        "simplified_spans": [],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [],
+            "split": [],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1827,
+        "annotation_id": 1929,
+        "sentence_id": 609,
+        "batch": 11,
+        "hit_id": 23,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified": "The impeachment was a major event during that time. || It was a struggle between the two major U.S. political parties about, for example, the role of Federal courts.",
+        "original_spans": [
+            [
+                0,
+                0,
+                34,
+                1
+            ],
+            [
+                1,
+                51,
+                133,
+                1
+            ],
+            [
+                2,
+                134,
+                147,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                160,
+                167,
+                2
+            ],
+            [
+                5,
+                174,
+                193,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                194,
+                243,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                16,
+                51,
+                1
+            ],
+            [
+                2,
+                52,
+                54,
+                0
+            ],
+            [
+                2,
+                55,
+                72,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                73,
+                117,
+                2
+            ],
+            [
+                5,
+                125,
+                137,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                138,
+                165,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ],
+                [
+                    "more",
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "less",
+                    "perfect",
+                    "no",
+                    ""
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1830,
+        "annotation_id": 1930,
+        "sentence_id": 610,
+        "batch": 11,
+        "hit_id": 24,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-3B",
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified": "A high-profile affair at the time, the impeachment pitted the two major United States political parties against each other. || The parties had a battle between them over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [
+            [
+                2,
+                134,
+                147,
+                0,
+                1,
+                1
+            ],
+            [
+                5,
+                156,
+                167,
+                1,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                124,
+                126,
+                0
+            ],
+            [
+                2,
+                127,
+                151,
+                0,
+                1,
+                1
+            ],
+            [
+                5,
+                160,
+                164,
+                1,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1833,
+        "annotation_id": 1931,
+        "sentence_id": 611,
+        "batch": 11,
+        "hit_id": 25,
+        "user": "ayush",
+        "system": "simpeval-ext/Muss",
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified": "It was a high-profile affair at the time, because the two major United States political parties of the time, the Democratic Party and the Republican Party, were against each other and wanted to impeach the President.",
+        "original_spans": [
+            [
+                4,
+                35,
+                133,
+                1
+            ],
+            [
+                1,
+                134,
+                173,
+                1
+            ],
+            [
+                0,
+                174,
+                193,
+                2
+            ],
+            [
+                0,
+                194,
+                243,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                0,
+                6,
+                1,
+                3,
+                1
+            ],
+            [
+                1,
+                42,
+                108,
+                1
+            ],
+            [
+                3,
+                109,
+                155,
+                1
+            ],
+            [
+                4,
+                156,
+                201,
+                1
+            ],
+            [
+                3,
+                202,
+                216,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "more",
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "split": [],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1836,
+        "annotation_id": 1932,
+        "sentence_id": 612,
+        "batch": 11,
+        "hit_id": 26,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified": "The impeachment created a battle between the two major political parties of the era. || The parties argued over what the role of Federal courts is and other things.",
+        "original_spans": [
+            [
+                0,
+                0,
+                34,
+                1
+            ],
+            [
+                4,
+                51,
+                114,
+                1
+            ],
+            [
+                1,
+                115,
+                147,
+                1
+            ],
+            [
+                0,
+                174,
+                179,
+                2
+            ],
+            [
+                4,
+                180,
+                193,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                16,
+                32,
+                1
+            ],
+            [
+                4,
+                33,
+                84,
+                1
+            ],
+            [
+                2,
+                85,
+                87,
+                0
+            ],
+            [
+                3,
+                100,
+                111,
+                1
+            ],
+            [
+                4,
+                151,
+                164,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ],
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ],
+                [
+                    "no",
+                    "",
+                    "",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 1839,
+        "annotation_id": 1933,
+        "sentence_id": 613,
+        "batch": 11,
+        "hit_id": 27,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified": "An important political event, the impeachment caused conflict between the two major parties in the US at the time. || They disagreed on many issues, including the role of Federal courts.",
+        "original_spans": [
+            [
+                1,
+                0,
+                34,
+                1
+            ],
+            [
+                1,
+                51,
+                57,
+                2
+            ],
+            [
+                1,
+                72,
+                95,
+                3
+            ],
+            [
+                0,
+                104,
+                173,
+                1
+            ],
+            [
+                1,
+                194,
+                243,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                0,
+                29,
+                1
+            ],
+            [
+                1,
+                46,
+                69,
+                2
+            ],
+            [
+                1,
+                92,
+                114,
+                3
+            ],
+            [
+                2,
+                115,
+                117,
+                0
+            ],
+            [
+                2,
+                118,
+                148,
+                0,
+                3,
+                1
+            ],
+            [
+                1,
+                149,
+                186,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "more",
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1842,
+        "annotation_id": 1934,
+        "sentence_id": 614,
+        "batch": 11,
+        "hit_id": 28,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified": "The impeachment caused hostility between the two major political parties during a battle between them over the role of Federal courts and other issues.",
+        "original_spans": [
+            [
+                0,
+                0,
+                34,
+                1
+            ],
+            [
+                1,
+                51,
+                57,
+                1
+            ],
+            [
+                0,
+                104,
+                133,
+                2
+            ],
+            [
+                1,
+                134,
+                138,
+                2
+            ],
+            [
+                1,
+                156,
+                167,
+                3
+            ],
+            [
+                4,
+                174,
+                193,
+                1
+            ],
+            [
+                1,
+                174,
+                193,
+                4
+            ],
+            [
+                1,
+                194,
+                243,
+                5
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                16,
+                40,
+                1
+            ],
+            [
+                1,
+                73,
+                79,
+                2
+            ],
+            [
+                1,
+                97,
+                101,
+                3
+            ],
+            [
+                1,
+                102,
+                133,
+                5
+            ],
+            [
+                4,
+                134,
+                151,
+                1
+            ],
+            [
+                1,
+                134,
+                151,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 1845,
+        "annotation_id": 1935,
+        "sentence_id": 615,
+        "batch": 11,
+        "hit_id": 29,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-11B",
+        "original": "A high-profile affair at the time, the impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "simplified": "The impeachment was a high-profile affair at the time. || The impeachment pitted the two major United States political parties of the era against each other amid a battle between the parties over, among other things, what the role of Federal courts should look like.",
+        "original_spans": [
+            [
+                4,
+                0,
+                50,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                54,
+                1
+            ],
+            [
+                5,
+                16,
+                19,
+                1,
+                3,
+                1
+            ],
+            [
+                2,
+                55,
+                57,
+                0
+            ],
+            [
+                2,
+                58,
+                73,
+                0,
+                3,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "word"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1869,
+        "annotation_id": 1943,
+        "sentence_id": 623,
+        "batch": 11,
+        "hit_id": 37,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-3B",
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the U.S. Navy's main base for the early part of the Pacific War against the Empire of Japan.",
+        "original_spans": [
+            [
+                0,
+                155,
+                169,
+                1
+            ]
+        ],
+        "simplified_spans": [],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [],
+            "split": [],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1872,
+        "annotation_id": 1944,
+        "sentence_id": 624,
+        "batch": 11,
+        "hit_id": 38,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified": "The US Navy lost its base in the Philippines in 1941 and 1942, so Hawaii became the primary base for their island-hopping campaign against the Empire of Japan in the Pacific War.",
+        "original_spans": [
+            [
+                4,
+                0,
+                42,
+                1
+            ],
+            [
+                1,
+                20,
+                25,
+                1
+            ],
+            [
+                0,
+                31,
+                42,
+                1
+            ],
+            [
+                0,
+                62,
+                70,
+                2
+            ],
+            [
+                5,
+                71,
+                73,
+                3,
+                1,
+                1
+            ],
+            [
+                1,
+                89,
+                128,
+                3
+            ],
+            [
+                0,
+                109,
+                118,
+                3
+            ],
+            [
+                0,
+                133,
+                154,
+                4
+            ],
+            [
+                4,
+                170,
+                181,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                25,
+                1
+            ],
+            [
+                1,
+                7,
+                11,
+                1
+            ],
+            [
+                5,
+                45,
+                47,
+                3,
+                1,
+                1
+            ],
+            [
+                5,
+                63,
+                65,
+                1,
+                3,
+                1
+            ],
+            [
+                1,
+                66,
+                96,
+                3
+            ],
+            [
+                3,
+                101,
+                106,
+                1
+            ],
+            [
+                3,
+                122,
+                130,
+                2
+            ],
+            [
+                5,
+                159,
+                165,
+                2,
+                3,
+                1
+            ],
+            [
+                4,
+                166,
+                178,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "trivial",
+                    "yes",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "split": [],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "word"
+                ],
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1875,
+        "annotation_id": 1945,
+        "sentence_id": 625,
+        "batch": 11,
+        "hit_id": 39,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified": "Hawaii became the main US naval base for the early part of the Pacific War against Japan after the loss of the US Naval Base in the Philippines in 1941 and 1942.",
+        "original_spans": [
+            [
+                4,
+                0,
+                88,
+                1
+            ],
+            [
+                5,
+                0,
+                4,
+                2,
+                1,
+                1
+            ],
+            [
+                0,
+                31,
+                42,
+                3
+            ],
+            [
+                5,
+                71,
+                73,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                89,
+                97,
+                1
+            ],
+            [
+                4,
+                109,
+                128,
+                2
+            ],
+            [
+                0,
+                155,
+                169,
+                1
+            ],
+            [
+                0,
+                190,
+                203,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                0,
+                6,
+                1
+            ],
+            [
+                4,
+                18,
+                36,
+                2
+            ],
+            [
+                4,
+                89,
+                161,
+                1
+            ],
+            [
+                5,
+                89,
+                94,
+                2,
+                1,
+                1
+            ],
+            [
+                5,
+                144,
+                146,
+                1,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no",
+                    "component"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "word"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1878,
+        "annotation_id": 1946,
+        "sentence_id": 626,
+        "batch": 11,
+        "hit_id": 40,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified": "After the US Navy lost their base in the Philippines during the Philippines campaign of 1941 and 1942. || Hawaii became their main base for the early part of the Pacific War against Japan.",
+        "original_spans": [
+            [
+                5,
+                0,
+                4,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                5,
+                30,
+                1
+            ],
+            [
+                0,
+                31,
+                42,
+                1
+            ],
+            [
+                1,
+                89,
+                97,
+                1
+            ],
+            [
+                1,
+                105,
+                118,
+                2
+            ],
+            [
+                0,
+                155,
+                169,
+                2
+            ],
+            [
+                0,
+                190,
+                203,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                0,
+                5,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                6,
+                33,
+                1
+            ],
+            [
+                3,
+                53,
+                75,
+                1
+            ],
+            [
+                2,
+                103,
+                105,
+                0
+            ],
+            [
+                1,
+                106,
+                112,
+                1
+            ],
+            [
+                1,
+                120,
+                125,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "repetition",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "word"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1881,
+        "annotation_id": 1947,
+        "sentence_id": 627,
+        "batch": 11,
+        "hit_id": 41,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified": "During the 1941 and 1942 Philippines campaign, the US Navy lost their naval base in the Philippines and Hawai'i became their primary base for the Pacific War against Japan.",
+        "original_spans": [
+            [
+                4,
+                5,
+                42,
+                2
+            ],
+            [
+                4,
+                43,
+                88,
+                1
+            ],
+            [
+                5,
+                43,
+                45,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                89,
+                97,
+                1
+            ],
+            [
+                5,
+                105,
+                118,
+                4,
+                1,
+                1
+            ],
+            [
+                1,
+                119,
+                123,
+                3
+            ],
+            [
+                0,
+                137,
+                169,
+                1
+            ],
+            [
+                0,
+                190,
+                203,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                46,
+                1
+            ],
+            [
+                5,
+                0,
+                6,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                47,
+                99,
+                2
+            ],
+            [
+                5,
+                64,
+                69,
+                2,
+                3,
+                1
+            ],
+            [
+                5,
+                81,
+                87,
+                2,
+                3,
+                2
+            ],
+            [
+                5,
+                100,
+                103,
+                3,
+                3,
+                1
+            ],
+            [
+                1,
+                104,
+                111,
+                1
+            ],
+            [
+                5,
+                119,
+                124,
+                4,
+                1,
+                1
+            ],
+            [
+                1,
+                125,
+                132,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                null,
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1884,
+        "annotation_id": 1948,
+        "sentence_id": 628,
+        "batch": 11,
+        "hit_id": 42,
+        "user": "ayush",
+        "system": "simpeval-ext/Muss",
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified": "After the United States lost the Philippines in World War II, Hawaiian became the main base for the United States Navy when they were fighting in the Pacific against the Empire of Japan.",
+        "original_spans": [
+            [
+                5,
+                0,
+                4,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                5,
+                61,
+                1
+            ],
+            [
+                1,
+                17,
+                19,
+                2
+            ],
+            [
+                0,
+                20,
+                30,
+                2
+            ],
+            [
+                0,
+                31,
+                42,
+                1
+            ],
+            [
+                1,
+                62,
+                88,
+                1
+            ],
+            [
+                5,
+                109,
+                128,
+                2,
+                1,
+                1
+            ],
+            [
+                0,
+                129,
+                169,
+                3
+            ],
+            [
+                0,
+                178,
+                181,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                0,
+                5,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                6,
+                44,
+                1
+            ],
+            [
+                1,
+                10,
+                23,
+                2
+            ],
+            [
+                1,
+                45,
+                61,
+                1
+            ],
+            [
+                5,
+                82,
+                118,
+                2,
+                1,
+                1
+            ],
+            [
+                3,
+                119,
+                149,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "more",
+                    "hallucination",
+                    "yes",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "more",
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no",
+                    "word"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1887,
+        "annotation_id": 1949,
+        "sentence_id": 629,
+        "batch": 11,
+        "hit_id": 43,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-11B",
+        "original": "With the loss of US Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the US Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "simplified": "With the loss of U.S. || Naval Base Philippines in the Philippines campaign of 1941 and 1942, Hawaiian became the U.S. Navy's main base for the early part of the island-hopping Pacific War against the Empire of Japan.",
+        "original_spans": [
+            [
+                5,
+                17,
+                19,
+                1,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                17,
+                21,
+                1,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [],
+            "insertion": [],
+            "split": [],
+            "reorder": [],
+            "structure": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1911,
+        "annotation_id": 1957,
+        "sentence_id": 637,
+        "batch": 11,
+        "hit_id": 51,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "simplified": "The Great Mosque of Kairouan, built by the emir Ziyadat Allah I in 836, is one of the most significant monuments of the Aghlabid era. || Subsequent additions and repairs have complicated the timeline of its construction.",
+        "original_spans": [
+            [
+                4,
+                0,
+                44,
+                1
+            ],
+            [
+                1,
+                88,
+                139,
+                1
+            ],
+            [
+                2,
+                143,
+                151,
+                0,
+                0,
+                1
+            ],
+            [
+                0,
+                182,
+                202,
+                2
+            ],
+            [
+                1,
+                203,
+                255,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                30,
+                71,
+                1
+            ],
+            [
+                4,
+                75,
+                133,
+                1
+            ],
+            [
+                2,
+                134,
+                136,
+                0
+            ],
+            [
+                2,
+                137,
+                147,
+                0,
+                3,
+                1
+            ],
+            [
+                1,
+                170,
+                220,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "different",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 1914,
+        "annotation_id": 1958,
+        "sentence_id": 638,
+        "batch": 11,
+        "hit_id": 52,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "simplified": "The Great Mosque of Kairouan was a very important Aghlabid monument. || It was reconstructed in 836 by emir Ziyadat Allah I, but further repairs and modifications were done in later years. || This makes it difficult to know the exact timeline of its construction.",
+        "original_spans": [
+            [
+                4,
+                0,
+                44,
+                1
+            ],
+            [
+                1,
+                0,
+                15,
+                1
+            ],
+            [
+                2,
+                78,
+                106,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                143,
+                181,
+                3
+            ],
+            [
+                1,
+                187,
+                202,
+                2
+            ],
+            [
+                2,
+                203,
+                219,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                224,
+                255,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                29,
+                68,
+                1
+            ],
+            [
+                1,
+                29,
+                39,
+                1
+            ],
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                72,
+                92,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                125,
+                162,
+                3
+            ],
+            [
+                1,
+                168,
+                188,
+                2
+            ],
+            [
+                2,
+                189,
+                191,
+                1
+            ],
+            [
+                2,
+                192,
+                223,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                228,
+                263,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 1917,
+        "annotation_id": 1959,
+        "sentence_id": 639,
+        "batch": 11,
+        "hit_id": 53,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan. || It was rebuilt in 836 by the emir Ziyadat Allah I. || However, some additions and repairs were made later, which make the history of its construction more complicated.",
+        "original_spans": [
+            [
+                2,
+                78,
+                106,
+                0,
+                1,
+                1
+            ],
+            [
+                2,
+                143,
+                151,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                152,
+                159,
+                2
+            ],
+            [
+                1,
+                187,
+                195,
+                3
+            ],
+            [
+                1,
+                209,
+                255,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                81,
+                95,
+                0,
+                1,
+                1
+            ],
+            [
+                2,
+                132,
+                134,
+                1
+            ],
+            [
+                2,
+                135,
+                143,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                144,
+                148,
+                2
+            ],
+            [
+                1,
+                176,
+                180,
+                3
+            ],
+            [
+                1,
+                203,
+                248,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                null,
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1920,
+        "annotation_id": 1960,
+        "sentence_id": 640,
+        "batch": 11,
+        "hit_id": 54,
+        "user": "ayush",
+        "system": "simpeval-ext/Muss",
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I. || The emir Ziyadat Allah I added more parts to the mosque during his rule.",
+        "original_spans": [
+            [
+                2,
+                143,
+                151,
+                0,
+                0,
+                1
+            ],
+            [
+                1,
+                152,
+                169,
+                1
+            ],
+            [
+                0,
+                170,
+                255,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                143,
+                145,
+                0
+            ],
+            [
+                2,
+                146,
+                170,
+                0,
+                3,
+                1
+            ],
+            [
+                1,
+                171,
+                187,
+                1
+            ],
+            [
+                3,
+                188,
+                218,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1923,
+        "annotation_id": 1961,
+        "sentence_id": 641,
+        "batch": 11,
+        "hit_id": 55,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-3B",
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan. || It was completely rebuilt in 836 by the emir Ziyadat Allah I.",
+        "original_spans": [
+            [
+                2,
+                78,
+                83,
+                0,
+                1,
+                1
+            ],
+            [
+                0,
+                143,
+                255,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                81,
+                83,
+                0,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "very bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1926,
+        "annotation_id": 1962,
+        "sentence_id": 642,
+        "batch": 11,
+        "hit_id": 56,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "simplified": "The Great Mosque of Kairouan is one of the most important Aghlabid monuments. || The order of events of the monument\u2019s construction is complicated. || In addition to being rebuilt in 836 by the emir Ziyadat Allah I, the monument has also undergone many additions and repairs.",
+        "original_spans": [
+            [
+                4,
+                0,
+                47,
+                1
+            ],
+            [
+                2,
+                78,
+                87,
+                1,
+                1,
+                1
+            ],
+            [
+                5,
+                143,
+                151,
+                1,
+                0,
+                1
+            ],
+            [
+                0,
+                187,
+                202,
+                1
+            ],
+            [
+                2,
+                203,
+                255,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                224,
+                234,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                29,
+                77,
+                1
+            ],
+            [
+                2,
+                78,
+                80,
+                0
+            ],
+            [
+                2,
+                81,
+                147,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                81,
+                100,
+                1
+            ],
+            [
+                3,
+                101,
+                131,
+                1
+            ],
+            [
+                2,
+                148,
+                150,
+                1
+            ],
+            [
+                2,
+                151,
+                171,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                216,
+                228,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "trivial",
+                    "yes",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1929,
+        "annotation_id": 1963,
+        "sentence_id": 643,
+        "batch": 11,
+        "hit_id": 57,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-11B",
+        "original": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I, although various additions and repairs were effected later, which complicate the chronology of its construction.",
+        "simplified": "One of the most important Aghlabid monuments is the Great Mosque of Kairouan, which was completely rebuilt in 836 by the emir Ziyadat Allah I.",
+        "original_spans": [
+            [
+                0,
+                143,
+                255,
+                1
+            ]
+        ],
+        "simplified_spans": [],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "very bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [],
+            "split": [],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1932,
+        "annotation_id": 1964,
+        "sentence_id": 644,
+        "batch": 11,
+        "hit_id": 58,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified": "Luca Doncic, a point guard for the Dallas Mavericks, scored the first 60-point triple-double in the NBA. || He had 60 points, 21 rebounds, and 10 assists in the Maverick\u2019s overtime win against the New York Knicks at home.",
+        "original_spans": [
+            [
+                4,
+                0,
+                22,
+                1
+            ],
+            [
+                1,
+                0,
+                9,
+                1
+            ],
+            [
+                1,
+                23,
+                27,
+                2
+            ],
+            [
+                5,
+                60,
+                66,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                107,
+                139,
+                3
+            ],
+            [
+                0,
+                140,
+                202,
+                1
+            ],
+            [
+                2,
+                203,
+                218,
+                0,
+                1,
+                1
+            ],
+            [
+                0,
+                276,
+                283,
+                2
+            ],
+            [
+                1,
+                325,
+                335,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                0,
+                4,
+                2
+            ],
+            [
+                4,
+                13,
+                26,
+                1
+            ],
+            [
+                1,
+                13,
+                14,
+                1
+            ],
+            [
+                5,
+                53,
+                59,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                100,
+                104,
+                3
+            ],
+            [
+                2,
+                105,
+                107,
+                0
+            ],
+            [
+                2,
+                108,
+                114,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                213,
+                221,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ],
+                [
+                    "different",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1935,
+        "annotation_id": 1965,
+        "sentence_id": 645,
+        "batch": 11,
+        "hit_id": 59,
+        "user": "ayush",
+        "system": "simpeval-ext/Muss",
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified": "Luka Doncic of the Dallas Mavericks becomes the first player in history to record a triple-double in the National Basketball Association. || Doncic had 60 points, 21 rebounds, and 10 assists in the Mavericks' 126-121 overtime win against the New York Knicks in Dallas, Texas.",
+        "original_spans": [
+            [
+                0,
+                0,
+                22,
+                1
+            ],
+            [
+                1,
+                60,
+                66,
+                1
+            ],
+            [
+                0,
+                71,
+                85,
+                2
+            ],
+            [
+                0,
+                140,
+                202,
+                3
+            ],
+            [
+                2,
+                203,
+                218,
+                0,
+                0,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                36,
+                60,
+                1
+            ],
+            [
+                3,
+                61,
+                81,
+                1
+            ],
+            [
+                2,
+                138,
+                140,
+                0
+            ],
+            [
+                2,
+                141,
+                147,
+                0,
+                3,
+                1
+            ],
+            [
+                3,
+                269,
+                275,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "very bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "more",
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1938,
+        "annotation_id": 1966,
+        "sentence_id": 646,
+        "batch": 11,
+        "hit_id": 60,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified": "Luka Doncic of the Dallas Mavericks, a Slovenian point guard, scored the first 60-point triple-double in the National Basketball Association. || He had 60 points, 21 rebounds, and 10 assists, helping his team to a 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [
+            [
+                4,
+                0,
+                22,
+                1
+            ],
+            [
+                5,
+                60,
+                66,
+                2,
+                1,
+                1
+            ],
+            [
+                0,
+                140,
+                202,
+                1
+            ],
+            [
+                2,
+                203,
+                218,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                258,
+                275,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                37,
+                38,
+                1,
+                3,
+                1
+            ],
+            [
+                4,
+                39,
+                61,
+                1
+            ],
+            [
+                5,
+                62,
+                68,
+                2,
+                1,
+                1
+            ],
+            [
+                2,
+                142,
+                144,
+                0
+            ],
+            [
+                2,
+                145,
+                151,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                192,
+                208,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1941,
+        "annotation_id": 1967,
+        "sentence_id": 647,
+        "batch": 11,
+        "hit_id": 61,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-3B",
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified": "Luka Doncic of the Dallas Mavericks scored the first 60-point triple-double in the National Basketball Association. || He scored 60 points, 21 rebounds, and 10 assists in a 126-121 overtime win against the New York Knicks.",
+        "original_spans": [
+            [
+                0,
+                0,
+                22,
+                1
+            ],
+            [
+                5,
+                60,
+                66,
+                1,
+                1,
+                1
+            ],
+            [
+                0,
+                140,
+                202,
+                2
+            ],
+            [
+                2,
+                203,
+                218,
+                0,
+                1,
+                1
+            ],
+            [
+                0,
+                261,
+                275,
+                3
+            ],
+            [
+                0,
+                325,
+                335,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                36,
+                42,
+                1,
+                1,
+                1
+            ],
+            [
+                2,
+                116,
+                118,
+                0
+            ],
+            [
+                2,
+                119,
+                128,
+                0,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1944,
+        "annotation_id": 1968,
+        "sentence_id": 648,
+        "batch": 11,
+        "hit_id": 62,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified": "Luka Doncic, a point guard for the Dallas Mavericks, scores the first 60-point triple-double in the NBA. || He gained 60 points, 21 rebounds, and 10 assists in a 126-121 win over the New York Knicks.",
+        "original_spans": [
+            [
+                0,
+                0,
+                9,
+                1
+            ],
+            [
+                4,
+                10,
+                22,
+                1
+            ],
+            [
+                5,
+                35,
+                37,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                107,
+                139,
+                1
+            ],
+            [
+                0,
+                140,
+                202,
+                2
+            ],
+            [
+                2,
+                203,
+                218,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                261,
+                275,
+                2
+            ],
+            [
+                0,
+                284,
+                292,
+                3
+            ],
+            [
+                0,
+                325,
+                335,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                13,
+                30,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                15,
+                26,
+                1
+            ],
+            [
+                1,
+                100,
+                104,
+                1
+            ],
+            [
+                2,
+                105,
+                107,
+                0
+            ],
+            [
+                2,
+                108,
+                117,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                160,
+                161,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "perfect",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1947,
+        "annotation_id": 1969,
+        "sentence_id": 649,
+        "batch": 11,
+        "hit_id": 63,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified": "Luka Doncic, a Slovenian point guard for the Dallas Mavericks, achieved a milestone in the National Basketball Association - the premier men's professional basketball league worldwide. || He scored 60 points, grabbed 21 rebounds and made 10 assists, earning the first 60-point triple-double in the league's history. || The Mavericks won the game 126\u2013121 in overtime against the New York Knicks in Dallas.",
+        "original_spans": [
+            [
+                4,
+                0,
+                22,
+                1
+            ],
+            [
+                4,
+                60,
+                99,
+                2
+            ],
+            [
+                2,
+                203,
+                218,
+                0,
+                1,
+                1
+            ],
+            [
+                2,
+                261,
+                275,
+                1,
+                4,
+                1
+            ],
+            [
+                1,
+                276,
+                296,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                13,
+                40,
+                1,
+                3,
+                1
+            ],
+            [
+                4,
+                15,
+                36,
+                1
+            ],
+            [
+                3,
+                63,
+                83,
+                1
+            ],
+            [
+                2,
+                185,
+                187,
+                0
+            ],
+            [
+                2,
+                188,
+                197,
+                0,
+                1,
+                1
+            ],
+            [
+                4,
+                250,
+                315,
+                2
+            ],
+            [
+                2,
+                316,
+                318,
+                1
+            ],
+            [
+                2,
+                319,
+                332,
+                1,
+                4,
+                1
+            ],
+            [
+                1,
+                333,
+                365,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                null,
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ],
+                [
+                    "negative",
+                    "minor",
+                    "",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1950,
+        "annotation_id": 1970,
+        "sentence_id": 650,
+        "batch": 11,
+        "hit_id": 64,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-11B",
+        "original": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after recording 60 points, 21 rebounds, and 10 assists in the Mavericks' 126\u2013121 overtime win against the New York Knicks in Dallas.",
+        "simplified": "Slovenian point guard, Luka Doncic of the Dallas Mavericks, scores the first 60-point triple-double in the National Basketball Association, the premier men's professional basketball league in the world, after scoring 60 points, 21 rebounds, and 10 assists in the Mavericks'126-121 overtime win against the New York Knicks in Dallas.",
+        "original_spans": [
+            [
+                1,
+                209,
+                218,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                209,
+                216,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1974,
+        "annotation_id": 1978,
+        "sentence_id": 658,
+        "batch": 11,
+        "hit_id": 72,
+        "user": "ayush",
+        "system": "simpeval-ext/Muss",
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942 he moved to Portmeirion, where he taught English, French, and mathematics.",
+        "original_spans": [
+            [
+                2,
+                55,
+                96,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                62,
+                72,
+                1
+            ],
+            [
+                0,
+                97,
+                109,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ],
+            [
+                2,
+                59,
+                91,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                70,
+                75,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1977,
+        "annotation_id": 1979,
+        "sentence_id": 659,
+        "batch": 11,
+        "hit_id": 73,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified": "Crawshay-Williams was a music critic until 1939. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and math.",
+        "original_spans": [
+            [
+                4,
+                0,
+                11,
+                1
+            ],
+            [
+                1,
+                30,
+                39,
+                1
+            ],
+            [
+                2,
+                55,
+                96,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                62,
+                72,
+                3
+            ],
+            [
+                1,
+                147,
+                159,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                18,
+                21,
+                1
+            ],
+            [
+                4,
+                37,
+                48,
+                1
+            ],
+            [
+                2,
+                49,
+                51,
+                0
+            ],
+            [
+                2,
+                52,
+                84,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                63,
+                68,
+                3
+            ],
+            [
+                1,
+                135,
+                140,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 1980,
+        "annotation_id": 1980,
+        "sentence_id": 660,
+        "batch": 11,
+        "hit_id": 74,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-3B",
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942, he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [
+            [
+                2,
+                55,
+                80,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                62,
+                72,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ],
+            [
+                2,
+                59,
+                76,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                71,
+                76,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1983,
+        "annotation_id": 1981,
+        "sentence_id": 661,
+        "batch": 11,
+        "hit_id": 75,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified": "Before 1939, Crawshay-Williams worked as a music critic. || In 1942, he moved to Portmeirion in North Wales and began teaching English, French, and mathematics.",
+        "original_spans": [
+            [
+                5,
+                0,
+                5,
+                1,
+                1,
+                1
+            ],
+            [
+                2,
+                55,
+                80,
+                0,
+                4,
+                1
+            ],
+            [
+                5,
+                110,
+                125,
+                2,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                0,
+                6,
+                1,
+                1,
+                1
+            ],
+            [
+                2,
+                57,
+                59,
+                0
+            ],
+            [
+                2,
+                60,
+                77,
+                0,
+                4,
+                1
+            ],
+            [
+                5,
+                93,
+                95,
+                2,
+                3,
+                1
+            ],
+            [
+                5,
+                108,
+                126,
+                2,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 1986,
+        "annotation_id": 1982,
+        "sentence_id": 662,
+        "batch": 11,
+        "hit_id": 76,
+        "user": "ayush",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified": "Crawshay-Williams worked as a music critic until 1939. || In 1942, he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [
+            [
+                4,
+                0,
+                11,
+                1
+            ],
+            [
+                2,
+                55,
+                80,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                62,
+                72,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                43,
+                54,
+                1
+            ],
+            [
+                2,
+                55,
+                57,
+                0
+            ],
+            [
+                2,
+                58,
+                75,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                70,
+                75,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 1989,
+        "annotation_id": 1983,
+        "sentence_id": 663,
+        "batch": 11,
+        "hit_id": 77,
+        "user": "ayush",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified": "Until 1939, Crawshay-Williams was a music critic. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [
+            [
+                1,
+                30,
+                39,
+                1
+            ],
+            [
+                2,
+                55,
+                80,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                62,
+                72,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                30,
+                33,
+                1
+            ],
+            [
+                2,
+                50,
+                52,
+                0
+            ],
+            [
+                2,
+                53,
+                69,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                64,
+                69,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 1992,
+        "annotation_id": 1984,
+        "sentence_id": 664,
+        "batch": 11,
+        "hit_id": 78,
+        "user": "ayush",
+        "system": "simpeval-ext/T5-11B",
+        "original": "Until 1939, Crawshay-Williams worked as a music critic before relocating in 1942 to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "simplified": "Until 1939, Crawshay-Williams worked as a music critic. || In 1942 he moved to Portmeirion, North Wales, where he taught English, French, and mathematics.",
+        "original_spans": [
+            [
+                2,
+                55,
+                80,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                62,
+                72,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                56,
+                58,
+                0
+            ],
+            [
+                2,
+                59,
+                78,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                70,
+                75,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2037,
+        "annotation_id": 2080,
+        "sentence_id": 679,
+        "batch": 11,
+        "hit_id": 16,
+        "user": "rachel",
+        "system": "simpeval-ext/T5-3B",
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified": "Mathew was born in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala. || He did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam.",
+        "original_spans": [
+            [
+                0,
+                5,
+                26,
+                1
+            ],
+            [
+                2,
+                125,
+                138,
+                0,
+                1,
+                1
+            ],
+            [
+                0,
+                226,
+                312,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                10,
+                1
+            ],
+            [
+                2,
+                114,
+                116,
+                0
+            ],
+            [
+                2,
+                117,
+                119,
+                0,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2040,
+        "annotation_id": 2081,
+        "sentence_id": 680,
+        "batch": 11,
+        "hit_id": 17,
+        "user": "rachel",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, Kerala. || He attended Christian College in Chengannur and Maharaja's College in Ernakulam. || After graduating, he became a lecturer at Christian College in Chengannur.",
+        "original_spans": [
+            [
+                0,
+                41,
+                116,
+                1
+            ],
+            [
+                2,
+                125,
+                138,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                139,
+                159,
+                2
+            ],
+            [
+                2,
+                226,
+                229,
+                1,
+                0,
+                1
+            ],
+            [
+                0,
+                230,
+                253,
+                2
+            ],
+            [
+                0,
+                266,
+                281,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                17,
+                1
+            ],
+            [
+                2,
+                67,
+                69,
+                0
+            ],
+            [
+                2,
+                70,
+                72,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                73,
+                81,
+                2
+            ],
+            [
+                2,
+                151,
+                153,
+                1
+            ],
+            [
+                2,
+                154,
+                171,
+                1,
+                3,
+                1
+            ],
+            [
+                3,
+                172,
+                181,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2043,
+        "annotation_id": 2082,
+        "sentence_id": 681,
+        "batch": 11,
+        "hit_id": 18,
+        "user": "rachel",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified": "Thomas Mathew was born in Keekozhur, Kerala, India on September 27, 1940. || He studied at Christian College and Maharaja\u2019s College, and later, he started his career as a lecturer at Christian College.",
+        "original_spans": [
+            [
+                4,
+                5,
+                26,
+                1
+            ],
+            [
+                0,
+                41,
+                116,
+                4
+            ],
+            [
+                2,
+                125,
+                138,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                139,
+                156,
+                1
+            ],
+            [
+                0,
+                215,
+                225,
+                1
+            ],
+            [
+                0,
+                266,
+                281,
+                2
+            ],
+            [
+                0,
+                301,
+                312,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                17,
+                1
+            ],
+            [
+                3,
+                45,
+                50,
+                3
+            ],
+            [
+                4,
+                51,
+                73,
+                1
+            ],
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                77,
+                79,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                80,
+                87,
+                1
+            ],
+            [
+                3,
+                137,
+                143,
+                4
+            ],
+            [
+                3,
+                144,
+                146,
+                5
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "trivial",
+                    "yes",
+                    "somewhat",
+                    "no"
+                ],
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "trivial",
+                    "no",
+                    "",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 2046,
+        "annotation_id": 2083,
+        "sentence_id": 682,
+        "batch": 11,
+        "hit_id": 19,
+        "user": "rachel",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, which is a small village in Kerala, India. || He studied at Christian College, Chengannur, and Maharaja\u2019s College, Ernakulam. || After finishing his education, he started working as a teacher at Christian College.",
+        "original_spans": [
+            [
+                2,
+                125,
+                138,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                139,
+                156,
+                2
+            ],
+            [
+                2,
+                226,
+                229,
+                1,
+                0,
+                1
+            ],
+            [
+                1,
+                238,
+                248,
+                3
+            ],
+            [
+                1,
+                254,
+                262,
+                4
+            ],
+            [
+                0,
+                263,
+                281,
+                1
+            ],
+            [
+                0,
+                301,
+                312,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                17,
+                1
+            ],
+            [
+                3,
+                59,
+                67,
+                2
+            ],
+            [
+                2,
+                102,
+                104,
+                0
+            ],
+            [
+                2,
+                105,
+                107,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                108,
+                115,
+                2
+            ],
+            [
+                2,
+                185,
+                187,
+                1
+            ],
+            [
+                2,
+                188,
+                218,
+                1,
+                3,
+                1
+            ],
+            [
+                2,
+                219,
+                221,
+                1,
+                3,
+                2
+            ],
+            [
+                1,
+                230,
+                237,
+                3
+            ],
+            [
+                1,
+                243,
+                250,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ],
+                null,
+                null
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2049,
+        "annotation_id": 2084,
+        "sentence_id": 683,
+        "batch": 11,
+        "hit_id": 20,
+        "user": "rachel",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, Kerala, India. || He studied at Christian College, Chengannur and Maharaja's College, Ernakulam and began his career by teaching at Christian College, Chengannur.",
+        "original_spans": [
+            [
+                0,
+                41,
+                116,
+                1
+            ],
+            [
+                2,
+                125,
+                138,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                139,
+                156,
+                2
+            ],
+            [
+                1,
+                230,
+                237,
+                3
+            ],
+            [
+                1,
+                249,
+                262,
+                4
+            ],
+            [
+                5,
+                249,
+                262,
+                1,
+                1,
+                1
+            ],
+            [
+                0,
+                266,
+                281,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                17,
+                1
+            ],
+            [
+                3,
+                67,
+                73,
+                2
+            ],
+            [
+                2,
+                74,
+                76,
+                0
+            ],
+            [
+                2,
+                77,
+                79,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                80,
+                87,
+                2
+            ],
+            [
+                1,
+                159,
+                164,
+                3
+            ],
+            [
+                1,
+                176,
+                187,
+                4
+            ],
+            [
+                5,
+                176,
+                187,
+                1,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2052,
+        "annotation_id": 2085,
+        "sentence_id": 684,
+        "batch": 11,
+        "hit_id": 21,
+        "user": "rachel",
+        "system": "simpeval-ext/Muss",
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified": "Thomas Mathew was born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Maharaja's College, Ernakulam and Christian College, Chengannur, where he was a very good student.",
+        "original_spans": [
+            [
+                0,
+                226,
+                312,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                17,
+                1
+            ],
+            [
+                3,
+                243,
+                276,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [
+                null,
+                [
+                    "repetition",
+                    "somewhat",
+                    "yes"
+                ],
+                [
+                    "hallucination",
+                    "no",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2055,
+        "annotation_id": 2086,
+        "sentence_id": 685,
+        "batch": 11,
+        "hit_id": 22,
+        "user": "rachel",
+        "system": "simpeval-ext/T5-11B",
+        "original": "Born on September 27, 1940 in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala, Thomas Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "simplified": "He was born in Keekozhur, a small hamlet in the Pathanamthitta district, in the south Indian state of Kerala. || Mathew did his education at Christian College, Chengannur, and Maharaja's College, Ernakulam, and started his career as a lecturer at his alma mater, Christian College, Chengannur.",
+        "original_spans": [
+            [
+                0,
+                5,
+                26,
+                1
+            ],
+            [
+                0,
+                125,
+                131,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                2,
+                1
+            ],
+            [
+                2,
+                110,
+                112,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2058,
+        "annotation_id": 2094,
+        "sentence_id": 686,
+        "batch": 11,
+        "hit_id": 30,
+        "user": "rachel",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified": "Progressive members of the New York State Senate opposed LaSalle's nomination. || They saw his record on abortion and labor cases as conservative and voiced their criticism.",
+        "original_spans": [
+            [
+                5,
+                21,
+                35,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                36,
+                85,
+                1
+            ],
+            [
+                4,
+                90,
+                100,
+                2
+            ],
+            [
+                1,
+                90,
+                100,
+                3
+            ],
+            [
+                5,
+                101,
+                110,
+                2,
+                1,
+                1
+            ],
+            [
+                0,
+                147,
+                152,
+                1
+            ],
+            [
+                2,
+                153,
+                157,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                158,
+                170,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                48,
+                1
+            ],
+            [
+                5,
+                49,
+                56,
+                1,
+                1,
+                1
+            ],
+            [
+                2,
+                79,
+                81,
+                0
+            ],
+            [
+                2,
+                82,
+                86,
+                0,
+                4,
+                1
+            ],
+            [
+                1,
+                87,
+                90,
+                2
+            ],
+            [
+                5,
+                91,
+                94,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                130,
+                132,
+                2
+            ],
+            [
+                3,
+                146,
+                149,
+                1
+            ],
+            [
+                1,
+                150,
+                173,
+                3
+            ],
+            [
+                4,
+                163,
+                173,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "trivial",
+                    "yes",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2061,
+        "annotation_id": 2095,
+        "sentence_id": 687,
+        "batch": 11,
+        "hit_id": 31,
+        "user": "rachel",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified": "LaSalle's appointment was disagreed with by the progressive members of the New York Senate. || They spoke out against LaSalle because of how he handled cases involving abortion and labor, which they considered too conservative.",
+        "original_spans": [
+            [
+                1,
+                10,
+                20,
+                1
+            ],
+            [
+                1,
+                25,
+                32,
+                2
+            ],
+            [
+                0,
+                72,
+                77,
+                1
+            ],
+            [
+                2,
+                86,
+                89,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                90,
+                100,
+                3
+            ],
+            [
+                0,
+                111,
+                117,
+                3
+            ],
+            [
+                4,
+                140,
+                146,
+                1
+            ],
+            [
+                1,
+                158,
+                167,
+                4
+            ],
+            [
+                0,
+                168,
+                170,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                10,
+                21,
+                1
+            ],
+            [
+                1,
+                26,
+                40,
+                2
+            ],
+            [
+                3,
+                44,
+                47,
+                1
+            ],
+            [
+                2,
+                92,
+                94,
+                0
+            ],
+            [
+                2,
+                95,
+                99,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                100,
+                117,
+                3
+            ],
+            [
+                3,
+                126,
+                151,
+                3
+            ],
+            [
+                4,
+                152,
+                157,
+                1
+            ],
+            [
+                3,
+                158,
+                167,
+                4
+            ],
+            [
+                1,
+                199,
+                209,
+                4
+            ],
+            [
+                3,
+                210,
+                213,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "negative",
+                    "",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    ""
+                ],
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "trivial",
+                    "no",
+                    "",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "trivial",
+                    "yes",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": []
+        }
+    },
+    {
+        "id": 2064,
+        "annotation_id": 2096,
+        "sentence_id": 688,
+        "batch": 11,
+        "hit_id": 32,
+        "user": "rachel",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified": "Progressive members of the New York State Senate did not like LaSalle\u2019s nomination. || They criticized LaSalle's previous work on abortion and labor cases, which they thought were conservative.",
+        "original_spans": [
+            [
+                5,
+                21,
+                35,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                25,
+                32,
+                1
+            ],
+            [
+                4,
+                36,
+                85,
+                1
+            ],
+            [
+                2,
+                86,
+                89,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                111,
+                117,
+                2
+            ],
+            [
+                1,
+                158,
+                170,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                48,
+                1
+            ],
+            [
+                1,
+                49,
+                61,
+                1
+            ],
+            [
+                5,
+                49,
+                61,
+                1,
+                1,
+                1
+            ],
+            [
+                2,
+                84,
+                86,
+                0
+            ],
+            [
+                2,
+                87,
+                91,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                113,
+                126,
+                2
+            ],
+            [
+                1,
+                167,
+                179,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "negative",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2067,
+        "annotation_id": 2097,
+        "sentence_id": 689,
+        "batch": 11,
+        "hit_id": 33,
+        "user": "rachel",
+        "system": "simpeval-ext/Muss",
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified": "LaSalle's first job was in the New York State Senate. || Some members of the New York State Senate did not like LaSalle because they thought she was too conservative.",
+        "original_spans": [
+            [
+                0,
+                0,
+                20,
+                2
+            ],
+            [
+                5,
+                21,
+                35,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                21,
+                35,
+                1
+            ],
+            [
+                1,
+                25,
+                32,
+                1
+            ],
+            [
+                0,
+                36,
+                47,
+                3
+            ],
+            [
+                0,
+                86,
+                146,
+                4
+            ],
+            [
+                0,
+                147,
+                152,
+                5
+            ],
+            [
+                1,
+                158,
+                167,
+                2
+            ],
+            [
+                0,
+                168,
+                170,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                53,
+                1
+            ],
+            [
+                2,
+                54,
+                56,
+                0
+            ],
+            [
+                3,
+                57,
+                61,
+                2
+            ],
+            [
+                1,
+                99,
+                111,
+                1
+            ],
+            [
+                5,
+                99,
+                111,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                99,
+                111,
+                1
+            ],
+            [
+                3,
+                120,
+                127,
+                4
+            ],
+            [
+                1,
+                133,
+                140,
+                2
+            ],
+            [
+                3,
+                141,
+                152,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "hallucination",
+                    "no",
+                    "a lot",
+                    "no"
+                ],
+                [
+                    "trivial",
+                    "no",
+                    "",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2070,
+        "annotation_id": 2098,
+        "sentence_id": 690,
+        "batch": 11,
+        "hit_id": 34,
+        "user": "rachel",
+        "system": "simpeval-ext/T5-3B",
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified": "LaSalle's nomination was opposed by progressive members of the New York State Senate. || They criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [
+            [
+                2,
+                86,
+                89,
+                0,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ],
+            [
+                2,
+                89,
+                93,
+                0,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2073,
+        "annotation_id": 2099,
+        "sentence_id": 691,
+        "batch": 11,
+        "hit_id": 35,
+        "user": "rachel",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified": "Progressive members of the New York State Senate did not want LaSalle to be nominated. || They thought he was conservative because of his record on abortion and labor cases.",
+        "original_spans": [
+            [
+                4,
+                0,
+                20,
+                3
+            ],
+            [
+                5,
+                10,
+                20,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                21,
+                35,
+                1
+            ],
+            [
+                5,
+                21,
+                35,
+                2,
+                1,
+                1
+            ],
+            [
+                4,
+                36,
+                85,
+                2
+            ],
+            [
+                0,
+                86,
+                110,
+                1
+            ],
+            [
+                0,
+                147,
+                152,
+                2
+            ],
+            [
+                4,
+                153,
+                184,
+                1
+            ],
+            [
+                1,
+                158,
+                170,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                48,
+                2
+            ],
+            [
+                4,
+                49,
+                86,
+                3
+            ],
+            [
+                1,
+                49,
+                61,
+                1
+            ],
+            [
+                5,
+                49,
+                61,
+                2,
+                1,
+                1
+            ],
+            [
+                5,
+                70,
+                86,
+                1,
+                1,
+                1
+            ],
+            [
+                2,
+                87,
+                89,
+                0
+            ],
+            [
+                4,
+                90,
+                122,
+                1
+            ],
+            [
+                1,
+                95,
+                102,
+                2
+            ],
+            [
+                3,
+                103,
+                109,
+                2
+            ],
+            [
+                3,
+                123,
+                137,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ],
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ],
+                [
+                    "trivial",
+                    "yes",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2076,
+        "annotation_id": 2100,
+        "sentence_id": 692,
+        "batch": 11,
+        "hit_id": 36,
+        "user": "rachel",
+        "system": "simpeval-ext/T5-11B",
+        "original": "LaSalle's nomination was opposed by progressive members of the New York State Senate, who criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "simplified": "LaSalle's nomination was opposed by progressive members of the New York State Senate. || They criticized LaSalle's record on abortion and labor cases, which they perceived as conservative.",
+        "original_spans": [
+            [
+                2,
+                86,
+                89,
+                0,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                86,
+                88,
+                0
+            ],
+            [
+                2,
+                89,
+                93,
+                0,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2079,
+        "annotation_id": 2101,
+        "sentence_id": 693,
+        "batch": 11,
+        "hit_id": 37,
+        "user": "rachel",
+        "system": "simpeval-ext/Human-2-written",
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified": "In 2022, the Phillips Academy poll was used for the first time. || It correctly predicted the result of all senate races polled before Election Day. || This included Catherine Cortez Masto\u2019s victory in Nevada, but the poll overestimated Republican performance in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [
+            [
+                4,
+                13,
+                19,
+                1
+            ],
+            [
+                1,
+                20,
+                36,
+                1
+            ],
+            [
+                5,
+                119,
+                128,
+                1,
+                1,
+                1
+            ],
+            [
+                5,
+                200,
+                211,
+                2,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                30,
+                34,
+                1
+            ],
+            [
+                3,
+                35,
+                51,
+                1
+            ],
+            [
+                1,
+                52,
+                63,
+                1
+            ],
+            [
+                2,
+                64,
+                66,
+                0
+            ],
+            [
+                2,
+                67,
+                69,
+                0,
+                3,
+                1
+            ],
+            [
+                2,
+                149,
+                151,
+                1
+            ],
+            [
+                2,
+                152,
+                156,
+                1,
+                3,
+                1
+            ],
+            [
+                5,
+                157,
+                165,
+                1,
+                1,
+                1
+            ],
+            [
+                5,
+                237,
+                247,
+                2,
+                1,
+                1
+            ],
+            [
+                3,
+                248,
+                259,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "trivial",
+                    "yes",
+                    "somewhat",
+                    "no"
+                ],
+                null,
+                null,
+                [
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2082,
+        "annotation_id": 2102,
+        "sentence_id": 694,
+        "batch": 11,
+        "hit_id": 38,
+        "user": "rachel",
+        "system": "simpeval-ext/Muss",
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified": "In 2022, Phillips Academy correctly predicted all senate races before Election Day, including Catherine Cortez Masto's victory in Nevada. || However, the poll did not predict the Arizona governor's race or the Georgia senate runoff correctly.",
+        "original_spans": [
+            [
+                0,
+                9,
+                36,
+                1
+            ],
+            [
+                2,
+                173,
+                176,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                186,
+                214,
+                2
+            ],
+            [
+                5,
+                227,
+                235,
+                1,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                2,
+                138,
+                140,
+                0
+            ],
+            [
+                2,
+                141,
+                149,
+                0,
+                1,
+                1
+            ],
+            [
+                1,
+                159,
+                174,
+                2
+            ],
+            [
+                5,
+                187,
+                197,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                232,
+                242,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                null,
+                [
+                    "less",
+                    "good",
+                    "no",
+                    ""
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2085,
+        "annotation_id": 2103,
+        "sentence_id": 695,
+        "batch": 11,
+        "hit_id": 39,
+        "user": "rachel",
+        "system": "simpeval-ext/GPT-3-few-shot",
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified": "In 2022, Phillips Academy correctly forecasted all senate races polled before Election Day, such as Catherine Cortez Masto's win in Nevada. || However, it overestimated the Republican party in the races for the Arizona governor and Georgia senate runoff.",
+        "original_spans": [
+            [
+                0,
+                9,
+                36,
+                1
+            ],
+            [
+                1,
+                64,
+                73,
+                1
+            ],
+            [
+                1,
+                119,
+                128,
+                2
+            ],
+            [
+                2,
+                173,
+                176,
+                0,
+                1,
+                1
+            ],
+            [
+                5,
+                177,
+                185,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                236,
+                240,
+                1
+            ],
+            [
+                5,
+                236,
+                240,
+                2,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                36,
+                46,
+                1
+            ],
+            [
+                1,
+                92,
+                99,
+                2
+            ],
+            [
+                2,
+                140,
+                142,
+                0
+            ],
+            [
+                2,
+                143,
+                151,
+                0,
+                1,
+                1
+            ],
+            [
+                5,
+                152,
+                154,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                184,
+                189,
+                1
+            ],
+            [
+                4,
+                197,
+                202,
+                1
+            ],
+            [
+                5,
+                197,
+                202,
+                2,
+                1,
+                1
+            ],
+            [
+                3,
+                203,
+                206,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ],
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                null,
+                [
+                    "trivial",
+                    "yes",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    ""
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2088,
+        "annotation_id": 2104,
+        "sentence_id": 696,
+        "batch": 11,
+        "hit_id": 40,
+        "user": "rachel",
+        "system": "simpeval-ext/T5-3B",
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified": "In 2022, the poll's first cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada. || The poll also overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [
+            [
+                1,
+                20,
+                29,
+                1
+            ],
+            [
+                0,
+                173,
+                176,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                20,
+                25,
+                1
+            ],
+            [
+                2,
+                169,
+                171,
+                0
+            ],
+            [
+                3,
+                181,
+                185,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "bad",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "trivial",
+                    "no",
+                    "",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [],
+            "structure": []
+        }
+    },
+    {
+        "id": 2091,
+        "annotation_id": 2105,
+        "sentence_id": 697,
+        "batch": 11,
+        "hit_id": 41,
+        "user": "rachel",
+        "system": "simpeval-ext/Human-1-written",
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified": "In 2022, the Philips Academy poll correctly predicted the winners of all senate races which were polled before Election Day. || This included Catherine Cortez Masto\u2019s win in Nevada. || However, the poll wrongly predicted more Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [
+            [
+                0,
+                9,
+                36,
+                1
+            ],
+            [
+                4,
+                13,
+                19,
+                1
+            ],
+            [
+                5,
+                119,
+                128,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                154,
+                161,
+                2
+            ],
+            [
+                2,
+                173,
+                176,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                186,
+                199,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                29,
+                33,
+                1
+            ],
+            [
+                2,
+                125,
+                127,
+                0
+            ],
+            [
+                2,
+                128,
+                132,
+                0,
+                3,
+                1
+            ],
+            [
+                5,
+                133,
+                141,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                167,
+                170,
+                2
+            ],
+            [
+                2,
+                182,
+                184,
+                1
+            ],
+            [
+                2,
+                185,
+                193,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                203,
+                225,
+                4
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                null,
+                [
+                    "same",
+                    "no",
+                    "",
+                    "",
+                    "yes"
+                ]
+            ],
+            "insertion": [],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2094,
+        "annotation_id": 2106,
+        "sentence_id": 698,
+        "batch": 11,
+        "hit_id": 42,
+        "user": "rachel",
+        "system": "simpeval-ext/GPT-3-zero-shot",
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified": "Phillips Academy correctly predicted all senate races in the 2022 poll before Election Day, including Catherine Cortez Masto's win in Nevada. || However, the poll was inaccurate in the Arizona governor race and the Georgia senate runoff, overestimating the Republican vote.",
+        "original_spans": [
+            [
+                4,
+                0,
+                8,
+                1
+            ],
+            [
+                0,
+                9,
+                36,
+                1
+            ],
+            [
+                1,
+                154,
+                161,
+                1
+            ],
+            [
+                2,
+                173,
+                176,
+                0,
+                1,
+                1
+            ],
+            [
+                4,
+                186,
+                211,
+                2
+            ],
+            [
+                5,
+                186,
+                199,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                200,
+                211,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                54,
+                65,
+                1
+            ],
+            [
+                3,
+                57,
+                60,
+                1
+            ],
+            [
+                1,
+                127,
+                130,
+                1
+            ],
+            [
+                2,
+                142,
+                144,
+                0
+            ],
+            [
+                2,
+                145,
+                153,
+                0,
+                1,
+                1
+            ],
+            [
+                3,
+                163,
+                177,
+                2
+            ],
+            [
+                4,
+                238,
+                273,
+                2
+            ],
+            [
+                5,
+                238,
+                252,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                253,
+                273,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": [
+                null,
+                [
+                    "good",
+                    "no",
+                    "no"
+                ]
+            ],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "minor",
+                    "",
+                    "no"
+                ],
+                null,
+                [
+                    "more",
+                    "elaboration",
+                    "somewhat",
+                    "no"
+                ]
+            ],
+            "insertion": [
+                null,
+                [
+                    "trivial",
+                    "yes",
+                    "minor",
+                    "no"
+                ],
+                [
+                    "elaboration",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "split": [
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ],
+            "reorder": [
+                null,
+                [
+                    "no",
+                    "",
+                    "",
+                    "no",
+                    "component"
+                ],
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no",
+                    "component"
+                ]
+            ],
+            "structure": [
+                null,
+                [
+                    "positive",
+                    "",
+                    "minor",
+                    "no"
+                ]
+            ]
+        }
+    },
+    {
+        "id": 2097,
+        "annotation_id": 2107,
+        "sentence_id": 699,
+        "batch": 11,
+        "hit_id": 43,
+        "user": "rachel",
+        "system": "simpeval-ext/T5-11B",
+        "original": "In 2022, the poll's inaugural cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "simplified": "In 2022, the poll's first cycle, Phillips Academy correctly predicted all senate races polled before Election Day, including Catherine Cortez Masto's victory in Nevada, but the poll overestimated Republicans in the Arizona governor race and the Georgia senate runoff.",
+        "original_spans": [
+            [
+                1,
+                20,
+                29,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                20,
+                25,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": [],
+            "substitution": [
+                null,
+                [
+                    "same",
+                    "positive",
+                    "somewhat",
+                    "",
+                    "no"
+                ]
+            ],
+            "insertion": [],
+            "split": [],
+            "reorder": [],
+            "structure": []
+        }
+    }
+]
