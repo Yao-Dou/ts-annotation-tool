@@ -1,0 +1,193 @@
+<example-sent>
+    <template #complex-sent>Clank <es>asks Ratchet to help him</es> find the famous superhero Captain Qwark.</template>
+    <template #simple-sent>Clank <es>asks for help from Ratchet to</es> find Captain Qwark.</template>
+    <template #edit>
+        <edit
+            type="substitution"
+            subtype="same"
+            span="asks Ratchet to help him"
+            span2="asks for help from Ratchet to"
+            explanation="the new span has exactly the same meaning as the original span."
+            ></edit>
+    </template>
+</example-sent>
+
+<example-sent>
+    <template #complex-sent>He <es>served as the prime minister of Egypt</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1946 and again from 1946 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+    <template #simple-sent>He <es>was Egypt's Prime Minister</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+    <template #edit>
+        <edit
+            type="substitution"
+            subtype="same"
+            span="served as the prime minister of Egypt"
+            span2="was Egypt's Prime Minister"
+            explanation="the new span has exactly the same meaning as the original span."
+            ></edit>
+        <edit
+            type="substitution"
+            subtype="less"
+            span="between 1945 and 1946 and again from 1946 and 1948."
+            span2="between 1945 and 1948."
+            explanation="the new span misses a small detail about `again`"
+            ></edit>
+    </template>
+</example-sent>
+
+<example-sent>
+    <template #complex-sent>She appeared in <es>several</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>online videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"It Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+    <template #simple-sent>She appeared in <es>a few</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>music videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"She Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+    <template #edit>
+        <edit
+            type="substitution"
+            subtype="same"
+            span="several"
+            span2="a few"
+            explanation="several and a few expresses the same meaning."
+            ></edit>
+        <edit
+            type="substitution"
+            subtype="more"
+            span="online videos"
+            span2="music videos"
+            explanation="music videos is a more specific type of online videos."
+            ></edit>
+        <edit
+            type="substitution"
+            subtype="different"
+            span='"It Girl"'
+            span2='"She Girl"'
+            explanation='"She Girl" is different from "It Girl"'
+            ></edit>
+    </template>
+</example-sent>
+
+<h2>Rating by Severity</h2>
+
+<example-sent>
+    <template #complex-sent>Clank <es>asks Ratchet to help him</es> find the famous superhero Captain Qwark.</template>
+    <template #simple-sent>Clank <es>asks for help from Ratchet to</es> find Captain Qwark.</template>
+    <template #edit>
+        <edit
+            type="substitution"
+            subtype="same"
+            simplify=false
+            span="asks Ratchet to help him"
+            span2="asks for help from Ratchet to"
+            explanation="the new span doesn't simplify the original span."
+            ></edit>
+    </template>
+</example-sent>
+
+<example-sent>
+    <template #complex-sent>He <es>served as the prime minister of Egypt</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1946 and again from 1946 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+    <template #simple-sent>He <es>was Egypt's Prime Minister</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>between 1945 and 1948.</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub></template>
+    <template #edit>
+        <edit
+            type="substitution"
+            subtype="same"
+            simplify=true
+            span="served as the prime minister of Egypt"
+            span2="was Egypt's Prime Minister"
+            explanation="the new span is simpler than the original span."
+            ></edit>
+        <edit
+            type="substitution"
+            subtype="less"
+            answer=2
+            span="between 1945 and 1946 and again from 1946 and 1948."
+            span2="between 1945 and 1948."
+            explanation="`again` is a minor detail in the original sentence."
+            ></edit>
+    </template>
+</example-sent>
+
+<example-sent>
+    <template #complex-sent>She appeared in <es>several</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>online videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"It Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+    <template #simple-sent>She appeared in <es>a few</es> <sub><i class="fa-solid fa-1 fa-2xs txt-substitution"></i></sub> <es>music videos</es> <sub><i class="fa-solid fa-2 fa-2xs txt-substitution"></i></sub> including <es>"She Girl"</es> <sub><i class="fa-solid fa-3 fa-2xs txt-substitution"></i></sub> by John Oates</template>
+    <template #edit>
+        <edit
+            type="substitution"
+            subtype="same"
+            simplify=true
+            span="several"
+            span2="a few"
+            explanation="'a few' is simpler than 'several'."
+            ></edit>
+        <edit
+            type="substitution"
+            subtype="more"
+            subsubtype="elaboration"
+            answer=2
+            span="online videos"
+            span2="music videos"
+            explanation="music videos is more specific than online videos and it corrsponds to `It Gril`, so it is is an elaboration."
+            ></edit>
+        <edit
+            type="substitution"
+            subtype="different"
+            answer=2
+            span='"It Girl"'
+            span2='"She Girl"'
+            explanation='For this one, you can mark the severity as 1 or 2.'
+            ></edit>
+    </template>
+</example-sent>
+
+<h1>Examples of splits</h1>
+
+<p class="red">more complex and interesting ones</p>
+
+                <example-sent>
+                    <template #complex-sent>Defined as air quality deemed unhealthy for all age groups, "extreme smoke day" happens more and more often in the past decade.</template>
+                    <template #simple-sent>"Extreme smoke day" is defined as air quality deemed unhealthy for all age groups. <esp>||</esp> It happens more and more often in the past decade.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            split_edit="insertion"
+                            simplify=false
+                            span="and"
+                            explanation="delete `and` is associated with this split edit."
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>The polymer is most often epoxy, but other polymers, such as polyester, vinyl ester or nylon, are also sometimes used.</template>
+                    <template #simple-sent>Often the polymer used is epoxy, other polymers that can be used are polyester, vinyl ester or nylon.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>The task find a model that best fits some observed data and prior information  is known as data fitting.</template>
+                    <template #simple-sent>Data fitting is the task to find a model that best fits some information.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            ></edit>
+                    </template>
+                </example-sent>
+
+                <example-sent>
+                    <template #complex-sent>The award-winning chef prepares each meal with loving care.</template>
+                    <template #simple-sent>Each meal is cooked with loving care by the award-winning chef.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            ></edit>
+                    </template>
+                </example-sent>
+
+
+                <example-sent>
+                    <template #complex-sent>Fearing that Drek will destroy the galaxy, Clank asks Ratchet to help him find the famous superhero Captain Qwark, in an effort to stop Drek.</template>
+                    <template #simple-sent>Clank was fearing that Drek will destroy the galaxy, so he asked Ratchet to help him find the famous superhero Captain Qwark, in an effort to stop Drek.</template>
+                    <template #edit>
+                        <edit
+                            type="split"
+                            ></edit>
+                    </template>
+                </example-sent>
