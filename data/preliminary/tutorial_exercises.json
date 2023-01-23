@@ -1,0 +1,594 @@
+[
+    {
+        "id": 0,
+        "original": "Genetic diversity among male bees in honey bee mating areas can lead to stronger, healthier honey bee colonies.",
+        "original_spans": [],
+        "simplified": "When male bees have diversity in their DNA, honey bee mating areas can lead to stronger and healthier honey bee groups.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 1,
+        "original": "The Krispy Kreme location has been closed since Feb. 10, when it was gutted by suspected arson, leaving the back of the building a charred shell and melting much of the interior.",
+        "original_spans": [],
+        "simplified": "The Krispy Kreme, a popular doughnut shop in Atlanta, has been closed after it was burned down, leaving the back of the building a charred shell, while melting much of the inside.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 2,
+        "original": "Sanskrit arose in South Asia after its predecessor languages had diffused there from the northwest in the late Bronze Age.",
+        "original_spans": [],
+        "simplified": "After the Bronze age, old, parent languages had began travelling into South Asia. || From that, Sansckrit arose.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 3,
+        "original": "SIMSREE was named after the then-governor of Bombay, Lord Sydenham of Combe, who was an early proponent in the spread of commerce-based vocational courses in India.",
+        "original_spans": [],
+        "simplified": "SIMSREE was named after the governor of Bombay, who was an proponent in the spread of courses in India.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 4,
+        "original": "The first of these was the 2008\u201309 season, in which the team finished 3rd in the Western Conference, with a 50\u201332 record, and lost in the first round of the playoffs to the eventual champion Los Angeles Lakers.",
+        "original_spans": [],
+        "simplified": "The first of these was the 2008\u201309 season, in which the team finished 3rd in the Western Conference, and lost to the champion Los Angeles Lakers.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 5,
+        "original": "A few animals have chromatic response, changing color in changing environments, either seasonally (ermine, snowshoe hare) or far more rapidly with chromatophores in their integument (the cephalopod family).",
+        "original_spans": [],
+        "simplified": "A few animals have response, changing color in changing environments, either seasonally or far more rapidly.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 6,
+        "original": "Chomsky weaves global technological change and the primacy of responsible media with the democratic role of schools and higher education.",
+        "original_spans": [],
+        "simplified": "Chomsky, a famous American linguist, weaves global technological and scientific change and the primacy of responsible media that with the democratic role of schools, public schools and higher education in his book \u201con Mis-Education\u201d.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 7,
+        "original": "On April 10, 2018, the league announced that Color Rush promotion would be discontinued under the terms of the new Thursday Night Football broadcast contract.",
+        "original_spans": [],
+        "simplified": "On Tuesday, April 10, 2018, the NFL football league announced that the Color Rush uniform promotion, where colors were uniform, would be discontinued, or ended, under the terms of the new Thursday Night Football broadcast contract, which is an agreement between two parties.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 8,
+        "original": "He toured with the IPO in the spring of 1990 for their first-ever performance in the Soviet Union, with concerts in Moscow and Leningrad, and toured with the IPO again in 1994, performing in China and India.",
+        "original_spans": [],
+        "simplified": "He performed with the IPO in the spring of 1990 for their first time in the Soviet Union with concerts in Moscow and Leningrad, and performed with the IPO again in China and India in 1994.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 9,
+        "original": "It has a capacity of 98,772, making it the largest stadium in Europe, and the eleventh largest in the world.",
+        "original_spans": [],
+        "simplified": "It can accommodate 98,772 people which makes it the largest stadium in Europe and the eleventh largest in the world.\"",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 10,
+        "original": "Mercury is similar in appearance to the Moon: it is heavily cratered with regions of smooth plains, has no natural satellites and no substantial atmosphere.",
+        "original_spans": [],
+        "simplified": "Mercury, which looks like the Moon with its many craters and areas of smoothness, has no orbiting bodies around it and a minimal atmosphere.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 11,
+        "original": "The incidence of Am stars hosting hot-brown dwarfs resulted higher than the frequency of Am stars in general",
+        "original_spans": [],
+        "simplified": "Compared to Am starts generally, Am stars which hosted hot-brown drafs were more frequent.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 12,
+        "original": "A straightforward solution for foggy car windows is run the heater.",
+        "original_spans": [],
+        "simplified": "An easy fix for foggy car windows is run the heater.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 13,
+        "original": "Contrary to popular belief, the moon is made of rocks, not cheese.",
+        "original_spans": [],
+        "simplified": "The moon is made of rocks, not cheese.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 14,
+        "original": "The S&P 500 closed after heavy trading.",
+        "original_spans": [],
+        "simplified": "The S&P 500, an index fund of the largest 500 companies, closed after heavy trading.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 15,
+        "original": "Although the subject lacked character developement, he grew in other ways.",
+        "original_spans": [],
+        "simplified": "The subject lacked character development and grew in other ways.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 16,
+        "original": "A straightforward solution, which can sometimes take a while, for foggy car windows is\u00a0to run\u00a0the heater",
+        "original_spans": [],
+        "simplified": "An easy fix for foggy car windows is to\u00a0run\u00a0the heater",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 17,
+        "original": "The tallest timber-frame structure in the U.S., by all accounts, is\u00a0Carbon12, an eight-story condominium tower in Portland OR, completed in 2018.",
+        "original_spans": [],
+        "simplified": "The tallest timber-frame building in the U.S., using only wood pegs instead of nails and screws, is Carbon12 in Portland OR.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 18,
+        "original": "The award-winning chef prepares each meal with loving care",
+        "original_spans": [],
+        "simplified": "Each meal is prepared with loving care by the award-winning chef.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 19,
+        "original": "The task find a model that best fits some observed data and prior information is known as data fitting",
+        "original_spans": [],
+        "simplified": "Data fitting is the task to find a model that best fits some information.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 20,
+        "original": "The earliest available history shows that in 1831 the entire Heckscherville valley contained only two villages.",
+        "original_spans": [],
+        "simplified": "In 1831 the Heckscherville valley contained two villages.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 21,
+        "original": "If unsaturated air is passed through a spray of continuously recirculated water, the specific humidity will increase while the dry bulb temperature decreases.",
+        "original_spans": [],
+        "simplified": "If air is passed through recirculated water, the humidity will increase temperature decreases.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 22,
+        "original": "Like so many hyped books before it,\u00a0The Midnight Library\u00a0excited me and gave me pause.",
+        "original_spans": [],
+        "simplified": "The Midnight Library\u00a0excited me and gave me pause.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 23,
+        "original": "Two security flaws, dubbed Meltdown and Spectre by researchers, were made public on 29 January 2018.",
+        "original_spans": [],
+        "simplified": "Two security flaws, dubbed Meltdown and Spectre by researchers, were made public.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 24,
+        "original": "Though part of the Purbeck Hills, Creech Barrow stands out, detached.",
+        "original_spans": [],
+        "simplified": "Creech Barrow stands out.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 25,
+        "original": "If glycolysis evolved relatively late, it likely would not be as universal in organisms as it is.",
+        "original_spans": [],
+        "simplified": "It likely would not be as universal in organisms as it is.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 26,
+        "original": "He, Euler, was also the first practitioner of graph theory.",
+        "original_spans": [],
+        "simplified": "He was also the first practitioner of graph theory.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 27,
+        "original": "As Euler looked for a solution to the Seven Bridges of Konigsbert, he, Euler, was also the first practitioner of graph theory.",
+        "original_spans": [],
+        "simplified": "As Euler looked for a solution to the Seven Bridges of Konigsbert, he was also the first practitioner of graph theory.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 28,
+        "original": "E. coli and salmonella can both cause food poisoning, while it (salmonella) exclusively comes from raw meat or unwashed produce.",
+        "original_spans": [],
+        "simplified": "E. coli and salmonella can both cause food poisoning, while it exclusively comes from raw meat or unwashed produce.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 29,
+        "original": "In January, the Watergate burglars were convicted, along with Hunt and Liddy.",
+        "original_spans": [],
+        "simplified": "In January, the Watergate burglars along with Hunt and Liddy.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 30,
+        "original": "Let\u2019s eat, grandpa!",
+        "original_spans": [],
+        "simplified": "Let\u2019s eat grandpa!",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 31,
+        "original": "A second non-traditional way to enter the M&A stream is through strategic board enhancements.",
+        "original_spans": [],
+        "simplified": "A second alternative, non-traditional way to enter the M&A (mergers & acquisitions) stream is through strategic board enhancements.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 32,
+        "original": "The FZD1 transcript is expressed in various tissues.",
+        "original_spans": [],
+        "simplified": "The FZD1 protein transcript is expressed in the various tissues.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 33,
+        "original": "Only certain organisms, called photoautotrophs, can perform photosynthesis.",
+        "original_spans": [],
+        "simplified": "Only certain organisms, called photoautotrophs, can perform photosynthesis when they decide to.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 34,
+        "original": "Only certain organisms, called photoautotrophs, can perform photosynthesis.",
+        "original_spans": [],
+        "simplified": "Only certain organisms can perform photosynthesis, called photoautotrophs, can perform photosynthesis.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 35,
+        "original": "In January, the Watergate burglars were convicted, along with Hunt and Liddy.",
+        "original_spans": [],
+        "simplified": "In January, the Watergate burglars were not convicted, along with Hunt and Liddy.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 36,
+        "original": "How big is the family you cook for?",
+        "original_spans": [],
+        "simplified": "How big is the family that you cook for?",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 37,
+        "original": "Many volitile organic chemicals are increasing in abundance in the lower troposphere.",
+        "original_spans": [],
+        "simplified": "Many volitile organic chemicals, which harm our environment, are increasing in abundance in the lower troposphere.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 38,
+        "original": "Many volitile organic chemicals are increasing in abundance in the lower troposphere.",
+        "original_spans": [],
+        "simplified": "Many volitile organic chemicals, which are bad, are increasing in abundance in the lower troposphere.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 39,
+        "original": "Many volitile organic chemicals are increasing in abundance in the lower troposphere.",
+        "original_spans": [],
+        "simplified": "Many volitile organic chemicals, which are chemicals, are increasing in abundance in the lower troposphere.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 40,
+        "original": "Many volitile organic chemicals are increasing in abundance in the lower troposphere.",
+        "original_spans": [],
+        "simplified": "Many volitile organic chemicals, which are decreasing, are increasing in abundance in the lower troposphere.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 41,
+        "original": "Many volitile organic chemicals are increasing in abundance in the lower troposphere.",
+        "original_spans": [],
+        "simplified": "Many volitile organic chemicals of varying size are increasing in abundance in the lower troposphere.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 42,
+        "original": "Many volitile organic chemicals are increasing in abundance in the lower troposphere.",
+        "original_spans": [],
+        "simplified": "Many volitile organic chemicals organic chemicals organic chemicals are increasing in abundance in the lower troposphere.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 43,
+        "original": "Atmospheric nitrogen is the largest pool of available nitrogen in terrestrial ecosystems.",
+        "original_spans": [],
+        "simplified": "Atmospheric nitrogen, in our air on earth, is the largest pool of an available nitrogen in terrestrial ecosystems our scientists had access to.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 44,
+        "original": "\u00c9ric Gauthier is also a\u00a0novella author specialising in\u00a0science fiction\u00a0and\u00a0fantasy.",
+        "original_spans": [],
+        "simplified": "\u00c9ric Gauthier, famous for his soloist dancing career, is also a\u00a0novella author specialising in\u00a0the science fiction\u00a0and\u00a0fantasy genres.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 45,
+        "original": "John was traveling in the summer in 2020.",
+        "original_spans": [],
+        "simplified": "John was traveling in the summer in Paris.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 46,
+        "original": "John was traveling in the summer in 2020. ",
+        "original_spans": [],
+        "simplified": "John was skiing  in the winter in 2021.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 47,
+        "original": "Multinomial logistic regression uses the softmax function to compute probabilities.",
+        "original_spans": [],
+        "simplified": "Logit regression uses a function to convert arbitrary numbers to probability to compute likelihood.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 48,
+        "original": "Product hops to albuterol inhalers containing hydrofluoroalkane rather than chlorofluorocarbons cost remunerators and outpatients billions of dollars.",
+        "original_spans": [],
+        "simplified": "Product transitions by companies to new products containing different chemicals cost payers and patients billions of dollars.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 49,
+        "original": "In the best cases, these bonds transcend any simplistic dynamic of a caregiver and convalescent, instead embodying a profound reciprocity.",
+        "original_spans": [],
+        "simplified": "In the superlative cases, these bonds are more important than any simplistic relationship between a caregiver and a person being cared for, instead embodying a profound reciprocation.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 50,
+        "original": "At the international level sport is frankly mimic warfare.",
+        "original_spans": [],
+        "simplified": "At the multi-national level sport is frankly impressionist warfare.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 51,
+        "original": "The researchers conducted an assay.",
+        "original_spans": [],
+        "simplified": "The researchers conducted an investigation.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 52,
+        "original": "Levels of adherence for each risk factor differed by aortic disease subtype, as did composite adherence.",
+        "original_spans": [],
+        "simplified": "Levels of adherence for each event differed by aortic disease subtype, as did the amount of exercise each participant could do.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 53,
+        "original": "This study used in-person, semi-structured interviews with collegiate esports players to explore how players conceptualized their competitive gameplay through the serious leisure framework.",
+        "original_spans": [],
+        "simplified": "This study interviewed college-level esports players to explore how they saw their competitive gameplay through the \u201cserious leisure framework\u201d.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 54,
+        "original": "Herbert Spencer\u2019s book makes the first thorough analysis of this agrarian society.",
+        "original_spans": [],
+        "simplified": "His book makes the first in-depth analysis of this rural society society.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 55,
+        "original": "A typical afternoon in Iceland can feel like standing in a wind tunnel loaded with seawater, and yet Icelandic horses trot around calmly.",
+        "original_spans": [],
+        "simplified": "A typical afternoon in Iceland can feel like standing in a wind tunnel loaded with seawater. || And yet Icelandic horses trot around calmly.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 56,
+        "original": "Today is Jack's 21st birthday, and he and his famility goes to Florida to celebrate!",
+        "original_spans": [],
+        "simplified": "Today is Jack's 21st birthday. || He and his famility goes to Florida to celebrate!",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 57,
+        "original": "Animals \u2014 our sharp, loud, restless, dangerous, inconvenient planetary roommates \u2014 were pushed to the margins.",
+        "original_spans": [],
+        "simplified": "Animals are our sharp, loud, restless, dangerous, inconvenient planetary roommates. || But they were pushed to the margins.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 58,
+        "original": "\u201cPeople may be less likely to notice days with a modest increase in fine particulate matter from smoke, but those days can still have an impact on people\u2019s health,\u201d said Marissa Childs, who led the research while getting her Ph.D from Stanford.",
+        "original_spans": [],
+        "simplified": "\u201cPeople may be less likely to notice days with a modest increase in fine particulate matter from smoke, but those days can still have an impact on people\u2019s health,\u201d said Marissa Childs. || She led the research while getting her Ph.D from Stanford.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 59,
+        "original": "Donaldson attempted to speak clearly.",
+        "original_spans": [],
+        "simplified": "Because donaldson attempted to speak clearly.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 60,
+        "original": "We compute the Pearson correlation to asses annotation quality.",
+        "original_spans": [],
+        "simplified": "We computed the Pearson correlation when we assessed annotation quality.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 61,
+        "original": "Her book makes the first thorough analysis of this rural society.",
+        "original_spans": [],
+        "simplified": "The first thorough analysis of this rural society is made by her book.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 62,
+        "original": "Her book makes the first thorough analysis of this rural society, and one that draws on all available sources.",
+        "original_spans": [],
+        "simplified": "Drawing on all available sources, her book makes the first thorough analysis of this rural society.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 63,
+        "original": "Although I found structural annotation difficult, with practice the annotation became easier.",
+        "original_spans": [],
+        "simplified": "With practice the annotation became easier, although I found structural annotation difficult.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 64,
+        "original": "Although I found structural annotation difficult, with practice the annotation became easier.",
+        "original_spans": [],
+        "simplified": "The annotation became easier with practice, although I found structural annotation difficult.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 65,
+        "original": "Although I found structural annotation difficult, with practice the annotation became easier.",
+        "original_spans": [],
+        "simplified": "I found structural annotation difficult because practice made the annotation easier.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 66,
+        "original": "Like an actor repeating his part in an old play, Prince Vassily always spoke languidly.",
+        "original_spans": [],
+        "simplified": "Like an actor repeating his part in an old play, Prince Vassily had always spoke languidly.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 67,
+        "original": "Like an actor repeating his part in an old play Prince Vassily always spoke languidly.",
+        "original_spans": [],
+        "simplified": "Prince Vassily always spoke languidly, like an actor repeating his part in an old play",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 68,
+        "original": "Like an actor repeating his part in an old play, Prince Vassily always spoke languidly",
+        "original_spans": [],
+        "simplified": "Like an actor repeating his part in an old play, languidly was how Prince Vassily always spoke.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 69,
+        "original": "The amount that Phoenix spends on criminal enforcement is difficult to quantify in part because the City does not classify arrests by housing status.",
+        "original_spans": [],
+        "simplified": "Because the City of Pheonix, in part, refuses to use an individual\u2019s housing to organize arrests, it has become hard to find out how much it spends on policing.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 70,
+        "original": "Because ice cream sales have increased, we observe more reported drownings",
+        "original_spans": [],
+        "simplified": "More reported drownings are observed because ice cream sales have increased.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 71,
+        "original": "Anna Pavlovna Scherer, in spite of her forty years was on the contrary brimming over with excitement and impulsiveness.",
+        "original_spans": [],
+        "simplified": "In spite of her many years, Anna Pavlovna Scherer overflows with impulsiveness and excitement, on the contrary of her age.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 72,
+        "original": "The fact of the matter is that it is not John Ziegler's job to be responsible, or nuanced, or to think about whether his on-air comments are productive or dangerous, or cogent, or even defensible.",
+        "original_spans": [],
+        "simplified": "Whether what he says during his show is helpful or not, being responsible is not John Ziegler's job.",
+        "simplified_spans": [],
+        "system": "human/tutorial.txt"
+    },
+    {
+        "id": 73,
+        "original": "The notion of nodal security governance while first formulated by Shearing on his visit to Disney World was refined and exemplified in his fieldwork in Zwelethemba.",
+        "original_spans": [],
+        "simplified": "The idea of nodal security governance, first thought of by Shearing on his visit to Disney World, was worked on. || This idea was then shown when he worked in Zwelethemba.",
+        "simplified_spans": [[2, 113, 115, 0]],
+        "system": "human/tutorial.txt"
+    }
+]

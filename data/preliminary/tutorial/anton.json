@@ -1,0 +1,781 @@
+[
+  {
+    "id": 0,
+    "original": "In August 2003, the San Diego Union Tribune alleged that U.S. Marine pilots and their commanders confirmed the use of Mark 77 firebombs on Iraqi Republican Guards during the initial stages of combat.",
+    "original_spans": [
+      [
+        1,
+        44,
+        51,
+        2
+      ],
+      [
+        5,
+        107,
+        117,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        170,
+        199,
+        3
+      ]
+    ],
+    "simplified": "In August 2003, the San Diego Union Tribune said that U.S. Marine pilots and their commanders confirmed that Mark 77 firebombs were used on Iraqi Republican Guards during the first days of the war.",
+    "simplified_spans": [
+      [
+        1,
+        44,
+        48,
+        2
+      ],
+      [
+        5,
+        104,
+        108,
+        1,
+        3,
+        1
+      ],
+      [
+        5,
+        127,
+        136,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        171,
+        197,
+        3
+      ]
+    ],
+    "system": "systems/T5.txt",
+    "annotations": {
+      "deletion": [],
+      "substitution": [
+        null,
+        null,
+        [
+          "same",
+          "positive",
+          "a lot",
+          "",
+          "no"
+        ],
+        [
+          "same",
+          "positive",
+          "a lot",
+          "",
+          "no"
+        ]
+      ],
+      "insertion": [
+        null,
+        null
+      ],
+      "split": [],
+      "reorder": [
+        null,
+        null
+      ],
+      "structure": [
+        null,
+        [
+          "positive",
+          "",
+          "minor",
+          "no"
+        ]
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "original": "Napoleonic Wars: Austrian General Mack surrenders his army to the Grand Army of Napoleon at Ulm, reaping Napoleon over 30,000 prisoners and inflicting 10,000 casualties on the losers.",
+    "original_spans": [
+      [
+        1,
+        0,
+        16,
+        1
+      ],
+      [
+        0,
+        17,
+        25,
+        1
+      ],
+      [
+        5,
+        39,
+        49,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        97,
+        104,
+        2
+      ],
+      [
+        5,
+        114,
+        168,
+        2,
+        4,
+        1
+      ],
+      [
+        5,
+        172,
+        183,
+        2,
+        1,
+        1
+      ]
+    ],
+    "simplified": "During the Napoleonic Wars, by the time General Mack had surrendered his army to the Grand Army of Napoleon at Ulm, 10,000 of his soldiers were dead, while another 30,000 were taken as prisoners to Napoleon.",
+    "simplified_spans": [
+      [
+        1,
+        0,
+        27,
+        1
+      ],
+      [
+        5,
+        28,
+        39,
+        1,
+        3,
+        1
+      ],
+      [
+        5,
+        53,
+        68,
+        1,
+        1,
+        1
+      ],
+      [
+        5,
+        150,
+        155,
+        2,
+        3,
+        1
+      ],
+      [
+        3,
+        195,
+        207,
+        1
+      ],
+      [
+        5,
+        null,
+        null,
+        2,
+        4,
+        1
+      ],
+      [
+        5,
+        126,
+        138,
+        2,
+        1,
+        1
+      ]
+    ],
+    "system": "new_systems/turk_corpus_random.txt",
+    "annotations": {
+      "deletion": [
+        null,
+        [
+          "perfect",
+          "no",
+          "no"
+        ],
+        [
+          "good",
+          "no",
+          "no"
+        ],
+        null
+      ],
+      "substitution": [
+        null,
+        [
+          "same",
+          "positive",
+          "somewhat",
+          "",
+          "no"
+        ],
+        null
+      ],
+      "insertion": [
+        null,
+        [
+          "repetition",
+          "minor",
+          "no"
+        ]
+      ],
+      "split": [],
+      "reorder": [
+        null,
+        null
+      ],
+      "structure": [
+        null,
+        [
+          "positive",
+          "",
+          "minor",
+          "no"
+        ],
+        [
+          "positive",
+          "",
+          "minor",
+          "no"
+        ],
+        null
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "original": "The compact and intense hurricane caused extreme damage in the upper Florida Keys, as a storm surge of approximately 18 to 20 feet affected the region.",
+    "original_spans": [
+      [
+        1,
+        24,
+        33,
+        1
+      ],
+      [
+        4,
+        41,
+        48,
+        1
+      ],
+      [
+        4,
+        49,
+        55,
+        4
+      ],
+      [
+        4,
+        69,
+        76,
+        2
+      ],
+      [
+        1,
+        94,
+        99,
+        2
+      ],
+      [
+        4,
+        117,
+        119,
+        5
+      ]
+    ],
+    "simplified": "The compact and intense surge caused Florida 18 in the upper extreme Keys, as a storm hurricane of approximately damage to 20 feet the affected region.",
+    "simplified_spans": [
+      [
+        1,
+        24,
+        29,
+        1
+      ],
+      [
+        4,
+        37,
+        44,
+        2
+      ],
+      [
+        4,
+        45,
+        47,
+        5
+      ],
+      [
+        4,
+        61,
+        68,
+        1
+      ],
+      [
+        1,
+        86,
+        95,
+        2
+      ],
+      [
+        4,
+        113,
+        119,
+        4
+      ],
+      [
+        3,
+        131,
+        134,
+        1
+      ]
+    ],
+    "system": "systems/scramble_words.txt",
+    "annotations": {
+      "deletion": [],
+      "substitution": [
+        null,
+        [
+          "less",
+          "very bad",
+          "no",
+          ""
+        ],
+        [
+          "different",
+          "minor",
+          "no"
+        ]
+      ],
+      "insertion": [
+        null,
+        [
+          "trivial",
+          "no",
+          "",
+          "yes"
+        ]
+      ],
+      "split": [],
+      "reorder": [
+        null,
+        [
+          "negative",
+          "a lot",
+          "",
+          "yes",
+          ""
+        ],
+        [
+          "negative",
+          "a lot",
+          "",
+          "yes",
+          ""
+        ],
+        null,
+        [
+          "negative",
+          "a lot",
+          "",
+          "yes",
+          ""
+        ],
+        [
+          "negative",
+          "a lot",
+          "",
+          "yes",
+          ""
+        ]
+      ],
+      "structure": []
+    }
+  },
+  {
+    "id": 3,
+    "original": "The four canonical texts are the Gospel of Matthew, Gospel of Mark, Gospel of Luke and Gospel of John, probably written between AD 65 and 100 (see also the Gospel according to the Hebrews).",
+    "original_spans": [
+      [
+        0,
+        142,
+        189,
+        1
+      ]
+    ],
+    "simplified": "The four canonical texts are the gospel of matthew, gospel of mark, gospel of luke and gospel of john, probably written between ad 65 and 100.",
+    "simplified_spans": [],
+    "system": "systems/lstm_w_split.txt",
+    "annotations": {
+      "deletion": [
+        null,
+        [
+          "perfect",
+          "no",
+          "no"
+        ]
+      ],
+      "substitution": [],
+      "insertion": [],
+      "split": [],
+      "reorder": [],
+      "structure": []
+    }
+  },
+  {
+    "id": 4,
+    "original": "Shade sets the main plot of the novel in motion when he impetuously defies that law, and inadvertently initiates a chain of events that leads to the destruction of his colony's home, forcing their premature migration, and his separation from them.",
+    "original_spans": [
+      [
+        5,
+        6,
+        10,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        20,
+        24,
+        2
+      ],
+      [
+        1,
+        32,
+        37,
+        3
+      ],
+      [
+        5,
+        38,
+        47,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        56,
+        67,
+        2
+      ],
+      [
+        1,
+        68,
+        74,
+        4
+      ],
+      [
+        5,
+        75,
+        79,
+        5,
+        1,
+        1
+      ],
+      [
+        5,
+        85,
+        88,
+        3,
+        1,
+        1
+      ],
+      [
+        0,
+        89,
+        102,
+        3
+      ],
+      [
+        1,
+        103,
+        112,
+        6
+      ],
+      [
+        1,
+        115,
+        130,
+        7
+      ],
+      [
+        5,
+        183,
+        196,
+        6,
+        1,
+        1
+      ],
+      [
+        0,
+        197,
+        206,
+        4
+      ],
+      [
+        5,
+        207,
+        217,
+        6,
+        1,
+        2
+      ],
+      [
+        5,
+        222,
+        225,
+        2,
+        1,
+        1
+      ],
+      [
+        5,
+        226,
+        236,
+        2,
+        1,
+        2
+      ]
+    ],
+    "simplified": "Shade starts the main story of the book when he breaks the law. || That starts a story that leads to the destructon of his colony's home. || That made them move away, and he was separated from them.",
+    "simplified_spans": [
+      [
+        5,
+        6,
+        12,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        22,
+        27,
+        2
+      ],
+      [
+        1,
+        35,
+        39,
+        3
+      ],
+      [
+        1,
+        48,
+        54,
+        4
+      ],
+      [
+        5,
+        55,
+        58,
+        5,
+        1,
+        1
+      ],
+      [
+        2,
+        64,
+        66,
+        0
+      ],
+      [
+        5,
+        67,
+        71,
+        3,
+        1,
+        1
+      ],
+      [
+        1,
+        72,
+        78,
+        6
+      ],
+      [
+        1,
+        81,
+        86,
+        7
+      ],
+      [
+        2,
+        138,
+        140,
+        1
+      ],
+      [
+        5,
+        141,
+        145,
+        4,
+        3,
+        1
+      ],
+      [
+        5,
+        146,
+        155,
+        6,
+        1,
+        1
+      ],
+      [
+        5,
+        156,
+        166,
+        6,
+        1,
+        2
+      ],
+      [
+        5,
+        171,
+        177,
+        2,
+        1,
+        1
+      ],
+      [
+        5,
+        178,
+        187,
+        2,
+        1,
+        2
+      ]
+    ],
+    "system": "new_systems/asset.test.simp.second",
+    "annotations": {
+      "deletion": [
+        null,
+        null,
+        [
+          "perfect",
+          "no",
+          "no"
+        ],
+        [
+          "good",
+          "no",
+          "no"
+        ],
+        [
+          "good",
+          "no",
+          "no"
+        ]
+      ],
+      "substitution": [
+        null,
+        null,
+        [
+          "same",
+          "positive",
+          "a lot",
+          "",
+          "no"
+        ],
+        [
+          "same",
+          "positive",
+          "somewhat",
+          "",
+          "no"
+        ],
+        [
+          "same",
+          "positive",
+          "a lot",
+          "",
+          "no"
+        ],
+        null,
+        [
+          "same",
+          "positive",
+          "somewhat",
+          "",
+          "no"
+        ],
+        [
+          "same",
+          "positive",
+          "minor",
+          "",
+          "no"
+        ]
+      ],
+      "insertion": [],
+      "split": [
+        [
+          "positive",
+          "",
+          "somewhat",
+          "no"
+        ],
+        [
+          "no",
+          "",
+          "",
+          "no"
+        ]
+      ],
+      "reorder": [],
+      "structure": [
+        null,
+        [
+          "positive",
+          "",
+          "somewhat",
+          "no"
+        ],
+        [
+          "positive",
+          "",
+          "minor",
+          "no"
+        ],
+        [
+          "positive",
+          "",
+          "minor",
+          ""
+        ],
+        [
+          "positive",
+          "",
+          "a lot",
+          "no"
+        ],
+        [
+          "positive",
+          "",
+          "minor",
+          "no"
+        ],
+        [
+          "positive",
+          "",
+          "a lot",
+          "no"
+        ]
+      ]
+    }
+  }
+]
