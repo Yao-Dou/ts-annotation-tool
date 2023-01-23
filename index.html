@@ -42,7 +42,7 @@
 
         <section id="hit">
             <div class="cf mt1">
-                <div class="fl mb3 tc f3 w-20 mt1">
+                <div class="fl mb3 tc f3 w-20 mt1 hit-selector">
                     <button @click="go_to_hit(current_hit - 1)" class="mid-gray br-100 pa1 bw0 bg-near-white pointer prev-next-btns">&nbsp;&lt;&nbsp;</button>
                     Hit <span>{{current_hit}}</span> / <span>{{total_hits}}&nbsp;</span>
                     <button @click="go_to_hit(current_hit + 1)" class="mid-gray br-100 pa1 bw0 bg-near-white pointer prev-next-btns">&nbsp;&gt;&nbsp;</button>
@@ -69,7 +69,7 @@
             <div>
                 <div class="ba b--black-80 br2 pa2">
                     <div class="cf">
-                        <p class="fl f3 mt1 mb1">
+                        <p class="fl f3 mt1 mb1 orig-sentence-header">
                             <span class="f5">Original Sentence (Human Written):</span>
                             <!-- <span id="line_start" class="f5">Original <span id="line_1_start"  class="red">Sentence</span> (Human Written):</span> -->
                         </p>
@@ -1310,7 +1310,7 @@
             </div>
             <div class="mt1 cf">
                 <div class="fl w-80">
-                    <p class="f3 courier ttu">Edits Annotations (<span>{{annotated_edits}}/{{total_edits}}</span>)</p>
+                    <p class="f3 courier ttu">Edit Annotations (<span>{{annotated_edits}}/{{total_edits}}</span>)</p>
                 </div>
                 <div class="fl w-20 tc">
                     <!-- <p class="f3 courier ttu">Operations</p> -->
