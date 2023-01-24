@@ -69,10 +69,11 @@
   height: 40px;
 }   
 .container{
-  margin: 0;
+  margin: 16px 0 0 0;
   width: 100%;
   max-width: none;
   height: 4000px;
+  margin-top: 16px;
 }
 
 .row {
@@ -114,6 +115,10 @@ iframe {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.button-container {
+    display: none;
 }
 </style>
 
@@ -180,6 +185,22 @@ iframe {
             if (loadedCounter == 3) {
                 $('.spinner-container').hide();
                 $('.container').show();
+
+                // Allow syncing of buttons
+                for (let button_num = 0; button_num < 2; button_num++) {
+                    $($('#hit .mt1 button', $('#iframe-0').contents())[button_num]).on('click', function() {
+                        for (let i = 1; i < 3; i++) {
+                            $($('#hit .mt1 button', $('#iframe-' + i).contents())[button_num]).click();
+                        }
+                    });
+                }
+
+                $($('.circle', $('#iframe-0').contents())).on('click', function () {
+                    let hit_num = parseInt($(this).attr('id').replace('circle-', ''));
+                    for (let i = 1; i < 3; i++) {
+                        $($('#circle-' + hit_num, $('#iframe-' + i).contents())[0]).click()
+                    }
+                });
             }
         });
     }
@@ -193,6 +214,9 @@ iframe {
             .add_button, .file-download, .operation, .file-upload {\
                 opacity: 20%; \
                 pointer-events: none;\
+            }\
+            .prev-next-btns {\
+                opacity: 20%;\
             }\
             // #edits_html .w-80 {\
             //     width: 100%;\
