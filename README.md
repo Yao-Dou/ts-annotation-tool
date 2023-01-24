@@ -8,4 +8,5 @@ This repo is organized as follows:
 - `paper` - Visualizations used in final paper
 
 To push an interface update please use the `gh-pages` branch:
+
 `git subtree push --prefix interface origin gh-pages`
