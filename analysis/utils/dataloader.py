@@ -3,14 +3,18 @@ import math
 import os
 import json
 import csv
+import logging as log
 from utils.util import *
 from utils.names import *
 from utils.scoring import *
 
+# Setup logger
+log.basicConfig(format='%(levelname)s:%(message)s', level=log.DEBUG)
+
 # File paths
-simp_eval_main_path = '../simp_eval/simpeval_2022.csv'
-simp_eval_da_path = '../simp_eval/simpDA_2022.csv'
-simp_eval_likert_path = '../simp_eval/simplikert_2022.csv'
+simp_eval_main_path = '../data/simp_eval/simpeval_22_rate_and_rank.csv'
+simp_eval_da_path = '../data/simp_eval/simpeval_22_DA.csv'
+simp_eval_likert_path = '../data/simp_eval/simpeval_22_likert.csv'
 
 # Specify metadata for an empty span
 empty_span = {
@@ -119,7 +123,7 @@ def associate_spans(sent):
     for type_ in counts.keys():
         annotations = sent['annotations'][type_]
         if counts[type_] != 0 and counts[type_] + 1 > len(annotations):
-            # print(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations) - 1} annotations. Likely a missing annotation. Skipping edit type...')
+            log.warning(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations) - 1} annotations. Likely a missing annotation. Skipping edit type...')
             edits += []
             continue
         for i in range(1, counts[type_]+1):
@@ -189,10 +193,10 @@ def process_del_info(raw_annotation):
 
     # Deal with annotators sometimes not filling out all fields
     if grammar_error == '':
-        # print(f"Couldn't process grammar for deletion: {raw_annotation}. Assuming 'no'...")
+        log.debug(f"Couldn't process grammar for deletion: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
     if coreference == '':
-        # print(f"Couldn't process coreference error for deletion: {raw_annotation}. Assuming 'no'...")
+        log.debug(f"Couldn't process coreference error for deletion: {raw_annotation}. Assuming 'no'...")
         coreference = 'no'
 
     rating, grammar_error, coreference = quality_mapping[rating], error_mapping[coreference], error_mapping[grammar_error]
@@ -253,10 +257,10 @@ def process_same_info(raw_annotation, edit_type):
 
     # Deal with annotators sometimes not filling out all fields
     if grammar_error == '':
-        # print(f"Couldn't process grammar for substitution: {raw_annotation}. Assuming 'no'...")
+        log.debug(f"Couldn't process grammar for substitution: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
         if pos_rating == '':
-            # print(f"Couldn't process positive rating for substitution: {raw_annotation}. Assuming 'somewhat'...")
+            log.debug(f"Couldn't process positive rating for substitution: {raw_annotation}. Assuming 'somewhat'...")
             pos_rating = 'somewhat'
   
     edit_quality, grammar_error = impact_mapping[edit_quality], error_mapping[grammar_error]
@@ -395,7 +399,7 @@ def consolidate_annotations(data):
             try: 
                 processed.append(process_annotation(edit))
             except Exception as e:
-                # print(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
+                log.error(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
                 successful = False
         
         # Delete the sentence if we could not process the annotations for it
@@ -523,7 +527,7 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     # Exclude corrupted file
     files = [x for x in files if 'batch_2_rachel' not in x]
 
-    # print(f'Loading files: {files}\n')
+    log.info(f'Loading files: {files}\n')
 
     # Add file and append user's name
     id_counter = 0
@@ -573,7 +577,7 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
             new_data.extend(sents)
         data = new_data
 
-    print(f'Found users: {set([sent["user"] for sent in data])}\n')
+    log.info(f'Found users: {set([sent["user"] for sent in data])}\n')
 
     # Preprocess will violate data integrity. If you use preprocess, there's no guarentee
     # that this data will work with the interface.

@@ -134,9 +134,22 @@ iframe {
         let name = urlParams.get('name');
         if (batch != null && name != null) {
             path = `inspection/${name}/batch_${batch}/`
+            path = `${path}set_${i}.json`
+        } else {
+            switch (i) {
+                case 0:
+                    path = `preliminary/tutorial/kelly.json`
+                    break;
+                case 1:
+                    path = `preliminary/tutorial/rachel.json`
+                    break;
+                case 2:
+                    path = `preliminary/tutorial/yao.json`
+                    break;
+            }
         }
 
-        $('#iframe-' + i)[0].src = `index.html?data=${path}set_${i}.json`
+        $('#iframe-' + i)[0].src = `index.html?data=${path}`
 
         $('#iframe-' + i).on("load", function() {
             $("<style>")
