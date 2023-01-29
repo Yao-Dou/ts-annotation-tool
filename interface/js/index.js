@@ -37,8 +37,9 @@ const app = Vue.createApp({
             insertion_trivial_severity_box: "",
             insertion_repetition_severity_box: "",
             insertion_contradiction_severity_box: "",
-            insertion_hallucination_severity_box: "",
-            insertion_hallucination_relevance_yes_no_box: "",
+            insertion_factual_severity_box: "",
+            insertion_irrelevance_severity_box: "",
+            // insertion_factual_relevance_yes_no_box: "",
             insertion_trivial_yes_no_box: "",
             insertion_grammar_yes_no_box: "",
 
@@ -53,10 +54,11 @@ const app = Vue.createApp({
             substitution_trivial_severity_box: "",
             substitution_trivial_yes_no_box: "",
             substitution_contradiction_severity_box: "",
-            substitution_hallucination_severity_box: "",
+            substitution_factual_severity_box: "",
+            substitution_irrelevance_severity_box: "",
             substitution_different_severity_box: "",
             substitution_positive_severity_box: "",
-            substitution_hallucination_relevance_yes_no_box: "",
+            // substitution_factual_relevance_yes_no_box: "",
             substitution_negative_severity_box: "",
             substitution_grammar_yes_no_box: "",
             substitution_coref_yes_no_box: "",
@@ -973,14 +975,10 @@ const app = Vue.createApp({
                                 if (annotation[3] == "yes") {
                                     annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                                 }
-                            } else if (annotation[1] == "hallucination") {
-                                if (annotation[2] == "no") {
-                                    annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>irrelevant</i> hallucination</span>`;
-                                } else {
-                                    annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with <i>relevant</i> hallucination</span>`;
-                                }
-                                annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[3]}</span>`;
-                                if (annotation[4] == "yes") {
+                            } else if (annotation[1] == "factual") {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with factual error</span>`;
+                                annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
+                                if (annotation[3] == "yes") {
                                     annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                                 }
                             } else if (annotation[1] == "trivial") {
@@ -1005,6 +1003,12 @@ const app = Vue.createApp({
                                 if (annotation[3] == "yes") {
                                     annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                                 }
+                            } else if (annotation[1] == "irrelevance") {
+                                annotation_text += `<span class="light-purple ba bw1 pa1">bad substitution with irrelevant content</span>`;
+                                annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
+                                if (annotation[3] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
                             }
                         }
                     } else if (key == 'insertion') {
@@ -1014,14 +1018,10 @@ const app = Vue.createApp({
                             if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
-                        } else if (annotation[0] == "hallucination") {
-                            if (annotation[1] == "no") {
-                                annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with <i>irrelevant</i> hallucination</span>`;
-                            } else {
-                                annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with <i>relevant</i> hallucination</span>`;
-                            }
-                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
-                            if (annotation[3] == "yes") {
+                        } else if (annotation[0] == "factual") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with factual error</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
+                            if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (annotation[0] == "trivial") {
@@ -1042,6 +1042,12 @@ const app = Vue.createApp({
                             }
                         } else if (annotation[0] == "contradiction") {
                             annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with contradiction</span>`;
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
+                            if (annotation[2] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
+                        } else if (annotation[0] == "irrelevance") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad insertion with irrelevant content</span>`;
                             annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
                             if (annotation[2] == "yes") {
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
@@ -1270,14 +1276,16 @@ const app = Vue.createApp({
             } else if (category == "insertion") {
                 if (this.insertion_type_box == "elaboration") {
                     box = [this.insertion_type_box, this.insertion_elaboration_severity_box, this.insertion_grammar_yes_no_box]
-                } else if (this.insertion_type_box == "hallucination") {
-                    box = [this.insertion_type_box, this.insertion_hallucination_relevance_yes_no_box, this.insertion_hallucination_severity_box, this.insertion_grammar_yes_no_box]
+                } else if (this.insertion_type_box == "factual") {
+                    box = [this.insertion_type_box, this.insertion_factual_severity_box, this.insertion_grammar_yes_no_box]
                 } else if (this.insertion_type_box == "trivial") {
                     box = [this.insertion_type_box, this.insertion_trivial_yes_no_box, this.insertion_trivial_severity_box, this.insertion_grammar_yes_no_box]
                 } else if (this.insertion_type_box == "repetition") {
                     box = [this.insertion_type_box, this.insertion_repetition_severity_box, this.insertion_grammar_yes_no_box]
                 } else if (this.insertion_type_box == "contradiction") {
                     box = [this.insertion_type_box, this.insertion_contradiction_severity_box, this.insertion_grammar_yes_no_box]
+                } else if (this.insertion_type_box == "irrelevance") {
+                    box = [this.insertion_type_box, this.insertion_irrelevance_severity_box, this.insertion_grammar_yes_no_box]
                 }
             } else if (category == "substitution") {
                 if (this.substitution_type_box == "same") {
@@ -1289,15 +1297,17 @@ const app = Vue.createApp({
                 } else if (this.substitution_type_box == "more") {
                     if (this.substitution_more_type_box == "elaboration") {
                         box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_elaboration_severity_box, this.substitution_grammar_yes_no_box]
-                    } else if (this.substitution_more_type_box == "hallucination") {
-                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_hallucination_relevance_yes_no_box, this.substitution_hallucination_severity_box, this.substitution_grammar_yes_no_box]
+                    } else if (this.substitution_more_type_box == "factual") {
+                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_factual_severity_box, this.substitution_grammar_yes_no_box]
                     } else if (this.substitution_more_type_box == "trivial") {
                         box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_trivial_yes_no_box, this.substitution_trivial_severity_box, this.substitution_grammar_yes_no_box]
                     } else if (this.substitution_more_type_box == "repetition") {
                         box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_repetition_severity_box, this.substitution_grammar_yes_no_box]
                     } else if (this.substitution_more_type_box == "contradiction") {
                         box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_contradiction_severity_box, this.substitution_grammar_yes_no_box]
-                    }
+                    } else if (this.substitution_more_type_box == "irrelevance") {
+                        box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_irrelevance_severity_box, this.substitution_grammar_yes_no_box]
+                    } 
                 }
             } else if (category == "split") {
                 box = [this.split_impact_box, this.split_negative_severity_box, this.split_positive_severity_box, this.split_grammar_yes_no_box]
@@ -1306,7 +1316,7 @@ const app = Vue.createApp({
             } else if (category == "structure") {
                 box = [this.structure_impact_box, this.structure_negative_severity_box, this.structure_positive_severity_box, this.structure_grammar_yes_no_box]
             }
-            console.log(box)
+            // console.log(box)
             this.hits_data[this.current_hit - 1].annotations[category][edit_id] = box
             this.process_everything();
             this.refresh_edit();
@@ -1428,12 +1438,12 @@ const app = Vue.createApp({
         },
         restart_hit() {
             this.hits_data[this.current_hit - 1].annotations = {
-                'deletion': [],
-                'substitution': [],
-                'insertion': [],
-                'split': [],
-                'reorder': [],
-                'structure': [],
+                'deletion': {},
+                'substitution': {},
+                'insertion': {},
+                'split': {},
+                'reorder': {},
+                'structure': {},
             }
             this.hits_data[this.current_hit - 1].original_spans = [];
             this.hits_data[this.current_hit - 1].simplified_spans = [];
@@ -1504,8 +1514,9 @@ const app = Vue.createApp({
             this.insertion_trivial_severity_box= ""
             this.insertion_repetition_severity_box= ""
             this.insertion_contradiction_severity_box= ""
-            this.insertion_hallucination_severity_box= ""
-            this.insertion_hallucination_relevance_yes_no_box= ""
+            this.insertion_factual_severity_box= ""
+            this.insertion_irrelevance_severity_box = ""
+            // this.insertion_factual_relevance_yes_no_box= ""
             this.insertion_trivial_yes_no_box= ""
             this.insertion_grammar_yes_no_box= ""
 
@@ -1520,10 +1531,11 @@ const app = Vue.createApp({
             this.substitution_trivial_severity_box= ""
             this.substitution_trivial_yes_no_box= ""
             this.substitution_contradiction_severity_box= ""
-            this.substitution_hallucination_severity_box= ""
+            this.substitution_factual_severity_box= ""
+            this.substitution_irrelevance_severity_box = ""
             this.substitution_different_severity_box= ""
             this.substitution_positive_severity_box= ""
-            this.substitution_hallucination_relevance_yes_no_box= ""
+            // this.substitution_factual_relevance_yes_no_box= ""
             this.substitution_negative_severity_box= ""
             this.substitution_grammar_yes_no_box= ""
             this.substitution_coref_yes_no_box= ""
@@ -1602,12 +1614,12 @@ const app = Vue.createApp({
             for (let i = 0; i < this.hits_data.length; i++) {
                 if (this.hits_data[i].annotations == undefined) {
                     this.hits_data[i].annotations = {
-                        'deletion': [],
-                        'substitution': [],
-                        'insertion': [],
-                        'split': [],
-                        'reorder': [],
-                        'structure': [],
+                        'deletion': {},
+                        'substitution': {},
+                        'insertion': {},
+                        'split': {},
+                        'reorder': {},
+                        'structure': {},
                     }
                 }
             }
@@ -1668,12 +1680,12 @@ const app = Vue.createApp({
                 for (let i = 0; i < this.hits_data.length; i++) {
                     if (this.hits_data[i].annotations == undefined) {
                         this.hits_data[i].annotations = {
-                            'deletion': [],
-                            'substitution': [],
-                            'insertion': [],
-                            'split': [],
-                            'reorder': [],
-                            'structure': [],
+                            'deletion': {},
+                            'substitution': {},
+                            'insertion': {},
+                            'split': {},
+                            'reorder': {},
+                            'structure': {},
                         }
                     }
                 }
