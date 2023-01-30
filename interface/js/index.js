@@ -26,7 +26,9 @@ const app = Vue.createApp({
             selected_split_id: null,
 
             // for deletion annotation box
-            deletion_severity_box: "",
+            deletion_type_box: "",
+            deletion_good_severity_box: "",
+            deletion_bad_severity_box: "",
             deletion_grammar_yes_no_box: "",
             deletion_coref_yes_no_box: "",
 
@@ -47,7 +49,9 @@ const app = Vue.createApp({
             substitution_type_box: "",
             substitution_simplify_yes_no_box: "",
             substitution_impact_box: "",
-            substitution_less_severity_box: "",
+            substitution_less_type_box: "",
+            substitution_less_good_severity_box: "",
+            substitution_less_bad_severity_box: "",
             substitution_more_type_box: "",
             substitution_elaboration_severity_box: "",
             substitution_repetition_severity_box: "",
@@ -924,16 +928,27 @@ const app = Vue.createApp({
                     let annotation = this.hits_data[this.current_hit - 1].annotations[key][i];
                     let annotation_text = ""
                     if (key == 'deletion') {
-                        if (annotation[0] == "perfect" ||  annotation[0] == "good") {
-                            annotation_text = `<span class="light-orange ba bw1 pa1">${annotation[0]} deletion</span>`
-                        } else {
-                            annotation_text = `<span class="light-purple ba bw1 pa1">${annotation[0]} deletion</span>`;
-                        }
-                        if (annotation[1] == "yes") {
-                            annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
-                        }
-                        if (annotation[2] == "yes") {
-                            annotation_text += ` <span class="brown ba bw1 pa1 br-pills">Coref error</span>`;
+                        let type = annotation[0]
+                        if (type == "trivial") {
+                            annotation_text = `<span class="light-orange ba bw1 pa1">trivial deletion</span>`
+                            if (annotation[1] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
+                        } else if (type == "good") {
+                            annotation_text = `<span class="light-orange ba bw1 pa1">good deletion</span>`
+                            annotation_text += `<span class="light-pink br-pills ba bw1 pa1">efficacy: ${annotation[1]}</span>`;
+                            if (annotation[2] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
+                        } else if (type == "bad") {
+                            annotation_text = `<span class="light-purple ba bw1 pa1">bad deletion</span>`
+                            annotation_text += `<span class="light-pink br-pills ba bw1 pa1">severity: ${annotation[1]}</span>`;
+                            if (annotation[2] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                            }
+                            if (annotation[3] == "yes") {
+                                annotation_text += ` <span class="brown ba bw1 pa1 br-pills">Coref error</span>`;
+                            }
                         }
                     } else if (key == 'substitution') {
                         let type = annotation[0]
@@ -957,16 +972,22 @@ const app = Vue.createApp({
                                 annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                             }
                         } else if (type == "less") {
-                            if (annotation[1] == "perfect" ||  annotation[1] == "good") {
-                                annotation_text = `<span class="light-orange ba bw1 pa1">${annotation[1]} substitution that removes unnecessary information</span>`
-                            } else {
-                                annotation_text = `<span class="light-purple ba bw1 pa1">${annotation[1]} substitution that removes necessary information</span>`;
-                            }
-                            if (annotation[2] == "yes") {
-                                annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
-                            }
-                            if (annotation[3] == "yes") {
-                                annotation_text += ` <span class="brown ba bw1 pa1 br-pills">Coref error</span>`;
+                            // box = [this.substitution_type_box, this.substitution_less_type_box, this.substitution_less_bad_severity_box, this.substitution_grammar_yes_no_box, this.substitution_coref_yes_no_box]
+                            if (annotation[1] == "good") {
+                                annotation_text = `<span class="light-orange ba bw1 pa1">${annotation[1]} substitution that removes insignificant information</span>`
+                                annotation_text += `<span class="light-pink br-pills ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
+                                if (annotation[3] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
+                            } else if (annotation[1] == "bad") {
+                                annotation_text = `<span class="light-purple ba bw1 pa1">${annotation[1]} substitution that removes significant information</span>`;
+                                annotation_text += `<span class="light-pink br-pills ba bw1 pa1">severity: ${annotation[2]}</span>`;
+                                if (annotation[3] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
+                                }
+                                if (annotation[4] == "yes") {
+                                    annotation_text += ` <span class="brown ba bw1 pa1 br-pills">Coref error</span>`;
+                                }
                             }
                         } else if (type == "more") {
                             if (annotation[1] == "elaboration") {
@@ -1272,7 +1293,13 @@ const app = Vue.createApp({
             
             let box = []
             if (category == "deletion") {
-                box = [this.deletion_severity_box, this.deletion_grammar_yes_no_box, this.deletion_coref_yes_no_box]
+                if (this.deletion_type_box == "good") {
+                    box = [this.deletion_type_box, this.deletion_good_severity_box, this.deletion_grammar_yes_no_box]
+                } else if (this.deletion_type_box == "bad") {
+                    box = [this.deletion_type_box, this.deletion_bad_severity_box, this.deletion_grammar_yes_no_box, this.deletion_coref_yes_no_box]
+                } else if (this.deletion_type_box == "trivial") {
+                    box = [this.deletion_type_box, this.deletion_grammar_yes_no_box]
+                }
             } else if (category == "insertion") {
                 if (this.insertion_type_box == "elaboration") {
                     box = [this.insertion_type_box, this.insertion_elaboration_severity_box, this.insertion_grammar_yes_no_box]
@@ -1293,7 +1320,11 @@ const app = Vue.createApp({
                 } else if (this.substitution_type_box == "different") {
                     box = [this.substitution_type_box, this.substitution_different_severity_box, this.substitution_grammar_yes_no_box]
                 } else if (this.substitution_type_box == "less") {
-                    box = [this.substitution_type_box, this.substitution_less_severity_box, this.substitution_grammar_yes_no_box, this.substitution_coref_yes_no_box]
+                    if (this.substitution_less_type_box == "good") {
+                        box = [this.substitution_type_box, this.substitution_less_type_box, this.substitution_less_good_severity_box, this.substitution_grammar_yes_no_box]
+                    } else if (this.substitution_less_type_box == "bad") {
+                        box = [this.substitution_type_box, this.substitution_less_type_box, this.substitution_less_bad_severity_box, this.substitution_grammar_yes_no_box, this.substitution_coref_yes_no_box]
+                    }
                 } else if (this.substitution_type_box == "more") {
                     if (this.substitution_more_type_box == "elaboration") {
                         box = [this.substitution_type_box, this.substitution_more_type_box, this.substitution_elaboration_severity_box, this.substitution_grammar_yes_no_box]
@@ -1321,12 +1352,35 @@ const app = Vue.createApp({
             this.process_everything();
             this.refresh_edit();
         },
+        deletion_show_grammar(event) {
+            if ($(`.deletion-coref-div`).is(":visible")) {
+                $('.deletion-coref-div').hide(400);
+            }
+            if (!$(`.deletion-grammar-div`).is(":visible")) {
+                $('.deletion-grammar-div').slideDown(400);
+            }
+        },
+        deletion_show_grammar_trivial(event) {
+            if ($(`.deletion-impact-div`).is(":visible")) {
+                $('.deletion-impact-div').hide(400);
+            }
+            this.deletion_show_grammar(event);
+        },
+        deletion_show_coref(event) {
+            if (!$(`.deletion-coref-div`).is(":visible")) {
+                $('.deletion-coref-div').slideDown(400);
+            }
+            if (!$(`.deletion-grammar-div`).is(":visible")) {
+                $('.deletion-grammar-div').slideDown(400);
+            }
+        },
         substitution_type_click(event) {
             // get the value of the clicked button
             let value = event.target.value;
             // if $(`.substitution-${value}`) is not visible, show it
             if (!($(`.substitution-${value}`).is(":visible"))) {
                 $(`.substitution-type-div`).hide(400);
+                $(`.substitution-less-impact-div`).hide(400);
                 $(`.substitution-${value}`).slideDown(400);
                 if (value != "more") {
                     $(`.substitution-more-div`).hide(400);
@@ -1480,6 +1534,11 @@ const app = Vue.createApp({
             $('.quality-selection').hide(400);
             $(".span-selection-div").hide(400);
 
+            // deletion_annotation hide divs
+            $(".deletion-impact-div").hide();
+            $(".deletion-grammar-div").hide();
+            $(".deletion-coref-div").hide();
+
             // insertion_annotation hide divs
             $(".insertion-type-div").hide();
             $(".insertion-type-trivial-efficacy").hide();
@@ -1488,6 +1547,7 @@ const app = Vue.createApp({
             // substitution_annotation hide divs
             $(".substitution-type-div").hide();
             $(".substitution-impact-div").hide();
+            $(".substitution-less-impact-div").hide();
             $(".substitution-coref-div").hide();
             $(".substitution-more-div").hide();
             $(".substitution-more-trivial-efficacy").hide();
@@ -1503,7 +1563,9 @@ const app = Vue.createApp({
             $(".structure-impact-div").hide();
 
             // for deletion annotation box
-            this.deletion_severity_box = ""
+            this.deletion_type_box = ""
+            this.deletion_good_severity_box = ""
+            this.deletion_bad_severity_box = ""
             this.deletion_grammar_yes_no_box= ""
             this.deletion_coref_yes_no_box= ""
 
@@ -1524,7 +1586,9 @@ const app = Vue.createApp({
             this.substitution_type_box= ""
             this.substitution_simplify_yes_no_box= ""
             this.substitution_impact_box= ""
-            this.substitution_less_severity_box= ""
+            this.substitution_less_type_box= ""
+            this.substitution_less_good_severity_box = ""
+            this.substitution_less_bad_severity_box= ""
             this.substitution_more_type_box= ""
             this.substitution_elaboration_severity_box= ""
             this.substitution_repetition_severity_box= ""
