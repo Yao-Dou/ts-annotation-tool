@@ -81,6 +81,7 @@ const app = Vue.createApp({
             reorder_level_box: "",
 
             // for structure annotation box
+            structure_type_box: "",
             structure_impact_box: "",
             structure_positive_severity_box: "",
             structure_negative_severity_box: "",
@@ -1102,16 +1103,17 @@ const app = Vue.createApp({
                             annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                         }
                     } else if (key == 'structure') {
-                        if (annotation[0] == "positive") {
-                            annotation_text += `<span class="light-orange ba bw1 pa1">good structure change</span>`
-                            annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[2]}</span>`;
-                        } else if (annotation[0] == "negative") {
-                            annotation_text += `<span class="light-purple ba bw1 pa1">bad structure change</span>`
-                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[1]}</span>`;
-                        } else {
-                            annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary structure change</span>`
+                        // box = [this.structure_type_box, this.structure_impact_box, this.structure_negative_severity_box, this.structure_positive_severity_box, this.structure_grammar_yes_no_box]
+                        if (annotation[1] == "positive") {
+                            annotation_text += `<span class="light-orange ba bw1 pa1">good structure change edit that ${annotation[0]}</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">efficacy: ${annotation[3]}</span>`;
+                        } else if (annotation[1] == "negative") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">bad structure change edit that ${annotation[0]}</span>`
+                            annotation_text += `<span class="light-pink ba bw1 pa1">severity: ${annotation[2]}</span>`;
+                        } else if (annotation[1] == "no") {
+                            annotation_text += `<span class="light-purple ba bw1 pa1">unnecessary structure change edit that ${annotation[0]}</span>`
                         }
-                        if (annotation[3] == "yes") {
+                        if (annotation[4] == "yes") {
                             annotation_text += ` <span class="brown ba bw1 pa1 br-100">G</span>`;
                         }
                     }
@@ -1345,7 +1347,7 @@ const app = Vue.createApp({
             } else if (category == "reorder") {
                 box = [this.reorder_impact_box, this.reorder_negative_severity_box, this.reorder_positive_severity_box, this.reorder_grammar_yes_no_box, this.reorder_level_box]
             } else if (category == "structure") {
-                box = [this.structure_impact_box, this.structure_negative_severity_box, this.structure_positive_severity_box, this.structure_grammar_yes_no_box]
+                box = [this.structure_type_box, this.structure_impact_box, this.structure_negative_severity_box, this.structure_positive_severity_box, this.structure_grammar_yes_no_box]
             }
             // console.log(box)
             this.hits_data[this.current_hit - 1].annotations[category][edit_id] = box
@@ -1618,6 +1620,7 @@ const app = Vue.createApp({
             this.reorder_level_box= ""
 
             // for structure annotation box
+            this.structure_type_box= ""
             this.structure_impact_box= ""
             this.structure_positive_severity_box= ""
             this.structure_negative_severity_box= ""

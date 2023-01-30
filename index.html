@@ -1343,6 +1343,41 @@
                     <div id="dropdown-button-container">
                         <div class="single_part over-hide z-bigger mt3">
                             <div class="row">
+                                <p class="mb2 mt3-5 b tracked-light">Select the type of this structure change edit.</i>
+                                </p>
+                                <div class="tc mt3">
+                                    <div class="column-severity w-16">
+                                        <input class="checkbox-tools checkbox-tools-severity" type="radio" name="structure-type"
+                                        id="structure-type-voice" value="changes voice" v-model="structure_type_box">
+                                        <label class="for-checkbox-tools-yes-no question-structure" for="structure-type-voice">Voice Change</label>
+                                    </div>
+                                    <div class="column-severity w-16">
+                                        <input class="checkbox-tools checkbox-tools-severity" type="radio" name="structure-type"
+                                            id="structure-type-pos" value="changes POS" v-model="structure_type_box">
+                                        <label class="for-checkbox-tools-severity question-structure" for="structure-type-pos">POS Change</label>
+                                    </div>
+                                    <div class="column-severity w-16">
+                                        <input class="checkbox-tools checkbox-tools-severity" type="radio" name="structure-type"
+                                        id="structure-type-tense" value="changes tense" v-model="structure_type_box">
+                                        <label class="for-checkbox-tools-yes-no question-structure" for="structure-type-tense">Tense Change</label>
+                                    </div>
+                                    <div class="column-severity w-16">
+                                        <input class="checkbox-tools checkbox-tools-severity" type="radio" name="structure-type"
+                                        id="structure-type-number" value="changes grammatical number" v-model="structure_type_box">
+                                        <label class="for-checkbox-tools-yes-no question-structure" for="structure-type-number">Grammatical Number</label>
+                                    </div>
+                                    <div class="column-severity w-16">
+                                        <input class="checkbox-tools checkbox-tools-severity" type="radio" name="structure-type"
+                                        id="structure-type-clausal" value="changes clause" v-model="structure_type_box">
+                                        <label class="for-checkbox-tools-yes-no question-structure" for="structure-type-clausal">Clausal Change</label>
+                                    </div>
+                                    <div class="column-severity w-16">
+                                        <input class="checkbox-tools checkbox-tools-severity" type="radio" name="structure-type"
+                                        id="structure-type-transition" value="changes transition " v-model="structure_type_box">
+                                        <label class="for-checkbox-tools-yes-no question-structure" for="structure-type-transition">Transition Change</label>
+                                    </div>
+                                </div>
+
                                 <p class="mb3 b tracked-light">Select the impact of this structure edit on the sentence simplicity.</p>
                                 <div class="tc">
                                     <div class="column-severity w-33">
