@@ -120,88 +120,7 @@
                 213,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "very bad",
-                    "no",
-                    "no"
-                ],
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1185,
@@ -290,64 +209,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ],
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1269,
@@ -450,67 +312,7 @@
                 224,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "negative",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "less",
-                    "perfect",
-                    "no",
-                    ""
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1278,
@@ -551,31 +353,7 @@
                 310,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1284,
@@ -720,79 +498,7 @@
                 304,
                 6
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "more",
-                    "hallucination",
-                    "yes",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1290,
@@ -973,69 +679,7 @@
                 1,
                 4
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                null,
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1296,
@@ -1212,85 +856,7 @@
                 274,
                 9
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "less",
-                    "perfect",
-                    "no",
-                    ""
-                ],
-                [
-                    "more",
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1323,
@@ -1397,54 +963,7 @@
                 183,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1326,
@@ -1513,54 +1032,7 @@
                 142,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "negative",
-                    "",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1332,
@@ -1653,60 +1125,7 @@
                 116,
                 4
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "negative",
-                    "a lot",
-                    "somewhat",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1338,
@@ -1767,38 +1186,7 @@
                 145,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1371,
@@ -1931,66 +1319,7 @@
                 4,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "negative",
-                    "",
-                    "somewhat",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1377,
@@ -2081,57 +1410,7 @@
                 3,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1383,
@@ -2151,22 +1430,7 @@
                 1
             ]
         ],
-        "simplified_spans": [],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        "simplified_spans": []
     },
     {
         "id": 1389,
@@ -2186,22 +1450,7 @@
                 91,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1395,
@@ -2258,45 +1507,7 @@
                 111,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "very bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1401,
@@ -2469,58 +1680,7 @@
                 1,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no",
-                    ""
-                ],
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no",
-                    ""
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1410,
@@ -2665,81 +1825,7 @@
                 145,
                 6
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "less",
-                    "perfect",
-                    "no",
-                    ""
-                ],
-                [
-                    "less",
-                    "perfect",
-                    "no",
-                    ""
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    ""
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1416,
@@ -2886,48 +1972,7 @@
                 1,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1422,
@@ -3002,57 +2047,7 @@
                 79,
                 4
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ],
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1428,
@@ -3080,22 +2075,7 @@
                 3,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1434,
@@ -3140,37 +2120,7 @@
                 73,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "a lot",
-                    "",
-                    "no"
-                ],
-                [
-                    "less",
-                    "perfect",
-                    "no",
-                    ""
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1440,
@@ -3309,35 +2259,7 @@
                 1,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ],
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1446,
@@ -3370,31 +2292,7 @@
                 2,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "very bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "negative",
-                    "",
-                    "a lot",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1506,
@@ -3463,53 +2361,7 @@
                 109,
                 0
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1509,
@@ -3592,70 +2444,7 @@
                 185,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1512,
@@ -3746,71 +2535,7 @@
                 147,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "different",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1515,
@@ -3899,61 +2624,7 @@
                 135,
                 4
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "more",
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1518,
@@ -4038,62 +2709,7 @@
                 200,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1521,
@@ -4150,39 +2766,7 @@
                 128,
                 0
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1524,
@@ -4245,46 +2829,7 @@
                 109,
                 0
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1590,
@@ -4351,44 +2896,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "negative",
-                    "minor",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1593,
@@ -4437,38 +2945,7 @@
                 59,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1596,
@@ -4481,15 +2958,7 @@
         "original": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
         "simplified": "A winter storm causes record-breaking low temperatures and leaves more than 80 people dead across North America.",
         "original_spans": [],
-        "simplified_spans": [],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        "simplified_spans": []
     },
     {
         "id": 1599,
@@ -4564,59 +3033,7 @@
                 119,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1602,
@@ -4693,48 +3110,7 @@
                 3,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1605,
@@ -4801,48 +3177,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1608,
@@ -4869,23 +3204,7 @@
                 26,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "less",
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1806,
@@ -4976,61 +3295,7 @@
                 168,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "more",
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1809,
@@ -5089,56 +3354,7 @@
                 130,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1812,
@@ -5229,62 +3445,7 @@
                 183,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1815,
@@ -5317,32 +3478,7 @@
                 73,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "negative",
-                    "minor",
-                    "",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1818,
@@ -5411,59 +3547,7 @@
                 59,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1821,
@@ -5564,67 +3648,7 @@
                 158,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "more",
-                    "elaboration",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1824,
@@ -5637,15 +3661,7 @@
         "original": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
         "simplified": "The news of his death came after Pope Francis, Benedict's successor, announced a deterioration in his health on 28 December and asked the faithful for prayers.",
         "original_spans": [],
-        "simplified_spans": [],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        "simplified_spans": []
     },
     {
         "id": 1827,
@@ -5740,57 +3756,7 @@
                 165,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ],
-                [
-                    "more",
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ],
-                [
-                    "less",
-                    "perfect",
-                    "no",
-                    ""
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1830,
@@ -5843,30 +3809,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1833,
@@ -5937,64 +3880,7 @@
                 216,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ],
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "more",
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ],
-                [
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1836,
@@ -6069,66 +3955,7 @@
                 164,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ],
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ],
-                [
-                    "no",
-                    "",
-                    "",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1839,
@@ -6211,58 +4038,7 @@
                 186,
                 4
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "more",
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1842,
@@ -6361,72 +4137,7 @@
                 151,
                 4
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1845,
@@ -6475,39 +4186,7 @@
                 3,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1848,
@@ -6600,59 +4279,7 @@
                 185,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "more",
-                    "elaboration",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "different",
-                    "very",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "hallucination",
-                    "yes",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1851,
@@ -6727,54 +4354,7 @@
                 111,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1854,
@@ -6829,44 +4409,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ],
-                [
-                    "very bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "negative",
-                    "a lot",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1857,
@@ -6989,75 +4532,7 @@
                 180,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1863,
@@ -7142,55 +4617,7 @@
                 178,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1869,
@@ -7210,22 +4637,7 @@
                 1
             ]
         ],
-        "simplified_spans": [],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        "simplified_spans": []
     },
     {
         "id": 1872,
@@ -7356,103 +4768,7 @@
                 178,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "trivial",
-                    "yes",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "elaboration",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ],
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1875,
@@ -7553,71 +4869,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1878,
@@ -7714,79 +4966,7 @@
                 125,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "repetition",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1881,
@@ -7917,86 +5097,7 @@
                 132,
                 3
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                null,
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1884,
@@ -8109,82 +5210,7 @@
                 149,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ],
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "more",
-                    "hallucination",
-                    "yes",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "more",
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "insertion": [
-                null,
-                [
-                    "elaboration",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "split": [],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no",
-                    "word"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1887,
@@ -8215,23 +5241,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1938,
@@ -8322,60 +5332,7 @@
                 208,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1944,
@@ -8488,76 +5445,7 @@
                 161,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "perfect",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ],
-                [
-                    "good",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1950,
@@ -8584,24 +5472,7 @@
                 216,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1974,
@@ -8656,38 +5527,7 @@
                 75,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [
-                null,
-                [
-                    "bad",
-                    "no",
-                    "no"
-                ]
-            ],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1977,
@@ -8772,54 +5612,7 @@
                 140,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "same",
-                    "positive",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [
-                null,
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no",
-                    "component"
-                ]
-            ],
-            "structure": []
-        }
+        ]
     },
     {
         "id": 1983,
@@ -8896,36 +5689,7 @@
                 1,
                 1
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": [
-                null,
-                [
-                    "no",
-                    "",
-                    "",
-                    "no"
-                ],
-                [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ]
-            ]
-        }
+        ]
     },
     {
         "id": 1989,
@@ -8986,36 +5750,6 @@
                 69,
                 2
             ]
-        ],
-        "annotations": {
-            "deletion": [],
-            "substitution": [
-                null,
-                [
-                    "less",
-                    "good",
-                    "no",
-                    ""
-                ],
-                [
-                    "same",
-                    "positive",
-                    "minor",
-                    "",
-                    "no"
-                ]
-            ],
-            "insertion": [],
-            "split": [
-                [
-                    "positive",
-                    "",
-                    "minor",
-                    "no"
-                ]
-            ],
-            "reorder": [],
-            "structure": []
-        }
+        ]
     }
 ]
