@@ -2567,7 +2567,8 @@ const app = Vue.createApp({
                         let real_id = id.split("-")[1]
                         // parse the real_id to int
                         real_id = parseInt(real_id)
-
+                        console.log(original_spans)
+                        console.log(simplified_spans)
                         let newspans = []
                         for (let i = 0; i < original_spans.length; i++) {
                             if (original_spans[i][0] == category_id && original_spans[i][3] == real_id) {
@@ -2579,6 +2580,9 @@ const app = Vue.createApp({
                         let newspans_simplified = []
                         for (let i = 0; i < simplified_spans.length; i++) {
                             if (simplified_spans[i][0] == category_id && simplified_spans[i][3] == real_id) {
+                                if (category_id == 2 && simplified_spans[i].length == 4) {
+                                    newspans_simplified.push(simplified_spans[i])
+                                }
                                 continue
                             }
                             newspans_simplified.push(simplified_spans[i])
