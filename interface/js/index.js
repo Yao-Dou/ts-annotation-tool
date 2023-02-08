@@ -345,7 +345,7 @@ const app = Vue.createApp({
                         sentence_html += original_sentence.substring(next_next_span[1], next_next_span[2]);
                         sentence_html += "</span>";
                         sentence_html += original_sentence.substring(next_next_span[2], original_spans[i][2]);
-                        console.log(original_sentence.substring(next_next_span[2], original_spans[i][2]))
+                        // console.log(original_sentence.substring(next_next_span[2], original_spans[i][2]))
                         sentence_html += `</span>`;
                         i++;
                     } else {
@@ -464,7 +464,7 @@ const app = Vue.createApp({
                         sentence_html += simplified_sentence.substring(next_next_span[1], next_next_span[2]);
                         sentence_html += "</span>";
                         sentence_html += simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]);
-                        console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
+                        // console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
                         sentence_html += `</span>`;
                         i++;
                     } else {
@@ -624,7 +624,7 @@ const app = Vue.createApp({
                         sentence_html += simplified_sentence.substring(next_next_span[1], next_next_span[2]);
                         sentence_html += "</span>";
                         sentence_html += simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]);
-                        console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
+                        // console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
                         sentence_html += `</span>`;
                         i++;
                     } else {
@@ -2567,8 +2567,7 @@ const app = Vue.createApp({
                         let real_id = id.split("-")[1]
                         // parse the real_id to int
                         real_id = parseInt(real_id)
-                        console.log(original_spans)
-                        console.log(simplified_spans)
+
                         let newspans = []
                         for (let i = 0; i < original_spans.length; i++) {
                             if (original_spans[i][0] == category_id && original_spans[i][3] == real_id) {
