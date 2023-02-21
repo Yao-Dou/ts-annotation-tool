@@ -2854,7 +2854,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
@@ -2957,7 +2957,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "minor",
                     "",
@@ -3055,7 +3055,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -3835,7 +3835,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -3916,7 +3916,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
@@ -3992,7 +3992,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -4060,13 +4060,13 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "negative",
                     "somewhat",
                     "",
@@ -4139,13 +4139,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "negative",
                     "somewhat",
                     "",
@@ -4215,13 +4215,13 @@
             "substitution": {},
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "negative",
                     "a lot",
                     "",
@@ -6680,7 +6680,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
@@ -6743,7 +6743,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
@@ -6815,7 +6815,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
@@ -7073,7 +7073,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -7148,7 +7148,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -7282,7 +7282,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -7388,7 +7388,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -7462,7 +7462,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -7556,7 +7556,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -7699,12 +7699,6 @@
                 ]
             },
             "split": {
-                "0": [
-                    "positive",
-                    "",
-                    "somewhat",
-                    "no"
-                ],
                 "1": [
                     "positive",
                     "",
@@ -7712,6 +7706,12 @@
                     "no"
                 ],
                 "2": [
+                    "positive",
+                    "",
+                    "somewhat",
+                    "no"
+                ],
+                "3": [
                     "no",
                     "",
                     "",
@@ -7854,12 +7854,6 @@
                 ]
             },
             "split": {
-                "0": [
-                    "negative",
-                    "somewhat",
-                    "",
-                    "no"
-                ],
                 "1": [
                     "negative",
                     "somewhat",
@@ -7867,6 +7861,12 @@
                     "no"
                 ],
                 "2": [
+                    "negative",
+                    "somewhat",
+                    "",
+                    "no"
+                ],
+                "3": [
                     "negative",
                     "somewhat",
                     "",
@@ -8030,19 +8030,19 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "2": [
+                "3": [
                     "positive",
                     "",
                     "minor",
@@ -8201,13 +8201,13 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "somewhat",
@@ -8349,13 +8349,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "negative",
                     "somewhat",
                     "",
@@ -8525,13 +8525,13 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "minor",
@@ -9623,7 +9623,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -9723,7 +9723,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
@@ -9811,7 +9811,7 @@
             "substitution": {},
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -9995,13 +9995,13 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "somewhat",
@@ -10162,13 +10162,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "negative",
                     "somewhat",
                     "",
@@ -10343,13 +10343,13 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "somewhat",
@@ -11471,7 +11471,7 @@
             "substitution": {},
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -11602,7 +11602,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -11728,7 +11728,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -12156,7 +12156,7 @@
             "substitution": {},
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -12264,7 +12264,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
@@ -12416,13 +12416,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "somewhat",
@@ -12592,13 +12592,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "minor",
@@ -13258,7 +13258,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "somewhat",
                     "",
@@ -13588,7 +13588,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
@@ -14326,7 +14326,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -14436,7 +14436,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "minor",
                     "",
@@ -14541,7 +14541,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -14663,7 +14663,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "minor",
                     "",
@@ -15049,7 +15049,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -15137,7 +15137,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -15257,7 +15257,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -15371,7 +15371,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -15505,7 +15505,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -15604,7 +15604,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -18882,7 +18882,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -18970,7 +18970,7 @@
             "substitution": {},
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -19546,7 +19546,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -19745,7 +19745,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
@@ -19999,13 +19999,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "a lot",
@@ -20309,13 +20309,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "a lot",
@@ -21117,7 +21117,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -21232,7 +21232,7 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "negative",
                     "minor",
                     "",
@@ -24289,13 +24289,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "no",
                     "",
                     "",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "no",
                     "",
                     "",
@@ -24401,13 +24401,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "minor",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "somewhat",
@@ -24583,13 +24583,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "negative",
                     "somewhat",
                     "",
@@ -24725,13 +24725,13 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "a lot",
@@ -24873,13 +24873,13 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "somewhat",
@@ -25067,13 +25067,13 @@
             },
             "insertion": {},
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "a lot",
                     "no"
                 ],
-                "1": [
+                "2": [
                     "positive",
                     "",
                     "a lot",
@@ -26043,7 +26043,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -26124,7 +26124,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -26227,7 +26227,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -28160,7 +28160,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -28355,7 +28355,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -31257,7 +31257,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",
@@ -31384,7 +31384,7 @@
                 ]
             },
             "split": {
-                "0": [
+                "1": [
                     "positive",
                     "",
                     "somewhat",

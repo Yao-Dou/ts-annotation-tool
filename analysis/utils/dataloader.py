@@ -525,7 +525,8 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
         files = selected_files
 
     # Exclude corrupted file
-    files = [x for x in files if 'batch_2_rachel' not in x]
+    if 'analysis' in path:
+        files = [x for x in files if 'batch_2_rachel' not in x]
 
     log.info(f'Loading files: {files}\n')
 
