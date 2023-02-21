@@ -345,7 +345,7 @@ const app = Vue.createApp({
                         sentence_html += original_sentence.substring(next_next_span[1], next_next_span[2]);
                         sentence_html += "</span>";
                         sentence_html += original_sentence.substring(next_next_span[2], original_spans[i][2]);
-                        console.log(original_sentence.substring(next_next_span[2], original_spans[i][2]))
+                        // console.log(original_sentence.substring(next_next_span[2], original_spans[i][2]))
                         sentence_html += `</span>`;
                         i++;
                     } else {
@@ -464,7 +464,7 @@ const app = Vue.createApp({
                         sentence_html += simplified_sentence.substring(next_next_span[1], next_next_span[2]);
                         sentence_html += "</span>";
                         sentence_html += simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]);
-                        console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
+                        // console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
                         sentence_html += `</span>`;
                         i++;
                     } else {
@@ -624,7 +624,7 @@ const app = Vue.createApp({
                         sentence_html += simplified_sentence.substring(next_next_span[1], next_next_span[2]);
                         sentence_html += "</span>";
                         sentence_html += simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]);
-                        console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
+                        // console.log(simplified_sentence.substring(next_next_span[2], simplified_spans[i][2]))
                         sentence_html += `</span>`;
                         i++;
                     } else {
@@ -2579,6 +2579,9 @@ const app = Vue.createApp({
                         let newspans_simplified = []
                         for (let i = 0; i < simplified_spans.length; i++) {
                             if (simplified_spans[i][0] == category_id && simplified_spans[i][3] == real_id) {
+                                if (category_id == 2 && simplified_spans[i].length == 4) {
+                                    newspans_simplified.push(simplified_spans[i])
+                                }
                                 continue
                             }
                             newspans_simplified.push(simplified_spans[i])
