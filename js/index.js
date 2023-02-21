@@ -1715,6 +1715,11 @@ const app = Vue.createApp({
         }
         let batch_odd_names = ["anton", "ayush", "kelly"]
         let batch_even_names = ["rachel", "vishnesh", "vinayak"]
+
+        if (urlParams.get('inspection_rating') != null && urlParams.get('name') != null) {
+            data_path = `inspection_rating/${urlParams.get('name')}/batch_${urlParams.get('inspection_rating')}.json`
+        }
+
         if (urlParams.get('batch') != null) {
             if (urlParams.get('batch') == 3) {
                 data_path = `batches/new-wiki-1/part1/${urlParams.get('name')}.json`
