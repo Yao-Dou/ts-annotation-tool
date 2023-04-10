@@ -639,6 +639,7 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True, adjudica
 
             data = consolidate_edits(data, spans_only)        # Adds 'edits' field
             data = consolidate_annotations(data)              # Adds 'processed_annotations' field
+
         else:
             # At the very primitive level, weirdly split edits do NOT add an ambiguous None field
             for sent in data:

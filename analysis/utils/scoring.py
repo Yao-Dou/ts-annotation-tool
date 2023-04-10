@@ -9,7 +9,6 @@ content_errors = [
     Error.REPETITION,
     Error.IRRELEVANT,
     Error.COREFERENCE,
-    Error.INFORMATION_REWRITE,
     Error.BAD_DELETION
 ]
 
@@ -21,47 +20,16 @@ syntax_errors = [
 
 lexical_errors = [
     Error.COMPLEX_WORDING,
+    Error.INFORMATION_REWRITE,
     Error.UNNECESSARY_INSERTION
 ]
 
-# Scores for "good" edits (excl. less info)
-# rating_mapping_simplification = {
-#     0: 1,
-#     1: 4,
-#     2: 9
-# }
-
-# # Scores for less info
-# rating_mapping_deletion = {
-#     0: -4,
-#     1: -1,
-#     2: 1,
-#     3: 4
-# }
-
-# # Scores for errors
-# rating_mapping_error = {
-#     0: 1,
-#     1: 4,
-#     2: 9,
-#     3: 16
-# }
-
-rating_mapping_simplification = {
+rating_mapping_quality = {
     0: 1,
     1: 2,
     2: 3
 }
 
-# Scores for less info
-rating_mapping_deletion = {
-    0: -2,
-    1: -1,
-    2: 1,
-    3: 2
-}
-
-# Scores for errors
 rating_mapping_error = {
     0: 1,
     1: 2,
@@ -70,49 +38,6 @@ rating_mapping_error = {
 }
 
 # Default parameters for scoring
-# default_params = {
-#     'good_deletion': 10, 
-#     'good_insertion': 10,
-#     'good_syntax': 5, 
-#     'good_paraphrase': 2, 
-#     'good_trivial_insertion': 0,
-#     'content_error': -10, 
-#     'syntax_error': -5, 
-#     'lexical_error': -2,
-#     'grammar_error': -2,
-#     'size_calculation': 'exp'
-# }
-
-# Linear regression on SimpEval, seperate dimensions of quality and error
-# 3.69273355, 2.93977382, 4.81632663, -0.98446881, -5.30712595, -1.03163116
-default_params = {
-    'good_deletion': 3.69273355, 
-    'good_insertion': 3.69273355,
-    'good_syntax': 2.93977382, 
-    'good_paraphrase': 4.81632663, 
-    'good_trivial_insertion': 0,
-    'content_error': -0.98446881, 
-    'syntax_error': -5.30712595, 
-    'lexical_error': -1.03163116,
-    'grammar_error': -1.03163116,
-    'size_calculation': 'exp'
-}
-
-# Linear regression on 3 dimensions
-# 1.0356572 , 1.95144333, 2.84206649
-# default_params = {
-#     'good_deletion': 1.0356572, 
-#     'good_insertion': 1.0356572,
-#     'good_syntax': 1.95144333, 
-#     'good_paraphrase': 2.84206649, 
-#     'good_trivial_insertion': 0,
-#     'content_error': -1.0356572, 
-#     'syntax_error': -1.95144333, 
-#     'lexical_error': -2.84206649,
-#     'grammar_error': -2.84206649,
-#     'size_calculation': 'exp'
-# }
-
 # default_params = {
 #     'good_deletion': 7, 
 #     'good_insertion': 2, 
@@ -126,6 +51,36 @@ default_params = {
 #     'size_calculation': 'log'
 # }
 
+# Linear regression on SimpEval, seperate dimensions of quality and error
+# 3.69273355, 2.93977382, 4.81632663, -0.98446881, -5.30712595, -1.03163116
+# default_params = {
+#     'good_deletion': 3.69273355, 
+#     'good_insertion': 3.69273355,
+#     'good_syntax': 2.93977382, 
+#     'good_paraphrase': 4.81632663, 
+#     'good_trivial_insertion': 0,
+#     'content_error': -0.98446881, 
+#     'syntax_error': -5.30712595, 
+#     'lexical_error': -1.03163116,
+#     'grammar_error': -1.03163116,
+#     'size_calculation': 'exp'
+# }
+
+# Linear regression on adjudicated data
+# -0.27392014  4.13118383  4.85789139  1.51360182  5.55115929 -4.12159655
+default_params = {
+    'good_deletion': -0.27392014, 
+    'good_insertion': -0.27392014,
+    'good_syntax': 4.13118383, 
+    'good_paraphrase': 4.85789139, 
+    'good_trivial_insertion': 0,
+    'content_error': 1.51360182, 
+    'syntax_error': 5.55115929, 
+    'lexical_error': -4.12159655,
+    'grammar_error': -4.12159655,
+    'size_calculation': 'exp'
+}
+
 def calculate_annotation_score(annotation, parameters):
     edit_score = 0
 
@@ -133,10 +88,8 @@ def calculate_annotation_score(annotation, parameters):
     if annotation['rating'] != None and annotation['rating'] != '':
         if annotation['type'] == Quality.ERROR:
             edit_score = rating_mapping_error[annotation['rating']]
-        elif annotation['information_impact'] == Information.LESS:
-            edit_score = rating_mapping_deletion[annotation['rating']]
-        elif annotation['information_impact'] == Information.MORE or annotation['information_impact'] == Information.SAME:
-            edit_score = rating_mapping_simplification[annotation['rating']]
+        else:
+            edit_score = rating_mapping_quality[annotation['rating']]
     
     # Add bonuses for good edits
     if annotation['type'] == Quality.QUALITY or annotation['type'] == Quality.TRIVIAL:
