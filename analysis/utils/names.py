@@ -15,14 +15,14 @@ class Information(Enum):
     DIFFERENT = 'Different Information'
 
 class Error(Enum):
-    # Explicit Content Errors
+    # Content Insertion Errors
     REPETITION = 'Repetition'
     CONTRADICTION = 'Contradiction'
     HALLUCINATION = 'Hallucination'
+    FACTUAL = 'Factual Error'
     IRRELEVANT = 'Irrelevant'
-    INFORMATION_REWRITE = 'Information Rewrite'
+    # Content Deletion Errors
     COREFERENCE = 'Coreference'
-    # Implicit Content Errors
     BAD_DELETION = 'Bad Deletion'
     # Structure Errors
     BAD_REORDER = 'Bad Reorder'
@@ -30,7 +30,17 @@ class Error(Enum):
     BAD_SPLIT = 'Bad Split'
     # Lexical Errors
     UNNECESSARY_INSERTION = 'Unnecessary Insertion'
+    UNNECESSARY_DELETION = 'Unnecessary Deletion'
+    INFORMATION_REWRITE = 'Information Rewrite'
     COMPLEX_WORDING = 'Complex Wording'
+
+class Structure(Enum):
+    VOICE = "Voice"
+    POS = "Part of Speech"
+    TENSE = "Tense"
+    GRAMMAR_NUMBER = "Grammatical Number"
+    CLAUSAL = "Clausal Structure"
+    TRANSITION = "Transition"
 
 class Family(Enum):
     CONTENT = 'Conceptual'

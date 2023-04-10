@@ -61,13 +61,26 @@ def get_spans_by_type(spans, type_):
 def count_edits(sent):
     out = {}
     for type_ in mapping.keys():
-        count = max([x[3] for x in get_spans_by_type(sent['original_spans'], type_)] + [x[3] for x in get_spans_by_type(sent['simplified_spans'], type_)] + [0])
+        count = len(set(
+            [x[3] for x in get_spans_by_type(sent['original_spans'], type_)] + 
+            [x[3] for x in get_spans_by_type(sent['simplified_spans'], type_)]
+        ))
         out[type_] = count
 
     for count in out:
         if count == None:
             raise Exception(sent)
     
+    return out
+
+# Given a sentence, returns ids for each type
+def get_edit_ids(sent):
+    out = {}
+    for type_ in mapping.keys():
+        out[type_] = set(
+            [x[3] for x in get_spans_by_type(sent['original_spans'], type_)] + 
+            [x[3] for x in get_spans_by_type(sent['simplified_spans'], type_)]
+        )
     return out
 
 # Counts structure changes
@@ -80,10 +93,10 @@ def count_composite_edits(sent, parent_id, edit_type):
         orig = [x for x in orig if len(x) > 4]
         simp = [x for x in simp if len(x) > 4]
 
-        count = max(
+        count = len(set(
             [x[5] for x in orig if x[3] == parent_id and x[4] == mapping[type_]] + 
-            [x[5] for x in simp if x[3] == parent_id and x[4] == mapping[type_]] + 
-            [0])
+            [x[5] for x in simp if x[3] == parent_id and x[4] == mapping[type_]]
+        ))
         out[type_] = count
     return out
 
@@ -200,7 +213,7 @@ def generate_token_dict(sent):
     return tokens
 
 # Converts sentence to dictionary of (start, end) -> {edit_type: #}
-def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_composite=False):
+def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_composite=False, tagging=False):
     edit_dict_value = sent_type + '_span'
     tokens = generate_token_dict(sents[0][sent_type])
     
@@ -235,8 +248,23 @@ def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_compo
                 for c_span in composite_spans:
                     if c_span in tokens.keys():
                         if edit['type'] not in tokens[c_span].keys():
-                            tokens[c_span][edit['type']] = 0
-                        tokens[c_span][edit['type']] += 1
+                            tokens[c_span][edit['type']] = 0 if not tagging else []
+                        if tagging:
+                            ann = [ann for ann in sent['processed_annotations'] if ann['id'] == edit['id'] and edit['type'] == ann['edit_type']][0]
+                            rating = ann['rating'] + 1 if ann['rating'] is not None else 0
+                            if ann['type'] == Quality.ERROR:
+                                rating = -rating
+                            elif ann['type'] == Quality.TRIVIAL:
+                                rating = 0
+
+                            tokens[c_span][edit['type']] += [{
+                                'family': ann['family'],
+                                'word_qe': 'good' if ann['type'] == Quality.QUALITY else 'bad',
+                                'word_rating': rating,
+                                'edit_qe': True
+                            }]
+                        else:
+                            tokens[c_span][edit['type']] += 1
                     elif c_span is None:
                         pass
                     else:
@@ -354,7 +382,7 @@ def get_edits_by_family(data, family, combine_humans=True, errors_by_sent=False)
                 # In general, counting the grammar edits is really weird
                 error_annotations[Quality.ERROR] = len([ann for ann in anns if ann['grammar_error']])
                 error_annotations[Error.COMPLEX_WORDING] = len([ann for ann in error_edits if ann['error_type'] == Error.COMPLEX_WORDING])
-                error_annotations[Error.UNNECESSARY_INSERTION] = len([ann for ann in error_edits if ann['error_type'] == Error.UNNECESSARY_INSERTION])
+                error_annotations[Error.INFORMATION_REWRITE] = len([ann for ann in error_edits if ann['error_type'] == Error.INFORMATION_REWRITE])
 
         out[system] = {'quality': quality_annotations, 'error': error_annotations}
 
@@ -412,17 +440,18 @@ def get_ratings_by_edit_type(data, edit_type, combine_humans=False, size_weighte
         # Selecting content edits
         if edit_type == 'elaboration' or edit_type == 'generalization':
             selected = [ann for ann in anns if ann['information_impact'] == information_change]
-            if edit_type == 'generalization':
-                selected = copy.deepcopy(selected)
-                del_mapping = {
-                    None: None,
-                    0: 2,
-                    1: 1,
-                    2: 1,
-                    3: 2
-                }
-                for ann in selected:
-                    ann['rating'] = del_mapping[ann['rating']]
+            # Fixed with ajudicated edits
+            # if edit_type == 'generalization':
+            #     selected = copy.deepcopy(selected)
+            #     del_mapping = {
+            #         None: None,
+            #         0: 2,
+            #         1: 1,
+            #         2: 1,
+            #         3: 2
+            #     }
+            #     for ann in selected:
+            #         ann['rating'] = del_mapping[ann['rating']]
 
         quality_edits = [ann for ann in selected if ann['type'] == Quality.QUALITY]
         quality_annotations = {}

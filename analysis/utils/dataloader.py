@@ -32,31 +32,12 @@ mapping = {
     'structure': 5
 }
 reverse_mapping = {v: k for k, v in mapping.items()}
-    
+
 quality_mapping = {
-    'very bad': 0,
-    'bad': 1,
-    'good': 2,
-    'perfect': 3,
-}
-
-simplification_quality_mapping = {
     'minor': 0,
     'somewhat': 1,
-    'a lot': 2
-}
-
-severity_mapping = {
-    'not at all': 0,
-    'minor': 1,
-    'somewhat': 2,
-    'a lot': 3,
-}
-
-different_meaning_severity_mapping = {
-    'minor': 0,
-    'somewhat': 1,
-    'very': 2,
+    'a lot': 2,
+    'very': 2
 }
 
 error_mapping = {
@@ -80,12 +61,23 @@ information_mapping = {
 error_type_mapping = {
     'repetition': Error.REPETITION,
     'contradiction': Error.CONTRADICTION,
-    'hallucination': Error.HALLUCINATION,
+    'hallucination': Error.FACTUAL,
+    'factual': Error.FACTUAL,
+    'irrelevance': Error.IRRELEVANT,
 }
 
 reorder_mapping = {
     'word': ReorderLevel.WORD,
     'component': ReorderLevel.COMPONENT
+}
+
+structure_change_type_mapping = {
+    "changes voice": Structure.VOICE,
+    "changes POS": Structure.POS,
+    "changes tense": Structure.TENSE,
+    "changes grammatical number": Structure.GRAMMAR_NUMBER,
+    "changes clause": Structure.CLAUSAL,
+    "changes transition ": Structure.TRANSITION
 }
 
 # Creates basic metadata about each span
@@ -111,7 +103,7 @@ def get_span_metadata(spans):
     return out
 
 # Creates 'edit' list for a sentence
-def associate_spans(sent):
+def associate_spans(sent, spans_only=False):
     edits = []
 
     # Extract metadata about each span
@@ -120,13 +112,14 @@ def associate_spans(sent):
 
     # Get counts of each span type
     counts = count_edits(sent)
+    edit_ids = get_edit_ids(sent)
     for type_ in counts.keys():
         annotations = sent['annotations'][type_]
-        if counts[type_] != 0 and counts[type_] + 1 > len(annotations):
-            log.warning(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations) - 1} annotations. Likely a missing annotation. Skipping edit type...')
+        if not spans_only and counts[type_] != 0 and counts[type_] > len(annotations):
+            log.warning(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations)} annotations. Likely a missing annotation. Skipping edit type...')
             edits += []
             continue
-        for i in range(1, counts[type_]+1):
+        for i in edit_ids[type_]:
             # Get all spans corresponding to the ID
             orig_span = [x for x in orig_spans if x['id'] == i and x['type'] == type_]
             simp_span = [x for x in simp_spans if x['id'] == i and x['type'] == type_]
@@ -143,12 +136,18 @@ def associate_spans(sent):
             orig_span_amt = [x['span'] for x in orig_span] if orig_span is not empty_span else None
             simp_span_amt = [x['span'] for x in simp_span] if simp_span is not empty_span else None
             
+            if not spans_only and i not in annotations.keys():
+                log.warning(f'Annotation doesnt exist for edit')
+                continue
+
+            ann = annotations[i] if not spans_only else None
+
             entry = {
                 'type': type_,
                 'id': i-1,
                 'original_span': orig_span_amt,
                 'simplified_span': simp_span_amt,
-                'annotation': annotations[i]
+                'annotation': ann
             }
 
             # For structure edits, add composite edits
@@ -180,36 +179,51 @@ def associate_spans(sent):
     return edits
 
 # Creates 'edit' list for all sentences
-def consolidate_edits(data):
+def consolidate_edits(data, spans_only=False):
     out = copy.deepcopy(data)
     for sent in out:
-        sent['edits'] = associate_spans(sent)
+        sent['edits'] = associate_spans(sent, spans_only)
     return out
 
 def process_del_info(raw_annotation):
-    # ex. ['perfect', 'no', 'no']
+    # ex. ['perfect', 'no', 'no'], ["bad","a lot","no",""]
     rating, error_type = None, None
-    rating, coreference, grammar_error = raw_annotation
+    if len(raw_annotation) == 2:
+        # Trivial change
+        quality, grammar_error = raw_annotation
+    elif len(raw_annotation) == 3:
+        # Quality deletion
+        quality, rating, grammar_error = raw_annotation
+    elif len(raw_annotation) == 4:
+        # Bad deletion
+        quality, rating, coreference, grammar_error = raw_annotation
+        error_type = Error.BAD_DELETION
 
-    # Deal with annotators sometimes not filling out all fields
+        # Deal with annotators sometimes not filling out all fields
+        if coreference == '':
+            log.debug(f"Couldn't process coreference error for deletion: {raw_annotation}. Assuming 'no'...")
+            coreference = 'no'
+
+        coreference = error_mapping[coreference]
+        if coreference:
+            error_type = Error.COREFERENCE
+    else:
+        log.warn("No deletion annotation found. Skipping...")
+        return None, None, None, None
+
     if grammar_error == '':
         log.debug(f"Couldn't process grammar for deletion: {raw_annotation}. Assuming 'no'...")
         grammar_error = 'no'
-    if coreference == '':
-        log.debug(f"Couldn't process coreference error for deletion: {raw_annotation}. Assuming 'no'...")
-        coreference = 'no'
+    grammar_error = error_mapping[grammar_error]
 
-    rating, grammar_error, coreference = quality_mapping[rating], error_mapping[coreference], error_mapping[grammar_error]
-    
-    edit_quality = Quality.QUALITY
-    if coreference:
-        error_type = Error.COREFERENCE
-        edit_quality = Quality.ERROR
+    deletion_impact_mapping = {
+        "good": Quality.QUALITY, 
+        "trivial": Quality.TRIVIAL,
+        "bad": Quality.ERROR,
+    }
+    edit_quality = deletion_impact_mapping[quality]
 
-    # I've manually checked this for correctness. 0 = very bad, 1 = bad
-    if rating == 0 or rating == 1:
-        error_type = Error.BAD_DELETION
-        edit_quality = Quality.ERROR
+    rating = quality_mapping[rating] if rating else None
     
     return edit_quality, rating, error_type, grammar_error
 
@@ -221,12 +235,12 @@ def process_add_info(raw_annotation):
     if (annotation_type == 'elaboration'):
         edit_quality = Quality.QUALITY
         rating, grammar_error = raw_annotation[1:]
-        rating = simplification_quality_mapping[rating]
+        rating = quality_mapping[rating]
     elif (annotation_type == 'trivial'):
         helpful, rating, grammar_error = raw_annotation[1:]
         if helpful == 'yes':
             edit_quality = Quality.QUALITY
-            rating = simplification_quality_mapping[rating]
+            rating = quality_mapping[rating]
         else:
             edit_quality = Quality.TRIVIAL
             # error_type = Error.UNNECESSARY_INSERTION
@@ -243,7 +257,7 @@ def process_add_info(raw_annotation):
         else:
             error_type, rating, grammar_error = raw_annotation
             error_type = error_type_mapping[error_type]
-        rating = severity_mapping[rating]
+        rating = quality_mapping[rating]
     
     grammar_error = error_mapping[grammar_error] if grammar_error != '' else False
     return edit_quality, rating, error_type, grammar_error
@@ -253,7 +267,11 @@ def process_same_info(raw_annotation, edit_type):
     # ex. (substitution) ['positive', 'a lot', 'minor', 'no']
     # ex. (reorder) ['negative', 'a lot', '', 'no', 'word']
     # ex. (structure) ['positive', '', 'a lot', 'no'], ['positive', '', 'somewhat', 'yes']
-    edit_quality, pos_rating, neg_rating, grammar_error = raw_annotation
+    structure_change_type = None
+    if len(raw_annotation) == 5:
+        structure_change_type, neg_rating, edit_quality, pos_rating, grammar_error = raw_annotation
+    else:
+        edit_quality, pos_rating, neg_rating, grammar_error = raw_annotation
 
     # Deal with annotators sometimes not filling out all fields
     if grammar_error == '':
@@ -267,9 +285,12 @@ def process_same_info(raw_annotation, edit_type):
 
     error_type = None
     if edit_quality == Quality.QUALITY:
-        rating = simplification_quality_mapping[pos_rating]
+        if pos_rating == '':
+            log.debug(f"Couldn't process positive rating for substitution: {raw_annotation}. Assuming 'somewhat'...")
+            pos_rating = 'somewhat'
+        rating = quality_mapping[pos_rating]
     elif edit_quality == Quality.ERROR:
-        rating = severity_mapping[neg_rating]
+        rating = quality_mapping[neg_rating]
         if edit_type == 'substitution':
             error_type = Error.COMPLEX_WORDING
         elif edit_type == 'reorder':
@@ -281,11 +302,20 @@ def process_same_info(raw_annotation, edit_type):
     elif edit_quality == Quality.TRIVIAL:
         rating = None
 
-    return edit_quality, rating, error_type, grammar_error
+    if structure_change_type is not None and structure_change_type != '':
+        structure_change_type = structure_change_type_mapping[structure_change_type]
+
+    return structure_change_type, edit_quality, rating, error_type, grammar_error
 
 def process_diff_info(raw_annotation):
     # ['very', 'no']
-    rating, grammar_error = different_meaning_severity_mapping[raw_annotation[0]], error_mapping[raw_annotation[1]]
+    
+    rating, grammar_error = raw_annotation
+    if grammar_error == '':
+        log.debug(f"Couldn't process grammar for substitution: {raw_annotation}. Assuming 'no'...")
+        grammar_error = 'no'
+    rating, grammar_error = quality_mapping[rating], error_mapping[grammar_error]
+    
     return Quality.ERROR, rating, Error.INFORMATION_REWRITE, grammar_error
 
 # So when coding the interface, substitutions follow the format:
@@ -314,7 +344,7 @@ def process_annotation(edit):
         raise Exception(f'Could not process edit: {edit}')
 
     information_impact = Information.SAME
-    reorder_level = None
+    reorder_level, structure_change_type = None, None
     
     # Classify edit types into their information change
     if (edit_type == 'deletion'):
@@ -338,9 +368,11 @@ def process_annotation(edit):
     elif (information_impact == Information.MORE):
         edit_quality, rating, error_type, grammar_error = process_add_info(raw_annotation)
     elif (information_impact == Information.DIFFERENT):
+        # Redefine this subtype as a lexical error
         edit_quality, rating, error_type, grammar_error = process_diff_info(raw_annotation)
+        information_impact = Information.SAME
     else:
-        edit_quality, rating, error_type, grammar_error = process_same_info(raw_annotation, edit_type)
+        structure_change_type, edit_quality, rating, error_type, grammar_error = process_same_info(raw_annotation, edit_type)
 
     # For berevity, we simply set the error type to ERROR if any error exists
     if error_type is not None:
@@ -348,9 +380,9 @@ def process_annotation(edit):
 
     # Determine the family of edit based on edit type and information change
     edit_family = None
-    if information_impact != Information.SAME:
+    if information_impact != Information.SAME and edit_quality != Quality.TRIVIAL:
         edit_family = Family.CONTENT
-    elif edit_type == 'substitution':
+    elif edit_type == 'substitution' or edit_quality == Quality.TRIVIAL:
         edit_family = Family.LEXICAL
     else:
         edit_family = Family.SYNTAX
@@ -364,6 +396,7 @@ def process_annotation(edit):
         'id': edit['id'],
         'information_impact': information_impact,
         'type': edit_quality,
+        'subtype': structure_change_type,
         'family': edit_family,
         'grammar_error': grammar_error,
         'error_type': error_type,
@@ -399,7 +432,8 @@ def consolidate_annotations(data):
             try: 
                 processed.append(process_annotation(edit))
             except Exception as e:
-                log.error(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
+                # log.error(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
+                raise Exception(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
                 successful = False
         
         # Delete the sentence if we could not process the annotations for it
@@ -506,11 +540,17 @@ def calculate_subscores(data):
 def collapse_systems(data):
     data = copy.deepcopy(data)
     for sent in data:
+        # Other December collection data
         if 'new-wiki-2' or 'new-wiki-3' in sent['system']:
             sent['system'] = sent['system'].replace('new-wiki-2', 'new-wiki-1').replace('new-wiki-3', 'new-wiki-1')
+
+        # Ajudicated collection data
+        if 'simpeval-22' or 'simpeval-ext' in sent['system']:
+            sent['system'] = sent['system'].replace('simpeval-22', 'new-wiki-1').replace('simpeval-ext', 'new-wiki-1')
+
     return data
 
-def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
+def load_data(path, batch_num=None, preprocess=False, realign_ids=True, adjudicated=False, spans_only=False):
     data = []
 
     if not 'annotated' in path:
@@ -556,7 +596,7 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
 
                 # We have an issue where we need to exclude GPT outputs from
                 # batches 5 and 6 because we re-do them using text-davinci-003
-                if batch_num == 5 or batch_num == 6:
+                if not adjudicated and (batch_num == 5 or batch_num == 6):
                     pasted_annotation = [sent for sent in pasted_annotation if 'GPT' not in sent['system']]
                 
                 data += pasted_annotation
@@ -583,15 +623,33 @@ def load_data(path, batch_num=None, preprocess=False, realign_ids=True):
     # Preprocess will violate data integrity. If you use preprocess, there's no guarentee
     # that this data will work with the interface.
     if preprocess:
-        # At the very primitive level, weirdly split edits do NOT add an ambiguous None field
-        for sent in data:
-            sent['annotations']['split'] = [None] + sent['annotations']['split']
+        if adjudicated:
+            # Have split edits start counting at 1 rather than 0
+            for sent in [s for s in data if len(sent['annotations']['split'].keys()) != 0]:
+                for key in sorted([int(k) for k in sent['annotations']['split'].keys()], reverse=True):
+                    sent['annotations']['split'][str(key + 1)] = sent['annotations']['split'][str(key)]
+                    del sent['annotations']['split'][str(key)]
 
-        data = consolidate_edits(data)                      # Adds 'edits' field
-        data = consolidate_annotations(data)                # Adds 'processed_annotations' field
-        data = add_simpeval_scores(data)                    # Adds 'simpeval_scores' field. Can optionally not take the z-score normalized scores with "json=True"
-        data = calculate_sentence_scores(data)              # Adds 'score' field
-        data = calculate_subscores(data)                    # Adds 'subscores' field
-        data = collapse_systems(data)                       # Fix 'system' field to not distinguish between datasets
+            # Convert all string dict keys to ints
+            for sent in data:
+                for type_ in sent['annotations'].keys():
+                    for edit_id in list(sent['annotations'][type_].keys()):
+                        sent['annotations'][type_][int(edit_id)] = sent['annotations'][type_][edit_id]
+                        del sent['annotations'][type_][edit_id]
+
+            data = consolidate_edits(data, spans_only)        # Adds 'edits' field
+            data = consolidate_annotations(data)              # Adds 'processed_annotations' field
+        else:
+            # At the very primitive level, weirdly split edits do NOT add an ambiguous None field
+            for sent in data:
+                sent['annotations']['split'] = [None] + sent['annotations']['split']
+
+            data = consolidate_edits(data, spans_only)        # Adds 'edits' field
+            data = consolidate_annotations(data)              # Adds 'processed_annotations' field
+            
+        data = add_simpeval_scores(data)                      # Adds 'simpeval_scores' field. Can optionally not take the z-score normalized scores with "json=True"
+        data = calculate_sentence_scores(data)                # Adds 'score' field
+        data = calculate_subscores(data)                      # Adds 'subscores' field
+        data = collapse_systems(data)                         # Fix 'system' field to not distinguish between datasets
     
     return data
