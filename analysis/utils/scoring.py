@@ -8,6 +8,7 @@ content_errors = [
     Error.CONTRADICTION,
     Error.REPETITION,
     Error.IRRELEVANT,
+    Error.FACTUAL,
     Error.COREFERENCE,
     Error.BAD_DELETION
 ]
@@ -24,13 +25,7 @@ lexical_errors = [
     Error.UNNECESSARY_INSERTION
 ]
 
-rating_mapping_quality = {
-    0: 1,
-    1: 2,
-    2: 3
-}
-
-rating_mapping_error = {
+rating_mapping = {
     0: 1,
     1: 2,
     2: 3,
@@ -69,27 +64,25 @@ rating_mapping_error = {
 # Linear regression on adjudicated data
 # -0.27392014  4.13118383  4.85789139  1.51360182  5.55115929 -4.12159655
 default_params = {
-    'good_deletion': -0.27392014, 
-    'good_insertion': -0.27392014,
-    'good_syntax': 4.13118383, 
-    'good_paraphrase': 4.85789139, 
-    'good_trivial_insertion': 0,
-    'content_error': 1.51360182, 
-    'syntax_error': 5.55115929, 
-    'lexical_error': -4.12159655,
-    'grammar_error': -4.12159655,
+    'good_deletion': 0.1955782614057374, 
+    'good_insertion': 0.1955782614057374, 
+    'good_syntax': 5.4916773148765285, 
+    'good_paraphrase': 10.759154259512686, 
+    'good_trivial_insertion': 0, 
+    'content_error': 1.796703025226618, 
+    'syntax_error': 5.051975242720761, 
+    'lexical_error': 6.128637010080399, # -
+    'grammar_error': 6.128637010080399, # -
     'size_calculation': 'exp'
 }
+
 
 def calculate_annotation_score(annotation, parameters):
     edit_score = 0
 
     # This will only be null for 'no impact' same info and bad trivial insertions
     if annotation['rating'] != None and annotation['rating'] != '':
-        if annotation['type'] == Quality.ERROR:
-            edit_score = rating_mapping_error[annotation['rating']]
-        else:
-            edit_score = rating_mapping_quality[annotation['rating']]
+        edit_score = rating_mapping[annotation['rating']]
     
     # Add bonuses for good edits
     if annotation['type'] == Quality.QUALITY or annotation['type'] == Quality.TRIVIAL:
