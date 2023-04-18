@@ -1721,7 +1721,7 @@ const app = Vue.createApp({
         }
 
         if (urlParams.get('new_wiki') != null  && urlParams.get('name') != null) {
-            data_path = `batches/new_wiki-${urlParams.get('new_wiki')}/${urlParams.get('name')}.json`
+            data_path = `batches/new-wiki-${urlParams.get('new_wiki')}/${urlParams.get('name')}.json`
         }
 
         if (urlParams.get('batch') != null) {
