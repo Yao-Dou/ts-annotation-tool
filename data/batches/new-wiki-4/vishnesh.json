@@ -1,0 +1,703 @@
+[
+    {
+        "id": 0,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven people died when they were squished in a group that came together to get food outside a factory in Karachi, Pakistan.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 1,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven individuals were killed when they were squashed in a crowd that had gathered outside a factory in Karachi, Pakistan to get food.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 2,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven people died in Karachi, Pakistan, after being crushed in a crowd that had gathered to receive food from a factory.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 3,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "A group of people died in Karachi, Pakistan, after being caught in a crowd that had gathered to get food from a factory.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 4,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven people were crushed to death in a large gathering outside a factory in Karachi, Pakistan. || They had been waiting to get food.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 5,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "Industrialization during the Victorian era created a large middle-class, which increased the size of society's social structure. || This growth impacted culture, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                129,
+                131,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 6,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "During the Victorian era, industrialisation led to a fast-growing middle class that greatly impacted society's cultural norms, lifestyle, values, and morality.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 7,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "The process of industrialization during the Victorian era led to the emergence of a large group of people called the middle class. || This increase in the number of middle-class people had a big impact on the social structure, including how people thought about culture, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 8,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "The Victorian era saw a surge in industrialisation, which led to a considerable expansion of the middle class. || This had a great influence on the social strata, changing the prevailing cultural norms, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 9,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "The Victorian era's industrialization led to a quickly expanding middle class. || This growth greatly impacted society, including cultural norms, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                79,
+                81,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 10,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "The actress who won an award and now leads Goop is currently in court for a ski accident that happened in 2016. || The man who hit her is trying to get millions in compensation, but Paltrow claims he was the one who crashed into her instead.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 11,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "The famous actress who now runs Goop is in court because of a skiing accident that happened in 2016. || The man who crashed into her is asking for millions of dollars in compensation, but she says he was actually the one who caused the accident.",
+        "simplified_spans": [
+            [
+                2,
+                101,
+                103,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 12,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "Gwyneth Paltrow, an award-winning actress and current CEO of Goop, is facing a court case about a skiing accident in 2016. || The man who collided with her is seeking millions in compensation, but Paltrow alleges that he was the one who caused the crash.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 13,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "The famous actress and Goop CEO is in court for a 2016 ski accident. || The man who hit her is trying to get millions in compensation. || Paltrow says he was the one who crashed, not her.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                135,
+                137,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 14,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "Award-winning actress and Goop CEO, Gwyneth Paltrow, is currently in court over a skiing accident that happened in 2016. || One man is claiming that she crashed into him and is demanding millions in damages. || Paltrow denies that she was at fault and says that it was the other way around.",
+        "simplified_spans": [
+            [
+                2,
+                121,
+                123,
+                0
+            ],
+            [
+                2,
+                208,
+                210,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 15,
+        "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
+        "original_spans": [],
+        "simplified": "The Vatican disapproves of the discovery doctrine, which 15th-century papal bulls promoted. || These documents were used for political gain by colonial powers, allowing them to commit immoral acts against native people without facing any resistance from religious leaders.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 16,
+        "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
+        "original_spans": [],
+        "simplified": "The Vatican denies the discovery doctrine and says that it was used by colonial powers to do bad things to indigenous people. || They say the people in power did these things without being stopped by religious leaders, and the papal bulls that promoted the doctrine were changed to help them do it.",
+        "simplified_spans": [
+            [
+                2,
+                126,
+                128,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 17,
+        "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
+        "original_spans": [],
+        "simplified": "The Vatican formally rejects the discovery doctrine. || They say that the 15th-century religious documents supporting it were misused by colonial powers for political reasons. || This allowed them to carry out wrong actions against native peoples, sometimes without resistance from religious authorities.",
+        "simplified_spans": [
+            [
+                2,
+                53,
+                55,
+                0
+            ],
+            [
+                2,
+                176,
+                178,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 18,
+        "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
+        "original_spans": [],
+        "simplified": "The Vatican officially denies the discovery doctrine, claiming that 15th-century papal bulls that supported it were manipulated by colonial powers to justify immoral acts against indigenous people. || These acts were sometimes carried out with the approval of church authorities.",
+        "simplified_spans": [
+            [
+                2,
+                198,
+                200,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 19,
+        "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
+        "original_spans": [],
+        "simplified": "The Vatican has denounced the discovery doctrine, stating that historical papal bulls which supported it were manipulated by colonial powers for political purposes. || These actions were taken against indigenous peoples, sometimes with the approval of the Church, and were morally unjustifiable.",
+        "simplified_spans": [
+            [
+                2,
+                165,
+                167,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 20,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador has removed its ambassador from Argentina. || This is a protest against Argentina for hiding Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020 and not sharing her location.",
+        "simplified_spans": [
+            [
+                2,
+                51,
+                53,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 21,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador is upset with Argentina for protecting their politician, Mar\u00eda de los \u00c1ngeles Duarte, since 2020 and not telling them where she is. || As a result, Ecuador has taken its ambassador back from Argentina.",
+        "simplified_spans": [
+            [
+                2,
+                140,
+                142,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 22,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador has withdrawn its ambassador from Argentina because Argentina has been hiding an Ecuadorian politician since 20",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 23,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador is withdrawing its ambassador from Argentina because Argentina has been hiding an Ecuadorian politician named Mar\u00eda de los \u00c1ngeles Duarte since 2020, and refusing to tell anyone where she is.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 24,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador has withdrawn its ambassador from Argentina in protest, as Argentina has refused to provide information about the location of Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte, who has been sheltered there since 2020.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 25,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "Grocery inflation in the United Kingdom has reached a record high of 17.1%, according to Kantar Worldpanel. || This is due to a combination of high levels of inflation, supply chain issues, and high energy costs impacting the economy.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 26,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "The price of groceries in the UK has gone up a lot, with a record high increase of 17.1%. || This is because of things like inflation, problems with getting products to stores, and high costs for energy. || A group called Kantar Worldpanel did a study on this.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ],
+            [
+                2,
+                204,
+                206,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 27,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "In the UK, the cost of groceries has increased by 17.1%, according to Kantar Worldpanel, which is a market research group. || This is because of high levels of inflation, problems with the supply chain, and the cost of energy affecting the economy.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 28,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "Market research group Kantar Worldpanel reports that grocery inflation in the United Kingdom has hit a new peak of 17.1%. || This is due to high inflation, supply chain problems, and rising energy costs which affect the whole economy.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 29,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "The cost of groceries in the United Kingdom has increased to a record 17.1%, says market research group Kantar Worldpanel. || This is due to high inflation, supply chain problems, and expensive energy affecting the economy.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 30,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "This year's Academy Award for Best Picture included two films that have already made over $1 billion at the global box office: Avatar: The Way of Water and Top Gun: Maverick. || It was the first time that the Best Picture category featured two sequels, and it was also a new record for the most movies grossing over $1 billion worldwide to be nominated for the award in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                175,
+                177,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 31,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "This year's Academy Awards made history by nominating two sequels (Avatar: The Way of Water and Top Gun: Maverick) for Best Picture. || Additionally, it was the first time that two movies that made over $1 billion globally were up for the same award.",
+        "simplified_spans": [
+            [
+                2,
+                133,
+                135,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 32,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "This year marked the first time two sequels (Avatar: The Way of Water and Top Gun: Maverick) were included in the Best Picture category of the Academy Awards. || Additionally, it was the first time two movies grossing more than one billion dollars worldwide were nominated in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 33,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "For the first time, two sequels (Avatar: The Way of Water and Top Gun: Maverick) were in the Academy Award Best Picture category. || Also, it was the first time that two movies earning more than $1 billion worldwide were nominated for Best Picture in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                130,
+                132,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 34,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "For the first time, two blockbuster sequels, Avatar: The Way of Water and Top Gun: Maverick, were nominated for Best Picture at the Academy Awards. || This is also the first time two films that made over $1 billion worldwide have been nominated in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                148,
+                150,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 35,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland's history dates back to the ancient Greeks. || Subsequent scientific development led to the discovery of its neuroendocrine properties.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 36,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The story of the pineal gland is about how scientists figured out that it has both nervous and hormone-related functions, starting from when the ancient Greeks first studied it.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 37,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland's history is about how scientists learned about it, starting with the ancient Greeks, and eventually finding out that it is involved in the body's hormone system.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 38,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland has been studied by scientists for centuries, beginning with the Ancient Greeks. || This research has led to a greater understanding of the gland's neuroendocrine properties.",
+        "simplified_spans": [
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 39,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland is an important structure in the brain that has been studied by scientists for many years. || The history of the pineal gland involves the discovery of its neuroendocrine properties, which were first identified by the ancient Greeks. || Through the scientific advancements made in this field, the pineal gland has become a critical component of modern medicine.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ],
+            [
+                2,
+                251,
+                253,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 40,
+        "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
+        "original_spans": [],
+        "simplified": "Critics complimented Keanu Reeves' \"Baba Yaga\" for its amazing action scenes. || Although the story is not strong enough to support a nearly 3-hour movie, it has already made over $100 million globally.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 41,
+        "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
+        "original_spans": [],
+        "simplified": "Critics liked Keanu Reeves' \"Baba Yaga\" because it had lots of exciting action scenes, but the story wasn't good enough to make the movie's length of almost 3 hours (plus a scene after the credits) worth it. || The movie made more than $100 million all around the world.",
+        "simplified_spans": [
+            [
+                2,
+                208,
+                210,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 42,
+        "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
+        "original_spans": [],
+        "simplified": "Reviewers praised the many impressive action sequences in Keanu Reeves' \"Baba Yaga\", even though the underlying plot takes up almost 3 hours of the movie. || The movie opened to over $100 million worldwide. || A post-credits scene completes the story.",
+        "simplified_spans": [
+            [
+                2,
+                155,
+                157,
+                0
+            ],
+            [
+                2,
+                207,
+                209,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 43,
+        "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
+        "original_spans": [],
+        "simplified": "Keanu Reeves' movie \"Baba Yaga\" received positive reviews for its exciting action scenes, although some critics felt that the plot was not worth the 3-hour length, including a post-credits scene. || Despite this, the movie opened to more than $100 million worldwide.",
+        "simplified_spans": [
+            [
+                2,
+                196,
+                198,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 44,
+        "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
+        "original_spans": [],
+        "simplified": "Reviewers praised Keanu Reeves' \"Baba Yaga\" for its impressive action sequences, although the plot did not warrant the lengthy 3-hour runtime (including a post-credits scene). || The movie made over $100 million worldwide when it opened.",
+        "simplified_spans": [
+            [
+                2,
+                176,
+                178,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 45,
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "original_spans": [],
+        "simplified": "ChatGPT has been accused of discriminatory behaviors, such as making jokes about men and people from England but not women and people from India, and praising some figures but not others, like Joe Biden but not Donald Trump.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 46,
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "original_spans": [],
+        "simplified": "ChatGPT has been accused of discrimination, like making fun of men and people from England, but not women and people from India, and showing favoritism towards Joe Biden instead of Donald Trump.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 47,
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "original_spans": [],
+        "simplified": "ChatGPT has been accused of behaving in a discriminatory way, by telling jokes that are hurtful to people of a certain gender or nationality, while refusing to tell jokes that are offensive to others. || Additionally, ChatGPT has been accused of showing favoritism towards certain figures, such as Joe Biden, while disregarding others, like Donald Trump.",
+        "simplified_spans": [
+            [
+                2,
+                201,
+                203,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 48,
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "original_spans": [],
+        "simplified": "ChatGPT has been accused of exhibiting prejudicial behavior, such as making fun of men and those from England, while refusing to do the same for women and people from India, and giving support to Joe Biden while refraining from doing the same for Donald Trump.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 49,
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "original_spans": [],
+        "simplified": "ChatGPT has been accused of acting unfairly. || It tells jokes about men and English people, but not about women and Indians. || It praises Joe Biden but does not do the same for Donald Trump.",
+        "simplified_spans": [
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                126,
+                128,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    }
+]

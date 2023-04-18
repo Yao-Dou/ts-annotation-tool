@@ -1,0 +1,609 @@
+[
+    {
+        "id": 0,
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "original_spans": [],
+        "simplified": "The process of discovering things in many fields, such as science about planets and animals, has been getting easier since the 1700s and 1800s. || This trend can be represented by a curve that gets smaller and smaller over time.",
+        "simplified_spans": [
+            [
+                2,
+                144,
+                146,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 1,
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "original_spans": [],
+        "simplified": "Discovery has become easier in fields such as planetary science and mammalian biology since the 1700s and 1800s. || This ease of discovery can be plotted on a curve that decays exponentially.",
+        "simplified_spans": [
+            [
+                2,
+                113,
+                115,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 2,
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "original_spans": [],
+        "simplified": "Since the 1700s and 1800s, discoveries in many fields, such as planetary science and mammalian biology, have been increasingly more difficult and can be represented by an exponentially decreasing curve.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 3,
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "original_spans": [],
+        "simplified": "In many areas, like studying planets and mammals, finding new things has become easier since the 1700s and 1800s. || This can be shown with a curve that decreases over time.",
+        "simplified_spans": [
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 4,
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "original_spans": [],
+        "simplified": "In many cases, discoveries have been easier to make since the 1700s and 1800s, following an exponentially decaying curve.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 5,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first half of the movie offers great entertainment and keeps viewers enthralled, but the second half is disappointing; it is slow-paced and lacks excitement.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 6,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first part of the movie is fun and interesting, but the second half is slow and not as entertaining.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 7,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first half of the movie is entertaining and interesting, but the second half is not. || The second half is slow and not as enjoyable.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 8,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first half of the movie is full of entertainment and intrigue, but the second half is slow and dull.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 9,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "Unfortunately, the second half of the movie doesn't provide as much entertainment and excitement as the first half. || In fact, it has a slow pace that doesn't keep the audience engaged.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 10,
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "original_spans": [],
+        "simplified": "Poland says it is closing a big border crossing with Belarus for now because of increased problems between the two countries.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 11,
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "original_spans": [],
+        "simplified": "Poland has closed a big border crossing with Belarus due to increased tensions between the two countries. || The closure will remain in effect until further notice.",
+        "simplified_spans": [
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 12,
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "original_spans": [],
+        "simplified": "Poland has announced the closure of a major border crossing with Belarus until further notice due to heightened tensions between the two countries.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 13,
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "original_spans": [],
+        "simplified": "Poland has closed a significant border crossing with Belarus due to increased tensions between the two countries.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 14,
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "original_spans": [],
+        "simplified": "Poland has announced the closure of a main border crossing with Belarus until further notice due to the escalating tensions between the two nations.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 15,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "A baby thought to be a miracle grows up on a mission to find his true identity and purpose.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 16,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "The book tells the story of a special baby who people believe is God's child. || This baby goes on a quest to find out where he comes from and why he is here.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 17,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "A child believed to be a divine gift, embarks on a quest to find his true identity and purpose.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 18,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "This book is about a baby said to be God's child. || He embarks on a quest to discover who he is and his purpose.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 19,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "The story is about a special baby who is thought to be God's child. || It shows his search for where he comes from and his purpose.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 20,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland is an important structure in the brain that has been studied by scientists for many years. || The history of the pineal gland involves the discovery of its neuroendocrine properties, which were first identified by the ancient Greeks. || Through the scientific advancements made in this field, the pineal gland has become a critical component of modern medicine.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ],
+            [
+                2,
+                251,
+                253,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 21,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The story of the pineal gland is about how scientists figured out that it has both nervous and hormone-related functions, starting from when the ancient Greeks first studied it.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 22,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland's history dates back to the ancient Greeks. || Subsequent scientific development led to the discovery of its neuroendocrine properties.",
+        "simplified_spans": [
+            [
+                2,
+                61,
+                63,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 23,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland's history is about how scientists learned about it, starting with the ancient Greeks, and eventually finding out that it is involved in the body's hormone system.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 24,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The pineal gland has been studied by scientists for centuries, beginning with the Ancient Greeks. || This research has led to a greater understanding of the gland's neuroendocrine properties.",
+        "simplified_spans": [
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 25,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "The Victorian era saw a surge in industrialisation, which led to a considerable expansion of the middle class. || This had a great influence on the social strata, changing the prevailing cultural norms, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 26,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "During the Victorian era, industrialisation led to a fast-growing middle class that greatly impacted society's cultural norms, lifestyle, values, and morality.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 27,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "The Victorian era's industrialization led to a quickly expanding middle class. || This growth greatly impacted society, including cultural norms, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                79,
+                81,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 28,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "Industrialization during the Victorian era created a large middle-class, which increased the size of society's social structure. || This growth impacted culture, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                129,
+                131,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 29,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "The process of industrialization during the Victorian era led to the emergence of a large group of people called the middle class. || This increase in the number of middle-class people had a big impact on the social structure, including how people thought about culture, lifestyle, values, and morality.",
+        "simplified_spans": [
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 30,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "Protests happen all over France one day after President Emmanuel Macron talks about changing pensions.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 31,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "France experienced riots the day after President Emmanuel Macron spoke about changes to the country's retirement system.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 32,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "A day after President Emmanuel Macron gives a speech about pension reform, riots break out in France.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 33,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "On the day after President Emmanuel Macron delivers a speech about pension reform, riots break out across France.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 34,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "The day after President Emmanuel Macron gave a speech on pension reform, riots broke out in various parts of France.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 35,
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "original_spans": [],
+        "simplified": "Its subject and medium represent modernization, globalization, and industrialization, which symbolize the energy and spirit of traditional Bengal during the period of industrialization.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 36,
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "original_spans": [],
+        "simplified": "This artwork represents modernization, globalization, and industrialization, which were important aspects of traditional Bengal during its industrial period.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 37,
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "original_spans": [],
+        "simplified": "The subject and medium of the topic are similar to modernisation, globalization, and industrialization because they reflect the spirit and culture of traditional Bengal during the time of industrialization.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 38,
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "original_spans": [],
+        "simplified": "The subject and medium of this artwork reflect the progress of modernisation, globalisation, and industrialisation in traditional Bengal, symbolising its energy and the spirit of the era.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 39,
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "original_spans": [],
+        "simplified": "The topic and style of the work relate to modernization, globalization, and industrialization. || They represent the energy and spirit of traditional Bengal during the time of industrial growth.",
+        "simplified_spans": [
+            [
+                2,
+                95,
+                97,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 40,
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [],
+        "simplified": "The International Court of Justice (ICJ) ruled that the United States broke its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies. || However, the ICJ decided that it cannot take legal action against the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "simplified_spans": [
+            [
+                2,
+                193,
+                195,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 41,
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [],
+        "simplified": "The ICJ said that the US broke its friendship treaty with Iran when it let its courts freeze assets of Iranian companies. || However, the ICJ cannot decide on the $1.75 billion frozen assets of Iran's Central Bank.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 42,
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [],
+        "simplified": "The International Court of Justice ruled that the United States breached its 1955 treaty with Iran by allowing its domestic courts to freeze the assets of Iranian companies. || However, the ICJ said it does not have the authority to manage the $1.75 billion worth of assets the Central Bank of Iran has had frozen.",
+        "simplified_spans": [
+            [
+                2,
+                174,
+                176,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 43,
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [],
+        "simplified": "The International Court of Justice (ICJ) decided that the United States broke its 1955 friendship treaty with Iran by letting its local courts freeze assets owned by Iranian companies. || However, the ICJ said it does not have the power to control the $1.75 billion of frozen assets held by Iran's Central Bank.",
+        "simplified_spans": [
+            [
+                2,
+                185,
+                187,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 44,
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [],
+        "simplified": "The International Court of Justice said that the US violated its 1955 friendship treaty with Iran by allowing its domestic courts to freeze assets held by Iranian companies. || This ruling only applies to the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "simplified_spans": [
+            [
+                2,
+                174,
+                176,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 45,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "Gwyneth Paltrow, an award-winning actress and current CEO of Goop, is facing a court case about a skiing accident in 2016. || The man who collided with her is seeking millions in compensation, but Paltrow alleges that he was the one who caused the crash.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 46,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "The famous actress who now runs Goop is in court because of a skiing accident that happened in 2016. || The man who crashed into her is asking for millions of dollars in compensation, but she says he was actually the one who caused the accident.",
+        "simplified_spans": [
+            [
+                2,
+                101,
+                103,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 47,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "The famous actress and Goop CEO is in court for a 2016 ski accident. || The man who hit her is trying to get millions in compensation. || Paltrow says he was the one who crashed, not her.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ],
+            [
+                2,
+                135,
+                137,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 48,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "Award-winning actress and Goop CEO, Gwyneth Paltrow, is currently in court over a skiing accident that happened in 2016. || One man is claiming that she crashed into him and is demanding millions in damages. || Paltrow denies that she was at fault and says that it was the other way around.",
+        "simplified_spans": [
+            [
+                2,
+                121,
+                123,
+                0
+            ],
+            [
+                2,
+                208,
+                210,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 49,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "The actress who won an award and now leads Goop is currently in court for a ski accident that happened in 2016. || The man who hit her is trying to get millions in compensation, but Paltrow claims he was the one who crashed into her instead.",
+        "simplified_spans": [
+            [
+                2,
+                112,
+                114,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    }
+]

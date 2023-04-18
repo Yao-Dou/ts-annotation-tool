@@ -1,0 +1,582 @@
+[
+    {
+        "id": 0,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador is withdrawing its ambassador from Argentina because Argentina has been hiding an Ecuadorian politician named Mar\u00eda de los \u00c1ngeles Duarte since 2020, and refusing to tell anyone where she is.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 1,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador is upset with Argentina for protecting their politician, Mar\u00eda de los \u00c1ngeles Duarte, since 2020 and not telling them where she is. || As a result, Ecuador has taken its ambassador back from Argentina.",
+        "simplified_spans": [
+            [
+                2,
+                140,
+                142,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 2,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador has withdrawn its ambassador from Argentina in protest, as Argentina has refused to provide information about the location of Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte, who has been sheltered there since 2020.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 3,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador has removed its ambassador from Argentina. || This is a protest against Argentina for hiding Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020 and not sharing her location.",
+        "simplified_spans": [
+            [
+                2,
+                51,
+                53,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 4,
+        "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
+        "original_spans": [],
+        "simplified": "Ecuador has withdrawn its ambassador from Argentina because Argentina has been hiding an Ecuadorian politician since 20",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 5,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first half of the movie offers great entertainment and keeps viewers enthralled, but the second half is disappointing; it is slow-paced and lacks excitement.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 6,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first part of the movie is fun and interesting, but the second half is slow and not as entertaining.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 7,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first half of the movie is entertaining and interesting, but the second half is not. || The second half is slow and not as enjoyable.",
+        "simplified_spans": [
+            [
+                2,
+                89,
+                91,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 8,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "The first half of the movie is full of entertainment and intrigue, but the second half is slow and dull.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 9,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "Unfortunately, the second half of the movie doesn't provide as much entertainment and excitement as the first half. || In fact, it has a slow pace that doesn't keep the audience engaged.",
+        "simplified_spans": [
+            [
+                2,
+                116,
+                118,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 10,
+        "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
+        "original_spans": [],
+        "simplified": "The new income tax in India is a major update from the old 1961 law. || It includes a debated \"angel tax\" rule that aims to tax money coming into India from foreign investors supporting Indian start-ups.",
+        "simplified_spans": [
+            [
+                2,
+                69,
+                71,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 11,
+        "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
+        "original_spans": [],
+        "simplified": "India recently updated its income tax laws, which include a controversial \"angel tax\" provision aimed at taxing some of the money coming in from foreign investors who fund start-up businesses in the country. || This update is a major change from the previous statute enacted in 1961.",
+        "simplified_spans": [
+            [
+                2,
+                208,
+                210,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 12,
+        "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
+        "original_spans": [],
+        "simplified": "The new income tax law in India is very different from the law that was first introduced in 1961. || It includes a controversial \"angel tax\" provision, which is aimed at stopping foreign investors from funneling money into India's startups.",
+        "simplified_spans": [
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 13,
+        "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
+        "original_spans": [],
+        "simplified": "The new income tax law in India is different from the old law in 1961. || It has a new provision called \"angel tax\" that aims to tax some of the money that foreign investors use to support start-ups in India. || This provision has caused some controversy.",
+        "simplified_spans": [
+            [
+                2,
+                71,
+                73,
+                0
+            ],
+            [
+                2,
+                209,
+                211,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 14,
+        "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
+        "original_spans": [],
+        "simplified": "India's new income tax has made a considerable change to the 1961 law and includes a contentious \"angel tax\" section that targets income flowing into the nation from foreign investors who are financing India's start-ups.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 15,
+        "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
+        "original_spans": [],
+        "simplified": "The Sacramento Kings have made it to the NBA playoffs for the first time in 17 years, breaking a record for the longest playoff drought in NBA history.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 16,
+        "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
+        "original_spans": [],
+        "simplified": "The Sacramento Kings have made it to the NBA playoffs for the first time in 2006, which means they have ended their 17-year playoff drought. || This is the longest such drought in NBA history.",
+        "simplified_spans": [
+            [
+                2,
+                141,
+                143,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 17,
+        "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
+        "original_spans": [],
+        "simplified": "The Sacramento Kings finally made it to the NBA playoffs after a 17-year drought, breaking the record for the longest playoff absence in the history of the NBA.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 18,
+        "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
+        "original_spans": [],
+        "simplified": "The Sacramento Kings, a basketball team, ended their 17-year playoff drought, the longest in the NBA, by qualifying for the playoffs for the first time since 2006.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 19,
+        "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
+        "original_spans": [],
+        "simplified": "In basketball, the Sacramento Kings enter the NBA playoffs for the first time since 2006. || They end their 17-year period without playoffs, which is the longest in NBA history.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 20,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "On the day after President Emmanuel Macron delivers a speech about pension reform, riots break out across France.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 21,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "France experienced riots the day after President Emmanuel Macron spoke about changes to the country's retirement system.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 22,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "The day after President Emmanuel Macron gave a speech on pension reform, riots broke out in various parts of France.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 23,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "Protests happen all over France one day after President Emmanuel Macron talks about changing pensions.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 24,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "A day after President Emmanuel Macron gives a speech about pension reform, riots break out in France.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 25,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "Market research group Kantar Worldpanel reports that grocery inflation in the United Kingdom has hit a new peak of 17.1%. || This is due to high inflation, supply chain problems, and rising energy costs which affect the whole economy.",
+        "simplified_spans": [
+            [
+                2,
+                122,
+                124,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 26,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "The price of groceries in the UK has gone up a lot, with a record high increase of 17.1%. || This is because of things like inflation, problems with getting products to stores, and high costs for energy. || A group called Kantar Worldpanel did a study on this.",
+        "simplified_spans": [
+            [
+                2,
+                90,
+                92,
+                0
+            ],
+            [
+                2,
+                204,
+                206,
+                1
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 27,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "The cost of groceries in the United Kingdom has increased to a record 17.1%, says market research group Kantar Worldpanel. || This is due to high inflation, supply chain problems, and expensive energy affecting the economy.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 28,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "Grocery inflation in the United Kingdom has reached a record high of 17.1%, according to Kantar Worldpanel. || This is due to a combination of high levels of inflation, supply chain issues, and high energy costs impacting the economy.",
+        "simplified_spans": [
+            [
+                2,
+                108,
+                110,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 29,
+        "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
+        "original_spans": [],
+        "simplified": "In the UK, the cost of groceries has increased by 17.1%, according to Kantar Worldpanel, which is a market research group. || This is because of high levels of inflation, problems with the supply chain, and the cost of energy affecting the economy.",
+        "simplified_spans": [
+            [
+                2,
+                123,
+                125,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 30,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven people died when they were squished in a group that came together to get food outside a factory in Karachi, Pakistan.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 31,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven individuals were killed when they were squashed in a crowd that had gathered outside a factory in Karachi, Pakistan to get food.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 32,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven people died in Karachi, Pakistan, after being crushed in a crowd that had gathered to receive food from a factory.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 33,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "A group of people died in Karachi, Pakistan, after being caught in a crowd that had gathered to get food from a factory.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 34,
+        "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
+        "original_spans": [],
+        "simplified": "Eleven people were crushed to death in a large gathering outside a factory in Karachi, Pakistan. || They had been waiting to get food.",
+        "simplified_spans": [
+            [
+                2,
+                97,
+                99,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 35,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "A baby thought to be a miracle grows up on a mission to find his true identity and purpose.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 36,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "The book tells the story of a special baby who people believe is God's child. || This baby goes on a quest to find out where he comes from and why he is here.",
+        "simplified_spans": [
+            [
+                2,
+                78,
+                80,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 37,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "A child believed to be a divine gift, embarks on a quest to find his true identity and purpose.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 38,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "This book is about a baby said to be God's child. || He embarks on a quest to discover who he is and his purpose.",
+        "simplified_spans": [
+            [
+                2,
+                50,
+                52,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 39,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "The story is about a special baby who is thought to be God's child. || It shows his search for where he comes from and his purpose.",
+        "simplified_spans": [
+            [
+                2,
+                68,
+                70,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 40,
+        "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
+        "original_spans": [],
+        "simplified": "Brazil and China have signed an agreement to trade with each other using their own currencies instead of the United States dollar.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Vicuna-7b"
+    },
+    {
+        "id": 41,
+        "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
+        "original_spans": [],
+        "simplified": "Brazil and China agreed to trade using their own currencies, without involving the United States dollar.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 42,
+        "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
+        "original_spans": [],
+        "simplified": "Brazil and China made an agreement to stop using the US dollar in their trade and instead use their own currencies.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 43,
+        "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
+        "original_spans": [],
+        "simplified": "Brazil and China made a deal to use their own money for trade, stopping the use of the US dollar in between.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 44,
+        "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
+        "original_spans": [],
+        "simplified": "Brazil and China sign an agreement to trade in their own currencies instead of using the US dollar as an intermediary.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 45,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "This year marked the first time two sequels (Avatar: The Way of Water and Top Gun: Maverick) were included in the Best Picture category of the Academy Awards. || Additionally, it was the first time two movies grossing more than one billion dollars worldwide were nominated in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                159,
+                161,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Davinci-003"
+    },
+    {
+        "id": 46,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "This year's Academy Awards made history by nominating two sequels (Avatar: The Way of Water and Top Gun: Maverick) for Best Picture. || Additionally, it was the first time that two movies that made over $1 billion globally were up for the same award.",
+        "simplified_spans": [
+            [
+                2,
+                133,
+                135,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Turbo"
+    },
+    {
+        "id": 47,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "For the first time, two sequels (Avatar: The Way of Water and Top Gun: Maverick) were in the Academy Award Best Picture category. || Also, it was the first time that two movies earning more than $1 billion worldwide were nominated for Best Picture in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                130,
+                132,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/GPT-4"
+    },
+    {
+        "id": 48,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "For the first time, two blockbuster sequels, Avatar: The Way of Water and Top Gun: Maverick, were nominated for Best Picture at the Academy Awards. || This is also the first time two films that made over $1 billion worldwide have been nominated in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                148,
+                150,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Alpaca-7b"
+    },
+    {
+        "id": 49,
+        "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
+        "original_spans": [],
+        "simplified": "This year's Academy Award for Best Picture included two films that have already made over $1 billion at the global box office: Avatar: The Way of Water and Top Gun: Maverick. || It was the first time that the Best Picture category featured two sequels, and it was also a new record for the most movies grossing over $1 billion worldwide to be nominated for the award in the same year.",
+        "simplified_spans": [
+            [
+                2,
+                175,
+                177,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Vicuna-7b"
+    }
+]
