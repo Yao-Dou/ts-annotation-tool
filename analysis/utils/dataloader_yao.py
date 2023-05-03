@@ -126,6 +126,7 @@ def associate_spans(sent):
         # ipdb.set_trace()
         if counts[type_] != 0 and counts[type_] > len(annotations):
             # ipdb.set_trace()
+            # print(sent)
             log.warning(f'{get_sent_info(sent)} has {counts[type_]} {type_} edits but {len(annotations)} annotations. Likely a missing annotation.')
         for i in annotations.keys():
             i = int(i)

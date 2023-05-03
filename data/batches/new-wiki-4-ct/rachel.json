@@ -1,0 +1,225 @@
+[
+    {
+        "id": 0,
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "original_spans": [],
+        "simplified": "In many cases, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve (see Moore's law for an example).",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 1,
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "original_spans": [],
+        "simplified": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to a exponentially decaying curve.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 2,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "However, the entertainment and intrigue the first half of the movie offers is something the second half does not have. || The second half moves at a sluggish pace.",
+        "simplified_spans": [
+            [
+                2,
+                119,
+                121,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 3,
+        "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
+        "original_spans": [],
+        "simplified": "However, the entertainment and intrigue the first half of the movie offers is something the second half fails to provide and drags in places due to its sluggish pace.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 4,
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "original_spans": [],
+        "simplified": "Poland says it is closing a major border crossing with Belarus. || The border crossing will be closed \"until further notice\".",
+        "simplified_spans": [
+            [
+                2,
+                64,
+                66,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 5,
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "original_spans": [],
+        "simplified": "Poland says it will close a border crossing with Belarus \"until further notice\" because of tensions between the two countries.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 6,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "The novel is about a baby rumored to be the child of God. || He goes in search of his origins and mission.",
+        "simplified_spans": [
+            [
+                2,
+                58,
+                60,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 7,
+        "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
+        "original_spans": [],
+        "simplified": "The book is about the journey of a miracle baby who people say is the child of God to find out who he is and what his mission is.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 8,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The history of the pineal gland is an account of the scientific developments that led to the discovery of its neuroendocrine properties. || The history of the pineal gland started with the ancient Greeks.",
+        "simplified_spans": [
+            [
+                2,
+                137,
+                139,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 9,
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "original_spans": [],
+        "simplified": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks to the present day.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 10,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on society as a whole.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 11,
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "original_spans": [],
+        "simplified": "Industrialisation brought with it the Victorian era a rapidly growing middle class. || The middle class began to influence cultural norms, lifestyle, values, and morality in a big way.",
+        "simplified_spans": [
+            [
+                2,
+                84,
+                86,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 12,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "A day after President Emmanuel Macron gives a speech on pension reform, riots occur across France.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 13,
+        "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
+        "original_spans": [],
+        "simplified": "Riots break out across France a day after President Emmanuel Macron's speech on pension reform.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 14,
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "original_spans": [],
+        "simplified": "Its subject and medium are in line with modernisation, globalization and industrialization. || It shows the dynamism and zeitgeist of traditional Bengal.",
+        "simplified_spans": [
+            [
+                2,
+                92,
+                94,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 15,
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "original_spans": [],
+        "simplified": "Its subject and medium are in line with modernisation, globalization and industrialization, and at the same time they speak of the dynamism of traditional Bengal, which was rapidly changing.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 16,
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [],
+        "simplified": "The International Court of Justice (ICJ) rules that the United States broke its friendship treaty with Iran when it allowed its domestic courts to freeze the assets of Iranian companies. || However, the ICJ said that the Central Bank of Iran's assets are not part of the case because the Central Bank is not a company.",
+        "simplified_spans": [
+            [
+                2,
+                187,
+                189,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    },
+    {
+        "id": 17,
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [],
+        "simplified": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran. || The ICJ rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies.",
+        "simplified_spans": [
+            [
+                2,
+                327,
+                329,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 18,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in compensation.",
+        "simplified_spans": [],
+        "system": "new-wiki-4/Ctrl-T5-3b"
+    },
+    {
+        "id": 19,
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "original_spans": [],
+        "simplified": "Paltrow is currently in court for a ski accident that happened in 2016. || The man who collided with her is trying to get millions of dollars in compensation, while Paltrow is claiming that he was the one crashing rather than the other way around.",
+        "simplified_spans": [
+            [
+                2,
+                72,
+                74,
+                0
+            ]
+        ],
+        "system": "new-wiki-4/Ctrl-T5-11b"
+    }
+]

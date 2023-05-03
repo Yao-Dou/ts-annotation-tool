@@ -1720,6 +1720,10 @@ const app = Vue.createApp({
             data_path = `inspection_rating/${urlParams.get('name')}/batch_${urlParams.get('inspection_rating')}.json`
         }
 
+        if (urlParams.get('new_wiki') != null  && urlParams.get('name') != null) {
+            data_path = `batches/new-wiki-${urlParams.get('new_wiki')}/${urlParams.get('name')}.json`
+        }
+
         if (urlParams.get('batch') != null) {
             if (urlParams.get('batch') == 3) {
                 data_path = `batches/new-wiki-1/part1/${urlParams.get('name')}.json`
@@ -1745,6 +1749,7 @@ const app = Vue.createApp({
                 }
             }
         }
+
         fetch(`https://raw.githubusercontent.com/Yao-Dou/ts-annotation-tool/main/data/${data_path}`)
             .then(r => r.json())
             .then(json => {
