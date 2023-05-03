@@ -53,7 +53,7 @@ def get_spans_by_type(spans, type_):
     val = [x for x in spans if x[0] == mapping[type_]]
     # This is extremely broken, but split edits exclusively index starting at 0
     if type_ == 'split' and any([x[3] == 0 for x in val]):
-        for v in val:
+        for v in val: 
             v[3] += 1
     return val
 
@@ -213,7 +213,8 @@ def generate_token_dict(sent):
     return tokens
 
 # Converts sentence to dictionary of (start, end) -> {edit_type: #}
-def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_composite=False, tagging=False):
+def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_composite=False, \
+    tagging=False, remove_reorder=False):
     edit_dict_value = sent_type + '_span'
     tokens = generate_token_dict(sents[0][sent_type])
     
@@ -237,6 +238,12 @@ def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_compo
                         'original_span': composite_edit['original_span'],
                         'simplified_span': composite_edit['simplified_span'],
                     }]
+            
+            # Optionally replaces reorder edits with substitutions
+            if remove_reorder:
+                for e in edits:
+                    if e['type'] == 'reorder':
+                        e['type'] = 'substitution'
         
         for edit in edits:
             if edit[edit_dict_value] is None:
@@ -261,7 +268,8 @@ def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_compo
                                 'family': ann['family'],
                                 'word_qe': 'good' if ann['type'] == Quality.QUALITY else 'bad',
                                 'word_rating': rating,
-                                'edit_qe': True
+                                'edit_qe': True,
+                                'error_type': ann['error_type']
                             }]
                         else:
                             tokens[c_span][edit['type']] += 1
