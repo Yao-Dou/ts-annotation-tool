@@ -133,7 +133,7 @@ iframe {
         let batch = urlParams.get('batch');
         let name = urlParams.get('name');
         if (batch != null && name != null) {
-            path = `inspection/${name}/batch_${batch}/`
+            path = `test_set_inspection/${name}/batch_${batch}/`
             path = `${path}set_${i}.json`
         } else {
             switch (i) {
