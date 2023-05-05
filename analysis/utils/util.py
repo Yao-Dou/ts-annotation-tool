@@ -214,7 +214,7 @@ def generate_token_dict(sent):
 
 # Converts sentence to dictionary of (start, end) -> {edit_type: #}
 def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_composite=False, \
-    tagging=False, remove_reorder=False):
+    tagging=False, remove_reorder=False, get_alignment=False):
     edit_dict_value = sent_type + '_span'
     tokens = generate_token_dict(sents[0][sent_type])
     
@@ -255,7 +255,7 @@ def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_compo
                 for c_span in composite_spans:
                     if c_span in tokens.keys():
                         if edit['type'] not in tokens[c_span].keys():
-                            tokens[c_span][edit['type']] = 0 if not tagging else []
+                            tokens[c_span][edit['type']] = 0 if not tagging and not get_alignment else []
                         if tagging:
                             ann = [ann for ann in sent['processed_annotations'] if ann['id'] == edit['id'] and edit['type'] == ann['edit_type']][0]
                             rating = ann['rating'] + 1 if ann['rating'] is not None else 0
@@ -272,7 +272,13 @@ def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_compo
                                 'error_type': ann['error_type']
                             }]
                         else:
-                            tokens[c_span][edit['type']] += 1
+                            if get_alignment:
+                                other_sent_type = 'original' if sent_type == 'simplified' else 'simplified'
+                                other_edit = edit[f'{other_sent_type}_span']
+                                other_edit = other_edit if other_edit is not None else []
+                                tokens[c_span][edit['type']] += other_edit
+                            else:
+                                tokens[c_span][edit['type']] += 1
                     elif c_span is None:
                         pass
                     else:
