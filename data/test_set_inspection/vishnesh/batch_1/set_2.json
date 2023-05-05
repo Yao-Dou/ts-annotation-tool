@@ -1,60 +1,42 @@
 [
     {
-        "id": 11,
-        "annotation_id": 55,
+        "id": 10,
+        "annotation_id": 5,
         "sentence_id": 5,
         "batch": 1,
         "hit_id": 5,
-        "user": "rachel",
+        "user": "ayush",
         "system": "new-wiki-4/Davinci-003",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "The first half of the movie offers great entertainment and keeps viewers enthralled, but the second half is disappointing; it is slow-paced and lacks excitement.",
         "original_spans": [
             [
-                4,
+                0,
                 0,
                 8,
                 1
             ],
             [
-                1,
                 0,
-                8,
-                1
-            ],
-            [
-                4,
-                9,
-                74,
-                2
-            ],
-            [
-                1,
                 31,
                 39,
-                3
-            ],
-            [
-                0,
-                75,
-                88,
                 2
             ],
             [
-                0,
-                105,
-                122,
-                3
-            ],
-            [
-                0,
-                123,
-                157,
+                4,
+                40,
+                74,
                 1
             ],
             [
                 1,
-                158,
+                93,
+                122,
+                1
+            ],
+            [
+                1,
+                145,
                 172,
                 2
             ]
@@ -63,48 +45,30 @@
             [
                 4,
                 0,
-                84,
-                2
+                34,
+                1
             ],
             [
                 3,
-                35,
-                40,
-                4
-            ],
-            [
-                1,
                 59,
                 84,
                 3
             ],
             [
-                4,
+                3,
                 85,
                 88,
                 1
             ],
             [
                 1,
-                85,
-                88,
-                1
-            ],
-            [
-                3,
-                105,
+                89,
                 122,
                 1
             ],
             [
-                3,
-                123,
-                128,
-                3
-            ],
-            [
                 1,
-                129,
+                123,
                 139,
                 2
             ],
@@ -117,186 +81,170 @@
         ]
     },
     {
-        "id": 13,
-        "annotation_id": 56,
+        "id": 12,
+        "annotation_id": 6,
         "sentence_id": 6,
         "batch": 1,
         "hit_id": 6,
-        "user": "rachel",
+        "user": "ayush",
         "system": "new-wiki-4/Turbo",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "The first part of the movie is fun and interesting, but the second half is slow and not as entertaining.",
         "original_spans": [
             [
+                5,
+                0,
+                8,
                 1,
                 0,
-                8,
                 1
             ],
             [
-                4,
                 0,
-                8,
-                1
-            ],
-            [
-                4,
-                9,
-                74,
+                13,
+                26,
                 2
             ],
             [
                 1,
-                13,
+                31,
                 39,
-                3
+                2
+            ],
+            [
+                4,
+                40,
+                67,
+                1
             ],
             [
                 1,
                 50,
                 54,
-                4
-            ],
-            [
-                0,
-                68,
-                74,
                 1
             ],
             [
                 0,
-                75,
+                68,
                 88,
-                4
+                3
             ],
             [
                 0,
                 105,
                 122,
-                2
+                4
             ],
             [
-                0,
+                5,
                 123,
-                157,
-                3
+                144,
+                3,
+                0,
+                1
             ],
             [
                 1,
-                158,
+                145,
                 172,
-                2
+                3
             ]
         ],
         "simplified_spans": [
             [
                 4,
                 0,
-                51,
-                2
+                27,
+                1
             ],
             [
                 1,
                 10,
                 14,
-                4
+                1
             ],
             [
-                1,
+                3,
                 31,
+                34,
+                1
+            ],
+            [
+                1,
+                39,
                 51,
-                3
-            ],
-            [
-                1,
-                52,
-                55,
-                1
-            ],
-            [
-                4,
-                52,
-                55,
-                1
-            ],
-            [
-                1,
-                75,
-                79,
                 2
+            ],
+            [
+                5,
+                52,
+                55,
+                2,
+                3,
+                1
+            ],
+            [
+                1,
+                72,
+                79,
+                3
             ],
             [
                 3,
                 80,
                 104,
-                1
+                2
             ]
         ]
     },
     {
-        "id": 15,
-        "annotation_id": 57,
+        "id": 14,
+        "annotation_id": 7,
         "sentence_id": 7,
         "batch": 1,
         "hit_id": 7,
-        "user": "rachel",
+        "user": "ayush",
         "system": "new-wiki-4/GPT-4",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "The first half of the movie is entertaining and interesting, but the second half is not. || The second half is slow and not as enjoyable.",
         "original_spans": [
             [
-                1,
+                5,
                 0,
                 8,
-                3
+                2,
+                0,
+                1
             ],
             [
-                4,
-                0,
-                8,
+                5,
+                13,
+                39,
+                1,
+                1,
                 1
             ],
             [
                 4,
-                9,
-                74,
-                2
+                40,
+                67,
+                1
             ],
             [
                 0,
-                75,
+                68,
                 88,
                 2
             ],
             [
-                0,
+                1,
                 105,
                 122,
-                3
-            ],
-            [
-                2,
-                123,
-                127,
-                0,
-                0,
                 1
             ],
             [
                 1,
-                132,
-                138,
-                1
-            ],
-            [
-                0,
                 139,
-                157,
-                1
-            ],
-            [
-                1,
-                158,
                 172,
                 2
             ]
@@ -305,26 +253,22 @@
             [
                 4,
                 0,
-                60,
-                2
-            ],
-            [
-                1,
-                61,
-                64,
-                3
-            ],
-            [
-                4,
-                61,
-                64,
+                27,
                 1
             ],
             [
-                3,
+                5,
+                31,
+                60,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
                 81,
                 88,
-                3
+                1
             ],
             [
                 2,
@@ -333,96 +277,86 @@
                 0
             ],
             [
-                2,
+                3,
                 92,
-                95,
-                0,
-                3,
-                1
-            ],
-            [
-                1,
-                96,
-                107,
-                1
-            ],
-            [
-                3,
-                108,
                 110,
                 1
             ],
             [
                 1,
                 111,
-                115,
-                2
-            ],
-            [
-                3,
-                116,
                 137,
                 2
             ]
         ]
     },
     {
-        "id": 19,
-        "annotation_id": 59,
+        "id": 18,
+        "annotation_id": 9,
         "sentence_id": 9,
         "batch": 1,
         "hit_id": 9,
-        "user": "rachel",
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "Unfortunately, the second half of the movie doesn't provide as much entertainment and excitement as the first half. || In fact, it has a slow pace that doesn't keep the audience engaged.",
         "original_spans": [
             [
-                0,
+                1,
                 0,
                 8,
                 1
             ],
             [
                 4,
-                9,
-                122,
-                1
+                13,
+                54,
+                2
             ],
             [
                 1,
                 31,
                 39,
-                3
+                2
             ],
             [
-                0,
-                75,
-                88,
-                3
+                5,
+                40,
+                54,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                89,
+                104,
+                1
             ],
             [
                 1,
                 105,
-                110,
-                2
+                122,
+                3
             ],
             [
-                0,
+                2,
                 123,
-                155,
-                2
+                138,
+                0,
+                1,
+                1
             ],
             [
                 1,
-                158,
-                166,
-                1
+                145,
+                172,
+                4
             ]
         ],
         "simplified_spans": [
             [
-                3,
+                1,
                 0,
                 14,
                 1
@@ -430,32 +364,34 @@
             [
                 4,
                 15,
-                115,
+                30,
                 1
             ],
             [
                 1,
                 44,
-                51,
-                2
+                67,
+                3
             ],
             [
-                3,
-                60,
-                67,
-                5
+                4,
+                68,
+                115,
+                2
             ],
             [
                 1,
                 86,
                 96,
-                3
+                2
             ],
             [
-                3,
+                5,
                 97,
-                99,
-                6
+                115,
+                1,
+                1,
+                1
             ],
             [
                 2,
@@ -464,339 +400,155 @@
                 0
             ],
             [
-                3,
+                2,
                 119,
                 127,
-                2
-            ],
-            [
-                3,
-                128,
-                134,
-                3
+                0,
+                1,
+                1
             ],
             [
                 1,
-                137,
-                141,
-                1
+                128,
+                146,
+                4
             ],
             [
                 3,
                 147,
                 186,
-                4
+                1
             ]
         ]
     },
     {
-        "id": 23,
-        "annotation_id": 101,
+        "id": 22,
+        "annotation_id": 11,
         "sentence_id": 11,
         "batch": 1,
-        "hit_id": 1,
-        "user": "vinayak",
+        "hit_id": 11,
+        "user": "ayush",
         "system": "new-wiki-4/Turbo",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "India recently updated its income tax laws, which include a controversial \"angel tax\" provision aimed at taxing some of the money coming in from foreign investors who fund start-up businesses in the country. || This update is a major change from the previous statute enacted in 1961.",
         "original_spans": [
             [
-                5,
-                0,
-                3,
-                2,
-                0,
-                1
-            ],
-            [
-                0,
-                0,
-                3,
-                3
-            ],
-            [
-                5,
                 4,
-                7,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                4,
-                7,
-                1
-            ],
-            [
-                5,
-                22,
+                0,
                 27,
-                2,
-                4,
-                1
-            ],
-            [
-                4,
-                22,
-                27,
-                1
-            ],
-            [
-                4,
-                28,
-                76,
-                3
+                2
             ],
             [
                 1,
                 33,
-                44,
-                10
+                51,
+                4
             ],
             [
                 4,
-                55,
+                59,
                 76,
                 4
             ],
             [
-                1,
-                59,
-                62,
-                11
-            ],
-            [
-                1,
-                77,
-                80,
-                4
-            ],
-            [
-                5,
-                81,
-                89,
-                3,
-                1,
-                1
-            ],
-            [
-                1,
-                81,
-                89,
-                3
-            ],
-            [
-                5,
-                128,
-                135,
                 4,
+                63,
+                67,
+                1
+            ],
+            [
+                5,
+                77,
+                89,
+                1,
                 1,
                 1
             ],
             [
                 1,
                 128,
-                135,
-                5
-            ],
-            [
-                5,
-                136,
-                146,
-                5,
-                1,
+                165,
                 1
             ],
             [
-                1,
-                136,
-                146,
-                6
-            ],
-            [
-                1,
-                159,
-                165,
-                7
+                4,
+                166,
+                186,
+                3
             ],
             [
                 1,
                 166,
                 174,
-                8
-            ],
-            [
-                0,
-                175,
-                186,
-                4
+                2
             ],
             [
                 5,
                 210,
                 217,
-                6,
+                2,
                 1,
                 1
             ],
             [
-                4,
+                1,
                 218,
                 236,
-                2
-            ],
-            [
-                5,
-                218,
-                225,
-                7,
-                1,
-                1
-            ],
-            [
-                1,
-                218,
-                225,
-                9
+                3
             ]
         ],
         "simplified_spans": [
             [
-                5,
-                0,
-                5,
-                2,
-                4,
-                1
-            ],
-            [
                 4,
                 0,
-                5,
-                1
-            ],
-            [
-                5,
-                6,
-                22,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                6,
-                22,
-                1
-            ],
-            [
-                5,
-                23,
-                26,
-                2,
-                3,
-                1
-            ],
-            [
-                3,
-                23,
-                26,
-                1
-            ],
-            [
-                3,
-                38,
                 43,
                 2
             ],
             [
-                1,
-                44,
-                49,
-                4
+                3,
+                6,
+                22,
+                1
             ],
             [
                 5,
-                50,
+                44,
                 57,
-                3,
+                1,
                 1,
                 1
             ],
             [
                 1,
-                50,
-                57,
+                96,
+                129,
+                1
+            ],
+            [
+                5,
+                167,
+                171,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                172,
+                191,
                 3
             ],
             [
-                5,
-                96,
-                101,
                 4,
-                1,
-                1
-            ],
-            [
-                1,
-                96,
-                101,
-                5
-            ],
-            [
-                5,
-                102,
-                111,
-                5,
-                1,
-                1
-            ],
-            [
-                1,
-                102,
-                111,
-                6
-            ],
-            [
-                1,
-                124,
-                129,
-                7
-            ],
-            [
-                1,
-                130,
-                139,
-                8
-            ],
-            [
-                5,
-                163,
-                171,
-                6,
-                1,
-                1
-            ],
-            [
-                4,
-                172,
+                192,
                 207,
+                3
+            ],
+            [
+                1,
+                192,
+                194,
                 2
-            ],
-            [
-                5,
-                195,
-                207,
-                7,
-                1,
-                1
-            ],
-            [
-                1,
-                195,
-                207,
-                9
             ],
             [
                 2,
@@ -807,77 +559,51 @@
             [
                 2,
                 211,
-                222,
+                225,
                 0,
                 3,
                 1
             ],
             [
-                3,
-                211,
-                222,
-                3
-            ],
-            [
-                4,
-                223,
-                283,
-                3
-            ],
-            [
                 1,
                 228,
-                233,
-                10
+                240,
+                4
             ],
             [
                 4,
-                246,
-                283,
-                4
-            ],
-            [
-                1,
                 250,
-                258,
-                11
+                266,
+                4
             ],
             [
-                3,
-                267,
-                277,
-                4
+                4,
+                278,
+                283,
+                1
             ]
         ]
     },
     {
-        "id": 27,
-        "annotation_id": 103,
+        "id": 26,
+        "annotation_id": 13,
         "sentence_id": 13,
         "batch": 1,
-        "hit_id": 3,
-        "user": "vinayak",
+        "hit_id": 13,
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax law in India is different from the old law in 1961. || It has a new provision called \"angel tax\" that aims to tax some of the money that foreign investors use to support start-ups in India. || This provision has caused some controversy.",
         "original_spans": [
             [
-                5,
-                31,
+                1,
+                33,
                 51,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                31,
-                51,
-                1
+                2
             ],
             [
                 4,
-                63,
+                59,
                 76,
                 1
             ],
@@ -885,85 +611,39 @@
                 1,
                 68,
                 76,
-                2
+                1
             ],
             [
                 2,
                 77,
-                80,
+                127,
                 0,
-                0,
+                4,
                 1
-            ],
-            [
-                0,
-                77,
-                80,
-                1
-            ],
-            [
-                1,
-                81,
-                89,
-                3
             ],
             [
                 4,
                 92,
                 105,
-                3
-            ],
-            [
-                5,
-                92,
-                105,
-                2,
-                1,
-                1
-            ],
-            [
-                4,
-                106,
-                117,
                 2
             ],
             [
-                5,
-                128,
-                135,
-                3,
-                1,
-                1
-            ],
-            [
                 1,
                 128,
-                135,
-                4
-            ],
-            [
-                1,
-                139,
-                146,
-                5
-            ],
-            [
-                1,
-                159,
                 165,
-                6
+                3
             ],
             [
                 0,
                 166,
-                191,
-                2
+                186,
+                1
             ],
             [
                 5,
-                210,
-                217,
-                4,
+                187,
+                191,
+                1,
                 1,
                 1
             ],
@@ -971,33 +651,27 @@
                 1,
                 210,
                 217,
-                7
+                4
             ],
             [
-                4,
+                5,
                 218,
                 236,
-                4
+                2,
+                4,
+                1
             ]
         ],
         "simplified_spans": [
             [
-                5,
-                35,
-                44,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 35,
                 44,
-                1
+                2
             ],
             [
                 4,
-                58,
+                54,
                 70,
                 1
             ],
@@ -1005,7 +679,13 @@
                 1,
                 58,
                 61,
-                2
+                1
+            ],
+            [
+                3,
+                62,
+                64,
+                1
             ],
             [
                 2,
@@ -1016,92 +696,46 @@
             [
                 2,
                 74,
-                76,
+                115,
                 0,
-                3,
-                1
-            ],
-            [
-                3,
-                74,
-                76,
+                4,
                 1
             ],
             [
                 1,
-                77,
-                80,
-                3
-            ],
-            [
-                4,
-                104,
-                115,
-                2
-            ],
-            [
-                3,
                 116,
-                120,
+                150,
                 3
             ],
             [
                 5,
-                121,
-                125,
-                3,
-                1,
-                1
-            ],
-            [
-                1,
-                121,
-                125,
-                4
-            ],
-            [
-                1,
-                129,
-                132,
-                5
-            ],
-            [
-                1,
-                145,
-                150,
-                6
-            ],
-            [
-                3,
                 151,
                 155,
-                4
-            ],
-            [
-                3,
-                174,
-                177,
-                5
-            ],
-            [
-                5,
-                178,
-                188,
-                4,
+                1,
                 1,
                 1
             ],
             [
                 1,
-                178,
+                174,
                 188,
-                7
+                4
             ],
             [
-                4,
+                5,
                 189,
                 208,
-                4
+                2,
+                4,
+                1
+            ],
+            [
+                5,
+                199,
+                201,
+                2,
+                3,
+                1
             ],
             [
                 2,
@@ -1110,34 +744,28 @@
                 1
             ],
             [
-                3,
+                2,
                 212,
                 242,
-                2
+                1,
+                3,
+                1
             ],
             [
                 4,
                 243,
                 255,
-                3
-            ],
-            [
-                5,
-                243,
-                255,
-                2,
-                1,
-                1
+                2
             ]
         ]
     },
     {
-        "id": 31,
-        "annotation_id": 122,
+        "id": 30,
+        "annotation_id": 15,
         "sentence_id": 15,
         "batch": 1,
-        "hit_id": 22,
-        "user": "vinayak",
+        "hit_id": 15,
+        "user": "ayush",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "The Sacramento Kings have made it to the NBA playoffs for the first time in 17 years, breaking a record for the longest playoff drought in NBA history.",
@@ -1157,128 +785,76 @@
                 1
             ],
             [
-                5,
-                77,
-                101,
-                2,
-                0,
-                1
-            ],
-            [
                 0,
                 77,
-                101,
+                88,
                 2
             ],
             [
-                5,
-                102,
-                109,
-                2,
-                4,
-                1
+                0,
+                89,
+                101,
+                3
             ],
             [
-                4,
+                1,
                 102,
                 109,
                 1
             ],
             [
                 5,
-                127,
-                138,
+                110,
+                154,
                 2,
                 4,
-                2
-            ],
-            [
-                4,
-                127,
-                138,
-                2
+                1
             ]
         ],
         "simplified_spans": [
             [
                 5,
                 21,
-                33,
+                30,
                 1,
                 1,
                 1
             ],
             [
                 3,
-                34,
+                31,
                 36,
                 1
             ],
             [
-                5,
-                73,
-                75,
-                2,
-                3,
-                1
-            ],
-            [
-                3,
-                73,
-                75,
-                2
-            ],
-            [
-                5,
-                76,
-                85,
-                2,
-                4,
-                1
-            ],
-            [
-                4,
+                1,
                 76,
                 85,
                 1
             ],
             [
-                5,
-                86,
-                107,
-                2,
                 3,
+                86,
+                103,
                 2
-            ],
-            [
-                3,
-                86,
-                107,
-                3
             ],
             [
                 5,
-                108,
-                119,
+                112,
+                151,
                 2,
                 4,
-                2
-            ],
-            [
-                4,
-                108,
-                119,
-                2
+                1
             ]
         ]
     },
     {
-        "id": 35,
-        "annotation_id": 123,
+        "id": 34,
+        "annotation_id": 17,
         "sentence_id": 17,
         "batch": 1,
-        "hit_id": 23,
-        "user": "vinayak",
+        "hit_id": 17,
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "The Sacramento Kings finally made it to the NBA playoffs after a 17-year drought, breaking the record for the longest playoff absence in the history of the NBA.",
@@ -1298,65 +874,71 @@
                 1
             ],
             [
-                0,
-                58,
-                101,
-                2
-            ],
-            [
-                4,
-                102,
-                126,
-                1
-            ],
-            [
-                1,
-                102,
-                126,
-                1
-            ],
-            [
-                4,
-                142,
-                154,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                21,
-                28,
-                1
-            ],
-            [
                 5,
-                29,
-                36,
-                1,
+                58,
+                65,
+                2,
                 1,
                 1
             ],
             [
-                3,
-                37,
-                39,
+                0,
+                66,
+                88,
                 2
             ],
             [
-                3,
-                57,
-                64,
+                0,
+                89,
+                101,
                 3
             ],
             [
                 4,
-                65,
-                81,
+                102,
+                126,
                 1
             ],
             [
+                0,
+                110,
+                117,
+                4
+            ],
+            [
+                5,
+                142,
+                154,
+                3,
                 1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                21,
+                33,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                34,
+                39,
+                1
+            ],
+            [
+                5,
+                57,
+                64,
+                2,
+                1,
+                1
+            ],
+            [
+                4,
                 65,
                 81,
                 1
@@ -1364,30 +946,32 @@
             [
                 3,
                 82,
-                105,
-                4
+                109,
+                2
             ],
             [
                 3,
                 118,
                 133,
-                5
+                3
             ],
             [
-                4,
-                137,
+                5,
+                141,
                 160,
-                2
+                3,
+                1,
+                1
             ]
         ]
     },
     {
-        "id": 39,
-        "annotation_id": 120,
+        "id": 38,
+        "annotation_id": 19,
         "sentence_id": 19,
         "batch": 1,
-        "hit_id": 20,
-        "user": "vinayak",
+        "hit_id": 19,
+        "user": "ayush",
         "system": "new-wiki-4/GPT-4",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "In basketball, the Sacramento Kings enter the NBA playoffs for the first time since 2006. || They end their 17-year period without playoffs, which is the longest in NBA history.",
@@ -1399,18 +983,12 @@
                 1
             ],
             [
-                5,
+                2,
                 89,
                 95,
-                1,
+                0,
                 1,
                 1
-            ],
-            [
-                1,
-                89,
-                95,
-                2
             ],
             [
                 1,
@@ -1435,34 +1013,14 @@
             [
                 2,
                 93,
-                97,
+                101,
                 0,
-                3,
-                1
-            ],
-            [
-                3,
-                93,
-                97,
-                1
-            ],
-            [
-                5,
-                98,
-                101,
-                1,
                 1,
                 1
             ],
             [
                 1,
-                98,
-                101,
-                2
-            ],
-            [
-                1,
-                116,
+                123,
                 140,
                 3
             ],
@@ -1470,25 +1028,19 @@
                 5,
                 141,
                 149,
-                2,
+                1,
                 3,
                 1
-            ],
-            [
-                3,
-                141,
-                149,
-                2
             ]
         ]
     },
     {
-        "id": 71,
-        "annotation_id": 65,
+        "id": 70,
+        "annotation_id": 35,
         "sentence_id": 35,
         "batch": 1,
-        "hit_id": 15,
-        "user": "rachel",
+        "hit_id": 35,
+        "user": "ayush",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "A baby thought to be a miracle grows up on a mission to find his true identity and purpose.",
@@ -1497,107 +1049,73 @@
                 0,
                 0,
                 32,
-                2
+                1
             ],
             [
                 4,
                 35,
-                42,
-                1
-            ],
-            [
-                1,
-                48,
-                55,
+                47,
                 1
             ],
             [
                 0,
-                62,
+                48,
                 78,
-                1
-            ],
-            [
-                1,
-                79,
-                91,
                 2
             ],
             [
-                5,
+                1,
                 79,
-                91,
-                1,
-                1,
+                95,
                 1
             ],
             [
                 1,
                 96,
-                103,
-                3
-            ],
-            [
-                1,
-                108,
                 116,
-                4
+                2
             ]
         ],
         "simplified_spans": [
             [
-                1,
-                7,
-                14,
+                4,
+                2,
+                30,
                 1
             ],
             [
-                4,
-                23,
-                30,
+                3,
+                7,
+                22,
                 1
             ],
             [
                 3,
                 31,
                 52,
-                1
-            ],
-            [
-                1,
-                53,
-                60,
                 2
             ],
             [
-                5,
+                1,
                 53,
-                60,
-                1,
-                1,
+                64,
                 1
             ],
             [
                 1,
                 65,
-                78,
-                3
-            ],
-            [
-                1,
-                83,
                 91,
-                4
+                2
             ]
         ]
     },
     {
-        "id": 73,
-        "annotation_id": 66,
+        "id": 72,
+        "annotation_id": 36,
         "sentence_id": 36,
         "batch": 1,
-        "hit_id": 16,
-        "user": "rachel",
+        "hit_id": 36,
+        "user": "ayush",
         "system": "new-wiki-4/Turbo",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The book tells the story of a special baby who people believe is God's child. || This baby goes on a quest to find out where he comes from and why he is here.",
@@ -1609,60 +1127,44 @@
                 1
             ],
             [
-                0,
+                1,
                 10,
                 29,
-                1
+                2
             ],
             [
                 1,
                 35,
                 42,
-                2
+                3
             ],
             [
                 1,
                 48,
                 61,
-                3
-            ],
-            [
-                4,
-                66,
-                78,
-                1
-            ],
-            [
-                1,
-                66,
-                78,
                 4
             ],
             [
+                5,
+                62,
+                78,
                 1,
-                79,
-                91,
-                5
+                4,
+                1
             ],
             [
-                5,
+                2,
                 79,
-                91,
-                1,
+                95,
+                0,
                 1,
                 1
             ],
             [
                 1,
                 96,
-                103,
-                6
-            ],
-            [
-                1,
-                108,
                 116,
-                7
+                5
             ]
         ],
         "simplified_spans": [
@@ -1673,46 +1175,30 @@
                 1
             ],
             [
-                3,
+                1,
                 9,
                 24,
-                1
+                2
             ],
             [
                 1,
                 30,
                 37,
-                2
+                3
             ],
             [
-                3,
+                1,
                 43,
-                46,
-                2
-            ],
-            [
-                1,
-                47,
                 61,
-                3
-            ],
-            [
-                3,
-                62,
-                64,
-                3
-            ],
-            [
-                4,
-                65,
-                77,
-                1
-            ],
-            [
-                1,
-                65,
-                77,
                 4
+            ],
+            [
+                5,
+                62,
+                77,
+                1,
+                4,
+                1
             ],
             [
                 2,
@@ -1723,52 +1209,26 @@
             [
                 2,
                 81,
-                90,
+                118,
                 0,
-                3,
-                1
-            ],
-            [
-                3,
-                91,
-                106,
-                5
-            ],
-            [
-                1,
-                107,
-                118,
-                5
-            ],
-            [
-                5,
-                107,
-                118,
-                1,
                 1,
                 1
             ],
             [
                 1,
                 119,
-                138,
-                6
-            ],
-            [
-                1,
-                143,
                 158,
-                7
+                5
             ]
         ]
     },
     {
-        "id": 75,
-        "annotation_id": 67,
+        "id": 74,
+        "annotation_id": 37,
         "sentence_id": 37,
         "batch": 1,
-        "hit_id": 17,
-        "user": "rachel",
+        "hit_id": 37,
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "A child believed to be a divine gift, embarks on a quest to find his true identity and purpose.",
@@ -1776,26 +1236,20 @@
             [
                 0,
                 0,
-                21,
-                2
-            ],
-            [
-                4,
-                22,
-                29,
+                32,
                 1
             ],
             [
-                0,
-                30,
-                32,
-                3
+                4,
+                35,
+                47,
+                1
             ],
             [
-                0,
+                1,
                 35,
                 42,
-                4
+                2
             ],
             [
                 1,
@@ -1804,51 +1258,31 @@
                 1
             ],
             [
-                1,
+                0,
                 48,
-                55,
+                78,
                 2
             ],
             [
-                0,
-                62,
-                65,
-                1
-            ],
-            [
                 1,
-                66,
-                78,
+                79,
+                91,
                 3
             ],
             [
                 1,
-                79,
-                91,
-                4
-            ],
-            [
-                5,
-                79,
-                91,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
                 96,
-                103,
-                5
-            ],
-            [
-                1,
-                108,
                 116,
-                6
+                4
             ]
         ],
         "simplified_spans": [
+            [
+                4,
+                2,
+                37,
+                1
+            ],
             [
                 1,
                 2,
@@ -1858,68 +1292,36 @@
             [
                 1,
                 8,
-                16,
-                2
-            ],
-            [
-                3,
-                23,
-                24,
-                1
-            ],
-            [
-                1,
-                25,
                 37,
-                3
+                2
             ],
             [
                 3,
                 38,
                 56,
-                2
-            ],
-            [
-                4,
-                51,
-                56,
                 1
             ],
             [
                 1,
                 57,
                 64,
-                4
-            ],
-            [
-                5,
-                57,
-                64,
-                1,
-                1,
-                1
+                3
             ],
             [
                 1,
                 69,
-                82,
-                5
-            ],
-            [
-                1,
-                87,
                 95,
-                6
+                4
             ]
         ]
     },
     {
-        "id": 77,
-        "annotation_id": 68,
+        "id": 76,
+        "annotation_id": 38,
         "sentence_id": 38,
         "batch": 1,
-        "hit_id": 18,
-        "user": "rachel",
+        "hit_id": 38,
+        "user": "ayush",
         "system": "new-wiki-4/Davinci-003",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "This book is about a baby said to be God's child. || He embarks on a quest to discover who he is and his purpose.",
@@ -1927,113 +1329,69 @@
             [
                 1,
                 0,
-                3,
+                17,
                 1
             ],
             [
-                1,
-                4,
-                9,
-                2
-            ],
-            [
-                1,
-                10,
-                17,
-                3
-            ],
-            [
-                0,
+                2,
                 18,
                 32,
+                0,
+                4,
                 1
             ],
             [
                 0,
                 35,
                 42,
-                2
+                1
             ],
             [
                 1,
                 48,
                 55,
-                4
-            ],
-            [
-                1,
-                66,
-                78,
-                5
-            ],
-            [
-                4,
-                66,
-                78,
-                1
-            ],
-            [
-                1,
-                79,
-                91,
-                6
+                2
             ],
             [
                 5,
+                66,
+                78,
+                1,
+                4,
+                1
+            ],
+            [
+                1,
                 79,
                 91,
-                1,
-                1,
-                1
+                3
             ],
             [
                 1,
                 92,
-                103,
-                7
-            ],
-            [
-                1,
-                108,
                 116,
-                8
+                4
             ]
         ],
         "simplified_spans": [
             [
                 1,
                 0,
-                4,
-                1
-            ],
-            [
-                1,
-                5,
-                9,
-                2
-            ],
-            [
-                1,
-                10,
                 18,
-                3
+                1
             ],
             [
                 1,
                 26,
                 30,
-                4
+                2
             ],
             [
+                5,
+                37,
+                49,
                 1,
-                37,
-                49,
-                5
-            ],
-            [
                 4,
-                37,
-                49,
                 1
             ],
             [
@@ -2047,50 +1405,30 @@
                 53,
                 74,
                 0,
-                3,
+                4,
                 1
             ],
             [
                 1,
                 75,
                 86,
-                6
-            ],
-            [
-                5,
-                75,
-                86,
-                1,
-                1,
-                1
+                3
             ],
             [
                 1,
                 87,
-                96,
-                7
-            ],
-            [
-                3,
-                101,
-                104,
-                1
-            ],
-            [
-                1,
-                105,
                 113,
-                8
+                4
             ]
         ]
     },
     {
-        "id": 79,
-        "annotation_id": 69,
+        "id": 78,
+        "annotation_id": 39,
         "sentence_id": 39,
         "batch": 1,
-        "hit_id": 19,
-        "user": "rachel",
+        "hit_id": 39,
+        "user": "ayush",
         "system": "new-wiki-4/GPT-4",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The story is about a special baby who is thought to be God's child. || It shows his search for where he comes from and his purpose.",
@@ -2108,6 +1446,12 @@
                 2
             ],
             [
+                0,
+                18,
+                32,
+                1
+            ],
+            [
                 1,
                 35,
                 42,
@@ -2123,25 +1467,23 @@
                 0,
                 62,
                 65,
-                1
-            ],
-            [
-                1,
-                66,
-                78,
-                5
-            ],
-            [
-                4,
-                66,
-                78,
-                1
-            ],
-            [
-                0,
-                79,
-                81,
                 2
+            ],
+            [
+                5,
+                66,
+                78,
+                1,
+                4,
+                1
+            ],
+            [
+                2,
+                79,
+                91,
+                0,
+                1,
+                1
             ],
             [
                 1,
@@ -2176,27 +1518,17 @@
                 3
             ],
             [
-                3,
-                34,
-                40,
-                1
-            ],
-            [
                 1,
-                41,
+                34,
                 48,
                 4
             ],
             [
+                5,
+                55,
+                67,
                 1,
-                55,
-                67,
-                5
-            ],
-            [
                 4,
-                55,
-                67,
                 1
             ],
             [
@@ -2208,77 +1540,47 @@
             [
                 2,
                 71,
-                83,
+                90,
                 0,
-                3,
+                1,
                 1
             ],
             [
                 1,
-                95,
+                91,
                 114,
                 6
             ],
             [
-                3,
-                119,
-                122,
-                3
-            ],
-            [
                 1,
-                123,
+                119,
                 131,
                 7
             ]
         ]
     },
     {
-        "id": 83,
-        "annotation_id": 111,
+        "id": 82,
+        "annotation_id": 41,
         "sentence_id": 41,
         "batch": 1,
-        "hit_id": 11,
-        "user": "vinayak",
+        "hit_id": 41,
+        "user": "ayush",
         "system": "new-wiki-4/Turbo",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China agreed to trade using their own currencies, without involving the United States dollar.",
         "original_spans": [
             [
-                5,
-                17,
-                34,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 17,
                 34,
                 1
             ],
             [
-                5,
-                44,
-                52,
-                2,
-                1,
-                1
-            ],
-            [
                 1,
                 44,
-                52,
+                46,
                 2
-            ],
-            [
-                5,
-                69,
-                89,
-                3,
-                1,
-                1
             ],
             [
                 1,
@@ -2295,40 +1597,16 @@
         ],
         "simplified_spans": [
             [
-                5,
-                17,
-                23,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 17,
                 23,
                 1
             ],
             [
-                5,
-                33,
-                44,
-                2,
-                1,
-                1
-            ],
-            [
                 1,
                 33,
-                44,
+                38,
                 2
-            ],
-            [
-                5,
-                61,
-                78,
-                3,
-                1,
-                1
             ],
             [
                 1,
@@ -2339,12 +1617,12 @@
         ]
     },
     {
-        "id": 87,
-        "annotation_id": 113,
+        "id": 86,
+        "annotation_id": 43,
         "sentence_id": 43,
         "batch": 1,
-        "hit_id": 13,
-        "user": "vinayak",
+        "hit_id": 43,
+        "user": "ayush",
         "system": "new-wiki-4/GPT-4",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China made a deal to use their own money for trade, stopping the use of the US dollar in between.",
@@ -2359,39 +1637,19 @@
             ],
             [
                 1,
-                17,
-                34,
-                1
-            ],
-            [
-                1,
-                35,
-                43,
+                38,
+                46,
                 2
             ],
             [
-                0,
-                44,
-                46,
-                1
-            ],
-            [
-                5,
+                1,
                 57,
                 68,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                69,
-                76,
                 3
             ],
             [
                 1,
-                81,
+                69,
                 86,
                 4
             ],
@@ -2419,39 +1677,25 @@
             ],
             [
                 1,
-                17,
-                28,
-                1
-            ],
-            [
-                1,
-                29,
+                32,
                 35,
                 2
             ],
             [
-                5,
+                1,
                 46,
                 51,
-                2,
-                1,
+                3
+            ],
+            [
+                3,
+                52,
+                62,
                 1
             ],
             [
                 1,
-                52,
-                62,
-                2
-            ],
-            [
-                1,
                 63,
-                71,
-                3
-            ],
-            [
-                1,
-                76,
                 79,
                 4
             ],
@@ -2470,12 +1714,12 @@
         ]
     },
     {
-        "id": 141,
-        "annotation_id": 105,
+        "id": 140,
+        "annotation_id": 85,
         "sentence_id": 70,
         "batch": 1,
-        "hit_id": 5,
-        "user": "vinayak",
+        "hit_id": 35,
+        "user": "rachel",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "Its subject and medium represent modernization, globalization, and industrialization, which symbolize the energy and spirit of traditional Bengal during the period of industrialization.",
@@ -2487,34 +1731,28 @@
                 1
             ],
             [
-                1,
-                40,
-                54,
-                2
+                0,
+                92,
+                99,
+                1
             ],
             [
                 1,
-                92,
-                99,
+                114,
+                122,
                 3
             ],
             [
                 1,
-                100,
-                109,
+                127,
+                136,
                 4
             ],
             [
                 1,
-                110,
-                136,
-                5
-            ],
-            [
-                1,
                 159,
-                173,
-                6
+                170,
+                2
             ]
         ],
         "simplified_spans": [
@@ -2525,105 +1763,135 @@
                 1
             ],
             [
-                1,
-                33,
-                47,
-                2
+                3,
+                86,
+                91,
+                1
             ],
             [
                 1,
-                86,
-                91,
+                106,
+                112,
                 3
             ],
             [
                 1,
-                92,
-                101,
-                4
-            ],
-            [
-                1,
-                102,
+                117,
                 123,
-                5
+                4
             ],
             [
                 1,
                 146,
                 163,
-                6
+                2
             ]
         ]
     },
     {
-        "id": 143,
-        "annotation_id": 106,
+        "id": 142,
+        "annotation_id": 86,
         "sentence_id": 71,
         "batch": 1,
-        "hit_id": 6,
-        "user": "vinayak",
+        "hit_id": 36,
+        "user": "rachel",
         "system": "new-wiki-4/Turbo",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "This artwork represents modernization, globalization, and industrialization, which were important aspects of traditional Bengal during its industrial period.",
         "original_spans": [
             [
-                1,
                 0,
-                39,
+                0,
+                22,
                 1
             ],
             [
                 1,
+                23,
+                39,
+                1
+            ],
+            [
+                0,
                 92,
-                136,
+                109,
                 2
             ],
             [
                 1,
+                114,
+                136,
+                4
+            ],
+            [
+                1,
                 159,
+                173,
+                2
+            ],
+            [
+                1,
+                174,
                 192,
                 3
             ]
         ],
         "simplified_spans": [
             [
-                1,
+                3,
                 0,
-                23,
+                12,
                 1
             ],
             [
                 1,
+                13,
+                23,
+                1
+            ],
+            [
+                3,
                 77,
-                105,
+                87,
                 2
             ],
             [
                 1,
+                88,
+                105,
+                4
+            ],
+            [
+                1,
                 128,
+                134,
+                2
+            ],
+            [
+                3,
+                135,
+                138,
+                3
+            ],
+            [
+                1,
+                139,
                 157,
                 3
             ]
         ]
     },
     {
-        "id": 145,
-        "annotation_id": 107,
+        "id": 144,
+        "annotation_id": 87,
         "sentence_id": 72,
         "batch": 1,
-        "hit_id": 7,
-        "user": "vinayak",
+        "hit_id": 37,
+        "user": "rachel",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "The subject and medium of the topic are similar to modernisation, globalization, and industrialization because they reflect the spirit and culture of traditional Bengal during the time of industrialization.",
         "original_spans": [
-            [
-                4,
-                0,
-                22,
-                1
-            ],
             [
                 1,
                 0,
@@ -2650,32 +1918,26 @@
             ],
             [
                 1,
-                110,
+                114,
                 136,
                 5
             ],
             [
                 1,
                 159,
-                173,
+                161,
                 6
             ]
         ],
         "simplified_spans": [
             [
-                4,
-                0,
-                35,
-                1
-            ],
-            [
-                3,
-                0,
-                3,
-                1
-            ],
-            [
                 1,
+                0,
+                3,
+                1
+            ],
+            [
+                3,
                 23,
                 35,
                 1
@@ -2700,35 +1962,29 @@
             ],
             [
                 1,
-                124,
+                128,
                 146,
                 5
             ],
             [
                 1,
                 169,
-                187,
+                175,
                 6
             ]
         ]
     },
     {
-        "id": 149,
-        "annotation_id": 109,
+        "id": 148,
+        "annotation_id": 89,
         "sentence_id": 74,
         "batch": 1,
-        "hit_id": 9,
-        "user": "vinayak",
+        "hit_id": 39,
+        "user": "rachel",
         "system": "new-wiki-4/GPT-4",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "The topic and style of the work relate to modernization, globalization, and industrialization. || They represent the energy and spirit of traditional Bengal during the time of industrial growth.",
         "original_spans": [
-            [
-                4,
-                0,
-                22,
-                1
-            ],
             [
                 1,
                 0,
@@ -2737,15 +1993,21 @@
             ],
             [
                 1,
-                23,
-                39,
+                4,
+                11,
                 2
             ],
             [
                 1,
-                40,
-                54,
+                16,
+                22,
                 3
+            ],
+            [
+                1,
+                23,
+                39,
+                4
             ],
             [
                 2,
@@ -2756,60 +2018,60 @@
                 1
             ],
             [
-                0,
-                92,
-                94,
-                1
-            ],
-            [
                 1,
                 100,
                 109,
-                4
-            ],
-            [
-                1,
-                114,
-                136,
                 5
             ],
             [
                 1,
-                159,
-                192,
+                114,
+                122,
                 6
+            ],
+            [
+                1,
+                127,
+                136,
+                7
+            ],
+            [
+                1,
+                159,
+                161,
+                8
+            ],
+            [
+                1,
+                174,
+                192,
+                9
             ]
         ],
         "simplified_spans": [
             [
-                4,
-                0,
-                31,
-                1
-            ],
-            [
-                3,
+                1,
                 0,
                 3,
                 1
             ],
             [
                 1,
-                20,
+                4,
+                9,
+                2
+            ],
+            [
+                1,
+                14,
                 31,
-                1
+                3
             ],
             [
                 1,
                 32,
                 41,
-                2
-            ],
-            [
-                1,
-                42,
-                56,
-                3
+                4
             ],
             [
                 2,
@@ -2821,34 +2083,52 @@
                 1,
                 103,
                 112,
-                4
-            ],
-            [
-                1,
-                117,
-                134,
                 5
             ],
             [
                 1,
-                157,
-                194,
+                117,
+                123,
                 6
+            ],
+            [
+                1,
+                128,
+                134,
+                7
+            ],
+            [
+                1,
+                157,
+                163,
+                8
+            ],
+            [
+                1,
+                176,
+                194,
+                9
             ]
         ]
     },
     {
-        "id": 153,
-        "annotation_id": 131,
+        "id": 152,
+        "annotation_id": 91,
         "sentence_id": 76,
         "batch": 1,
-        "hit_id": 31,
-        "user": "vinayak",
+        "hit_id": 41,
+        "user": "rachel",
         "system": "new-wiki-4/Turbo",
         "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
         "simplified": "The ICJ said that the US broke its friendship treaty with Iran when it let its courts freeze assets of Iranian companies. || However, the ICJ cannot decide on the $1.75 billion frozen assets of Iran's Central Bank.",
         "original_spans": [
             [
+                1,
+                4,
+                40,
+                1
+            ],
+            [
                 5,
                 41,
                 46,
@@ -2860,27 +2140,25 @@
                 1,
                 41,
                 46,
-                1
+                3
             ],
             [
-                5,
-                70,
-                78,
-                3,
                 1,
-                1
+                56,
+                69,
+                12
             ],
             [
                 1,
                 70,
                 78,
-                8
+                4
             ],
             [
                 1,
                 124,
                 131,
-                3
+                5
             ],
             [
                 0,
@@ -2889,42 +2167,34 @@
                 1
             ],
             [
-                5,
+                0,
                 152,
-                161,
-                2,
-                1,
-                1
+                154,
+                2
             ],
             [
                 1,
                 169,
                 176,
-                4
+                6
             ],
             [
                 1,
                 196,
                 199,
-                5
-            ],
-            [
-                0,
-                200,
-                209,
-                2
-            ],
-            [
-                4,
-                210,
-                217,
-                1
+                7
             ],
             [
                 1,
                 218,
                 249,
-                6
+                8
+            ],
+            [
+                1,
+                254,
+                261,
+                9
             ],
             [
                 0,
@@ -2935,12 +2205,30 @@
             [
                 1,
                 293,
+                300,
+                10
+            ],
+            [
+                0,
+                301,
+                304,
+                4
+            ],
+            [
+                1,
+                305,
                 326,
-                7
+                11
             ]
         ],
         "simplified_spans": [
             [
+                1,
+                4,
+                7,
+                1
+            ],
+            [
                 5,
                 8,
                 12,
@@ -2952,41 +2240,31 @@
                 1,
                 8,
                 12,
-                1
+                3
             ],
             [
-                5,
-                25,
-                30,
-                3,
                 1,
-                1
+                22,
+                24,
+                12
             ],
             [
                 1,
                 25,
                 30,
-                8
+                4
             ],
             [
                 1,
                 71,
                 74,
-                3
-            ],
-            [
-                5,
-                86,
-                92,
-                2,
-                1,
-                1
+                5
             ],
             [
                 1,
                 100,
                 102,
-                4
+                6
             ],
             [
                 2,
@@ -2998,48 +2276,46 @@
                 1,
                 125,
                 133,
-                5
-            ],
-            [
-                4,
-                134,
-                141,
-                1
+                7
             ],
             [
                 1,
                 142,
                 158,
-                6
+                8
+            ],
+            [
+                1,
+                163,
+                168,
+                9
             ],
             [
                 1,
                 191,
+                193,
+                10
+            ],
+            [
+                1,
+                194,
                 214,
-                7
+                11
             ]
         ]
     },
     {
-        "id": 157,
-        "annotation_id": 133,
+        "id": 156,
+        "annotation_id": 93,
         "sentence_id": 78,
         "batch": 1,
-        "hit_id": 33,
-        "user": "vinayak",
+        "hit_id": 43,
+        "user": "rachel",
         "system": "new-wiki-4/GPT-4",
         "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
         "simplified": "The International Court of Justice (ICJ) decided that the United States broke its 1955 friendship treaty with Iran by letting its local courts freeze assets owned by Iranian companies. || However, the ICJ said it does not have the power to control the $1.75 billion of frozen assets held by Iran's Central Bank.",
         "original_spans": [
             [
-                5,
-                41,
-                46,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 41,
                 46,
@@ -3047,9 +2323,9 @@
             ],
             [
                 5,
-                70,
-                78,
-                2,
+                41,
+                46,
+                1,
                 1,
                 1
             ],
@@ -3060,38 +2336,58 @@
                 2
             ],
             [
-                5,
+                1,
                 116,
-                151,
-                3,
+                120,
+                3
+            ],
+            [
+                5,
+                121,
+                123,
+                2,
+                0,
+                2
+            ],
+            [
+                1,
+                124,
+                131,
+                4
+            ],
+            [
+                5,
+                124,
+                131,
+                2,
                 1,
                 1
             ],
             [
                 1,
-                116,
-                151,
-                3
+                136,
+                144,
+                5
             ],
             [
                 5,
                 152,
-                161,
-                4,
-                1,
+                154,
+                2,
+                0,
                 1
             ],
             [
                 1,
                 169,
                 173,
-                4
+                6
             ],
             [
                 1,
                 196,
                 199,
-                5
+                7
             ],
             [
                 0,
@@ -3100,22 +2396,22 @@
                 1
             ],
             [
-                4,
+                1,
                 210,
                 217,
-                1
+                8
             ],
             [
                 1,
                 232,
                 249,
-                6
+                9
             ],
             [
                 1,
                 254,
                 261,
-                7
+                11
             ],
             [
                 0,
@@ -3124,22 +2420,20 @@
                 2
             ],
             [
+                0,
+                301,
+                304,
+                3
+            ],
+            [
                 1,
                 305,
                 326,
-                8
+                10
             ]
         ],
         "simplified_spans": [
             [
-                5,
-                41,
-                48,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 41,
                 48,
@@ -3147,9 +2441,9 @@
             ],
             [
                 5,
-                72,
-                77,
-                2,
+                41,
+                48,
+                1,
                 1,
                 1
             ],
@@ -3160,32 +2454,36 @@
                 2
             ],
             [
-                5,
-                115,
-                142,
-                3,
-                1,
-                1
-            ],
-            [
                 1,
                 115,
-                142,
+                117,
                 3
             ],
             [
+                1,
+                118,
+                125,
+                4
+            ],
+            [
                 5,
-                143,
-                149,
-                4,
+                118,
+                125,
+                2,
                 1,
                 1
+            ],
+            [
+                1,
+                130,
+                135,
+                5
             ],
             [
                 1,
                 157,
                 162,
-                4
+                6
             ],
             [
                 2,
@@ -3197,47 +2495,53 @@
                 1,
                 188,
                 196,
-                5
+                7
             ],
             [
-                4,
+                3,
                 197,
                 204,
                 1
             ],
             [
-                3,
+                1,
                 210,
                 212,
-                1
+                8
+            ],
+            [
+                3,
+                227,
+                230,
+                2
             ],
             [
                 1,
-                227,
+                231,
                 247,
-                6
+                9
             ],
             [
                 1,
                 252,
                 257,
-                7
+                11
             ],
             [
                 1,
                 291,
                 311,
-                8
+                10
             ]
         ]
     },
     {
-        "id": 205,
-        "annotation_id": 222,
+        "id": 204,
+        "annotation_id": 202,
         "sentence_id": 102,
         "batch": 2,
         "hit_id": 2,
-        "user": "rachel",
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "However, the entertainment and intrigue the first half of the movie offers is something the second half does not have. || The second half moves at a sluggish pace.",
@@ -3259,22 +2563,16 @@
             [
                 2,
                 123,
-                127,
+                138,
                 0,
-                0,
+                1,
                 1
             ],
             [
                 1,
-                132,
-                138,
-                3
-            ],
-            [
-                0,
                 139,
                 155,
-                2
+                3
             ]
         ],
         "simplified_spans": [
@@ -3299,122 +2597,92 @@
                 0
             ],
             [
-                1,
-                126,
+                2,
+                122,
                 137,
-                3
+                0,
+                1,
+                1
             ],
             [
-                3,
+                1,
                 138,
                 146,
-                1
+                3
             ]
         ]
     },
     {
-        "id": 207,
-        "annotation_id": 223,
+        "id": 206,
+        "annotation_id": 203,
         "sentence_id": 103,
         "batch": 2,
         "hit_id": 3,
-        "user": "rachel",
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "However, the entertainment and intrigue the first half of the movie offers is something the second half fails to provide and drags in places due to its sluggish pace.",
         "original_spans": [
             [
-                5,
+                1,
                 75,
                 78,
-                1,
-                1,
                 1
             ],
             [
                 0,
                 123,
-                157,
+                138,
                 1
+            ],
+            [
+                1,
+                139,
+                155,
+                2
             ]
         ],
         "simplified_spans": [
             [
-                5,
+                1,
                 75,
                 77,
-                1,
-                1,
                 1
             ],
             [
-                5,
+                3,
                 121,
-                124,
-                2,
-                3,
+                140,
                 1
             ],
             [
-                3,
-                125,
-                151,
+                1,
+                141,
+                147,
                 2
             ]
         ]
     },
     {
-        "id": 209,
-        "annotation_id": 240,
+        "id": 208,
+        "annotation_id": 204,
         "sentence_id": 104,
         "batch": 2,
-        "hit_id": 0,
-        "user": "vinayak",
+        "hit_id": 4,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax in India is a big change from the old 1961 law. || One of the changes is the so-called 'angel tax' which tries to get a piece of the income entering the country from foreign investors funding new businesses in India.",
         "original_spans": [
             [
                 1,
-                33,
-                44,
-                1
-            ],
-            [
-                1,
-                52,
-                54,
-                2
-            ],
-            [
-                1,
                 68,
                 76,
-                3
-            ],
-            [
-                2,
-                77,
-                89,
-                0,
-                1,
                 1
             ],
             [
-                1,
-                77,
-                89,
-                4
-            ],
-            [
-                1,
-                90,
-                91,
-                5
-            ],
-            [
                 0,
-                92,
+                77,
                 105,
                 1
             ],
@@ -3425,56 +2693,40 @@
                 2
             ],
             [
-                5,
-                128,
-                135,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 128,
-                135,
-                6
-            ],
-            [
-                1,
-                139,
                 146,
-                7
+                2
             ],
             [
                 1,
                 147,
                 151,
-                8
+                3
             ],
             [
-                1,
+                5,
                 218,
                 236,
-                9
+                1,
+                4,
+                1
+            ],
+            [
+                5,
+                226,
+                236,
+                1,
+                1,
+                1
             ]
         ],
         "simplified_spans": [
             [
                 1,
-                33,
-                36,
-                1
-            ],
-            [
-                1,
-                44,
-                48,
-                2
-            ],
-            [
-                1,
                 62,
                 66,
-                3
+                1
             ],
             [
                 2,
@@ -3485,70 +2737,48 @@
             [
                 2,
                 70,
-                91,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                70,
-                91,
-                4
-            ],
-            [
-                1,
-                92,
-                95,
-                5
-            ],
-            [
-                3,
-                96,
                 105,
-                1
-            ],
-            [
-                5,
-                118,
-                129,
-                1,
-                1,
+                0,
+                3,
                 1
             ],
             [
                 1,
                 118,
-                129,
-                6
-            ],
-            [
-                1,
-                133,
                 136,
-                7
+                2
             ],
             [
                 1,
                 137,
                 144,
-                8
+                3
             ],
             [
-                1,
+                5,
                 211,
                 235,
-                9
+                1,
+                4,
+                1
+            ],
+            [
+                5,
+                211,
+                225,
+                1,
+                1,
+                1
             ]
         ]
     },
     {
-        "id": 211,
-        "annotation_id": 241,
+        "id": 210,
+        "annotation_id": 205,
         "sentence_id": 105,
         "batch": 2,
-        "hit_id": 1,
-        "user": "vinayak",
+        "hit_id": 5,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax in India is a significant change on the old 1961 statute. || It contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
@@ -3558,13 +2788,7 @@
                 77,
                 80,
                 0,
-                0,
-                1
-            ],
-            [
-                0,
-                77,
-                80,
+                1,
                 1
             ]
         ],
@@ -3580,47 +2804,33 @@
                 80,
                 82,
                 0,
-                3,
-                1
-            ],
-            [
-                3,
-                80,
-                82,
+                1,
                 1
             ]
         ]
     },
     {
-        "id": 213,
-        "annotation_id": 249,
+        "id": 212,
+        "annotation_id": 206,
         "sentence_id": 106,
         "batch": 2,
-        "hit_id": 9,
-        "user": "vinayak",
+        "hit_id": 6,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "In basketball, the Sacramento Kings made the NBA playoffs for the first time in 17 years. || This ended their 17-year playoff drought.",
         "original_spans": [
             [
-                5,
-                36,
-                40,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
+                0,
                 77,
                 88,
                 1
             ],
             [
-                5,
+                2,
                 89,
                 95,
-                2,
+                0,
                 1,
                 1
             ],
@@ -3628,20 +2838,12 @@
                 0,
                 127,
                 154,
-                1
+                2
             ]
         ],
         "simplified_spans": [
             [
-                5,
-                36,
-                40,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
+                3,
                 77,
                 89,
                 1
@@ -3661,28 +2863,22 @@
                 1
             ],
             [
-                3,
-                93,
-                97,
-                1
-            ],
-            [
-                5,
+                2,
                 98,
                 103,
-                2,
+                0,
                 1,
                 1
             ]
         ]
     },
     {
-        "id": 215,
-        "annotation_id": 248,
+        "id": 214,
+        "annotation_id": 207,
         "sentence_id": 107,
         "batch": 2,
-        "hit_id": 8,
-        "user": "vinayak",
+        "hit_id": 7,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "In basketball, the Sacramento Kings return to the NBA playoffs after missing the 2006-2007 season. || This ended their 17-year playoff drought in the NBA.",
@@ -3694,46 +2890,30 @@
                 1
             ],
             [
-                5,
+                1,
                 58,
                 82,
-                1,
-                1,
-                1
+                3
             ],
             [
                 1,
-                58,
-                82,
+                77,
+                88,
                 2
             ],
             [
-                0,
-                83,
-                88,
-                1
-            ],
-            [
-                5,
+                2,
                 89,
                 95,
-                2,
+                0,
                 1,
                 1
             ],
             [
-                5,
+                0,
                 127,
                 154,
-                3,
-                0,
                 1
-            ],
-            [
-                0,
-                127,
-                154,
-                2
             ]
         ],
         "simplified_spans": [
@@ -3744,22 +2924,20 @@
                 1
             ],
             [
-                5,
+                1,
                 63,
-                76,
-                1,
-                1,
-                1
+                80,
+                3
             ],
             [
                 1,
-                63,
-                76,
+                81,
+                90,
                 2
             ],
             [
                 3,
-                77,
+                91,
                 98,
                 1
             ],
@@ -3772,48 +2950,26 @@
             [
                 2,
                 102,
-                106,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                102,
-                106,
-                2
-            ],
-            [
-                5,
-                107,
                 112,
-                2,
+                0,
                 1,
                 1
             ],
             [
-                5,
-                143,
-                154,
-                3,
-                3,
-                1
-            ],
-            [
                 3,
                 143,
                 154,
-                3
+                2
             ]
         ]
     },
     {
-        "id": 229,
-        "annotation_id": 226,
+        "id": 228,
+        "annotation_id": 214,
         "sentence_id": 114,
         "batch": 2,
-        "hit_id": 6,
-        "user": "rachel",
+        "hit_id": 14,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The novel is about a baby rumored to be the child of God. || He goes in search of his origins and mission.",
@@ -3821,20 +2977,14 @@
             [
                 1,
                 10,
-                17,
-                1
-            ],
-            [
-                0,
-                18,
                 32,
-                3
+                1
             ],
             [
                 0,
                 35,
                 42,
-                2
+                1
             ]
         ],
         "simplified_spans": [
@@ -3861,53 +3011,43 @@
         ]
     },
     {
-        "id": 231,
-        "annotation_id": 227,
+        "id": 230,
+        "annotation_id": 215,
         "sentence_id": 115,
         "batch": 2,
-        "hit_id": 7,
-        "user": "rachel",
+        "hit_id": 15,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The book is about the journey of a miracle baby who people say is the child of God to find out who he is and what his mission is.",
         "original_spans": [
             [
                 1,
+                4,
+                9,
+                1
+            ],
+            [
+                1,
                 10,
                 17,
-                1
+                2
             ],
             [
                 1,
                 48,
-                55,
-                2
-            ],
-            [
-                5,
-                56,
                 61,
-                1,
-                1,
-                1
+                3
             ],
             [
                 1,
                 79,
                 91,
-                3
+                4
             ],
             [
-                5,
+                1,
                 92,
-                103,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                96,
                 103,
                 5
             ]
@@ -3915,37 +3055,27 @@
         "simplified_spans": [
             [
                 1,
+                4,
+                8,
+                1
+            ],
+            [
+                1,
                 9,
                 17,
-                1
+                2
             ],
             [
                 1,
                 48,
-                62,
-                2
-            ],
-            [
-                5,
-                63,
                 65,
-                1,
-                1,
-                1
+                3
             ],
             [
                 1,
                 83,
                 94,
-                3
-            ],
-            [
-                5,
-                95,
-                104,
-                2,
-                1,
-                1
+                4
             ],
             [
                 1,
@@ -3957,7 +3087,7 @@
                 5,
                 109,
                 117,
-                2,
+                1,
                 3,
                 1
             ],
@@ -3965,19 +3095,19 @@
                 5,
                 126,
                 129,
-                2,
+                1,
                 3,
                 2
             ]
         ]
     },
     {
-        "id": 235,
-        "annotation_id": 245,
+        "id": 234,
+        "annotation_id": 217,
         "sentence_id": 117,
         "batch": 2,
-        "hit_id": 5,
-        "user": "vinayak",
+        "hit_id": 17,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China agree to trade in their own currencies. || They no longer use the United States dollar to trade.",
@@ -3989,37 +3119,19 @@
                 1
             ],
             [
-                2,
+                1,
                 69,
-                76,
-                0,
-                0,
-                1
+                86,
+                2
             ],
             [
                 0,
-                69,
-                76,
-                1
-            ],
-            [
-                5,
-                77,
+                87,
                 89,
-                1,
-                1,
                 1
             ],
             [
-                5,
-                115,
-                134,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
+                0,
                 115,
                 134,
                 2
@@ -4039,50 +3151,26 @@
                 0
             ],
             [
-                2,
+                1,
                 60,
-                74,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                60,
-                74,
-                1
-            ],
-            [
-                5,
-                75,
                 78,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                104,
-                113,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                104,
-                113,
                 2
+            ],
+            [
+                3,
+                104,
+                113,
+                1
             ]
         ]
     },
     {
-        "id": 257,
-        "annotation_id": 242,
+        "id": 256,
+        "annotation_id": 234,
         "sentence_id": 128,
         "batch": 2,
-        "hit_id": 2,
-        "user": "vinayak",
+        "hit_id": 14,
+        "user": "rachel",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "Its subject and medium are in line with modernisation, globalization and industrialization. || It shows the dynamism and zeitgeist of traditional Bengal.",
@@ -4090,14 +3178,30 @@
             [
                 2,
                 92,
-                109,
+                94,
                 0,
                 0,
                 1
             ],
             [
-                0,
-                92,
+                5,
+                95,
+                99,
+                1,
+                1,
+                1
+            ],
+            [
+                5,
+                100,
+                109,
+                1,
+                1,
+                2
+            ],
+            [
+                1,
+                100,
                 109,
                 1
             ],
@@ -4105,7 +3209,7 @@
                 0,
                 159,
                 192,
-                2
+                1
             ]
         ],
         "simplified_spans": [
@@ -4116,109 +3220,93 @@
                 0
             ],
             [
-                2,
+                5,
                 95,
-                103,
-                0,
-                3,
+                97,
+                1,
+                1,
                 1
             ],
             [
-                3,
-                95,
+                5,
+                98,
+                103,
+                1,
+                1,
+                2
+            ],
+            [
+                1,
+                98,
                 103,
                 1
             ]
         ]
     },
     {
-        "id": 259,
-        "annotation_id": 243,
+        "id": 258,
+        "annotation_id": 235,
         "sentence_id": 129,
         "batch": 2,
-        "hit_id": 3,
-        "user": "vinayak",
+        "hit_id": 15,
+        "user": "rachel",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "Its subject and medium are in line with modernisation, globalization and industrialization, and at the same time they speak of the dynamism of traditional Bengal, which was rapidly changing.",
         "original_spans": [
             [
-                5,
+                0,
                 92,
                 94,
-                2,
-                1,
                 1
-            ],
-            [
-                1,
-                92,
-                94,
-                3
             ],
             [
                 1,
                 100,
                 109,
-                2
+                1
             ],
             [
                 0,
                 123,
                 136,
-                1
+                2
             ],
             [
                 0,
                 159,
                 192,
-                2
+                3
             ]
         ],
         "simplified_spans": [
             [
-                5,
+                3,
                 92,
-                117,
-                2,
-                1,
+                112,
                 1
-            ],
-            [
-                1,
-                92,
-                117,
-                3
             ],
             [
                 1,
                 118,
                 126,
+                1
+            ],
+            [
+                3,
+                163,
+                190,
                 2
-            ],
-            [
-                5,
-                163,
-                190,
-                1,
-                3,
-                1
-            ],
-            [
-                3,
-                163,
-                190,
-                1
             ]
         ]
     },
     {
-        "id": 263,
-        "annotation_id": 253,
+        "id": 262,
+        "annotation_id": 237,
         "sentence_id": 131,
         "batch": 2,
-        "hit_id": 13,
-        "user": "vinayak",
+        "hit_id": 17,
+        "user": "rachel",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
         "simplified": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran. || The ICJ rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies.",

@@ -1,11 +1,11 @@
 [
     {
-        "id": 1,
-        "annotation_id": 173,
+        "id": 0,
+        "annotation_id": 0,
         "sentence_id": 0,
         "batch": 1,
-        "hit_id": 23,
-        "user": "vishnesh",
+        "hit_id": 0,
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
         "simplified": "Ecuador is withdrawing its ambassador from Argentina because Argentina has been hiding an Ecuadorian politician named Mar\u00eda de los \u00c1ngeles Duarte since 2020, and refusing to tell anyone where she is.",
@@ -19,22 +19,22 @@
                 1
             ],
             [
-                0,
+                1,
                 48,
-                72,
-                1
-            ],
-            [
-                1,
-                73,
-                83,
-                1
-            ],
-            [
-                1,
-                158,
-                194,
+                58,
                 2
+            ],
+            [
+                1,
+                59,
+                83,
+                3
+            ],
+            [
+                1,
+                155,
+                194,
+                4
             ]
         ],
         "simplified_spans": [
@@ -47,50 +47,52 @@
                 1
             ],
             [
-                3,
+                1,
                 53,
-                79,
-                1
+                60,
+                2
             ],
             [
                 1,
-                80,
+                61,
                 86,
-                1
+                3
             ],
             [
                 3,
                 87,
                 89,
-                2
+                1
             ],
             [
                 3,
                 112,
                 117,
-                3
+                2
             ],
             [
-                3,
+                5,
                 158,
                 161,
-                4
+                2,
+                3,
+                1
             ],
             [
                 1,
-                174,
+                171,
                 199,
-                2
+                4
             ]
         ]
     },
     {
-        "id": 5,
-        "annotation_id": 174,
+        "id": 4,
+        "annotation_id": 2,
         "sentence_id": 2,
         "batch": 1,
-        "hit_id": 24,
-        "user": "vishnesh",
+        "hit_id": 2,
+        "user": "ayush",
         "system": "new-wiki-4/Davinci-003",
         "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
         "simplified": "Ecuador has withdrawn its ambassador from Argentina in protest, as Argentina has refused to provide information about the location of Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte, who has been sheltered there since 2020.",
@@ -110,75 +112,25 @@
                 1
             ],
             [
-                5,
-                73,
-                83,
-                3,
                 4,
+                73,
+                145,
                 1
             ],
             [
-                5,
-                73,
-                83,
-                3,
                 1,
-                1
-            ],
-            [
-                4,
                 146,
                 194,
-                1
-            ],
-            [
-                5,
-                146,
-                154,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                158,
-                162,
-                1
-            ],
-            [
-                1,
-                175,
-                177,
                 2
-            ],
-            [
-                1,
-                178,
-                194,
-                3
             ]
         ],
         "simplified_spans": [
             [
                 5,
                 8,
-                11,
-                1,
-                3,
-                1
-            ],
-            [
-                5,
-                12,
                 21,
                 1,
                 1,
-                1
-            ],
-            [
-                4,
-                64,
-                133,
                 1
             ],
             [
@@ -188,78 +140,26 @@
                 1
             ],
             [
-                5,
-                77,
-                80,
-                2,
-                3,
-                1
-            ],
-            [
-                5,
+                1,
                 81,
-                88,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                92,
-                99,
-                1
-            ],
-            [
-                1,
-                112,
-                117,
-                2
-            ],
-            [
-                1,
-                118,
                 133,
-                3
-            ],
-            [
-                5,
-                185,
-                213,
-                3,
-                4,
-                1
-            ],
-            [
-                5,
-                185,
-                197,
-                3,
-                3,
-                1
-            ],
-            [
-                5,
-                198,
-                207,
-                3,
-                1,
-                1
-            ],
-            [
-                3,
-                208,
-                213,
                 2
+            ],
+            [
+                4,
+                185,
+                225,
+                1
             ]
         ]
     },
     {
-        "id": 9,
-        "annotation_id": 172,
+        "id": 8,
+        "annotation_id": 4,
         "sentence_id": 4,
         "batch": 1,
-        "hit_id": 22,
-        "user": "vishnesh",
+        "hit_id": 4,
+        "user": "ayush",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
         "simplified": "Ecuador has withdrawn its ambassador from Argentina because Argentina has been hiding an Ecuadorian politician since 20",
@@ -273,169 +173,131 @@
                 1
             ],
             [
-                0,
+                1,
                 48,
                 72,
-                1
+                2
             ],
             [
-                1,
+                5,
                 73,
                 83,
+                2,
+                1,
                 1
             ],
             [
                 0,
                 106,
                 133,
-                2
+                1
             ],
             [
                 1,
                 140,
                 145,
-                2
-            ],
-            [
-                0,
-                146,
-                194,
-                3
+                4
             ]
         ],
         "simplified_spans": [
             [
                 5,
                 8,
-                11,
-                1,
-                3,
-                1
-            ],
-            [
-                5,
-                12,
                 21,
                 1,
                 1,
                 1
             ],
             [
-                3,
+                1,
                 52,
-                78,
-                1
+                69,
+                2
             ],
             [
-                1,
-                79,
+                5,
+                70,
                 85,
+                2,
+                1,
                 1
             ],
             [
                 3,
                 86,
                 88,
-                2
+                1
             ],
             [
                 1,
                 117,
                 119,
-                2
+                4
             ]
         ]
     },
     {
-        "id": 21,
-        "annotation_id": 100,
+        "id": 20,
+        "annotation_id": 10,
         "sentence_id": 10,
         "batch": 1,
-        "hit_id": 0,
-        "user": "vinayak",
+        "hit_id": 10,
+        "user": "ayush",
         "system": "new-wiki-4/GPT-4",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax in India is a major update from the old 1961 law. || It includes a debated \"angel tax\" rule that aims to tax money coming into India from foreign investors supporting Indian start-ups.",
         "original_spans": [
             [
                 1,
+                33,
+                54,
+                1
+            ],
+            [
+                1,
                 68,
                 76,
-                3
+                2
             ],
             [
                 2,
                 77,
-                89,
-                0,
-                0,
-                1
-            ],
-            [
-                0,
-                77,
-                89,
-                1
-            ],
-            [
-                1,
-                92,
                 105,
-                2
+                0,
+                1,
+                1
             ],
             [
                 1,
                 118,
-                127,
-                4
-            ],
-            [
-                5,
-                128,
-                135,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                128,
-                135,
-                5
-            ],
-            [
-                1,
-                139,
                 165,
-                6
+                3
             ],
             [
                 1,
                 166,
                 186,
-                7
+                4
             ],
             [
                 1,
                 210,
                 217,
-                8
-            ],
-            [
-                5,
-                218,
-                225,
-                2,
-                1,
-                1
+                5
             ]
         ],
         "simplified_spans": [
             [
                 1,
+                33,
+                50,
+                1
+            ],
+            [
+                1,
                 64,
                 68,
-                3
+                2
             ],
             [
                 2,
@@ -446,212 +308,98 @@
             [
                 2,
                 72,
-                83,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                72,
-                83,
-                1
-            ],
-            [
-                1,
-                86,
                 93,
-                2
+                0,
+                1,
+                1
             ],
             [
                 1,
                 106,
-                110,
-                4
-            ],
-            [
-                3,
-                111,
-                115,
-                2
-            ],
-            [
-                5,
-                116,
-                120,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                116,
-                120,
-                5
-            ],
-            [
-                1,
-                124,
                 133,
-                6
+                3
             ],
             [
                 1,
                 134,
                 151,
-                7
+                4
             ],
             [
                 1,
                 175,
                 185,
-                8
-            ],
-            [
-                5,
-                186,
-                192,
-                2,
-                1,
-                1
+                5
             ]
         ]
     },
     {
-        "id": 25,
-        "annotation_id": 102,
+        "id": 24,
+        "annotation_id": 12,
         "sentence_id": 12,
         "batch": 1,
-        "hit_id": 2,
-        "user": "vinayak",
+        "hit_id": 12,
+        "user": "ayush",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax law in India is very different from the law that was first introduced in 1961. || It includes a controversial \"angel tax\" provision, which is aimed at stopping foreign investors from funneling money into India's startups.",
         "original_spans": [
             [
                 1,
-                33,
-                54,
+                31,
+                51,
                 1
             ],
             [
                 1,
-                55,
+                68,
                 76,
                 2
             ],
             [
-                4,
-                55,
-                76,
-                1
-            ],
-            [
                 2,
                 77,
-                80,
-                0,
-                0,
-                1
-            ],
-            [
-                0,
-                77,
-                80,
-                1
-            ],
-            [
-                1,
-                81,
                 89,
-                3
-            ],
-            [
-                5,
-                128,
-                135,
-                1,
+                0,
                 1,
                 1
-            ],
-            [
-                1,
-                128,
-                135,
-                4
-            ],
-            [
-                5,
-                136,
-                146,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                136,
-                146,
-                5
-            ],
-            [
-                5,
-                147,
-                174,
-                3,
-                4,
-                2
             ],
             [
                 0,
-                147,
-                158,
-                3
-            ],
-            [
-                1,
-                159,
+                128,
                 165,
-                7
-            ],
-            [
-                5,
-                192,
-                209,
-                3,
-                4,
                 1
             ],
             [
-                0,
+                4,
+                187,
+                209,
+                1
+            ],
+            [
+                1,
                 210,
                 217,
-                2
-            ],
-            [
-                1,
-                226,
-                236,
-                6
+                3
             ]
         ],
         "simplified_spans": [
             [
                 1,
                 35,
-                54,
+                49,
                 1
             ],
             [
                 1,
-                55,
-                97,
+                59,
+                62,
                 2
             ],
             [
-                4,
-                55,
-                97,
+                3,
+                63,
+                91,
                 1
             ],
             [
@@ -663,122 +411,56 @@
             [
                 2,
                 101,
-                103,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                101,
-                103,
-                1
-            ],
-            [
-                1,
-                104,
                 112,
-                3
+                0,
+                1,
+                1
             ],
             [
                 3,
                 152,
-                160,
+                178,
                 2
             ],
             [
-                5,
-                161,
-                166,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                161,
-                166,
-                4
-            ],
-            [
-                5,
-                167,
-                178,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                167,
-                178,
-                5
-            ],
-            [
-                5,
+                4,
                 179,
                 196,
-                3,
-                4,
                 1
             ],
             [
-                5,
-                202,
-                222,
-                3,
-                4,
-                2
-            ],
-            [
                 1,
-                212,
-                217,
-                7
-            ],
-            [
-                3,
-                218,
+                197,
                 222,
                 3
-            ],
-            [
-                1,
-                231,
-                240,
-                6
             ]
         ]
     },
     {
-        "id": 29,
-        "annotation_id": 104,
+        "id": 28,
+        "annotation_id": 14,
         "sentence_id": 14,
         "batch": 1,
-        "hit_id": 4,
-        "user": "vinayak",
+        "hit_id": 14,
+        "user": "ayush",
         "system": "new-wiki-4/Davinci-003",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "India's new income tax has made a considerable change to the 1961 law and includes a contentious \"angel tax\" section that targets income flowing into the nation from foreign investors who are financing India's start-ups.",
         "original_spans": [
             [
-                4,
+                5,
                 0,
                 27,
+                1,
+                4,
                 1
             ],
             [
                 5,
                 28,
                 30,
+                2,
                 1,
-                1,
-                1
-            ],
-            [
-                1,
-                28,
-                30,
                 1
             ],
             [
@@ -788,101 +470,65 @@
                 2
             ],
             [
-                1,
+                5,
                 52,
                 54,
-                3
-            ],
-            [
-                5,
-                68,
-                80,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                68,
-                80,
-                4
-            ],
-            [
-                1,
-                81,
-                89,
-                5
-            ],
-            [
-                1,
-                92,
-                105,
-                6
-            ],
-            [
-                1,
-                118,
-                127,
-                7
-            ],
-            [
-                1,
-                128,
-                146,
-                8
-            ],
-            [
-                0,
-                147,
-                158,
-                1
-            ],
-            [
-                1,
-                166,
-                174,
-                9
-            ],
-            [
-                1,
-                179,
-                186,
-                10
-            ],
-            [
-                5,
-                210,
-                217,
                 3,
                 1,
                 1
             ],
             [
                 1,
+                68,
+                76,
+                3
+            ],
+            [
+                1,
+                81,
+                105,
+                4
+            ],
+            [
+                1,
+                118,
+                127,
+                5
+            ],
+            [
+                1,
+                128,
+                165,
+                6
+            ],
+            [
+                1,
+                166,
+                186,
+                7
+            ],
+            [
+                1,
                 210,
                 217,
-                11
+                8
             ]
         ],
         "simplified_spans": [
             [
-                4,
+                5,
                 0,
                 22,
+                1,
+                4,
                 1
             ],
             [
                 5,
                 23,
                 31,
+                2,
                 1,
-                1,
-                1
-            ],
-            [
-                1,
-                23,
-                31,
                 1
             ],
             [
@@ -892,90 +538,66 @@
                 2
             ],
             [
-                1,
+                5,
                 54,
                 56,
-                3
-            ],
-            [
-                5,
-                66,
-                73,
-                2,
+                3,
                 1,
                 1
             ],
             [
                 1,
                 66,
-                73,
-                4
+                69,
+                3
             ],
             [
                 1,
                 74,
-                82,
-                5
-            ],
-            [
-                1,
-                85,
                 96,
-                6
+                4
             ],
             [
                 1,
                 109,
                 116,
-                7
-            ],
-            [
-                3,
-                117,
-                121,
-                1
+                5
             ],
             [
                 1,
-                122,
-                129,
-                8
+                117,
+                136,
+                6
             ],
             [
                 1,
                 137,
-                149,
-                9
-            ],
-            [
-                1,
-                154,
                 160,
-                10
+                7
             ],
             [
                 5,
                 184,
-                201,
+                191,
+                4,
                 3,
-                1,
                 1
             ],
             [
                 1,
-                184,
+                192,
                 201,
-                11
+                8
             ]
         ]
     },
     {
-        "id": 33,
-        "annotation_id": 121,
+        "id": 32,
+        "annotation_id": 16,
         "sentence_id": 16,
         "batch": 1,
-        "hit_id": 21,
-        "user": "vinayak",
+        "hit_id": 16,
+        "user": "ayush",
         "system": "new-wiki-4/Turbo",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "The Sacramento Kings have made it to the NBA playoffs for the first time in 2006, which means they have ended their 17-year playoff drought. || This is the longest such drought in NBA history.",
@@ -995,10 +617,10 @@
                 1
             ],
             [
-                0,
+                1,
                 77,
                 82,
-                2
+                1
             ],
             [
                 5,
@@ -1013,40 +635,34 @@
             [
                 5,
                 21,
-                33,
+                30,
                 1,
                 1,
                 1
             ],
             [
                 3,
-                34,
+                31,
                 36,
                 1
             ],
             [
-                3,
+                1,
                 73,
                 75,
-                2
+                1
             ],
             [
                 5,
                 82,
-                98,
-                3,
+                103,
+                2,
                 3,
                 1
             ],
             [
-                3,
-                82,
-                98,
-                3
-            ],
-            [
                 5,
-                99,
+                104,
                 109,
                 2,
                 1,
@@ -1068,25 +684,19 @@
             ],
             [
                 3,
-                144,
-                151,
-                4
-            ],
-            [
-                3,
                 164,
                 176,
-                5
+                3
             ]
         ]
     },
     {
-        "id": 37,
-        "annotation_id": 124,
+        "id": 36,
+        "annotation_id": 18,
         "sentence_id": 18,
         "batch": 1,
-        "hit_id": 24,
-        "user": "vinayak",
+        "hit_id": 18,
+        "user": "ayush",
         "system": "new-wiki-4/Davinci-003",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "The Sacramento Kings, a basketball team, ended their 17-year playoff drought, the longest in the NBA, by qualifying for the playoffs for the first time since 2006.",
@@ -1094,99 +704,65 @@
             [
                 5,
                 0,
-                2,
-                1,
-                0,
-                1
-            ],
-            [
-                0,
-                0,
-                2,
-                1
-            ],
-            [
-                5,
-                3,
                 14,
                 1,
                 4,
                 1
             ],
             [
-                4,
-                3,
-                14,
-                1
-            ],
-            [
                 5,
-                36,
-                44,
-                3,
+                0,
+                2,
                 1,
+                1,
+                1
+            ],
+            [
+                4,
+                36,
+                57,
                 1
             ],
             [
                 1,
                 36,
-                44,
-                2
+                40,
+                1
             ],
             [
                 0,
                 45,
                 48,
-                2
+                1
             ],
             [
                 4,
-                89,
-                154,
+                58,
+                88,
                 2
             ],
             [
-                5,
-                89,
-                95,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                142,
+                0,
+                146,
                 154,
-                1
+                2
             ]
         ],
         "simplified_spans": [
             [
                 5,
                 22,
-                23,
+                40,
                 1,
-                3,
+                4,
                 1
             ],
             [
-                3,
+                5,
                 22,
                 23,
-                1
-            ],
-            [
-                5,
-                24,
-                34,
                 1,
-                4,
-                1
-            ],
-            [
-                4,
-                24,
-                34,
+                1,
                 1
             ],
             [
@@ -1195,71 +771,41 @@
                 40,
                 1,
                 3,
-                2
-            ],
-            [
-                3,
-                35,
-                40,
-                2
-            ],
-            [
-                4,
-                41,
-                101,
-                2
-            ],
-            [
-                5,
-                41,
-                46,
-                2,
-                1,
                 1
             ],
             [
-                1,
+                3,
                 93,
-                101,
+                96,
                 1
             ],
             [
-                5,
-                102,
-                104,
                 4,
-                3,
-                1
-            ],
-            [
-                3,
-                102,
-                104,
-                3
-            ],
-            [
-                5,
                 105,
-                123,
-                3,
-                1,
+                132,
                 1
             ],
             [
                 1,
                 105,
-                123,
+                115,
+                1
+            ],
+            [
+                4,
+                133,
+                163,
                 2
             ]
         ]
     },
     {
-        "id": 51,
-        "annotation_id": 178,
+        "id": 50,
+        "annotation_id": 25,
         "sentence_id": 25,
         "batch": 1,
-        "hit_id": 28,
-        "user": "vishnesh",
+        "hit_id": 25,
+        "user": "ayush",
         "system": "new-wiki-4/Davinci-003",
         "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
         "simplified": "Market research group Kantar Worldpanel reports that grocery inflation in the United Kingdom has hit a new peak of 17.1%. || This is due to high inflation, supply chain problems, and rising energy costs which affect the whole economy.",
@@ -1271,18 +817,16 @@
                 1
             ],
             [
-                5,
-                40,
-                47,
-                2,
-                1,
-                1
-            ],
-            [
                 1,
                 50,
                 61,
                 2
+            ],
+            [
+                4,
+                72,
+                125,
+                1
             ],
             [
                 5,
@@ -1293,19 +837,11 @@
                 1
             ],
             [
-                5,
-                85,
-                125,
-                1,
-                4,
-                1
-            ],
-            [
                 2,
                 126,
                 130,
                 0,
-                0,
+                1,
                 1
             ],
             [
@@ -1331,53 +867,33 @@
                 199,
                 208,
                 5
-            ],
-            [
-                5,
-                199,
-                208,
-                3,
-                1,
-                1
             ]
         ],
         "simplified_spans": [
             [
-                5,
-                0,
-                39,
-                1,
                 4,
+                0,
+                47,
                 1
             ],
             [
                 5,
                 40,
+                47,
+                1,
+                3,
+                1
+            ],
+            [
+                3,
+                48,
                 52,
-                1,
-                3,
                 1
             ],
             [
-                5,
+                1,
                 93,
-                96,
-                2,
-                3,
-                1
-            ],
-            [
-                1,
-                97,
                 100,
-                1
-            ],
-            [
-                5,
-                97,
-                100,
-                2,
-                1,
                 1
             ],
             [
@@ -1397,7 +913,7 @@
                 125,
                 139,
                 0,
-                3,
+                1,
                 1
             ],
             [
@@ -1413,42 +929,26 @@
                 4
             ],
             [
-                5,
-                203,
-                208,
-                3,
-                3,
-                1
-            ],
-            [
                 1,
-                209,
+                203,
                 215,
                 5
-            ],
-            [
-                5,
-                209,
-                215,
-                3,
-                1,
-                1
             ],
             [
                 3,
                 220,
                 225,
-                1
+                2
             ]
         ]
     },
     {
-        "id": 55,
-        "annotation_id": 179,
+        "id": 54,
+        "annotation_id": 27,
         "sentence_id": 27,
         "batch": 1,
-        "hit_id": 29,
-        "user": "vishnesh",
+        "hit_id": 27,
+        "user": "ayush",
         "system": "new-wiki-4/GPT-4",
         "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
         "simplified": "The cost of groceries in the United Kingdom has increased to a record 17.1%, says market research group Kantar Worldpanel. || This is due to high inflation, supply chain problems, and expensive energy affecting the economy.",
@@ -1460,62 +960,58 @@
                 1
             ],
             [
-                0,
-                40,
-                47,
-                1
-            ],
-            [
-                5,
-                40,
-                47,
                 1,
-                1,
-                1
-            ],
-            [
-                0,
-                57,
-                64,
+                40,
+                61,
                 2
             ],
             [
                 1,
                 72,
                 84,
-                2
+                3
             ],
             [
-                2,
+                1,
                 126,
                 130,
-                0,
-                0,
-                1
+                4
             ],
             [
                 0,
                 136,
                 145,
-                4
+                1
             ],
             [
                 1,
                 170,
                 176,
-                3
+                5
+            ],
+            [
+                4,
+                181,
+                198,
+                1
             ],
             [
                 1,
                 181,
+                185,
+                8
+            ],
+            [
+                1,
+                193,
                 198,
-                4
+                8
             ],
             [
                 1,
                 199,
                 208,
-                5
+                7
             ]
         ],
         "simplified_spans": [
@@ -1528,36 +1024,14 @@
             [
                 1,
                 44,
-                57,
-                1
-            ],
-            [
-                5,
-                44,
-                47,
-                1,
-                3,
-                1
-            ],
-            [
-                5,
-                48,
-                57,
-                1,
-                1,
-                1
-            ],
-            [
-                3,
-                58,
-                60,
-                1
+                69,
+                2
             ],
             [
                 1,
                 77,
                 81,
-                2
+                3
             ],
             [
                 2,
@@ -1566,55 +1040,61 @@
                 0
             ],
             [
-                2,
+                1,
                 126,
                 140,
-                0,
-                3,
-                1
+                4
             ],
             [
                 1,
                 170,
                 179,
-                3
+                5
+            ],
+            [
+                4,
+                184,
+                200,
+                1
             ],
             [
                 1,
                 184,
-                200,
-                4
+                193,
+                8
             ],
             [
                 1,
                 201,
                 210,
-                5
+                7
             ]
         ]
     },
     {
-        "id": 59,
-        "annotation_id": 177,
+        "id": 58,
+        "annotation_id": 29,
         "sentence_id": 29,
         "batch": 1,
-        "hit_id": 27,
-        "user": "vishnesh",
+        "hit_id": 29,
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
         "simplified": "In the UK, the cost of groceries has increased by 17.1%, according to Kantar Worldpanel, which is a market research group. || This is because of high levels of inflation, problems with the supply chain, and the cost of energy affecting the economy.",
         "original_spans": [
             [
-                1,
+                5,
                 0,
-                17,
-                7
+                39,
+                1,
+                4,
+                1
             ],
             [
-                4,
-                18,
-                39,
-                1
+                1,
+                8,
+                17,
+                2
             ],
             [
                 1,
@@ -1623,47 +1103,29 @@
                 1
             ],
             [
+                0,
+                40,
+                61,
+                1
+            ],
+            [
                 5,
-                40,
-                47,
-                1,
-                1,
-                1
-            ],
-            [
-                0,
-                40,
-                47,
-                3
-            ],
-            [
-                0,
-                48,
-                64,
-                1
-            ],
-            [
+                85,
+                106,
+                2,
                 4,
-                107,
-                125,
-                2
+                1
             ],
             [
                 2,
                 126,
                 130,
                 0,
-                0,
+                1,
                 1
             ],
             [
                 1,
-                170,
-                176,
-                4
-            ],
-            [
-                4,
                 170,
                 176,
                 3
@@ -1675,31 +1137,27 @@
                 2
             ],
             [
-                1,
+                5,
                 186,
                 198,
-                5
-            ],
-            [
-                5,
-                193,
-                198,
-                2,
-                1,
+                3,
+                4,
                 1
             ],
             [
                 1,
                 199,
                 208,
-                6
+                4
             ]
         ],
         "simplified_spans": [
             [
-                4,
+                5,
                 0,
-                10,
+                46,
+                1,
+                4,
                 1
             ],
             [
@@ -1709,44 +1167,32 @@
                 1
             ],
             [
-                1,
+                3,
                 11,
-                46,
-                7
+                22,
+                1
             ],
             [
-                5,
+                1,
                 33,
-                36,
-                1,
-                3,
-                1
-            ],
-            [
-                5,
-                37,
                 46,
-                1,
-                1,
-                1
-            ],
-            [
-                3,
-                47,
-                49,
-                1
-            ],
-            [
-                4,
-                70,
-                88,
                 2
             ],
             [
-                3,
+                5,
                 89,
                 99,
-                2
+                2,
+                3,
+                1
+            ],
+            [
+                5,
+                100,
+                122,
+                2,
+                4,
+                1
             ],
             [
                 2,
@@ -1759,62 +1205,38 @@
                 126,
                 144,
                 0,
-                3,
+                1,
                 1
             ],
             [
                 1,
                 171,
-                179,
-                4
-            ],
-            [
-                4,
-                171,
-                179,
+                184,
                 3
-            ],
-            [
-                3,
-                180,
-                188,
-                3
-            ],
-            [
-                3,
-                207,
-                210,
-                4
-            ],
-            [
-                1,
-                211,
-                225,
-                5
             ],
             [
                 5,
                 211,
-                215,
-                2,
-                1,
+                225,
+                3,
+                4,
                 1
             ],
             [
                 1,
                 226,
                 235,
-                6
+                4
             ]
         ]
     },
     {
-        "id": 63,
-        "annotation_id": 151,
+        "id": 62,
+        "annotation_id": 31,
         "sentence_id": 31,
         "batch": 1,
-        "hit_id": 1,
-        "user": "vishnesh",
+        "hit_id": 31,
+        "user": "ayush",
         "system": "new-wiki-4/Turbo",
         "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
         "simplified": "Eleven individuals were killed when they were squashed in a crowd that had gathered outside a factory in Karachi, Pakistan to get food.",
@@ -1834,34 +1256,26 @@
                 1
             ],
             [
-                1,
-                14,
-                17,
-                2
-            ],
-            [
-                1,
+                5,
                 18,
-                23,
-                3
-            ],
-            [
-                1,
-                24,
                 29,
-                4
+                3,
+                1,
+                1
             ],
             [
                 1,
                 30,
                 37,
-                5
+                4
             ],
             [
-                1,
+                5,
                 49,
                 54,
-                6
+                2,
+                1,
+                1
             ],
             [
                 4,
@@ -1873,7 +1287,7 @@
                 1,
                 67,
                 74,
-                7
+                6
             ]
         ],
         "simplified_spans": [
@@ -1892,41 +1306,25 @@
                 1
             ],
             [
-                1,
-                19,
-                30,
-                2
-            ],
-            [
-                1,
+                5,
                 31,
-                35,
-                3
-            ],
-            [
-                1,
-                36,
                 45,
-                4
+                3,
+                1,
+                1
             ],
             [
                 1,
                 46,
                 54,
-                5
-            ],
-            [
-                1,
-                66,
-                70,
-                6
+                4
             ],
             [
                 5,
-                71,
+                66,
                 74,
                 2,
-                3,
+                1,
                 1
             ],
             [
@@ -1939,17 +1337,17 @@
                 1,
                 126,
                 129,
-                7
+                6
             ]
         ]
     },
     {
-        "id": 67,
-        "annotation_id": 153,
+        "id": 66,
+        "annotation_id": 33,
         "sentence_id": 33,
         "batch": 1,
-        "hit_id": 3,
-        "user": "vishnesh",
+        "hit_id": 33,
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
         "simplified": "A group of people died in Karachi, Pakistan, after being caught in a crowd that had gathered to get food from a factory.",
@@ -1957,7 +1355,7 @@
             [
                 1,
                 0,
-                6,
+                13,
                 1
             ],
             [
@@ -1972,25 +1370,27 @@
                 1,
                 30,
                 37,
-                2
+                3
             ],
             [
-                1,
+                5,
                 49,
                 54,
-                3
+                2,
+                1,
+                1
             ],
             [
                 1,
                 67,
                 74,
-                4
+                5
             ],
             [
-                0,
+                1,
                 80,
                 87,
-                1
+                6
             ],
             [
                 4,
@@ -2003,7 +1403,7 @@
             [
                 1,
                 0,
-                10,
+                17,
                 1
             ],
             [
@@ -2024,142 +1424,94 @@
                 1,
                 57,
                 63,
-                2
-            ],
-            [
-                1,
-                75,
-                79,
                 3
             ],
             [
                 5,
-                80,
+                75,
                 83,
                 2,
-                3,
+                1,
                 1
             ],
             [
                 1,
                 96,
                 99,
-                4
+                5
             ],
             [
-                3,
+                1,
                 105,
                 109,
-                1
+                6
             ]
         ]
     },
     {
-        "id": 81,
-        "annotation_id": 110,
+        "id": 80,
+        "annotation_id": 40,
         "sentence_id": 40,
         "batch": 1,
-        "hit_id": 10,
-        "user": "vinayak",
+        "hit_id": 40,
+        "user": "ayush",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China have signed an agreement to trade with each other using their own currencies instead of the United States dollar.",
         "original_spans": [
             [
-                5,
+                1,
                 17,
                 21,
-                1,
-                1,
                 1
             ],
             [
-                5,
+                0,
                 44,
-                52,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                44,
-                52,
-                1
-            ],
-            [
-                5,
-                69,
-                89,
-                3,
-                1,
+                46,
                 1
             ],
             [
                 1,
                 69,
-                89,
+                86,
                 2
             ],
             [
                 0,
                 115,
                 134,
-                1
+                2
             ]
         ],
         "simplified_spans": [
             [
-                5,
+                1,
                 17,
                 28,
-                1,
-                1,
                 1
             ],
             [
                 3,
                 51,
-                66,
-                1
-            ],
-            [
-                5,
-                67,
-                78,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                67,
-                78,
-                1
-            ],
-            [
-                5,
-                94,
-                104,
-                3,
-                1,
+                72,
                 1
             ],
             [
                 1,
                 94,
-                104,
+                101,
                 2
             ]
         ]
     },
     {
-        "id": 85,
-        "annotation_id": 112,
+        "id": 84,
+        "annotation_id": 42,
         "sentence_id": 42,
         "batch": 1,
-        "hit_id": 12,
-        "user": "vinayak",
+        "hit_id": 42,
+        "user": "ayush",
         "system": "new-wiki-4/Davinci-003",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China made an agreement to stop using the US dollar in their trade and instead use their own currencies.",
@@ -2171,58 +1523,40 @@
                 1
             ],
             [
-                5,
-                35,
-                46,
-                3,
-                1,
-                1
-            ],
-            [
                 4,
-                47,
+                38,
                 68,
-                2
-            ],
-            [
-                4,
-                69,
-                89,
-                1
-            ],
-            [
-                5,
-                69,
-                76,
-                1,
-                1,
                 1
             ],
             [
                 1,
-                69,
-                76,
+                38,
+                46,
                 2
             ],
             [
-                5,
-                77,
-                89,
-                2,
                 1,
+                69,
+                86,
+                3
+            ],
+            [
+                0,
+                87,
+                93,
                 1
             ],
             [
                 1,
                 94,
                 107,
-                3
+                5
             ],
             [
-                0,
+                1,
                 115,
                 134,
-                1
+                4
             ]
         ],
         "simplified_spans": [
@@ -2233,83 +1567,63 @@
                 1
             ],
             [
-                4,
-                35,
+                1,
+                38,
                 48,
-                1
-            ],
-            [
-                5,
-                35,
-                42,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                35,
-                42,
-                2
-            ],
-            [
-                5,
-                43,
-                48,
-                2,
-                1,
-                1
+                3
             ],
             [
                 1,
                 53,
                 55,
-                3
+                5
             ],
             [
-                5,
+                1,
                 63,
                 77,
-                3,
-                1,
-                1
+                4
             ],
             [
                 3,
                 78,
-                93,
+                81,
                 1
             ],
             [
                 4,
-                94,
+                82,
                 115,
+                1
+            ],
+            [
+                1,
+                82,
+                93,
                 2
             ]
         ]
     },
     {
-        "id": 89,
-        "annotation_id": 114,
+        "id": 88,
+        "annotation_id": 44,
         "sentence_id": 44,
         "batch": 1,
-        "hit_id": 14,
-        "user": "vinayak",
+        "hit_id": 44,
+        "user": "ayush",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China sign an agreement to trade in their own currencies instead of using the US dollar as an intermediary.",
         "original_spans": [
             [
-                5,
+                1,
                 69,
-                89,
-                1,
-                1,
+                86,
                 1
             ],
             [
-                1,
-                69,
+                0,
+                87,
                 89,
                 1
             ],
@@ -2321,14 +1635,6 @@
             ]
         ],
         "simplified_spans": [
-            [
-                5,
-                68,
-                84,
-                1,
-                1,
-                1
-            ],
             [
                 1,
                 68,
@@ -2344,50 +1650,46 @@
         ]
     },
     {
-        "id": 97,
-        "annotation_id": 184,
+        "id": 96,
+        "annotation_id": 48,
         "sentence_id": 48,
         "batch": 1,
-        "hit_id": 34,
-        "user": "vishnesh",
+        "hit_id": 48,
+        "user": "ayush",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
         "simplified": "For the first time, two blockbuster sequels, Avatar: The Way of Water and Top Gun: Maverick, were nominated for Best Picture at the Academy Awards. || This is also the first time two films that made over $1 billion worldwide have been nominated in the same year.",
         "original_spans": [
             [
-                0,
+                1,
                 0,
                 6,
                 1
             ],
             [
-                1,
-                34,
-                39,
+                4,
+                22,
+                61,
                 1
             ],
             [
                 4,
-                40,
-                52,
-                2
-            ],
-            [
-                0,
-                53,
+                22,
                 61,
                 2
             ],
             [
-                0,
+                1,
                 62,
                 70,
-                3
+                2
             ],
             [
-                4,
-                71,
-                131,
+                5,
+                62,
+                70,
+                1,
+                1,
                 1
             ],
             [
@@ -2395,14 +1697,14 @@
                 132,
                 142,
                 0,
-                0,
+                1,
                 1
             ],
             [
                 5,
                 168,
                 176,
-                1,
+                3,
                 1,
                 1
             ],
@@ -2410,7 +1712,7 @@
                 1,
                 168,
                 176,
-                2
+                4
             ],
             [
                 5,
@@ -2424,51 +1726,47 @@
                 0,
                 218,
                 234,
-                4
+                1
             ]
         ],
         "simplified_spans": [
             [
-                3,
+                1,
                 0,
                 3,
-                1
-            ],
-            [
-                4,
-                20,
-                92,
                 1
             ],
             [
                 3,
                 24,
                 35,
+                1
+            ],
+            [
+                1,
+                93,
+                107,
                 2
             ],
             [
-                3,
+                5,
                 93,
-                111,
-                3
+                107,
+                1,
+                1,
+                1
             ],
             [
                 4,
                 112,
-                124,
-                2
-            ],
-            [
-                3,
-                125,
-                127,
-                4
-            ],
-            [
-                1,
-                140,
                 147,
                 1
+            ],
+            [
+                4,
+                112,
+                147,
+                2
             ],
             [
                 2,
@@ -2479,30 +1777,16 @@
             [
                 2,
                 151,
-                158,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                159,
                 163,
-                6
+                0,
+                1,
+                1
             ],
             [
                 5,
-                189,
-                193,
-                1,
+                194,
+                198,
                 3,
-                1
-            ],
-            [
-                5,
-                194,
-                198,
-                1,
                 1,
                 1
             ],
@@ -2510,7 +1794,7 @@
                 1,
                 194,
                 198,
-                2
+                4
             ],
             [
                 5,
@@ -2523,67 +1807,93 @@
         ]
     },
     {
-        "id": 171,
-        "annotation_id": 165,
+        "id": 170,
+        "annotation_id": 115,
         "sentence_id": 85,
         "batch": 1,
         "hit_id": 15,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Davinci-003",
         "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
         "simplified": "The Vatican disapproves of the discovery doctrine, which 15th-century papal bulls promoted. || These documents were used for political gain by colonial powers, allowing them to commit immoral acts against native people without facing any resistance from religious leaders.",
         "original_spans": [
             [
-                0,
+                1,
                 12,
-                22,
+                33,
                 1
             ],
             [
-                1,
-                23,
-                33,
+                5,
+                58,
+                74,
+                4,
+                0,
                 1
             ],
             [
                 0,
                 58,
                 74,
-                2
+                6
+            ],
+            [
+                2,
+                100,
+                105,
+                0,
+                0,
+                1
             ],
             [
                 0,
                 100,
                 105,
-                3
+                7
+            ],
+            [
+                2,
+                115,
+                117,
+                0,
+                0,
+                2
             ],
             [
                 0,
                 115,
+                117,
+                8
+            ],
+            [
+                1,
+                123,
                 135,
-                4
+                2
             ],
             [
                 1,
                 150,
                 158,
-                2
+                3
             ],
             [
                 0,
                 162,
                 171,
-                5
+                4
+            ],
+            [
+                5,
+                188,
+                207,
+                1,
+                1,
+                1
             ],
             [
                 1,
                 188,
-                199,
-                3
-            ],
-            [
-                1,
-                200,
                 207,
                 4
             ],
@@ -2597,7 +1907,7 @@
                 5,
                 240,
                 247,
-                1,
+                2,
                 1,
                 1
             ],
@@ -2605,7 +1915,15 @@
                 0,
                 248,
                 280,
-                6
+                5
+            ],
+            [
+                5,
+                289,
+                299,
+                3,
+                1,
+                1
             ],
             [
                 1,
@@ -2616,14 +1934,8 @@
             [
                 1,
                 305,
-                319,
-                7
-            ],
-            [
-                1,
-                320,
                 333,
-                8
+                7
             ]
         ],
         "simplified_spans": [
@@ -2634,10 +1946,18 @@
                 1
             ],
             [
+                5,
+                51,
+                56,
+                4,
+                3,
+                1
+            ],
+            [
                 3,
                 51,
                 56,
-                1
+                3
             ],
             [
                 2,
@@ -2648,7 +1968,7 @@
             [
                 2,
                 95,
-                120,
+                110,
                 0,
                 3,
                 1
@@ -2656,6 +1976,12 @@
             [
                 3,
                 95,
+                110,
+                4
+            ],
+            [
+                1,
+                116,
                 120,
                 2
             ],
@@ -2663,17 +1989,19 @@
                 1,
                 135,
                 139,
-                2
+                3
+            ],
+            [
+                5,
+                160,
+                183,
+                1,
+                1,
+                1
             ],
             [
                 1,
                 160,
-                176,
-                3
-            ],
-            [
-                1,
-                177,
                 183,
                 4
             ],
@@ -2687,7 +2015,15 @@
                 5,
                 212,
                 218,
+                2,
                 1,
+                1
+            ],
+            [
+                5,
+                227,
+                248,
+                3,
                 1,
                 1
             ],
@@ -2700,143 +2036,71 @@
             [
                 1,
                 254,
-                263,
-                7
-            ],
-            [
-                1,
-                264,
                 272,
-                8
+                7
             ]
         ]
     },
     {
-        "id": 173,
-        "annotation_id": 166,
+        "id": 172,
+        "annotation_id": 116,
         "sentence_id": 86,
         "batch": 1,
         "hit_id": 16,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Turbo",
         "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
         "simplified": "The Vatican denies the discovery doctrine and says that it was used by colonial powers to do bad things to indigenous people. || They say the people in power did these things without being stopped by religious leaders, and the papal bulls that promoted the doctrine were changed to help them do it.",
         "original_spans": [
             [
-                0,
-                12,
-                22,
-                1
-            ],
-            [
                 1,
-                23,
+                12,
                 33,
                 1
             ],
             [
-                0,
+                5,
                 58,
                 70,
-                8
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                58,
+                70,
+                2
             ],
             [
                 4,
                 71,
-                117,
+                158,
                 1
             ],
             [
                 0,
                 75,
                 87,
-                9
-            ],
-            [
-                1,
-                100,
-                105,
-                8
-            ],
-            [
-                1,
-                115,
-                117,
-                9
-            ],
-            [
-                0,
-                118,
-                158,
-                3
-            ],
-            [
-                0,
-                162,
-                171,
-                4
-            ],
-            [
-                0,
-                188,
-                196,
-                6
-            ],
-            [
-                0,
-                200,
-                207,
-                5
-            ],
-            [
-                1,
-                208,
-                215,
-                2
-            ],
-            [
-                1,
-                216,
-                220,
-                3
-            ],
-            [
-                1,
-                221,
-                228,
-                4
-            ],
-            [
-                0,
-                248,
-                280,
-                7
-            ],
-            [
-                1,
-                289,
-                304,
-                5
-            ],
-            [
-                5,
-                289,
-                299,
-                1,
-                1,
                 1
             ],
             [
                 1,
-                305,
-                319,
-                6
+                100,
+                117,
+                3
             ],
             [
                 1,
-                320,
-                333,
-                7
+                123,
+                135,
+                4
+            ],
+            [
+                0,
+                136,
+                158,
+                2
             ]
         ],
         "simplified_spans": [
@@ -2847,34 +2111,24 @@
                 1
             ],
             [
-                3,
+                5,
                 42,
-                67,
+                55,
+                1,
+                1,
                 1
             ],
             [
+                1,
+                42,
+                55,
+                2
+            ],
+            [
                 3,
-                90,
-                92,
-                2
-            ],
-            [
-                1,
-                93,
-                96,
-                2
-            ],
-            [
-                1,
-                97,
-                103,
-                3
-            ],
-            [
-                1,
-                104,
-                106,
-                4
+                56,
+                67,
+                1
             ],
             [
                 2,
@@ -2883,84 +2137,32 @@
                 0
             ],
             [
-                2,
-                129,
-                174,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                129,
-                174,
-                3
-            ],
-            [
-                1,
-                183,
-                199,
-                5
-            ],
-            [
-                5,
-                183,
-                196,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                200,
-                209,
-                6
-            ],
-            [
-                1,
-                210,
-                218,
-                7
-            ],
-            [
-                3,
-                219,
-                222,
-                4
-            ],
-            [
                 4,
                 223,
-                265,
+                298,
                 1
             ],
             [
                 1,
                 239,
-                243,
-                8
+                265,
+                3
             ],
             [
                 1,
-                253,
-                265,
-                9
-            ],
-            [
-                3,
-                266,
-                298,
-                5
+                271,
+                278,
+                4
             ]
         ]
     },
     {
-        "id": 175,
-        "annotation_id": 167,
+        "id": 174,
+        "annotation_id": 117,
         "sentence_id": 87,
         "batch": 1,
         "hit_id": 17,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/GPT-4",
         "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
         "simplified": "The Vatican formally rejects the discovery doctrine. || They say that the 15th-century religious documents supporting it were misused by colonial powers for political reasons. || This allowed them to carry out wrong actions against native peoples, sometimes without resistance from religious authorities.",
@@ -2968,20 +2170,22 @@
             [
                 1,
                 12,
-                22,
+                33,
+                1
+            ],
+            [
+                2,
+                58,
+                70,
+                0,
+                1,
                 1
             ],
             [
                 1,
-                23,
-                33,
-                2
-            ],
-            [
-                0,
                 58,
-                65,
-                1
+                70,
+                2
             ],
             [
                 1,
@@ -2992,24 +2196,22 @@
             [
                 5,
                 100,
-                105,
-                1,
-                0,
-                1
-            ],
-            [
-                5,
-                106,
-                114,
+                117,
                 1,
                 1,
                 1
             ],
             [
                 1,
-                106,
-                114,
+                100,
+                117,
                 4
+            ],
+            [
+                4,
+                123,
+                187,
+                1
             ],
             [
                 1,
@@ -3018,58 +2220,42 @@
                 5
             ],
             [
-                4,
-                136,
-                158,
-                1
-            ],
-            [
+                2,
+                188,
+                199,
                 1,
-                150,
-                158,
-                6
-            ],
-            [
                 0,
-                162,
-                171,
-                2
+                1
             ],
             [
                 0,
                 188,
-                196,
-                3
+                199,
+                1
             ],
             [
                 0,
                 200,
                 207,
-                4
+                2
             ],
             [
                 1,
                 208,
-                215,
-                7
-            ],
-            [
-                1,
-                216,
                 220,
-                8
+                7
             ],
             [
                 1,
                 229,
                 239,
-                9
+                8
             ],
             [
                 0,
                 248,
                 257,
-                5
+                3
             ],
             [
                 4,
@@ -3079,35 +2265,35 @@
             ],
             [
                 1,
+                258,
+                265,
+                6
+            ],
+            [
+                1,
                 271,
                 280,
-                10
+                9
             ],
             [
                 1,
                 289,
                 299,
-                11
+                10
             ],
             [
                 1,
                 305,
                 319,
-                12
+                11
             ]
         ],
         "simplified_spans": [
             [
                 1,
                 12,
-                20,
-                1
-            ],
-            [
-                1,
-                21,
                 28,
-                2
+                1
             ],
             [
                 2,
@@ -3118,10 +2304,16 @@
             [
                 2,
                 56,
-                64,
+                69,
                 0,
-                3,
+                1,
                 1
+            ],
+            [
+                1,
+                56,
+                69,
+                2
             ],
             [
                 1,
@@ -3132,7 +2324,7 @@
             [
                 5,
                 107,
-                117,
+                120,
                 1,
                 1,
                 1
@@ -3140,26 +2332,20 @@
             [
                 1,
                 107,
-                117,
+                120,
                 4
+            ],
+            [
+                4,
+                126,
+                175,
+                1
             ],
             [
                 1,
                 126,
                 133,
                 5
-            ],
-            [
-                4,
-                153,
-                175,
-                1
-            ],
-            [
-                1,
-                167,
-                175,
-                6
             ],
             [
                 2,
@@ -3170,7 +2356,7 @@
             [
                 2,
                 179,
-                196,
+                199,
                 1,
                 3,
                 1
@@ -3189,49 +2375,49 @@
             ],
             [
                 1,
-                210,
-                215,
-                7
+                200,
+                205,
+                6
             ],
             [
                 1,
-                216,
+                210,
                 223,
-                8
+                7
             ],
             [
                 1,
                 232,
                 238,
-                9
+                8
             ],
             [
                 1,
                 248,
                 257,
-                10
+                9
             ],
             [
                 1,
                 266,
                 276,
-                11
+                10
             ],
             [
                 1,
-                292,
-                304,
-                12
+                282,
+                291,
+                11
             ]
         ]
     },
     {
-        "id": 177,
-        "annotation_id": 168,
+        "id": 176,
+        "annotation_id": 118,
         "sentence_id": 88,
         "batch": 1,
         "hit_id": 18,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
         "simplified": "The Vatican officially denies the discovery doctrine, claiming that 15th-century papal bulls that supported it were manipulated by colonial powers to justify immoral acts against indigenous people. || These acts were sometimes carried out with the approval of church authorities.",
@@ -3249,28 +2435,16 @@
                 2
             ],
             [
-                0,
-                71,
-                74,
-                1
-            ],
-            [
-                1,
-                100,
-                105,
-                3
-            ],
-            [
                 1,
                 106,
                 114,
-                4
+                3
             ],
             [
                 0,
                 136,
                 158,
-                3
+                1
             ],
             [
                 0,
@@ -3279,9 +2453,9 @@
                 2
             ],
             [
-                0,
+                1,
                 188,
-                196,
+                199,
                 4
             ],
             [
@@ -3293,17 +2467,15 @@
                 1
             ],
             [
-                2,
+                0,
                 248,
                 252,
-                0,
-                0,
-                1
+                3
             ],
             [
                 4,
-                258,
-                270,
+                271,
+                280,
                 1
             ],
             [
@@ -3315,14 +2487,8 @@
             [
                 1,
                 281,
-                304,
+                333,
                 6
-            ],
-            [
-                1,
-                305,
-                319,
-                7
             ]
         ],
         "simplified_spans": [
@@ -3340,14 +2506,14 @@
             ],
             [
                 1,
-                93,
-                97,
+                98,
+                107,
                 3
             ],
             [
                 1,
-                98,
-                107,
+                147,
+                149,
                 4
             ],
             [
@@ -3365,11 +2531,9 @@
                 0
             ],
             [
-                2,
-                201,
-                211,
-                0,
-                3,
+                4,
+                217,
+                226,
                 1
             ],
             [
@@ -3379,66 +2543,42 @@
                 5
             ],
             [
-                4,
-                227,
-                238,
-                1
-            ],
-            [
                 1,
                 239,
-                259,
+                279,
                 6
-            ],
-            [
-                1,
-                260,
-                266,
-                7
             ]
         ]
     },
     {
-        "id": 179,
-        "annotation_id": 169,
+        "id": 178,
+        "annotation_id": 119,
         "sentence_id": 89,
         "batch": 1,
         "hit_id": 19,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
         "simplified": "The Vatican has denounced the discovery doctrine, stating that historical papal bulls which supported it were manipulated by colonial powers for political purposes. || These actions were taken against indigenous peoples, sometimes with the approval of the Church, and were morally unjustifiable.",
         "original_spans": [
             [
-                0,
-                12,
-                22,
-                1
-            ],
-            [
-                1,
-                23,
-                33,
-                1
-            ],
-            [
                 5,
-                23,
+                12,
                 33,
                 1,
                 1,
+                1
+            ],
+            [
+                1,
+                12,
+                33,
                 1
             ],
             [
                 1,
                 58,
                 65,
-                2
-            ],
-            [
-                0,
-                71,
-                74,
                 2
             ],
             [
@@ -3455,92 +2595,80 @@
             ],
             [
                 4,
-                136,
-                158,
+                123,
+                187,
                 1
             ],
             [
                 0,
                 162,
                 171,
-                3
+                1
             ],
             [
-                2,
+                0,
                 188,
                 199,
-                0,
-                0,
-                1
+                2
+            ],
+            [
+                4,
+                200,
+                220,
+                2
             ],
             [
                 5,
                 200,
-                215,
-                2,
-                4,
-                1
-            ],
-            [
-                5,
-                208,
-                215,
+                220,
                 2,
                 1,
                 1
             ],
             [
-                0,
-                216,
+                1,
+                200,
                 220,
-                6
+                5
             ],
             [
-                0,
+                4,
                 248,
                 270,
-                5
+                3
+            ],
+            [
+                1,
+                248,
+                270,
+                6
             ],
             [
                 1,
                 271,
                 280,
-                5
+                7
             ],
             [
                 1,
                 281,
-                304,
-                6
-            ],
-            [
-                1,
-                305,
                 333,
-                7
+                8
             ]
         ],
         "simplified_spans": [
             [
                 5,
                 12,
-                15,
+                25,
                 1,
-                3,
+                1,
                 1
             ],
             [
                 1,
-                16,
+                12,
                 25,
-                1
-            ],
-            [
-                5,
-                16,
-                25,
-                1,
-                1,
                 1
             ],
             [
@@ -3563,7 +2691,7 @@
             ],
             [
                 4,
-                141,
+                110,
                 164,
                 1
             ],
@@ -3574,70 +2702,64 @@
                 0
             ],
             [
-                2,
+                4,
                 168,
                 192,
-                0,
-                3,
-                1
+                3
             ],
             [
-                3,
+                1,
                 168,
                 192,
-                1
+                6
             ],
             [
                 1,
                 221,
                 230,
-                5
+                7
             ],
             [
                 1,
                 231,
-                251,
-                6
-            ],
-            [
-                1,
-                252,
                 263,
-                7
+                8
             ],
             [
-                5,
-                264,
-                272,
-                2,
                 3,
+                264,
+                267,
                 1
             ],
             [
-                5,
-                273,
-                295,
-                2,
                 4,
-                1
+                268,
+                295,
+                2
             ],
             [
                 5,
-                281,
+                268,
                 295,
                 2,
                 1,
                 1
+            ],
+            [
+                1,
+                268,
+                295,
+                5
             ]
         ]
     },
     {
-        "id": 181,
-        "annotation_id": 190,
+        "id": 180,
+        "annotation_id": 140,
         "sentence_id": 90,
         "batch": 1,
         "hit_id": 40,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/GPT-4",
         "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
         "simplified": "Critics complimented Keanu Reeves' \"Baba Yaga\" for its amazing action scenes. || Although the story is not strong enough to support a nearly 3-hour movie, it has already made over $100 million globally.",
@@ -3655,10 +2777,26 @@
                 2
             ],
             [
+                5,
+                18,
+                21,
+                1,
+                1,
+                1
+            ],
+            [
                 1,
                 18,
                 21,
                 3
+            ],
+            [
+                5,
+                48,
+                56,
+                1,
+                1,
+                1
             ],
             [
                 1,
@@ -3667,38 +2805,20 @@
                 3
             ],
             [
-                0,
+                1,
                 57,
-                61,
-                1
-            ],
-            [
-                1,
-                62,
-                72,
-                4
-            ],
-            [
-                1,
-                80,
                 90,
-                5
+                4
             ],
             [
                 1,
                 91,
                 98,
-                12
-            ],
-            [
-                0,
-                103,
-                113,
-                4
+                5
             ],
             [
                 1,
-                114,
+                103,
                 118,
                 6
             ],
@@ -3711,18 +2831,6 @@
             [
                 1,
                 153,
-                160,
-                9
-            ],
-            [
-                4,
-                153,
-                160,
-                1
-            ],
-            [
-                1,
-                161,
                 176,
                 8
             ],
@@ -3733,22 +2841,38 @@
                 2
             ],
             [
+                5,
+                215,
+                218,
+                2,
+                0,
+                1
+            ],
+            [
                 0,
                 215,
                 218,
-                3
+                1
+            ],
+            [
+                5,
+                222,
+                229,
+                3,
+                1,
+                1
             ],
             [
                 1,
                 230,
                 239,
-                10
+                9
             ],
             [
                 1,
                 258,
                 268,
-                11
+                10
             ]
         ],
         "simplified_spans": [
@@ -3765,28 +2889,24 @@
                 2
             ],
             [
-                1,
+                5,
                 47,
-                50,
-                3
-            ],
-            [
-                3,
-                51,
                 54,
+                1,
+                1,
                 1
             ],
             [
                 1,
-                55,
-                62,
-                4
+                47,
+                54,
+                3
             ],
             [
                 1,
-                70,
+                55,
                 77,
-                5
+                4
             ],
             [
                 2,
@@ -3798,7 +2918,7 @@
                 1,
                 81,
                 89,
-                12
+                5
             ],
             [
                 1,
@@ -3815,48 +2935,38 @@
             [
                 1,
                 134,
-                147,
+                154,
                 8
             ],
             [
-                1,
-                148,
-                154,
-                9
-            ],
-            [
-                4,
-                148,
-                154,
-                1
-            ],
-            [
-                3,
+                5,
                 158,
-                161,
-                2
+                169,
+                3,
+                1,
+                1
             ],
             [
                 1,
                 170,
                 174,
-                10
+                9
             ],
             [
                 1,
                 193,
                 202,
-                11
+                10
             ]
         ]
     },
     {
-        "id": 185,
-        "annotation_id": 192,
+        "id": 184,
+        "annotation_id": 142,
         "sentence_id": 92,
         "batch": 1,
         "hit_id": 42,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
         "simplified": "Reviewers praised the many impressive action sequences in Keanu Reeves' \"Baba Yaga\", even though the underlying plot takes up almost 3 hours of the movie. || The movie opened to over $100 million worldwide. || A post-credits scene completes the story.",
@@ -3867,6 +2977,20 @@
                 21,
                 1,
                 0,
+                2
+            ],
+            [
+                0,
+                18,
+                21,
+                1
+            ],
+            [
+                5,
+                22,
+                47,
+                1,
+                4,
                 1
             ],
             [
@@ -3881,6 +3005,12 @@
                 56,
                 1,
                 0,
+                1
+            ],
+            [
+                0,
+                48,
+                56,
                 2
             ],
             [
@@ -3892,32 +3022,14 @@
             [
                 0,
                 119,
-                160,
-                1
-            ],
-            [
-                1,
-                161,
                 168,
-                2
-            ],
-            [
-                0,
-                177,
-                182,
-                2
+                3
             ],
             [
                 4,
-                183,
-                204,
-                2
-            ],
-            [
-                0,
-                205,
+                177,
                 214,
-                3
+                2
             ],
             [
                 2,
@@ -3928,34 +3040,52 @@
                 1
             ],
             [
+                0,
+                215,
+                218,
+                4
+            ],
+            [
                 1,
                 219,
                 221,
-                3
+                2
             ],
             [
                 0,
                 222,
                 229,
-                4
+                5
+            ],
+            [
+                1,
+                230,
+                268,
+                2
             ]
         ],
         "simplified_spans": [
-            [
-                5,
-                18,
-                21,
-                1,
-                3,
-                1
-            ],
             [
                 5,
                 55,
                 57,
                 1,
                 3,
-                2
+                1
+            ],
+            [
+                3,
+                55,
+                57,
+                1
+            ],
+            [
+                5,
+                58,
+                84,
+                1,
+                4,
+                1
             ],
             [
                 4,
@@ -3972,12 +3102,6 @@
             [
                 3,
                 117,
-                125,
-                1
-            ],
-            [
-                1,
-                126,
                 132,
                 2
             ],
@@ -3985,7 +3109,7 @@
                 3,
                 141,
                 154,
-                2
+                3
             ],
             [
                 2,
@@ -3994,10 +3118,24 @@
                 0
             ],
             [
-                1,
+                2,
                 158,
-                167,
-                3
+                161,
+                0,
+                3,
+                1
+            ],
+            [
+                3,
+                158,
+                161,
+                4
+            ],
+            [
+                1,
+                162,
+                206,
+                2
             ],
             [
                 2,
@@ -4015,25 +3153,41 @@
                 3,
                 231,
                 251,
-                3
+                5
             ]
         ]
     },
     {
-        "id": 189,
-        "annotation_id": 194,
+        "id": 188,
+        "annotation_id": 144,
         "sentence_id": 94,
         "batch": 1,
         "hit_id": 44,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Davinci-003",
         "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
         "simplified": "Reviewers praised Keanu Reeves' \"Baba Yaga\" for its impressive action sequences, although the plot did not warrant the lengthy 3-hour runtime (including a post-credits scene). || The movie made over $100 million worldwide when it opened.",
         "original_spans": [
             [
+                5,
+                18,
+                21,
+                1,
+                1,
+                1
+            ],
+            [
                 1,
                 18,
                 21,
+                1
+            ],
+            [
+                5,
+                48,
+                56,
+                1,
+                1,
                 1
             ],
             [
@@ -4067,36 +3221,16 @@
                 3
             ],
             [
-                5,
-                119,
-                121,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 151,
-                152,
-                5
-            ],
-            [
-                4,
-                153,
-                160,
-                1
-            ],
-            [
-                1,
-                161,
                 176,
                 4
             ],
             [
                 1,
                 177,
-                182,
-                6
+                204,
+                5
             ],
             [
                 0,
@@ -4107,31 +3241,39 @@
             [
                 2,
                 215,
-                218,
+                229,
                 0,
                 0,
                 1
             ],
             [
-                1,
-                219,
-                221,
-                7
+                0,
+                215,
+                229,
+                6
+            ],
+            [
+                4,
+                230,
+                236,
+                1
             ],
             [
                 0,
-                222,
-                229,
-                5
-            ],
-            [
-                1,
-                230,
+                237,
                 239,
-                8
+                5
             ]
         ],
         "simplified_spans": [
+            [
+                5,
+                44,
+                51,
+                1,
+                1,
+                1
+            ],
             [
                 1,
                 44,
@@ -4151,36 +3293,16 @@
                 3
             ],
             [
-                5,
-                99,
-                102,
-                1,
-                1,
-                1
-            ],
-            [
                 1,
                 115,
-                118,
-                5
-            ],
-            [
-                1,
-                119,
-                133,
-                4
-            ],
-            [
-                4,
-                134,
                 141,
-                1
+                4
             ],
             [
                 1,
                 142,
-                152,
-                6
+                175,
+                5
             ],
             [
                 2,
@@ -4189,151 +3311,139 @@
                 0
             ],
             [
-                1,
+                2,
                 179,
-                188,
-                7
+                193,
+                0,
+                3,
+                1
             ],
             [
-                1,
-                189,
+                3,
+                179,
                 193,
-                8
+                3
             ],
             [
                 3,
                 222,
+                229,
+                2
+            ],
+            [
+                4,
+                230,
                 237,
                 1
             ]
         ]
     },
     {
-        "id": 193,
-        "annotation_id": 196,
+        "id": 192,
+        "annotation_id": 146,
         "sentence_id": 96,
         "batch": 1,
         "hit_id": 46,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Turbo",
         "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
         "simplified": "ChatGPT has been accused of discrimination, like making fun of men and people from England, but not women and people from India, and showing favoritism towards Joe Biden instead of Donald Trump.",
         "original_spans": [
             [
-                0,
+                1,
                 28,
-                39,
-                1
-            ],
-            [
-                5,
-                40,
                 65,
-                1,
-                1,
                 1
             ],
             [
                 1,
                 66,
                 73,
-                1
+                2
             ],
             [
                 1,
                 74,
-                93,
-                2
+                121,
+                3
             ],
             [
                 1,
                 122,
                 156,
-                3
+                4
             ],
             [
                 1,
                 186,
                 188,
-                4
-            ],
-            [
-                1,
-                189,
-                205,
                 5
             ],
             [
                 0,
-                206,
+                189,
                 213,
-                2
+                1
             ],
             [
-                5,
+                1,
                 224,
                 257,
-                2,
-                0,
-                1
+                6
             ]
         ],
         "simplified_spans": [
             [
-                5,
+                1,
                 28,
                 43,
-                1,
-                1,
                 1
             ],
             [
                 1,
                 44,
                 48,
-                1
+                2
             ],
             [
                 1,
                 49,
-                62,
-                2
+                91,
+                3
             ],
             [
                 1,
                 92,
                 99,
-                3
+                4
             ],
             [
                 1,
                 129,
                 132,
-                4
-            ],
-            [
-                1,
-                133,
-                159,
                 5
             ],
             [
-                5,
+                3,
+                133,
+                159,
+                1
+            ],
+            [
+                1,
                 170,
                 180,
-                2,
-                3,
-                1
+                6
             ]
         ]
     },
     {
-        "id": 197,
-        "annotation_id": 198,
+        "id": 196,
+        "annotation_id": 148,
         "sentence_id": 98,
         "batch": 1,
         "hit_id": 48,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Davinci-003",
         "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
         "simplified": "ChatGPT has been accused of exhibiting prejudicial behavior, such as making fun of men and those from England, while refusing to do the same for women and people from India, and giving support to Joe Biden while refraining from doing the same for Donald Trump.",
@@ -4345,14 +3455,8 @@
                 1
             ],
             [
-                1,
-                40,
-                54,
-                2
-            ],
-            [
                 5,
-                55,
+                40,
                 65,
                 1,
                 1,
@@ -4360,45 +3464,47 @@
             ],
             [
                 1,
+                40,
+                65,
+                2
+            ],
+            [
+                1,
                 74,
-                93,
+                121,
                 3
             ],
             [
                 1,
-                102,
-                108,
+                137,
+                156,
                 4
             ],
             [
                 1,
-                140,
-                156,
+                186,
+                205,
                 5
             ],
             [
-                1,
-                186,
-                188,
-                6
-            ],
-            [
-                1,
-                189,
-                197,
-                7
-            ],
-            [
                 0,
-                198,
+                206,
                 213,
+                1
+            ],
+            [
+                5,
+                230,
+                244,
+                2,
+                1,
                 1
             ],
             [
                 1,
                 230,
                 244,
-                8
+                6
             ]
         ],
         "simplified_spans": [
@@ -4409,14 +3515,8 @@
                 1
             ],
             [
-                1,
-                39,
-                50,
-                2
-            ],
-            [
                 5,
-                51,
+                39,
                 60,
                 1,
                 1,
@@ -4424,49 +3524,51 @@
             ],
             [
                 1,
+                39,
+                60,
+                2
+            ],
+            [
+                1,
                 69,
-                82,
+                110,
                 3
             ],
             [
                 1,
-                91,
-                96,
+                126,
+                144,
                 4
             ],
             [
                 1,
-                129,
-                144,
+                174,
+                195,
                 5
             ],
             [
+                5,
+                212,
+                233,
+                2,
                 1,
-                174,
-                177,
-                6
-            ],
-            [
-                1,
-                178,
-                195,
-                7
+                1
             ],
             [
                 1,
                 212,
                 233,
-                8
+                6
             ]
         ]
     },
     {
-        "id": 221,
-        "annotation_id": 270,
+        "id": 220,
+        "annotation_id": 210,
         "sentence_id": 110,
         "batch": 2,
         "hit_id": 10,
-        "user": "vishnesh",
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
         "simplified": "Grocery inflation in the United Kingdom reaches a record high of 17.1 %, according to market research group Kantar Worldpanel. || This is because of high levels of inflation and high energy costs.",
@@ -4476,7 +3578,7 @@
                 126,
                 130,
                 0,
-                0,
+                1,
                 1
             ],
             [
@@ -4502,20 +3604,20 @@
             [
                 2,
                 130,
-                145,
+                148,
                 0,
-                3,
+                1,
                 1
             ]
         ]
     },
     {
-        "id": 225,
-        "annotation_id": 260,
+        "id": 224,
+        "annotation_id": 212,
         "sentence_id": 112,
         "batch": 2,
-        "hit_id": 0,
-        "user": "vishnesh",
+        "hit_id": 12,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
         "simplified": "A crowd of people was crushed to death after being pushed by a truckload of goods outside a factory in Karachi, Pakistan.",
@@ -4529,94 +3631,54 @@
             [
                 5,
                 14,
-                17,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                18,
-                29,
-                1
-            ],
-            [
-                5,
-                30,
                 37,
                 1,
-                1,
+                4,
                 1
             ],
             [
-                0,
-                38,
-                40,
-                3
-            ],
-            [
                 4,
-                41,
+                38,
                 48,
-                2
+                1
             ],
             [
-                0,
+                1,
                 49,
                 79,
-                2
+                1
             ]
         ],
         "simplified_spans": [
             [
                 4,
                 0,
-                7,
-                2
-            ],
-            [
-                3,
-                8,
                 10,
-                2
+                1
             ],
             [
                 5,
                 18,
-                21,
-                2,
-                3,
-                1
-            ],
-            [
-                5,
-                22,
                 38,
                 1,
-                1,
-                1
-            ],
-            [
                 4,
-                39,
-                50,
                 1
             ],
             [
-                3,
-                51,
+                1,
+                39,
                 81,
                 1
             ]
         ]
     },
     {
-        "id": 233,
-        "annotation_id": 244,
+        "id": 232,
+        "annotation_id": 216,
         "sentence_id": 116,
         "batch": 2,
-        "hit_id": 4,
-        "user": "vinayak",
+        "hit_id": 16,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China agree to use their own currencies to trade with each other. || They stop using the United States dollar to trade.",
@@ -4629,45 +3691,29 @@
             ],
             [
                 4,
-                35,
-                68,
-                1
-            ],
-            [
-                2,
-                69,
-                76,
-                0,
-                0,
-                1
-            ],
-            [
-                0,
-                69,
-                76,
-                1
-            ],
-            [
-                5,
-                77,
-                89,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                115,
-                134,
-                2,
-                1,
+                38,
+                46,
                 1
             ],
             [
                 1,
-                115,
-                134,
+                44,
+                46,
                 2
+            ],
+            [
+                2,
+                69,
+                86,
+                0,
+                1,
+                1
+            ],
+            [
+                0,
+                115,
+                134,
+                1
             ]
         ],
         "simplified_spans": [
@@ -4679,13 +3725,19 @@
             ],
             [
                 4,
-                23,
-                76,
+                54,
+                64,
                 1
             ],
             [
-                3,
+                1,
                 60,
+                64,
+                2
+            ],
+            [
+                3,
+                65,
                 76,
                 1
             ],
@@ -4698,35 +3750,13 @@
             [
                 2,
                 80,
-                89,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                80,
-                89,
-                2
-            ],
-            [
-                5,
-                90,
                 95,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                121,
-                130,
-                2,
+                0,
                 1,
                 1
             ],
             [
-                1,
+                3,
                 121,
                 130,
                 2
@@ -4734,12 +3764,12 @@
         ]
     },
     {
-        "id": 239,
-        "annotation_id": 272,
+        "id": 238,
+        "annotation_id": 219,
         "sentence_id": 119,
         "batch": 2,
-        "hit_id": 12,
-        "user": "vishnesh",
+        "hit_id": 19,
+        "user": "ayush",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
         "simplified": "It was the first time the Academy Award Best Picture category had two sequels in the running for the same award (Avatar: The Way of Water and Top Gun: Maverick). || It was also the first time a sequel was nominated for Best Picture in the same year.",
@@ -4755,13 +3785,21 @@
                 132,
                 142,
                 0,
-                0,
+                1,
                 1
             ],
             [
                 0,
                 158,
+                202,
+                1
+            ],
+            [
+                5,
+                203,
                 207,
+                1,
+                1,
                 1
             ]
         ],
@@ -4773,14 +3811,8 @@
                 1
             ],
             [
-                1,
-                78,
-                92,
-                1
-            ],
-            [
                 3,
-                93,
+                78,
                 111,
                 1
             ],
@@ -4793,32 +3825,34 @@
             [
                 2,
                 165,
-                171,
+                176,
                 0,
-                3,
+                1,
                 1
             ],
             [
                 3,
-                172,
-                176,
+                192,
+                200,
                 2
             ],
             [
-                3,
-                192,
+                5,
+                201,
                 204,
-                3
+                1,
+                1,
+                1
             ]
         ]
     },
     {
-        "id": 269,
-        "annotation_id": 266,
+        "id": 268,
+        "annotation_id": 246,
         "sentence_id": 134,
         "batch": 2,
         "hit_id": 6,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
         "simplified": "The Vatican officially repudiates the discovery doctrine, writing that the 15th century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities\".",
@@ -4826,12 +3860,12 @@
         "simplified_spans": []
     },
     {
-        "id": 271,
-        "annotation_id": 267,
+        "id": 270,
+        "annotation_id": 247,
         "sentence_id": 135,
         "batch": 2,
         "hit_id": 7,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "The Vatican officially repudiates the discovery doctrine, writing that the 15th-century papal bulls which promoted it were \"manipulated for political purposes by competing colonial powers in order to justify immoral acts against indigenous peoples that were carried out, at times, without opposition from ecclesiastical authorities.\"",
         "simplified": "The Vatican now says that the Discovery Doctrine is not true. || In a 2008 statement, the Vatican said that the 15th century papal bulls that promoted the Discovery Doctrine were \"used for political purposes by competing colonial powers to justify immoral acts against indigenous peoples.\"",
@@ -4849,22 +3883,22 @@
                 1
             ],
             [
-                2,
+                5,
                 58,
-                65,
-                0,
-                0,
+                70,
+                1,
+                1,
                 1
             ],
             [
                 1,
-                66,
+                58,
                 70,
                 2
             ],
             [
                 1,
-                115,
+                100,
                 117,
                 3
             ],
@@ -4875,28 +3909,22 @@
                 4
             ],
             [
-                0,
+                1,
                 188,
-                196,
-                3
+                199,
+                5
             ],
             [
                 0,
                 248,
                 333,
-                4
+                2
             ]
         ],
         "simplified_spans": [
             [
-                3,
-                12,
-                15,
-                1
-            ],
-            [
                 1,
-                16,
+                12,
                 25,
                 1
             ],
@@ -4913,28 +3941,36 @@
                 0
             ],
             [
-                3,
+                2,
                 65,
                 85,
-                3
-            ],
-            [
-                2,
-                86,
-                102,
                 0,
                 3,
                 1
             ],
             [
+                3,
+                65,
+                85,
+                1
+            ],
+            [
+                5,
+                86,
+                107,
                 1,
-                103,
+                1,
+                1
+            ],
+            [
+                1,
+                86,
                 107,
                 2
             ],
             [
                 1,
-                151,
+                137,
                 173,
                 3
             ],
@@ -4943,16 +3979,22 @@
                 179,
                 184,
                 4
+            ],
+            [
+                1,
+                237,
+                239,
+                5
             ]
         ]
     },
     {
-        "id": 273,
-        "annotation_id": 276,
+        "id": 272,
+        "annotation_id": 256,
         "sentence_id": 136,
         "batch": 2,
         "hit_id": 16,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
         "simplified": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours, and it already opened to over $100 million, with a B.O. || from Rotten Tomatoes.",
@@ -4962,13 +4004,27 @@
                 177,
                 214,
                 1
+            ],
+            [
+                0,
+                258,
+                268,
+                2
             ]
         ],
         "simplified_spans": [
             [
+                5,
+                222,
+                233,
+                1,
+                3,
+                1
+            ],
+            [
                 3,
                 222,
-                258,
+                233,
                 3
             ],
             [
@@ -4976,20 +4032,40 @@
                 234,
                 236,
                 0
+            ],
+            [
+                5,
+                237,
+                258,
+                2,
+                3,
+                1
+            ],
+            [
+                3,
+                237,
+                258,
+                4
             ]
         ]
     },
     {
-        "id": 275,
-        "annotation_id": 277,
+        "id": 274,
+        "annotation_id": 257,
         "sentence_id": 137,
         "batch": 2,
         "hit_id": 17,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
         "simplified": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing three hours, and it already opened to over $100 million worldwide.",
         "original_spans": [
+            [
+                1,
+                169,
+                170,
+                1
+            ],
             [
                 0,
                 177,
@@ -4997,19 +4073,32 @@
                 1
             ]
         ],
-        "simplified_spans": []
+        "simplified_spans": [
+            [
+                1,
+                169,
+                174,
+                1
+            ]
+        ]
     },
     {
-        "id": 279,
-        "annotation_id": 279,
+        "id": 278,
+        "annotation_id": 259,
         "sentence_id": 139,
         "batch": 2,
         "hit_id": 19,
-        "user": "vishnesh",
+        "user": "vinayak",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
         "simplified": "ChatGPT has been accused of engaging in discriminatory behaviors, such as praising figures such as Joe Biden while refusing to do the same for Donald Trump, or telling jokes about men and people from England while refusing to tell jokes about women and people from India.",
         "original_spans": [
+            [
+                4,
+                74,
+                185,
+                2
+            ],
             [
                 4,
                 189,
@@ -5023,6 +4112,12 @@
                 74,
                 156,
                 1
+            ],
+            [
+                4,
+                160,
+                271,
+                2
             ]
         ]
     }

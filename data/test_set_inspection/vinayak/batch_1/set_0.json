@@ -1,3552 +1,444 @@
 [
     {
-        "id": 2,
-        "annotation_id": 1,
+        "id": 3,
+        "annotation_id": 171,
         "sentence_id": 1,
         "batch": 1,
-        "hit_id": 1,
-        "user": "ayush",
+        "hit_id": 21,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
         "simplified": "Ecuador is upset with Argentina for protecting their politician, Mar\u00eda de los \u00c1ngeles Duarte, since 2020 and not telling them where she is. || As a result, Ecuador has taken its ambassador back from Argentina.",
-        "original_spans": [
-            [
-                4,
-                0,
-                47,
-                1
-            ],
-            [
-                1,
-                59,
-                83,
-                2
-            ],
-            [
-                0,
-                84,
-                94,
-                1
-            ],
-            [
-                1,
-                146,
-                194,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                0,
-                16,
-                1
-            ],
-            [
-                1,
-                22,
-                46,
-                2
-            ],
-            [
-                3,
-                47,
-                52,
-                2
-            ],
-            [
-                1,
-                109,
-                139,
-                1
-            ],
-            [
-                2,
-                140,
-                142,
-                0
-            ],
-            [
-                2,
-                143,
-                155,
-                0,
-                3,
-                1
-            ],
-            [
-                4,
-                156,
-                209,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 6,
-        "annotation_id": 3,
+        "id": 7,
+        "annotation_id": 170,
         "sentence_id": 3,
         "batch": 1,
-        "hit_id": 3,
-        "user": "ayush",
+        "hit_id": 20,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
         "simplified": "Ecuador has removed its ambassador from Argentina. || This is a protest against Argentina for hiding Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020 and not sharing her location.",
-        "original_spans": [
-            [
-                5,
-                8,
-                17,
-                1,
-                1,
-                1
-            ],
-            [
-                2,
-                48,
-                50,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                59,
-                72,
-                2
-            ],
-            [
-                1,
-                73,
-                83,
-                3
-            ],
-            [
-                1,
-                146,
-                194,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                8,
-                19,
-                1,
-                1,
-                1
-            ],
-            [
-                2,
-                51,
-                53,
-                0
-            ],
-            [
-                2,
-                54,
-                61,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                72,
-                89,
-                2
-            ],
-            [
-                1,
-                90,
-                100,
-                3
-            ],
-            [
-                1,
-                166,
-                191,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 16,
-        "annotation_id": 8,
+        "id": 17,
+        "annotation_id": 58,
         "sentence_id": 8,
         "batch": 1,
         "hit_id": 8,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "The first half of the movie is full of entertainment and intrigue, but the second half is slow and dull.",
-        "original_spans": [
-            [
-                5,
-                0,
-                8,
-                1,
-                0,
-                1
-            ],
-            [
-                4,
-                40,
-                67,
-                1
-            ],
-            [
-                0,
-                68,
-                88,
-                2
-            ],
-            [
-                0,
-                105,
-                122,
-                3
-            ],
-            [
-                1,
-                139,
-                172,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                0,
-                27,
-                1
-            ],
-            [
-                3,
-                28,
-                38,
-                1
-            ],
-            [
-                5,
-                67,
-                70,
-                2,
-                3,
-                1
-            ],
-            [
-                1,
-                90,
-                104,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 40,
-        "annotation_id": 20,
+        "id": 41,
+        "annotation_id": 83,
         "sentence_id": 20,
         "batch": 1,
-        "hit_id": 20,
-        "user": "ayush",
+        "hit_id": 33,
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
         "simplified": "On the day after President Emmanuel Macron delivers a speech about pension reform, riots break out across France.",
-        "original_spans": [
-            [
-                4,
-                0,
-                25,
-                1
-            ],
-            [
-                1,
-                6,
-                11,
-                1
-            ],
-            [
-                5,
-                26,
-                27,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                64,
-                69,
-                2
-            ],
-            [
-                1,
-                79,
-                81,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                0,
-                6,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                43,
-                51,
-                2
-            ],
-            [
-                1,
-                61,
-                66,
-                3
-            ],
-            [
-                4,
-                83,
-                113,
-                1
-            ],
-            [
-                1,
-                89,
-                98,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 42,
-        "annotation_id": 21,
+        "id": 43,
+        "annotation_id": 81,
         "sentence_id": 21,
         "batch": 1,
-        "hit_id": 21,
-        "user": "ayush",
+        "hit_id": 31,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
         "simplified": "France experienced riots the day after President Emmanuel Macron spoke about changes to the country's retirement system.",
-        "original_spans": [
-            [
-                5,
-                0,
-                25,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                26,
-                27,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                64,
-                78,
-                1
-            ],
-            [
-                4,
-                82,
-                97,
-                1
-            ],
-            [
-                1,
-                82,
-                89,
-                2
-            ],
-            [
-                1,
-                90,
-                97,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                0,
-                24,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                25,
-                28,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                65,
-                76,
-                1
-            ],
-            [
-                4,
-                77,
-                120,
-                1
-            ],
-            [
-                1,
-                77,
-                84,
-                3
-            ],
-            [
-                3,
-                85,
-                91,
-                1
-            ],
-            [
-                1,
-                92,
-                120,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 44,
-        "annotation_id": 22,
+        "id": 45,
+        "annotation_id": 84,
         "sentence_id": 22,
         "batch": 1,
-        "hit_id": 22,
-        "user": "ayush",
+        "hit_id": 34,
+        "user": "",
         "system": "new-wiki-4/Davinci-003",
         "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
         "simplified": "The day after President Emmanuel Macron gave a speech on pension reform, riots broke out in various parts of France.",
-        "original_spans": [
-            [
-                4,
-                0,
-                25,
-                1
-            ],
-            [
-                5,
-                6,
-                11,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                6,
-                11,
-                4
-            ],
-            [
-                1,
-                12,
-                18,
-                3
-            ],
-            [
-                5,
-                26,
-                27,
-                3,
-                1,
-                1
-            ],
-            [
-                5,
-                64,
-                69,
-                1,
-                1,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                0,
-                3,
-                3,
-                1,
-                1
-            ],
-            [
-                5,
-                40,
-                44,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                73,
-                116,
-                1
-            ],
-            [
-                5,
-                79,
-                88,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                79,
-                88,
-                4
-            ],
-            [
-                1,
-                89,
-                108,
-                3
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 46,
-        "annotation_id": 23,
+        "id": 47,
+        "annotation_id": 80,
         "sentence_id": 23,
         "batch": 1,
-        "hit_id": 23,
-        "user": "ayush",
+        "hit_id": 30,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
         "simplified": "Protests happen all over France one day after President Emmanuel Macron talks about changing pensions.",
-        "original_spans": [
-            [
-                1,
-                0,
-                5,
-                1
-            ],
-            [
-                1,
-                6,
-                11,
-                2
-            ],
-            [
-                1,
-                12,
-                18,
-                3
-            ],
-            [
-                1,
-                26,
-                27,
-                4
-            ],
-            [
-                1,
-                64,
-                78,
-                5
-            ],
-            [
-                4,
-                82,
-                97,
-                1
-            ],
-            [
-                1,
-                90,
-                97,
-                6
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                0,
-                8,
-                1
-            ],
-            [
-                1,
-                9,
-                15,
-                2
-            ],
-            [
-                1,
-                16,
-                24,
-                3
-            ],
-            [
-                1,
-                32,
-                35,
-                4
-            ],
-            [
-                1,
-                72,
-                83,
-                5
-            ],
-            [
-                4,
-                84,
-                102,
-                1
-            ],
-            [
-                1,
-                84,
-                92,
-                6
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 48,
-        "annotation_id": 24,
+        "id": 49,
+        "annotation_id": 82,
         "sentence_id": 24,
         "batch": 1,
-        "hit_id": 24,
-        "user": "ayush",
+        "hit_id": 32,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
         "simplified": "A day after President Emmanuel Macron gives a speech about pension reform, riots break out in France.",
-        "original_spans": [
-            [
-                1,
-                6,
-                11,
-                2
-            ],
-            [
-                1,
-                12,
-                18,
-                3
-            ],
-            [
-                4,
-                26,
-                97,
-                1
-            ],
-            [
-                1,
-                79,
-                81,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                0,
-                74,
-                1
-            ],
-            [
-                1,
-                53,
-                58,
-                1
-            ],
-            [
-                1,
-                81,
-                90,
-                2
-            ],
-            [
-                1,
-                91,
-                93,
-                3
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 52,
-        "annotation_id": 26,
+        "id": 53,
+        "annotation_id": 176,
         "sentence_id": 26,
         "batch": 1,
         "hit_id": 26,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
         "simplified": "The price of groceries in the UK has gone up a lot, with a record high increase of 17.1%. || This is because of things like inflation, problems with getting products to stores, and high costs for energy. || A group called Kantar Worldpanel did a study on this.",
-        "original_spans": [
-            [
-                1,
-                0,
-                39,
-                1
-            ],
-            [
-                4,
-                40,
-                47,
-                1
-            ],
-            [
-                2,
-                72,
-                125,
-                1,
-                4,
-                1
-            ],
-            [
-                1,
-                72,
-                84,
-                2
-            ],
-            [
-                0,
-                85,
-                100,
-                1
-            ],
-            [
-                2,
-                126,
-                130,
-                0,
-                1,
-                1
-            ],
-            [
-                0,
-                131,
-                145,
-                2
-            ],
-            [
-                1,
-                157,
-                176,
-                4
-            ],
-            [
-                5,
-                186,
-                198,
-                1,
-                4,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                0,
-                51,
-                1
-            ],
-            [
-                4,
-                71,
-                79,
-                1
-            ],
-            [
-                2,
-                90,
-                92,
-                0
-            ],
-            [
-                2,
-                93,
-                123,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                135,
-                176,
-                4
-            ],
-            [
-                5,
-                186,
-                203,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                192,
-                195,
-                1,
-                3,
-                1
-            ],
-            [
-                2,
-                204,
-                206,
-                1
-            ],
-            [
-                2,
-                207,
-                260,
-                1,
-                4,
-                1
-            ],
-            [
-                3,
-                207,
-                208,
-                1
-            ],
-            [
-                1,
-                240,
-                260,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 56,
-        "annotation_id": 28,
+        "id": 57,
+        "annotation_id": 175,
         "sentence_id": 28,
         "batch": 1,
-        "hit_id": 28,
-        "user": "ayush",
+        "hit_id": 25,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
         "simplified": "Grocery inflation in the United Kingdom has reached a record high of 17.1%, according to Kantar Worldpanel. || This is due to a combination of high levels of inflation, supply chain issues, and high energy costs impacting the economy.",
-        "original_spans": [
-            [
-                5,
-                40,
-                47,
-                1,
-                1,
-                1
-            ],
-            [
-                0,
-                85,
-                106,
-                1
-            ],
-            [
-                2,
-                126,
-                130,
-                0,
-                1,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                40,
-                51,
-                1,
-                1,
-                1
-            ],
-            [
-                2,
-                108,
-                110,
-                0
-            ],
-            [
-                2,
-                111,
-                125,
-                0,
-                1,
-                1
-            ],
-            [
-                3,
-                126,
-                142,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 60,
-        "annotation_id": 30,
+        "id": 61,
+        "annotation_id": 150,
         "sentence_id": 30,
         "batch": 1,
-        "hit_id": 30,
-        "user": "ayush",
+        "hit_id": 0,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
         "simplified": "Eleven people died when they were squished in a group that came together to get food outside a factory in Karachi, Pakistan.",
-        "original_spans": [
-            [
-                5,
-                14,
-                17,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                18,
-                29,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                30,
-                37,
-                3
-            ],
-            [
-                1,
-                43,
-                48,
-                4
-            ],
-            [
-                5,
-                49,
-                63,
-                3,
-                1,
-                1
-            ],
-            [
-                1,
-                67,
-                74,
-                6
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                14,
-                18,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                19,
-                33,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                34,
-                42,
-                3
-            ],
-            [
-                1,
-                48,
-                53,
-                4
-            ],
-            [
-                5,
-                54,
-                72,
-                3,
-                1,
-                1
-            ],
-            [
-                1,
-                76,
-                79,
-                6
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 64,
-        "annotation_id": 32,
+        "id": 65,
+        "annotation_id": 152,
         "sentence_id": 32,
         "batch": 1,
-        "hit_id": 32,
-        "user": "ayush",
+        "hit_id": 2,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
         "simplified": "Eleven people died in Karachi, Pakistan, after being crushed in a crowd that had gathered to receive food from a factory.",
-        "original_spans": [
-            [
-                5,
-                14,
-                17,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                49,
-                54,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                67,
-                74,
-                3
-            ],
-            [
-                1,
-                80,
-                87,
-                4
-            ],
-            [
-                4,
-                98,
-                119,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                14,
-                18,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                19,
-                40,
-                1
-            ],
-            [
-                5,
-                72,
-                80,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                93,
-                100,
-                3
-            ],
-            [
-                1,
-                106,
-                110,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 68,
-        "annotation_id": 34,
+        "id": 69,
+        "annotation_id": 154,
         "sentence_id": 34,
         "batch": 1,
-        "hit_id": 34,
-        "user": "ayush",
+        "hit_id": 4,
+        "user": "",
         "system": "new-wiki-4/Davinci-003",
         "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
         "simplified": "Eleven people were crushed to death in a large gathering outside a factory in Karachi, Pakistan. || They had been waiting to get food.",
-        "original_spans": [
-            [
-                5,
-                14,
-                37,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                14,
-                17,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                24,
-                29,
-                1,
-                1,
-                2
-            ],
-            [
-                1,
-                43,
-                48,
-                1
-            ],
-            [
-                2,
-                49,
-                54,
-                0,
-                1,
-                1
-            ],
-            [
-                5,
-                55,
-                63,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                67,
-                74,
-                3
-            ],
-            [
-                4,
-                80,
-                119,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                14,
-                35,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                14,
-                18,
-                1,
-                1,
-                2
-            ],
-            [
-                5,
-                27,
-                35,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                41,
-                56,
-                1
-            ],
-            [
-                4,
-                57,
-                96,
-                1
-            ],
-            [
-                2,
-                97,
-                99,
-                0
-            ],
-            [
-                2,
-                100,
-                108,
-                0,
-                1,
-                1
-            ],
-            [
-                5,
-                109,
-                121,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                125,
-                128,
-                3
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 90,
-        "annotation_id": 45,
+        "id": 91,
+        "annotation_id": 182,
         "sentence_id": 45,
         "batch": 1,
-        "hit_id": 45,
-        "user": "ayush",
+        "hit_id": 32,
+        "user": "",
         "system": "new-wiki-4/Davinci-003",
         "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
         "simplified": "This year marked the first time two sequels (Avatar: The Way of Water and Top Gun: Maverick) were included in the Best Picture category of the Academy Awards. || Additionally, it was the first time two movies grossing more than one billion dollars worldwide were nominated in the same year.",
-        "original_spans": [
-            [
-                1,
-                0,
-                6,
-                1
-            ],
-            [
-                5,
-                26,
-                61,
-                1,
-                4,
-                1
-            ],
-            [
-                1,
-                62,
-                70,
-                2
-            ],
-            [
-                4,
-                71,
-                131,
-                2
-            ],
-            [
-                1,
-                132,
-                142,
-                3
-            ],
-            [
-                1,
-                177,
-                192,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                0,
-                9,
-                2
-            ],
-            [
-                1,
-                10,
-                16,
-                1
-            ],
-            [
-                4,
-                32,
-                92,
-                2
-            ],
-            [
-                1,
-                93,
-                109,
-                2
-            ],
-            [
-                5,
-                114,
-                158,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                136,
-                142,
-                1,
-                3,
-                1
-            ],
-            [
-                2,
-                159,
-                161,
-                0
-            ],
-            [
-                1,
-                162,
-                175,
-                3
-            ],
-            [
-                3,
-                176,
-                182,
-                1
-            ],
-            [
-                1,
-                218,
-                247,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 92,
-        "annotation_id": 46,
+        "id": 93,
+        "annotation_id": 181,
         "sentence_id": 46,
         "batch": 1,
-        "hit_id": 46,
-        "user": "ayush",
+        "hit_id": 31,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
         "simplified": "This year's Academy Awards made history by nominating two sequels (Avatar: The Way of Water and Top Gun: Maverick) for Best Picture. || Additionally, it was the first time that two movies that made over $1 billion globally were up for the same award.",
-        "original_spans": [
-            [
-                0,
-                0,
-                25,
-                1
-            ],
-            [
-                5,
-                40,
-                52,
-                2,
-                4,
-                1
-            ],
-            [
-                1,
-                62,
-                70,
-                2
-            ],
-            [
-                5,
-                62,
-                70,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                132,
-                142,
-                1
-            ],
-            [
-                1,
-                162,
-                167,
-                3
-            ],
-            [
-                1,
-                168,
-                176,
-                4
-            ],
-            [
-                1,
-                193,
-                202,
-                5
-            ],
-            [
-                1,
-                208,
-                217,
-                6
-            ],
-            [
-                1,
-                222,
-                234,
-                7
-            ],
-            [
-                0,
-                235,
-                252,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                0,
-                11,
-                1
-            ],
-            [
-                3,
-                27,
-                42,
-                2
-            ],
-            [
-                1,
-                43,
-                53,
-                2
-            ],
-            [
-                5,
-                43,
-                53,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                115,
-                118,
-                2,
-                3,
-                1
-            ],
-            [
-                5,
-                119,
-                132,
-                2,
-                4,
-                1
-            ],
-            [
-                2,
-                133,
-                135,
-                0
-            ],
-            [
-                1,
-                136,
-                149,
-                1
-            ],
-            [
-                3,
-                150,
-                156,
-                3
-            ],
-            [
-                1,
-                181,
-                187,
-                3
-            ],
-            [
-                1,
-                188,
-                197,
-                4
-            ],
-            [
-                1,
-                214,
-                222,
-                5
-            ],
-            [
-                1,
-                228,
-                230,
-                6
-            ],
-            [
-                1,
-                239,
-                250,
-                7
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 94,
-        "annotation_id": 47,
+        "id": 95,
+        "annotation_id": 183,
         "sentence_id": 47,
         "batch": 1,
-        "hit_id": 47,
-        "user": "ayush",
+        "hit_id": 33,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
         "simplified": "For the first time, two sequels (Avatar: The Way of Water and Top Gun: Maverick) were in the Academy Award Best Picture category. || Also, it was the first time that two movies earning more than $1 billion worldwide were nominated for Best Picture in the same year.",
-        "original_spans": [
-            [
-                1,
-                0,
-                6,
-                1
-            ],
-            [
-                4,
-                22,
-                61,
-                1
-            ],
-            [
-                5,
-                62,
-                70,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                62,
-                70,
-                1,
-                1,
-                1
-            ],
-            [
-                2,
-                132,
-                142,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                162,
-                167,
-                3
-            ],
-            [
-                1,
-                168,
-                181,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                0,
-                3,
-                1
-            ],
-            [
-                5,
-                81,
-                88,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                81,
-                88,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                89,
-                129,
-                1
-            ],
-            [
-                2,
-                130,
-                132,
-                0
-            ],
-            [
-                2,
-                133,
-                138,
-                0,
-                1,
-                1
-            ],
-            [
-                5,
-                139,
-                145,
-                2,
-                3,
-                1
-            ],
-            [
-                5,
-                161,
-                165,
-                2,
-                3,
-                2
-            ],
-            [
-                1,
-                170,
-                176,
-                3
-            ],
-            [
-                1,
-                177,
-                194,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 98,
-        "annotation_id": 49,
+        "id": 99,
+        "annotation_id": 180,
         "sentence_id": 49,
         "batch": 1,
-        "hit_id": 49,
-        "user": "ayush",
+        "hit_id": 30,
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
         "simplified": "This year's Academy Award for Best Picture included two films that have already made over $1 billion at the global box office: Avatar: The Way of Water and Top Gun: Maverick. || It was the first time that the Best Picture category featured two sequels, and it was also a new record for the most movies grossing over $1 billion worldwide to be nominated for the award in the same year.",
-        "original_spans": [
-            [
-                2,
-                0,
-                21,
-                0,
-                4,
-                1
-            ],
-            [
-                0,
-                53,
-                61,
-                1
-            ],
-            [
-                1,
-                62,
-                70,
-                1
-            ],
-            [
-                1,
-                75,
-                82,
-                2
-            ],
-            [
-                0,
-                132,
-                157,
-                2
-            ],
-            [
-                1,
-                162,
-                167,
-                3
-            ],
-            [
-                4,
-                168,
-                202,
-                1
-            ],
-            [
-                5,
-                203,
-                207,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                222,
-                234,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                0,
-                11,
-                1
-            ],
-            [
-                3,
-                26,
-                29,
-                2
-            ],
-            [
-                1,
-                43,
-                51,
-                1
-            ],
-            [
-                1,
-                56,
-                61,
-                2
-            ],
-            [
-                3,
-                62,
-                79,
-                3
-            ],
-            [
-                4,
-                80,
-                126,
-                1
-            ],
-            [
-                2,
-                175,
-                177,
-                0
-            ],
-            [
-                2,
-                178,
-                199,
-                0,
-                4,
-                1
-            ],
-            [
-                5,
-                200,
-                230,
-                1,
-                3,
-                1
-            ],
-            [
-                5,
-                231,
-                239,
-                1,
-                3,
-                2
-            ],
-            [
-                1,
-                244,
-                252,
-                3
-            ],
-            [
-                3,
-                253,
-                281,
-                4
-            ],
-            [
-                3,
-                282,
-                336,
-                5
-            ],
-            [
-                5,
-                337,
-                342,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                357,
-                366,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 136,
-        "annotation_id": 78,
+        "id": 137,
+        "annotation_id": 155,
         "sentence_id": 68,
         "batch": 1,
-        "hit_id": 28,
-        "user": "rachel",
+        "hit_id": 5,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
         "simplified": "Industrialization during the Victorian era created a large middle-class, which increased the size of society's social structure. || This growth impacted culture, lifestyle, values, and morality.",
-        "original_spans": [
-            [
-                1,
-                18,
-                30,
-                1
-            ],
-            [
-                4,
-                18,
-                30,
-                1
-            ],
-            [
-                1,
-                51,
-                66,
-                2
-            ],
-            [
-                0,
-                80,
-                85,
-                1
-            ],
-            [
-                1,
-                86,
-                94,
-                3
-            ],
-            [
-                1,
-                98,
-                105,
-                4
-            ],
-            [
-                1,
-                106,
-                130,
-                7
-            ],
-            [
-                4,
-                106,
-                130,
-                2
-            ],
-            [
-                0,
-                112,
-                123,
-                4
-            ],
-            [
-                0,
-                131,
-                137,
-                3
-            ],
-            [
-                1,
-                138,
-                144,
-                5
-            ],
-            [
-                1,
-                145,
-                151,
-                6
-            ],
-            [
-                0,
-                152,
-                159,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                18,
-                24,
-                1
-            ],
-            [
-                1,
-                43,
-                50,
-                1
-            ],
-            [
-                4,
-                43,
-                50,
-                1
-            ],
-            [
-                1,
-                53,
-                58,
-                2
-            ],
-            [
-                3,
-                73,
-                78,
-                2
-            ],
-            [
-                1,
-                79,
-                88,
-                3
-            ],
-            [
-                1,
-                89,
-                97,
-                4
-            ],
-            [
-                3,
-                98,
-                100,
-                3
-            ],
-            [
-                1,
-                101,
-                110,
-                5
-            ],
-            [
-                1,
-                111,
-                128,
-                6
-            ],
-            [
-                2,
-                129,
-                131,
-                0
-            ],
-            [
-                2,
-                132,
-                143,
-                0,
-                3,
-                1
-            ],
-            [
-                1,
-                144,
-                152,
-                7
-            ],
-            [
-                4,
-                144,
-                152,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 160,
-        "annotation_id": 95,
+        "id": 161,
+        "annotation_id": 162,
         "sentence_id": 80,
         "batch": 1,
-        "hit_id": 45,
-        "user": "rachel",
+        "hit_id": 12,
+        "user": "",
         "system": "new-wiki-4/Davinci-003",
         "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
         "simplified": "Gwyneth Paltrow, an award-winning actress and current CEO of Goop, is facing a court case about a skiing accident in 2016. || The man who collided with her is seeking millions in compensation, but Paltrow alleges that he was the one who caused the crash.",
-        "original_spans": [
-            [
-                4,
-                0,
-                25,
-                3
-            ],
-            [
-                1,
-                0,
-                3,
-                1
-            ],
-            [
-                0,
-                26,
-                32,
-                1
-            ],
-            [
-                4,
-                33,
-                41,
-                2
-            ],
-            [
-                1,
-                45,
-                63,
-                2
-            ],
-            [
-                1,
-                64,
-                67,
-                3
-            ],
-            [
-                0,
-                83,
-                87,
-                2
-            ],
-            [
-                2,
-                97,
-                101,
-                0,
-                0,
-                1
-            ],
-            [
-                1,
-                132,
-                145,
-                4
-            ],
-            [
-                1,
-                158,
-                171,
-                5
-            ],
-            [
-                0,
-                181,
-                188,
-                4
-            ],
-            [
-                1,
-                189,
-                195,
-                6
-            ],
-            [
-                5,
-                211,
-                219,
-                1,
-                1,
-                1
-            ],
-            [
-                0,
-                220,
-                254,
-                5
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                17,
-                41,
-                3
-            ],
-            [
-                1,
-                17,
-                19,
-                1
-            ],
-            [
-                3,
-                42,
-                53,
-                1
-            ],
-            [
-                4,
-                54,
-                66,
-                2
-            ],
-            [
-                3,
-                58,
-                60,
-                2
-            ],
-            [
-                1,
-                70,
-                89,
-                2
-            ],
-            [
-                1,
-                90,
-                95,
-                3
-            ],
-            [
-                2,
-                123,
-                125,
-                0
-            ],
-            [
-                1,
-                156,
-                166,
-                4
-            ],
-            [
-                1,
-                179,
-                192,
-                5
-            ],
-            [
-                3,
-                193,
-                196,
-                3
-            ],
-            [
-                1,
-                205,
-                212,
-                6
-            ],
-            [
-                3,
-                213,
-                217,
-                4
-            ],
-            [
-                3,
-                233,
-                243,
-                5
-            ],
-            [
-                5,
-                244,
-                254,
-                1,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 162,
-        "annotation_id": 96,
+        "id": 163,
+        "annotation_id": 161,
         "sentence_id": 81,
         "batch": 1,
-        "hit_id": 46,
-        "user": "rachel",
+        "hit_id": 11,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
         "simplified": "The famous actress who now runs Goop is in court because of a skiing accident that happened in 2016. || The man who crashed into her is asking for millions of dollars in compensation, but she says he was actually the one who caused the accident.",
-        "original_spans": [
-            [
-                1,
-                4,
-                17,
-                1
-            ],
-            [
-                0,
-                26,
-                32,
-                5
-            ],
-            [
-                1,
-                38,
-                41,
-                2
-            ],
-            [
-                0,
-                45,
-                54,
-                1
-            ],
-            [
-                1,
-                64,
-                67,
-                3
-            ],
-            [
-                5,
-                70,
-                73,
-                1,
-                1,
-                1
-            ],
-            [
-                0,
-                83,
-                87,
-                2
-            ],
-            [
-                2,
-                97,
-                101,
-                0,
-                0,
-                1
-            ],
-            [
-                1,
-                114,
-                127,
-                4
-            ],
-            [
-                1,
-                132,
-                145,
-                5
-            ],
-            [
-                1,
-                158,
-                171,
-                6
-            ],
-            [
-                1,
-                172,
-                180,
-                7
-            ],
-            [
-                1,
-                189,
-                195,
-                8
-            ],
-            [
-                1,
-                211,
-                219,
-                9
-            ],
-            [
-                0,
-                220,
-                254,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                4,
-                10,
-                1
-            ],
-            [
-                3,
-                19,
-                26,
-                1
-            ],
-            [
-                1,
-                27,
-                31,
-                2
-            ],
-            [
-                1,
-                49,
-                59,
-                3
-            ],
-            [
-                5,
-                62,
-                68,
-                1,
-                1,
-                1
-            ],
-            [
-                3,
-                78,
-                91,
-                2
-            ],
-            [
-                2,
-                101,
-                103,
-                0
-            ],
-            [
-                1,
-                116,
-                128,
-                4
-            ],
-            [
-                1,
-                133,
-                146,
-                5
-            ],
-            [
-                1,
-                170,
-                183,
-                6
-            ],
-            [
-                3,
-                184,
-                187,
-                3
-            ],
-            [
-                1,
-                188,
-                191,
-                7
-            ],
-            [
-                1,
-                192,
-                196,
-                8
-            ],
-            [
-                3,
-                204,
-                212,
-                4
-            ],
-            [
-                1,
-                221,
-                245,
-                9
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 164,
-        "annotation_id": 97,
+        "id": 165,
+        "annotation_id": 163,
         "sentence_id": 82,
         "batch": 1,
-        "hit_id": 47,
-        "user": "rachel",
+        "hit_id": 13,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
         "simplified": "The famous actress and Goop CEO is in court for a 2016 ski accident. || The man who hit her is trying to get millions in compensation. || Paltrow says he was the one who crashed, not her.",
-        "original_spans": [
-            [
-                1,
-                4,
-                17,
-                1
-            ],
-            [
-                0,
-                26,
-                32,
-                1
-            ],
-            [
-                0,
-                45,
-                54,
-                2
-            ],
-            [
-                0,
-                83,
-                90,
-                3
-            ],
-            [
-                4,
-                91,
-                96,
-                1
-            ],
-            [
-                0,
-                97,
-                101,
-                4
-            ],
-            [
-                1,
-                114,
-                127,
-                2
-            ],
-            [
-                5,
-                132,
-                138,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                158,
-                171,
-                3
-            ],
-            [
-                0,
-                181,
-                188,
-                5
-            ],
-            [
-                1,
-                189,
-                195,
-                4
-            ],
-            [
-                5,
-                211,
-                219,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                220,
-                254,
-                6
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                4,
-                10,
-                1
-            ],
-            [
-                3,
-                19,
-                22,
-                1
-            ],
-            [
-                4,
-                50,
-                54,
-                1
-            ],
-            [
-                2,
-                69,
-                71,
-                0
-            ],
-            [
-                1,
-                84,
-                87,
-                2
-            ],
-            [
-                5,
-                92,
-                101,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                121,
-                134,
-                3
-            ],
-            [
-                2,
-                135,
-                137,
-                1
-            ],
-            [
-                1,
-                146,
-                150,
-                4
-            ],
-            [
-                5,
-                166,
-                169,
-                2,
-                3,
-                1
-            ],
-            [
-                5,
-                170,
-                178,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                179,
-                187,
-                6
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 166,
-        "annotation_id": 98,
+        "id": 167,
+        "annotation_id": 164,
         "sentence_id": 83,
         "batch": 1,
-        "hit_id": 48,
-        "user": "rachel",
+        "hit_id": 14,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
         "simplified": "Award-winning actress and Goop CEO, Gwyneth Paltrow, is currently in court over a skiing accident that happened in 2016. || One man is claiming that she crashed into him and is demanding millions in damages. || Paltrow denies that she was at fault and says that it was the other way around.",
-        "original_spans": [
-            [
-                0,
-                0,
-                3,
-                1
-            ],
-            [
-                0,
-                26,
-                32,
-                2
-            ],
-            [
-                1,
-                64,
-                67,
-                1
-            ],
-            [
-                1,
-                70,
-                73,
-                2
-            ],
-            [
-                0,
-                83,
-                87,
-                3
-            ],
-            [
-                2,
-                97,
-                101,
-                0,
-                0,
-                1
-            ],
-            [
-                0,
-                102,
-                105,
-                5
-            ],
-            [
-                0,
-                110,
-                131,
-                7
-            ],
-            [
-                1,
-                132,
-                145,
-                3
-            ],
-            [
-                1,
-                158,
-                171,
-                4
-            ],
-            [
-                0,
-                181,
-                188,
-                6
-            ],
-            [
-                1,
-                189,
-                195,
-                5
-            ],
-            [
-                1,
-                196,
-                254,
-                6
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                22,
-                25,
-                1
-            ],
-            [
-                3,
-                36,
-                52,
-                2
-            ],
-            [
-                1,
-                75,
-                79,
-                1
-            ],
-            [
-                1,
-                82,
-                88,
-                2
-            ],
-            [
-                3,
-                98,
-                111,
-                3
-            ],
-            [
-                2,
-                121,
-                123,
-                0
-            ],
-            [
-                3,
-                124,
-                127,
-                4
-            ],
-            [
-                3,
-                132,
-                169,
-                5
-            ],
-            [
-                5,
-                170,
-                176,
-                1,
-                3,
-                1
-            ],
-            [
-                1,
-                177,
-                186,
-                3
-            ],
-            [
-                1,
-                199,
-                207,
-                4
-            ],
-            [
-                2,
-                208,
-                210,
-                1
-            ],
-            [
-                3,
-                219,
-                251,
-                7
-            ],
-            [
-                1,
-                252,
-                256,
-                5
-            ],
-            [
-                3,
-                257,
-                261,
-                6
-            ],
-            [
-                1,
-                262,
-                290,
-                6
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 168,
-        "annotation_id": 99,
+        "id": 169,
+        "annotation_id": 160,
         "sentence_id": 84,
         "batch": 1,
-        "hit_id": 49,
-        "user": "rachel",
+        "hit_id": 10,
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
         "simplified": "The actress who won an award and now leads Goop is currently in court for a ski accident that happened in 2016. || The man who hit her is trying to get millions in compensation, but Paltrow claims he was the one who crashed into her instead.",
-        "original_spans": [
-            [
-                5,
-                4,
-                17,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                4,
-                17,
-                1
-            ],
-            [
-                0,
-                26,
-                32,
-                1
-            ],
-            [
-                1,
-                38,
-                41,
-                1
-            ],
-            [
-                0,
-                83,
-                87,
-                2
-            ],
-            [
-                0,
-                97,
-                101,
-                3
-            ],
-            [
-                1,
-                114,
-                127,
-                2
-            ],
-            [
-                1,
-                158,
-                171,
-                3
-            ],
-            [
-                0,
-                181,
-                188,
-                4
-            ],
-            [
-                5,
-                211,
-                219,
-                3,
-                1,
-                1
-            ],
-            [
-                1,
-                220,
-                254,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                12,
-                15,
-                1,
-                3,
-                1
-            ],
-            [
-                5,
-                16,
-                28,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                16,
-                28,
-                1
-            ],
-            [
-                3,
-                33,
-                36,
-                1
-            ],
-            [
-                1,
-                37,
-                42,
-                1
-            ],
-            [
-                3,
-                89,
-                102,
-                2
-            ],
-            [
-                2,
-                112,
-                114,
-                0
-            ],
-            [
-                1,
-                127,
-                130,
-                2
-            ],
-            [
-                5,
-                135,
-                137,
-                2,
-                3,
-                1
-            ],
-            [
-                1,
-                164,
-                177,
-                3
-            ],
-            [
-                3,
-                178,
-                181,
-                3
-            ],
-            [
-                3,
-                212,
-                215,
-                4
-            ],
-            [
-                5,
-                216,
-                223,
-                3,
-                1,
-                1
-            ],
-            [
-                3,
-                224,
-                232,
-                5
-            ],
-            [
-                1,
-                233,
-                241,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 200,
-        "annotation_id": 200,
+        "id": 201,
+        "annotation_id": 268,
         "sentence_id": 100,
         "batch": 2,
-        "hit_id": 0,
-        "user": "ayush",
+        "hit_id": 8,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
         "simplified": "In protest, Ecuador withdrew its ambassador from Argentina. || Argentina has been sheltering Ecuadorian politician Mara de los ngeles Duarte, who has been missing since 2020.",
-        "original_spans": [
-            [
-                5,
-                8,
-                17,
-                2,
-                1,
-                1
-            ],
-            [
-                5,
-                48,
-                58,
-                3,
-                4,
-                1
-            ],
-            [
-                2,
-                59,
-                72,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                119,
-                126,
-                3
-            ],
-            [
-                4,
-                134,
-                145,
-                2
-            ],
-            [
-                0,
-                146,
-                194,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                0,
-                11,
-                3,
-                4,
-                1
-            ],
-            [
-                5,
-                20,
-                28,
-                2,
-                1,
-                1
-            ],
-            [
-                2,
-                60,
-                62,
-                0
-            ],
-            [
-                2,
-                63,
-                72,
-                0,
-                1,
-                1
-            ],
-            [
-                5,
-                73,
-                81,
-                1,
-                3,
-                1
-            ],
-            [
-                1,
-                127,
-                133,
-                3
-            ],
-            [
-                3,
-                142,
-                162,
-                2
-            ],
-            [
-                4,
-                163,
-                174,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 202,
-        "annotation_id": 201,
+        "id": 203,
+        "annotation_id": 269,
         "sentence_id": 101,
         "batch": 2,
-        "hit_id": 1,
-        "user": "ayush",
+        "hit_id": 9,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Ecuador withdraws its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mar\u00eda de los \u00c1ngeles Duarte since 2020, refusing to give information of her whereabouts.",
         "simplified": "Ecuador withdrew its ambassador from Argentina in protest at the latter sheltering Ecuadorian politician Mara de los ngeles Duarte since 2020.",
-        "original_spans": [
-            [
-                5,
-                8,
-                17,
-                1,
-                1,
-                1
-            ],
-            [
-                0,
-                146,
-                194,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                8,
-                16,
-                1,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 216,
-        "annotation_id": 208,
+        "id": 217,
+        "annotation_id": 232,
         "sentence_id": 108,
         "batch": 2,
-        "hit_id": 8,
-        "user": "ayush",
+        "hit_id": 12,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
         "simplified": "A day after President Emmanuel Macron gives a speech on pension reform, riots occur across France.",
-        "original_spans": [
-            [
-                5,
-                26,
-                97,
-                1,
-                4,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                0,
-                71,
-                1,
-                4,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 218,
-        "annotation_id": 209,
+        "id": 219,
+        "annotation_id": 233,
         "sentence_id": 109,
         "batch": 2,
-        "hit_id": 9,
-        "user": "ayush",
+        "hit_id": 13,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Riots occur across France a day after President Emmanuel Macron gives a speech on pension reform.",
         "simplified": "Riots break out across France a day after President Emmanuel Macron's speech on pension reform.",
-        "original_spans": [
-            [
-                1,
-                6,
-                11,
-                1
-            ],
-            [
-                5,
-                57,
-                71,
-                1,
-                1,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                6,
-                15,
-                1
-            ],
-            [
-                5,
-                61,
-                69,
-                1,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 222,
-        "annotation_id": 211,
+        "id": 223,
+        "annotation_id": 271,
         "sentence_id": 111,
         "batch": 2,
         "hit_id": 11,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel, amid high levels of inflation, supply chain issues and high energy costs impacting the economy.",
         "simplified": "Grocery inflation in the United Kingdom reaches a record high of 17.1%, according to market research group Kantar Worldpanel. || This is the highest level of grocery inflation recorded in the UK since records began in 1992.",
-        "original_spans": [
-            [
-                1,
-                126,
-                130,
-                1
-            ],
-            [
-                1,
-                131,
-                142,
-                2
-            ],
-            [
-                0,
-                157,
-                221,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                2,
-                126,
-                128,
-                0
-            ],
-            [
-                1,
-                129,
-                140,
-                1
-            ],
-            [
-                1,
-                141,
-                154,
-                2
-            ],
-            [
-                3,
-                158,
-                165,
-                1
-            ],
-            [
-                3,
-                176,
-                223,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 226,
-        "annotation_id": 213,
+        "id": 227,
+        "annotation_id": 261,
         "sentence_id": 113,
         "batch": 2,
-        "hit_id": 13,
-        "user": "ayush",
+        "hit_id": 1,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Eleven people die after being crushed in a crowd which gathered to collect food outside a factory in Karachi, Pakistan.",
         "simplified": "Eleven people are killed after being crushed in a crowd outside a factory in Karachi, Pakistan.",
-        "original_spans": [
-            [
-                1,
-                14,
-                17,
-                1
-            ],
-            [
-                0,
-                49,
-                79,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                14,
-                24,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 236,
-        "annotation_id": 218,
+        "id": 237,
+        "annotation_id": 273,
         "sentence_id": 118,
         "batch": 2,
-        "hit_id": 18,
-        "user": "ayush",
+        "hit_id": 13,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "It was the first time the Academy Award Best Picture category featured two sequels (Avatar: The Way of Water and Top Gun: Maverick) as well as the first time two films grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
         "simplified": "It was the first time the Academy Award Best Picture category had two sequels (Avatar: The Way of Water and Top Gun: Maverick). || It was also the first time two movies grossing over $1 billion worldwide were nominated for Best Picture in the same year.",
-        "original_spans": [
-            [
-                1,
-                62,
-                70,
-                1
-            ],
-            [
-                2,
-                132,
-                142,
-                0,
-                1,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                62,
-                65,
-                1
-            ],
-            [
-                2,
-                128,
-                130,
-                0
-            ],
-            [
-                2,
-                131,
-                142,
-                0,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 248,
-        "annotation_id": 228,
+        "id": 249,
+        "annotation_id": 275,
         "sentence_id": 124,
         "batch": 2,
-        "hit_id": 8,
-        "user": "rachel",
+        "hit_id": 15,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
         "simplified": "The history of the pineal gland is an account of the scientific developments that led to the discovery of its neuroendocrine properties. || The history of the pineal gland started with the ancient Greeks.",
-        "original_spans": [
-            [
-                5,
-                64,
-                75,
-                1,
-                1,
-                1
-            ],
-            [
-                0,
-                76,
-                121,
-                1
-            ],
-            [
-                4,
-                122,
-                140,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                64,
-                76,
-                1,
-                1,
-                1
-            ],
-            [
-                2,
-                137,
-                139,
-                0
-            ],
-            [
-                3,
-                140,
-                171,
-                1
-            ],
-            [
-                3,
-                172,
-                184,
-                2
-            ],
-            [
-                4,
-                185,
-                204,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 250,
-        "annotation_id": 229,
+        "id": 251,
+        "annotation_id": 274,
         "sentence_id": 125,
         "batch": 2,
-        "hit_id": 9,
-        "user": "rachel",
+        "hit_id": 14,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
         "simplified": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks to the present day.",
-        "original_spans": [
-            [
-                0,
-                141,
-                200,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                141,
-                160,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 254,
-        "annotation_id": 231,
+        "id": 255,
+        "annotation_id": 263,
         "sentence_id": 127,
         "batch": 2,
-        "hit_id": 11,
-        "user": "rachel",
+        "hit_id": 3,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
         "simplified": "Industrialisation brought with it the Victorian era a rapidly growing middle class. || The middle class began to influence cultural norms, lifestyle, values, and morality in a big way.",
-        "original_spans": [
-            [
-                2,
-                80,
-                85,
-                0,
-                0,
-                1
-            ],
-            [
-                0,
-                86,
-                111,
-                4
-            ],
-            [
-                1,
-                112,
-                123,
-                1
-            ],
-            [
-                4,
-                112,
-                123,
-                1
-            ],
-            [
-                5,
-                124,
-                130,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                124,
-                130,
-                3
-            ],
-            [
-                0,
-                131,
-                159,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                31,
-                33,
-                3
-            ],
-            [
-                2,
-                84,
-                86,
-                0
-            ],
-            [
-                2,
-                87,
-                103,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                104,
-                109,
-                2
-            ],
-            [
-                5,
-                110,
-                122,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                113,
-                122,
-                3
-            ],
-            [
-                1,
-                171,
-                184,
-                1
-            ],
-            [
-                4,
-                171,
-                184,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 264,
-        "annotation_id": 238,
+        "id": 265,
+        "annotation_id": 265,
         "sentence_id": 132,
         "batch": 2,
-        "hit_id": 18,
-        "user": "rachel",
+        "hit_id": 5,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
         "simplified": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in compensation.",
-        "original_spans": [
-            [
-                1,
-                158,
-                171,
-                1
-            ],
-            [
-                0,
-                172,
-                254,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                158,
-                171,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     }
 ]

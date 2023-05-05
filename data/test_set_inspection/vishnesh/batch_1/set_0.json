@@ -1,3329 +1,444 @@
 [
     {
-        "id": 10,
-        "annotation_id": 5,
+        "id": 11,
+        "annotation_id": 55,
         "sentence_id": 5,
         "batch": 1,
         "hit_id": 5,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Davinci-003",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "The first half of the movie offers great entertainment and keeps viewers enthralled, but the second half is disappointing; it is slow-paced and lacks excitement.",
-        "original_spans": [
-            [
-                0,
-                0,
-                8,
-                1
-            ],
-            [
-                0,
-                31,
-                39,
-                2
-            ],
-            [
-                4,
-                40,
-                74,
-                1
-            ],
-            [
-                1,
-                93,
-                122,
-                1
-            ],
-            [
-                1,
-                145,
-                172,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                0,
-                34,
-                1
-            ],
-            [
-                3,
-                59,
-                84,
-                3
-            ],
-            [
-                3,
-                85,
-                88,
-                1
-            ],
-            [
-                1,
-                89,
-                122,
-                1
-            ],
-            [
-                1,
-                123,
-                139,
-                2
-            ],
-            [
-                3,
-                140,
-                161,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 12,
-        "annotation_id": 6,
+        "id": 13,
+        "annotation_id": 56,
         "sentence_id": 6,
         "batch": 1,
         "hit_id": 6,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "The first part of the movie is fun and interesting, but the second half is slow and not as entertaining.",
-        "original_spans": [
-            [
-                5,
-                0,
-                8,
-                1,
-                0,
-                1
-            ],
-            [
-                0,
-                13,
-                26,
-                2
-            ],
-            [
-                1,
-                31,
-                39,
-                2
-            ],
-            [
-                4,
-                40,
-                67,
-                1
-            ],
-            [
-                1,
-                50,
-                54,
-                1
-            ],
-            [
-                0,
-                68,
-                88,
-                3
-            ],
-            [
-                0,
-                105,
-                122,
-                4
-            ],
-            [
-                5,
-                123,
-                144,
-                3,
-                0,
-                1
-            ],
-            [
-                1,
-                145,
-                172,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                0,
-                27,
-                1
-            ],
-            [
-                1,
-                10,
-                14,
-                1
-            ],
-            [
-                3,
-                31,
-                34,
-                1
-            ],
-            [
-                1,
-                39,
-                51,
-                2
-            ],
-            [
-                5,
-                52,
-                55,
-                2,
-                3,
-                1
-            ],
-            [
-                1,
-                72,
-                79,
-                3
-            ],
-            [
-                3,
-                80,
-                104,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 14,
-        "annotation_id": 7,
+        "id": 15,
+        "annotation_id": 57,
         "sentence_id": 7,
         "batch": 1,
         "hit_id": 7,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "The first half of the movie is entertaining and interesting, but the second half is not. || The second half is slow and not as enjoyable.",
-        "original_spans": [
-            [
-                5,
-                0,
-                8,
-                2,
-                0,
-                1
-            ],
-            [
-                5,
-                13,
-                39,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                40,
-                67,
-                1
-            ],
-            [
-                0,
-                68,
-                88,
-                2
-            ],
-            [
-                1,
-                105,
-                122,
-                1
-            ],
-            [
-                1,
-                139,
-                172,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                0,
-                27,
-                1
-            ],
-            [
-                5,
-                31,
-                60,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                81,
-                88,
-                1
-            ],
-            [
-                2,
-                89,
-                91,
-                0
-            ],
-            [
-                3,
-                92,
-                110,
-                1
-            ],
-            [
-                1,
-                111,
-                137,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 18,
-        "annotation_id": 9,
+        "id": 19,
+        "annotation_id": 59,
         "sentence_id": 9,
         "batch": 1,
         "hit_id": 9,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "Unfortunately, the second half of the movie doesn't provide as much entertainment and excitement as the first half. || In fact, it has a slow pace that doesn't keep the audience engaged.",
-        "original_spans": [
-            [
-                1,
-                0,
-                8,
-                1
-            ],
-            [
-                4,
-                13,
-                54,
-                2
-            ],
-            [
-                1,
-                31,
-                39,
-                2
-            ],
-            [
-                5,
-                40,
-                54,
-                1,
-                1,
-                1
-            ],
-            [
-                4,
-                89,
-                104,
-                1
-            ],
-            [
-                1,
-                105,
-                122,
-                3
-            ],
-            [
-                2,
-                123,
-                138,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                145,
-                172,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                0,
-                14,
-                1
-            ],
-            [
-                4,
-                15,
-                30,
-                1
-            ],
-            [
-                1,
-                44,
-                67,
-                3
-            ],
-            [
-                4,
-                68,
-                115,
-                2
-            ],
-            [
-                1,
-                86,
-                96,
-                2
-            ],
-            [
-                5,
-                97,
-                115,
-                1,
-                1,
-                1
-            ],
-            [
-                2,
-                116,
-                118,
-                0
-            ],
-            [
-                2,
-                119,
-                127,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                128,
-                146,
-                4
-            ],
-            [
-                3,
-                147,
-                186,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 22,
-        "annotation_id": 11,
+        "id": 23,
+        "annotation_id": 101,
         "sentence_id": 11,
         "batch": 1,
-        "hit_id": 11,
-        "user": "ayush",
+        "hit_id": 1,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "India recently updated its income tax laws, which include a controversial \"angel tax\" provision aimed at taxing some of the money coming in from foreign investors who fund start-up businesses in the country. || This update is a major change from the previous statute enacted in 1961.",
-        "original_spans": [
-            [
-                4,
-                0,
-                27,
-                2
-            ],
-            [
-                1,
-                33,
-                51,
-                4
-            ],
-            [
-                4,
-                59,
-                76,
-                4
-            ],
-            [
-                4,
-                63,
-                67,
-                1
-            ],
-            [
-                5,
-                77,
-                89,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                128,
-                165,
-                1
-            ],
-            [
-                4,
-                166,
-                186,
-                3
-            ],
-            [
-                1,
-                166,
-                174,
-                2
-            ],
-            [
-                5,
-                210,
-                217,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                218,
-                236,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                0,
-                43,
-                2
-            ],
-            [
-                3,
-                6,
-                22,
-                1
-            ],
-            [
-                5,
-                44,
-                57,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                96,
-                129,
-                1
-            ],
-            [
-                5,
-                167,
-                171,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                172,
-                191,
-                3
-            ],
-            [
-                4,
-                192,
-                207,
-                3
-            ],
-            [
-                1,
-                192,
-                194,
-                2
-            ],
-            [
-                2,
-                208,
-                210,
-                0
-            ],
-            [
-                2,
-                211,
-                225,
-                0,
-                3,
-                1
-            ],
-            [
-                1,
-                228,
-                240,
-                4
-            ],
-            [
-                4,
-                250,
-                266,
-                4
-            ],
-            [
-                4,
-                278,
-                283,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 26,
-        "annotation_id": 13,
+        "id": 27,
+        "annotation_id": 103,
         "sentence_id": 13,
         "batch": 1,
-        "hit_id": 13,
-        "user": "ayush",
+        "hit_id": 3,
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax law in India is different from the old law in 1961. || It has a new provision called \"angel tax\" that aims to tax some of the money that foreign investors use to support start-ups in India. || This provision has caused some controversy.",
-        "original_spans": [
-            [
-                1,
-                33,
-                51,
-                2
-            ],
-            [
-                4,
-                59,
-                76,
-                1
-            ],
-            [
-                1,
-                68,
-                76,
-                1
-            ],
-            [
-                2,
-                77,
-                127,
-                0,
-                4,
-                1
-            ],
-            [
-                4,
-                92,
-                105,
-                2
-            ],
-            [
-                1,
-                128,
-                165,
-                3
-            ],
-            [
-                0,
-                166,
-                186,
-                1
-            ],
-            [
-                5,
-                187,
-                191,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                210,
-                217,
-                4
-            ],
-            [
-                5,
-                218,
-                236,
-                2,
-                4,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                35,
-                44,
-                2
-            ],
-            [
-                4,
-                54,
-                70,
-                1
-            ],
-            [
-                1,
-                58,
-                61,
-                1
-            ],
-            [
-                3,
-                62,
-                64,
-                1
-            ],
-            [
-                2,
-                71,
-                73,
-                0
-            ],
-            [
-                2,
-                74,
-                115,
-                0,
-                4,
-                1
-            ],
-            [
-                1,
-                116,
-                150,
-                3
-            ],
-            [
-                5,
-                151,
-                155,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                174,
-                188,
-                4
-            ],
-            [
-                5,
-                189,
-                208,
-                2,
-                4,
-                1
-            ],
-            [
-                5,
-                199,
-                201,
-                2,
-                3,
-                1
-            ],
-            [
-                2,
-                209,
-                211,
-                1
-            ],
-            [
-                2,
-                212,
-                242,
-                1,
-                3,
-                1
-            ],
-            [
-                4,
-                243,
-                255,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 30,
-        "annotation_id": 15,
+        "id": 31,
+        "annotation_id": 122,
         "sentence_id": 15,
         "batch": 1,
-        "hit_id": 15,
-        "user": "ayush",
+        "hit_id": 22,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "The Sacramento Kings have made it to the NBA playoffs for the first time in 17 years, breaking a record for the longest playoff drought in NBA history.",
-        "original_spans": [
-            [
-                0,
-                0,
-                14,
-                1
-            ],
-            [
-                5,
-                36,
-                40,
-                1,
-                1,
-                1
-            ],
-            [
-                0,
-                77,
-                88,
-                2
-            ],
-            [
-                0,
-                89,
-                101,
-                3
-            ],
-            [
-                1,
-                102,
-                109,
-                1
-            ],
-            [
-                5,
-                110,
-                154,
-                2,
-                4,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                21,
-                30,
-                1,
-                1,
-                1
-            ],
-            [
-                3,
-                31,
-                36,
-                1
-            ],
-            [
-                1,
-                76,
-                85,
-                1
-            ],
-            [
-                3,
-                86,
-                103,
-                2
-            ],
-            [
-                5,
-                112,
-                151,
-                2,
-                4,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 34,
-        "annotation_id": 17,
+        "id": 35,
+        "annotation_id": 123,
         "sentence_id": 17,
         "batch": 1,
-        "hit_id": 17,
-        "user": "ayush",
+        "hit_id": 23,
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "The Sacramento Kings finally made it to the NBA playoffs after a 17-year drought, breaking the record for the longest playoff absence in the history of the NBA.",
-        "original_spans": [
-            [
-                0,
-                0,
-                14,
-                1
-            ],
-            [
-                5,
-                36,
-                40,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                58,
-                65,
-                2,
-                1,
-                1
-            ],
-            [
-                0,
-                66,
-                88,
-                2
-            ],
-            [
-                0,
-                89,
-                101,
-                3
-            ],
-            [
-                4,
-                102,
-                126,
-                1
-            ],
-            [
-                0,
-                110,
-                117,
-                4
-            ],
-            [
-                5,
-                142,
-                154,
-                3,
-                1,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                21,
-                33,
-                1,
-                1,
-                1
-            ],
-            [
-                3,
-                34,
-                39,
-                1
-            ],
-            [
-                5,
-                57,
-                64,
-                2,
-                1,
-                1
-            ],
-            [
-                4,
-                65,
-                81,
-                1
-            ],
-            [
-                3,
-                82,
-                109,
-                2
-            ],
-            [
-                3,
-                118,
-                133,
-                3
-            ],
-            [
-                5,
-                141,
-                160,
-                3,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 38,
-        "annotation_id": 19,
+        "id": 39,
+        "annotation_id": 120,
         "sentence_id": 19,
         "batch": 1,
-        "hit_id": 19,
-        "user": "ayush",
+        "hit_id": 20,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "In basketball, the Sacramento Kings enter the NBA playoffs for the first time since 2006. || They end their 17-year period without playoffs, which is the longest in NBA history.",
-        "original_spans": [
-            [
-                1,
-                36,
-                40,
-                1
-            ],
-            [
-                2,
-                89,
-                95,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                110,
-                126,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                36,
-                41,
-                1
-            ],
-            [
-                2,
-                90,
-                92,
-                0
-            ],
-            [
-                2,
-                93,
-                101,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                123,
-                140,
-                3
-            ],
-            [
-                5,
-                141,
-                149,
-                1,
-                3,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 70,
-        "annotation_id": 35,
+        "id": 71,
+        "annotation_id": 65,
         "sentence_id": 35,
         "batch": 1,
-        "hit_id": 35,
-        "user": "ayush",
+        "hit_id": 15,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "A baby thought to be a miracle grows up on a mission to find his true identity and purpose.",
-        "original_spans": [
-            [
-                0,
-                0,
-                32,
-                1
-            ],
-            [
-                4,
-                35,
-                47,
-                1
-            ],
-            [
-                0,
-                48,
-                78,
-                2
-            ],
-            [
-                1,
-                79,
-                95,
-                1
-            ],
-            [
-                1,
-                96,
-                116,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                2,
-                30,
-                1
-            ],
-            [
-                3,
-                7,
-                22,
-                1
-            ],
-            [
-                3,
-                31,
-                52,
-                2
-            ],
-            [
-                1,
-                53,
-                64,
-                1
-            ],
-            [
-                1,
-                65,
-                91,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 72,
-        "annotation_id": 36,
+        "id": 73,
+        "annotation_id": 66,
         "sentence_id": 36,
         "batch": 1,
-        "hit_id": 36,
-        "user": "ayush",
+        "hit_id": 16,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The book tells the story of a special baby who people believe is God's child. || This baby goes on a quest to find out where he comes from and why he is here.",
-        "original_spans": [
-            [
-                1,
-                4,
-                9,
-                1
-            ],
-            [
-                1,
-                10,
-                29,
-                2
-            ],
-            [
-                1,
-                35,
-                42,
-                3
-            ],
-            [
-                1,
-                48,
-                61,
-                4
-            ],
-            [
-                5,
-                62,
-                78,
-                1,
-                4,
-                1
-            ],
-            [
-                2,
-                79,
-                95,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                96,
-                116,
-                5
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                4,
-                8,
-                1
-            ],
-            [
-                1,
-                9,
-                24,
-                2
-            ],
-            [
-                1,
-                30,
-                37,
-                3
-            ],
-            [
-                1,
-                43,
-                61,
-                4
-            ],
-            [
-                5,
-                62,
-                77,
-                1,
-                4,
-                1
-            ],
-            [
-                2,
-                78,
-                80,
-                0
-            ],
-            [
-                2,
-                81,
-                118,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                119,
-                158,
-                5
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 74,
-        "annotation_id": 37,
+        "id": 75,
+        "annotation_id": 67,
         "sentence_id": 37,
         "batch": 1,
-        "hit_id": 37,
-        "user": "ayush",
+        "hit_id": 17,
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "A child believed to be a divine gift, embarks on a quest to find his true identity and purpose.",
-        "original_spans": [
-            [
-                0,
-                0,
-                32,
-                1
-            ],
-            [
-                4,
-                35,
-                47,
-                1
-            ],
-            [
-                1,
-                35,
-                42,
-                2
-            ],
-            [
-                1,
-                43,
-                47,
-                1
-            ],
-            [
-                0,
-                48,
-                78,
-                2
-            ],
-            [
-                1,
-                79,
-                91,
-                3
-            ],
-            [
-                1,
-                96,
-                116,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                4,
-                2,
-                37,
-                1
-            ],
-            [
-                1,
-                2,
-                7,
-                1
-            ],
-            [
-                1,
-                8,
-                37,
-                2
-            ],
-            [
-                3,
-                38,
-                56,
-                1
-            ],
-            [
-                1,
-                57,
-                64,
-                3
-            ],
-            [
-                1,
-                69,
-                95,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 76,
-        "annotation_id": 38,
+        "id": 77,
+        "annotation_id": 68,
         "sentence_id": 38,
         "batch": 1,
-        "hit_id": 38,
-        "user": "ayush",
+        "hit_id": 18,
+        "user": "",
         "system": "new-wiki-4/Davinci-003",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "This book is about a baby said to be God's child. || He embarks on a quest to discover who he is and his purpose.",
-        "original_spans": [
-            [
-                1,
-                0,
-                17,
-                1
-            ],
-            [
-                2,
-                18,
-                32,
-                0,
-                4,
-                1
-            ],
-            [
-                0,
-                35,
-                42,
-                1
-            ],
-            [
-                1,
-                48,
-                55,
-                2
-            ],
-            [
-                5,
-                66,
-                78,
-                1,
-                4,
-                1
-            ],
-            [
-                1,
-                79,
-                91,
-                3
-            ],
-            [
-                1,
-                92,
-                116,
-                4
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                0,
-                18,
-                1
-            ],
-            [
-                1,
-                26,
-                30,
-                2
-            ],
-            [
-                5,
-                37,
-                49,
-                1,
-                4,
-                1
-            ],
-            [
-                2,
-                50,
-                52,
-                0
-            ],
-            [
-                2,
-                53,
-                74,
-                0,
-                4,
-                1
-            ],
-            [
-                1,
-                75,
-                86,
-                3
-            ],
-            [
-                1,
-                87,
-                113,
-                4
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 78,
-        "annotation_id": 39,
+        "id": 79,
+        "annotation_id": 69,
         "sentence_id": 39,
         "batch": 1,
-        "hit_id": 39,
-        "user": "ayush",
+        "hit_id": 19,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The story is about a special baby who is thought to be God's child. || It shows his search for where he comes from and his purpose.",
-        "original_spans": [
-            [
-                1,
-                4,
-                9,
-                1
-            ],
-            [
-                1,
-                10,
-                17,
-                2
-            ],
-            [
-                0,
-                18,
-                32,
-                1
-            ],
-            [
-                1,
-                35,
-                42,
-                3
-            ],
-            [
-                1,
-                48,
-                55,
-                4
-            ],
-            [
-                0,
-                62,
-                65,
-                2
-            ],
-            [
-                5,
-                66,
-                78,
-                1,
-                4,
-                1
-            ],
-            [
-                2,
-                79,
-                91,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                92,
-                103,
-                6
-            ],
-            [
-                1,
-                108,
-                116,
-                7
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                4,
-                9,
-                1
-            ],
-            [
-                1,
-                10,
-                18,
-                2
-            ],
-            [
-                1,
-                21,
-                28,
-                3
-            ],
-            [
-                1,
-                34,
-                48,
-                4
-            ],
-            [
-                5,
-                55,
-                67,
-                1,
-                4,
-                1
-            ],
-            [
-                2,
-                68,
-                70,
-                0
-            ],
-            [
-                2,
-                71,
-                90,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                91,
-                114,
-                6
-            ],
-            [
-                1,
-                119,
-                131,
-                7
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 82,
-        "annotation_id": 41,
+        "id": 83,
+        "annotation_id": 111,
         "sentence_id": 41,
         "batch": 1,
-        "hit_id": 41,
-        "user": "ayush",
+        "hit_id": 11,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China agreed to trade using their own currencies, without involving the United States dollar.",
-        "original_spans": [
-            [
-                1,
-                17,
-                34,
-                1
-            ],
-            [
-                1,
-                44,
-                46,
-                2
-            ],
-            [
-                1,
-                69,
-                89,
-                3
-            ],
-            [
-                0,
-                115,
-                134,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                17,
-                23,
-                1
-            ],
-            [
-                1,
-                33,
-                38,
-                2
-            ],
-            [
-                1,
-                61,
-                78,
-                3
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 86,
-        "annotation_id": 43,
+        "id": 87,
+        "annotation_id": 113,
         "sentence_id": 43,
         "batch": 1,
-        "hit_id": 43,
-        "user": "ayush",
+        "hit_id": 13,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China made a deal to use their own money for trade, stopping the use of the US dollar in between.",
-        "original_spans": [
-            [
-                5,
-                17,
-                34,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                38,
-                46,
-                2
-            ],
-            [
-                1,
-                57,
-                68,
-                3
-            ],
-            [
-                1,
-                69,
-                86,
-                4
-            ],
-            [
-                1,
-                94,
-                107,
-                5
-            ],
-            [
-                1,
-                115,
-                134,
-                6
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                17,
-                28,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                32,
-                35,
-                2
-            ],
-            [
-                1,
-                46,
-                51,
-                3
-            ],
-            [
-                3,
-                52,
-                62,
-                1
-            ],
-            [
-                1,
-                63,
-                79,
-                4
-            ],
-            [
-                1,
-                87,
-                89,
-                5
-            ],
-            [
-                1,
-                97,
-                108,
-                6
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 140,
-        "annotation_id": 85,
+        "id": 141,
+        "annotation_id": 105,
         "sentence_id": 70,
         "batch": 1,
-        "hit_id": 35,
-        "user": "rachel",
+        "hit_id": 5,
+        "user": "",
         "system": "new-wiki-4/Alpaca-7b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "Its subject and medium represent modernization, globalization, and industrialization, which symbolize the energy and spirit of traditional Bengal during the period of industrialization.",
-        "original_spans": [
-            [
-                1,
-                23,
-                39,
-                1
-            ],
-            [
-                0,
-                92,
-                99,
-                1
-            ],
-            [
-                1,
-                114,
-                122,
-                3
-            ],
-            [
-                1,
-                127,
-                136,
-                4
-            ],
-            [
-                1,
-                159,
-                170,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                23,
-                32,
-                1
-            ],
-            [
-                3,
-                86,
-                91,
-                1
-            ],
-            [
-                1,
-                106,
-                112,
-                3
-            ],
-            [
-                1,
-                117,
-                123,
-                4
-            ],
-            [
-                1,
-                146,
-                163,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 142,
-        "annotation_id": 86,
+        "id": 143,
+        "annotation_id": 106,
         "sentence_id": 71,
         "batch": 1,
-        "hit_id": 36,
-        "user": "rachel",
+        "hit_id": 6,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "This artwork represents modernization, globalization, and industrialization, which were important aspects of traditional Bengal during its industrial period.",
-        "original_spans": [
-            [
-                0,
-                0,
-                22,
-                1
-            ],
-            [
-                1,
-                23,
-                39,
-                1
-            ],
-            [
-                0,
-                92,
-                109,
-                2
-            ],
-            [
-                1,
-                114,
-                136,
-                4
-            ],
-            [
-                1,
-                159,
-                173,
-                2
-            ],
-            [
-                1,
-                174,
-                192,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                0,
-                12,
-                1
-            ],
-            [
-                1,
-                13,
-                23,
-                1
-            ],
-            [
-                3,
-                77,
-                87,
-                2
-            ],
-            [
-                1,
-                88,
-                105,
-                4
-            ],
-            [
-                1,
-                128,
-                134,
-                2
-            ],
-            [
-                3,
-                135,
-                138,
-                3
-            ],
-            [
-                1,
-                139,
-                157,
-                3
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 144,
-        "annotation_id": 87,
+        "id": 145,
+        "annotation_id": 107,
         "sentence_id": 72,
         "batch": 1,
-        "hit_id": 37,
-        "user": "rachel",
+        "hit_id": 7,
+        "user": "",
         "system": "new-wiki-4/Vicuna-7b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "The subject and medium of the topic are similar to modernisation, globalization, and industrialization because they reflect the spirit and culture of traditional Bengal during the time of industrialization.",
-        "original_spans": [
-            [
-                1,
-                0,
-                3,
-                1
-            ],
-            [
-                1,
-                27,
-                39,
-                2
-            ],
-            [
-                1,
-                92,
-                94,
-                3
-            ],
-            [
-                1,
-                100,
-                109,
-                4
-            ],
-            [
-                1,
-                114,
-                136,
-                5
-            ],
-            [
-                1,
-                159,
-                161,
-                6
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                0,
-                3,
-                1
-            ],
-            [
-                3,
-                23,
-                35,
-                1
-            ],
-            [
-                1,
-                40,
-                50,
-                2
-            ],
-            [
-                1,
-                103,
-                110,
-                3
-            ],
-            [
-                1,
-                116,
-                123,
-                4
-            ],
-            [
-                1,
-                128,
-                146,
-                5
-            ],
-            [
-                1,
-                169,
-                175,
-                6
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 148,
-        "annotation_id": 89,
+        "id": 149,
+        "annotation_id": 109,
         "sentence_id": 74,
         "batch": 1,
-        "hit_id": 39,
-        "user": "rachel",
+        "hit_id": 9,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "The topic and style of the work relate to modernization, globalization, and industrialization. || They represent the energy and spirit of traditional Bengal during the time of industrial growth.",
-        "original_spans": [
-            [
-                1,
-                0,
-                3,
-                1
-            ],
-            [
-                1,
-                4,
-                11,
-                2
-            ],
-            [
-                1,
-                16,
-                22,
-                3
-            ],
-            [
-                1,
-                23,
-                39,
-                4
-            ],
-            [
-                2,
-                92,
-                94,
-                0,
-                0,
-                1
-            ],
-            [
-                1,
-                100,
-                109,
-                5
-            ],
-            [
-                1,
-                114,
-                122,
-                6
-            ],
-            [
-                1,
-                127,
-                136,
-                7
-            ],
-            [
-                1,
-                159,
-                161,
-                8
-            ],
-            [
-                1,
-                174,
-                192,
-                9
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                0,
-                3,
-                1
-            ],
-            [
-                1,
-                4,
-                9,
-                2
-            ],
-            [
-                1,
-                14,
-                31,
-                3
-            ],
-            [
-                1,
-                32,
-                41,
-                4
-            ],
-            [
-                2,
-                95,
-                97,
-                0
-            ],
-            [
-                1,
-                103,
-                112,
-                5
-            ],
-            [
-                1,
-                117,
-                123,
-                6
-            ],
-            [
-                1,
-                128,
-                134,
-                7
-            ],
-            [
-                1,
-                157,
-                163,
-                8
-            ],
-            [
-                1,
-                176,
-                194,
-                9
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 152,
-        "annotation_id": 91,
+        "id": 153,
+        "annotation_id": 131,
         "sentence_id": 76,
         "batch": 1,
-        "hit_id": 41,
-        "user": "rachel",
+        "hit_id": 31,
+        "user": "",
         "system": "new-wiki-4/Turbo",
         "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
         "simplified": "The ICJ said that the US broke its friendship treaty with Iran when it let its courts freeze assets of Iranian companies. || However, the ICJ cannot decide on the $1.75 billion frozen assets of Iran's Central Bank.",
-        "original_spans": [
-            [
-                1,
-                4,
-                40,
-                1
-            ],
-            [
-                5,
-                41,
-                46,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                41,
-                46,
-                3
-            ],
-            [
-                1,
-                56,
-                69,
-                12
-            ],
-            [
-                1,
-                70,
-                78,
-                4
-            ],
-            [
-                1,
-                124,
-                131,
-                5
-            ],
-            [
-                0,
-                136,
-                144,
-                1
-            ],
-            [
-                0,
-                152,
-                154,
-                2
-            ],
-            [
-                1,
-                169,
-                176,
-                6
-            ],
-            [
-                1,
-                196,
-                199,
-                7
-            ],
-            [
-                1,
-                218,
-                249,
-                8
-            ],
-            [
-                1,
-                254,
-                261,
-                9
-            ],
-            [
-                0,
-                270,
-                278,
-                3
-            ],
-            [
-                1,
-                293,
-                300,
-                10
-            ],
-            [
-                0,
-                301,
-                304,
-                4
-            ],
-            [
-                1,
-                305,
-                326,
-                11
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                4,
-                7,
-                1
-            ],
-            [
-                5,
-                8,
-                12,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                8,
-                12,
-                3
-            ],
-            [
-                1,
-                22,
-                24,
-                12
-            ],
-            [
-                1,
-                25,
-                30,
-                4
-            ],
-            [
-                1,
-                71,
-                74,
-                5
-            ],
-            [
-                1,
-                100,
-                102,
-                6
-            ],
-            [
-                2,
-                122,
-                124,
-                0
-            ],
-            [
-                1,
-                125,
-                133,
-                7
-            ],
-            [
-                1,
-                142,
-                158,
-                8
-            ],
-            [
-                1,
-                163,
-                168,
-                9
-            ],
-            [
-                1,
-                191,
-                193,
-                10
-            ],
-            [
-                1,
-                194,
-                214,
-                11
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 156,
-        "annotation_id": 93,
+        "id": 157,
+        "annotation_id": 133,
         "sentence_id": 78,
         "batch": 1,
-        "hit_id": 43,
-        "user": "rachel",
+        "hit_id": 33,
+        "user": "",
         "system": "new-wiki-4/GPT-4",
         "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
         "simplified": "The International Court of Justice (ICJ) decided that the United States broke its 1955 friendship treaty with Iran by letting its local courts freeze assets owned by Iranian companies. || However, the ICJ said it does not have the power to control the $1.75 billion of frozen assets held by Iran's Central Bank.",
-        "original_spans": [
-            [
-                1,
-                41,
-                46,
-                1
-            ],
-            [
-                5,
-                41,
-                46,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                70,
-                78,
-                2
-            ],
-            [
-                1,
-                116,
-                120,
-                3
-            ],
-            [
-                5,
-                121,
-                123,
-                2,
-                0,
-                2
-            ],
-            [
-                1,
-                124,
-                131,
-                4
-            ],
-            [
-                5,
-                124,
-                131,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                136,
-                144,
-                5
-            ],
-            [
-                5,
-                152,
-                154,
-                2,
-                0,
-                1
-            ],
-            [
-                1,
-                169,
-                173,
-                6
-            ],
-            [
-                1,
-                196,
-                199,
-                7
-            ],
-            [
-                0,
-                205,
-                209,
-                1
-            ],
-            [
-                1,
-                210,
-                217,
-                8
-            ],
-            [
-                1,
-                232,
-                249,
-                9
-            ],
-            [
-                1,
-                254,
-                261,
-                11
-            ],
-            [
-                0,
-                270,
-                275,
-                2
-            ],
-            [
-                0,
-                301,
-                304,
-                3
-            ],
-            [
-                1,
-                305,
-                326,
-                10
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                41,
-                48,
-                1
-            ],
-            [
-                5,
-                41,
-                48,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                72,
-                77,
-                2
-            ],
-            [
-                1,
-                115,
-                117,
-                3
-            ],
-            [
-                1,
-                118,
-                125,
-                4
-            ],
-            [
-                5,
-                118,
-                125,
-                2,
-                1,
-                1
-            ],
-            [
-                1,
-                130,
-                135,
-                5
-            ],
-            [
-                1,
-                157,
-                162,
-                6
-            ],
-            [
-                2,
-                185,
-                187,
-                0
-            ],
-            [
-                1,
-                188,
-                196,
-                7
-            ],
-            [
-                3,
-                197,
-                204,
-                1
-            ],
-            [
-                1,
-                210,
-                212,
-                8
-            ],
-            [
-                3,
-                227,
-                230,
-                2
-            ],
-            [
-                1,
-                231,
-                247,
-                9
-            ],
-            [
-                1,
-                252,
-                257,
-                11
-            ],
-            [
-                1,
-                291,
-                311,
-                10
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 204,
-        "annotation_id": 202,
+        "id": 205,
+        "annotation_id": 222,
         "sentence_id": 102,
         "batch": 2,
         "hit_id": 2,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "However, the entertainment and intrigue the first half of the movie offers is something the second half does not have. || The second half moves at a sluggish pace.",
-        "original_spans": [
-            [
-                5,
-                75,
-                78,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                105,
-                122,
-                2
-            ],
-            [
-                2,
-                123,
-                138,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                139,
-                155,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                5,
-                75,
-                77,
-                1,
-                1,
-                1
-            ],
-            [
-                1,
-                104,
-                118,
-                2
-            ],
-            [
-                2,
-                119,
-                121,
-                0
-            ],
-            [
-                2,
-                122,
-                137,
-                0,
-                1,
-                1
-            ],
-            [
-                1,
-                138,
-                146,
-                3
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 206,
-        "annotation_id": 203,
+        "id": 207,
+        "annotation_id": 223,
         "sentence_id": 103,
         "batch": 2,
         "hit_id": 3,
-        "user": "ayush",
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "However, the entertainment and intrigue the first half of the movie offers are something the second half fails to provide, with the latter being plagued by a sluggish pace.",
         "simplified": "However, the entertainment and intrigue the first half of the movie offers is something the second half fails to provide and drags in places due to its sluggish pace.",
-        "original_spans": [
-            [
-                1,
-                75,
-                78,
-                1
-            ],
-            [
-                0,
-                123,
-                138,
-                1
-            ],
-            [
-                1,
-                139,
-                155,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                75,
-                77,
-                1
-            ],
-            [
-                3,
-                121,
-                140,
-                1
-            ],
-            [
-                1,
-                141,
-                147,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 208,
-        "annotation_id": 204,
+        "id": 209,
+        "annotation_id": 240,
         "sentence_id": 104,
         "batch": 2,
-        "hit_id": 4,
-        "user": "ayush",
+        "hit_id": 0,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax in India is a big change from the old 1961 law. || One of the changes is the so-called 'angel tax' which tries to get a piece of the income entering the country from foreign investors funding new businesses in India.",
-        "original_spans": [
-            [
-                1,
-                68,
-                76,
-                1
-            ],
-            [
-                0,
-                77,
-                105,
-                1
-            ],
-            [
-                0,
-                118,
-                127,
-                2
-            ],
-            [
-                1,
-                128,
-                146,
-                2
-            ],
-            [
-                1,
-                147,
-                151,
-                3
-            ],
-            [
-                5,
-                218,
-                236,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                226,
-                236,
-                1,
-                1,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                62,
-                66,
-                1
-            ],
-            [
-                2,
-                67,
-                69,
-                0
-            ],
-            [
-                2,
-                70,
-                105,
-                0,
-                3,
-                1
-            ],
-            [
-                1,
-                118,
-                136,
-                2
-            ],
-            [
-                1,
-                137,
-                144,
-                3
-            ],
-            [
-                5,
-                211,
-                235,
-                1,
-                4,
-                1
-            ],
-            [
-                5,
-                211,
-                225,
-                1,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 210,
-        "annotation_id": 205,
+        "id": 211,
+        "annotation_id": 241,
         "sentence_id": 105,
         "batch": 2,
-        "hit_id": 5,
-        "user": "ayush",
+        "hit_id": 1,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The new income tax in India is a significant change on the old 1961 statute, and contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
         "simplified": "The new income tax in India is a significant change on the old 1961 statute. || It contains a controversial \"angel tax\" provision seeking to capture some of the income entering the country from foreign investors funding India's start-ups.",
-        "original_spans": [
-            [
-                2,
-                77,
-                80,
-                0,
-                1,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                2,
-                77,
-                79,
-                0
-            ],
-            [
-                2,
-                80,
-                82,
-                0,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 212,
-        "annotation_id": 206,
+        "id": 213,
+        "annotation_id": 249,
         "sentence_id": 106,
         "batch": 2,
-        "hit_id": 6,
-        "user": "ayush",
+        "hit_id": 9,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "In basketball, the Sacramento Kings made the NBA playoffs for the first time in 17 years. || This ended their 17-year playoff drought.",
-        "original_spans": [
-            [
-                0,
-                77,
-                88,
-                1
-            ],
-            [
-                2,
-                89,
-                95,
-                0,
-                1,
-                1
-            ],
-            [
-                0,
-                127,
-                154,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                77,
-                89,
-                1
-            ],
-            [
-                2,
-                90,
-                92,
-                0
-            ],
-            [
-                2,
-                93,
-                97,
-                0,
-                3,
-                1
-            ],
-            [
-                2,
-                98,
-                103,
-                0,
-                1,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 214,
-        "annotation_id": 207,
+        "id": 215,
+        "annotation_id": 248,
         "sentence_id": 107,
         "batch": 2,
-        "hit_id": 7,
-        "user": "ayush",
+        "hit_id": 8,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "In basketball, the Sacramento Kings make the NBA playoffs for the first time since 2006, ending their 17-year playoff drought, the longest in NBA history.",
         "simplified": "In basketball, the Sacramento Kings return to the NBA playoffs after missing the 2006-2007 season. || This ended their 17-year playoff drought in the NBA.",
-        "original_spans": [
-            [
-                1,
-                36,
-                40,
-                1
-            ],
-            [
-                1,
-                58,
-                82,
-                3
-            ],
-            [
-                1,
-                77,
-                88,
-                2
-            ],
-            [
-                2,
-                89,
-                95,
-                0,
-                1,
-                1
-            ],
-            [
-                0,
-                127,
-                154,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                36,
-                45,
-                1
-            ],
-            [
-                1,
-                63,
-                80,
-                3
-            ],
-            [
-                1,
-                81,
-                90,
-                2
-            ],
-            [
-                3,
-                91,
-                98,
-                1
-            ],
-            [
-                2,
-                99,
-                101,
-                0
-            ],
-            [
-                2,
-                102,
-                112,
-                0,
-                1,
-                1
-            ],
-            [
-                3,
-                143,
-                154,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 228,
-        "annotation_id": 214,
+        "id": 229,
+        "annotation_id": 226,
         "sentence_id": 114,
         "batch": 2,
-        "hit_id": 14,
-        "user": "ayush",
+        "hit_id": 6,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The novel is about a baby rumored to be the child of God. || He goes in search of his origins and mission.",
-        "original_spans": [
-            [
-                1,
-                10,
-                32,
-                1
-            ],
-            [
-                0,
-                35,
-                42,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                10,
-                18,
-                1
-            ],
-            [
-                2,
-                58,
-                60,
-                0
-            ],
-            [
-                2,
-                61,
-                68,
-                0,
-                3,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 230,
-        "annotation_id": 215,
+        "id": 231,
+        "annotation_id": 227,
         "sentence_id": 115,
         "batch": 2,
-        "hit_id": 15,
-        "user": "ayush",
+        "hit_id": 7,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "The novel follows the journey of a miracle baby rumored to be the child of God in search of his origins and mission.",
         "simplified": "The book is about the journey of a miracle baby who people say is the child of God to find out who he is and what his mission is.",
-        "original_spans": [
-            [
-                1,
-                4,
-                9,
-                1
-            ],
-            [
-                1,
-                10,
-                17,
-                2
-            ],
-            [
-                1,
-                48,
-                61,
-                3
-            ],
-            [
-                1,
-                79,
-                91,
-                4
-            ],
-            [
-                1,
-                92,
-                103,
-                5
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                4,
-                8,
-                1
-            ],
-            [
-                1,
-                9,
-                17,
-                2
-            ],
-            [
-                1,
-                48,
-                65,
-                3
-            ],
-            [
-                1,
-                83,
-                94,
-                4
-            ],
-            [
-                1,
-                95,
-                104,
-                5
-            ],
-            [
-                5,
-                109,
-                117,
-                1,
-                3,
-                1
-            ],
-            [
-                5,
-                126,
-                129,
-                1,
-                3,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 234,
-        "annotation_id": 217,
+        "id": 235,
+        "annotation_id": 245,
         "sentence_id": 117,
         "batch": 2,
-        "hit_id": 17,
-        "user": "ayush",
+        "hit_id": 5,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Brazil and China sign an agreement to trade in their own currencies, ceasing the usage of the United States dollar as an intermediary.",
         "simplified": "Brazil and China agree to trade in their own currencies. || They no longer use the United States dollar to trade.",
-        "original_spans": [
-            [
-                1,
-                17,
-                34,
-                1
-            ],
-            [
-                1,
-                69,
-                86,
-                2
-            ],
-            [
-                0,
-                87,
-                89,
-                1
-            ],
-            [
-                0,
-                115,
-                134,
-                2
-            ]
-        ],
-        "simplified_spans": [
-            [
-                1,
-                17,
-                22,
-                1
-            ],
-            [
-                2,
-                57,
-                59,
-                0
-            ],
-            [
-                1,
-                60,
-                78,
-                2
-            ],
-            [
-                3,
-                104,
-                113,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 256,
-        "annotation_id": 234,
+        "id": 257,
+        "annotation_id": 242,
         "sentence_id": 128,
         "batch": 2,
-        "hit_id": 14,
-        "user": "rachel",
+        "hit_id": 2,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "Its subject and medium are in line with modernisation, globalization and industrialization. || It shows the dynamism and zeitgeist of traditional Bengal.",
-        "original_spans": [
-            [
-                2,
-                92,
-                94,
-                0,
-                0,
-                1
-            ],
-            [
-                5,
-                95,
-                99,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                100,
-                109,
-                1,
-                1,
-                2
-            ],
-            [
-                1,
-                100,
-                109,
-                1
-            ],
-            [
-                0,
-                159,
-                192,
-                1
-            ]
-        ],
-        "simplified_spans": [
-            [
-                2,
-                92,
-                94,
-                0
-            ],
-            [
-                5,
-                95,
-                97,
-                1,
-                1,
-                1
-            ],
-            [
-                5,
-                98,
-                103,
-                1,
-                1,
-                2
-            ],
-            [
-                1,
-                98,
-                103,
-                1
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 258,
-        "annotation_id": 235,
+        "id": 259,
+        "annotation_id": 243,
         "sentence_id": 129,
         "batch": 2,
-        "hit_id": 15,
-        "user": "rachel",
+        "hit_id": 3,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-11b",
         "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
         "simplified": "Its subject and medium are in line with modernisation, globalization and industrialization, and at the same time they speak of the dynamism of traditional Bengal, which was rapidly changing.",
-        "original_spans": [
-            [
-                0,
-                92,
-                94,
-                1
-            ],
-            [
-                1,
-                100,
-                109,
-                1
-            ],
-            [
-                0,
-                123,
-                136,
-                2
-            ],
-            [
-                0,
-                159,
-                192,
-                3
-            ]
-        ],
-        "simplified_spans": [
-            [
-                3,
-                92,
-                112,
-                1
-            ],
-            [
-                1,
-                118,
-                126,
-                1
-            ],
-            [
-                3,
-                163,
-                190,
-                2
-            ]
-        ]
+        "original_spans": [],
+        "simplified_spans": []
     },
     {
-        "id": 262,
-        "annotation_id": 237,
+        "id": 263,
+        "annotation_id": 253,
         "sentence_id": 131,
         "batch": 2,
-        "hit_id": 17,
-        "user": "rachel",
+        "hit_id": 13,
+        "user": "",
         "system": "new-wiki-4/Ctrl-T5-3b",
         "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
         "simplified": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran. || The ICJ rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies.",
         "original_spans": [],
-        "simplified_spans": [
-            [
-                2,
-                327,
-                329,
-                0
-            ],
-            [
-                3,
-                330,
-                492,
-                1
-            ]
-        ]
+        "simplified_spans": []
     }
 ]
