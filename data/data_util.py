@@ -112,37 +112,10 @@ def lcs(str1, str2):
     return str1[end_position - max_length:end_position]
 
 """
-Given an alignment, some subsitutions will be full edits. Uses a (quite poor) rule-based system
+Convert a list of phrases to single word alignments using a (quite poor) rule-based system
 to convert edits to word alignment
 """
-def align_edits(alignment, orig_tags, simp_tags, sent):
-    out_tmp = copy.deepcopy(alignment)
-
-    # Get tags for spans which need alignment 
-    out_pred_spans = [x[1] for x in out_tmp]
-    excl = []
-    for sp in out_pred_spans:
-        for tag in simp_tags:
-            if tag[0] == sp[0] and tag[1] == sp[1]:
-                excl += [sp]
-    out_pred_spans = sorted(list(set([x for x in out_pred_spans if x not in excl])))
-
-    # Get all tags within the larger edit tag
-    out_new = {}
-    for sp in out_pred_spans:
-        for tag in simp_tags:
-            if tag[0] >= sp[0] and tag[1] <= sp[1]:
-                if sp not in out_new:
-                    out_new[sp] = []
-                out_new[sp] += [tag]
-    in_new = {}
-    for sp in out_pred_spans:
-        for in_tag, out_tag in out_tmp:
-            if out_tag[0] == sp[0] and out_tag[1] == sp[1]:
-                if sp not in in_new:
-                    in_new[sp] = []
-                in_new[sp] += [in_tag]
-
+def phrase_to_word_alignment(sent, in_new, out_new, out_pred_spans):
     # Create a list of words which need rule-based alignment
     word_alignments, alignment_out = [], []
     for tag in out_pred_spans:
@@ -197,12 +170,56 @@ def align_edits(alignment, orig_tags, simp_tags, sent):
         out_align = [(in_edit[i], out_edit[in_align[i]]) for i in range(len(in_edit))] + \
             [(in_edit[out_align[i]], out_edit[i]) for i in range(len(out_edit))]
         alignment_out += sorted(list(set(out_align)))
+    return alignment_out
+
+"""
+Given an alignment, some subsitutions will be full edits.
+"""
+def align_edits(alignment, orig_tags, simp_tags, sent, collapse_phrase_alignment=False):
+    out_tmp = copy.deepcopy(alignment)
+
+    # Get tags for spans which need alignment 
+    out_pred_spans = [x[1] for x in out_tmp]
+    excl = []
+    for sp in out_pred_spans:
+        for tag in simp_tags:
+            if tag[0] == sp[0] and tag[1] == sp[1]:
+                excl += [sp]
+    out_pred_spans = sorted(list(set([x for x in out_pred_spans if x not in excl])))
+
+    # Get all tags within the larger edit tag
+    out_new = {}
+    for sp in out_pred_spans:
+        for tag in simp_tags:
+            if tag[0] >= sp[0] and tag[1] <= sp[1]:
+                if sp not in out_new:
+                    out_new[sp] = []
+                out_new[sp] += [tag]
+    in_new = {}
+    for sp in out_pred_spans:
+        for in_tag, out_tag in out_tmp:
+            if out_tag[0] == sp[0] and out_tag[1] == sp[1]:
+                if sp not in in_new:
+                    in_new[sp] = []
+                in_new[sp] += [in_tag]
+
+    if collapse_phrase_alignment:
+        # Collapses phrases to word alignment using a rule-based system
+        alignment_out = phrase_to_word_alignment(sent, in_new, out_new, out_pred_spans)
+    else:
+        # Adds all alignment within a phrase as an alignment
+        assert in_new.keys() == out_new.keys()
+        alignment_out = []
+        for k in in_new.keys():
+            for in_val in in_new[k]:
+                for out_val in out_new[k]:
+                    alignment_out += [(in_val, out_val)]
 
     out_tmp = sorted([x for x in out_tmp if x[1] not in out_pred_spans] + alignment_out)
 
     return out_tmp
 
-def get_word_alignment(sent):
+def get_word_alignment(sent, collapse_phrase_alignment=False):
     orig_tags = get_annotations_per_token([sent], 'original', collapse_composite=True, remove_reorder=True, \
         remove_none=False, get_alignment=True)
     simp_tags = get_annotations_per_token([sent], 'simplified', collapse_composite=True, remove_reorder=True, \
@@ -233,7 +250,7 @@ def get_word_alignment(sent):
         else:
             raise Exception(f"Unknown tag type: {tag_edit_types}")
 
-    return align_edits(out, orig_tags, simp_tags, sent)
+    return align_edits(out, orig_tags, simp_tags, sent, collapse_phrase_alignment)
 
 def print_alignment(sent, alignment):
     for t_in, t_out in alignment:
@@ -278,8 +295,8 @@ def print_alignment(sent, alignment):
 # 1
 # 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 10-12 11-13 12-14 13-15 14-16 15-17 16-18 17-19 18-20 19-21
 
-def get_word_alignment_string(sent):
-    alignment = get_word_alignment(sent)
+def get_word_alignment_string(sent, collapse_phrase_alignment=False):
+    alignment = get_word_alignment(sent, collapse_phrase_alignment)
     
     orig_tags = get_annotations_per_token([sent], 'original', collapse_composite=True, remove_reorder=True, \
         remove_none=False)
@@ -302,7 +319,7 @@ def write_csv(filename, data):
 """
 Write data in word alignment format to .tsv
 """
-def write_tsv_align(file_path, data):
+def write_tsv_align(file_path, data, collapse_phrase_alignment=False):
     align_out = []
     for i, s in enumerate(data):
         align_out += [[
@@ -311,7 +328,7 @@ def write_tsv_align(file_path, data):
             'N/A',
             s['mt'],
             'N/A', '1', '1',
-            s['alignment'],
+            s['alignment'] if not collapse_phrase_alignment else s['alignment-no-phrases'],
             'N/A',
         ]]
 
