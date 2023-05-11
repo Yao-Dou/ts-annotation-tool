@@ -1,0 +1,4239 @@
+[
+    {
+        "id": 101,
+        "annotation_id": 139,
+        "sentence_id": 50,
+        "batch": 1,
+        "hit_id": 39,
+        "user": "",
+        "system": "new-wiki-4/Vicuna-7b",
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "simplified": "The process of discovering things in many fields, such as science about planets and animals, has been getting easier since the 1700s and 1800s. || This trend can be represented by a curve that gets smaller and smaller over time.",
+        "original_spans": [
+            [
+                1,
+                8,
+                14,
+                1
+            ],
+            [
+                1,
+                20,
+                59,
+                2
+            ],
+            [
+                5,
+                64,
+                68,
+                2,
+                1,
+                1
+            ],
+            [
+                5,
+                72,
+                81,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                115,
+                121,
+                3
+            ],
+            [
+                1,
+                122,
+                157,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                11,
+                1
+            ],
+            [
+                5,
+                15,
+                33,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                42,
+                49,
+                1
+            ],
+            [
+                1,
+                50,
+                92,
+                2
+            ],
+            [
+                5,
+                93,
+                101,
+                2,
+                3,
+                1
+            ],
+            [
+                5,
+                102,
+                116,
+                2,
+                1,
+                1
+            ],
+            [
+                3,
+                147,
+                157,
+                3
+            ],
+            [
+                1,
+                165,
+                176,
+                3
+            ],
+            [
+                1,
+                177,
+                228,
+                4
+            ],
+            [
+                2,
+                144,
+                146,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 103,
+        "annotation_id": 136,
+        "sentence_id": 51,
+        "batch": 1,
+        "hit_id": 36,
+        "user": "",
+        "system": "new-wiki-4/Turbo",
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "simplified": "Discovery has become easier in fields such as planetary science and mammalian biology since the 1700s and 1800s. || This ease of discovery can be plotted on a curve that decays exponentially.",
+        "original_spans": [
+            [
+                1,
+                0,
+                19,
+                1
+            ],
+            [
+                4,
+                64,
+                81,
+                1
+            ],
+            [
+                5,
+                115,
+                157,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                115,
+                157,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                0,
+                27,
+                1,
+                3,
+                1
+            ],
+            [
+                3,
+                0,
+                27,
+                2
+            ],
+            [
+                1,
+                28,
+                45,
+                1
+            ],
+            [
+                3,
+                116,
+                120,
+                1
+            ],
+            [
+                4,
+                121,
+                138,
+                1
+            ],
+            [
+                5,
+                146,
+                191,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                146,
+                191,
+                2
+            ],
+            [
+                2,
+                113,
+                115,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 105,
+        "annotation_id": 135,
+        "sentence_id": 52,
+        "batch": 1,
+        "hit_id": 35,
+        "user": "",
+        "system": "new-wiki-4/Davinci-003",
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "simplified": "Since the 1700s and 1800s, discoveries in many fields, such as planetary science and mammalian biology, have been increasingly more difficult and can be represented by an exponentially decreasing curve.",
+        "original_spans": [
+            [
+                1,
+                0,
+                14,
+                1
+            ],
+            [
+                1,
+                15,
+                19,
+                2
+            ],
+            [
+                1,
+                38,
+                40,
+                2
+            ],
+            [
+                4,
+                72,
+                81,
+                2
+            ],
+            [
+                5,
+                72,
+                81,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                82,
+                107,
+                1
+            ],
+            [
+                1,
+                115,
+                124,
+                4
+            ],
+            [
+                1,
+                142,
+                150,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                26,
+                1
+            ],
+            [
+                4,
+                27,
+                38,
+                2
+            ],
+            [
+                5,
+                27,
+                38,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                39,
+                54,
+                1
+            ],
+            [
+                1,
+                55,
+                62,
+                2
+            ],
+            [
+                1,
+                81,
+                84,
+                2
+            ],
+            [
+                3,
+                104,
+                145,
+                1
+            ],
+            [
+                1,
+                153,
+                167,
+                4
+            ],
+            [
+                1,
+                185,
+                195,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 107,
+        "annotation_id": 137,
+        "sentence_id": 53,
+        "batch": 1,
+        "hit_id": 37,
+        "user": "",
+        "system": "new-wiki-4/GPT-4",
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "simplified": "In many areas, like studying planets and mammals, finding new things has become easier since the 1700s and 1800s. || This can be shown with a curve that decreases over time.",
+        "original_spans": [
+            [
+                1,
+                8,
+                14,
+                1
+            ],
+            [
+                1,
+                15,
+                59,
+                2
+            ],
+            [
+                1,
+                60,
+                81,
+                3
+            ],
+            [
+                5,
+                60,
+                81,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                115,
+                121,
+                4
+            ],
+            [
+                1,
+                122,
+                157,
+                5
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                8,
+                14,
+                1
+            ],
+            [
+                1,
+                15,
+                49,
+                2
+            ],
+            [
+                1,
+                50,
+                86,
+                3
+            ],
+            [
+                5,
+                50,
+                86,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                117,
+                121,
+                1
+            ],
+            [
+                1,
+                129,
+                134,
+                4
+            ],
+            [
+                1,
+                135,
+                173,
+                5
+            ],
+            [
+                2,
+                114,
+                116,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 109,
+        "annotation_id": 138,
+        "sentence_id": 54,
+        "batch": 1,
+        "hit_id": 38,
+        "user": "",
+        "system": "new-wiki-4/Alpaca-7b",
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "simplified": "In many cases, discoveries have been easier to make since the 1700s and 1800s, following an exponentially decaying curve.",
+        "original_spans": [
+            [
+                0,
+                15,
+                59,
+                1
+            ],
+            [
+                1,
+                64,
+                81,
+                1
+            ],
+            [
+                0,
+                108,
+                124,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                15,
+                43,
+                1
+            ],
+            [
+                5,
+                27,
+                36,
+                1,
+                3,
+                1
+            ],
+            [
+                5,
+                44,
+                51,
+                1,
+                3,
+                2
+            ],
+            [
+                3,
+                79,
+                88,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 111,
+        "annotation_id": 129,
+        "sentence_id": 55,
+        "batch": 1,
+        "hit_id": 29,
+        "user": "",
+        "system": "new-wiki-4/GPT-4",
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "simplified": "Poland says it is closing a big border crossing with Belarus for now because of increased problems between the two countries.",
+        "original_spans": [
+            [
+                1,
+                7,
+                16,
+                1
+            ],
+            [
+                5,
+                17,
+                31,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                34,
+                39,
+                2
+            ],
+            [
+                1,
+                69,
+                91,
+                5
+            ],
+            [
+                1,
+                92,
+                96,
+                4
+            ],
+            [
+                1,
+                97,
+                116,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                7,
+                11,
+                1
+            ],
+            [
+                5,
+                12,
+                25,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                28,
+                31,
+                2
+            ],
+            [
+                1,
+                61,
+                68,
+                5
+            ],
+            [
+                1,
+                69,
+                79,
+                4
+            ],
+            [
+                1,
+                80,
+                98,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 113,
+        "annotation_id": 126,
+        "sentence_id": 56,
+        "batch": 1,
+        "hit_id": 26,
+        "user": "",
+        "system": "new-wiki-4/Turbo",
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "simplified": "Poland has closed a big border crossing with Belarus due to increased tensions between the two countries. || The closure will remain in effect until further notice.",
+        "original_spans": [
+            [
+                0,
+                7,
+                16,
+                1
+            ],
+            [
+                5,
+                17,
+                31,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                34,
+                39,
+                2
+            ],
+            [
+                4,
+                69,
+                91,
+                1
+            ],
+            [
+                1,
+                92,
+                96,
+                3
+            ],
+            [
+                1,
+                97,
+                107,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                7,
+                10,
+                1,
+                3,
+                1
+            ],
+            [
+                5,
+                11,
+                17,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                20,
+                23,
+                2
+            ],
+            [
+                1,
+                53,
+                59,
+                3
+            ],
+            [
+                1,
+                60,
+                69,
+                4
+            ],
+            [
+                3,
+                109,
+                142,
+                1
+            ],
+            [
+                4,
+                143,
+                164,
+                1
+            ],
+            [
+                2,
+                106,
+                108,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 115,
+        "annotation_id": 125,
+        "sentence_id": 57,
+        "batch": 1,
+        "hit_id": 25,
+        "user": "",
+        "system": "new-wiki-4/Alpaca-7b",
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "simplified": "Poland has announced the closure of a major border crossing with Belarus until further notice due to heightened tensions between the two countries.",
+        "original_spans": [
+            [
+                5,
+                7,
+                16,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                69,
+                91,
+                2
+            ],
+            [
+                1,
+                92,
+                96,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                7,
+                20,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                73,
+                93,
+                2
+            ],
+            [
+                1,
+                94,
+                100,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 117,
+        "annotation_id": 127,
+        "sentence_id": 58,
+        "batch": 1,
+        "hit_id": 27,
+        "user": "",
+        "system": "new-wiki-4/Vicuna-7b",
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "simplified": "Poland has closed a significant border crossing with Belarus due to increased tensions between the two countries.",
+        "original_spans": [
+            [
+                0,
+                7,
+                16,
+                1
+            ],
+            [
+                5,
+                17,
+                31,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                34,
+                39,
+                1
+            ],
+            [
+                0,
+                69,
+                91,
+                2
+            ],
+            [
+                1,
+                92,
+                96,
+                2
+            ],
+            [
+                1,
+                97,
+                107,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                7,
+                17,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                20,
+                31,
+                1
+            ],
+            [
+                1,
+                61,
+                67,
+                2
+            ],
+            [
+                1,
+                68,
+                77,
+                3
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 119,
+        "annotation_id": 128,
+        "sentence_id": 59,
+        "batch": 1,
+        "hit_id": 28,
+        "user": "",
+        "system": "new-wiki-4/Davinci-003",
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "simplified": "Poland has announced the closure of a main border crossing with Belarus until further notice due to the escalating tensions between the two nations.",
+        "original_spans": [
+            [
+                5,
+                7,
+                16,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                34,
+                39,
+                2
+            ],
+            [
+                1,
+                69,
+                91,
+                3
+            ],
+            [
+                1,
+                92,
+                96,
+                5
+            ],
+            [
+                1,
+                97,
+                107,
+                4
+            ],
+            [
+                1,
+                133,
+                143,
+                6
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                7,
+                20,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                38,
+                42,
+                2
+            ],
+            [
+                1,
+                72,
+                92,
+                3
+            ],
+            [
+                1,
+                93,
+                99,
+                5
+            ],
+            [
+                3,
+                100,
+                103,
+                1
+            ],
+            [
+                1,
+                104,
+                114,
+                4
+            ],
+            [
+                1,
+                140,
+                148,
+                6
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 121,
+        "annotation_id": 189,
+        "sentence_id": 60,
+        "batch": 1,
+        "hit_id": 39,
+        "user": "",
+        "system": "new-wiki-4/Vicuna-7b",
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "simplified": "The pineal gland is an important structure in the brain that has been studied by scientists for many years. || The history of the pineal gland involves the discovery of its neuroendocrine properties, which were first identified by the ancient Greeks. || Through the scientific advancements made in this field, the pineal gland has become a critical component of modern medicine.",
+        "original_spans": [
+            [
+                1,
+                32,
+                48,
+                2
+            ],
+            [
+                1,
+                64,
+                75,
+                4
+            ],
+            [
+                1,
+                76,
+                82,
+                3
+            ],
+            [
+                0,
+                83,
+                116,
+                1
+            ],
+            [
+                1,
+                117,
+                121,
+                1
+            ],
+            [
+                4,
+                153,
+                200,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                107,
+                1
+            ],
+            [
+                1,
+                143,
+                151,
+                2
+            ],
+            [
+                4,
+                152,
+                199,
+                1
+            ],
+            [
+                3,
+                200,
+                227,
+                3
+            ],
+            [
+                1,
+                228,
+                230,
+                1
+            ],
+            [
+                1,
+                254,
+                261,
+                3
+            ],
+            [
+                1,
+                277,
+                289,
+                4
+            ],
+            [
+                3,
+                290,
+                378,
+                4
+            ],
+            [
+                2,
+                108,
+                110,
+                0
+            ],
+            [
+                2,
+                251,
+                253,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 123,
+        "annotation_id": 186,
+        "sentence_id": 61,
+        "batch": 1,
+        "hit_id": 36,
+        "user": "",
+        "system": "new-wiki-4/Turbo",
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "simplified": "The story of the pineal gland is about how scientists figured out that it has both nervous and hormone-related functions, starting from when the ancient Greeks first studied it.",
+        "original_spans": [
+            [
+                1,
+                4,
+                11,
+                1
+            ],
+            [
+                1,
+                35,
+                48,
+                2
+            ],
+            [
+                1,
+                49,
+                75,
+                3
+            ],
+            [
+                1,
+                76,
+                82,
+                2
+            ],
+            [
+                0,
+                83,
+                116,
+                1
+            ],
+            [
+                4,
+                117,
+                140,
+                1
+            ],
+            [
+                4,
+                157,
+                200,
+                2
+            ],
+            [
+                1,
+                157,
+                169,
+                4
+            ],
+            [
+                5,
+                157,
+                166,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                174,
+                200,
+                5
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                4,
+                9,
+                1
+            ],
+            [
+                1,
+                33,
+                42,
+                2
+            ],
+            [
+                1,
+                43,
+                53,
+                3
+            ],
+            [
+                4,
+                54,
+                121,
+                2
+            ],
+            [
+                1,
+                54,
+                65,
+                4
+            ],
+            [
+                5,
+                54,
+                65,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                66,
+                82,
+                3
+            ],
+            [
+                1,
+                83,
+                121,
+                5
+            ],
+            [
+                4,
+                131,
+                159,
+                1
+            ],
+            [
+                3,
+                136,
+                140,
+                1
+            ],
+            [
+                3,
+                160,
+                177,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 125,
+        "annotation_id": 185,
+        "sentence_id": 62,
+        "batch": 1,
+        "hit_id": 35,
+        "user": "",
+        "system": "new-wiki-4/Davinci-003",
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "simplified": "The pineal gland's history dates back to the ancient Greeks. || Subsequent scientific development led to the discovery of its neuroendocrine properties.",
+        "original_spans": [
+            [
+                1,
+                4,
+                31,
+                1
+            ],
+            [
+                0,
+                32,
+                52,
+                1
+            ],
+            [
+                4,
+                53,
+                75,
+                1
+            ],
+            [
+                0,
+                76,
+                116,
+                2
+            ],
+            [
+                1,
+                117,
+                121,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                4,
+                26,
+                1
+            ],
+            [
+                1,
+                27,
+                40,
+                2
+            ],
+            [
+                3,
+                64,
+                74,
+                2
+            ],
+            [
+                4,
+                75,
+                97,
+                1
+            ],
+            [
+                2,
+                61,
+                63,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 127,
+        "annotation_id": 187,
+        "sentence_id": 63,
+        "batch": 1,
+        "hit_id": 37,
+        "user": "",
+        "system": "new-wiki-4/GPT-4",
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "simplified": "The pineal gland's history is about how scientists learned about it, starting with the ancient Greeks, and eventually finding out that it is involved in the body's hormone system.",
+        "original_spans": [
+            [
+                1,
+                4,
+                31,
+                1
+            ],
+            [
+                0,
+                35,
+                37,
+                1
+            ],
+            [
+                1,
+                38,
+                48,
+                2
+            ],
+            [
+                5,
+                53,
+                75,
+                1,
+                1,
+                2
+            ],
+            [
+                5,
+                76,
+                99,
+                1,
+                1,
+                3
+            ],
+            [
+                5,
+                104,
+                116,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                117,
+                121,
+                3
+            ],
+            [
+                1,
+                157,
+                169,
+                4
+            ],
+            [
+                5,
+                157,
+                169,
+                2,
+                1,
+                1
+            ],
+            [
+                0,
+                170,
+                173,
+                2
+            ],
+            [
+                1,
+                174,
+                200,
+                5
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                4,
+                26,
+                1
+            ],
+            [
+                1,
+                30,
+                39,
+                2
+            ],
+            [
+                5,
+                40,
+                50,
+                1,
+                1,
+                2
+            ],
+            [
+                5,
+                51,
+                64,
+                1,
+                1,
+                3
+            ],
+            [
+                5,
+                65,
+                68,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                69,
+                77,
+                1
+            ],
+            [
+                1,
+                78,
+                82,
+                3
+            ],
+            [
+                3,
+                103,
+                117,
+                2
+            ],
+            [
+                1,
+                118,
+                129,
+                4
+            ],
+            [
+                5,
+                118,
+                129,
+                2,
+                1,
+                1
+            ],
+            [
+                3,
+                130,
+                140,
+                3
+            ],
+            [
+                1,
+                141,
+                179,
+                5
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 129,
+        "annotation_id": 188,
+        "sentence_id": 64,
+        "batch": 1,
+        "hit_id": 38,
+        "user": "",
+        "system": "new-wiki-4/Alpaca-7b",
+        "original": "The history of the pineal gland is an account of the scientific development on the understanding of the pineal gland from the ancient Greeks that led to the discovery of its neuroendocrine properties.",
+        "simplified": "The pineal gland has been studied by scientists for centuries, beginning with the Ancient Greeks. || This research has led to a greater understanding of the gland's neuroendocrine properties.",
+        "original_spans": [
+            [
+                0,
+                4,
+                18,
+                1
+            ],
+            [
+                0,
+                32,
+                116,
+                2
+            ],
+            [
+                1,
+                117,
+                121,
+                1
+            ],
+            [
+                0,
+                146,
+                152,
+                3
+            ],
+            [
+                1,
+                153,
+                166,
+                2
+            ],
+            [
+                1,
+                170,
+                173,
+                3
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                48,
+                62,
+                2
+            ],
+            [
+                1,
+                63,
+                77,
+                1
+            ],
+            [
+                3,
+                101,
+                118,
+                1
+            ],
+            [
+                1,
+                126,
+                149,
+                2
+            ],
+            [
+                1,
+                153,
+                164,
+                3
+            ],
+            [
+                2,
+                98,
+                100,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 131,
+        "annotation_id": 158,
+        "sentence_id": 65,
+        "batch": 1,
+        "hit_id": 8,
+        "user": "",
+        "system": "new-wiki-4/Davinci-003",
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "simplified": "The Victorian era saw a surge in industrialisation, which led to a considerable expansion of the middle class. || This had a great influence on the social strata, changing the prevailing cultural norms, lifestyle, values, and morality.",
+        "original_spans": [
+            [
+                5,
+                18,
+                30,
+                1,
+                0,
+                1
+            ],
+            [
+                5,
+                31,
+                48,
+                1,
+                4,
+                1
+            ],
+            [
+                0,
+                51,
+                58,
+                1
+            ],
+            [
+                1,
+                59,
+                66,
+                1
+            ],
+            [
+                1,
+                80,
+                85,
+                3
+            ],
+            [
+                0,
+                86,
+                105,
+                2
+            ],
+            [
+                1,
+                112,
+                130,
+                2
+            ],
+            [
+                5,
+                152,
+                159,
+                2,
+                0,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                0,
+                17,
+                1,
+                4,
+                1
+            ],
+            [
+                5,
+                18,
+                32,
+                1,
+                3,
+                1
+            ],
+            [
+                3,
+                22,
+                32,
+                1
+            ],
+            [
+                3,
+                52,
+                57,
+                2
+            ],
+            [
+                3,
+                67,
+                79,
+                3
+            ],
+            [
+                1,
+                80,
+                89,
+                1
+            ],
+            [
+                3,
+                90,
+                96,
+                4
+            ],
+            [
+                1,
+                114,
+                118,
+                3
+            ],
+            [
+                1,
+                125,
+                140,
+                2
+            ],
+            [
+                5,
+                163,
+                175,
+                2,
+                3,
+                1
+            ],
+            [
+                3,
+                176,
+                186,
+                5
+            ],
+            [
+                2,
+                111,
+                113,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 133,
+        "annotation_id": 156,
+        "sentence_id": 66,
+        "batch": 1,
+        "hit_id": 6,
+        "user": "",
+        "system": "new-wiki-4/Turbo",
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "simplified": "During the Victorian era, industrialisation led to a fast-growing middle class that greatly impacted society's cultural norms, lifestyle, values, and morality.",
+        "original_spans": [
+            [
+                4,
+                0,
+                17,
+                1
+            ],
+            [
+                1,
+                18,
+                25,
+                1
+            ],
+            [
+                1,
+                26,
+                30,
+                2
+            ],
+            [
+                1,
+                51,
+                66,
+                3
+            ],
+            [
+                0,
+                80,
+                105,
+                1
+            ],
+            [
+                5,
+                106,
+                111,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                112,
+                123,
+                4
+            ],
+            [
+                5,
+                124,
+                130,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                124,
+                130,
+                5
+            ],
+            [
+                0,
+                131,
+                133,
+                2
+            ],
+            [
+                5,
+                134,
+                151,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                134,
+                151,
+                6
+            ],
+            [
+                5,
+                152,
+                159,
+                2,
+                0,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                0,
+                6,
+                2
+            ],
+            [
+                4,
+                26,
+                43,
+                1
+            ],
+            [
+                1,
+                44,
+                50,
+                1
+            ],
+            [
+                1,
+                53,
+                65,
+                3
+            ],
+            [
+                5,
+                79,
+                100,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                84,
+                91,
+                4
+            ],
+            [
+                1,
+                92,
+                100,
+                5
+            ],
+            [
+                5,
+                101,
+                110,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                101,
+                110,
+                6
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 135,
+        "annotation_id": 159,
+        "sentence_id": 67,
+        "batch": 1,
+        "hit_id": 9,
+        "user": "",
+        "system": "new-wiki-4/GPT-4",
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "simplified": "The Victorian era's industrialization led to a quickly expanding middle class. || This growth greatly impacted society, including cultural norms, lifestyle, values, and morality.",
+        "original_spans": [
+            [
+                1,
+                18,
+                30,
+                1
+            ],
+            [
+                4,
+                31,
+                48,
+                1
+            ],
+            [
+                5,
+                31,
+                48,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                51,
+                66,
+                2
+            ],
+            [
+                0,
+                80,
+                85,
+                1
+            ],
+            [
+                1,
+                86,
+                105,
+                3
+            ],
+            [
+                5,
+                112,
+                123,
+                2,
+                1,
+                1
+            ],
+            [
+                5,
+                124,
+                130,
+                2,
+                1,
+                2
+            ],
+            [
+                5,
+                131,
+                133,
+                2,
+                0,
+                1
+            ],
+            [
+                5,
+                134,
+                151,
+                2,
+                1,
+                3
+            ],
+            [
+                0,
+                152,
+                159,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                19,
+                1
+            ],
+            [
+                5,
+                0,
+                19,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                38,
+                44,
+                1
+            ],
+            [
+                1,
+                47,
+                64,
+                2
+            ],
+            [
+                3,
+                82,
+                86,
+                1
+            ],
+            [
+                1,
+                87,
+                93,
+                3
+            ],
+            [
+                5,
+                94,
+                101,
+                2,
+                1,
+                1
+            ],
+            [
+                5,
+                102,
+                110,
+                2,
+                1,
+                2
+            ],
+            [
+                5,
+                111,
+                119,
+                2,
+                1,
+                3
+            ],
+            [
+                3,
+                120,
+                129,
+                2
+            ],
+            [
+                2,
+                79,
+                81,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 139,
+        "annotation_id": 157,
+        "sentence_id": 69,
+        "batch": 1,
+        "hit_id": 7,
+        "user": "",
+        "system": "new-wiki-4/Vicuna-7b",
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "simplified": "The process of industrialization during the Victorian era led to the emergence of a large group of people called the middle class. || This increase in the number of middle-class people had a big impact on the social structure, including how people thought about culture, lifestyle, values, and morality.",
+        "original_spans": [
+            [
+                1,
+                18,
+                25,
+                2
+            ],
+            [
+                1,
+                26,
+                30,
+                1
+            ],
+            [
+                0,
+                49,
+                66,
+                2
+            ],
+            [
+                0,
+                80,
+                85,
+                1
+            ],
+            [
+                1,
+                98,
+                105,
+                3
+            ],
+            [
+                5,
+                98,
+                105,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                124,
+                130,
+                4
+            ],
+            [
+                1,
+                145,
+                151,
+                5
+            ],
+            [
+                5,
+                152,
+                159,
+                2,
+                0,
+                1
+            ],
+            [
+                1,
+                160,
+                175,
+                6
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                14,
+                1
+            ],
+            [
+                1,
+                33,
+                39,
+                1
+            ],
+            [
+                1,
+                58,
+                64,
+                2
+            ],
+            [
+                3,
+                65,
+                116,
+                2
+            ],
+            [
+                3,
+                134,
+                138,
+                3
+            ],
+            [
+                1,
+                151,
+                184,
+                3
+            ],
+            [
+                5,
+                151,
+                184,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                195,
+                201,
+                4
+            ],
+            [
+                1,
+                216,
+                226,
+                5
+            ],
+            [
+                5,
+                227,
+                261,
+                2,
+                3,
+                1
+            ],
+            [
+                3,
+                227,
+                261,
+                4
+            ],
+            [
+                1,
+                262,
+                270,
+                6
+            ],
+            [
+                2,
+                131,
+                133,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 147,
+        "annotation_id": 108,
+        "sentence_id": 73,
+        "batch": 1,
+        "hit_id": 8,
+        "user": "",
+        "system": "new-wiki-4/Davinci-003",
+        "original": "Its subject and medium are in line with modernisation, globalization and industrialization, as they symbolise the dynamism and zeitgeist of traditional Bengal at the time of industrialization.",
+        "simplified": "The subject and medium of this artwork reflect the progress of modernisation, globalisation, and industrialisation in traditional Bengal, symbolising its energy and the spirit of the era.",
+        "original_spans": [
+            [
+                1,
+                23,
+                39,
+                1
+            ],
+            [
+                1,
+                55,
+                91,
+                2
+            ],
+            [
+                0,
+                92,
+                99,
+                1
+            ],
+            [
+                5,
+                100,
+                109,
+                1,
+                1,
+                1
+            ],
+            [
+                0,
+                110,
+                113,
+                2
+            ],
+            [
+                1,
+                114,
+                122,
+                4
+            ],
+            [
+                1,
+                127,
+                136,
+                5
+            ],
+            [
+                4,
+                137,
+                158,
+                1
+            ],
+            [
+                1,
+                137,
+                139,
+                3
+            ],
+            [
+                1,
+                159,
+                192,
+                6
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                23,
+                38,
+                1
+            ],
+            [
+                1,
+                39,
+                46,
+                1
+            ],
+            [
+                3,
+                47,
+                62,
+                2
+            ],
+            [
+                1,
+                78,
+                114,
+                2
+            ],
+            [
+                4,
+                115,
+                137,
+                1
+            ],
+            [
+                1,
+                115,
+                117,
+                3
+            ],
+            [
+                5,
+                138,
+                149,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                150,
+                153,
+                3
+            ],
+            [
+                1,
+                154,
+                160,
+                4
+            ],
+            [
+                3,
+                165,
+                168,
+                4
+            ],
+            [
+                1,
+                169,
+                175,
+                5
+            ],
+            [
+                1,
+                176,
+                187,
+                6
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 151,
+        "annotation_id": 130,
+        "sentence_id": 75,
+        "batch": 1,
+        "hit_id": 30,
+        "user": "",
+        "system": "new-wiki-4/Vicuna-7b",
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "simplified": "The International Court of Justice (ICJ) ruled that the United States broke its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies. || However, the ICJ decided that it cannot take legal action against the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [
+            [
+                1,
+                41,
+                46,
+                1
+            ],
+            [
+                1,
+                70,
+                78,
+                2
+            ],
+            [
+                5,
+                70,
+                78,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                196,
+                199,
+                5
+            ],
+            [
+                0,
+                200,
+                209,
+                1
+            ],
+            [
+                1,
+                218,
+                249,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                41,
+                46,
+                1
+            ],
+            [
+                1,
+                70,
+                75,
+                2
+            ],
+            [
+                5,
+                70,
+                75,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                196,
+                204,
+                5
+            ],
+            [
+                3,
+                213,
+                228,
+                1
+            ],
+            [
+                1,
+                229,
+                261,
+                4
+            ],
+            [
+                2,
+                193,
+                195,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 155,
+        "annotation_id": 132,
+        "sentence_id": 77,
+        "batch": 1,
+        "hit_id": 32,
+        "user": "",
+        "system": "new-wiki-4/Davinci-003",
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "simplified": "The International Court of Justice ruled that the United States breached its 1955 treaty with Iran by allowing its domestic courts to freeze the assets of Iranian companies. || However, the ICJ said it does not have the authority to manage the $1.75 billion worth of assets the Central Bank of Iran has had frozen.",
+        "original_spans": [
+            [
+                0,
+                35,
+                40,
+                1
+            ],
+            [
+                5,
+                41,
+                46,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                70,
+                78,
+                1
+            ],
+            [
+                0,
+                88,
+                98,
+                2
+            ],
+            [
+                5,
+                116,
+                131,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                162,
+                195,
+                2
+            ],
+            [
+                1,
+                196,
+                199,
+                3
+            ],
+            [
+                0,
+                205,
+                209,
+                3
+            ],
+            [
+                4,
+                210,
+                217,
+                1
+            ],
+            [
+                1,
+                232,
+                249,
+                4
+            ],
+            [
+                4,
+                279,
+                326,
+                2
+            ],
+            [
+                1,
+                279,
+                285,
+                5
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                35,
+                40,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                64,
+                72,
+                1
+            ],
+            [
+                5,
+                99,
+                110,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                145,
+                173,
+                2
+            ],
+            [
+                1,
+                177,
+                185,
+                3
+            ],
+            [
+                4,
+                186,
+                193,
+                1
+            ],
+            [
+                3,
+                199,
+                201,
+                1
+            ],
+            [
+                1,
+                216,
+                239,
+                4
+            ],
+            [
+                4,
+                267,
+                314,
+                2
+            ],
+            [
+                1,
+                303,
+                314,
+                5
+            ],
+            [
+                2,
+                174,
+                176,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 159,
+        "annotation_id": 134,
+        "sentence_id": 79,
+        "batch": 1,
+        "hit_id": 34,
+        "user": "",
+        "system": "new-wiki-4/Alpaca-7b",
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "simplified": "The International Court of Justice said that the US violated its 1955 friendship treaty with Iran by allowing its domestic courts to freeze assets held by Iranian companies. || This ruling only applies to the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "original_spans": [
+            [
+                0,
+                35,
+                40,
+                1
+            ],
+            [
+                1,
+                41,
+                46,
+                1
+            ],
+            [
+                5,
+                41,
+                46,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                56,
+                69,
+                2
+            ],
+            [
+                5,
+                116,
+                131,
+                2,
+                1,
+                1
+            ],
+            [
+                0,
+                196,
+                249,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                35,
+                39,
+                1
+            ],
+            [
+                5,
+                35,
+                39,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                49,
+                51,
+                2
+            ],
+            [
+                5,
+                98,
+                109,
+                2,
+                1,
+                1
+            ],
+            [
+                3,
+                177,
+                204,
+                1
+            ],
+            [
+                2,
+                174,
+                176,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 183,
+        "annotation_id": 191,
+        "sentence_id": 91,
+        "batch": 1,
+        "hit_id": 41,
+        "user": "",
+        "system": "new-wiki-4/Turbo",
+        "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
+        "simplified": "Critics liked Keanu Reeves' \"Baba Yaga\" because it had lots of exciting action scenes, but the story wasn't good enough to make the movie's length of almost 3 hours (plus a scene after the credits) worth it. || The movie made more than $100 million all around the world.",
+        "original_spans": [
+            [
+                1,
+                0,
+                9,
+                1
+            ],
+            [
+                1,
+                10,
+                17,
+                2
+            ],
+            [
+                5,
+                18,
+                21,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                18,
+                21,
+                3
+            ],
+            [
+                5,
+                48,
+                56,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                48,
+                56,
+                3
+            ],
+            [
+                1,
+                57,
+                61,
+                4
+            ],
+            [
+                1,
+                62,
+                72,
+                5
+            ],
+            [
+                1,
+                80,
+                90,
+                6
+            ],
+            [
+                1,
+                91,
+                98,
+                7
+            ],
+            [
+                1,
+                103,
+                118,
+                8
+            ],
+            [
+                5,
+                119,
+                125,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                126,
+                150,
+                9
+            ],
+            [
+                1,
+                141,
+                150,
+                13
+            ],
+            [
+                0,
+                151,
+                152,
+                1
+            ],
+            [
+                1,
+                153,
+                176,
+                10
+            ],
+            [
+                1,
+                177,
+                182,
+                11
+            ],
+            [
+                1,
+                183,
+                204,
+                12
+            ],
+            [
+                0,
+                205,
+                214,
+                2
+            ],
+            [
+                0,
+                215,
+                218,
+                3
+            ],
+            [
+                1,
+                219,
+                221,
+                14
+            ],
+            [
+                0,
+                222,
+                229,
+                4
+            ],
+            [
+                1,
+                230,
+                239,
+                17
+            ],
+            [
+                1,
+                240,
+                244,
+                15
+            ],
+            [
+                1,
+                258,
+                268,
+                16
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                0,
+                7,
+                1
+            ],
+            [
+                1,
+                8,
+                13,
+                2
+            ],
+            [
+                5,
+                40,
+                54,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                40,
+                54,
+                3
+            ],
+            [
+                1,
+                55,
+                62,
+                4
+            ],
+            [
+                1,
+                63,
+                71,
+                5
+            ],
+            [
+                1,
+                79,
+                86,
+                6
+            ],
+            [
+                1,
+                87,
+                90,
+                7
+            ],
+            [
+                1,
+                95,
+                100,
+                8
+            ],
+            [
+                5,
+                101,
+                107,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                108,
+                127,
+                9
+            ],
+            [
+                1,
+                128,
+                164,
+                10
+            ],
+            [
+                1,
+                165,
+                170,
+                11
+            ],
+            [
+                1,
+                171,
+                197,
+                12
+            ],
+            [
+                1,
+                198,
+                207,
+                13
+            ],
+            [
+                1,
+                211,
+                220,
+                14
+            ],
+            [
+                1,
+                221,
+                225,
+                17
+            ],
+            [
+                1,
+                226,
+                235,
+                15
+            ],
+            [
+                1,
+                249,
+                270,
+                16
+            ],
+            [
+                2,
+                208,
+                210,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 187,
+        "annotation_id": 193,
+        "sentence_id": 93,
+        "batch": 1,
+        "hit_id": 43,
+        "user": "",
+        "system": "new-wiki-4/Vicuna-7b",
+        "original": "Reviewers praised how Keanu Reeves' \"Baba Yaga\" delivers many impressive action sequences, even if the underlying plot is not something that justifies a runtime nearing 3 hours (with a post-credits scene, no less), and it already opened to over $100 million worldwide.",
+        "simplified": "Keanu Reeves' movie \"Baba Yaga\" received positive reviews for its exciting action scenes, although some critics felt that the plot was not worth the 3-hour length, including a post-credits scene. || Despite this, the movie opened to more than $100 million worldwide.",
+        "original_spans": [
+            [
+                5,
+                0,
+                17,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                18,
+                21,
+                1
+            ],
+            [
+                4,
+                22,
+                47,
+                1
+            ],
+            [
+                1,
+                48,
+                56,
+                1
+            ],
+            [
+                0,
+                57,
+                61,
+                1
+            ],
+            [
+                1,
+                62,
+                72,
+                2
+            ],
+            [
+                1,
+                80,
+                90,
+                3
+            ],
+            [
+                1,
+                91,
+                98,
+                4
+            ],
+            [
+                0,
+                103,
+                113,
+                2
+            ],
+            [
+                5,
+                119,
+                121,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                126,
+                150,
+                5
+            ],
+            [
+                1,
+                151,
+                152,
+                6
+            ],
+            [
+                1,
+                153,
+                160,
+                7
+            ],
+            [
+                0,
+                161,
+                168,
+                3
+            ],
+            [
+                1,
+                169,
+                176,
+                7
+            ],
+            [
+                1,
+                177,
+                182,
+                8
+            ],
+            [
+                0,
+                215,
+                218,
+                4
+            ],
+            [
+                1,
+                219,
+                221,
+                9
+            ],
+            [
+                1,
+                240,
+                244,
+                10
+            ]
+        ],
+        "simplified_spans": [
+            [
+                4,
+                0,
+                31,
+                1
+            ],
+            [
+                5,
+                32,
+                57,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                58,
+                61,
+                1
+            ],
+            [
+                3,
+                62,
+                65,
+                1
+            ],
+            [
+                1,
+                66,
+                74,
+                2
+            ],
+            [
+                1,
+                82,
+                89,
+                3
+            ],
+            [
+                1,
+                90,
+                98,
+                4
+            ],
+            [
+                3,
+                99,
+                121,
+                2
+            ],
+            [
+                5,
+                131,
+                134,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                139,
+                144,
+                5
+            ],
+            [
+                1,
+                145,
+                148,
+                6
+            ],
+            [
+                1,
+                149,
+                163,
+                7
+            ],
+            [
+                1,
+                164,
+                173,
+                8
+            ],
+            [
+                3,
+                199,
+                212,
+                3
+            ],
+            [
+                1,
+                213,
+                222,
+                9
+            ],
+            [
+                1,
+                233,
+                242,
+                10
+            ],
+            [
+                2,
+                196,
+                198,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 191,
+        "annotation_id": 195,
+        "sentence_id": 95,
+        "batch": 1,
+        "hit_id": 45,
+        "user": "",
+        "system": "new-wiki-4/Alpaca-7b",
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "simplified": "ChatGPT has been accused of discriminatory behaviors, such as making jokes about men and people from England but not women and people from India, and praising some figures but not others, like Joe Biden but not Donald Trump.",
+        "original_spans": [
+            [
+                0,
+                28,
+                39,
+                1
+            ],
+            [
+                1,
+                74,
+                81,
+                1
+            ],
+            [
+                1,
+                122,
+                156,
+                2
+            ],
+            [
+                1,
+                186,
+                188,
+                3
+            ],
+            [
+                4,
+                206,
+                223,
+                1
+            ],
+            [
+                1,
+                206,
+                213,
+                4
+            ],
+            [
+                1,
+                224,
+                253,
+                5
+            ],
+            [
+                5,
+                254,
+                257,
+                1,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                62,
+                68,
+                1
+            ],
+            [
+                1,
+                109,
+                116,
+                2
+            ],
+            [
+                1,
+                146,
+                149,
+                3
+            ],
+            [
+                1,
+                172,
+                179,
+                5
+            ],
+            [
+                3,
+                180,
+                187,
+                1
+            ],
+            [
+                4,
+                188,
+                202,
+                1
+            ],
+            [
+                1,
+                188,
+                192,
+                4
+            ],
+            [
+                5,
+                203,
+                210,
+                1,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 195,
+        "annotation_id": 197,
+        "sentence_id": 97,
+        "batch": 1,
+        "hit_id": 47,
+        "user": "",
+        "system": "new-wiki-4/Vicuna-7b",
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "simplified": "ChatGPT has been accused of behaving in a discriminatory way, by telling jokes that are hurtful to people of a certain gender or nationality, while refusing to tell jokes that are offensive to others. || Additionally, ChatGPT has been accused of showing favoritism towards certain figures, such as Joe Biden, while disregarding others, like Donald Trump.",
+        "original_spans": [],
+        "simplified_spans": [
+            [
+                2,
+                201,
+                203,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 199,
+        "annotation_id": 199,
+        "sentence_id": 99,
+        "batch": 1,
+        "hit_id": 49,
+        "user": "",
+        "system": "new-wiki-4/GPT-4",
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "simplified": "ChatGPT has been accused of acting unfairly. || It tells jokes about men and English people, but not about women and Indians. || It praises Joe Biden but does not do the same for Donald Trump.",
+        "original_spans": [
+            [
+                1,
+                28,
+                65,
+                1
+            ],
+            [
+                0,
+                66,
+                73,
+                1
+            ],
+            [
+                5,
+                74,
+                81,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                102,
+                121,
+                2
+            ],
+            [
+                1,
+                122,
+                150,
+                3
+            ],
+            [
+                1,
+                167,
+                185,
+                5
+            ],
+            [
+                0,
+                186,
+                188,
+                2
+            ],
+            [
+                5,
+                189,
+                197,
+                2,
+                1,
+                1
+            ],
+            [
+                0,
+                198,
+                213,
+                3
+            ],
+            [
+                1,
+                224,
+                244,
+                4
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                28,
+                44,
+                1
+            ],
+            [
+                3,
+                48,
+                50,
+                1
+            ],
+            [
+                5,
+                51,
+                56,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                77,
+                92,
+                2
+            ],
+            [
+                1,
+                93,
+                100,
+                3
+            ],
+            [
+                1,
+                117,
+                125,
+                5
+            ],
+            [
+                3,
+                129,
+                131,
+                2
+            ],
+            [
+                5,
+                132,
+                139,
+                2,
+                1,
+                1
+            ],
+            [
+                1,
+                150,
+                165,
+                4
+            ],
+            [
+                2,
+                45,
+                47,
+                0
+            ],
+            [
+                2,
+                126,
+                128,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 241,
+        "annotation_id": 255,
+        "sentence_id": 120,
+        "batch": 2,
+        "hit_id": 15,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-11b",
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "simplified": "In many cases, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve (see Moore's law for an example).",
+        "original_spans": [
+            [
+                0,
+                15,
+                59,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                112,
+                145,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 243,
+        "annotation_id": 254,
+        "sentence_id": 121,
+        "batch": 2,
+        "hit_id": 14,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-3b",
+        "original": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to an exponentially decaying curve.",
+        "simplified": "In many cases, from planetary science to mammalian biology, the ease of discovery since the 1700s and 1800s can be fitted to a exponentially decaying curve.",
+        "original_spans": [
+            [
+                5,
+                125,
+                127,
+                1,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                5,
+                125,
+                126,
+                1,
+                1,
+                1
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 245,
+        "annotation_id": 251,
+        "sentence_id": 122,
+        "batch": 2,
+        "hit_id": 11,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-11b",
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "simplified": "Poland says it is closing a major border crossing with Belarus. || The border crossing will be closed \"until further notice\".",
+        "original_spans": [
+            [
+                1,
+                7,
+                16,
+                1
+            ],
+            [
+                5,
+                17,
+                31,
+                1,
+                1,
+                1
+            ],
+            [
+                4,
+                69,
+                91,
+                1
+            ],
+            [
+                0,
+                92,
+                143,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                7,
+                11,
+                1
+            ],
+            [
+                3,
+                12,
+                17,
+                1
+            ],
+            [
+                5,
+                18,
+                25,
+                1,
+                1,
+                1
+            ],
+            [
+                3,
+                67,
+                101,
+                2
+            ],
+            [
+                4,
+                102,
+                125,
+                1
+            ],
+            [
+                2,
+                64,
+                66,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 247,
+        "annotation_id": 250,
+        "sentence_id": 123,
+        "batch": 2,
+        "hit_id": 10,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-3b",
+        "original": "Poland announces the closure of a major border crossing with Belarus \"until further notice\" amid heightened tensions between the two countries.",
+        "simplified": "Poland says it will close a border crossing with Belarus \"until further notice\" because of tensions between the two countries.",
+        "original_spans": [
+            [
+                1,
+                7,
+                16,
+                1
+            ],
+            [
+                5,
+                17,
+                31,
+                1,
+                1,
+                1
+            ],
+            [
+                0,
+                34,
+                39,
+                1
+            ],
+            [
+                1,
+                92,
+                96,
+                2
+            ],
+            [
+                0,
+                97,
+                107,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                7,
+                11,
+                1
+            ],
+            [
+                5,
+                12,
+                25,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                80,
+                90,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 253,
+        "annotation_id": 262,
+        "sentence_id": 126,
+        "batch": 2,
+        "hit_id": 2,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-3b",
+        "original": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on the social strata itself: cultural norms, lifestyle, values, and morality.",
+        "simplified": "Industrialisation brought with the Victorian era a rapidly growing middle class whose increase in numbers had a significant effect on society as a whole.",
+        "original_spans": [
+            [
+                1,
+                134,
+                151,
+                1
+            ],
+            [
+                0,
+                152,
+                159,
+                1
+            ],
+            [
+                1,
+                160,
+                208,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                134,
+                141,
+                1
+            ],
+            [
+                1,
+                142,
+                153,
+                2
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 261,
+        "annotation_id": 252,
+        "sentence_id": 130,
+        "batch": 2,
+        "hit_id": 12,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-11b",
+        "original": "The International Court of Justice (ICJ) rules that the United States violated its 1955 friendship treaty with Iran when it allowed its domestic courts to freeze assets held by Iranian companies, but said that the ICJ does not have jurisdiction over the US$1.75 billion worth of frozen assets held by the Central Bank of Iran.",
+        "simplified": "The International Court of Justice (ICJ) rules that the United States broke its friendship treaty with Iran when it allowed its domestic courts to freeze the assets of Iranian companies. || However, the ICJ said that the Central Bank of Iran's assets are not part of the case because the Central Bank is not a company.",
+        "original_spans": [
+            [
+                1,
+                70,
+                78,
+                1
+            ],
+            [
+                5,
+                70,
+                78,
+                1,
+                1,
+                1
+            ],
+            [
+                0,
+                83,
+                87,
+                1
+            ],
+            [
+                1,
+                169,
+                176,
+                2
+            ],
+            [
+                1,
+                196,
+                199,
+                3
+            ],
+            [
+                4,
+                210,
+                217,
+                1
+            ],
+            [
+                1,
+                218,
+                244,
+                4
+            ],
+            [
+                0,
+                245,
+                326,
+                2
+            ]
+        ],
+        "simplified_spans": [
+            [
+                1,
+                70,
+                75,
+                1
+            ],
+            [
+                5,
+                70,
+                75,
+                1,
+                1,
+                1
+            ],
+            [
+                1,
+                165,
+                167,
+                2
+            ],
+            [
+                1,
+                190,
+                198,
+                3
+            ],
+            [
+                4,
+                199,
+                206,
+                1
+            ],
+            [
+                1,
+                217,
+                275,
+                4
+            ],
+            [
+                3,
+                276,
+                318,
+                1
+            ],
+            [
+                2,
+                187,
+                189,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 267,
+        "annotation_id": 264,
+        "sentence_id": 133,
+        "batch": 2,
+        "hit_id": 4,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-11b",
+        "original": "The award-winning actress turned Goop CEO is currently in court for a ski accident back in 2016, with the man who collided with her trying to get millions in indemnization (Paltrow in turn claims he was the one crashing rather than the other way around).",
+        "simplified": "Paltrow is currently in court for a ski accident that happened in 2016. || The man who collided with her is trying to get millions of dollars in compensation, while Paltrow is claiming that he was the one crashing rather than the other way around.",
+        "original_spans": [
+            [
+                0,
+                0,
+                41,
+                1
+            ],
+            [
+                1,
+                83,
+                87,
+                1
+            ],
+            [
+                0,
+                97,
+                101,
+                3
+            ],
+            [
+                1,
+                158,
+                171,
+                2
+            ],
+            [
+                0,
+                181,
+                188,
+                4
+            ],
+            [
+                5,
+                189,
+                195,
+                1,
+                1,
+                1
+            ]
+        ],
+        "simplified_spans": [
+            [
+                3,
+                0,
+                7,
+                2
+            ],
+            [
+                1,
+                49,
+                62,
+                1
+            ],
+            [
+                3,
+                105,
+                107,
+                1
+            ],
+            [
+                1,
+                145,
+                158,
+                2
+            ],
+            [
+                3,
+                159,
+                164,
+                3
+            ],
+            [
+                5,
+                173,
+                184,
+                1,
+                1,
+                1
+            ],
+            [
+                5,
+                185,
+                189,
+                1,
+                3,
+                1
+            ],
+            [
+                2,
+                72,
+                74,
+                0
+            ]
+        ],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    },
+    {
+        "id": 277,
+        "annotation_id": 278,
+        "sentence_id": 138,
+        "batch": 2,
+        "hit_id": 18,
+        "user": "",
+        "system": "new-wiki-4/Ctrl-T5-3b",
+        "original": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "simplified": "ChatGPT has been accused of engaging in discriminatory behaviors, such as telling jokes about men and people from England while refusing to tell jokes about women and people from India, or praising figures such as Joe Biden while refusing to do the same for Donald Trump.",
+        "original_spans": [],
+        "simplified_spans": [],
+        "annotations": {
+            "deletion": {},
+            "substitution": {},
+            "insertion": {},
+            "split": {},
+            "reorder": {},
+            "structure": {}
+        }
+    }
+]
