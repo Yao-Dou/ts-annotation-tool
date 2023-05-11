@@ -219,15 +219,9 @@ def align_edits(alignment, orig_tags, simp_tags, sent, collapse_phrase_alignment
 
     return out_tmp
 
-def get_word_alignment(sent, collapse_phrase_alignment=False):
-    orig_tags = get_annotations_per_token([sent], 'original', collapse_composite=True, remove_reorder=True, \
-        remove_none=False, get_alignment=True)
-    simp_tags = get_annotations_per_token([sent], 'simplified', collapse_composite=True, remove_reorder=True, \
-        remove_none=False, get_alignment=True)
-
-    out = []
-
+def get_word_alignment(orig_tags, simp_tags, sent):
     # Get empty tags in output
+    word_alignment = []
     simp_iter = 0
     simp_tags_iter = [t for t in simp_tags.keys() if len(simp_tags[t].keys()) == 0\
         and sent['simplified'][t[0]:t[1]] != '||']
@@ -236,7 +230,7 @@ def get_word_alignment(sent, collapse_phrase_alignment=False):
         if len(tag_edit_types) == 0:
             if simp_iter >= len(simp_tags_iter):
                 simp_iter -= 1
-            out += [(tag, simp_tags_iter[simp_iter])]
+            word_alignment += [(tag, simp_tags_iter[simp_iter])]
             simp_iter += 1
             pass
         elif 'deletion' in tag_edit_types:
@@ -246,11 +240,10 @@ def get_word_alignment(sent, collapse_phrase_alignment=False):
             # May not be the best solution: alwasys take the first alignment:
             if len(tag_edit_values) != 0:
                 tag_edit_values = tag_edit_values[0]
-                out += [(tag, tag_edit_values)]
+                word_alignment += [(tag, tag_edit_values)]
         else:
             raise Exception(f"Unknown tag type: {tag_edit_types}")
-
-    return align_edits(out, orig_tags, simp_tags, sent, collapse_phrase_alignment)
+    return word_alignment
 
 def print_alignment(sent, alignment):
     for t_in, t_out in alignment:
@@ -296,7 +289,13 @@ def print_alignment(sent, alignment):
 # 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 10-12 11-13 12-14 13-15 14-16 15-17 16-18 17-19 18-20 19-21
 
 def get_word_alignment_string(sent, collapse_phrase_alignment=False):
-    alignment = get_word_alignment(sent, collapse_phrase_alignment)
+    orig_tags = get_annotations_per_token([sent], 'original', collapse_composite=True, remove_reorder=True, \
+        remove_none=False, get_alignment=True)
+    simp_tags = get_annotations_per_token([sent], 'simplified', collapse_composite=True, remove_reorder=True, \
+        remove_none=False, get_alignment=True)
+
+    word_alignment = get_word_alignment(orig_tags, simp_tags, sent)
+    alignment = align_edits(word_alignment, orig_tags, simp_tags, sent, collapse_phrase_alignment)
     
     orig_tags = get_annotations_per_token([sent], 'original', collapse_composite=True, remove_reorder=True, \
         remove_none=False)
@@ -330,6 +329,8 @@ def write_tsv_align(file_path, data, collapse_phrase_alignment=False):
             'N/A', '1', '1',
             s['alignment'] if not collapse_phrase_alignment else s['alignment-no-phrases'],
             'N/A',
+            s['alignment-error-labels-input'],
+            s['alignment-error-labels-output']
         ]]
 
     with open(file_path, "w", encoding='utf-8') as f:
