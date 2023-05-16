@@ -1,5 +1,4 @@
-import csv
-import sys
+import csv, sys
 sys.path.append('../analysis')
 from utils.all import *
 

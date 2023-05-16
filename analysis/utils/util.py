@@ -242,12 +242,19 @@ def get_annotations_per_token(sents, sent_type, remove_none=True, collapse_compo
             # Optionally replaces reorder edits with substitutions
             if remove_reorder:
                 new_edits = []
+
                 for e in edits:
+                    # Retains component-level reorder
                     if e['type'] == 'reorder':
-                        if 'annotation' in e.keys() and e['annotation'][4] == 'word':
-                            e['type'] = 'substitution'
-                    if e['type'] != 'reorder':
-                        new_edits += [e]
+                        e['type'] = 'substitution'
+                    new_edits += [e]
+
+                    # Removes component-level reorder edits
+                    # if e['type'] == 'reorder':
+                    #     if 'annotation' in e.keys() and e['annotation'][4] == 'word':
+                    #         e['type'] = 'substitution'
+                    # if e['type'] != 'reorder':
+                    #     new_edits += [e]         
                 edits = new_edits
         
         for edit in edits:

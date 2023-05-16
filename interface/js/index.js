@@ -1720,6 +1720,10 @@ const app = Vue.createApp({
             data_path = `inspection_rating/${urlParams.get('name')}/batch_${urlParams.get('inspection_rating')}.json`
         }
 
+        if (urlParams.get('test_set_inspection_rating') != null && urlParams.get('name') != null) {
+            data_path = `test_set_inspection_rating/${urlParams.get('name')}/batch_${urlParams.get('test_set_inspection_rating')}.json`
+        }
+
         if (urlParams.get('new_wiki') != null  && urlParams.get('name') != null) {
             data_path = `batches/new-wiki-${urlParams.get('new_wiki')}/${urlParams.get('name')}.json`
         }
