@@ -69,10 +69,10 @@ default_params = {
     'good_syntax': 5.4916773148765285, 
     'good_paraphrase': 10.759154259512686, 
     'good_trivial_insertion': 0, 
-    'content_error': 1.796703025226618, 
-    'syntax_error': 5.051975242720761, 
-    'lexical_error': 6.128637010080399, # -
-    'grammar_error': 6.128637010080399, # -
+    'content_error': -1.796703025226618, 
+    'syntax_error': -5.051975242720761, 
+    'lexical_error': -6.128637010080399, # -
+    'grammar_error': -6.128637010080399, # -
     'size_calculation': 'exp'
 }
 

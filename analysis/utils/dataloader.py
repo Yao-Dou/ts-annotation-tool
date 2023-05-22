@@ -9,7 +9,7 @@ from utils.names import *
 from utils.scoring import *
 
 # Setup logger
-log.basicConfig(format='%(levelname)s:%(message)s', level=log.DEBUG)
+log.basicConfig(format='%(levelname)s:%(message)s', level=log.ERROR)
 
 # File paths
 simp_eval_main_path = '../data/simp_eval/simpeval_22_rate_and_rank.csv'
