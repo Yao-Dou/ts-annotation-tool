@@ -112,6 +112,14 @@ system_name_mapping = {
     'new-wiki-1/Human 2 Writing': 'Human 2',
     'aggregated/human': 'Human',
 
+    'new-wiki-4/Ctrl-T5-3b': 'T5 3B Ctrl',
+    'new-wiki-4/Ctrl-T5-11b': 'T5 11B Ctrl',
+    'new-wiki-4/Alpaca-7b': 'Alpaca',
+    'new-wiki-4/Vicuna-7b': 'Vicuna',
+    'new-wiki-4/Davinci-003': 'GPT-3.5',
+    'new-wiki-4/Turbo': 'GPT-3.5-Turbo',
+    'new-wiki-4/GPT-4': 'GPT-4',
+
     'aggregated/asset': 'ASSET',
     'aggregated/turk': 'Turk Corpus',
     'aggregated/simpeval': 'SimpEval'
@@ -160,6 +168,14 @@ all_system_labels = [x for x in [
     'new_systems/asset.test.simp.second',
     'new-wiki-1/Human 1 Writing',
     'new-wiki-1/Human 2 Writing',
+
+    'new-wiki-4/Ctrl-T5-3b',
+    'new-wiki-4/Ctrl-T5-11b',
+    'new-wiki-4/Alpaca-7b',
+    'new-wiki-4/Vicuna-7b'
+    'new-wiki-4/Davinci-003',
+    'new-wiki-4/Turbo',
+    'new-wiki-4/GPT-4',
 
     'aggregated/turk',
     'aggregated/asset',

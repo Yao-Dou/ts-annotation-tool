@@ -432,8 +432,8 @@ def consolidate_annotations(data):
             try: 
                 processed.append(process_annotation(edit))
             except Exception as e:
-                # log.error(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
-                raise Exception(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
+                log.error(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
+                # raise Exception(f'When processing sentence: {get_sent_info(sent)}. Caught error on: {e}. Skipping...')
                 successful = False
         
         # Delete the sentence if we could not process the annotations for it
