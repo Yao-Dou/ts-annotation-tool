@@ -8,6 +8,7 @@ import logging as log
 from utils.util_yao import *
 from utils.names import *
 from utils.scoring import *
+import code
 
 # Setup logger
 log.basicConfig(format='%(levelname)s:%(message)s', level=log.DEBUG)
@@ -173,7 +174,10 @@ def associate_spans(sent):
             # For structure edits, add composite edits
             if type_ == 'structure' or type_ == 'split':
                 entry['composite_edits'] = []
-                composite_count = count_composite_edits(sent, i, type_)
+                if type_ == "split":
+                    composite_count = count_composite_edits(sent, i + 1, type_)
+                else:
+                    composite_count = count_composite_edits(sent, i, type_)
                 for c_type_ in composite_count.keys():
                     for k in composite_count[c_type_][1]:
                         orig_composite_span = [x for x in orig_span if x['composite_id'] == k and x['composite_type'] == c_type_] if orig_span is not empty_span else []
@@ -194,6 +198,17 @@ def associate_spans(sent):
                             'original_span': orig_composite_span_amt,
                             'simplified_span': simp_composite_span_amt,
                         }]
+                # add split sign to composite edits
+                if type_ == "split":
+                    for s_span_start, s_span_end in simp_span_amt:
+                        if sent["simplified"][s_span_start:s_span_end] == "||":
+                            entry['composite_edits'] += [{
+                                'type': "split_sign",
+                                'id': 1,
+                                'original_span': None,
+                                'simplified_span': [[s_span_start, s_span_end]],
+                            }]
+                            break
             # Compile spans into edit
             edits += [entry]
     return edits
